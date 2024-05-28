@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faBell, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo1 from "../Assets/Logo1.png";
@@ -32,13 +32,14 @@ function Navbar() {
     transition: 'color 0.3s, background-color 0.3s, transform 0.3s',
     marginRight: '15px', // Increased gap between links
   };
+
   const linkStyle1 = {
     color: '#000000',
     fontWeight: 'normal',
     textDecoration: 'none',
     padding: '5px 1px',
     borderRadius: '2px',
-    marginbottom:"7px",
+    marginBottom: '7px',
     transition: 'color 0.3s, background-color 0.3s, transform 0.3s',
     marginRight: '10px', // Increased gap between links
   };
@@ -147,7 +148,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <div style={{ display: 'flex' }}> 
+          <div style={{ display: 'flex', flexDirection: nav ? 'row' : 'row', gap: nav ? '10px' : '0', marginTop: nav ? '-30px' : '0px', marginBottom: nav ? '2px' : '0' }}> {/* New wrapper with flexbox */}
             <button
               className={`nav-link navbar-button ${clicked === 'bookButton' ? 'active' : ''}`}
               onClick={() => handleClick('bookButton')}
