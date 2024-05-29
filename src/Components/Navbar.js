@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo1 from "../Assets/Logo1.png";
 import '../Styles/Navbar.css';
@@ -9,20 +9,24 @@ import '../Styles/Navbar.css';
 function Navbar() {
   const [nav, setNav] = useState(false);
   const location = useLocation();
+  // const location = useLocation();
+  const navigate = useNavigate();
   const [clicked, setClicked] = useState(null);
+  const [clickedButton, setClickedButton] = useState(null); // Separate state for buttons
 
   const openNav = () => {
     setNav(!nav);
   };
 
   const handleClick = (id) => {
-    if (clicked === id) {
-      setClicked(null);
-    } else {
-      setClicked(id);
-    }
+    setClicked(id);
   };
 
+  const handleButtonClick = (buttonId, path) => {
+    setClickedButton(buttonId);
+    setClicked(buttonId);
+    navigate(path); // Navigate to the specified path
+  };
   const linkStyle = {
     color: '#000000',
     fontWeight: 'normal',
@@ -30,7 +34,7 @@ function Navbar() {
     padding: '5px 10px',
     borderRadius: '5px',
     transition: 'color 0.3s, background-color 0.3s, transform 0.3s',
-    marginRight: '15px', // Increased gap between links
+    marginRight: '15px',
   };
 
   const linkStyle1 = {
@@ -41,7 +45,7 @@ function Navbar() {
     borderRadius: '2px',
     marginBottom: '7px',
     transition: 'color 0.3s, background-color 0.3s, transform 0.3s',
-    marginRight: '10px', // Increased gap between links
+    marginRight: '10px',
   };
 
   const activeLinkStyle = {
@@ -148,39 +152,44 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <div style={{ display: 'flex', flexDirection: nav ? 'row' : 'row', gap: nav ? '10px' : '0', marginTop: nav ? '-30px' : '0px', marginBottom: nav ? '2px' : '0' }}> {/* New wrapper with flexbox */}
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', marginTop: nav ? '-30px' : '0px', marginBottom: nav ? '2px' : '0' }}>
             <button
-              className={`nav-link navbar-button ${clicked === 'bookButton' ? 'active' : ''}`}
-              onClick={() => handleClick('bookButton')}
+              className="nav-link navbar-button"
+              // onClick={() => handleClick('bookButton')}
+              onClick={() => handleButtonClick('bookButton', '#teamq1')}
               style={{
                 ...linkStyle1,
-                ...(clicked === 'bookButton' ? activeLinkStyle : {}),
-                ...(clicked !== 'bookButton' && { ':hover': hoverStyle }),
-                backgroundColor: '#007bff', // Set background color to blue
-                borderRadius: '20px', // Adjust border radius for capsule shape
-                padding: '8px 20px', // Add padding for button size
-                whiteSpace: 'nowrap', // Prevent text wrapping
-                overflow: 'hidden', // Hide overflowing text
-                textOverflow: 'ellipsis', // Display ellipsis for overflow text
-                maxWidth: '160px', // Set maximum width for the button
+                backgroundColor: clicked === 'bookButton' ? 'green' : '#007bff',
+                borderRadius: '20px',
+                color:  clicked === 'bookButton' ?'#ffffff':"#00000",
+                fontWeight: clicked === 'bookButton' ?'bold':"normal",
+                padding: '8px 20px',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                maxWidth: '160px',
+                marginLeft: '5px'
               }}
             >
               Book My Test
             </button>
             <button
-              className={`nav-link navbar-button ${clicked === 'resultsButton' ? 'active' : ''}`}
-              onClick={() => handleClick('resultsButton')}
+              className="nav-link navbar-button"
+              // onClick={() => handleClick('resultsButton')}
+              onClick={() => handleButtonClick('resultsButton', '#team1')}
               style={{
                 ...linkStyle1,
-                ...(clicked === 'resultsButton' ? activeLinkStyle : {}),
-                ...(clicked !== 'resultsButton' && { ':hover': hoverStyle }),
-                backgroundColor: '#007bff', // Set background color to blue
-                borderRadius: '20px', // Adjust border radius for capsule shape
-                padding: '8px 20px', // Add padding for button size
-                whiteSpace: 'nowrap', // Prevent text wrapping
-                overflow: 'hidden', // Hide overflowing text
-                textOverflow: 'ellipsis', // Display ellipsis for overflow text
-                maxWidth: '160px', // Set maximum width for the button
+                // backgroundColor: clicked === 'resultsButton' ? 'orange' : '#007bff',
+                backgroundColor: clicked === 'resultsButton' ? '#DA5E34' : '#007bff',
+                color: clicked === 'resultsButton' ? 'white' : '#000000',
+                fontWeight: clicked === 'resultsButton' ? 'bold' : 'normal',
+                borderRadius: '20px',
+                padding: '8px 20px',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                maxWidth: '160px',
+                marginLeft: '5px'
               }}
             >
               View Test Results
@@ -189,7 +198,6 @@ function Navbar() {
           <form className="d-flex">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <FontAwesomeIcon icon={faPhone} className="text-black me-3 align-self-center" size={130} />
-            {/* <img src="https://via.placeholder.com/30" alt="Profile" className="rounded-circle" width="30" height="30" /> */}
           </form>
         </div>
       </div>
