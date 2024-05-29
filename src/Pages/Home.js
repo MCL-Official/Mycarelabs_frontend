@@ -7,18 +7,22 @@ import BookAppointment from "../Components/BookAppointment";
 import Reviews from "../Components/Reviews";
 import Doctors from "../Components/Doctors";
 import Footer from "../Components/Footer";
+import InsuranceAccepted from "../Components/InsuranceAccepted";
+import HoverCards from "../Components/HoverCard/HoverCards";
 
 function Home() {
   return (
     <div className="home-section">
       <Navbar />
       <Hero />
-      {/* <Info /> */}
-      {/* <About /> */}
-      {/* <BookAppointment /> */}
-      {/* <Reviews /> */}
-      {/* <Doctors /> */}
-      {/* <Footer /> */}
+      <HoverCards/>
+      {/* <InsuranceAccepted/>
+      <Info />
+      <About />
+      <BookAppointment />
+      <Reviews />
+      <Doctors />
+      <Footer /> */}
     </div>
   );
 }

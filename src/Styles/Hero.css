@@ -1,35 +1,54 @@
 .hero-section {
-    padding: 32px;
+    position: relative;
+    /* height: 100vh; */
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-    background: linear-gradient(to right, #ECF2FF, #FBFCFF);
+    background: url('https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4') no-repeat center center/cover; /* Replace with your background image */
+    /* background: url('../Assets/hometop.mp4') no-repeat center center/cover; Replace with your background image */
 }
+
+/* Fullscreen video */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place video behind the content */
+}
+
 /* Text section */
 .text-section {
+    position: relative;
+    z-index: 2; /* Place text above the video */
     width: 60%;
     padding: 0 32px;
+    color: white; /* Adjust text color for better visibility over the video */
+    text-align: center;
 }
 .text-headline {
     margin-bottom: 12px;
-    color: rgb(77, 75, 75);
+    color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 22px;
     font-weight: bold;
     letter-spacing: .7px;
 }
 .text-title {
-    width: 500px;
-    color: black;
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: bold;
 }
-.text-descritpion {
-    width: 475px;
+.text-description {
     margin: 32px 0;
-    color: rgb(77, 75, 75);
+    color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     letter-spacing: .7px;
@@ -40,7 +59,6 @@
     color: white;
     border: 1px solid transparent;
     border-radius: 28px;
-    outline: transparent;
     background-color: #1A8EFD;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
@@ -56,7 +74,7 @@
 .text-stats {
     margin-top: 40px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 48px;
 }
@@ -64,7 +82,7 @@
     text-align: center;
 }
 .text-stats-container > p {
-    color: rgb(77, 75, 75);
+    color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     letter-spacing: .7px;
@@ -76,23 +94,12 @@
     font-size: 32px;
     font-weight: bold;
 }
-/* Image section */
-.hero-image-section {
-    width: 40%;
-    max-width: 100%;
-    text-align: center;
-}
-.hero-image1 {
-    width: 100%;
-    height: auto;
-}
 /* Scroll Btn */
 .scroll-up {
     width: 45px;
     height: 45px;
     display: none;
     align-items: center;
-    text-align: center;
     justify-content: center;
     color: white;
     border: 3px solid white;
@@ -110,14 +117,11 @@
 }
 /* Responsive */
 @media screen and (max-width: 900px) {
-    .hero-image-section {
-        display: none;
-    }
     .text-section {
         width: 100%;
         padding: 0;
     }
-    .text-title, .text-descritpion {
+    .text-title, .text-description {
         width: 100%;
     }
 }
@@ -128,7 +132,7 @@
     .text-title {
         font-size: 28px;
     }
-    .text-descritpion {
+    .text-description {
         font-size: 16px;
     }
     .text-appointment-btn {

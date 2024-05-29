@@ -159,9 +159,9 @@ function Navbar() {
               onClick={() => handleButtonClick('bookButton', '#teamq1')}
               style={{
                 ...linkStyle1,
-                backgroundColor: clicked === 'bookButton' ? 'green' : '#007bff',
+                backgroundColor: clicked === 'bookButton' ? 'green' : 'white',
                 borderRadius: '20px',
-                color:  clicked === 'bookButton' ?'#ffffff':"#00000",
+                color:  clicked === 'bookButton' ?'#ffffff':"black",
                 fontWeight: clicked === 'bookButton' ?'bold':"normal",
                 padding: '8px 20px',
                 whiteSpace: 'nowrap',
@@ -180,7 +180,7 @@ function Navbar() {
               style={{
                 ...linkStyle1,
                 // backgroundColor: clicked === 'resultsButton' ? 'orange' : '#007bff',
-                backgroundColor: clicked === 'resultsButton' ? '#DA5E34' : '#007bff',
+                backgroundColor: clicked === 'resultsButton' ? '#DA5E34' : 'white',
                 color: clicked === 'resultsButton' ? 'white' : '#000000',
                 fontWeight: clicked === 'resultsButton' ? 'bold' : 'normal',
                 borderRadius: '20px',

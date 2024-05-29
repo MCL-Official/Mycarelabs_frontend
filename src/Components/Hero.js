@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Doctor from "../Assets/doctor-picture.png";
+// import DoctorVideo from "../Assets/hometop.mp4"; // Ensure you have the video file in the specified path
+// import DoctorVideo from ".././hometop.mp4"; // Ensure you have the video file in the specified path
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../Styles/Hero.css";
 
 function Hero() {
@@ -35,15 +36,16 @@ function Hero() {
   return (
     <div className="section-container">
       <div className="hero-section">
+        <video className="hero-video" src={"https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4"} autoPlay muted loop playsInline />
         <div className="text-section">
-          <p className="text-headline">❤️ Health comes first</p>
+          <p className="text-headline">❤️ Welcome to </p>
           <h2 className="text-title">
-            Find your Doctor and make an Appointments
+            My Care Labs
           </h2>
-          <p className="text-descritpion">
-            Talk to online doctors and get medical advice, online prescriptions,
-            refills and medical notes within minutes. On-demand healthcare
-            services at your fingertips.
+          <p className="text-description">
+            Discover Compherensive Health Solutions at My Care
+            Labs. From infectious deseases to wellness and 
+            Toxicology , we're here for your well-being.
           </p>
           <button
             className="text-appointment-btn"
@@ -68,10 +70,6 @@ function Hero() {
               <p>Years of Experience</p>
             </div>
           </div>
-        </div>
-
-        <div className="hero-image-section">
-          <img className="hero-image1" src={Doctor} alt="Doctor" />
         </div>
       </div>
 

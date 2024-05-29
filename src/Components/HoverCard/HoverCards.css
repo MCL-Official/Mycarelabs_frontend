@@ -1,0 +1,33 @@
+.card-container {
+    transition: all 0.3s ease;
+  }
+  
+  .card-container:hover {
+    z-index: 10;
+  }
+  
+  .card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 0;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
