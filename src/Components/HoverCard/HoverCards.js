@@ -35,7 +35,20 @@ const HoverCards = () => {
   };
 
   return (
-    <div className="container my-4">
+    <div className="container my-2">
+
+<div className="info-title-content justify-content-center">
+        <h3 className="info-title">
+          <span>What We Do</span>
+        </h3>
+        <p className="info-description">
+        My Care Labs offers quick, easy, and accurate RT-PCR testing for COVID-19,
+         RSV, and Influenza A/B. We provide on-site testing at our lab and pop-up 
+         locations throughout California, with results available the same day or
+          within 24 hours.
+        </p>
+      </div>
+
       <div className="row justify-content-center">
         {["Industries Mastered", "Tech Evangelists", "Solutions Designed", "Example Title", "Another Title"].map((title, index) => (
           <div

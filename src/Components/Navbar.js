@@ -9,10 +9,9 @@ import '../Styles/Navbar.css';
 function Navbar() {
   const [nav, setNav] = useState(false);
   const location = useLocation();
-  // const location = useLocation();
   const navigate = useNavigate();
   const [clicked, setClicked] = useState(null);
-  const [clickedButton, setClickedButton] = useState(null); // Separate state for buttons
+  const [clickedButton, setClickedButton] = useState(null);
 
   const openNav = () => {
     setNav(!nav);
@@ -25,46 +24,28 @@ function Navbar() {
   const handleButtonClick = (buttonId, path) => {
     setClickedButton(buttonId);
     setClicked(buttonId);
-    navigate(path); // Navigate to the specified path
+    navigate(path);
   };
+
   const linkStyle = {
     color: '#000000',
     fontWeight: 'normal',
     textDecoration: 'none',
     padding: '5px 10px',
     borderRadius: '5px',
-    transition: 'color 0.3s, background-color 0.3s, transform 0.3s',
+    transition: 'color 0.3s, transform 0.3s',
     marginRight: '15px',
-  };
-
-  const linkStyle1 = {
-    color: '#000000',
-    fontWeight: 'normal',
-    textDecoration: 'none',
-    padding: '5px 1px',
-    borderRadius: '2px',
-    marginBottom: '7px',
-    transition: 'color 0.3s, background-color 0.3s, transform 0.3s',
-    marginRight: '10px',
+    position: 'relative',
   };
 
   const activeLinkStyle = {
-    color: '#ffffff',
-    backgroundColor: '#007bff',
+    color: '#007bff',
     fontWeight: 'bold',
     transform: 'scale(1.1)',
   };
 
-  const hoverStyle = {
-    transform: 'translateY(-5px)',
-  };
-
-  const handleLinkClick = (hash) => {
-    setClicked(hash);
-  };
-
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-white">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
       <div className="container-fluid">
         <Link className="navbar-brand d-flex align-items-center" to="/" style={{ display: 'flex', alignItems: 'center' }}>
           <img src={logo1} alt="Icon" style={{ height: '55px', width: '200px', marginRight: '10px' }} />
@@ -77,76 +58,51 @@ function Navbar() {
           <ul className="navbar-nav me-auto mb-5 mb-lg-0">
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className={`nav-link${location.hash === '#har' ? ' active' : ''}`}
                 aria-current="page"
                 to="#har"
-                style={{
-                  ...linkStyle,
-                  ...(location.hash === '#har' ? activeLinkStyle : {}),
-                  ...(clicked === '#har' ? activeLinkStyle : {}),
-                  ...(clicked !== '#har' && { ':hover': hoverStyle })
-                }}
-                onClick={() => handleLinkClick('#har')}
+                style={location.hash === '#har' || clicked === '#har' ? activeLinkStyle : {}}
+                onClick={() => handleClick('#har')}
               >
                 Company
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className={`nav-link${location.hash === '#team' ? ' active' : ''}`}
                 to="#team"
-                style={{
-                  ...linkStyle,
-                  ...(location.hash === '#team' ? activeLinkStyle : {}),
-                  ...(clicked === '#team' ? activeLinkStyle : {}),
-                  ...(clicked !== '#team' && { ':hover': hoverStyle })
-                }}
-                onClick={() => handleLinkClick('#team')}
+                style={location.hash === '#team' || clicked === '#team' ? activeLinkStyle : {}}
+                onClick={() => handleClick('#team')}
               >
                 COVID-19 Testing Locations
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className={`nav-link${location.hash === '#projects' ? ' active' : ''}`}
                 to="#projects"
-                style={{
-                  ...linkStyle,
-                  ...(location.hash === '#projects' ? activeLinkStyle : {}),
-                  ...(clicked === '#projects' ? activeLinkStyle : {}),
-                  ...(clicked !== '#projects' && { ':hover': hoverStyle })
-                }}
-                onClick={() => handleLinkClick('#projects')}
+                style={location.hash === '#projects' || clicked === '#projects' ? activeLinkStyle : {}}
+                onClick={() => handleClick('#projects')}
               >
                 Solutions
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className={`nav-link${location.hash === '#calendar' ? ' active' : ''}`}
                 to="#calendar"
-                style={{
-                  ...linkStyle,
-                  ...(location.hash === '#calendar' ? activeLinkStyle : {}),
-                  ...(clicked === '#calendar' ? activeLinkStyle : {}),
-                  ...(clicked !== '#calendar' && { ':hover': hoverStyle })
-                }}
-                onClick={() => handleLinkClick('#calendar')}
+                style={location.hash === '#calendar' || clicked === '#calendar' ? activeLinkStyle : {}}
+                onClick={() => handleClick('#calendar')}
               >
                 Blog
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className={`nav-link${location.hash === '#support' ? ' active' : ''}`}
                 to="#support"
-                style={{
-                  ...linkStyle,
-                  ...(location.hash === '#support' ? activeLinkStyle : {}),
-                  ...(clicked === '#support' ? activeLinkStyle : {}),
-                  ...(clicked !== '#support' && { ':hover': hoverStyle })
-                }}
-                onClick={() => handleLinkClick('#support')}
+                style={location.hash === '#support' || clicked === '#support' ? activeLinkStyle : {}}
+                onClick={() => handleClick('#support')}
               >
                 Support
               </Link>
@@ -155,14 +111,13 @@ function Navbar() {
           <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', marginTop: nav ? '-30px' : '0px', marginBottom: nav ? '2px' : '0' }}>
             <button
               className="nav-link navbar-button"
-              // onClick={() => handleClick('bookButton')}
               onClick={() => handleButtonClick('bookButton', '#teamq1')}
               style={{
-                ...linkStyle1,
+                ...linkStyle,
                 backgroundColor: clicked === 'bookButton' ? 'green' : 'white',
                 borderRadius: '20px',
-                color:  clicked === 'bookButton' ?'#ffffff':"black",
-                fontWeight: clicked === 'bookButton' ?'bold':"normal",
+                color: clicked === 'bookButton' ? '#ffffff' : "black",
+                fontWeight: clicked === 'bookButton' ? 'bold' : "normal",
                 padding: '8px 20px',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
@@ -175,11 +130,9 @@ function Navbar() {
             </button>
             <button
               className="nav-link navbar-button"
-              // onClick={() => handleClick('resultsButton')}
               onClick={() => handleButtonClick('resultsButton', '#team1')}
               style={{
-                ...linkStyle1,
-                // backgroundColor: clicked === 'resultsButton' ? 'orange' : '#007bff',
+                ...linkStyle,
                 backgroundColor: clicked === 'resultsButton' ? '#DA5E34' : 'white',
                 color: clicked === 'resultsButton' ? 'white' : '#000000',
                 fontWeight: clicked === 'resultsButton' ? 'bold' : 'normal',
