@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      <Router basename="/Health-Plus">
+      <Router >
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/legal" element={<Legal />} /> */}
@@ -24,3 +24,15 @@ function App() {
 }
 
 export default App;
+
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Radhe shyam</h1>
+//     </div>
+//   )
+// }
+
+// export default App
