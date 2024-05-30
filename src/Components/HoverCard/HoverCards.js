@@ -35,19 +35,20 @@ const HoverCards = () => {
   };
 
   return (
-    <div className="container my-2">
+    <div className="container">
 
-<div className="info-title-content justify-content-center">
-        <h3 className="info-title">
-          <span>What We Do</span>
-        </h3>
-        <p className="info-description">
-        My Care Labs offers quick, easy, and accurate RT-PCR testing for COVID-19,
-         RSV, and Influenza A/B. We provide on-site testing at our lab and pop-up 
-         locations throughout California, with results available the same day or
-          within 24 hours.
-        </p>
-      </div>
+<div className="info-title-content text-center">
+  <h3 className="info-title justify-content-center">
+    <div className=" title-text"><span className="blue">My</span> <span className="orange">Care Labs</span> <span className="blue">Solution</span></div>
+  </h3>
+  <p className="info-description">
+    My Care Labs offers quick, easy, and accurate RT-PCR testing for COVID-19,
+    RSV, and Influenza A/B. We provide on-site testing at our lab and pop-up
+    locations throughout California, with results available the same day or
+    within 24 hours.
+  </p>
+</div>
+
 
       <div className="row justify-content-center">
         {["Industries Mastered", "Tech Evangelists", "Solutions Designed", "Example Title", "Another Title"].map((title, index) => (
@@ -60,10 +61,10 @@ const HoverCards = () => {
             <div className="card">
               <img src={images[index]} className="card-img-top" alt={title} />
               <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h5 className="card-title" style={{ marginBottom: '5px' }}>{title}</h5> {/* Reduce margin-bottom */}
+                <p className="card-text" style={{ marginBottom: '10px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> {/* Reduce margin-bottom */}
                 {activeIndex === index || showButton ? (
-                  <button className="btn btn-primary custom-button">Learn More <MdOutlineKeyboardArrowRight/></button>
+                  <button className="btn btn-primary custom-button">Learn More <MdOutlineKeyboardArrowRight /></button>
                 ) : null}
               </div>
             </div>
