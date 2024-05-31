@@ -17,8 +17,9 @@ function Home() {
       <Navbar />
       <Hero />
       <HoverCards />
+      <InsuranceAccepted/>
       {/* <TestMenu/> */}
-      {/* <InsuranceAccepted/>
+      {/*
       <Info />
       <About />
       <BookAppointment />

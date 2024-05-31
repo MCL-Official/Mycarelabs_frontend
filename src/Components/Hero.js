@@ -32,6 +32,40 @@ function Hero() {
       window.removeEventListener("scroll", onPageScroll);
     };
   }, []);
+  const words = ['Book Your Test', 'Book Your Appointments', 'Check Test Results', 'Book Our Home Test Kits'];
+  const [displayText, setDisplayText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [letterIndex, setLetterIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (isTyping) {
+        // Typing mode: Add one letter at a time
+        if (letterIndex < words[wordIndex].length) {
+          setDisplayText(prevText => prevText + words[wordIndex][letterIndex]);
+          setLetterIndex(prevIndex => prevIndex + 1);
+        } else {
+          // End of word: Switch to backspacing mode
+          setIsTyping(false);
+        }
+      } else {
+        // Backspacing mode: Remove one letter at a time
+        if (displayText.length > 0) {
+          setDisplayText(prevText => prevText.slice(0, -1));
+        } else {
+          // End of backspacing: Switch to next word or loop back
+          setWordIndex(prevIndex => (prevIndex === words.length - 1 ? 0 : prevIndex + 1));
+          setLetterIndex(0);
+          setIsTyping(true);
+        }
+      }
+    }, 150); // Adjust typing speed here
+
+    // Clear interval on component unmount
+    return () => clearInterval(interval);
+  }, [displayText, wordIndex, letterIndex, isTyping, words]);
+
 
   return (
     <div className="section-container">
@@ -47,6 +81,7 @@ function Hero() {
             Labs. From infectious deseases to wellness and 
             Toxicology , we're here for your well-being.
           </p>
+            <h1>{displayText}</h1>
           <button
             className="text-appointment-btn"
             type="button"

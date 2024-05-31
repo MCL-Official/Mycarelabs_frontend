@@ -193,7 +193,9 @@
   
   .slick-dots li.slick-active button {
     background-color: #333;
-  }
+  }   
+
+   
   
   .image-slides>ul {
     position: relative !important;

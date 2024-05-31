@@ -1,27 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./HoverCards.css";
-import img from "../../Assets/img2.jpg";
+import img from "../../Assets/img.jpg";
 import img1 from "../../Assets/img3.jpg";
 import img2 from "../../Assets/img4.jpg";
-import img3 from "../../Assets/img5.jpg";
+import img5 from "../../Assets/img5.jpg";
+import img3 from "../../Assets/img2.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-// Sample images (you can replace these with your own image paths)
-const images = [
-  img,
-  img1,
-  img2,
-  img3,
-  img3,
-  "https://images.unsplash.com/photo-1576765607924-f23fdfe908b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGRvY3RvcnxlbnwwfHx8fDE2MTYwMzg5MTI&ixlib=rb-1.2.1&q=80&w=400",
-];
+const images = [img,img1,img2,img3,img5];
 
 const HoverCards = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    // Ensure the first card remains open initially
     setActiveIndex(0);
   }, []);
 
@@ -54,11 +46,11 @@ const HoverCards = () => {
 
       <div className="row justify-content-center">
         {[
-          "Industries Mastered",
-          "Tech Evangelists",
-          "Solutions Designed",
-          "Example Title",
-          "Another Title",
+          "Infectious Disease",
+          "Toxicology",
+          "Wellness Testing",
+          "Mobile Testing",
+          "At Home Kits",
         ].map((title, index) => (
           <div
             className={`col-12 col-md ${
