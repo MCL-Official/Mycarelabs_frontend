@@ -3,7 +3,7 @@ import "./HoverCards.css";
 import img from "../../Assets/img.jpg";
 import img1 from "../../Assets/img3.jpg";
 import img2 from "../../Assets/img4.jpg";
-import img5 from "../../Assets/img5.jpg";
+import img5 from "../../Assets/img5.png";
 import img3 from "../../Assets/img2.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
@@ -27,14 +27,14 @@ const HoverCards = () => {
   };
 
   return (
-    <div className="container mb-4">
+    <div className="container ">
       <div className="info-title-content text-center">
         <h3 className="info-title justify-content-center">
-          <div className=" title-text">
-            <span className="blue">My</span>
-            <span className="orange">Care Labs</span>
-            <span className="blue">Solution</span>
-          </div>
+        <div className="title-text">
+  <span className="blue">My</span>
+  <span className="orange">Care{" "}Labs</span>
+  <span className="blue">Solution</span>
+</div>  
         </h3>
         <p className="info-description">
           My Care Labs offers quick, easy, and accurate RT-PCR testing for
@@ -50,7 +50,7 @@ const HoverCards = () => {
           "Toxicology",
           "Wellness Testing",
           "Mobile Testing",
-          "At Home Kits",
+          "At Home Test Kits",
         ].map((title, index) => (
           <div
             className={`col-12 col-md ${

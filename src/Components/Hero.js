@@ -37,6 +37,7 @@ function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [letterIndex, setLetterIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,6 +68,13 @@ function Hero() {
   }, [displayText, wordIndex, letterIndex, isTyping, words]);
 
 
+  // useEffect(() => {
+  //   const cursorInterval = setInterval(() => {
+  //     setShowCursor(prevShowCursor => !prevShowCursor);
+  //   }, 500); // Cursor blink speed
+
+  //   return () => clearInterval(cursorInterval);
+  // }, []);
   return (
     <div className="section-container">
       <div className="hero-section">
@@ -82,6 +90,7 @@ function Hero() {
             Toxicology , we're here for your well-being.
           </p>
             <h1>{displayText}</h1>
+            {/* <h1>{displayText}{showCursor && '|'}</h1> */}
           <button
             className="text-appointment-btn"
             type="button"
