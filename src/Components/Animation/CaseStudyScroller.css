@@ -1,0 +1,65 @@
+/* .case-study-scroller {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.text-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+.text-item {
+  margin-bottom: 50px;
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+}
+
+.image-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+}
+
+.image-item.active {
+  display: flex;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.view-case-study {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.view-case-study:hover {
+  background: #ddd;
+} */

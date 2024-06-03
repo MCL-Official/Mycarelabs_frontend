@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import logo1 from "../Assets/Logo1.png";
-import "../Styles/Navbar.css";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const [clicked, setClicked] = useState(null);
@@ -27,198 +26,123 @@ function Navbar() {
     navigate(path);
   };
 
-  const linkStyle = {
-    color: "#000000",
-    fontWeight: "normal",
-    textDecoration: "none",
-    padding: "5px 10px",
-    borderRadius: "5px",
-    transition: "color 0.3s, transform 0.3s",
-    marginRight: "15px",
-    position: "relative",
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
   };
 
-  const activeLinkStyle = {
-    color: "#007bff",
-    fontWeight: "bold",
-    transform: `${nav ? "scale(1)" : "scale(1.1)"}`,
+  const closeDropdown = () => {
+    setDropdownOpen(false);
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
-      <div className="container-fluid">
-        <Link
-          className="navbar-brand d-flex align-items-center"
-          to="/"
-          // style={{ display: "flex", alignItems: "center" }}
-        >
-          <img
-            src={logo1}
-            alt="Icon"
-            style={{ height: "55px", width: "200px", marginRight: "10px" }}
-          />
-          {/* <FontAwesomeIcon
-            icon={faBars}
-            onClick={openNav}
-            className="hamb-icon me-2"
-          /> */}
-        </Link>
+    <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-0">
+        <a href="https://flowbite.com" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={logo1} className="h-20" alt="Flowbite Logo" />
+        </a>
         <button
-          className="navbar-toggler bg-black"
+          data-collapse-toggle="mega-menu-full-image"
           type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="mega-menu-full-image"
+          aria-expanded="false"
           onClick={openNav}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="sr-only">Open main menu</span>
+          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
         </button>
-        <div className={`collapse navbar-collapse ${nav ? "show" : ""}`}>
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link
-                className={`nav-link${
-                  location.hash === "#har" ? " active" : ""
-                }`}
-                aria-current="page"
-                to="#har"
-                style={
-                  location.hash === "#har" || clicked === "#har"
-                    ? activeLinkStyle
-                    : {}
-                }
-                onClick={() => handleClick("#har")}
-              >
+        <div className={`items-center justify-between ${nav ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`}>
+          <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+            <li>
+              <a href="#" className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
+            </li>
+            <li>
+              <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" onClick={toggleDropdown}>
                 Company
-              </Link>
+                <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
             </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link${
-                  location.hash === "#team" ? " active" : ""
-                }`}
-                to="#team"
-                style={
-                  location.hash === "#team" || clicked === "#team"
-                    ? activeLinkStyle
-                    : {}
-                }
-                onClick={() => handleClick("#team")}
-              >
-                COVID-19 Testing Locations
-              </Link>
+            <li>
+              <a href="#" className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
             </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link${
-                  location.hash === "#projects" ? " active" : ""
-                }`}
-                to="#projects"
-                style={
-                  location.hash === "#projects" || clicked === "#projects"
-                    ? activeLinkStyle
-                    : {}
-                }
-                onClick={() => handleClick("#projects")}
-              >
-                Solutions
-              </Link>
+            <li>
+              <a href="#" className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Resources</a>
             </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link${
-                  location.hash === "#calendar" ? " active" : ""
-                }`}
-                to="#calendar"
-                style={
-                  location.hash === "#calendar" || clicked === "#calendar"
-                    ? activeLinkStyle
-                    : {}
-                }
-                onClick={() => handleClick("#calendar")}
-              >
-                Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link${
-                  location.hash === "#support" ? " active" : ""
-                }`}
-                to="#support"
-                style={
-                  location.hash === "#support" || clicked === "#support"
-                    ? activeLinkStyle
-                    : {}
-                }
-                onClick={() => handleClick("#support")}
-              >
-                Support
-              </Link>
+            <li>
+              <a href="#" className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
             </li>
           </ul>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              // gap: "10px",
-              // marginTop: nav ? "-30px" : "0px",
-              marginBottom: nav ? "5px" : "0",
-            }}
-          >
-            <button
-              className="nav-link navbar-button"
-              onClick={() => handleButtonClick("bookButton", "#teamq1")}
-              style={{
-                ...linkStyle,
-                backgroundColor: clicked === "bookButton" ? "green" : "white",
-                borderRadius: "20px",
-                color: clicked === "bookButton" ? "#ffffff" : "black",
-                fontWeight: clicked === "bookButton" ? "bold" : "normal",
-                padding: "8px 20px",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                maxWidth: "160px",
-                marginLeft: "5px",
-              }}
-            >
-              Book My Test
-            </button>
-            <button
-              className="nav-link navbar-button"
-              onClick={() => handleButtonClick("resultsButton", "#team1")}
-              style={{
-                ...linkStyle,
-                backgroundColor:
-                  clicked === "resultsButton" ? "#DA5E34" : "white",
-                color: clicked === "resultsButton" ? "white" : "#000000",
-                fontWeight: clicked === "resultsButton" ? "bold" : "normal",
-                borderRadius: "20px",
-                padding: "8px 20px",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                maxWidth: "160px",
-                marginLeft: "5px",
-              }}
-            >
-              View Test Results
-            </button>
-          </div>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <a
-              href="tel:+1234567890"
-              className="text-black me-3 align-self-center"
-            >
-              <FontAwesomeIcon icon={faPhone} size="xl" />
-            </a>
-          </form>
         </div>
       </div>
+      {dropdownOpen && (
+        <div id="mega-menu-full-image-dropdown" className="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
+          <div className="grid max-w-screen-sm px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
+            <ul className="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Online Stores
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Segmentation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Marketing CRM
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Online Stores
+                </a>
+              </li>
+            </ul>
+            <ul className="mb-4 space-y-4 md:mb-0">
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Our Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  License
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                  Resources
+                </a>
+              </li>
+            </ul>
+            <a href="#" className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style={{ backgroundImage: "url(/docs/images/dashboard-overview.png)" }}>
+              <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">Preview the new Flowbite dashboard navigation.</p>
+              <button type="button" className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
+                Get started
+                <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

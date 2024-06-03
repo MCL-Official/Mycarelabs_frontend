@@ -81,7 +81,7 @@ function Hero() {
         <video className="hero-video" src={"https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4"} autoPlay muted loop playsInline />
         <div className="text-section">
           <p className="text-headline">Welcome to </p>
-          <h2 className="text-title">
+          <h2 className="sample text-2xl">
             My Care Labs
           </h2>
           <p className="text-description">
