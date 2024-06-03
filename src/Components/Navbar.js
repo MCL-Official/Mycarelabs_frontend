@@ -3,6 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo1 from "../Assets/Logo1.png";
+import {
+  FiEdit,
+  FiChevronDown,
+  FiTrash,
+  FiShare,
+  FiPlusSquare,
+} from "react-icons/fi";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -11,6 +19,7 @@ function Navbar() {
   const navigate = useNavigate();
   const [clicked, setClicked] = useState(null);
   const [clickedButton, setClickedButton] = useState(null);
+  const [homeDropdown, setHomeDropdown] = useState(false);
 
   const openNav = () => {
     setNav(!nav);
@@ -28,6 +37,10 @@ function Navbar() {
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+  };
+
+  const toggleHomeDropdown = () => {
+    setHomeDropdown(!homeDropdown);
   };
 
   const closeDropdown = () => {
@@ -48,8 +61,6 @@ function Navbar() {
   return (
     <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
       <div className="md:flex items-center p-0">
-        {/* className="flex flex-wrap md:flex-nowrap justify-between items-center p-0" */}
-        {/* mx-auto max-w-screen-xl justify-between flex-wrap */}
         <div className="flex flex-wrap md:flex-nowrap justify-between items-center p-0">
           <a
             href="https://flowbite.com"
@@ -89,15 +100,28 @@ function Navbar() {
           } `}
         >
           <ul className="flex flex-col mt-2 font-medium md:flex-row items-center pl-0  md:mt-0 ">
-            {/* md:space-x-8 rtl:space-x-reverse */}
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                aria-current="page"
+            <li className="relative">
+              <button
+                onClick={toggleHomeDropdown}
+                className="flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-indigo-500 hover:bg-indigo-500 transition-colors"
               >
-                Home
-              </a>
+                <span className="font-medium text-sm">COVID-19 Testing Locations</span>
+                <motion.span animate={homeDropdown ? "open" : "closed"} variants={iconVariants}>
+                  <FiChevronDown />
+                </motion.span>
+              </button>
+              <motion.ul
+                initial="closed"
+                animate={homeDropdown ? "open" : "closed"}
+                variants={wrapperVariants}
+                style={{ originY: "top", translateX: "-50%" }}
+                className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
+              >
+                <Option setOpen={setHomeDropdown} Icon={FiEdit} text="Edit" />
+                <Option setOpen={setHomeDropdown} Icon={FiPlusSquare} text="Duplicate" />
+                <Option setOpen={setHomeDropdown} Icon={FiShare} text="Share" />
+                <Option setOpen={setHomeDropdown} Icon={FiTrash} text="Remove" />
+              </motion.ul>
             </li>
 
             <li>
@@ -107,7 +131,7 @@ function Navbar() {
                 className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 onClick={toggleDropdown}
               >
-                Company
+                Solutions
                 <svg
                   className="w-2.5 h-2.5 ms-3"
                   aria-hidden="true"
@@ -130,7 +154,7 @@ function Navbar() {
                 href="#"
                 className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Marketplace
+                Company
               </a>
             </li>
             <li>
@@ -138,7 +162,7 @@ function Navbar() {
                 href="#"
                 className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Resources
+                Blog
               </a>
             </li>
             <li>
@@ -146,7 +170,7 @@ function Navbar() {
                 href="#"
                 className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Contact
+                Support
               </a>
             </li>
           </ul>
@@ -155,8 +179,6 @@ function Navbar() {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // gap: "10px",
-                // marginTop: nav ? "-30px" : "0px",
                 marginBottom: nav ? "5px" : "0",
               }}
             >
@@ -329,5 +351,64 @@ function Navbar() {
     </nav>
   );
 }
+
+const Option = ({ text, Icon, setOpen }) => {
+  return (
+    <motion.li
+      variants={itemVariants}
+      onClick={() => setOpen(false)}
+      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
+    >
+      <motion.span variants={actionIconVariants}>
+        <Icon />
+      </motion.span>
+      <span>{text}</span>
+    </motion.li>
+  );
+};
+
+const wrapperVariants = {
+  open: {
+    scaleY: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+  closed: {
+    scaleY: 0,
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const iconVariants = {
+  open: { rotate: 180 },
+  closed: { rotate: 0 },
+};
+
+const itemVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      when: "beforeChildren",
+    },
+  },
+  closed: {
+    opacity: 0,
+    y: -15,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const actionIconVariants = {
+  open: { scale: 1, y: 0 },
+  closed: { scale: 0, y: -7 },
+};
 
 export default Navbar;

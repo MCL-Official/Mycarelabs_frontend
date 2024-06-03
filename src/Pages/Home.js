@@ -14,15 +14,17 @@ import { TextParallaxContentExample } from '../Components/Scroll_Animation/TextP
 // import TestMenu from "../Components/TestMenu/TestMenu";// In Home.js
 // import CaseStudyScroller from "../Components/Animation/CaseStudyScroller";
 import ShuffleHero from "../Components/shuffel/SuffleHero";
+import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
 
 function Home() {
   return (
     <div className="home-section">
       <Navbar />
       <Hero />
-      {/* <ShuffleHero/> */}
       <HoverCards />
+      <ShuffleHero/>
       <TextParallaxContentExample/>
+      <ClipPathLinks/>
               {/* <InsuranceAccepted/> */}
       {/* <ShuffleHero /> */}
       {/* <div className="card-container"> */}
