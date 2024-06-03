@@ -113,7 +113,7 @@ const contentData = [
 export const TextParallaxContentExample = () => {
   return (
     <div className="bg-white">
-       <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
+       <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-14">
     <div className="relative inline-block -mt-12 bg-transparent">
       <span className="text-blue-600 text-4xl font-bold mr-2">Solutions</span>
       <span className="text-orange-600 text-4xl font-bold">We Provide</span>

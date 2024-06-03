@@ -21,10 +21,10 @@ function Home() {
     <div className="home-section">
       <Navbar />
       <Hero />
-      <HoverCards />
-      <ShuffleHero/>
       <TextParallaxContentExample/>
-      <ClipPathLinks/>
+      <HoverCards />
+      {/* <ShuffleHero/> */}
+      {/* <ClipPathLinks/> */}
               {/* <InsuranceAccepted/> */}
       {/* <ShuffleHero /> */}
       {/* <div className="card-container"> */}
