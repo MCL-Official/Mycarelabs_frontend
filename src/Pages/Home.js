@@ -15,24 +15,26 @@ import { TextParallaxContentExample } from '../Components/Scroll_Animation/TextP
 // import CaseStudyScroller from "../Components/Animation/CaseStudyScroller";
 import ShuffleHero from "../Components/shuffel/SuffleHero";
 import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
+import FeatureComponent from "../Components/Accordain/FeatureComponent";
 
 function Home() {
   return (
     <div className="home-section">
       <Navbar />
       <Hero />
-      <TextParallaxContentExample/>
+      <FeatureComponent/>
       <HoverCards />
+      <TextParallaxContentExample/>
       {/* <ShuffleHero/> */}
       {/* <ClipPathLinks/> */}
               {/* <InsuranceAccepted/> */}
       {/* <ShuffleHero /> */}
+      {/* <About /> */}
+      {/* <Info /> */}
       {/* <div className="card-container"> */}
       {/* </div> */}
-      {/*
-      <Info />
-      <About />
-      <BookAppointment />
+      
+      {/* <BookAppointment />
       <Reviews />
       <Doctors />
       <Footer /> */}

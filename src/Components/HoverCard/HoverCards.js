@@ -13,44 +13,44 @@ const images = [img, img1, img2, img3, img5];
 
 const cardData = [
   {
-    category: "MICE",
-    title: "Just feels right",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    category: "NorCal: Fremont Lab",
+    title: "Fremont Laboratory",
+    shortDescription: "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
     longDescription: "Detailed information about our infectious disease testing services..."
   },
   {
-    category: "KEYBOARDS",
-    title: "Type in style",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    category: "SoCal: Riverside Mobile Testing",
+    title: "Riverside Mobile Testing",
+    shortDescription: "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription: "Detailed information about our toxicology testing services..."
   },
   {
-    category: "MONITORS",
-    title: "Looks like a win",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    category: "NorCal: Bay Area Mobile Testing",
+    title: "SF Bay Area / Silicon Valley Mobile Testing",
+    shortDescription: "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
     longDescription: "Detailed information about our wellness testing services..."
   },
   {
-    category: "CHAIRS",
-    title: "Back to comfort",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    category: "SoCal: Riverside Pop-up",
+    title: "Riverside Gurdwara",
+    shortDescription: "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription: "Detailed information about our mobile testing services..."
   },
   {
-    category: "DESKS",
-    title: "Perfect workspace",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    category: "FedEx Overnight Test Kits",
+    title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
+    shortDescription: "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
     longDescription: "Detailed information about our at-home test kits..."
   },
   {
-    category: "LIGHTS",
-    title: "Brighten your day",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    category: "NorCal: Union City Pop-up",
+    title: "Union City Pop-up",
+    shortDescription: "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
     longDescription: "Detailed information about our light solutions..."
   },
   {
-    category: "HEADPHONES",
-    title: "Immersive sound",
+    category: "SoCal: Corona Mobile Testing",
+    title: "Mobile Testing: Corona, CA",
     shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
     longDescription: "Detailed information about our audio solutions..."
   },
@@ -120,12 +120,12 @@ const HoverCards = () => {
       <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
           <div className="relative inline-block -mt-12 bg-transparent">
-            <span className="text-blue-600 text-4xl font-bold mr-2">Locations</span>
-            <span className="text-gray-600 text-4xl font-bold">We Serve In.</span>
+            <span className="text-blue-600 text-5xl font-bold mr-2">Locations</span>
+            <span className="text-gray-600 text-5xl font-bold">We Serve In.</span>
           </div>
         </h3>
         <div className="container mx-auto px-4">
-          <p className="text-base mt-3">
+          <p className="info-description mt-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum, urna sed dignissim rhoncus, purus nisi egestas odio, a facilisis nulla nisl sit amet felis.
           </p>
         </div>
@@ -138,7 +138,7 @@ const HoverCards = () => {
         >
           <MdOutlineKeyboardArrowLeft size={24} />
         </button>
-        <div ref={carouselRef} className="flex overflow-x-hidden space-x-6 p-4 mb-5">
+        <div ref={carouselRef} className="flex overflow-x-hidden space-x-8 p-4 mb-7">
           {cardData.slice(0, 7).map((card, index) => (
             <div
               key={index}
@@ -150,17 +150,17 @@ const HoverCards = () => {
                   className="h-48 w-full object-cover"
                   alt={card.title}
                 />
-                <div className="p-4 bg-white relative">
-                  <span className="text-sm text-gray-400">{card.category}</span>
-                  <h5 className="text-lg font-bold mb-1">{card.title}</h5>
+                <div className="p-4 bg-white  relative w- h-full">
+                  <span className="text-sm text-blue-400">{card.category}</span>
+                  <h5 className="text-lg font-bold mb-1 ">{card.title}</h5>
                   <p className="text-sm text-gray-600 mb-2">
                     {card.shortDescription}
-                    <button
+                    {/* <button
                       className="text-sm text-blue-500 hover:underline ml-1"
                       onClick={() => handleLearnMoreClick(card.longDescription)}
                     >
                       Learn More
-                    </button>
+                    </button> */}
                   </p>
                   <div className="flex justify-center">
                     <Button />

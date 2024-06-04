@@ -9,6 +9,8 @@ module.exports = {
         'custom': '1440px', // You can adjust this value as needed
       },
     },
+
+    
   },
   plugins: [],
 }

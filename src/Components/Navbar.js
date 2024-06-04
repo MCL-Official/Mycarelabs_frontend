@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -10,9 +11,20 @@ import {
   FiShare,
   FiPlusSquare,
 } from "react-icons/fi";
-import { motion } from "framer-motion";
 
 function Navbar() {
+
+  const {scrollY}= useScroll();
+  useMotionValueEvent(scrollY,"change",(latest)=>{
+    const previous = scrollY.getPrevious();
+    if(latest>previous && latest >150){
+      setHiddem(true);
+    }else{
+      setHiddem(false);
+    }
+    
+    console.log(latest)
+  })
   const [nav, setNav] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
@@ -20,6 +32,7 @@ function Navbar() {
   const [clicked, setClicked] = useState(null);
   const [clickedButton, setClickedButton] = useState(null);
   const [homeDropdown, setHomeDropdown] = useState(false);
+  const [hidden,setHiddem]=useState(false);
 
   const openNav = () => {
     setNav(!nav);
@@ -47,6 +60,12 @@ function Navbar() {
     setDropdownOpen(false);
   };
 
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
+
+  const handleChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  };
+
   const linkStyle = {
     color: "#000000",
     fontWeight: "normal",
@@ -59,11 +78,30 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <motion.nav 
+    variants={
+      {
+        visible:{y:0},
+        hidden:{y:"-100%"},
+      }
+    }
+    animate={hidden?"hidden":"visible"}
+    transition={{duration:0.35,ease:"easeInOut"}}
+    className=" bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 "
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+      // backgroundColor: '#fff',
+      // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    }}
+    >
       <div className="md:flex items-center p-0">
         <div className="flex flex-wrap md:flex-nowrap justify-between items-center p-0">
           <a
-            href="https://flowbite.com"
+            // href="https://flowbite.com"/
             className="flex items-center  md:mr-5 space-x-3 rtl:space-x-reverse"
           >
             <img src={logo1} className="h-20" alt="Flowbite Logo" />
@@ -99,18 +137,24 @@ function Navbar() {
             nav ? "block" : "hidden"
           } `}
         >
-          <ul className="flex flex-col mt-2 font-medium md:flex-row items-center pl-0  md:mt-0 ">
+          <ul class="flex flex-col mt-2 font-medium md:flex-row items-center gap-2 pl-0 md:mt-0">
             <li className="relative">
               <button
                 onClick={toggleHomeDropdown}
-                className="flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-indigo-500 hover:bg-indigo-500 transition-colors"
+                className="flex items-center justify-between w-full  px-2 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                <span className="font-medium text-sm">COVID-19 Testing Locations</span>
-                <motion.span animate={homeDropdown ? "open" : "closed"} variants={iconVariants}>
+                <span className="font-medium text-sm">
+                  COVID-19 Testing Locations
+                </span>
+                
+                {/* <motion.span
+                  animate={homeDropdown ? "open" : "closed"}
+                  variants={iconVariants}
+                >
                   <FiChevronDown />
-                </motion.span>
+                </motion.span> */}
               </button>
-              <motion.ul
+              {/* <motion.ul
                 initial="closed"
                 animate={homeDropdown ? "open" : "closed"}
                 variants={wrapperVariants}
@@ -118,17 +162,25 @@ function Navbar() {
                 className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
               >
                 <Option setOpen={setHomeDropdown} Icon={FiEdit} text="Edit" />
-                <Option setOpen={setHomeDropdown} Icon={FiPlusSquare} text="Duplicate" />
+                <Option
+                  setOpen={setHomeDropdown}
+                  Icon={FiPlusSquare}
+                  text="Duplicate"
+                />
                 <Option setOpen={setHomeDropdown} Icon={FiShare} text="Share" />
-                <Option setOpen={setHomeDropdown} Icon={FiTrash} text="Remove" />
-              </motion.ul>
+                <Option
+                  setOpen={setHomeDropdown}
+                  Icon={FiTrash}
+                  text="Remove"
+                />
+              </motion.ul> */}
             </li>
 
-            <li>
+            <li class="group relative hover:scale-110 duration-300">
               <button
                 id="mega-menu-full-cta-image-button"
                 data-collapse-toggle="mega-menu-full-image-dropdown"
-                className="flex items-center justify-between w-full py-2 px-3 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="flex items-center justify-between w-full  px-2 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 onClick={toggleDropdown}
               >
                 Solutions
@@ -147,34 +199,40 @@ function Navbar() {
                     d="m1 1 4 4 4-4"
                   />
                 </svg>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </button>
             </li>
-            <li>
+
+            <li class="group relative hover:scale-110 duration-300">
               <a
                 href="#"
-                className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Company
               </a>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li>
+
+            <li class="group relative hover:scale-110 duration-300">
               <a
                 href="#"
-                className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Blog
               </a>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li>
+            <li class="group relative hover:scale-110 duration-300">
               <a
                 href="#"
-                className="block py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Support
               </a>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
             </li>
           </ul>
-          <div className="flex flex-col mt-2 md:flex-row md:mt-0 ">
+          <div className="flex flex-col  md:flex-row md:mt-0 ">
             <div
               style={{
                 display: "flex",
@@ -233,6 +291,28 @@ function Navbar() {
                 <FontAwesomeIcon icon={faPhone} size="xl" />
               </a>
             </form>
+            <div className="w-32 ">
+              {/* <label
+                htmlFor="language"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Select Language
+              </label> */}
+              <select
+                id="language"
+                name="language"
+                value={selectedLanguage}
+                onChange={handleChange}
+                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+              >
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+                <option value="jp">Japanese</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -348,7 +428,7 @@ function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 }
 
