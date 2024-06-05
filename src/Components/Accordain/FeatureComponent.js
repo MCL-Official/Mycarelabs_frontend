@@ -142,7 +142,9 @@ function FeatureComponent() {
           {Object.keys(features).map((feature) => (
             <div className="flex items-center justify-center" key={feature}>
               <button
-                className={`rounded-2xl border-2 min-w-[150px] md:min-w-[200px] border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl `}
+                className={`rounded-2xl border-2 min-w-[150px] md:min-w-[200px] border-black px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${
+                  selectedFeature === feature ? 'bg-blue-500 text-white' : 'bg-white'
+                }`}
                 onClick={() => handleClick(feature)}
               >
                 {feature}
@@ -150,7 +152,7 @@ function FeatureComponent() {
             </div>
           ))}
         </div>
-        <div className=" rounded-2xl border-2 p-6 bg-white flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] transition-all shadow-[3px_3px_0px_black] hover: hover:translate-x-[3px] hover:translate-y-[3px] ${selectedFeature === feature ? 'border-blue-600 text-blue-600' : 'border-gray-300'}">
+        <div className="rounded-2xl border-2 p-6 bg-white flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] transition-all shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px] ${selectedFeature === feature ? 'border-blue-600 text-blue-600' : 'border-gray-300'}">
           <AnimatePresence custom={direction} mode="wait">
             <motion.img
               key={features[selectedFeature].image}
@@ -175,8 +177,7 @@ function FeatureComponent() {
                 variants={textVariants}
               >
                 <h2 className="text-4xl font-bold">{features[selectedFeature].title}</h2>
-                <p className="mb-8 pt-7  font-semibold">{features[selectedFeature].description}</p>
-              
+                <p className="mb-8 pt-7 font-semibold">{features[selectedFeature].description}</p>
               </motion.div>
             </AnimatePresence>
             <motion.button

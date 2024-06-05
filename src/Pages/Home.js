@@ -6,10 +6,10 @@ import About from "../Components/About";
 import InsuranceAccepted from "../Components/InsuranceAccepted";
 import HoverCards from "../Components/HoverCard/HoverCards";
 import { TextParallaxContentExample } from '../Components/Scroll_Animation/TextParallaxContent';
-// import BookAppointment from "../Components/BookAppointment";
+import BookAppointment from "../Components/BookAppointment";
 // import Reviews from "../Components/Reviews";
-// import Doctors from "../Components/Doctors";
-// import Footer from "../Components/Footer";
+import Doctors from "../Components/Doctors";
+import Footer from "../Components/Footer";
 // import ScrollAnimation from "../Components/Animation/CaseStudyScroller";
 // import TestMenu from "../Components/TestMenu/TestMenu";// In Home.js
 // import CaseStudyScroller from "../Components/Animation/CaseStudyScroller";
@@ -24,20 +24,22 @@ function Home() {
       <Hero />
       <FeatureComponent/>
       <HoverCards />
-      <TextParallaxContentExample/>
+      {/* <TextParallaxContentExample/> */}
       {/* <ShuffleHero/> */}
       {/* <ClipPathLinks/> */}
               {/* <InsuranceAccepted/> */}
       {/* <ShuffleHero /> */}
-      {/* <About /> */}
       {/* <Info /> */}
+      {/* <About /> */}
+      {/* <BookAppointment /> */}
+      {/* <Doctors /> */}
+      {/* <Footer />  */}
       {/* <div className="card-container"> */}
       {/* </div> */}
       
-      {/* <BookAppointment />
+      {/* 
       <Reviews />
-      <Doctors />
-      <Footer /> */}
+      */}
     </div>
   );
 }

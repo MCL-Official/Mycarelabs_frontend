@@ -138,31 +138,31 @@ const HoverCards = () => {
         >
           <MdOutlineKeyboardArrowLeft size={24} />
         </button>
-        <div ref={carouselRef} className="flex overflow-x-hidden space-x-8 p-4 mb-7">
+        <div ref={carouselRef} className="flex overflow-x-auto space-x-8 p-4 mb-7 scrollbar-hide">
           {cardData.slice(0, 7).map((card, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 transition-transform transform hover:scale-105 hover:shadow-2xl"
+              className="flex-shrink-0 w-80 h-112 transition-transform transform hover:scale-110 hover:shadow-2xl"
             >
-              <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="rounded-xl overflow-hidden shadow-lg h-full flex flex-col">
                 <img
                   src={images[index % images.length]} // Adjusted to use % to cycle through images
-                  className="h-48 w-full object-cover"
+                  className="h-56 w-full object-cover"
                   alt={card.title}
                 />
-                <div className="p-4 bg-white  relative w- h-full">
-                  <span className="text-sm text-blue-400">{card.category}</span>
-                  <h5 className="text-lg font-bold mb-1 ">{card.title}</h5>
-                  <p className="text-sm text-gray-600 mb-2">
-                    {card.shortDescription}
-                    {/* <button
+                <div className="p-4 bg-white flex flex-col justify-between flex-grow">
+                  <div>
+                    <span className="text-sm text-blue-400">{card.category}</span>
+                    <h5 className="text-lg font-bold mb-1">{card.title}</h5>
+                    <p className="text-sm text-gray-600 mb-2 line-clamp-2">{card.shortDescription}
+                       <button
                       className="text-sm text-blue-500 hover:underline ml-1"
                       onClick={() => handleLearnMoreClick(card.longDescription)}
                     >
                       Learn More
-                    </button> */}
-                  </p>
-                  <div className="flex justify-center">
+                    </button></p>
+                  </div>
+                  <div className="flex justify-center mt-auto">
                     <Button />
                   </div>
                 </div>
@@ -183,9 +183,7 @@ const HoverCards = () => {
           <h2 className="text-4xl font-bold text-neutral-200">
             Drag the handle at the top of this modal downwards 100px to close it
           </h2>
-          <p>
-            {drawerContent}
-          </p>
+          <p>{drawerContent}</p>
         </div>
       </DragCloseDrawer>
     </div>

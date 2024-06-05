@@ -11,6 +11,7 @@ import {
   FiShare,
   FiPlusSquare,
 } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 
 function Navbar() {
 
@@ -78,13 +79,20 @@ function Navbar() {
   };
 
   return (
+
+    <>
+    <Helmet>
+      <title>My Care labs</title>
+      <meta name="description" content="Helo there "/>
+      <link rel="canonical" href="/"/>
+    </Helmet>
     <motion.nav 
     variants={
       {
         visible:{y:0},
         hidden:{y:"-100%"},
       }
-    }
+    } 
     animate={hidden?"hidden":"visible"}
     transition={{duration:0.35,ease:"easeInOut"}}
     className=" bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 "
@@ -429,7 +437,9 @@ function Navbar() {
         </div>
       )}
     </motion.nav>
+  </>
   );
+  
 }
 
 const Option = ({ text, Icon, setOpen }) => {
