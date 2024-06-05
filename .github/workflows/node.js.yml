@@ -36,12 +36,12 @@ jobs:
           export AWS_DEFAULT_REGION=us-east-1
           aws s3 sync build s3://$AWS_S3_BUCKET
 
-      - name: Invalidate CloudFront cache
-        run: |
-          echo "Starting CloudFront invalidation"
-          export AWS_DEFAULT_REGION=us-east-1
-          aws cloudfront create-invalidation --distribution-id E1B98IR8F34NZA --paths "/*"  
-          echo "Invalidation completed"
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESSKEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY_ACCESS }}
+      # - name: Invalidate CloudFront cache
+      #   run: |
+      #     echo "Starting CloudFront invalidation"
+      #     export AWS_DEFAULT_REGION=us-east-1
+      #     aws cloudfront create-invalidation --distribution-id E1B98IR8F34NZA --paths "/*"  
+      #     echo "Invalidation completed"
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESSKEY }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY_ACCESS }}

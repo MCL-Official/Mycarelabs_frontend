@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo1 from "../Assets/Logo1.png";
-import {
-  FiEdit,
-  FiChevronDown,
-  FiTrash,
-  FiShare,
-  FiPlusSquare,
-} from "react-icons/fi";
 import { Helmet } from "react-helmet-async";
 
 function Navbar() {
@@ -19,9 +12,9 @@ function Navbar() {
   useMotionValueEvent(scrollY,"change",(latest)=>{
     const previous = scrollY.getPrevious();
     if(latest>previous && latest >150){
-      setHiddem(true);
+      setHidden(true);
     }else{
-      setHiddem(false);
+      setHidden(false);
     }
     
     console.log(latest)
@@ -33,7 +26,7 @@ function Navbar() {
   const [clicked, setClicked] = useState(null);
   const [clickedButton, setClickedButton] = useState(null);
   const [homeDropdown, setHomeDropdown] = useState(false);
-  const [hidden,setHiddem]=useState(false);
+  const [hidden,setHidden]=useState(false);
 
   const openNav = () => {
     setNav(!nav);
@@ -79,7 +72,6 @@ function Navbar() {
   };
 
   return (
-
     <>
     <Helmet>
       <title>My Care labs</title>
@@ -102,14 +94,11 @@ function Navbar() {
       left: 0,
       right: 0,
       zIndex: 1000,
-      // backgroundColor: '#fff',
-      // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
     }}
     >
       <div className="md:flex items-center p-0">
         <div className="flex flex-wrap md:flex-nowrap justify-between items-center p-0">
           <a
-            // href="https://flowbite.com"/
             className="flex items-center  md:mr-5 space-x-3 rtl:space-x-reverse"
           >
             <img src={logo1} className="h-20" alt="Flowbite Logo" />
@@ -141,11 +130,9 @@ function Navbar() {
           </button>
         </div>
         <div
-          className={`md:flex items-center justify-between w-full  ${
-            nav ? "block" : "hidden"
-          } `}
+          className={`md:flex items-center justify-between w-full  ${nav ? "block" : "hidden"} `}
         >
-          <ul class="flex flex-col mt-2 font-medium md:flex-row items-center gap-2 pl-0 md:mt-0">
+          <ul className="flex flex-col mt-2 font-medium md:flex-row items-center gap-2 pl-0 md:mt-0">
             <li className="relative">
               <button
                 onClick={toggleHomeDropdown}
@@ -154,41 +141,14 @@ function Navbar() {
                 <span className="font-medium text-sm">
                   COVID-19 Testing Locations
                 </span>
-                
-                {/* <motion.span
-                  animate={homeDropdown ? "open" : "closed"}
-                  variants={iconVariants}
-                >
-                  <FiChevronDown />
-                </motion.span> */}
               </button>
-              {/* <motion.ul
-                initial="closed"
-                animate={homeDropdown ? "open" : "closed"}
-                variants={wrapperVariants}
-                style={{ originY: "top", translateX: "-50%" }}
-                className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
-              >
-                <Option setOpen={setHomeDropdown} Icon={FiEdit} text="Edit" />
-                <Option
-                  setOpen={setHomeDropdown}
-                  Icon={FiPlusSquare}
-                  text="Duplicate"
-                />
-                <Option setOpen={setHomeDropdown} Icon={FiShare} text="Share" />
-                <Option
-                  setOpen={setHomeDropdown}
-                  Icon={FiTrash}
-                  text="Remove"
-                />
-              </motion.ul> */}
             </li>
 
-            <li class="group relative hover:scale-110 duration-300">
+            <li className="group relative hover:scale-110 duration-300">
               <button
                 id="mega-menu-full-cta-image-button"
                 data-collapse-toggle="mega-menu-full-image-dropdown"
-                class="flex items-center justify-between w-full  px-2 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="flex items-center justify-between w-full  px-2 font-medium text-black border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 onClick={toggleDropdown}
               >
                 Solutions
@@ -207,37 +167,37 @@ function Navbar() {
                     d="m1 1 4 4 4-4"
                   />
                 </svg>
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </button>
             </li>
 
-            <li class="group relative hover:scale-110 duration-300">
+            <li className="group relative hover:scale-110 duration-300">
               <a
                 href="#"
-                class="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Company
               </a>
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
             </li>
 
-            <li class="group relative hover:scale-110 duration-300">
+            <li className="group relative hover:scale-110 duration-300">
               <a
                 href="#"
-                class="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Blog
               </a>
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li class="group relative hover:scale-110 duration-300">
+            <li className="group relative hover:scale-110 duration-300">
               <a
                 href="#"
-                class="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block no-underline px-2 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Support
               </a>
-              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
             </li>
           </ul>
           <div className="flex flex-col  md:flex-row md:mt-0 ">
@@ -249,7 +209,7 @@ function Navbar() {
               }}
             >
               <button
-                className="nav-link navbar-button"
+                className="nav-link navbar-button group relative hover:scale-110 duration-300"
                 onClick={() => handleButtonClick("bookButton", "#teamq1")}
                 style={{
                   ...linkStyle,
@@ -266,9 +226,10 @@ function Navbar() {
                 }}
               >
                 Book My Test
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button
-                className="nav-link navbar-button"
+                className="nav-link navbar-button group relative hover:scale-110 duration-300"
                 onClick={() => handleButtonClick("resultsButton", "#team1")}
                 style={{
                   ...linkStyle,
@@ -286,26 +247,21 @@ function Navbar() {
                 }}
               >
                 View Test Results
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </button>
             </div>
-            <form class="flex px-2">
+            <form className="flex px-2">
               <input
-                class="form-control mr-2 p-2 border border-gray-300 rounded"
+                className="form-control mr-2 p-2 border border-gray-300 rounded"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <a href="tel:+1234567890" class="text-black mr-3 self-center">
+              <a href="tel:+1234567890" className="text-black mr-3 self-center">
                 <FontAwesomeIcon icon={faPhone} size="xl" />
               </a>
             </form>
             <div className="w-32 ">
-              {/* <label
-                htmlFor="language"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Select Language
-              </label> */}
               <select
                 id="language"
                 name="language"

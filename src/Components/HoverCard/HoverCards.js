@@ -1,15 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
-import img from "../../Assets/img.jpg";
-import img1 from "../../Assets/img3.jpg";
-import img2 from "../../Assets/img4.jpg";
-import img5 from "../../Assets/img5.png";
-import img3 from "../../Assets/img2.jpg";
+import img from "../../Assets/card1.jpg";
+import img1 from "../../Assets/card2.jpg";
+import img2 from "../../Assets/card3.jpg";
+import img5 from "../../Assets/card4.jpg";
+import img3 from "../../Assets/card5.jpg";
+import img6 from "../../Assets/card6.jpg";
 import Button from "../button/Button";
 import DrawerButton from "../Custome_Modal/DrawerButton"; // Import the DrawerButton component
 import DragCloseDrawer from "../Custome_Modal/DragCloseDrawer"; // Import the Drawer component
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
-const images = [img, img1, img2, img3, img5];
+const images = [img, img1, img2, img3, img5,img6];
 
 const cardData = [
   {
@@ -51,7 +52,7 @@ const cardData = [
   {
     category: "SoCal: Corona Mobile Testing",
     title: "Mobile Testing: Corona, CA",
-    shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+    shortDescription: "Same-day Covid/Flu PCR results available. To speed up your testing.",
     longDescription: "Detailed information about our audio solutions..."
   },
 ];
