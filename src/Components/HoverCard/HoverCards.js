@@ -117,17 +117,17 @@ const HoverCards = () => {
   }, []);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 bg-blue-300">
       <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
-          <div className="relative inline-block -mt-12 bg-transparent">
-            <span className="text-blue-600 text-5xl font-bold mr-2">Locations</span>
-            <span className="text-gray-600 text-5xl font-bold">We Serve In.</span>
+          <div className="relative inline-block -pt-12 bg-transparent">
+            <span className="text-blue-600 text-5xl font-bold mr-2">Our Testing</span>
+            <span className="text-gray-600 text-5xl font-bold">Locations...</span>
           </div>
         </h3>
         <div className="container mx-auto px-4">
-          <p className="info-description mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum, urna sed dignissim rhoncus, purus nisi egestas odio, a facilisis nulla nisl sit amet felis.
+          <p className="info-description mt-3 text-bold text-xl">
+          My Care Labs offers quick, hassle-free, and accurate COVID-19, RSV, and Influenza RT-PCR testing. With same-day or 24-hour results, we provide fast turnaround for busy patients on-site at our laboratory and at pop-ups throughout California.
           </p>
         </div>
       </div>

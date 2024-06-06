@@ -7,7 +7,7 @@ import img1 from "../../Assets/img3.jpg";
 import img4 from "../../Assets/img4.jpg";
 
 const features = {
-  Toxicology: {
+  "Toxicology": {
     title: "Toxicology",
     description: "MyCare Labs offers comprehensive toxicology testing services, ensuring accurate and timely results for various needs. Their state-of-the-art facilities and experienced professionals provide reliable screening for drugs, alcohol, and other substances.",
     buttonText: `BOOK TEST FOR Toxicology `,
@@ -21,7 +21,7 @@ const features = {
       </>
     ),
   },
-  InfectiousDisease: {
+  "Infectious Disease": {
     title: "Title for Kanban feature",
     description: "MyCare Labs provides top-tier testing solutions for infectious diseases,featuring an all-in-one swab for COVID-19, Influenza A/B, and RSV. Discover comprehensive and advanced diagnostics with MyCare Labs' reliable services.",
     buttonText: `BOOK TEST FOR InfectiousDisease`,
@@ -35,7 +35,7 @@ const features = {
       </>
     ),
   },
-  WellnessTesting: {
+  "Wellness Testing": {
     title: "Title for Gantt feature",
     description: "MyCare Labs provides the best testing solutions, prioritizing your well-being with comprehensive wellness testing services.Take proactive steps towards a healthier, happier you with MyCare Labs' advanced diagnostics.",
     buttonText: `BOOK TEST FOR WellnessTesting`,
@@ -49,7 +49,7 @@ const features = {
       </>
     ),
   },
-  MobileTesting: {
+  "Mobile Testing": {
     title: "Title for Documentation feature",
     description: " MyCare Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
     buttonText: `Book Test For Mobile Testing`,
@@ -63,7 +63,7 @@ const features = {
       </>
     ),
   },
-  ATHomeTestKits: {
+  "AT Home Test Kits": {
     title: "Title for Documentation feature",
     description: "Our At-home Test Kits offer a convenient way to monitor your health. Order now for peace of mind.",
     buttonText: `BOOK TEST FOR AT HOME TEST KITS`,
@@ -80,7 +80,7 @@ const features = {
 };
 
 function FeatureComponent() {
-  const [selectedFeature, setSelectedFeature] = useState('MobileTesting');
+  const [selectedFeature, setSelectedFeature] = useState('Mobile Testing');
   const [previousFeature, setPreviousFeature] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -133,7 +133,7 @@ function FeatureComponent() {
           <div className="relative inline-block bg-transparent text-center">
             <span className="text-blue-600 text-6xl font-bold mr-2">Solutions</span>
             <span className="text-orange-600 text-6xl font-bold">We Provide</span>
-            <p className="info-description mt-4">
+            <p className="info-description mt-4 text-xl">
               My Care Labs offers quick, easy, and accurate RT-PCR testing for COVID-19, RSV, and Influenza A/B. We provide on-site testing at our lab and pop-up locations throughout California, with results available the same day or within 24 hours.
             </p>
           </div>
@@ -142,7 +142,7 @@ function FeatureComponent() {
           {Object.keys(features).map((feature) => (
             <div className="flex items-center justify-center" key={feature}>
               <button
-                className={`rounded-2xl border-2 min-w-[150px] md:min-w-[200px] border-black px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${
+                className={` w-full rounded-2xl border-2 min-w-[150px] md:min-w-[200px] border-black px-2 py-4 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${
                   selectedFeature === feature ? 'bg-blue-500 text-white' : 'bg-white'
                 }`}
                 onClick={() => handleClick(feature)}

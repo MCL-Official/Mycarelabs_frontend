@@ -29,11 +29,11 @@ function Home() {
       {/* <ClipPathLinks/> */}
               {/* <InsuranceAccepted/> */}
       {/* <ShuffleHero /> */}
-      {/* <Info /> */}
+      <Info />
       {/* <About /> */}
       {/* <BookAppointment /> */}
       {/* <Doctors /> */}
-      {/* <Footer />  */}
+      <Footer /> 
       {/* <div className="card-container"> */}
       {/* </div> */}
       

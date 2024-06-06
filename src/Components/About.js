@@ -15,13 +15,13 @@ function About() {
           <span>About Us</span>
         </h3>
         <p className="about-description">
-          Welcome to Health Plus, your trusted partner for accessible and
-          personalized healthcare. Our expert doctors offer online consultations
-          and specialized services, prioritizing your well-being. Join us on
-          this journey towards a healthier you.
+        Under the leadership of Harvey Singh, our team is comprised 
+        of experts in healthcare, technology, and business, all working 
+        together to bring the best possible diagnostic lab testing services 
+        to our patients and clients.
         </p>
 
-        <h4 className="about-text-title">Your Solutions</h4>
+        <h4 className="about-text-title">Solutions We Provide</h4>
 
         <SolutionStep
           title="Choose a Specialist"
