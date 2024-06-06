@@ -76,12 +76,12 @@ function Hero() {
   //   return () => clearInterval(cursorInterval);
   // }, []);
   return (
-    <div className="section-container pt-5">
+    <div className="section-container">
       <div className="hero-section">
         <video className="hero-video" src={"https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4"} autoPlay muted loop playsInline />
         <div className="text-section">
-          <p className=" text-4xl">Welcome to </p>
-          <h2 className="sample text-7xl">
+          <p className=" text-4xl pt-5">Welcome to </p>
+          <h2 className="sample text-6xl">
             My Care Labs
           </h2>
           <p className="text-description">

@@ -24,16 +24,16 @@ function Home() {
       <Hero />
       <FeatureComponent/>
       <HoverCards />
+              <InsuranceAccepted/>
+      <Info />
+      <Footer /> 
       {/* <TextParallaxContentExample/> */}
       {/* <ShuffleHero/> */}
       {/* <ClipPathLinks/> */}
-              {/* <InsuranceAccepted/> */}
       {/* <ShuffleHero /> */}
-      <Info />
       {/* <About /> */}
       {/* <BookAppointment /> */}
       {/* <Doctors /> */}
-      <Footer /> 
       {/* <div className="card-container"> */}
       {/* </div> */}
       

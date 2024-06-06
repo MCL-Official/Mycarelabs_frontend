@@ -24,13 +24,13 @@ const cardData = [
     icon: faHeartPulse
   },
   {
-    title: "Heart Disease",
-    description: "Our team of experienced cardiologists and medical experts use state-of-the-art technology to assess your cardiovascular health and design personalized treatment plans.",
+    title: "Rehabilitation Centers",
+    description: "The purpose of our services is to help individuals recover from illness, injury, or surgery, and drug abuse. Our features include physical, occupational, medical supervision, and both short-term and long-term care",
     icon: faHeartPulse
   },
   {
-    title: "Dental Care",
-    description: "Smile with confidence as our Dental Care services cater to all your oral health needs. Our skilled dentists provide a wide range of treatments, from routine check-ups.",
+    title: "Home Health",
+    description: "The purpose of our services is to provide medical and personal care at home. Our features include skilled nursing, home-based therapies, personal care assistance, and medical services in the home environment.",
     icon: faTooth
   }
 ];
