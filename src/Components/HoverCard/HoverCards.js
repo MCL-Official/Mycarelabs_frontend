@@ -1,16 +1,18 @@
 import React, { useRef, useState, useEffect } from "react";
-import img from "../../Assets/card1.jpg";
-import img1 from "../../Assets/card2.jpg";
-import img2 from "../../Assets/card3.jpg";
-import img5 from "../../Assets/card4.jpg";
-import img3 from "../../Assets/card5.jpg";
-import img6 from "../../Assets/card6.jpg";
 import Button from "../button/Button";
 import DrawerButton from "../Custome_Modal/DrawerButton"; // Import the DrawerButton component
 import DragCloseDrawer from "../Custome_Modal/DragCloseDrawer"; // Import the Drawer component
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
-const images = [img, img1, img2, img3, img5,img6];
+const img = "https://imagesuploadforwebsite.s3.amazonaws.com/card1.jpg";
+const img1 = "https://imagesuploadforwebsite.s3.amazonaws.com/card2.jpg";
+const img2 = "https://imagesuploadforwebsite.s3.amazonaws.com/card3.jpg";
+const img3 = "https://imagesuploadforwebsite.s3.amazonaws.com/card5.jpg";
+const img5 = "https://imagesuploadforwebsite.s3.amazonaws.com/card6.jpg";
+const img60 = "https://imagesuploadforwebsite.s3.amazonaws.com/card4.jpg";
+const img6 = "https://imagesuploadforwebsite.s3.amazonaws.com/card4.webp";
+
+const images = [img, img1, img2, img3, img5, img6];
 
 const cardData = [
   {
@@ -114,6 +116,14 @@ const HoverCards = () => {
       carousel.removeEventListener('touchstart', handleTouchStart);
       carousel.removeEventListener('touchmove', handleTouchMove);
     };
+  }, []);
+
+  // Preload images
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
   }, []);
 
   return (
