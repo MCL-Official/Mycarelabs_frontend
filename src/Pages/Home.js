@@ -20,13 +20,13 @@ import FeatureComponent from "../Components/Accordain/FeatureComponent";
 function Home() {
   return (
     <div className="home-section">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
-      <FeatureComponent/>
+      {/* <FeatureComponent/>
       <HoverCards />
               <InsuranceAccepted/>
       <Info />
-      <Footer /> 
+      <Footer />  */}
       {/* <TextParallaxContentExample/> */}
       {/* <ShuffleHero/> */}
       {/* <ClipPathLinks/> */}
