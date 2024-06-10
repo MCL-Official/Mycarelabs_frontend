@@ -141,12 +141,13 @@ const HoverCards = () => {
   }, []);
 
   return (
-    <div className="mt-5 bg-blue-300 overflow-hidden">
+    // <div className="mt-5 bg-blue-600 overflow-hidden">
+    <div className="mt-5 overflow-hidden bg-gradient-to-b from-blue-300 via-transparent to-white">
       <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
         
-          <div className="relative inline-block pt-6 md:pt-12 px-4 sm:px-6 md:px-10 bg-transparent">
-            <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2">
+          <div className="relative inline-block pt-6 md:pt-12 px-4 sm:px-6 md:px-10 bg-transparent pb-3">
+            <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">
               Our Testing
             </span>
             <span className="text-gray-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">

@@ -20,7 +20,7 @@ const InsuranceAccepted = () => {
   return (
     <div className='container mx-auto'>
       <div className="flex flex-col items-center mt-1">
-        <h2 className="text-blue-600 text-5xl font-bold mr-2 pb-4">Insurance Accepted</h2>
+        <h2 className="text-blue-600 text-5xl font-bold mr-2 py-12">Insurance Accepted</h2>
         <div className="w-full md:w-10/12">
           <div className="flex items-center h-20"> {/* Increased height */}
             <span className=" text-blue-600 relative text-2xl font-bol top-4 left-0 md:left-5 w-32 mr-10"> {/* Adjusted position */}

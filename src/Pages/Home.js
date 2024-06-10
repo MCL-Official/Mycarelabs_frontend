@@ -16,6 +16,7 @@ import Footer from "../Components/Footer";
 import ShuffleHero from "../Components/shuffel/SuffleHero";
 import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
 import FeatureComponent from "../Components/Accordain/FeatureComponent";
+import ImageContainer from "../Components/Form/ImageContainer";
 
 function Home() {
   return (
@@ -26,7 +27,9 @@ function Home() {
       <HoverCards />
       <InsuranceAccepted />
       <Info />
+      <ImageContainer/>
       <Footer />
+
       {/* <TextParallaxContentExample/> */}
       {/* <ShuffleHero/> */}
       {/* <ClipPathLinks/> */}

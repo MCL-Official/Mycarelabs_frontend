@@ -32,7 +32,7 @@ const features = {
     ),
   },
   "Infectious Disease": {
-    title: "Title for Kanban feature",
+    title: "Infectious Disease",
     description:
       "MyCare Labs provides top-tier testing solutions for infectious diseases,featuring an all-in-one swab for COVID-19, Influenza A/B, and RSV. Discover comprehensive and advanced diagnostics with MyCare Labs' reliable services.",
     buttonText: `BOOK TEST FOR InfectiousDisease`,
@@ -56,7 +56,7 @@ const features = {
     ),
   },
   "Wellness Testing": {
-    title: "Title for Gantt feature",
+    title: "Wellness Testing",
     description:
       "MyCare Labs provides the best testing solutions, prioritizing your well-being with comprehensive wellness testing services.Take proactive steps towards a healthier, happier you with MyCare Labs' advanced diagnostics.",
     buttonText: `BOOK TEST FOR WellnessTesting`,
@@ -82,7 +82,7 @@ const features = {
     ),
   },
   "Mobile Testing": {
-    title: "Title for Documentation feature",
+    title: "Mobile Testing",
     description:
       " MyCare Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
     buttonText: `Book Test For Mobile Testing`,
@@ -108,7 +108,7 @@ const features = {
     ),
   },
   "AT Home Test Kits": {
-    title: "Title for Documentation feature",
+    title: "AT Home Test Kits",
     description:
       "Our At-home Test Kits offer a convenient way to monitor your health. Order now for peace of mind.",
     buttonText: `BOOK TEST FOR AT HOME TEST KITS`,
@@ -190,24 +190,24 @@ function FeatureComponent() {
 
   return (
     <div className="flex justify-center items-center min-h-screen py-4  ">
-      <div className="w-full lg:w-4/5 px-2 overflow-hidden">
+      <div className="w-full lg:w-4/5 px-2 overflow-hidden bg-gradient-to-r from-blue-300 via-transparent to-white bd">
         {/* style={{ maxWidth: "75%" }} */}
         <h3 className="flex justify-center text-2xl font-bold bg-transparent">
-       <div className="relative inline-block bg-transparent text-center">
-  <span className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mr-2">
-    Solutions
-  </span>
-  <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-    We Provide
-  </span>
-            <p className="info-description mt-4 text-base sm:text-sm md:text-xl lg:text-2xl pb-6">
-              My Care Labs offers quick, easy, and accurate RT-PCR testing for
-              COVID-19, RSV, and Influenza A/B. We provide on-site testing at
-              our lab and pop-up locations throughout California, with results
-              available the same day or within 24 hours.
-            </p>
-          </div>
-        </h3>
+  <div className="relative inline-block bg-transparent text-center">
+    <span className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mr-2">
+      Solutions
+    </span>
+    <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+      We Provide
+    </span>
+    <div className="info-description mt-8 sm:text-sm md:text-xl lg:text-xl pb-12 font-normal">
+      My Care Labs offers quick, easy, and accurate RT-PCR testing for COVID-19, RSV, and Influenza A/B. 
+      We provide on-site testing at our lab and pop-up locations throughout California, 
+      with results available the same day or within 24 hours.
+    </div>
+  </div>
+</h3>
+
         <div className="flex justify-center flex-wrap gap-3 mb-6">
           {Object.keys(features).map((feature) => (
             <div className="flex items-center justify-center" key={feature}>
@@ -249,10 +249,10 @@ function FeatureComponent() {
                 variants={textVariants}
                 className="h-full"
               >
-                <h2 className="text-4xl font-bold">
+                <h2 className="text-4xl font-bold text-orange-600 ">
                   {features[selectedFeature].title}
                 </h2>
-                <p className="font-semibold  h-full flex items-center ">
+                <p className=" text-2xl  h-full flex items-center ">
                   {features[selectedFeature].description}
                 </p>
               </motion.div>

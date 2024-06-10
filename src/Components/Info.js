@@ -44,11 +44,14 @@ function Info() {
 
   return (
     <div className="p-8 text-center bg-white" id="services">
-      <div className="my-16">
+      <div className="my-16 text-transparent bg-clip-text bg-gradient-to-r from-[#6C2FAC] to-white">
         <h3 className="font-poppins text-4xl font-bold">
-          <span>Communities We Serve</span>
+          <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">Communities </span>
+          <span className="text-gray-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+          We Serve
+            </span>
         </h3>
-        <p className="my-10 mx-4 text-center text-gray-700 font-rubik tracking-wide leading-7 text-base sm:text-sm md:text-xl lg:text-2xl pb-6">
+        <p className="my-10 mx-4 text-center text-gray-700 font-rubik tracking-wide leading-7 text-base sm:text-sm md:text-xl lg:text-xl pb-6">
         My Care Labs offers quick, hassle-free, and accurate COVID-19 RT-PCR testing. 
           With same day results or within 24 hours, we have testing on-site at our 
           laboratory and at pop-ups throughout California. My Care Labs provides 24 – 
@@ -58,7 +61,7 @@ function Info() {
         </p>
       </div>
 
-      <div className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="my-6  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {cardData.map((card, index) => (
           <div
             key={index}
