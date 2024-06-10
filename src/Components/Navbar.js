@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -15,6 +15,9 @@ function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
+
+    console.log(previous);
+
     if (latest > previous && latest > 500) {
       setHidden(true);
     } else {
@@ -22,7 +25,7 @@ function Navbar() {
     }
 
     // Change background color and text color/size based on scroll position
-    if (latest > 200) {
+    if (latest > 30) {
       setBgColor("white");
       setTextColor("black");
       setTextSize("text-md");
@@ -99,16 +102,16 @@ function Navbar() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="border-gray-200 dark:border-gray-600 dark:bg-gray-900"
         style={{
-          position: 'fixed',
+          position: "fixed",
           top: 0,
           left: 0,
           right: 0,
           zIndex: 1000,
           backgroundColor: bgColor,
-          transition: 'background-color 0.5s ease',
+          transition: "background-color 0.5s ease",
         }}
       >
-        <div className="md:flex items-center p-0">
+        <div className="md:flex items-center px-2">
           <div className="flex flex-wrap md:flex-nowrap justify-between items-center p-0">
             <a className="flex items-center md:mr-5 space-x-3 rtl:space-x-reverse">
               <img src={logo1} className="h-20" alt="Flowbite Logo" />
@@ -139,13 +142,22 @@ function Navbar() {
               </svg>
             </button>
           </div>
-          <div className={`md:flex items-center justify-between w-full ${nav ? "block" : "hidden"} `}>
+          <div
+            className={`md:flex items-center justify-between w-full ${
+              nav ? "block" : "hidden"
+            } `}
+          >
             <ul className="flex flex-col mt-2 font-medium md:flex-row items-center gap-2 pl-0 md:mt-0">
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   // onClick={toggleHomeDropdown}
-                   href="#"
-                  className={`flex items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"}`}
+                  href="#"
+                  // className={`flex no-underline items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                  //   bgColor === "white" ? "text-black" : "text-white"
+                  // }`}
+                  className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
+                  ${bgColor === "white" ? "text-black" : "text-white"}
+                  `}
                 >
                   COVID-19 Testing Locations
                 </a>
@@ -156,7 +168,9 @@ function Navbar() {
                 <button
                   id="mega-menu-full-cta-image-button"
                   data-collapse-toggle="mega-menu-full-image-dropdown"
-                  className={`flex items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"}`}
+                  className={`flex items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                    bgColor === "white" ? "text-black" : "text-white"
+                  }`}
                   onClick={toggleDropdown}
                 >
                   Solutions
@@ -182,7 +196,9 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"}`}
+                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-300 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                    bgColor === "white" ? "text-black" : "text-white"
+                  }`}
                 >
                   Company
                 </a>
@@ -192,7 +208,9 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"}`}
+                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                    bgColor === "white" ? "text-black" : "text-white"
+                  }`}
                 >
                   Blog
                 </a>
@@ -201,7 +219,9 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"}`}
+                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
+                    bgColor === "white" ? "text-black" : "text-white"
+                  }`}
                 >
                   Support
                 </a>
@@ -217,11 +237,12 @@ function Navbar() {
                 }}
               >
                 <button
-                  className="nav-link navbar-button group relative hover:scale-110 hover:bg-slate-50 duration-300"
+                  className="nav-link navbar-button group relative hover:scale-110 hover:bg-slate-500 duration-300"
                   onClick={() => handleButtonClick("bookButton", "#teamq1")}
                   style={{
                     ...linkStyle,
-                    backgroundColor: clicked === "bookButton" ? "green" : "#1A8EFD",
+                    backgroundColor:
+                      clicked === "bookButton" ? "green" : "#1A8EFD",
                     borderRadius: "20px",
                     color: clicked === "bookButton" ? "#ffffff" : "black",
                     fontWeight: clicked === "bookButton" ? "bold" : "normal",
@@ -237,7 +258,7 @@ function Navbar() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 <button
-                  className="nav-link navbar-button group relative hover:scale-110 duration-300"
+                  className="nav-link navbar-button group relative hover:scale-110 hover:bg-red-200 duration-300"
                   onClick={() => handleButtonClick("resultsButton", "#team1")}
                   style={{
                     ...linkStyle,
@@ -258,25 +279,42 @@ function Navbar() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
                 </button>
               </div>
-              <form className={`flex px-2 ${bgColor === "white" ? "text-black" : "text-white"}`}>
-  <input
-    className={`form-control mr-2 p-2 border border-gray-300 bg-transparent rounded ${bgColor === "white" ? "text-black" : "text-white"}`}
-    type="search"
-    placeholder="Search"
-    aria-label="Search"
-  />
-  <a href="tel:+1234567890" className={`mr-3 self-center ${bgColor === "white" ? "text-black" : "text-black"}`}>
-    <FontAwesomeIcon icon={faPhone} size="xl" />
-  </a>
-</form>
+              <form
+                className={`flex px-2 ${
+                  bgColor === "white" ? "text-black" : "text-white"
+                }`}
+              >
+                <input
+                  className={`form-control mr-2 p-2 border border-gray-300 bg-transparent rounded ${
+                    bgColor === "white" ? "text-black" : "text-white"
+                  }`}
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <a
+                  href="tel:+1234567890"
+                  className={`mr-3 self-center ${
+                    bgColor === "white" ? "text-black" : "text-black"
+                  }`}
+                >
+                  <FontAwesomeIcon icon={faPhone} size="xl" />
+                </a>
+              </form>
 
-              <div className={`w-32 ${bgColor === "white" ? "text-black" : "text-black"}`}>
-              <select
+              <div
+                className={`w-32 ${
+                  bgColor === "white" ? "text-black" : "text-black"
+                }`}
+              >
+                <select
                   id="language"
                   name="language"
                   value={selectedLanguage}
                   onChange={handleChange}
-                  className={`mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black ${bgColor === "white" ? "text-black" : "text-white"} `}
+                  className={`mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black ${
+                    bgColor === "white" ? "text-black" : "text-white"
+                  } `}
                 >
                   <option value="en">English</option>
                   <option value="es">Spanish</option>

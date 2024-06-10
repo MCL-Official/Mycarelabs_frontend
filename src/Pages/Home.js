@@ -5,7 +5,7 @@ import Info from "../Components/Info";
 import About from "../Components/About";
 import InsuranceAccepted from "../Components/InsuranceAccepted";
 import HoverCards from "../Components/HoverCard/HoverCards";
-import { TextParallaxContentExample } from '../Components/Scroll_Animation/TextParallaxContent';
+import { TextParallaxContentExample } from "../Components/Scroll_Animation/TextParallaxContent";
 import BookAppointment from "../Components/BookAppointment";
 // import Reviews from "../Components/Reviews";
 import Doctors from "../Components/Doctors";
@@ -20,13 +20,13 @@ import FeatureComponent from "../Components/Accordain/FeatureComponent";
 function Home() {
   return (
     <div className="home-section">
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
-      {/* <FeatureComponent/>
+      <FeatureComponent />
       <HoverCards />
-              <InsuranceAccepted/>
+      <InsuranceAccepted />
       <Info />
-      <Footer />  */}
+      <Footer />
       {/* <TextParallaxContentExample/> */}
       {/* <ShuffleHero/> */}
       {/* <ClipPathLinks/> */}
@@ -36,7 +36,7 @@ function Home() {
       {/* <Doctors /> */}
       {/* <div className="card-container"> */}
       {/* </div> */}
-      
+
       {/* 
       <Reviews />
       */}

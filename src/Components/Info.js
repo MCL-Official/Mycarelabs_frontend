@@ -48,8 +48,8 @@ function Info() {
         <h3 className="font-poppins text-4xl font-bold">
           <span>Communities We Serve</span>
         </h3>
-        <p className="my-10 mx-4 text-center text-gray-700 font-rubik text-lg tracking-wide leading-7">
-          My Care Labs offers quick, hassle-free, and accurate COVID-19 RT-PCR testing. 
+        <p className="my-10 mx-4 text-center text-gray-700 font-rubik tracking-wide leading-7 text-base sm:text-sm md:text-xl lg:text-2xl pb-6">
+        My Care Labs offers quick, hassle-free, and accurate COVID-19 RT-PCR testing. 
           With same day results or within 24 hours, we have testing on-site at our 
           laboratory and at pop-ups throughout California. My Care Labs provides 24 – 
           48hr results to not only the general public at our laboratory and pop-ups, 
