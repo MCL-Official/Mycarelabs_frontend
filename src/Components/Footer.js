@@ -24,43 +24,50 @@ function Footer() {
         </div>
 
         <div className="ft-list">
-          <p className="ft-list-title">Services</p>
+          <p className="ft-list-title">Home</p>
           <ul className="ft-list-items">
+          
             <li>
-              <a href="#services">Emergency Care</a>
+              <a href="#services">About</a>
             </li>
             <li>
-              <a href="#services">Heart Disease</a>
+              <a href="#services">Contact Us</a>
             </li>
             <li>
-              <a href="#services">Dental Care</a>
+              <a href="#services">Testing Solutions</a>
             </li>
             <li>
-              <a href="#services">Prescription</a>
+              <a href="#services">Testing Locations</a>
             </li>
             <li>
-              <a href="#services">Insights for doctors</a>
+              <a href="#services">Book An Appointment</a>
             </li>
           </ul>
         </div>
 
         <div className="ft-list">
-          <p className="ft-list-title">Legal</p>
+          <p className="ft-list-title">All Locations</p>
           <ul className="ft-list-items">
             <li>
-              <Link to={"/legal"}>General Info</Link>
+              <Link to={"/legal"}>NorCal: Bay Area Mobile Testing</Link>
             </li>
             <li>
-              <Link to={"/legal"}>Privacy Policy</Link>
+              <Link to={"/legal"}>NorCal: Fremont Lab</Link>
             </li>
             <li>
-              <Link to={"/legal"}>Terms of Services</Link>
+              <Link to={"/legal"}>NorCal: Union City Pop-up</Link>
             </li>
             <li>
-              <Link to={"/legal"}>Consultations</Link>
+              <Link to={"/legal"}>SoCal: Corona Mobile Testing</Link>
             </li>
             <li>
-              <Link to={"/legal"}>How it Works</Link>
+              <Link to={"/legal"}>SoCal: Riverside Pop-up</Link>
+            </li>
+            <li>
+              <Link to={"/legal"}>SoCal: Riverside Mobile Testing</Link>
+            </li>
+            <li>
+              <Link to={"/legal"}>At-Home COVID-19 PCR Test Kit</Link>
             </li>
           </ul>
         </div>

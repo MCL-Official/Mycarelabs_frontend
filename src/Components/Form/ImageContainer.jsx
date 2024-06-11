@@ -30,7 +30,12 @@ const ImageContainer = () => {
           <p className="mb-8 text-2xl">Get all your questions answered by our business development team.</p>
           <div className="flex space-x-4">
             <button className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600">View Locations</button>
-            <button className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600">Blogs</button>
+            <button 
+              className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600"
+              onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}
+            >
+              Blogs
+            </button>
           </div>
         </div>
       </div>
@@ -41,49 +46,48 @@ const ImageContainer = () => {
         <div className="w-full">
           <Marquee speed={55} gradient={false} pauseOnHover={true}>
             <div className="flex items-center space-x-24">
-            <div>
-                  <img src={svg2} className="h-16 object-contain" alt="Insurance" /> {/* Increased image height */}
-                </div>
-                <div>
-                  <img src={svg3} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg4} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg5} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg6} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg7} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg8} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg9} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg10} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg11} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg12} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg13} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg14} className="h-16 object-contain" alt="Insurance" />
-                </div>
-                <div>
-                  <img src={svg15} className="h-16 object-contain" alt="Insurance" />
-                </div>
-             
+              <div>
+                <img src={svg2} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg3} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg4} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg5} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg6} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg7} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg8} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg9} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg10} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg11} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg12} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg13} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg14} className="h-16 object-contain" alt="Insurance" />
+              </div>
+              <div>
+                <img src={svg15} className="h-16 object-contain" alt="Insurance" />
+              </div>
             </div>
           </Marquee>
         </div>

@@ -136,7 +136,7 @@ const features = {
 };
 
 function FeatureComponent() {
-  const [selectedFeature, setSelectedFeature] = useState("Mobile Testing");
+  const [selectedFeature, setSelectedFeature] = useState("Toxicology");
   const [previousFeature, setPreviousFeature] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -191,22 +191,22 @@ function FeatureComponent() {
   return (
     <div className="flex justify-center items-center min-h-screen py-4  ">
       <div className="w-full lg:w-4/5 px-2 overflow-hidden bg-gradient-to-r from-blue-300 via-transparent to-white bd">
-        {/* style={{ maxWidth: "75%" }} */}
         <h3 className="flex justify-center text-2xl font-bold bg-transparent">
-  <div className="relative inline-block bg-transparent text-center">
-    <span className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mr-2">
-      Solutions
-    </span>
-    <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-      We Provide
-    </span>
-    <div className="info-description mt-8 sm:text-sm md:text-xl lg:text-xl pb-12 font-normal">
-      My Care Labs offers quick, easy, and accurate RT-PCR testing for COVID-19, RSV, and Influenza A/B. 
-      We provide on-site testing at our lab and pop-up locations throughout California, 
-      with results available the same day or within 24 hours.
-    </div>
-  </div>
-</h3>
+          <div className="relative inline-block bg-transparent text-center">
+            <span className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mr-2">
+              Solutions
+            </span>
+            <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+              We Provide
+            </span>
+            <div className="info-description mt-8 sm:text-sm md:text-xl lg:text-xl pb-12 font-normal">
+              My Care Labs offers quick, easy, and accurate RT-PCR testing for
+              COVID-19, RSV, and Influenza A/B. We provide on-site testing at
+              our lab and pop-up locations throughout California, with results
+              available the same day or within 24 hours.
+            </div>
+          </div>
+        </h3>
 
         <div className="flex justify-center flex-wrap gap-3 mb-6">
           {Object.keys(features).map((feature) => (
