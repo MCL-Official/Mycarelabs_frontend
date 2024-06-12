@@ -15,8 +15,14 @@ import svg12 from "../../Assets/insurance11.png";
 import svg13 from "../../Assets/insurance12.png";
 import svg14 from "../../Assets/insurance13.png";
 import svg15 from "../../Assets/insurance14.png";
+import { useNavigate } from 'react-router-dom';
 
 const ImageContainer = () => {
+  const navigate=useNavigate()
+  const HandleEmptyClick=()=>{
+    console.log("muskan");
+    navigate('/empty')
+  }
   return (
     <div className="relative w-full h-screen mt-14">
       <div
@@ -29,7 +35,8 @@ const ImageContainer = () => {
           <h1 className="text-6xl font-bold mb-6">Kickstart Your Medial Journey Today</h1>
           <p className="mb-8 text-2xl">Get all your questions answered by our business development team.</p>
           <div className="flex space-x-4">
-            <button className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600">View Locations</button>
+            <button className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600"
+            onClick={HandleEmptyClick()}>View Locations</button>
             <button 
               className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600"
               onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}

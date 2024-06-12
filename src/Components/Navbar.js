@@ -5,8 +5,10 @@ import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo1 from "../Assets/Logo1.png";
 import { Helmet } from "react-helmet-async";
+// import { useNavigate } from "react-helmet-async";
 
 function Navbar() {
+  // const navigate=useNavigate();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [bgColor, setBgColor] = useState("transparent");
@@ -51,11 +53,15 @@ function Navbar() {
   const handleClick = (id) => {
     setClicked(id);
   };
+  const EmptyClick = () => {
+    navigate("/empty")
+  };
 
   const handleButtonClick = (buttonId, path) => {
     setClickedButton(buttonId);
     setClicked(buttonId);
-    navigate(path);
+    navigate('/empty');
+    
   };
 
   const toggleDropdown = () => {
@@ -171,7 +177,7 @@ function Navbar() {
                   className={`flex items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                     bgColor === "white" ? "text-black" : "text-white"
                   }`}
-                  onClick={toggleDropdown}
+                  onClick={EmptyClick}
                 >
                   Solutions
                   <svg
@@ -199,6 +205,7 @@ function Navbar() {
                   className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-300 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                     bgColor === "white" ? "text-black" : "text-white"
                   }`}
+                  onClick={EmptyClick}
                 >
                   Company
                 </a>
@@ -211,6 +218,7 @@ function Navbar() {
                   className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                     bgColor === "white" ? "text-black" : "text-white"
                   }`}
+                  onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}
                 >
                   Blog
                 </a>
@@ -222,6 +230,7 @@ function Navbar() {
                   className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                     bgColor === "white" ? "text-black" : "text-white"
                   }`}
+                  onClick={EmptyClick}
                 >
                   Support
                 </a>
@@ -253,6 +262,7 @@ function Navbar() {
                     maxWidth: "160px",
                     marginLeft: "5px",
                   }}
+                
                 >
                   Book My Test
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>

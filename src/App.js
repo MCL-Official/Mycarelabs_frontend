@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 // import NotFound from "./Pages/NotFound";
 // import Appointment from "./Pages/Appointment";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EmptyPage from "./Pages/EmptyPage/EmptyPage";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Router >
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/empty" element={<EmptyPage />} />
           {/* <Route path="/legal" element={<Legal />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
