@@ -21,7 +21,7 @@ import ImageContainer from "../Components/Form/ImageContainer";
 function Home() {
   return (
     <div className="home-section">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <FeatureComponent />
       <HoverCards />

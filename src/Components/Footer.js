@@ -94,7 +94,7 @@ function Footer() {
       </div>
 
       <div className="ft-copyright">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+        <p>© 2013-2023 MyCareLabs. All rights reserved.</p>
 
         <ul className="ft-social-links">
           <li>

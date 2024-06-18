@@ -17,7 +17,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch('/api/sendMail', {
+    const res = await fetch('/api/sendMail',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

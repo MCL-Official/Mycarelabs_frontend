@@ -206,7 +206,7 @@ const HoverCards = () => {
                     </p>
                   </div>
                   <div className="flex justify-center mt-auto">
-                    <Button />
+                    <Button slug={index} />
                   </div>
                 </div>
               </div>

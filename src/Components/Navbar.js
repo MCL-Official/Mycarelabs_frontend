@@ -213,15 +213,16 @@ function Navbar() {
               </li>
 
               <li className="group relative hover:scale-110 duration-300">
-                <a
-                  href="#"
+                <Link
+                  to="/Blogs"
                   className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                     bgColor === "white" ? "text-black" : "text-white"
                   }`}
-                  onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}
+                  // onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}
+                  // onClick={EmptyClick}
                 >
                   Blog
-                </a>
+                </Link>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </li>
               <li className="group relative hover:scale-110 duration-300">

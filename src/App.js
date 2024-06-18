@@ -9,18 +9,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import EmptyPage from "./Pages/EmptyPage/EmptyPage";
 import BookTest from "./Pages/BookMyTest/BookTest";
 import BookTestDetails from "./Pages/BookMyTest/BookDetails";
+import Blogs from "./Components/Blog/Blogs";
+import ReadBlog from "./Components/Blog/ReadBlog ";
+import Navbar from "./Components/Navbar";
+import DateTimePicker from "./Components/Booking/DateTimePicker";
 
 
 function App() {
   return (
     <div className="App">
       <Router >
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/bookTest" element={<BookTest />} />
           <Route path="/bookTest/:id" element={<BookTestDetails />} />
-          {/* <Route path="/legal" element={<Legal />} /> */}
+          <Route path="/Blogs" element={<Blogs />} />
+          <Route path="/readBlog/:id" element={<ReadBlog />} />
+          {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
