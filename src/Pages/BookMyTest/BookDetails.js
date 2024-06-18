@@ -13,7 +13,6 @@ const BookTestDetails = () => {
     <>
       <Navbar />
       <div className="container mx-auto mt-5">
-        <h1 className="text-2xl font-bold text-center mb-5">Booking Details for Test ID: {id}</h1>
            <DateTimePicker/>
  
         <div className="flex justify-center mt-5">

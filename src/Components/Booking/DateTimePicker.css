@@ -1,0 +1,20 @@
+/* DateTimePicker.css */
+.time-panel-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .time-panel-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+  }
+  .time-panel-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .time-panel-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 500ms, transform 500ms;
+  }
+  

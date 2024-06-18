@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { ClipLoader } from 'react-spinners';
+import './DateTimePicker.css';
 
 const DateTimePicker = () => {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
   const [monthIndex, setMonthIndex] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
   const [showTimes, setShowTimes] = useState(false);
-  const [animationDirection, setAnimationDirection] = useState('');
-  const [dateSelected, setDateSelected] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const months = [
-    'January', 'February', 'March', 'April', 'May', 'June', 
+    'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
 
@@ -18,7 +21,6 @@ const DateTimePicker = () => {
   const daysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
 
   const handlePreviousMonth = () => {
-    setAnimationDirection('left');
     if (monthIndex === 0) {
       setMonthIndex(11);
       setYear(year - 1);
@@ -28,7 +30,6 @@ const DateTimePicker = () => {
   };
 
   const handleNextMonth = () => {
-    setAnimationDirection('right');
     if (monthIndex === 11) {
       setMonthIndex(0);
       setYear(year + 1);
@@ -38,52 +39,59 @@ const DateTimePicker = () => {
   };
 
   const timeSlots = [
-    "9:00 AM - 9:30 AM", "9:30 AM - 10:00 AM", "10:00 AM - 10:30 AM", 
-    "10:30 AM - 11:00 AM", "11:00 AM - 11:30 AM", "11:30 AM - 12:00 PM", 
-    "12:00 PM - 12:30 PM", "12:30 PM - 1:00 PM", "1:00 PM - 1:30 PM", 
-    "1:30 PM - 2:00 PM", "2:00 PM - 2:30 PM", "2:30 PM - 3:00 PM", 
-    "3:00 PM - 3:30 PM", "3:30 PM - 4:00 PM"
+    "7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM", "9:00 AM",
+    "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
+    "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
+    "5:00 PM"
   ];
 
-  const handleDateClick = (date) => {
+  const handleDateClick = (day) => {
+    const date = `${months[monthIndex]} ${day + 1}, ${year}`;
     setSelectedDate(date);
-    setDateSelected(true);
+    setLoading(true);
+    setShowTimes(false);
     setTimeout(() => {
       setShowTimes(true);
-      setDateSelected(false);
-    }, 500); // Match the animation duration
+      setLoading(false);
+    }, 1000); // Simulate loading time
+  };
+
+  const handleTimeClick = (time) => {
+    setSelectedTime(time);
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-md rounded-lg p-6 w-96">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Date & Time</h2>
-          <div className="flex items-center space-x-2">
-            <select
-              value={months[monthIndex]}
-              onChange={(e) => setMonthIndex(months.indexOf(e.target.value))}
-              className="border border-gray-300 rounded px-2 py-1"
-            >
-              {months.map((month, index) => (
-                <option key={index} value={month}>{month}</option>
-              ))}
-            </select>
-            <select
-              value={year}
-              onChange={(e) => setYear(parseInt(e.target.value))}
-              className="border border-gray-300 rounded px-2 py-1"
-            >
-              {years.map((year) => (
-                <option key={year} value={year}>{year}</option>
-              ))}
-            </select>
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex">
+        <div className="w-1/4 pr-6 border-r border-gray-200">
+          <div className="flex items-center mb-4">
+            <img src="https://via.placeholder.com/40" alt="Avatar" className="rounded-full mr-4"/>
+            <div>
+              <h3 className="text-lg font-semibold">Dhanush Bhandary</h3>
+              <p className="text-gray-600">Free Strategy Session</p>
+            </div>
+          </div>
+          <div className="flex items-center mb-4">
+            <span className="material-icons text-gray-600">access_time</span>
+            <span className="ml-2 text-gray-600">45 min</span>
+          </div>
+          <div className="flex items-center mb-4">
+            <span className="material-icons text-gray-600">videocam</span>
+            <span className="ml-2 text-gray-600">Web conferencing details provided upon confirmation.</span>
+          </div>
+          <p className="text-gray-600">This is a free strategy session to understand where you're at currently with your business/channel and discuss how we can take it to the next level with our systems.</p>
+        </div>
+        <div className="w-3/4 pl-6 transition-all duration-500">
+          <h2 className="text-xl font-semibold mb-6">Select a Date & Time</h2>
+          <div className="flex justify-between items-center mb-4">
             <button 
               className="border border-gray-300 rounded px-2 py-1"
               onClick={handlePreviousMonth}
             >
               &lt;
             </button>
+            <span className="text-lg font-semibold">{months[monthIndex]} {year}</span>
             <button 
               className="border border-gray-300 rounded px-2 py-1"
               onClick={handleNextMonth}
@@ -91,50 +99,60 @@ const DateTimePicker = () => {
               &gt;
             </button>
           </div>
+          <div className="flex">
+            <div className={`w-full ${showTimes ? 'md:w-1/2' : ''} transition-all duration-500`}>
+              <div className="grid grid-cols-7 gap-2 mb-4">
+                {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
+                  <div key={day} className="text-center text-gray-500">{day}</div>
+                ))}
+                {Array.from({ length: daysInMonth(monthIndex, year) }, (_, day) => (
+                  <button
+                    key={day}
+                    className={`text-center rounded p-2 ${selectedDate === `${months[monthIndex]} ${day + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                    onClick={() => handleDateClick(day)}
+                  >
+                    {day + 1}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <CSSTransition
+              in={showTimes}
+              timeout={500}
+              classNames="time-panel"
+              unmountOnExit
+            >
+              <div className="w-full md:w-1/2 pl-4 transition-all duration-500 overflow-y-auto max-h-96">
+                {loading ? (
+                  <div className="flex justify-center items-center h-full">
+                    <ClipLoader size={50} color={"#3b82f6"} />
+                  </div>
+                ) : (
+                  <>
+                    <div className="text-center text-lg font-semibold mb-4">{selectedDate}</div>
+                    <div className="grid grid-cols-1 gap-2">
+                      {timeSlots.map((time) => (
+                        <button
+                          key={time}
+                          className={`rounded p-2 border ${selectedTime === time ? 'bg-blue-500 text-white' : 'bg-white text-blue-500 border-blue-500'}`}
+                          onClick={() => handleTimeClick(time)}
+                        >
+                          {time}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            </CSSTransition>
+          </div>
+          <div className="text-center text-gray-700 mt-4">
+            Time zone <span className="font-semibold">India Standard Time (7:34pm)</span>
+          </div>
+          <button className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105">
+            Continue
+          </button>
         </div>
-        {!showTimes && (
-          <div className={`grid grid-cols-7 gap-2 mb-4 ${dateSelected ? 'animate-fade-up' : ''}`}>
-            {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
-              <div key={day} className="text-center text-gray-500">{day}</div>
-            ))}
-            {Array.from({ length: daysInMonth(monthIndex, year) }, (_, day) => (
-              <button
-                key={day}
-                className={`text-center rounded transition-transform transform ${
-                  selectedDate === `${months[monthIndex]} ${day + 1}, ${year} - 9:00 AM` 
-                    ? 'bg-red-500 text-white scale-110'
-                    : 'bg-gray-200'
-                } p-2`}
-                onClick={() => handleDateClick(`${months[monthIndex]} ${day + 1}, ${year} - 9:00 AM`)}
-              >
-                {day + 1}
-              </button>
-            ))}
-          </div>
-        )}
-        {showTimes && (
-          <div className="animate-slide-up">
-            <div className="text-center text-gray-700 mb-4">
-              {selectedDate}
-            </div>
-            <div className="grid grid-cols-2 gap-2 mb-4">
-              {timeSlots.map((time) => (
-                <button
-                  key={time}
-                  className={`text-center rounded border border-blue-500 transition-transform transform hover:scale-105 ${
-                    selectedDate.includes(time) ? 'bg-red-500 text-white' : 'bg-white text-blue-500'
-                  } p-2`}
-                  onClick={() => setSelectedDate(`${selectedDate.split(' - ')[0]} - ${time}`)}
-                >
-                  {time}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-        <button className="w-full bg-orange-500 text-white py-2 rounded transition-transform transform hover:scale-105">
-          Continue
-        </button>
       </div>
     </div>
   );
