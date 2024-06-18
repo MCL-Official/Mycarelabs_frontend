@@ -60,7 +60,7 @@ function Navbar() {
   const handleButtonClick = (buttonId, path) => {
     setClickedButton(buttonId);
     setClicked(buttonId);
-    navigate('/empty');
+    navigate('/bookTest');
     
   };
 

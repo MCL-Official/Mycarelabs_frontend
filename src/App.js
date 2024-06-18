@@ -7,6 +7,8 @@ import Home from "./Pages/Home";
 // import Appointment from "./Pages/Appointment";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EmptyPage from "./Pages/EmptyPage/EmptyPage";
+import BookTest from "./Pages/BookMyTest/BookTest";
+import BookTestDetails from "./Pages/BookMyTest/BookDetails";
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
+          <Route path="/bookTest" element={<BookTest />} />
+          <Route path="/bookTest/:id" element={<BookTestDetails />} />
           {/* <Route path="/legal" element={<Legal />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
