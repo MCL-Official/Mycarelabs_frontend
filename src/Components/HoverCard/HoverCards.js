@@ -7,13 +7,14 @@ import {
   MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
 
-const img = "https://imagesuploadforwebsite.s3.amazonaws.com/card1.jpg";
-const img1 = "https://imagesuploadforwebsite.s3.amazonaws.com/card2.jpg";
-const img2 = "https://imagesuploadforwebsite.s3.amazonaws.com/card3.jpg";
-const img3 = "https://imagesuploadforwebsite.s3.amazonaws.com/card5.jpg";
-const img5 = "https://imagesuploadforwebsite.s3.amazonaws.com/card6.jpg";
-const img60 = "https://imagesuploadforwebsite.s3.amazonaws.com/card4.jpg";
-const img6 = "https://imagesuploadforwebsite.s3.amazonaws.com/card4.webp";
+// const img = "https://d3igdo166pzdku.cloudfront.net/card1.jpg";
+const img = "https://d3igdo166pzdku.cloudfront.net/card1.jpg";
+const img1 = "https://d3igdo166pzdku.cloudfront.net/card2.jpg";
+const img2 = "https://d3igdo166pzdku.cloudfront.net/card3.jpg";
+const img3 = "https://d3igdo166pzdku.cloudfront.net/card5.jpg";
+const img5 = "https://d3igdo166pzdku.cloudfront.net/card6.jpg";
+const img60 = "https://d3igdo166pzdku.cloudfront.net/card4.jpg";
+const img6 = "https://d3igdo166pzdku.cloudfront.net/card4.webp";
 
 const images = [img, img1, img2, img3, img5, img6];
 
