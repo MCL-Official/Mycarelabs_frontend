@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const DateTimePicker = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
+  const [shrinkButton, setShrinkButton] = useState(null);
   const [monthIndex, setMonthIndex] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
   const [showTimes, setShowTimes] = useState(false);
@@ -48,19 +49,17 @@ const DateTimePicker = () => {
   };
 
   const handleTimeClick = (time) => {
+    setShrinkButton(time);
     setSelectedTime(time);
-  };
-
-  const handleCancel = () => {
-    setSelectedTime(null);
+    setTimeout(() => setShrinkButton(null), 300); // Reset after the animation duration
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex overflow-hidden">
-        <div className="w-1/4 pr-6 border-r border-gray-200">
+    <div className="flex justify-center items-center min-h-screen p-4">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex flex-col md:flex-row overflow-hidden">
+        <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 mb-4 md:mb-0">
           <div className="flex items-center mb-4">
-            <img src="https://via.placeholder.com/40" alt="Avatar" className="rounded-full mr-4"/>
+            <img src="https://via.placeholder.com/40" alt="Avatar" className="rounded-full mr-4" />
             <div>
               <h3 className="text-lg font-semibold">Dhanush Bhandary</h3>
               <p className="text-gray-600">Free Strategy Session</p>
@@ -76,24 +75,24 @@ const DateTimePicker = () => {
           </div>
           <p className="text-gray-600">This is a free strategy session to understand where you're at currently with your business/channel and discuss how we can take it to the next level with our systems.</p>
         </div>
-        <div className="w-3/4 pl-4 transition-all duration-500">
+        <div className="w-full md:w-3/4 pl-0 md:pl-4 transition-all duration-500">
           <h2 className="text-xl font-semibold mb-6">Select a Date & Time</h2>
           <div className="flex justify-between items-center mb-4">
-            <button 
+            <button
               className="border border-gray-300 rounded px-2 py-1"
               onClick={handlePreviousMonth}
             >
               &lt;
             </button>
             <span className="text-lg font-semibold">{months[monthIndex]} {year}</span>
-            <button 
+            <button
               className="border border-gray-300 rounded px-2 py-1"
               onClick={handleNextMonth}
             >
               &gt;
             </button>
           </div>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <div className={`w-full ${showTimes ? 'md:w-3/5' : ''} transition-all duration-500 max-h-96 overflow-y-auto`}>
               <div className="grid grid-cols-7 gap-2 mb-4">
                 {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
@@ -110,7 +109,7 @@ const DateTimePicker = () => {
                 ))}
               </div>
             </div>
-            <div className={`transition-all duration-500 ${showTimes ? 'w-full md:w-2/5 pl-4' : 'w-0'}`}>
+            <div className={`transition-all duration-500 ${showTimes ? 'w-full md:w-2/5 pl-0 md:pl-4' : 'w-0'}`}>
               <div className="overflow-y-auto max-h-96">
                 {showTimes && (
                   <>
@@ -123,22 +122,17 @@ const DateTimePicker = () => {
                           classNames={{
                             enter: 'opacity-0 transform translate-x-full',
                             enterActive: `opacity-100 transform translate-x-0 transition-all duration-300 delay-${index * 100}`,
+                            exit: 'opacity-100 transform translate-x-0',
+                            exitActive: 'opacity-0 transform translate-x-full transition-all duration-300'
                           }}
                         >
                           <div className="relative mb-2">
                             <button
-                              className={`w-32 rounded p-2 border ${selectedTime === time ? 'bg-blue-500 text-white' : 'bg-white text-blue-500 border-blue-500'}`}
+                              className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${shrinkButton === time ? 'transform scale-x-0 rotate-180' : ''} ${selectedTime === time ? 'bg-blue-500 text-white border-blue-500' : 'bg-white text-blue-500 border-blue-500'}`}
                               onClick={() => handleTimeClick(time)}
-                              disabled={selectedTime && selectedTime !== time}
                             >
-                              {time}
+                              {selectedTime === time ? "Next" : time}
                             </button>
-                            {selectedTime === time && (
-                              <div className="absolute top-0 left-0 mt-2 flex space-x-2">
-                                <button className="bg-gray-200 text-gray-700 py-1 px-2 rounded" onClick={handleCancel}>Cancel</button>
-                                <button className="bg-blue-500 text-white py-1 px-2 rounded">Next</button>
-                              </div>
-                            )}
                           </div>
                         </CSSTransition>
                       ))}
