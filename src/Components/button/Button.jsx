@@ -1,13 +1,12 @@
-// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FiSend } from "react-icons/fi";
-import { useNavigate  } from "react-router-dom";
-const NeumorphismButton = ({ slug }) => {
+
+const NeumorphismButton = ({ slug, cardData }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // history.push(`/blog/${slug}`);
-    navigate(`/bookTest/${slug}`);
-    console.log("sdjhsvdbhb");
+    navigate(`/bookTest/${slug}`, { state: { cardData } });
+    console.log("Navigating with card data:", cardData);
   };
 
   return (

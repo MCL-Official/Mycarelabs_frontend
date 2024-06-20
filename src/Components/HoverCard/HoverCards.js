@@ -1,22 +1,19 @@
 import React, { useRef, useState, useEffect } from "react";
-import Button from "../button/Button";
-import DrawerButton from "../Custome_Modal/DrawerButton"; // Import the DrawerButton component
-import DragCloseDrawer from "../Custome_Modal/DragCloseDrawer"; // Import the Drawer component
+import NeumorphismButton from "../button/Button"; // Adjusted to the correct import path
+import DragCloseDrawer from "../Custome_Modal/DragCloseDrawer";
 import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
 
-// const img = "https://d3igdo166pzdku.cloudfront.net/card1.jpg";
-const img = "https://d3igdo166pzdku.cloudfront.net/card1.jpg";
-const img1 = "https://d3igdo166pzdku.cloudfront.net/card2.jpg";
-const img2 = "https://d3igdo166pzdku.cloudfront.net/card3.jpg";
-const img3 = "https://d3igdo166pzdku.cloudfront.net/card5.jpg";
-const img5 = "https://d3igdo166pzdku.cloudfront.net/card6.jpg";
-const img60 = "https://d3igdo166pzdku.cloudfront.net/card4.jpg";
-const img6 = "https://d3igdo166pzdku.cloudfront.net/card4.webp";
-
-const images = [img, img1, img2, img3, img5, img6];
+const images = [
+  "https://d3igdo166pzdku.cloudfront.net/card1.jpg",
+  "https://d3igdo166pzdku.cloudfront.net/card2.jpg",
+  "https://d3igdo166pzdku.cloudfront.net/card3.jpg",
+  "https://d3igdo166pzdku.cloudfront.net/card5.jpg",
+  "https://d3igdo166pzdku.cloudfront.net/card6.jpg",
+  "https://d3igdo166pzdku.cloudfront.net/card4.webp",
+];
 
 const cardData = [
   {
@@ -75,8 +72,8 @@ const cardData = [
 ];
 
 const HoverCards = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false); // State to control drawer
-  const [drawerContent, setDrawerContent] = useState(""); // State to control drawer content
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerContent, setDrawerContent] = useState("");
   const carouselRef = useRef(null);
 
   const handleLearnMoreClick = (content) => {
@@ -133,7 +130,6 @@ const HoverCards = () => {
     };
   }, []);
 
-  // Preload images
   useEffect(() => {
     images.forEach((src) => {
       const img = new Image();
@@ -142,13 +138,11 @@ const HoverCards = () => {
   }, []);
 
   return (
-    // <div className="mt-5 bg-blue-600 overflow-hidden">
     <div className="mt-5 overflow-hidden bg-gradient-to-b from-blue-300 via-transparent to-white">
       <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
-        
           <div className="relative inline-block pt-6 md:pt-12 px-4 sm:px-6 md:px-10 bg-transparent pb-3">
-            <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">
+            <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2">
               Our Testing
             </span>
             <span className="text-gray-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -184,7 +178,7 @@ const HoverCards = () => {
             >
               <div className="rounded-xl overflow-hidden shadow-lg h-full flex flex-col">
                 <img
-                  src={images[index % images.length]} // Adjusted to use % to cycle through images
+                  src={images[index % images.length]}
                   className="h-56 w-full object-cover"
                   alt={card.title}
                 />
@@ -207,7 +201,10 @@ const HoverCards = () => {
                     </p>
                   </div>
                   <div className="flex justify-center mt-auto">
-                    <Button slug={index} />
+                    <NeumorphismButton
+                      slug={index}
+                      cardData={{ ...card, imageUrl: images[index % images.length] }}
+                    />
                   </div>
                 </div>
               </div>
