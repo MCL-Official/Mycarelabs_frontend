@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import DoctorVideo from "../Assets/hometop.mp4"; // Ensure you have the video file in the specified path
-// import DoctorVideo from ".././hometop.mp4"; // Ensure you have the video file in the specified path
+import DoctorVideo from "../Assets/myvid.mp4"; // Ensure you have the video file in the specified path
+// import DoctorVideo from "../myvid.mp4"; // Ensure you have the video file in the specified path
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
@@ -89,7 +89,9 @@ function Hero() {
         <video
           className="hero-video"
           src={
-            "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4"
+            // "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4"
+            // "https://imagesuploadforwebsite.s3.amazonaws.com/My+Care+Labs_V2+1+(1).mp4"
+            DoctorVideo
           }
           autoPlay
           muted

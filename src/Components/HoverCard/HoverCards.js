@@ -12,8 +12,17 @@ const images = [
   "https://d3igdo166pzdku.cloudfront.net/card3.jpg",
   "https://d3igdo166pzdku.cloudfront.net/card5.jpg",
   "https://d3igdo166pzdku.cloudfront.net/card6.jpg",
-  "https://d3igdo166pzdku.cloudfront.net/card4.webp",
+  "https://d3igdo166pzdku.cloudfront.net/card4.jpg",
 ];
+
+// const images = [
+//   "https://imagesuploadforwebsite.s3.amazonaws.com/card1.jpg",
+//   "https://imagesuploadforwebsite.s3.amazonaws.com/card2.jpg",
+//   "https://imagesuploadforwebsite.s3.amazonaws.com/card3.jpg",
+//   "https://imagesuploadforwebsite.s3.amazonaws.com/card5.jpg",
+//   "https://imagesuploadforwebsite.s3.amazonaws.com/card6.jpg",
+//   "https://imagesuploadforwebsite.s3.amazonaws.com/card4.jpg",
+// ];
 
 const cardData = [
   {
