@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LeftContainer = () => (
   <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 mb-4 md:mb-0">
@@ -24,6 +25,8 @@ const LeftContainer = () => (
 );
 
 const DateTimePicker = () => {
+
+  const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [shrinkButton, setShrinkButton] = useState(null);
@@ -106,7 +109,10 @@ const DateTimePicker = () => {
 
     try {
       await axios.post('http://localhost:5100/admin/appointments', appointmentDetails);
-      alert('Appointment booked successfully!');
+      // alert('Appointment booked successfully!');
+      // navigate("https://us.crelio.solutions/crm/#/web/book-package/online-self-registration")
+      window.location.href = 'https://us.crelio.solutions/crm/#/web/book-package/online-self-registration';
+ 
     } catch (error) {
       console.error('Error booking appointment', error);
       alert('Failed to book appointment. Please try again.');

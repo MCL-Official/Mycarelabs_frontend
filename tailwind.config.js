@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -23,12 +22,17 @@ module.exports = {
           '0%': { transform: 'translateX(-100%)', opacity: 0 },
           '100%': { transform: 'translateX(0)', opacity: 1 },
         },
+        'background-color-change': {
+          '0%': { backgroundColor: '#0000FF' }, // Start with blue
+          '100%': { backgroundColor: '#FFFFFF' }, // End with white
+        },
       },
       animation: {
         'fade-up': 'fadeUp 0.5s ease-out forwards',
         'slide-up': 'slideUp 0.5s ease-out forwards',
         'slide-left': 'slideLeft 0.5s ease-out forwards',
         'slide-right': 'slideRight 0.5s ease-out forwards',
+        'bg-blue-to-white': 'background-color-change 5s linear infinite', // Adjust duration as needed
       },
       maxWidth: {
         'custom': '1440px', // You can adjust this value as needed
