@@ -163,7 +163,10 @@ function Navbar() {
 
               <li className="group relative hover:scale-110 duration-300 ">
               <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-  <button className="text-black text-left">Solutions</button>
+  <button    className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
+                  ${bgColor === "white" ? "text-black" : "text-white"}
+                  `}
+                >Solutions</button>
   <AnimatePresence>
     {dropdownOpen && (
       <motion.ul
