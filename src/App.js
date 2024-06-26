@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <Router >
-        {/* <Navbar /> */}
-        <Navbar2/>
+        <Navbar />
+        {/* <Navbar2/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />

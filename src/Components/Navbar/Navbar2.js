@@ -1,4 +1,5 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState , useRef, useEffect} from 'react';
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 import {
   Dialog,
   DialogBackdrop,
@@ -13,8 +14,7 @@ import {
   TabPanel,
   TabPanels,
 } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import logo1 from "../../Assets/Logo1.png";
 
 const navigation = {
@@ -138,36 +138,66 @@ const navigation = {
     { name: 'Company', href: '#' },
     { name: 'Blog', href: '#' },
   ],
-}
+};
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar2() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  const [bgColor, setBgColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("white");
+  const [textSize, setTextSize] = useState("text-lg");
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+
+    if (latest > previous && latest > 50) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+
+    if (latest > 30) {
+      setBgColor("white");
+      setTextColor("black");
+      setTextSize("text-md");
+    } else {
+      setBgColor("transparent");
+      setTextColor("white");
+      setTextSize("text-lg");
+    }
+  });
 
   return (
-    <div className="bg-white">
+    <motion.nav
+    variants={{
+      visible: { y: 0 },
+      hidden: { y: "-100%" },
+    }}
+    animate={hidden ? "hidden" : "visible"}
+    transition={{ duration: 0.35, ease: "easeInOut" }}  style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+      // backgroundColor: bgColor,
+      transition: "background-color 0.5s ease",
+    }}>
       {/* Mobile menu */}
       <Dialog className="relative z-40 lg:hidden" open={open} onClose={setOpen}>
-        <DialogBackdrop
-          transition
-          className="fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
-        />
-
         <div className="fixed inset-0 z-40 flex">
-          <DialogPanel
-            transition
-            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
-          >
+          <Dialog.Panel className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl">
             <div className="flex px-4 pb-2 pt-5">
               <button
                 type="button"
                 className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
                 onClick={() => setOpen(false)}
               >
-                <span className="absolute -inset-0.5" />
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
@@ -223,7 +253,7 @@ export default function Navbar2() {
                         >
                           {section.items.map((item) => (
                             <li key={item.name} className="flow-root">
-                              <a href={item.href} className="-m-2 block p-2 text-gray-500">
+                              <a href={item.href} className="block p-2 text-gray-500 hover:text-gray-800">
                                 {item.name}
                               </a>
                             </li>
@@ -239,7 +269,7 @@ export default function Navbar2() {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               {navigation.pages.map((page) => (
                 <div key={page.name} className="flow-root">
-                  <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                  <a href={page.href} className="block p-2 font-medium text-gray-900 hover:text-gray-800">
                     {page.name}
                   </a>
                 </div>
@@ -248,19 +278,19 @@ export default function Navbar2() {
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                <a href="#" className="block p-2 font-medium text-gray-900 hover:text-gray-800">
                   Sign in
                 </a>
               </div>
               <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                <a href="#" className="block p-2 font-medium text-gray-900 hover:text-gray-800">
                   Create account
                 </a>
               </div>
             </div>
 
             <div className="border-t border-gray-200 px-4 py-6">
-              <a href="#" className="-m-2 flex items-center p-2">
+              <a href="#" className="flex items-center p-2">
                 <img
                   src="https://tailwindui.com/img/flags/flag-canada.svg"
                   alt=""
@@ -270,7 +300,7 @@ export default function Navbar2() {
                 <span className="sr-only">, change currency</span>
               </a>
             </div>
-          </DialogPanel>
+          </Dialog.Panel>
         </div>
       </Dialog>
 
@@ -287,7 +317,6 @@ export default function Navbar2() {
                 className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
                 onClick={() => setOpen(true)}
               >
-                <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
@@ -298,7 +327,6 @@ export default function Navbar2() {
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-20 w-auto"
-                    // src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     src={logo1}
                     alt=""
                   />
@@ -326,8 +354,7 @@ export default function Navbar2() {
                           </div>
 
                           <PopoverPanel
-                            transition
-                            className="absolute inset-x-0 top-full text-sm text-gray-500 transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                            className="absolute inset-x-0 top-full text-sm text-gray-500"
                           >
                             {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                             <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
@@ -345,7 +372,7 @@ export default function Navbar2() {
                                             className="object-cover object-center"
                                           />
                                         </div>
-                                        <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                        <a href={item.href} className="mt-6 block font-medium text-gray-900 no-underline hover:text-blue-500">
                                           <span className="absolute inset-0 z-10" aria-hidden="true" />
                                           {item.name}
                                         </a>
@@ -368,7 +395,7 @@ export default function Navbar2() {
                                         >
                                           {section.items.map((item) => (
                                             <li key={item.name} className="flex">
-                                              <a href={item.href} className="hover:text-gray-800">
+                                              <a href={item.href} className="text-gray-700 no-underline hover:text-blue-500">
                                                 {item.name}
                                               </a>
                                             </li>
@@ -390,7 +417,7 @@ export default function Navbar2() {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      className="flex items-center text-sm font-medium text-gray-700 no-underline hover:text-blue-500"
                     >
                       {page.name}
                     </a>
@@ -400,17 +427,17 @@ export default function Navbar2() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href="#" className="text-sm font-medium text-gray-700 no-underline hover:text-blue-500">
                     Sign in
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                  <a href="#" className="text-sm font-medium text-gray-700 no-underline hover:text-blue-500">
                     Create account
                   </a>
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+                  <a href="#" className="flex items-center text-gray-700 no-underline hover:text-blue-500">
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
@@ -445,6 +472,6 @@ export default function Navbar2() {
           </div>
         </nav>
       </header>
-    </div>
-  )
+    </motion.nav>
+  );
 }
