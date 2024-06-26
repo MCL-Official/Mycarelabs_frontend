@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo1 from "../Assets/Logo1.png";
 import { Helmet } from "react-helmet-async";
-// import { useNavigate } from "react-helmet-async";
 
 function Navbar() {
-  // const navigate=useNavigate();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [bgColor, setBgColor] = useState("transparent");
@@ -18,15 +16,12 @@ function Navbar() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
 
-    console.log(previous);
-
     if (latest > previous && latest > 500) {
       setHidden(true);
     } else {
       setHidden(false);
     }
 
-    // Change background color and text color/size based on scroll position
     if (latest > 30) {
       setBgColor("white");
       setTextColor("black");
@@ -40,11 +35,9 @@ function Navbar() {
 
   const [nav, setNav] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
   const [clicked, setClicked] = useState(null);
-  const [clickedButton, setClickedButton] = useState(null);
-  const [homeDropdown, setHomeDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
   const openNav = () => {
     setNav(!nav);
@@ -53,33 +46,14 @@ function Navbar() {
   const handleClick = (id) => {
     setClicked(id);
   };
+
   const EmptyClick = () => {
-    navigate("/empty")
+    navigate("/empty");
   };
 
   const handleButtonClick = (buttonId, path) => {
-    setClickedButton(buttonId);
     setClicked(buttonId);
-    navigate('/bookTest');
-    
-  };
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const toggleHomeDropdown = () => {
-    setHomeDropdown(!homeDropdown);
-  };
-
-  const closeDropdown = () => {
-    setDropdownOpen(false);
-  };
-
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
-
-  const handleChange = (event) => {
-    setSelectedLanguage(event.target.value);
+    navigate("/bookTest");
   };
 
   const linkStyle = {
@@ -92,11 +66,32 @@ function Navbar() {
     position: "relative",
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
+
   return (
     <>
       <Helmet>
-        <title>My Care labs</title>
-        <meta name="description" content="Helo there " />
+        <title>My Care Labs</title>
+        <meta name="description" content="Hello there" />
         <link rel="canonical" href="/" />
       </Helmet>
       <motion.nav
@@ -140,9 +135,9 @@ function Navbar() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
@@ -156,48 +151,75 @@ function Navbar() {
             <ul className="flex flex-col mt-2 font-medium md:flex-row items-center gap-2 pl-0 md:mt-0">
               <li className="group relative hover:scale-110 duration-300">
                 <a
-                  // onClick={toggleHomeDropdown}
                   href="#"
-                  // className={`flex no-underline items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                  //   bgColor === "white" ? "text-black" : "text-white"
-                  // }`}
                   className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
                   ${bgColor === "white" ? "text-black" : "text-white"}
                   `}
                 >
                   COVID-19 Testing Locations
                 </a>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#007bff] transition-transform duration-300 ease-out scale-x-0 group-hover:scale-x-100"></span>
               </li>
 
-              <li className="group relative hover:scale-110 duration-300">
-                <button
-                  id="mega-menu-full-cta-image-button"
-                  data-collapse-toggle="mega-menu-full-image-dropdown"
-                  className={`flex items-center justify-between w-full px-2 font-medium ${textSize} ${textColor} border-b border-gray-100 md:w-auto hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                    bgColor === "white" ? "text-black" : "text-white"
-                  }`}
-                  onClick={EmptyClick}
-                >
-                  Solutions
-                  <svg
-                    className="w-2.5 h-2.5 ms-3"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
-                </button>
-              </li>
+              <li className="group relative hover:scale-110 duration-300 ">
+              <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+  <button className="text-black text-left">Solutions</button>
+  <AnimatePresence>
+    {dropdownOpen && (
+      <motion.ul
+        ref={dropdownRef}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 15 }}
+        style={{ translateX: "-20%", translateY: "2%" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className="absolute top-full left-0 transform mt-1 w-auto bg-white text-black shadow-lg rounded-lg z-50 flex space-x-12 px-4 py-2 text-left"
+      >
+        <div className="space-y-4 text-left">
+          <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Infectious Disease Testing Solutions</h5>
+          <p className="text-sm mb-1 hover:text-blue-500">Travel PCR Testing</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Testing for Groups</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Testing for Schools</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Testing for Nursing Homes</p>
+          <p className="text-sm mb-1 hover:text-blue-500">At-Home COVID-19 PCR Test Kit</p>
+        </div>
+        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+        <div className="space-y-3 text-left">
+          <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Wellness Testing Solutions</h5>
+          <p className="text-sm mb-1 hover:text-blue-500">Anemia Profile Test</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Basic Metabolic Panel</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Liver Function Panel Tests</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Renal Function Panel Test</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Thyroid Function Panel Test</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Comprehensive Metabolic Panel (CMP) Test</p>
+        </div>
+        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+        <div className="flex flex-col justify-between whitespace-nowrap text-left border-black" style={{ height: '100%' }}>
+          <h5 className="font-bold text-sm hover:text-blue-500 flex-1 flex items-end">Toxicology Testing Solutions</h5>
+          <div className="border-b border-gray-200 my-2 w-full"></div> {/* Add dividing line */}
+          <h5 className="font-bold text-sm hover:text-blue-500 flex-1 flex items-start">Oncology Testing Solutions</h5>
+        </div>
+        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+        <div className="space-y-3 whitespace-nowrap text-left">
+          <h5 className="font-bold text-sm hover:text-blue-500">Other Tests</h5>
+          <p className="text-sm mb-1 hover:text-blue-500">Creatine Kinase</p>
+          <p className="text-sm mb-1 hover:text-blue-500">CRP Tests</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Free Psa Testing</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Magnesium Test in Blood</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Anticonvulsant Test Services</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Vitamin D Test Services</p>
+          <p className="text-sm mb-1 hover:text-blue-500">Total PSA Test Services</p>
+        </div>
+      </motion.ul>
+    )}
+  </AnimatePresence>
+</div>
+
+
+
+
+
+    </li>
 
               <li className="group relative hover:scale-110 duration-300">
                 <a
@@ -218,8 +240,6 @@ function Navbar() {
                   className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
                     bgColor === "white" ? "text-black" : "text-white"
                   }`}
-                  // onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}
-                  // onClick={EmptyClick}
                 >
                   Blog
                 </Link>
@@ -238,7 +258,7 @@ function Navbar() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </li>
             </ul>
-            <div className="flex flex-col  md:flex-row md:mt-0 ">
+            <div className="flex flex-col md:flex-row md:mt-0">
               <div
                 style={{
                   display: "flex",
@@ -263,7 +283,6 @@ function Navbar() {
                     maxWidth: "160px",
                     marginLeft: "5px",
                   }}
-                
                 >
                   Book My Test
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
@@ -321,8 +340,6 @@ function Navbar() {
                 <select
                   id="language"
                   name="language"
-                  value={selectedLanguage}
-                  onChange={handleChange}
                   className={`mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black ${
                     bgColor === "white" ? "text-black" : "text-white"
                   } `}
@@ -338,118 +355,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-        {dropdownOpen && (
-          <div
-            id="mega-menu-full-image-dropdown"
-            className="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600"
-          >
-            <div className="grid max-w-screen-sm px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
-              <ul
-                className="hidden mb-4 space-y-4 md:mb-0 md:block"
-                aria-labelledby="mega-menu-full-image-button"
-              >
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Online Stores
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Segmentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Marketing CRM
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Online Stores
-                  </a>
-                </li>
-              </ul>
-              <ul className="mb-4 space-y-4 md:mb-0">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Our Blog
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    License
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-                  >
-                    Resources
-                  </a>
-                </li>
-              </ul>
-              <a
-                href="#"
-                className="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken"
-                style={{
-                  backgroundImage: "url(/docs/images/dashboard-overview.png)",
-                }}
-              >
-                <p className="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-white">
-                  Preview the new Flowbite dashboard navigation.
-                </p>
-                <button
-                  type="button"
-                  className="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700"
-                >
-                  Get started
-                  <svg
-                    className="w-3 h-3 ms-2 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </button>
-              </a>
-            </div>
-          </div>
-        )}
       </motion.nav>
     </>
   );
