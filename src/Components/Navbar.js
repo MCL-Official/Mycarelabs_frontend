@@ -144,9 +144,8 @@ function Navbar() {
             </button>
           </div>
           <div
-            className={`md:flex items-center justify-between w-full ${
-              nav ? "block" : "hidden"
-            } `}
+            className={`md:flex items-center justify-between w-full ${nav ? "block" : "hidden"
+              } `}
           >
             <ul className="flex flex-col mt-2 font-medium md:flex-row items-center gap-2 pl-0 md:mt-0">
               <li className="group relative hover:scale-110 duration-300">
@@ -162,74 +161,114 @@ function Navbar() {
               </li>
 
               <li className="group relative hover:scale-110 duration-300 ">
-              <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-  <button    className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
+
+                <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                  <button className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
                   ${bgColor === "white" ? "text-black" : "text-white"}
-                  `}
-                >Solutions</button>
-  <AnimatePresence>
-    {dropdownOpen && (
-      <motion.ul
-        ref={dropdownRef}
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 15 }}
-        style={{ translateX: "-20%", translateY: "2%" }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="absolute top-full left-0 transform mt-1 w-auto bg-white text-black shadow-lg rounded-lg z-50 flex space-x-12 px-4 py-2 text-left"
-      >
-        <div className="space-y-4 text-left">
-          <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Infectious Disease Testing Solutions</h5>
-          <p className="text-sm mb-1 hover:text-blue-500">Travel PCR Testing</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Testing for Groups</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Testing for Schools</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Testing for Nursing Homes</p>
-          <p className="text-sm mb-1 hover:text-blue-500">At-Home COVID-19 PCR Test Kit</p>
-        </div>
-        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
-        <div className="space-y-3 text-left">
-          <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Wellness Testing Solutions</h5>
-          <p className="text-sm mb-1 hover:text-blue-500">Anemia Profile Test</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Basic Metabolic Panel</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Liver Function Panel Tests</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Renal Function Panel Test</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Thyroid Function Panel Test</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Comprehensive Metabolic Panel (CMP) Test</p>
-        </div>
-        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
-        <div className="flex flex-col justify-between whitespace-nowrap text-left border-black" style={{ height: '100%' }}>
-          <h5 className="font-bold text-sm hover:text-blue-500 flex-1 flex items-end">Toxicology Testing Solutions</h5>
-          <div className="border-b border-gray-200 my-2 w-full"></div> {/* Add dividing line */}
-          <h5 className="font-bold text-sm hover:text-blue-500 flex-1 flex items-start">Oncology Testing Solutions</h5>
-        </div>
-        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
-        <div className="space-y-3 whitespace-nowrap text-left">
-          <h5 className="font-bold text-sm hover:text-blue-500">Other Tests</h5>
-          <p className="text-sm mb-1 hover:text-blue-500">Creatine Kinase</p>
-          <p className="text-sm mb-1 hover:text-blue-500">CRP Tests</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Free Psa Testing</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Magnesium Test in Blood</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Anticonvulsant Test Services</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Vitamin D Test Services</p>
-          <p className="text-sm mb-1 hover:text-blue-500">Total PSA Test Services</p>
-        </div>
-      </motion.ul>
-    )}
-  </AnimatePresence>
-</div>
-
-
-
-
-
-    </li>
+                  `}>Solutions</button>
+                  <AnimatePresence>
+                    {dropdownOpen && (
+                      <motion.ul
+                        ref={dropdownRef}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 15 }}
+                        style={{ translateX: "-20%", translateY: "2%" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="absolute top-full left-0 transform mt-1 w-auto bg-white text-black shadow-lg rounded-lg z-50 flex space-x-12 px-4 py-2 text-left"
+                      >
+                        <div className="space-y-4 text-left">
+                          <Link to="/infectious-disease-testing" className="block no-underline text-black hover:text-blue-500">
+                            <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Infectious Disease Testing Solutions</h5>
+                          </Link>
+                          <Link to="/travel-pcr-testing" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Travel PCR Testing</p>
+                          </Link>
+                          <Link to="/group-testing" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Testing for Groups</p>
+                          </Link>
+                          <Link to="/school-testing" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Testing for Schools</p>
+                          </Link>
+                          <Link to="/nursing-home-testing" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Testing for Nursing Homes</p>
+                          </Link>
+                          <Link to="/home-pcr-test-kit" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">At-Home COVID-19 PCR Test Kit</p>
+                          </Link>
+                        </div>
+                        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+                        <div className="space-y-3 text-left">
+                          <Link to="/wellness-testing" className="block no-underline text-black hover:text-blue-500">
+                            <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Wellness Testing Solutions</h5>
+                          </Link>
+                          <Link to="/anemia-profile-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Anemia Profile Test</p>
+                          </Link>
+                          <Link to="/basic-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Basic Metabolic Panel</p>
+                          </Link>
+                          <Link to="/liver-function-tests" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Liver Function Panel Tests</p>
+                          </Link>
+                          <Link to="/renal-function-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Renal Function Panel Test</p>
+                          </Link>
+                          <Link to="/thyroid-function-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Thyroid Function Panel Test</p>
+                          </Link>
+                          <Link to="/comprehensive-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Comprehensive Metabolic Panel (CMP) Test</p>
+                          </Link>
+                        </div>
+                        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+                        <div className="flex flex-col justify-between whitespace-nowrap text-left border-black" style={{ height: '100%' }}>
+                          <Link to="/toxicology-testing" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-end">
+                            <h5 className="font-bold text-sm hover:text-blue-500">Toxicology Testing Solutions</h5>
+                          </Link>
+                          <div className="border-b border-gray-200 my-2 w-full"></div> {/* Add dividing line */}
+                          <Link to="/oncology-testing" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-start">
+                            <h5 className="font-bold text-sm hover:text-blue-500">Oncology Testing Solutions</h5>
+                          </Link>
+                        </div>
+                        <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+                        <div className="space-y-3 whitespace-nowrap text-left">
+                          <Link to="/other-tests" className="block no-underline text-black hover:text-blue-500">
+                            <h5 className="font-bold text-sm hover:text-blue-500">Other Tests</h5>
+                          </Link>
+                          <Link to="/creatine-kinase" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Creatine Kinase</p>
+                          </Link>
+                          <Link to="/crp-tests" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">CRP Tests</p>
+                          </Link>
+                          <Link to="/free-psa-testing" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Free Psa Testing</p>
+                          </Link>
+                          <Link to="/magnesium-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Magnesium Test in Blood</p>
+                          </Link>
+                          <Link to="/anticonvulsant-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500 ">Anticonvulsant Test Services</p>
+                          </Link>
+                          <Link to="/vitamin-d-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Vitamin D Test Services</p>
+                          </Link>
+                          <Link to="/total-psa-test" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Total PSA Test Services</p>
+                          </Link>
+                        </div>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </li>
 
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-300 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                    bgColor === "white" ? "text-black" : "text-white"
-                  }`}
+                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-300 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"
+                    }`}
                   onClick={EmptyClick}
                 >
                   Company
@@ -240,9 +279,8 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <Link
                   to="/Blogs"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                    bgColor === "white" ? "text-black" : "text-white"
-                  }`}
+                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"
+                    }`}
                 >
                   Blog
                 </Link>
@@ -251,9 +289,8 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${
-                    bgColor === "white" ? "text-black" : "text-white"
-                  }`}
+                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"
+                    }`}
                   onClick={EmptyClick}
                 >
                   Support
@@ -313,39 +350,34 @@ function Navbar() {
                 </button>
               </div>
               <form
-                className={`flex px-2 ${
-                  bgColor === "white" ? "text-black" : "text-white"
-                }`}
+                className={`flex px-2 ${bgColor === "white" ? "text-black" : "text-white"
+                  }`}
               >
                 <input
-                  className={`form-control mr-2 p-2 border border-gray-300 bg-transparent rounded ${
-                    bgColor === "white" ? "text-black" : "text-white"
-                  }`}
+                  className={`form-control mr-2 p-2 border border-gray-300 bg-transparent rounded ${bgColor === "white" ? "text-black" : "text-white"
+                    }`}
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
                 <a
                   href="tel:+1234567890"
-                  className={`mr-3 self-center ${
-                    bgColor === "white" ? "text-black" : "text-black"
-                  }`}
+                  className={`mr-3 self-center ${bgColor === "white" ? "text-black" : "text-black"
+                    }`}
                 >
                   <FontAwesomeIcon icon={faPhone} size="xl" />
                 </a>
               </form>
 
               <div
-                className={`w-32 ${
-                  bgColor === "white" ? "text-black" : "text-black"
-                }`}
+                className={`w-32 ${bgColor === "white" ? "text-black" : "text-black"
+                  }`}
               >
                 <select
                   id="language"
                   name="language"
-                  className={`mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black ${
-                    bgColor === "white" ? "text-black" : "text-white"
-                  } `}
+                  className={`mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black ${bgColor === "white" ? "text-black" : "text-white"
+                    } `}
                 >
                   <option value="en">English</option>
                   <option value="es">Spanish</option>
