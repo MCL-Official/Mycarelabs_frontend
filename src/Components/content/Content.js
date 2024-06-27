@@ -45,7 +45,8 @@ export default function Content() {
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            // src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            src="https://media.istockphoto.com/id/1336071300/photo/coronavirus-covid-19-new-variant-mutation.jpg?s=612x612&w=0&k=20&c=Ce5p292PNk9lFh6QaHWHxqiKQ1kNWfgscll7s5u6QZI="
             alt=""
           />
         </div>
@@ -87,13 +88,13 @@ export default function Content() {
                 fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
                 adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
+              {/* <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
               <p className="mt-6">
                 Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
                 Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
                 tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
                 turpis ipsum eu a sed convallis diam.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

@@ -15,6 +15,7 @@ import Navbar from "./Components/Navbar";
 import DateTimePicker from "./Components/Booking/DateTimePicker";
 import Content from "./Components/content/Content";
 import Navbar2 from "./Components/Navbar/Navbar2";
+import Infectious from "./Pages/Solutions/Infectious";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Route path="/bookTest/:id" element={<BookTestDetails />} />
           <Route path="/Blogs" element={<Blogs />} />
           <Route path="/readBlog/:id" element={<ReadBlog />} />
-          <Route path="/infectious-disease-testing" element={<Content />} />
+          <Route path="/infectious-disease-testing" element={<Infectious/>} />
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
