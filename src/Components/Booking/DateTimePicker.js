@@ -1,31 +1,40 @@
 import React, { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import axios from 'axios';
+import logo1 from "../../Assets/Logo1.png";
 import { useNavigate } from 'react-router-dom';
 
-const LeftContainer = () => (
-  <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 mb-4 md:mb-0">
-    <div className="flex items-center mb-4">
-      <img src="https://via.placeholder.com/40" alt="Avatar" className="rounded-full mr-4" />
-      <div>
-        <h3 className="text-lg font-semibold">Dhanush Bhandary</h3>
-        <p className="text-gray-600">Free Strategy Session</p>
+const LeftContainer = ({ cardData }) => {
+  console.log(cardData?.cardData?.title, "casdlkdsmkdvssdk");
+
+  return (
+    <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 mb-4 md:mb-0">
+      <div className="flex flex-col items-center">
+        <img src={logo1} alt="My Care Labs Logo" className="w-42 mb-4" />
+        <h2 className="text-xl font-bold mb-2">Booking For</h2>
+        <p className="text-gray-600 mb-4">{cardData?.cardData?.title}</p>
+        <div className="w-full h-64 mb-4">
+          <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            scrolling="no"
+            marginHeight="0"
+            marginWidth="0"
+            src="https://maps.google.com/maps?q=Fremont,%20CA%2094538&z=15&output=embed"
+          ></iframe>
+        </div>
+        <div className="text-center">
+          <h3 className="text-lg font-semibold mb-2">Get in Touch</h3>
+          <p className="text-blue-500">support@mycarelabs.com</p>
+        </div>
       </div>
     </div>
-    <div className="flex items-center mb-4">
-      <span className="material-icons text-gray-600">access_time</span>
-      <span className="ml-2 text-gray-600">45 min</span>
-    </div>
-    <div className="flex items-center mb-4">
-      <span className="material-icons text-gray-600">videocam</span>
-      <span className="ml-2 text-gray-600">Web conferencing details provided upon confirmation.</span>
-    </div>
-    <p className="text-gray-600">This is a free strategy session to understand where you're at currently with your business/channel and discuss how we can take it to the next level with our systems.</p>
-  </div>
-);
+  );
+};
 
-const DateTimePicker = () => {
-
+const DateTimePicker = (cardData) => {
+console.log(cardData,"sdkhbsdbgvds");
   const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
@@ -122,7 +131,7 @@ const DateTimePicker = () => {
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex flex-col md:flex-row overflow-hidden">
-        <LeftContainer />
+        <LeftContainer cardData={cardData}/>
         <div className="w-full md:w-3/4 pl-0 md:pl-4 transition-all duration-500">
           {!showForm ? (
             <>
@@ -165,27 +174,28 @@ const DateTimePicker = () => {
                       <>
                         <div className="text-center text-lg font-semibold mb-4">{selectedDate}</div>
                         <TransitionGroup>
-                          {timeSlots.map((time, index) => (
-                            <CSSTransition
-                              key={time}
-                              timeout={300}
-                              classNames={{
-                                enter: 'opacity-0 transform translate-x-full',
-                                enterActive: `opacity-100 transform translate-x-0 transition-all duration-300 delay-${index * 100}`,
-                                exit: 'opacity-100 transform translate-x-0',
-                                exitActive: 'opacity-0 transform translate-x-full transition-all duration-300'
-                              }}
-                            >
-                              <div className="relative mb-2">
-                                <button
-                                  className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${shrinkButton === time ? 'transform scale-x-0 rotate-180' : ''} ${selectedTime === time ? 'bg-blue-500 text-white border-blue-500' : 'bg-white text-blue-500 border-blue-500'}`}
-                                  onClick={() => handleTimeClick(time)}
-                                >
-                                  {selectedTime === time ? "Next" : time}
-                                </button>
-                              </div>
-                            </CSSTransition>
-                          ))}
+                        {timeSlots.map((time, index) => (
+  <CSSTransition
+    key={time}
+    timeout={300}
+    classNames={{
+      enter: 'opacity-0 transform scale-75',
+      enterActive: `opacity-100 transform scale-100 transition-all duration-300 delay-${index * 100}`,
+      exit: 'opacity-100 transform scale-100',
+      exitActive: 'opacity-0 transform scale-75 transition-all duration-300'
+    }}
+  >
+    <div className="relative mb-2">
+      <button
+        className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${shrinkButton === time ? 'transform scale-50' : ''} ${selectedTime === time ? 'bg-blue-500 text-white border-blue-500' : 'bg-white text-blue-500 border-blue-500'}`}
+        onClick={() => handleTimeClick(time)}
+      >
+        {selectedTime === time ? "Next" : time}
+      </button>
+    </div>
+  </CSSTransition>
+))}
+
                         </TransitionGroup>
                       </>
                     )}

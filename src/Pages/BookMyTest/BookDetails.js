@@ -30,7 +30,7 @@ const BookTestDetails = () => {
       </div>
       <div className="relative container mx-auto z-15" style={{ marginTop: '-29.5vh' }}>
         {/* <div className="bg-white p-8 shadow-lg rounded-lg" style={{ background: 'none' }}> */}
-          <DateTimePicker />
+          <DateTimePicker cardData={cardData} />
           <div className="flex justify-center mt-5 bg-gradient-to-r from-blue-500 to-white p-10  rounded border-[1px]">
   <div className="text-center flex items-center">
     <div className="mr-5 text-white">

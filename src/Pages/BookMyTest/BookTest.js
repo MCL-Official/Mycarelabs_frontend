@@ -24,7 +24,7 @@ const BookTest = () => {
   };
 
   const handleBookNowClick = (id) => {
-    console.log('Navigating to /bookTest/' + id);
+    console.log('Navasas' , id);
     navigate(`/bookTest/${id}`);
   };
 
@@ -180,7 +180,8 @@ const BookTest = () => {
                   </div>
                   <div className="flex justify-center mt-auto">
                     {console.log(card.id,"carrdddddddd")}
-                    <Button onClick={() => handleBookNowClick(card.id)} />
+                    <Button   slug={index}
+                      cardData={{ ...card, imageUrl: images[index % images.length] }} />
                   </div>
                 </div>
               </div>

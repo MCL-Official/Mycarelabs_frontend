@@ -12,7 +12,30 @@ function Navbar() {
   const [bgColor, setBgColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
   const [textSize, setTextSize] = useState("text-lg");
+  const [activeLink, setActiveLink] = useState("");
+  const location = useLocation();
+  const [location1, setLocation] = useState();
 
+  const LinkItem = ({ to, text }) => (
+    <Link to={to} className="block no-underline text-black hover:text-blue-500">
+      <p className="text-sm mb-1 hover:text-blue-500">{text}</p>
+    </Link>
+  );
+
+  const Divider = () => (
+    <div className="border-l-2 border-gray-200 my-auto h-16"></div>
+  );
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setBgColor("white");
+      setTextColor("black");
+      setTextSize("text-md");
+
+      // setBgColor("transparent");
+      // setTextColor("white");
+      // setTextSize("text-lg");
+    }
+  }, [location])
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
 
@@ -22,14 +45,22 @@ function Navbar() {
       setHidden(false);
     }
 
-    if (latest > 30) {
+    console.log(location1, "harshsample");
+
+    if (location.pathname === "/") {
+      if (latest > 30) {
+        setBgColor("white");
+        setTextColor("black");
+        setTextSize("text-md");
+      } else {
+        setBgColor("transparent");
+        setTextColor("white");
+        setTextSize("text-lg");
+      }
+    } else {
       setBgColor("white");
       setTextColor("black");
       setTextSize("text-md");
-    } else {
-      setBgColor("transparent");
-      setTextColor("white");
-      setTextSize("text-lg");
     }
   });
 
@@ -45,15 +76,12 @@ function Navbar() {
 
   const handleClick = (id) => {
     setClicked(id);
-  };
-
-  const EmptyClick = () => {
-    navigate("/empty");
+    setActiveLink(id);
   };
 
   const handleButtonClick = (buttonId, path) => {
     setClicked(buttonId);
-    navigate("/bookTest");
+    navigate(path);
   };
 
   const linkStyle = {
@@ -72,12 +100,11 @@ function Navbar() {
         setDropdownOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [dropdownRef]);
-
 
   const handleMouseEnter = () => {
     setDropdownOpen(true);
@@ -151,21 +178,17 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
-                  ${bgColor === "white" ? "text-black" : "text-white"}
-                  `}
+                  className={`flex no-underline items-center justify-between w-full px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"}`}
+                  onClick={() => handleClick("COVID-19 Testing Locations")}
                 >
                   COVID-19 Testing Locations
                 </a>
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#007bff] transition-transform duration-300 ease-out scale-x-0 group-hover:scale-x-100"></span>
               </li>
 
-              <li className="group relative hover:scale-110 duration-300 ">
-
+              <li className="group relative hover:scale-110 duration-300">
                 <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                  <button className={`flex no-underline items-center justify-between w-full px-2  ${textSize} font-red-200 
-                  ${bgColor === "white" ? "text-black" : "text-white"}
-                  `}>Solutions</button>
+                  <button className={`flex no-underline items-center justify-between w-full px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"}`}>Solutions</button>
                   <AnimatePresence>
                     {dropdownOpen && (
                       <motion.ul
@@ -175,7 +198,7 @@ function Navbar() {
                         exit={{ opacity: 0, y: 15 }}
                         style={{ translateX: "-20%", translateY: "2%" }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="absolute top-full left-0 transform mt-1 w-auto bg-white text-black shadow-lg rounded-lg z-50 flex space-x-12 px-4 py-2 text-left"
+                        className="absolute top-full left-0 transform mt-1 w-auto bg-white bg-opacity-90 text-black shadow-lg rounded-lg z-50 flex space-x-12 px-4 py-2 text-left"
                       >
                         <div className="space-y-4 text-left">
                           <Link to="/infectious-disease-testing" className="block no-underline text-black hover:text-blue-500">
@@ -249,7 +272,7 @@ function Navbar() {
                             <p className="text-sm mb-1 hover:text-blue-500">Magnesium Test in Blood</p>
                           </Link>
                           <Link to="/anticonvulsant-test" className="block no-underline text-black hover:text-blue-500">
-                            <p className="text-sm mb-1 hover:text-blue-500 ">Anticonvulsant Test Services</p>
+                            <p className="text-sm mb-1 hover:text-blue-500">Anticonvulsant Test Services</p>
                           </Link>
                           <Link to="/vitamin-d-test" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Vitamin D Test Services</p>
@@ -262,14 +285,15 @@ function Navbar() {
                     )}
                   </AnimatePresence>
                 </div>
+
+
               </li>
 
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-300 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"
-                    }`}
-                  onClick={EmptyClick}
+                  className={`block no-underline px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"} border-b border-gray-100 hover:text-blue-300 md:hover:bg-transparent md:border-0 md:p-0`}
+                  onClick={() => handleClick("Company")}
                 >
                   Company
                 </a>
@@ -279,8 +303,8 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <Link
                   to="/Blogs"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"
-                    }`}
+                  className={`block no-underline px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0`}
+                  onClick={() => handleClick("Blog")}
                 >
                   Blog
                 </Link>
@@ -289,9 +313,8 @@ function Navbar() {
               <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
-                  className={`block no-underline px-2 ${textSize} ${textColor} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 ${bgColor === "white" ? "text-black" : "text-white"
-                    }`}
-                  onClick={EmptyClick}
+                  className={`block no-underline px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0`}
+                  onClick={() => handleClick("Support")}
                 >
                   Support
                 </a>
@@ -308,7 +331,7 @@ function Navbar() {
               >
                 <button
                   className="nav-link navbar-button group relative hover:scale-110 hover:bg-slate-500 duration-300"
-                  onClick={() => handleButtonClick("bookButton", "#teamq1")}
+                  onClick={() => handleButtonClick("bookButton", "/bookTest")}
                   style={{
                     ...linkStyle,
                     backgroundColor:
@@ -329,7 +352,7 @@ function Navbar() {
                 </button>
                 <button
                   className="nav-link navbar-button group relative hover:scale-110 hover:bg-red-200 duration-300"
-                  onClick={() => handleButtonClick("resultsButton", "#team1")}
+                  onClick={() => handleButtonClick("resultsButton", "/results")}
                   style={{
                     ...linkStyle,
                     backgroundColor:
@@ -350,34 +373,27 @@ function Navbar() {
                 </button>
               </div>
               <form
-                className={`flex px-2 ${bgColor === "white" ? "text-black" : "text-white"
-                  }`}
+                className="flex px-2 text-black"
               >
                 <input
-                  className={`form-control mr-2 p-2 border border-gray-300 bg-transparent rounded ${bgColor === "white" ? "text-black" : "text-white"
-                    }`}
+                  className="form-control mr-2 p-2 border border-gray-300 bg-transparent rounded text-black"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
                 <a
                   href="tel:+1234567890"
-                  className={`mr-3 self-center ${bgColor === "white" ? "text-black" : "text-black"
-                    }`}
+                  className="mr-3 self-center text-black"
                 >
                   <FontAwesomeIcon icon={faPhone} size="xl" />
                 </a>
               </form>
 
-              <div
-                className={`w-32 ${bgColor === "white" ? "text-black" : "text-black"
-                  }`}
-              >
+              <div className="w-32 text-black">
                 <select
                   id="language"
                   name="language"
-                  className={`mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black ${bgColor === "white" ? "text-black" : "text-white"
-                    } `}
+                  className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-transparent text-black"
                 >
                   <option value="en">English</option>
                   <option value="es">Spanish</option>
@@ -394,5 +410,6 @@ function Navbar() {
     </>
   );
 }
+
 
 export default Navbar;
