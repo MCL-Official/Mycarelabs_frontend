@@ -7,6 +7,9 @@ import { HorizontalCard } from '../../Components/Horizantal-Card/HorizontalCard'
 import { Stats } from '../../Components/Stats/Stats'
 import FeatureComponent from '../../Components/Accordain/FeatureComponent'
 import { FeatureSection } from '../../Components/Feature/FeatureSection'
+import SocialLinks from '../../Components/Animation-Components/Hover-Animation-sociallinks/SocialLinks'
+import ThemeSwitch from '../../Components/Animation-Components/Theme-ChangeSwitch/ThemeSwitch'
+import ButtonComponent from '../../Components/Animation-Components/Submit-Button/ButtonComponent'
 
 const Infectious = () => {
   return (
@@ -14,6 +17,9 @@ const Infectious = () => {
       <Content/>
       <HorizontalCard/>
       <Video/>
+      {/* <SocialLinks/>
+      <ThemeSwitch/>
+      <ButtonComponent/> */}
       {/* <Stats/> */}
       {/* <FeatureSection/> */}
       {/* <Workwithus/> */}

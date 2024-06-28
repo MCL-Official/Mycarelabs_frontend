@@ -125,7 +125,7 @@ const BookTest = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="mt-5 via-transparent to-white">
         <div className="text-center mb-4">
           <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">

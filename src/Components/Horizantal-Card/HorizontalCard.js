@@ -57,17 +57,10 @@ export function HorizontalCard() {
 
   return (
     <div className="overflow-hidden relative">
-      <div className="flex w-[200%] animate-moveRight">
+      <div className="flex w-[200%] animate-moveRight hover-stop">
         {duplicatedCards.map((card, index) => (
-          <Card
-            key={index}
-            className="w-full max-w-[48rem] flex-row mx-4"
-          >
-            <CardHeader
-              shadow={false}
-              floated={false}
-              className="m-0 w-2/5 shrink-0 rounded-r-none"
-            >
+          <Card key={index} className="w-full max-w-[48rem] flex-row mx-4">
+            <CardHeader shadow={false} floated={false} className="m-0 w-2/5 shrink-0 rounded-r-none">
               <img
                 src={card.imgSrc}
                 alt="card-image"
@@ -75,24 +68,13 @@ export function HorizontalCard() {
               />
             </CardHeader>
             <CardBody>
-              <Typography
-                variant="h6"
-                color="gray"
-                className="mb-4 uppercase"
-              >
+              <Typography variant="h6" color="gray" className="mb-4 uppercase">
                 startups
               </Typography>
-              <Typography
-                variant="h4"
-                color="blue-gray"
-                className="mb-2"
-              >
+              <Typography variant="h4" color="blue-gray" className="mb-2">
                 {card.title}
               </Typography>
-              <Typography
-                color="gray"
-                className="mb-8 font-normal"
-              >
+              <Typography color="gray" className="mb-8 font-normal">
                 {card.description}
               </Typography>
               <a href="#" className="inline-block">
@@ -106,11 +88,7 @@ export function HorizontalCard() {
                     strokeWidth={2}
                     className="h-4 w-4"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                   </svg>
                 </Button>
               </a>

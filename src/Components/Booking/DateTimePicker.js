@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import axios from 'axios';
 import logo1 from "../../Assets/Logo1.png";
 import { useNavigate } from 'react-router-dom';
+import ButtonComponent from '../Animation-Components/Submit-Button/ButtonComponent';
 
 const LeftContainer = ({ cardData }) => {
   console.log(cardData?.cardData?.title, "casdlkdsmkdvssdk");
@@ -263,9 +264,10 @@ console.log(cardData,"sdkhbsdbgvds");
                   </select>
                 </div>
               </div>
-              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105">
+              {/* <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105">
                 Book Appointment
-              </button>
+              </button> */}
+              <ButtonComponent onClick={handleSubmit}/>
             </form>
           )}
         </div>

@@ -1,0 +1,154 @@
+.button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: scale 1s;
+}
+
+.button:hover {
+  scale: 1.05;
+}
+
+#main-border {
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(180deg, #e8e8e8, #d2d2d2);
+  box-shadow: 0px 20px 25px #0002, 0px 3px 4px #0004;
+}
+
+#main {
+  border-radius: 21px;
+  width: 260px;
+  height: 90px;
+  background: linear-gradient(180deg, #1111, #0007);
+  padding: 4px;
+}
+
+#inner-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #fff, #eaeaea);
+  border-radius: 16px;
+  box-shadow: 0px 2px 3px #0008;
+  padding-block: 6px;
+  padding-inline: 6px;
+  position: relative;
+}
+
+#inner-dent {
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #eaeaea 0%, #fff 70%);
+  filter: blur(1.5px);
+}
+
+#text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 75px;
+}
+
+#text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#text-container:focus > #arrow {
+  transform: rotate(-45deg) translateX(110px) translateY(90px);
+  transition: transform 1s;
+}
+
+#send {
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 57px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#text-container:focus {
+  transform: translateY(-450px);
+  transition: transform 1.5s 1s ease-in;
+}
+
+#inner-box:focus-within > #send {
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+#sent {
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 57px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+}
+
+#inner-box:focus-within > #sent {
+  opacity: 1;
+  transform: translateX(20px);
+  transition: opacity 1s 1s, transform 1s 1s;
+}
+
+#tick {
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+}
+
+#inner-box:focus-within > #tick {
+  opacity: 1;
+  transform: translateX(-85px);
+  transition: opacity 1s 1.3s, transform 1s 1s;
+}
+
+.button:focus-within {
+  animation: recoil 0.4s 0.9s;
+}
+
+@keyframes recoil {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#planebody {
+  position: absolute;
+  top: 22px;
+  right: 62px;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+}
+
+#text-container:focus-within > #planebody {
+  opacity: 1;
+  transition: opacity 1s 0.5s;
+}

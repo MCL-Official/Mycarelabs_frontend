@@ -8,7 +8,7 @@ module.exports = {
       keyframes: {
         moveRight: {
           '0%': { transform: 'translateX(0)' },
-         '100%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
         fadeUp: {
           '0%': { transform: 'translateY(0)', opacity: 1 },
@@ -46,8 +46,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
-    // require('@tailwindcss/line-clamp'),
-    // require('tailwind-scrollbar-hide'),
     function({ addUtilities }) {
       addUtilities({
         '.scrollbar-hide': {
@@ -63,4 +61,4 @@ module.exports = {
       });
     },
   ],
-}
+};

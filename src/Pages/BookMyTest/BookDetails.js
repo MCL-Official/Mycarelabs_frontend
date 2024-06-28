@@ -33,7 +33,7 @@ const BookTestDetails = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div
         className="relative bg-cover bg-center h-[75vh]"
         style={{ backgroundImage: `url(${cardData?.imageUrl})` }}
@@ -69,7 +69,7 @@ const BookTestDetails = () => {
 
         </div>
         <HoverDevCards/>
-          <Footer/>
+          {/* <Footer/> */}
       {/* </div> */}
     </>
   );
