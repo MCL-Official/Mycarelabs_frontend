@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '../../Components/Navbar';
 import DateTimePicker from '../../Components/Booking/DateTimePicker';
@@ -13,6 +13,23 @@ const BookTestDetails = () => {
   const location = useLocation();
   const cardData = location.state?.cardData;
   console.log(cardData);
+  
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Check if the page has already been reloaded
+    const reloaded = sessionStorage.getItem('reloaded');
+
+    if (!reloaded) {
+      // Set a flag in sessionStorage to indicate the page has been reloaded
+      sessionStorage.setItem('reloaded', 'true');
+      // Reload the page
+      window.location.reload();
+    } else {
+      // If the page has already been reloaded, set the loading state to true
+      setIsLoaded(true);
+    }
+  }, []);
 
   return (
     <>

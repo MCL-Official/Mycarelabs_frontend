@@ -16,6 +16,9 @@ import DateTimePicker from "./Components/Booking/DateTimePicker";
 import Content from "./Components/content/Content";
 import Navbar2 from "./Components/Navbar/Navbar2";
 import Infectious from "./Pages/Solutions/Infectious";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Faq from "./Pages/Faq/Faq";
+
 
 
 function App() {
@@ -27,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
+          <Route path="/faq" element={<Faq/>} />
           <Route path="/bookTest" element={<BookTest />} />
           <Route path="/bookTest/:id" element={<BookTestDetails />} />
           <Route path="/Blogs" element={<Blogs />} />
