@@ -28,11 +28,11 @@ function Home() {
       <InsuranceAccepted />
       <Info />
       <ImageContainer/>
-      <Footer />
+      {/* <Footer /> */}
 
       {/* <TextParallaxContentExample/> */}
-      {/* <ShuffleHero/> */}
-      {/* <ClipPathLinks/> */}
+      {/* <ShuffleHero/>
+      <ClipPathLinks/> */}
       {/* <ShuffleHero /> */}
       {/* <About /> */}
       {/* <BookAppointment /> */}
