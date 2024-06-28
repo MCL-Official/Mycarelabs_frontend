@@ -5,14 +5,19 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
+import img5 from "../../Assets/img5.png";
+import img3 from "../../Assets/img2.jpg";
+import img from "../../Assets/img.jpg";
+import img1 from "../../Assets/img3.jpg";
+import img4 from "../../Assets/img4.jpg";
 
 const images = [
-  "https://d3igdo166pzdku.cloudfront.net/card1.jpg",
-  "https://d3igdo166pzdku.cloudfront.net/card2.jpg",
-  "https://d3igdo166pzdku.cloudfront.net/card3.jpg",
-  "https://d3igdo166pzdku.cloudfront.net/card5.jpg",
-  "https://d3igdo166pzdku.cloudfront.net/card6.jpg",
-  "https://d3igdo166pzdku.cloudfront.net/card4.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoxB0-5iYhpjm6euLTXjYjGObKBCodTnIE8oN83GdRjmPSQGvpjTXT5wf3LQ&s",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKTtvK563qsJfVUh_Fk43AFVxXOeHA-4xfYN7PWUT-xfkEFlvp97nCmIN6g&s",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHL6Nt5janbq-JO5gViYZ9rbdBrWpGY2kytXOex9xFhl8jghDzd2OKTmNxTg&s",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtT9NMabXOeFXhLMqMvcA2ehosm1IAx3pxOw&s",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
 ];
 
 // const images = [
