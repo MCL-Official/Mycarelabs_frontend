@@ -1,15 +1,20 @@
 import React from 'react'
 import Hero from '../../../../Components/SOLUTION/Infectious-desiase/Nurcing/Hero';
+import BookAppointment from '../../../../Components/BookAppointment';
+import DateTimePicker from '../../../../Components/Booking/DateTimePicker';
+import { Content } from '../../../../Components/SOLUTION/Infectious-desiase/Nurcing/Content';
+import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 
 
 const TestingNurcing = () => {
   return (
     <div>
-      {/* <br></br> */}
       <Hero/>
-      <br></br>
-      <br></br>
-      ddsdsdw
+      <DateTimePicker/>
+      <Content/>
+      <GetStartedCard/>
+     
+      
     </div>
   )
 }
