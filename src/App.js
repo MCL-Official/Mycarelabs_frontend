@@ -33,6 +33,9 @@ import Thyroid from "./Pages/Solutions/Wellness-testing/Thyroid-function/Index";
 import Oncology from "./Pages/Solutions/Oncology-testing/Index";
 import Toxicology from "./Pages/Solutions/Toxicology-testing/Index";
 import TestingNurcing from "./Pages/Solutions/Infectious-desiase/Nurcing-home-test/TestingNurcing";
+import Index from "./Pages/Solutions/Other-test/creatine-kinase/Index";
+import Index1 from "./Pages/Solutions/Other-test/crp-tests/Index";
+import Index2 from "./Pages/Solutions/Other-test/free-psa-testing/Index";
 
 
 function App() {
@@ -64,9 +67,9 @@ function App() {
           <Route path="/testing-solutions/comprehensive-metabolic-panel" element={<CMP/>} />
           <Route path="/testing-solutions/oncology-testing-solutions" element={<Oncology/>} />
           <Route path="/testing-solutions/toxicology-testing-solutions" element={<Toxicology/>} />
-          <Route path="/creatine-kinase" element={<TestingSchool/>} />
-          <Route path="/crp-tests" element={<TestingSchool/>} />
-          <Route path="/free-psa-testing" element={<TestingSchool/>} />
+          <Route path="/creatine-kinase" element={<Index/>} />
+          <Route path="/crp-tests" element={<Index1/>} />
+          <Route path="/free-psa-testing" element={<Index2/>} />
           <Route path="/magnesium-test-in-blood" element={<TestingSchool/>} />
           <Route path="/anticonvulsant-test-services" element={<TestingSchool/>} />
           <Route path="/vitamin-d-test-services" element={<TestingSchool/>} />

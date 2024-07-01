@@ -1,6 +1,7 @@
 import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
+import { AnemiaTest } from '../../../../Components/SOLUTION/Wellness-testing/anemia/AnemiaTest';
 
 const anemiaTestData = [
   {
@@ -110,6 +111,7 @@ const anemiaTestData = [
 const Index = () => {
   return (
     <div>
+      <AnemiaTest/>
       {anemiaTestData.map((data, index) => (
         <AnemiaTesting
           key={index}

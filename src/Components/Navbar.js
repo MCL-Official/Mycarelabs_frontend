@@ -179,7 +179,7 @@ console.log(location1,"harshsample");
                 <a
                   href="#"
                   className={`flex no-underline items-center justify-between w-full px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"}`}
-                  onClick={() => handleClick("COVID-19 Testing Locations")}
+                  onClick={() => handleButtonClick("bookButton", "/bookTest")}
                 >
                   COVID-19 Testing Locations
                 </a>
