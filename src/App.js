@@ -15,11 +15,12 @@ import Navbar from "./Components/Navbar";
 import DateTimePicker from "./Components/Booking/DateTimePicker";
 import Content from "./Components/content/Content";
 import Navbar2 from "./Components/Navbar/Navbar2";
-import Infectious from "./Pages/Solutions/Infectious";
+import Infectious from "./Pages/Solutions/Infectious-desiase/Infectious";
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 import Faq from "./Pages/Faq/Faq";
 
 import Footer from "./Components/Footer";
+import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/Blogs" element={<Blogs />} />
           <Route path="/readBlog/:id" element={<ReadBlog />} />
           <Route path="/infectious-disease-testing" element={<Infectious/>} />
+          <Route path="/travel-pcr-testing" element={<Travel/>} />
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
