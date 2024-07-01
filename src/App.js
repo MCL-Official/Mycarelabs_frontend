@@ -21,6 +21,7 @@ import Faq from "./Pages/Faq/Faq";
 
 import Footer from "./Components/Footer";
 import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
+import Covid19 from "./Pages/Solutions/Covid19";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/readBlog/:id" element={<ReadBlog />} />
           <Route path="/infectious-disease-testing" element={<Infectious/>} />
           <Route path="/travel-pcr-testing" element={<Travel/>} />
+          <Route path="/infectious-disease-testing/Covid19-kit" element={<Covid19/>} />
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
