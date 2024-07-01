@@ -222,35 +222,35 @@ console.log(location1,"harshsample");
     </div>
     <div className="border-l-2 border-gray-200 my-auto h-16"></div>
     <div className="space-y-3 text-left">
-      <Link to="/wellness-testing" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/wellness-testing" className="block no-underline text-black hover:text-blue-500">
         <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Wellness Testing Solutions</h5>
       </Link>
-      <Link to="/anemia-profile-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/anemia-profile-test" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Anemia Profile Test</p>
       </Link>
-      <Link to="/basic-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/basic-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Basic Metabolic Panel</p>
       </Link>
-      <Link to="/liver-function-tests" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/liver-function-tests" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Liver Function Panel Tests</p>
       </Link>
-      <Link to="/renal-function-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/renal-function-test" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Renal Function Panel Test</p>
       </Link>
-      <Link to="/thyroid-function-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/thyroid-function-test" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Thyroid Function Panel Test</p>
       </Link>
-      <Link to="/comprehensive-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/testing-solutions/comprehensive-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Comprehensive Metabolic Panel (CMP) Test</p>
       </Link>
     </div>
     <div className="border-l-2 border-gray-200 my-auto h-16"></div>
     <div className="flex flex-col justify-between whitespace-nowrap text-left border-black" style={{ height: '100%' }}>
-      <Link to="/toxicology-testing" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-end">
+      <Link to="/testing-solutions/toxicology-testing-solutions" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-end">
         <h5 className="font-bold text-sm hover:text-blue-500">Toxicology Testing Solutions</h5>
       </Link>
       <div className="border-b border-gray-200 my-2 w-full"></div> {/* Add dividing line */}
-      <Link to="/oncology-testing" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-start">
+      <Link to="/testing-solutions/oncology-testing-solutions" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-start">
         <h5 className="font-bold text-sm hover:text-blue-500">Oncology Testing Solutions</h5>
       </Link>
     </div>
@@ -268,16 +268,16 @@ console.log(location1,"harshsample");
       <Link to="/free-psa-testing" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Free Psa Testing</p>
       </Link>
-      <Link to="/magnesium-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/magnesium-test-in-blood" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Magnesium Test in Blood</p>
       </Link>
-      <Link to="/anticonvulsant-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/anticonvulsant-test-services" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Anticonvulsant Test Services</p>
       </Link>
-      <Link to="/vitamin-d-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/vitamin-d-test-services" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Vitamin D Test Services</p>
       </Link>
-      <Link to="/total-psa-test" className="block no-underline text-black hover:text-blue-500">
+      <Link to="/total-psa-test-services" className="block no-underline text-black hover:text-blue-500">
         <p className="text-sm mb-1 hover:text-blue-500">Total PSA Test Services</p>
       </Link>
     </div>

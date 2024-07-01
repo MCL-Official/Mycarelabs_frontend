@@ -1,23 +1,14 @@
 import React from 'react'
 import { BackgroundBlogCard } from '../../../../Components/SOLUTION/Travel/BackgroundBlogCard'
+import InsuranceAccepted from '../../../../Components/InsuranceAccepted'
+import { Hero } from '../../../../Components/SOLUTION/Travel/Hero-section/Hero'
 
 const Travel = () => {
   return (
-    <div>
-        dskjdndvkj
-        sdlvkjsvn
-        sdvlljvns
-        {/* < */}
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-       
+    <div>    
+        <Hero/>       
       <BackgroundBlogCard/>
-      <br></br>
-        <br></br>
-        <br></br>
+    <InsuranceAccepted/>
     </div>
   )
 }

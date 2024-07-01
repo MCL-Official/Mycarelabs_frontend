@@ -3,19 +3,16 @@ import React from 'react'
 export default function Covid19() {
   return (
     <>
-    
     <div className='container'>
-    
-
   <section class="text-gray-600 body-font bg-white dark:bg-slate-900 mt-40">
     <div class="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
         <div
             class="lg:flex-grow mt-5 md:mt-0   md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1
-                class="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+                class="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-800 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
               At-Home Test Kits: Bringing Health to Your Doorstep 
             </h1>
-            <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed dark:text-gray-300">
+            <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed dark:text-gray-700">
             At My Care Labs, we understand the importance of quick and accurate health information. Our At-Home Test Kits are designed to empower you with the ability to monitor your health conveniently and from the comfort of your own home. Let us explore the key aspects of our At-Home Test Kits and why they are an essential addition to your healthcare toolkit. 
             </p>
             <div class="flex justify-center">

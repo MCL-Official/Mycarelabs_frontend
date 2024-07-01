@@ -21,7 +21,9 @@ import Faq from "./Pages/Faq/Faq";
 
 import Footer from "./Components/Footer";
 import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
-import Covid19 from "./Pages/Solutions/Covid19";
+import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
+import TestingGroup from "./Pages/Solutions/Infectious-desiase/Testing-for-group/TestingGroup";
+import TestingSchool from "./Pages/Solutions/Infectious-desiase/Testing-school/TestingSchool";
 
 
 function App() {
@@ -40,7 +42,38 @@ function App() {
           <Route path="/readBlog/:id" element={<ReadBlog />} />
           <Route path="/infectious-disease-testing" element={<Infectious/>} />
           <Route path="/travel-pcr-testing" element={<Travel/>} />
-          <Route path="/infectious-disease-testing/Covid19-kit" element={<Covid19/>} />
+          <Route path="/home-pcr-test-kit" element={<Covid19/>} />
+          <Route path="/group-testing" element={<TestingGroup/>} />
+          <Route path="/school-testing" element={<TestingSchool/>} />
+          <Route path="/nursing-home-testing" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/wellness-testing" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/anemia-profile-test" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/basic-metabolic-panel" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/liver-function-tests" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/renal-function-test" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/thyroid-function-test" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/comprehensive-metabolic-panel" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/oncology-testing-solutions" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/toxicology-testing-solutions" element={<TestingSchool/>} />
+          <Route path="/creatine-kinase" element={<TestingSchool/>} />
+          <Route path="/crp-tests" element={<TestingSchool/>} />
+          <Route path="/free-psa-testing" element={<TestingSchool/>} />
+          <Route path="/magnesium-test-in-blood" element={<TestingSchool/>} />
+          <Route path="/anticonvulsant-test-services" element={<TestingSchool/>} />
+          <Route path="/vitamin-d-test-services" element={<TestingSchool/>} />
+          <Route path="/total-psa-test-services" element={<TestingSchool/>} />
+
+
+
+
+
+
+
+
+
+
+
+
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
