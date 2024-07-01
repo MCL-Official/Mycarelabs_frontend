@@ -11,7 +11,7 @@ import BookTest from "./Pages/BookMyTest/BookTest";
 import BookTestDetails from "./Pages/BookMyTest/BookDetails";
 import Blogs from "./Components/Blog/Blogs";
 import ReadBlog from "./Components/Blog/ReadBlog ";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import DateTimePicker from "./Components/Booking/DateTimePicker";
 import Content from "./Components/content/Content";
 import Navbar2 from "./Components/Navbar/Navbar2";
@@ -19,7 +19,7 @@ import Infectious from "./Pages/Solutions/Infectious-desiase/Infectious";
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 import Faq from "./Pages/Faq/Faq";
 
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
 import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
 import TestingGroup from "./Pages/Solutions/Infectious-desiase/Testing-for-group/TestingGroup";

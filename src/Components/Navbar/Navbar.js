@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo1 from "../Assets/Logo1.png";
+import logo1 from "../../Assets/Logo1.png";
 import { Helmet } from "react-helmet-async";
 
 function Navbar() {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from "../../Components/button/Button";
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../Components/Navbar/Navbar';
 
 const img = "https://imagesuploadforwebsite.s3.amazonaws.com/card1.jpg";
 const img1 = "https://imagesuploadforwebsite.s3.amazonaws.com/card2.jpg";

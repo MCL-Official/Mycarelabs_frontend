@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../Components/Navbar/Navbar';
 import DateTimePicker from '../../Components/Booking/DateTimePicker';
 import { useLocation } from 'react-router-dom';
-import Footer from '../../Components/Footer';
+import Footer from '../../Components/Footer/Footer';
 import HoverDevCards from '../../Components/Seetings/HoverDevCards';
 import { DivOrigami } from '../../Components/LogoOrigami/DivOrigami';
 

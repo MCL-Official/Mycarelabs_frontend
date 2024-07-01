@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Navbar/Navbar";
 import Hero from "../Components/Hero";
 import Info from "../Components/Info";
 import About from "../Components/About";
@@ -9,7 +9,7 @@ import { TextParallaxContentExample } from "../Components/Scroll_Animation/TextP
 import BookAppointment from "../Components/BookAppointment";
 // import Reviews from "../Components/Reviews";
 import Doctors from "../Components/Doctors";
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer/Footer";
 // import ScrollAnimation from "../Components/Animation/CaseStudyScroller";
 // import TestMenu from "../Components/TestMenu/TestMenu";// In Home.js
 // import CaseStudyScroller from "../Components/Animation/CaseStudyScroller";

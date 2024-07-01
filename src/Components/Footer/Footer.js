@@ -1,8 +1,8 @@
 import React from "react";
-import "../Styles/Footer.css";
-import SubscribeNewsletter from "./SubscribeNewsletter";
+import "../../Styles/Footer.css";
+import SubscribeNewsletter from "../SubscribeNewsletter";
 import { Link } from "react-router-dom";
-import logo1 from "../Assets/Logo1.png";
+import logo1 from "../../Assets/Logo1.png";
 
 function Footer() {
   return (
