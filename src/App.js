@@ -30,6 +30,7 @@ import CMP from "./Pages/Solutions/Wellness-testing/Comprensive-metabolic/Index"
 import Liver from "./Pages/Solutions/Wellness-testing/Liver-function/Index";
 import Renal from "./Pages/Solutions/Wellness-testing/Renal-function/Index";
 import Thyroid from "./Pages/Solutions/Wellness-testing/Thyroid-function/Index";
+import TestingNurcing from "./Pages/Solutions/Infectious-desiase/Nurcing-home-test/TestingNurcing";
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
           <Route path="/home-pcr-test-kit" element={<Covid19/>} />
           <Route path="/group-testing" element={<TestingGroup/>} />
           <Route path="/school-testing" element={<TestingSchool/>} />
-          <Route path="/nursing-home-testing" element={<TestingSchool/>} />
+          <Route path="/nursing-home-testing" element={<TestingNurcing/>} />
           <Route path="/testing-solutions/wellness-testing" element={<TestingSchool/>} />
           <Route path="/testing-solutions/anemia-profile-test" element={<Anemia/>} />
           <Route path="/testing-solutions/basic-metabolic-panel" element={<Basic/>} />
