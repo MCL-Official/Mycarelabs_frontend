@@ -10,6 +10,7 @@ import { FeatureSection } from '../../Components/Feature/FeatureSection'
 import SocialLinks from '../../Components/Animation-Components/Hover-Animation-sociallinks/SocialLinks'
 import ThemeSwitch from '../../Components/Animation-Components/Theme-ChangeSwitch/ThemeSwitch'
 import ButtonComponent from '../../Components/Animation-Components/Submit-Button/ButtonComponent'
+import GetStartedCard from '../../Components/GetStartedCard/Getstarted'
 
 const Infectious = () => {
   return (
@@ -17,6 +18,7 @@ const Infectious = () => {
       <Content/>
       <HorizontalCard/>
       <Video/>
+      <GetStartedCard/>
       {/* <SocialLinks/>
       <ThemeSwitch/>
       <ButtonComponent/> */}

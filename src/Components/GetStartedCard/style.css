@@ -1,0 +1,74 @@
+.get__card {
+   
+    background-image: url('../../Assets/get-started.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    padding: 20px;
+    height: 290px;
+    margin: 70px auto;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .background-image {
+    height: 200px;
+  }
+  
+  .content {
+    padding: 20px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 50px; */
+  }
+  
+
+
+ 
+ 
+  .right-column {
+    /* flex: 0.5; */
+    /* margin-left: 100px; */
+    padding-bottom: 45px;
+  }
+  
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  h3 {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+
+
+  
+@media (max-width: 768px) {
+  /* Add styles for this screen size range */
+  .left-column p{
+    width: 100%;
+
+  }
+  
+
+  .left-column{
+    margin-left: 10px;
+  }
+
+  
+}
