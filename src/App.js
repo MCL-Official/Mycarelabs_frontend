@@ -30,6 +30,8 @@ import CMP from "./Pages/Solutions/Wellness-testing/Comprensive-metabolic/Index"
 import Liver from "./Pages/Solutions/Wellness-testing/Liver-function/Index";
 import Renal from "./Pages/Solutions/Wellness-testing/Renal-function/Index";
 import Thyroid from "./Pages/Solutions/Wellness-testing/Thyroid-function/Index";
+import Oncology from "./Pages/Solutions/Oncology-testing/Index";
+import Toxicology from "./Pages/Solutions/Toxicology-testing/Index";
 import TestingNurcing from "./Pages/Solutions/Infectious-desiase/Nurcing-home-test/TestingNurcing";
 
 
@@ -60,8 +62,8 @@ function App() {
           <Route path="/testing-solutions/renal-function-test" element={<Renal/>} />
           <Route path="/testing-solutions/thyroid-function-test" element={<Thyroid/>} />
           <Route path="/testing-solutions/comprehensive-metabolic-panel" element={<CMP/>} />
-          <Route path="/testing-solutions/oncology-testing-solutions" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/toxicology-testing-solutions" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/oncology-testing-solutions" element={<Oncology/>} />
+          <Route path="/testing-solutions/toxicology-testing-solutions" element={<Toxicology/>} />
           <Route path="/creatine-kinase" element={<TestingSchool/>} />
           <Route path="/crp-tests" element={<TestingSchool/>} />
           <Route path="/free-psa-testing" element={<TestingSchool/>} />
