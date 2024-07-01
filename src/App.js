@@ -24,6 +24,12 @@ import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
 import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
 import TestingGroup from "./Pages/Solutions/Infectious-desiase/Testing-for-group/TestingGroup";
 import TestingSchool from "./Pages/Solutions/Infectious-desiase/Testing-school/TestingSchool";
+import Anemia from "./Pages/Solutions/Wellness-testing/Anemis-testing/Index";
+import Basic from "./Pages/Solutions/Wellness-testing/Basic-metabolic/Index";
+import CMP from "./Pages/Solutions/Wellness-testing/Comprensive-metabolic/Index";
+import Liver from "./Pages/Solutions/Wellness-testing/Liver-function/Index";
+import Renal from "./Pages/Solutions/Wellness-testing/Renal-function/Index";
+import Thyroid from "./Pages/Solutions/Wellness-testing/Thyroid-function/Index";
 
 
 function App() {
@@ -47,12 +53,12 @@ function App() {
           <Route path="/school-testing" element={<TestingSchool/>} />
           <Route path="/nursing-home-testing" element={<TestingSchool/>} />
           <Route path="/testing-solutions/wellness-testing" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/anemia-profile-test" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/basic-metabolic-panel" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/liver-function-tests" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/renal-function-test" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/thyroid-function-test" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/comprehensive-metabolic-panel" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/anemia-profile-test" element={<Anemia/>} />
+          <Route path="/testing-solutions/basic-metabolic-panel" element={<Basic/>} />
+          <Route path="/testing-solutions/liver-function-tests" element={<Liver/>} />
+          <Route path="/testing-solutions/renal-function-test" element={<Renal/>} />
+          <Route path="/testing-solutions/thyroid-function-test" element={<Thyroid/>} />
+          <Route path="/testing-solutions/comprehensive-metabolic-panel" element={<CMP/>} />
           <Route path="/testing-solutions/oncology-testing-solutions" element={<TestingSchool/>} />
           <Route path="/testing-solutions/toxicology-testing-solutions" element={<TestingSchool/>} />
           <Route path="/creatine-kinase" element={<TestingSchool/>} />
