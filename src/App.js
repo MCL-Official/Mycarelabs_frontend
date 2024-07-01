@@ -24,6 +24,7 @@ import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
 import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
 import TestingGroup from "./Pages/Solutions/Infectious-desiase/Testing-for-group/TestingGroup";
 import TestingSchool from "./Pages/Solutions/Infectious-desiase/Testing-school/TestingSchool";
+import TestingNurcing from "./Pages/Solutions/Infectious-desiase/Nurcing-home-test/TestingNurcing";
 
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
           <Route path="/home-pcr-test-kit" element={<Covid19/>} />
           <Route path="/group-testing" element={<TestingGroup/>} />
           <Route path="/school-testing" element={<TestingSchool/>} />
-          <Route path="/nursing-home-testing" element={<TestingSchool/>} />
+          <Route path="/nursing-home-testing" element={<TestingNurcing/>} />
           <Route path="/testing-solutions/wellness-testing" element={<TestingSchool/>} />
           <Route path="/testing-solutions/anemia-profile-test" element={<TestingSchool/>} />
           <Route path="/testing-solutions/basic-metabolic-panel" element={<TestingSchool/>} />
