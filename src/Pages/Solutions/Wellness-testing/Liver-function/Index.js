@@ -1,6 +1,7 @@
 import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
+import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
 
 const liverFunctionalityTestData = [
   {
@@ -20,7 +21,7 @@ const liverFunctionalityTestData = [
         content: 'Liver Functionality Tests help in monitoring the effectiveness of treatment for liver diseases, ensuring that the treatment plan is working and adjusting it as necessary.'
       }
     ],
-    image: 'data:image/jpeg;base64,<base64_encoded_image_here>'
+    image: 'https://mycarelabs.com/wp-content/uploads/2024/01/image-203.jpg'
   },
   {
     stepNumber: 2,
@@ -31,7 +32,7 @@ const liverFunctionalityTestData = [
         content: 'The primary focus of Liver Functionality Tests is to measure enzymes like ALT and AST, and proteins such as albumin, which are critical indicators of liver health.'
       }
     ],
-    image: 'data:image/jpeg;base64,<base64_encoded_image_here>'
+    image: 'https://mycarelabs.com/wp-content/uploads/2024/01/image-204.jpg'
   },
   {
     stepNumber: 3,
@@ -54,7 +55,7 @@ const liverFunctionalityTestData = [
         content: 'My Care Labs are equipped with modern facilities, adhering to the latest advancements in medical technology for efficient and accurate testing.'
       }
     ],
-    image: 'data:image/jpeg;base64,<base64_encoded_image_here>'
+    image: 'https://mycarelabs.com/wp-content/uploads/2024/01/image-205.jpg'
   },
   {
     stepNumber: 4,
@@ -77,7 +78,7 @@ const liverFunctionalityTestData = [
         content: 'Expect timely and confidential delivery of your Liver Functionality Test results once the analysis is complete.'
       }
     ],
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3bC8Jmv97IwoXpnVtFDfTwTc6O9kzknMlA&s'
+    image: 'https://mycarelabs.com/wp-content/uploads/2024/01/image-206.jpg'
   },
   {
     stepNumber: 5,
@@ -123,6 +124,7 @@ const Index = () => {
         />
       ))}
       <GetStartedCard />
+      <CardCarousel/>
     </div>
   );
 };

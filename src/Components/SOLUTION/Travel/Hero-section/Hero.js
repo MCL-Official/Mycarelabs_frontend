@@ -22,11 +22,10 @@ export function Hero() {
                             Over 200 successful deals
                         </h1>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-                            We help startups to grow and make money
+                        California COVID-19 PCR Travel Testing
                         </h2>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-                        </p>
+                        My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B. Get ready to relax and explore on your vacation with same-day or 24-hour turaround at our Silicon Valley lab and at public pop-ups throughout California.                        </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <a href="javascript:void(0)" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                                 Let's get started
@@ -41,7 +40,7 @@ export function Hero() {
                     </div>
                     <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
                         <img
-                            src="https://images.unsplash.com/photo-1573164713619-24c711fe7878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
+                            src="https://img.freepik.com/free-photo/asian-women-working-together-chemical-project_23-2148776749.jpg?t=st=1719954975~exp=1719958575~hmac=d8a9d57b35d7a297eda1d6a52f050ae919c396bef1efa084e42be06257542068&w=2000"
                             className=" md:rounded-tl-[108px]"
                             alt=""
                         />

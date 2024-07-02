@@ -4,6 +4,8 @@ import BookAppointment from '../../../../Components/BookAppointment'
 import BookTestDetails from '../../../BookMyTest/BookDetails'
 import DateTimePicker from '../../../../Components/Booking/DateTimePicker'
 import Faq from '../../../Faq/Faq'
+import InsuranceAccepted from '../../../../Components/InsuranceAccepted'
+import BlogPostCarousel from '../../../../Components/HoverCard/BlogPostCarousel'
 
 const TestingSchool = () => {
   return (
@@ -11,14 +13,17 @@ const TestingSchool = () => {
       
       <br></br>
       <Index/>
-      <DateTimePicker/>
       <div className="container">
-Book Your appointment
-      <BookAppointment/>
+<h1>
+  Book Your appointment
+  </h1>
+      <DateTimePicker/>
       </div>
+      <BookAppointment/>
       <Faq/>
+      <InsuranceAccepted/>
+      <BlogPostCarousel/>
       <br></br>
-      ddsdsdw
     </div>
   )
 }

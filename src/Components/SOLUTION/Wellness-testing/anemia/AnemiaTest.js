@@ -5,11 +5,10 @@ export function AnemiaTest ()  {
             <div className="relative z-10 gap-5 items-center lg:flex">
                 <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
                     <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
-                        Build your websites with <span className="text-indigo-600">high performance</span>
+                    Anemia Profile  <span className="text-indigo-600">Test</span>
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3">
-                        Nam erat risus, sodales sit amet lobortis ut, finibus eget metus. Cras aliquam ante ut tortor posuere feugiat. Duis sodales nisi id porta lacinia.
-                    </p>
+                    Welcome to Care Labs, your trusted medical laboratory in Fremont, California, dedicated to providing accurate and comprehensive diagnostic services. One of our specialized offerings is the Anemia Profile Test, a comprehensive assessment tool designed to evaluate various aspects related to anemia. Our advanced facilities and experienced professionals ensure reliable results, contributing to your overall well-being.                   </p>
                     <a
                         className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
                         href="javascript:void()">
@@ -21,7 +20,7 @@ export function AnemiaTest ()  {
                 </div>
                 <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                     <img 
-                        src="https://ngrhealthcare.com/wp-content/uploads/2023/11/Untitled-design-67-300x300.jpg" 
+                        src="https://img.freepik.com/free-photo/female-researcher-male-colleague-laboratory-with-test-tubes-safety-glasses_23-2148816412.jpg?t=st=1719950338~exp=1719953938~hmac=834456c33cebbbe24c51f3effd38a00168ddc51b035c067f541fe2cf3f1cf8d3&w=1380" 
                         alt="" 
                         className="w-full" 
                     />

@@ -12,10 +12,10 @@ import img1 from "../../Assets/img3.jpg";
 import img4 from "../../Assets/img4.jpg";
 
 const images = [
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoxB0-5iYhpjm6euLTXjYjGObKBCodTnIE8oN83GdRjmPSQGvpjTXT5wf3LQ&s",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKTtvK563qsJfVUh_Fk43AFVxXOeHA-4xfYN7PWUT-xfkEFlvp97nCmIN6g&s",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHL6Nt5janbq-JO5gViYZ9rbdBrWpGY2kytXOex9xFhl8jghDzd2OKTmNxTg&s",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtT9NMabXOeFXhLMqMvcA2ehosm1IAx3pxOw&s",
+  "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1719954263~exp=1719957863~hmac=08690e59529a0bc028e23fda8e4fa0f44750548434c108235e7e0f403667f131&w=2000",
+  "https://img.freepik.com/free-photo/beautiful-manhattan-bridge-new-york-usa_181624-48458.jpg?t=st=1719954266~exp=1719957866~hmac=73b10f4318bceabf068b52ec1650bbd1fdcf461ce06775a0c40acc3b63049a1a&w=2000",
+  "https://img.freepik.com/free-photo/tokyo-skyline-with-tokyo-tower-rainbow-bridge_1339-6783.jpg?t=st=1719954311~exp=1719957911~hmac=ff2ae36d9febf6279c18ecf7a75458fbd9fc36f59d6bcc3e1f6ca036b808d532&w=2000",
+  "https://img.freepik.com/free-photo/empire-state-building-daylight_23-2150897493.jpg?t=st=1719954413~exp=1719958013~hmac=426c13ce93779b5ca5b1a8752df1adf6adb8ed2f2af97d96269c72c8a60af5b3&w=900",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
 ];

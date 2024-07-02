@@ -4,18 +4,17 @@ export function Content()  {
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                     <div className="flex-1 sm:hidden lg:block">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="" />
+                        <img src="https://img.freepik.com/free-photo/friendly-hospital-phlebotomist-collecting-blood-sample-from-patient-lab-preparation-blood-test-by-female-doctor-medical-uniform-table-white-bright-room_657921-879.jpg?t=st=1719954878~exp=1719958478~hmac=ac2da6b69d4364b72d893f73be159b5d70705531a4c4d786a19868165d1f93b0&w=2000" className="md:max-w-lg sm:rounded-lg" alt="" />
                     </div>
                     <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
                         <h3 className="text-indigo-600 font-semibold">
                             Professional services
                         </h3>
                         <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            Build your SaaS solution with help from our experts
+                        My Care Labs Now Provides nursing homes Combo PCR Testing For Covid-19.
                         </p>
                         <p className="mt-3 text-gray-600">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
-                        </p>
+                        My Care Labs provides testing for nursing homes across the state of California. We operate testing facilities in both Northern and Southern California as well as pop-up test sites accessible to the public. Since we have our own laboratory, there is virtually no wait time in receiving your Covid/Flu RT-PCR results by email, text, or phone. See our flyer on this page for a snapshot of benefits from our nursing home testing programs.                       </p>
                         <a href="javascript:void(0)" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
                             Learn more
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">

@@ -14,14 +14,14 @@ const GetStartedCard = () => {
                             <p>Start the client onboarding process with confidence, using our automated Know Your Customer (KYC) verification solution.</p>
                         </div>
                         <div className="right-column col-md-5">
-    <div className="our__sol__button">
-        {/* Use Ant Design Button for better styling and consistency */}
-        <Button type="primary" className="explore-now-button">Explore Now</Button>
-        <div className="white__circle"></div>
-    </div>
-</div>
+                            <div className="our__sol__button">
+                                {/* Use Ant Design Button for better styling and consistency */}
+                                <Button type="primary" className="explore-now-button">Explore Now</Button>
+                                <div className="white__circle"></div>
+                            </div>
+                        </div>
 
-<style jsx>{`
+                        <style jsx>{`
     .our__sol__button {
         display: flex;
         align-items: center;

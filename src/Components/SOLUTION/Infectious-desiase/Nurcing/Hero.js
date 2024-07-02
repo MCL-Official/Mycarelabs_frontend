@@ -9,12 +9,12 @@ const Hero = () => {
             <div className="w-full px-4 lg:w-5/12">
               <div className="hero-content">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-dark dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
-                  Kickstart Startup Website with TailGrids
+                Testing For Nursing Homes
                 </h1>
                 <p className="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
-                  With TailGrids, business and students thrive together.
-                  Business can perfectly match their staffing to changing demand
-                  throughout the dayed.
+                We provide on-site and self-service PCR Covid/RSV/Flu testing for nursing homes 
+                throughout California. As a member of the California 
+                Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC.
                 </p>
                 <ul className="flex flex-wrap items-center">
                   <li>
@@ -22,7 +22,7 @@ const Hero = () => {
                       href="/#"
                       className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
                     >
-                      Get Started
+                      Book Now
                     </a>
                   </li>
                   <li>
@@ -93,7 +93,7 @@ const Hero = () => {
               <div className="lg:ml-auto lg:text-right">
                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                   <img
-                    src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png"
+                    src="https://dc1fpv8kkq7dm.cloudfront.net/images/medical/master_images/651147b59c0aa-Top%2010%20Hospitals%20In%20United%20States%20Of%20America%20(USA).jpg"
                     alt="hero"
                     className="max-w-full lg:ml-auto"
                   />

@@ -7,12 +7,14 @@ const Index = () => {
     <div>
       {/* <Hero/>
       <Content/> */}
-      <section class="pt-10 overflow-hidden bg-gray-50  dark:bg-gray-800 mt-40 ">
+      <br></br>
+      <br></br>
+      <section class="pt-10 overflow-hidden bg-gray-50  dark:bg-gray-800  ">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl 0">
         <div class="grid items-center grid-cols-1 md:grid-cols-2">
 
             <div>
-                <h2 class="text-3xl font-bold leading-tight text-left sm:text-4xl lg:text-5xl"> Anticonvulsant 
+                <h2 class="text-3xl text-cyan-50 font-bold leading-tight text-left sm:text-4xl lg:text-5xl"> Anticonvulsant 
                     <br class="block sm:hidden" /> Test Services
                 </h2>
                 <p class="max-w-lg mt-3 text-xl text-justify  leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
@@ -31,7 +33,7 @@ const Index = () => {
     </div>
 </section>
 
-<div class="container flex items-center bg-blue-700 my-5">
+<div class="container flex items-center bg-blue-700 my-5 border rounded-2xl ">
 
     <div class="px-4 container mt-7 mb-16 sm:mt-24">
         <div class="text-center">

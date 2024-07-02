@@ -36,6 +36,7 @@ import TestingNurcing from "./Pages/Solutions/Infectious-desiase/Nurcing-home-te
 import Index from "./Pages/Solutions/Other-test/creatine-kinase/Index";
 import Index1 from "./Pages/Solutions/Other-test/crp-tests/Index";
 import Index2 from "./Pages/Solutions/Other-test/free-psa-testing/Index";
+// import Team from "./Pages/Company/Team2";
 
 
 function App() {
@@ -74,11 +75,12 @@ function App() {
           <Route path="/anticonvulsant-test-services" element={<TestingSchool/>} />
           <Route path="/vitamin-d-test-services" element={<TestingSchool/>} />
           <Route path="/total-psa-test-services" element={<TestingSchool/>} />
+          {/* <Route path="/aboutus" element={<Team/>} /> */}
 
 
 
 
-
+    
 
 
 

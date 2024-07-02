@@ -9,36 +9,24 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What types of insurance does CoverMatch offer?",
-      answer: "CoverMatch offers a variety of insurance types including auto, home, life, and health insurance."
+      question: "Where & when can I get a Covid-19 test?",
+      answer: "To schedule an appointment, book online at our booking page. You may also call our patient care team at 800-790-4550. We also offer walk-in and drive-through testing without appointment before our appointment times fill up."
     },
     {
-      question: "How can I get a quote for insurance coverage?",
-      answer: "You can get a quote by visiting our website and filling out a simple form with your details."
+      question: "How much would it cost to me to do a Covid-19 test?",
+      answer: "It’s no cost to you with insurance coverage. You won’t pay any portion that your insurance doesn’t cover. If you do not have insurance and for travel testing, the cost is $250. We offer financial hardship applications as well – please ask if needed."
     },
     {
-      question: "What factors affect the cost of my insurance premiums?",
-      answer: "Factors such as your age, location, driving history, and the type of coverage you choose can affect the cost of your premiums."
+      question: "Can you send my results to my doctor / clinic/ hospital / other via fax or email?",
+      answer: "Your provider needs to send us a HIPAA-compliant request by email, fax, or call."
     },
     {
-      question: "How do I file a claim with CoverMatch?",
-      answer: "You can file a claim by logging into your account on our website and following the instructions provided."
+      question: " How can I view and share My Care Labs COVID/RSV/Flu test results with my airline, friends, family, school, work, doctor, hospital, another clinic, insurance, etc? ",
+      answer: "Our Patientxchange portal allows you to download a PDF or Readipass (travel) QR code of your test results. You can log into your patient portal on our website."
     },
     {
-      question: "How long does it take to process a claim?",
+      question: "Will I receive an EOB or bill?",
       answer: "The time it takes to process a claim can vary, but we strive to handle all claims as quickly and efficiently as possible."
-    },
-    {
-      question: "Can I make changes to my policy after purchasing it?",
-      answer: "Yes, you can make changes to your policy by contacting our customer service team."
-    },
-    {
-      question: "What payment options are available for my insurance premiums?",
-      answer: "We offer various payment options including credit card, debit card, and direct bank transfer."
-    },
-    {
-      question: "How does CoverMatch determine the amount of coverage I need?",
-      answer: "We consider several factors such as your financial situation, assets, and liabilities to determine the appropriate amount of coverage for you."
     }
   ];
 
