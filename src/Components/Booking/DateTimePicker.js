@@ -264,10 +264,10 @@ console.log(cardData,"sdkhbsdbgvds");
                   </select>
                 </div>
               </div>
-              {/* <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105">
                 Book Appointment
-              </button> */}
-              <ButtonComponent onClick={handleSubmit}/>
+              </button>
+              {/* <ButtonComponent onClick={handleSubmit}/> */}
             </form>
           )}
         </div>
