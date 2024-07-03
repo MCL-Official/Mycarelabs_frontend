@@ -9,14 +9,13 @@ const ShuffleHero = () => {
           Better every day
         </span>
         <h3 className="text-4xl md:text-6xl font-semibold">
-          Let's change it up a bit
+        Magnesium Test in Blood
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
-          error repellat voluptatibus ad.
+        Magnesium, an essential mineral, plays a pivotal role in various biochemical processes within the body. From nerve function and muscle contraction to maintaining a healthy heart rhythm, magnesium is integral to our overall well-being. Monitoring magnesium levels is crucial, and one effective way to achieve this is through a magnesium blood test. In this comprehensive guide, we’ll delve into the significance of magnesium, the reasons for testing, interpreting results, and the implications for your health.
         </p>
         <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
-          Find a class
+          Book Now 
         </button>
       </div>
       <ShuffleGrid />
@@ -44,67 +43,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://img.freepik.com/free-photo/asian-women-working-together-chemical-project_23-2148776749.jpg?t=st=1719954975~exp=1719958575~hmac=d8a9d57b35d7a297eda1d6a52f050ae919c396bef1efa084e42be06257542068&w=2000",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://img.freepik.com/free-photo/coronavirus-test-assortment-lab_23-2149107257.jpg?t=st=1719954931~exp=1719958531~hmac=9d043decf6673000fa1c4ca424bac760d5782668f55c05b2caa7d4e406db2622&w=2000",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://img.freepik.com/free-photo/high-angle-health-professional-drawing-blood_23-2149404714.jpg?t=st=1719954904~exp=1719958504~hmac=8db9b38de189cdd1c74b6d96b3af91a3e60ca14b1d4fcef8c75417168b476f6b&w=2000",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+    src: "https://img.freepik.com/free-photo/friendly-hospital-phlebotomist-collecting-blood-sample-from-patient-lab-preparation-blood-test-by-female-doctor-medical-uniform-table-white-bright-room_657921-879.jpg?t=st=1719954878~exp=1719958478~hmac=ac2da6b69d4364b72d893f73be159b5d70705531a4c4d786a19868165d1f93b0&w=2000",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://img.freepik.com/free-vector/blood-research-concept-illustration_114360-24763.jpg?t=st=1719954685~exp=1719958285~hmac=796ba3b38bdae9308915de0e3a4bd4791914c7fb5e57eeab14ba4006957a0974&w=1800",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://img.freepik.com/free-vector/organic-flat-doctors-nurses-illustration_23-2148901759.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=sph",
   },
   {
     id: 8,
-    src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://img.freepik.com/free-vector/hand-drawn-hospital-reception-scene_23-2148837407.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://img.freepik.com/free-photo/two-doctors-lab_23-2147822684.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://img.freepik.com/free-photo/group-doctors-cooperating-while-examining-xray-patient-hopital_637285-11164.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+    src: "https://img.freepik.com/free-photo/medical-expert-talking-with-medical-staff-healthcare-meeting-hospital-conference-room-explaining-radiographys-clinic-therapist-talking-with-colleagues-about-disease-medicine-professional_482257-3965.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+    src: "https://img.freepik.com/free-photo/beautiful-female-nurse-attractive-doctor-meeting-first-time-medical-board-attractive-woman-medical-specialist-working-together-hospital_662251-147.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 13,
-    src: "https://images.unsplash.com/photo-1560089000-7433a4ebbd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    src: "https://img.freepik.com/free-photo/doctor-is-going-examine-his-patient-using-his-stethoscope-sitting-people_1150-6561.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 14,
-    src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+    src: "https://img.freepik.com/free-photo/waiting-room-hospital-lobby-with-reception-counter-desk-diverse-people-waiting-attend-checkup-visit-appointment-health-care-examination-emergency-area-medical-clinic_482257-46891.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 15,
-    src: "https://images.unsplash.com/photo-1606244864456-8bee63fce472?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+    src: "https://img.freepik.com/free-photo/dentist-showing-teeth-x-ray-reviewing-it-with-nusre-doctor-assistant-working-modern-crowded-stomatological-clinic-patients-sitting-chairs-reception-filling-dental-forms-waiting_482257-3673.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
   {
     id: 16,
-    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+    src: "https://img.freepik.com/free-photo/young-man-checking-appointment-respecting-social-distancing-hospital-waiting-room-nurse-looking-computer-wearing-face-mask-against-covid-19_482257-2003.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
 ];
 

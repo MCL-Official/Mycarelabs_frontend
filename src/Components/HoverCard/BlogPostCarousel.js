@@ -120,7 +120,7 @@ export default BlogPostCarousel;
 const posts = [
   {
     id: 1,
-    imgUrl: "https://envato-shoebox-0.imgix.net/a4c8/5702-af1b-4e4d-a4de-d2d692ec3a33/IMG_0747.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1600&fit=max&markalign=center%2Cmiddle&markalpha=18&s=75fe333d01a097e1d65c01be63853c1c",
+    imgUrl: "https://img.freepik.com/free-photo/medium-shot-woman-holding-balloon-flask_23-2148581907.jpg?t=st=1720023294~exp=1720026894~hmac=a3999cb46c2de608866e232349d84f01490095f49086b0afd1807efdd29c4cd3&w=2000",
     author: "John Anderson",
     title: "Wellness Testing Solutions",
     description:
@@ -128,7 +128,7 @@ const posts = [
   },
   {
     id: 2,
-    imgUrl: "https://envato-shoebox-0.imgix.net/a4c8/5702-af1b-4e4d-a4de-d2d692ec3a33/IMG_0747.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1600&fit=max&markalign=center%2Cmiddle&markalpha=18&s=75fe333d01a097e1d65c01be63853c1c",
+    imgUrl: "https://img.freepik.com/free-photo/researching-laboratory_1384-149.jpg?t=st=1720023298~exp=1720026898~hmac=33a10a6390b35645aefc5ea412b0b8f0748c210baffafa3675cfffecb81b6f7c&w=2000",
     author: "Kyle Parsons",
     title: "Toxicology Testing",
     description:
@@ -136,7 +136,7 @@ const posts = [
   },
   {
     id: 3,
-    imgUrl: "https://envato-shoebox-0.imgix.net/a4c8/5702-af1b-4e4d-a4de-d2d692ec3a33/IMG_0747.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1600&fit=max&markalign=center%2Cmiddle&markalpha=18&s=75fe333d01a097e1d65c01be63853c1c",
+    imgUrl: "https://img.freepik.com/free-photo/doctor-performing-medical-research-lab_23-2149335681.jpg?t=st=1720023304~exp=1720026904~hmac=4626e8d3ce94e1b7c7f9ab7630d297ababc5d694a6b5fbe4bd3b1c36fabdcad4&w=2000",
     author: "Andrea Bates",
     title: "Infectious Disease Testing",
     description:
@@ -144,7 +144,7 @@ const posts = [
   },
   {
     id: 4,
-    imgUrl: "https://envato-shoebox-0.imgix.net/a4c8/5702-af1b-4e4d-a4de-d2d692ec3a33/IMG_0747.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1600&fit=max&markalign=center%2Cmiddle&markalpha=18&s=75fe333d01a097e1d65c01be63853c1c",
+    imgUrl: "https://img.freepik.com/free-photo/new-test-concentrated-skilled-researchers-wearing-uniform-doing-test-creating-vaccine_1157-48114.jpg?t=st=1720023309~exp=1720026909~hmac=c05dd4831f1caca7022811d4586af52792d27f32ecc5639d1684fe0f54344325&w=2000",
     author: "Jess Drum",
     title: "Oncology Testing",
     description:
@@ -152,7 +152,7 @@ const posts = [
   },
   {
     id: 5,
-    imgUrl: "https://envato-shoebox-0.imgix.net/a4c8/5702-af1b-4e4d-a4de-d2d692ec3a33/IMG_0747.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1600&fit=max&markalign=center%2Cmiddle&markalpha=18&s=75fe333d01a097e1d65c01be63853c1c",
+    imgUrl: "https://www.scripps.org/sparkle-assets/images/blood_test_samples_1200x750-59cd6b99366c6e716576ccd68351ed39.jpg",
     author: "Phil White",
     title: "Travel PCR Testing",
     description:

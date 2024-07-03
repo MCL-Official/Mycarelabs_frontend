@@ -36,6 +36,10 @@ import TestingNurcing from "./Pages/Solutions/Infectious-desiase/Nurcing-home-te
 import Index from "./Pages/Solutions/Other-test/creatine-kinase/Index";
 import Index1 from "./Pages/Solutions/Other-test/crp-tests/Index";
 import Index2 from "./Pages/Solutions/Other-test/free-psa-testing/Index";
+import Index3 from "./Pages/Solutions/Other-test/magnesium-test-in-blood/Index";
+import Index4 from "./Pages/Solutions/Other-test/anticonvulsant-test-services/Index";
+import Index5 from "./Pages/Solutions/Other-test/vitamin-d-test-services/Index";
+import Index6 from "./Pages/Solutions/Other-test/total-psa-test-services/Index";
 import Team from "./Pages/Company/Team2";
 
 
@@ -71,10 +75,10 @@ function App() {
           <Route path="/creatine-kinase" element={<Index/>} />
           <Route path="/crp-tests" element={<Index1/>} />
           <Route path="/free-psa-testing" element={<Index2/>} />
-          <Route path="/magnesium-test-in-blood" element={<TestingSchool/>} />
-          <Route path="/anticonvulsant-test-services" element={<TestingSchool/>} />
-          <Route path="/vitamin-d-test-services" element={<TestingSchool/>} />
-          <Route path="/total-psa-test-services" element={<TestingSchool/>} />
+          <Route path="/magnesium-test-in-blood" element={<Index3/>} />
+          <Route path="/anticonvulsant-test-services" element={<Index4/>} />
+          <Route path="/vitamin-d-test-services" element={<Index5/>} />
+          <Route path="/total-psa-test-services" element={<Index6/>} />
           <Route path="/about" element={<Team/>} />
 
 
