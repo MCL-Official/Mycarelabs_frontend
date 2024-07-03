@@ -118,7 +118,7 @@ console.log(cardData,"sdkhbsdbgvds");
     };
 
     try {
-      await axios.post('http://localhost:5100/admin/appointments', appointmentDetails);
+      // await axios.post('http://localhost:5100/admin/appointments', appointmentDetails);
       // alert('Appointment booked successfully!');
       // navigate("https://us.crelio.solutions/crm/#/web/book-package/online-self-registration")
       window.location.href = 'https://us.crelio.solutions/crm/#/web/book-package/online-self-registration';
