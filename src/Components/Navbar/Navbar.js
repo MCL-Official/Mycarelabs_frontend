@@ -141,7 +141,7 @@ function Navbar() {
       >
         <div className="md:flex items-center px-2">
           <div className="flex flex-wrap md:flex-nowrap justify-between items-center p-0">
-            <a className="flex items-center md:mr-5 space-x-3 rtl:space-x-reverse">
+            <a href="/" className="flex items-center md:mr-5 space-x-3 rtl:space-x-reverse">
               <img src={logo1} className="h-20" alt="Flowbite Logo" />
             </a>
             <button
