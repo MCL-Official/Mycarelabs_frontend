@@ -1,6 +1,7 @@
 import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
+import { TextParallaxContentExample } from '../../../../Components/Scroll_Animation/TextParallaxContent';
 
 const thyroidTestData = [
   {
@@ -111,6 +112,7 @@ const thyroidTestData = [
 const Index = () => {
   return (
     <div>
+      <TextParallaxContentExample/>
       {thyroidTestData.map((data, index) => (
         <AnemiaTesting
           key={index}
