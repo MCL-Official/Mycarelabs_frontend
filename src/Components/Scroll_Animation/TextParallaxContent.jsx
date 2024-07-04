@@ -255,13 +255,13 @@ export const TextParallaxContentExample = () => {
     <div className="bg-white">
        <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-14">
     <div className="relative inline-block -mt-12 bg-transparent">
-      <span className="text-blue-600 text-4xl font-bold mr-2">Solutions</span>
-      <span className="text-orange-600 text-4xl font-bold">We Provide</span>
+      <span className="text-blue-600 text-4xl font-bold mr-2">Introduction</span>
+      <span className="text-orange-600 text-4xl font-bold">To Thyroid</span>
     <p className="info-description">
-          My Care Labs offers quick, easy, and accurate RT-PCR testing for
-          COVID-19, RSV, and Influenza A/B. We provide on-site testing at our
-          lab and pop-up locations throughout California, with results available
-          the same day or within 24 hours.
+    In the pursuit of optimal health and wellness, individuals today are turning to advance diagnostics and personalized medicine. MY CARE LABS,
+     a trailblazer in the healthcare industry, stands at the forefront with its cutting-edge Therapeutic Wellness Tests. This comprehensive guide 
+     aims to delve into the significance of therapeutic tests, the intricacies of therapeutic drug monitoring, and shed light on specific types
+      such as Amikacin, Caffeine, Digitoxin, Primidone, Methotrexate, Quinidine, Phenytoin, Digoxin, Lidocaine, and Phenobarbital.
         </p>
     </div>
   </h3>

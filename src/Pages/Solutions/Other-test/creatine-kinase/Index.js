@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../../../../Components/SOLUTION/Other-solution/creatine-kinase/Hero'
 import Content from '../../../../Components/SOLUTION/Other-solution/creatine-kinase/Content'
+import CardCarousel from '../../../../Components/HoverCard/CardCarousel'
 
 const Index = () => {
   return (
@@ -287,6 +288,7 @@ const Index = () => {
       </div>
     </section>
 <Content/>
+<CardCarousel/>
   <div class="container flex items-center bg-blue-900 rounded-full	 my-5">
 
 <div class="px-4 container mt-16 mb-16 sm:mt-24">
@@ -301,6 +303,7 @@ const Index = () => {
     </div>
 </div>
  
+
 </div>
     </div>
     

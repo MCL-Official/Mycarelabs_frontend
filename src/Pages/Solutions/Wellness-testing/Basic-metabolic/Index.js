@@ -2,6 +2,8 @@ import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import VerticalSlideFeatures from '../../../../Components/SOLUTION/Wellness-testing/basic-metabolic-panel/VerticalSlideFeatures';
+import Sample from '../../../../Components/SOLUTION/Wellness-testing/basic-metabolic-panel/Sample';
+import BlogPostCarousel from '../../../../Components/HoverCard/BlogPostCarousel';
 
 const basicMetabolicPanelData = [
   {
@@ -104,7 +106,9 @@ const Index = () => {
     <div>
 
       <br></br>
+      <Sample/>
       <VerticalSlideFeatures/>
+      <BlogPostCarousel/>
       {/* {basicMetabolicPanelData.map((data, index) => (
         <AnemiaTesting
           key={index}

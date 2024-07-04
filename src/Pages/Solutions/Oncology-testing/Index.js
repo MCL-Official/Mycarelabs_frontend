@@ -5,13 +5,42 @@ import Faq from '../../Faq/Faq'
 import HoverCards from '../../../Components/HoverCard/HoverCards'
 import GetStartedCard from '../../../Components/GetStartedCard/Getstarted'
 import cancerScreeningImage from '../../../Assets/doctor-group.png';
+import BookTestDetails from '../../BookMyTest/BookDetails'
 
 const Index = () => {
+  const cardData = [
+    {
+      stepNumber: 1,
+      title: "Men's & Women's Wellness Testing Solutions",
+      longDescription:"Attention wellness testing patients: If you are registering for any of the following panels (Renal Function, CMP, BMP, or Lipid), please make sure you are fasting for a minimum of 8 hours before your appointment. Water is permitted during the fasting period. Additionally, please consult with your doctor if you should avoid taking any medication for our wellness test.",
+      image: 'https://mycarelabs.com/wp-content/uploads/2024/01/image-205.jpg'
+    },]
   return (
     <>
     <div className='mt-5'>
+    {console.log(cardData,"sdkjvdsn")}
+     <div
+        className="relative bg-cover bg-center h-[75vh]"
+        style={{ backgroundImage: `url(${cardData?.[0]?.image})` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-4">
+          <h1 className="text-4xl font-bold mb-2">{cardData?.[0]?.title}</h1>
+          <p className="text-lg font-bold">{cardData?.shortDescription}</p>
+          <p className="text-lg mt-2">{cardData?.[0]?.longDescription}</p>
+        </div>
+      </div>
+      <div className="relative container mx-auto z-15" style={{ marginTop: '-29.5vh' }}>
+          <DateTimePicker cardData={cardData} />
+ 
 
-      <DateTimePicker/>
+
+
+
+
+
+
+        </div>
       <div className="text-center py-8 mt-5">
       <p className="text-blue-500 font-semibold">We Ensure Safe Testing</p>
       <h2 className="text-2xl font-bold mt-2">

@@ -1,6 +1,9 @@
 import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
+import StackedCardTestimonials from '../../../../Components/SOLUTION/Wellness-testing/comprehensive-metabolic-panel/StackedCardTestimonials';
+import { ImageTrailHero } from '../../../../Components/SOLUTION/Wellness-testing/comprehensive-metabolic-panel/ImageTrailHero';
+import BlogPostCarousel from '../../../../Components/HoverCard/BlogPostCarousel';
 
 const cmpTestData = [
   {
@@ -126,7 +129,7 @@ const cmpTestData = [
 const Index = () => {
   return (
     <div>
-      {cmpTestData.map((data, index) => (
+      {/* {cmpTestData.map((data, index) => (
         <AnemiaTesting
           key={index}
           stepNumber={data.stepNumber}
@@ -135,7 +138,10 @@ const Index = () => {
           image={data.image}
           reverse={data.stepNumber % 2 === 0}
         />
-      ))}
+      ))} */}
+      <ImageTrailHero/>
+      <StackedCardTestimonials/>
+      <BlogPostCarousel/>
       <GetStartedCard />
     </div>
   );

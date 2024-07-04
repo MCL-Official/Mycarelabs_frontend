@@ -3,6 +3,7 @@ import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import { RenalTest } from '../../../../Components/SOLUTION/Wellness-testing/renal-function-test/RenalTest';
 import SwapColumnFeatures from '../../../../Components/SOLUTION/Wellness-testing/renal-function-test/SwapColumnFeatures';
+import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
 
 const renalTestData = [
   {
@@ -122,6 +123,7 @@ const Index = () => {
           reverse={data.stepNumber % 2 === 0}
         />
       ))} */}
+      <CardCarousel/>
       <GetStartedCard />
     </div>
   );

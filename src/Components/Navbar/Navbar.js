@@ -256,7 +256,7 @@ function Navbar() {
                         </div>
                         <div className="border-l-2 border-gray-200 my-auto h-16"></div>
                         <div className="space-y-3 whitespace-nowrap text-left">
-                          <Link to="/other-tests" className="block no-underline text-black hover:text-blue-500">
+                          <Link className="block no-underline text-black hover:text-blue-500">
                             <h5 className="font-bold text-sm hover:text-blue-500">Other Tests</h5>
                           </Link>
                           <Link to="/creatine-kinase" className="block no-underline text-black hover:text-blue-500">
@@ -311,7 +311,7 @@ function Navbar() {
                 </Link>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li className="group relative hover:scale-110 duration-300">
+              {/* <li className="group relative hover:scale-110 duration-300">
                 <a
                   href="#"
                   className={`block no-underline px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0`}
@@ -320,7 +320,7 @@ function Navbar() {
                   Support
                 </a>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
-              </li>
+              </li> */}
             </ul>
             <div className="flex flex-col md:flex-row md:mt-0">
               <div

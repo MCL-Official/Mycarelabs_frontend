@@ -3,6 +3,7 @@ import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
 import { DisappearingFeatures } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/DisappearingFeatures';
+import Sample from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/Sample';
 
 const liverFunctionalityTestData = [
   {
@@ -113,7 +114,8 @@ const liverFunctionalityTestData = [
 const Index = () => {
   return (
     <div>
-      <DisappearingFeatures/>
+      <Sample/>
+      {/* <DisappearingFeatures/> */}
       {/* {liverFunctionalityTestData.map((data, index) => (
         <AnemiaTesting
           key={index}

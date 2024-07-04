@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../../../../Components/SOLUTION/Other-solution/free-psa-testing/Hero'
+import HoverCards from '../../../../Components/HoverCard/HoverCards'
 
 const Index = () => {
   return (
@@ -499,7 +500,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
       </div>
     </section>
 
-
+<HoverCards/>
   <div class="container flex items-center bg-blue-900 rounded-full	 my-5">
 
 <div class="px-4 container mt-16 mb-16 sm:mt-24">

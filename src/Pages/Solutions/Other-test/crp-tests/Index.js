@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../../../../Components/SOLUTION/Other-solution/crp-tests/Hero'
 import Content  from '../../../../Components/SOLUTION/Other-solution/crp-tests/Content'
 import Faq1 from '../../../Faq/Faq1'
+import CardCarousel from '../../../../Components/HoverCard/CardCarousel'
 
 const Index = () => {
   return (
@@ -441,6 +442,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
     </section>
 
 <Faq1/>
+<CardCarousel/>
 
   <div class="container flex items-center bg-blue-900 rounded-full	 my-5">
 
@@ -457,6 +459,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
 </div>
 
 </div>
+
     </div>
   )
 }

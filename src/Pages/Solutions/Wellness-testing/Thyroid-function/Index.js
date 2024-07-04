@@ -2,6 +2,8 @@ import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import { TextParallaxContentExample } from '../../../../Components/Scroll_Animation/TextParallaxContent';
+import Samplehover from '../Anemis-testing/Samplehover';
+import BlogPostCarousel from '../../../../Components/HoverCard/BlogPostCarousel';
 
 const thyroidTestData = [
   {
@@ -112,8 +114,9 @@ const thyroidTestData = [
 const Index = () => {
   return (
     <div>
+      <Samplehover/>
       <TextParallaxContentExample/>
-      {thyroidTestData.map((data, index) => (
+      {/* {thyroidTestData.map((data, index) => (
         <AnemiaTesting
           key={index}
           stepNumber={data.stepNumber}
@@ -123,7 +126,8 @@ const Index = () => {
           
           reverse={data.stepNumber % 2 === 0}
         />
-      ))}
+      ))} */}
+      <BlogPostCarousel/>
       <GetStartedCard />
     </div>
   );

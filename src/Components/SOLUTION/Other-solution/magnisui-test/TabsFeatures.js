@@ -107,7 +107,7 @@ const Feature1 = () => (
         </p>
       </div>
       <div className="w-full md:w-1/2">
-        <ExampleFeature Icon={FiSave} />
+        <ExampleFeature2 Icon={FiSave} />
       </div>
     </div>
   );
@@ -125,7 +125,7 @@ const Feature3 = () => (
      2 High Magnesium Levels: Elevated levels can be indicative of kidney problems, dehydration, or excessive magnesium supplementation.      </p>
     </div>
     <div className="w-full md:w-1/2">
-      <ExampleFeature Icon={FiMonitor} />
+      <ExampleFeature3 Icon={FiMonitor} />
     </div>
   </div>
 );
@@ -139,7 +139,7 @@ const Feature4 = () => (
         Maintaining adequate magnesium levels is essential for overall health. Incorporating magnesium-rich foods into your diet, such as almonds, spinach, and avocados, can be beneficial. Additionally, avoiding excessive alcohol consumption and managing stress can contribute to maintaining a healthy magnesium balance.       </p>
       </div>
       <div className="w-full md:w-1/2">
-        <ExampleFeature Icon={FiSave} />
+        <ExampleFeature4 Icon={FiSave} />
       </div>
     </div>
   );
@@ -156,7 +156,7 @@ const Feature5 = () => (
         </p>
             </div>
       <div className="w-full md:w-1/2">
-        <ExampleFeature Icon={FiMonitor} />
+        <ExampleFeature2 Icon={FiMonitor} />
       </div>
     </div>
   );
@@ -164,23 +164,23 @@ const Feature5 = () => (
 
 const ExampleFeature = ({ Icon }) => (
   <div className="w-full px-0 py-8 md:px-8">
-    <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
-      <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
-        <div className="h-3 w-3 rounded-full bg-red-500" />
-        <div className="h-3 w-3 rounded-full bg-yellow-500" />
-        <div className="h-3 w-3 rounded-full bg-green-500" />
+     <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-vector/family-protected-from-virus_23-2148554386.jpg?w=740&t=st=1719925251~exp=1719925851~hmac=614929ff6522b239b5e664386d8644a8f30651b89224d1b30310a09a2959b9bb" alt="billboard image" />
+  </div>
+);
+const ExampleFeature2 = ({ Icon }) => (
+  <div className="w-full px-0 py-8 md:px-8">
+      <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96 space-between" src="https://img.freepik.com/free-vector/virus-cure-concept-illustration_23-2148496475.jpg?w=740&t=st=1719925320~exp=1719925920~hmac=461d7f3a8e8bb8a51bf1f22d319362bc5c13f4c70ef46c62272f309fe8ea07b9" alt="billboard image" />
       </div>
-      <div className="space-y-2 p-2">
-        <p className="font-mono text-sm text-slate-200">
-          <span className="text-green-300">~</span> Replace this with a demo of
-          your product 🚀
-        </p>
-      </div>
+);
+const ExampleFeature3 = ({ Icon }) => (
+  <div className="w-full px-0 py-8 md:px-8">
+      <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-vector/school-new-normal_23-2148674219.jpg?w=740&t=st=1719924545~exp=1719925145~hmac=59efbfe70ee10aa861026d127565bd330a54636deb2729599ae0c76535a5abdd" alt="billboard image" />
 
-      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700">
-        <Icon />
-      </span>
-    </div>
+</div>
+);
+const ExampleFeature4 = ({ Icon }) => (
+  <div className="w-full px-0 py-8 md:px-8">
+     <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-vector/family-protected-from-virus_23-2148554386.jpg?w=740&t=st=1719925251~exp=1719925851~hmac=614929ff6522b239b5e664386d8644a8f30651b89224d1b30310a09a2959b9bb" alt="billboard image" />
   </div>
 );
 
