@@ -1,7 +1,140 @@
-import React from 'react';
-import AnemiaTesting from '../Anemis-testing/Anemia';
-import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
-import VerticalSlideFeatures from '../../../../Components/SOLUTION/Wellness-testing/basic-metabolic-panel/VerticalSlideFeatures';
+import React, { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+
+export const DisappearingFeatures = () => {
+  return (
+    <>
+      <div className="relative h-fit bg-indigo-50">
+        <Features />
+      </div>
+
+      <div className="h-[50vh] bg-white" />
+    </>
+  );
+};
+
+const Features = () => {
+  return (
+    <div className="relative mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
+      <Copy />
+      <Carousel />
+    </div>
+  );
+};
+
+const Copy = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  return (
+    <div className="flex h-fit w-full flex-col justify-center py-12 md:sticky md:top-0 md:h-screen">
+      <span className="w-fit rounded-full bg-indigo-500 px-4 py-2 text-sm uppercase text-indigo-100">
+        Lorem ipsum dolor
+      </span>
+      {basicMetabolicPanelData.map((item, index) => (
+        <FeatureText
+          key={index}
+          scrollYProgress={scrollYProgress}
+          position={index + 1}
+          numItems={basicMetabolicPanelData.length}
+          title={item.title}
+          points={item.points}
+        />
+      ))}
+    </div>
+  );
+};
+
+const FeatureText = ({ scrollYProgress, position, numItems, title, points }) => {
+  const stepSize = 1 / numItems;
+  const end = stepSize * position;
+  const start = end - stepSize;
+
+  const opacity = useTransform(scrollYProgress, [start, end], [1, 0]);
+  const translateY = useTransform(scrollYProgress, [start, end], ["0%", "50%"]);
+
+  return (
+    <motion.div
+      style={{
+        opacity,
+        translateY,
+      }}
+      className="mb-8"
+    >
+      <h2 className="mb-4 mt-2 text-5xl font-medium leading-tight">
+        {title}
+      </h2>
+      {points.map((point, index) => (
+        <div key={index} className="mb-4">
+          <h3 className="text-lg font-semibold">{point.heading}</h3>
+          <p className="text-indigo-950">{point.content}</p>
+        </div>
+      ))}
+    </motion.div>
+  );
+};
+
+const Carousel = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  return (
+    <div className="relative w-full">
+      <Gradient />
+
+      <div ref={ref} className="relative z-0 flex flex-col gap-6 md:gap-12">
+        {basicMetabolicPanelData.map((item, index) => (
+          <CarouselItem
+            key={index}
+            scrollYProgress={scrollYProgress}
+            position={index + 1}
+            numItems={basicMetabolicPanelData.length}
+            image={item.image}
+          />
+        ))}
+      </div>
+
+      <Buffer />
+    </div>
+  );
+};
+
+const CarouselItem = ({ scrollYProgress, position, numItems, image }) => {
+  const stepSize = 1 / numItems;
+  const end = stepSize * position;
+  const start = end - stepSize;
+
+  const opacity = useTransform(scrollYProgress, [start, end], [1, 0]);
+  const scale = useTransform(scrollYProgress, [start, end], [1, 0.75]);
+
+  return (
+    <motion.div
+      style={{
+        opacity,
+        scale,
+      }}
+      className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl bg-neutral-900"
+    >
+      <img
+        src={image}
+        alt={`Feature ${position}`}
+        className="w-full h-full object-cover rounded-2xl"
+      />
+    </motion.div>
+  );
+};
+
+const Gradient = () => (
+  <div className="sticky top-0 z-10 hidden h-24 w-full bg-gradient-to-b from-indigo-50 to-indigo-50/0 md:block" />
+);
+
+const Buffer = () => <div className="h-24 w-full md:h-48" />;
 
 const basicMetabolicPanelData = [
   {
@@ -17,7 +150,8 @@ const basicMetabolicPanelData = [
         content: 'The BMP includes tests for glucose, calcium, sodium, potassium, carbon dioxide (CO2), chloride, blood urea nitrogen (BUN), and creatinine.'
       }
     ],
-    image: "https://mycarelabs.com/wp-content/uploads/2024/01/image-165.jpg"  },
+    image: "/mnt/data/image.png"
+  },
   {
     stepNumber: 2,
     title: 'Why is the BMP Important?',
@@ -65,7 +199,8 @@ const basicMetabolicPanelData = [
         content: 'Your healthcare provider will interpret the results and explain what they mean for your health. Abnormal levels may indicate a need for further testing or treatment.'
       }
     ],
-    image: ""  },
+    image: ""
+  },
   {
     stepNumber: 5,
     title: 'Understanding BMP Results',
@@ -97,28 +232,3 @@ const basicMetabolicPanelData = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3bC8Jmv97IwoXpnVtFDfTwTc6O9kzknMlA&s'
   }
 ];
-
-
-const Index = () => {
-  return (
-    <div>
-
-      <br></br>
-      <VerticalSlideFeatures/>
-      {/* {basicMetabolicPanelData.map((data, index) => (
-        <AnemiaTesting
-          key={index}
-          stepNumber={data.stepNumber}
-          title={data.title}
-          points={data.points}
-          image={data.image}
-          
-          reverse={data.stepNumber % 2 === 0}
-        />
-      ))} */}
-      <GetStartedCard />
-    </div>
-  );
-};
-
-export default Index;

@@ -1,7 +1,102 @@
-import React from 'react';
-import AnemiaTesting from '../Anemis-testing/Anemia';
-import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
-import VerticalSlideFeatures from '../../../../Components/SOLUTION/Wellness-testing/basic-metabolic-panel/VerticalSlideFeatures';
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+
+const VerticalSlideFeatures = () => {
+  const [selected, setSelected] = useState(0);
+
+  return (
+    <section className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-6 bg-white px-4 py-12 md:flex-row md:gap-12 md:px-8">
+      <AnimatePresence mode="wait">
+        {basicMetabolicPanelData.map((tab, index) => {
+          return selected === index ? (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              key={index}
+              className="w-full"
+            >
+              <Feature {...tab} />
+            </motion.div>
+          ) : null;
+        })}
+      </AnimatePresence>
+      <Tabs selected={selected} setSelected={setSelected} />
+    </section>
+  );
+};
+
+const Tabs = ({ selected, setSelected }) => {
+  return (
+    <div className="w-full shrink-0 overflow-scroll md:w-fit">
+      {basicMetabolicPanelData.map((tab, index) => {
+        return (
+          <Tab
+            key={index}
+            setSelected={setSelected}
+            selected={selected === index}
+            title={tab.title}
+            tabNum={index}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+const Tab = ({ selected, title, setSelected, tabNum }) => {
+  return (
+    <div className="group relative w-full md:w-fit">
+      <button
+        onClick={() => setSelected(tabNum)}
+        className="relative z-0 flex w-full border-l-[6px] border-slate-200 p-4 transition-colors group-hover:border-slate-300 md:flex-col md:border-l-8 md:p-6"
+      >
+        <span
+          className={`min-w-[150px] max-w-[200px] text-start text-xl font-bold transition-colors md:text-2xl ${
+            selected
+              ? "text-violet-500"
+              : "text-slate-400 group-hover:text-slate-500"
+          }`}
+        >
+          {title}
+        </span>
+      </button>
+      {selected && (
+        <motion.span
+          layoutId="vertical-slide-feature-slider"
+          className="absolute bottom-0 left-0 top-0 z-10 w-[6px] bg-violet-500 md:w-2"
+        />
+      )}
+    </div>
+  );
+};
+
+const Feature = ({ title, points, image }) => (
+  <div className="flex flex-col md:flex-row items-center w-full">
+    <div className="relative h-[250px] w-full md:h-[500px] md:w-1/2 rounded-xl bg-slate-800 shadow-xl">
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="absolute inset-0 h-full w-full object-cover rounded-xl"
+        />
+      )}
+      <div className="absolute top-0 left-0 p-4 bg-black bg-opacity-50 text-white w-full rounded-t-xl">
+        <h2 className="text-xl font-bold">{title}</h2>
+      </div>
+    </div>
+    <div className="w-full md:w-1/2 p-6">
+      {points.map((point, index) => (
+        <div key={index} className="mb-4">
+          <h3 className="text-lg font-semibold">{point.heading}</h3>
+          <p className="text-slate-600">{point.content}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+export default VerticalSlideFeatures;
 
 const basicMetabolicPanelData = [
   {
@@ -17,7 +112,8 @@ const basicMetabolicPanelData = [
         content: 'The BMP includes tests for glucose, calcium, sodium, potassium, carbon dioxide (CO2), chloride, blood urea nitrogen (BUN), and creatinine.'
       }
     ],
-    image: "https://mycarelabs.com/wp-content/uploads/2024/01/image-165.jpg"  },
+    image: "https://mycarelabs.com/wp-content/uploads/2024/01/image-165.jpg"
+  },
   {
     stepNumber: 2,
     title: 'Why is the BMP Important?',
@@ -65,7 +161,8 @@ const basicMetabolicPanelData = [
         content: 'Your healthcare provider will interpret the results and explain what they mean for your health. Abnormal levels may indicate a need for further testing or treatment.'
       }
     ],
-    image: ""  },
+    image: ""
+  },
   {
     stepNumber: 5,
     title: 'Understanding BMP Results',
@@ -97,28 +194,3 @@ const basicMetabolicPanelData = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3bC8Jmv97IwoXpnVtFDfTwTc6O9kzknMlA&s'
   }
 ];
-
-
-const Index = () => {
-  return (
-    <div>
-
-      <br></br>
-      <VerticalSlideFeatures/>
-      {/* {basicMetabolicPanelData.map((data, index) => (
-        <AnemiaTesting
-          key={index}
-          stepNumber={data.stepNumber}
-          title={data.title}
-          points={data.points}
-          image={data.image}
-          
-          reverse={data.stepNumber % 2 === 0}
-        />
-      ))} */}
-      <GetStartedCard />
-    </div>
-  );
-};
-
-export default Index;

@@ -2,6 +2,7 @@ import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
+import { DisappearingFeatures } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/DisappearingFeatures';
 
 const liverFunctionalityTestData = [
   {
@@ -112,7 +113,8 @@ const liverFunctionalityTestData = [
 const Index = () => {
   return (
     <div>
-      {liverFunctionalityTestData.map((data, index) => (
+      <DisappearingFeatures/>
+      {/* {liverFunctionalityTestData.map((data, index) => (
         <AnemiaTesting
           key={index}
           stepNumber={data.stepNumber}
@@ -122,7 +124,7 @@ const Index = () => {
           
           reverse={data.stepNumber % 2 === 0}
         />
-      ))}
+      ))} */}
       <GetStartedCard />
       <CardCarousel/>
     </div>

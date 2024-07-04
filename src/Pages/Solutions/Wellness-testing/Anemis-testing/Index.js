@@ -10,6 +10,7 @@ const Index = () => {
     <div>
       <br></br>
       {/* <br></br> */}
+      
       <AnemiaTest/>
 <SwapColumnFeatures/>
       <BlogPostCarousel/>

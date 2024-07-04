@@ -1,6 +1,8 @@
 import React from 'react';
 import AnemiaTesting from '../Anemis-testing/Anemia';
 import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
+import { RenalTest } from '../../../../Components/SOLUTION/Wellness-testing/renal-function-test/RenalTest';
+import SwapColumnFeatures from '../../../../Components/SOLUTION/Wellness-testing/renal-function-test/SwapColumnFeatures';
 
 const renalTestData = [
   {
@@ -107,7 +109,9 @@ const renalTestData = [
 const Index = () => {
   return (
     <div>
-      {renalTestData.map((data, index) => (
+      <RenalTest/>
+      <SwapColumnFeatures/>
+      {/* {renalTestData.map((data, index) => (
         <AnemiaTesting
           key={index}
           stepNumber={data.stepNumber}
@@ -117,7 +121,7 @@ const Index = () => {
           
           reverse={data.stepNumber % 2 === 0}
         />
-      ))}
+      ))} */}
       <GetStartedCard />
     </div>
   );
