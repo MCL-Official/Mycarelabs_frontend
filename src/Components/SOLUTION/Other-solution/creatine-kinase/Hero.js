@@ -10,8 +10,8 @@ const Hero = () => {
     <div className="grid grid-cols-1 items-center gap-12 sm:gap-20 md:grid-cols-2">
       {/* Heading Div */}
       <div className="max-w-[720px] lg:max-w-[842px]">
-        <h1 className="mb-4 text-4xl font-semibold md:text-6xl">The Website You Want Without The <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">Dev Time</span></h1>
-        <p className="mb-6 max-w-[528px] text-xl text-[#636262] md:mb-10 lg:mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus</p>
+        <h1 className="mb-4 text-4xl font-semibold md:text-6xl">Creatine  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">Kinase</span></h1>
+        <p className="mb-6 max-w-[528px] text-xl text-[#636262] md:mb-10 lg:mb-12 text-left">Creatine Kinase (CK) is an essential enzyme found in various tissues, primarily in the muscles and the heart. It plays a crucial role in energy production, specifically in the transfer of phosphate groups in the generation of adenosine triphosphate (ATP), the primary energy currency of cells. CK blood tests, also known as creatine phosphokinase (CPK) tests, measure the levels of this enzyme in the bloodstream. Let’s delve deeper into the significance of CK blood tests, their interpretation, and their varied applications in clinical settings.</p>
         <a href="#" className="mb-6 inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(19,_83,_254)_6px_6px] md:mb-10 lg:mb-12">Get Started</a>
         {/* Customers Div */}
         <div className="mb-4 flex w-full max-w-xs items-center">
@@ -26,9 +26,11 @@ const Hero = () => {
       </div>
       {/* Image Div */}
       <div className="relative left-4 h-full max-h-[562px] w-[85%] overflow-visible md:left-0 md:w-[95%] lg:w-full">
-        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915d1cb654acd795a72b12_magicpattern-ixxjruC7Gg4-unsplash.jpg" alt="" className="mx-auto block h-full w-full max-w-[800px] rounded-2xl object-cover" />
+
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+        {/* /// */}
         <div className="absolute bottom-0 left-4 right-0 top-4 -z-10 h-full w-full rounded-2xl bg-black"></div>
-        <a href="#" className="absolute bottom-auto left-[50%] right-auto top-1/2 inline-block max-w-full object-contain font-bold text-[#1353fe] max-[767px]:-translate-x-1/2 max-[767px]:-translate-y-1/2 md:bottom-[-48px] md:left-[-48px] md:right-auto md:top-auto">
+        <a href="https://www.youtube.com/embed/ZSE3s32KjE8" rel="noopener noreferrer" target="_blank" className="absolute bottom-auto left-[50%] right-auto top-1/2 inline-block max-w-full object-contain font-bold text-[#1353fe] max-[767px]:-translate-x-1/2 max-[767px]:-translate-y-1/2 md:bottom-[-48px] md:left-[-48px] md:right-auto md:top-auto">
           <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639058b0726dee9a8efa473f_Frame%20427322569.svg" alt="" className="inline-block" />
         </a>
       </div>

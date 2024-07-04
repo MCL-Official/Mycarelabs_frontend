@@ -6,9 +6,7 @@ const Index = () => {
   return (
     <div>
       <Hero/>
-      <Content/>
-
-<section class="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+{/* <section class="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 <div
     class="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
@@ -41,55 +39,48 @@ const Index = () => {
    
 </div>
 
-</section>
+</section> */}
       
 
-<div class="container flex items-center bg-blue-400 my-5">
-
+<div class="container flex items-center bg-blue-400 my-5 rounded-2xl">
     <div class="px-2 container mt-3 mb-6 sm:mt-24">
         <div class="text-center">
-            <h1 class="text-4xl font-extrabold tracking-tight text-gray-200 sm:text-5xl md:text-6xl font-title">
-                <span class="block">Understanding the Anticonvulsant Test</span>
+            <h1 class="text-4xl font-extrabold tracking-tight text-gray-200 sm:text-5xl md:text-6xl font-title text-left">
+                <span class="block text-left">Understanding the Anticonvulsant Test</span>
             </h1>
-           
-       
-    <div >
-        <h1 class="text-3xl text-white font-bold mb-4">CK exists in different forms or isoforms, each predominantly found in specific tissues:</h1>
-        <ul class="space-y-4">
-            <li class="flex justify-center items-start">
-                <svg class="h-6 w-6 text-black-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4 -4" />
-                    <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none"/>
-                </svg>
-                <p class="text-white text-lg">CK-MM: This isoform is mainly present in skeletal muscles.
-                </p>
-            </li>
-            <li class="flex justify-center items-start">
-                <svg class="h-6 w-6 text-black-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4 -4" />
-                    <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none"/>
-                </svg>
-                <p class=" text-white text-lg">CK-MB: Primarily found in the heart muscle.</p>
-            </li>
-            <li class="flex justify-center items-start">
-                <svg class="h-6 w-6 text-black-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4 -4" />
-                    <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none"/>
-                </svg>
-                <p class="text-white text-lg">CK-BB: Mainly located in the brain and other tissues like smooth muscles and some cancer cells.
-                </p>
-            </li>
-        </ul>
-    </div>
-            <p class="text-base text-white ">
-            When these tissues are damaged or stressed, CK is released into the bloodstream, making CK blood tests a valuable tool in diagnosing and monitoring various health conditions.
+            <div>
+                <h1 class="text-3xl text-white font-bold mb-4 text-left">CK exists in different forms or isoforms, each predominantly found in specific tissues:</h1>
+                <ul class="space-y-4 text-left">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
+                            <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none" />
+                        </svg>
+                        <p class="text-white text-lg">CK-MM: This isoform is mainly present in skeletal muscles.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
+                            <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none" />
+                        </svg>
+                        <p class="text-white text-lg">CK-MB: Primarily found in the heart muscle.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-black-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
+                            <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none" />
+                        </svg>
+                        <p class="text-white text-lg">CK-BB: Mainly located in the brain and other tissues like smooth muscles and some cancer cells.</p>
+                    </li>
+                </ul>
+            </div>
+            <p class="text-base text-white text-left">
+                When these tissues are damaged or stressed, CK is released into the bloodstream, making CK blood tests a valuable tool in diagnosing and monitoring various health conditions.
             </p>
-           
-           
         </div>
     </div>
-
 </div>
+
 
 
  
@@ -99,7 +90,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -196,7 +187,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -212,7 +203,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -288,14 +279,14 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
         </div>
       </div>
     </section>
-
+<Content/>
   <div class="container flex items-center bg-blue-900 rounded-full	 my-5">
 
 <div class="px-4 container mt-16 mb-16 sm:mt-24">
@@ -309,13 +300,8 @@ const Index = () => {
        
     </div>
 </div>
-
-</div>
-
-
-   
-
  
+</div>
     </div>
     
   )
