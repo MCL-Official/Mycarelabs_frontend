@@ -1,3 +1,4 @@
+import Link from "antd/es/typography/Link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
@@ -85,26 +86,36 @@ const BlogPostCarousel = () => {
   );
 };
 
-const Post = ({ imgUrl, author, title, description }) => {
+const Post = ({ imgUrl, author, title, description, location}) => {
+  
   return (
+    
     <div
+   
       className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
       style={{
         width: CARD_WIDTH,
         marginRight: MARGIN,
       }}
     >
+      <a className="no-underline" href={location}>
       <img
         src={imgUrl}
         className="mb-3 h-[200px] w-full rounded-lg object-cover"
         alt={`An image for a fake blog post titled ${title}`}
       />
+   
       <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
-        {author}
+        {author} 
       </span>
+     
       <p className="mt-1.5 text-lg font-medium">{title}</p>
       <p className="text-sm text-neutral-500">{description}</p>
+      
+      </a>
+
     </div>
+    
   );
 };
 
@@ -125,6 +136,8 @@ const posts = [
     title: "Wellness Testing Solutions",
     description:
       "Transform your workplace with on-site wellness testing from My Care Labs.",
+      location :"/testing-solutions/wellness-testing",
+    
   },
   {
     id: 2,
@@ -133,7 +146,8 @@ const posts = [
     title: "Toxicology Testing",
     description:
       "In light of HR managers’ need to recruit and retain top talent, we offers drug testing for businesses and other organizations.",
-  },
+        location:"/testing-solutions/toxicology-testing-solutions",
+    },
   {
     id: 3,
     imgUrl: "https://img.freepik.com/free-photo/doctor-performing-medical-research-lab_23-2149335681.jpg?t=st=1720023304~exp=1720026904~hmac=4626e8d3ce94e1b7c7f9ab7630d297ababc5d694a6b5fbe4bd3b1c36fabdcad4&w=2000",
@@ -141,7 +155,8 @@ const posts = [
     title: "Infectious Disease Testing",
     description:
       "My Care Labs was founded during the COVID-19 Pandemic. We provide fast, simple, accurate infectious disease testing.",
-  },
+       location:"/infectious-disease-testing"
+    },
   {
     id: 4,
     imgUrl: "https://img.freepik.com/free-photo/new-test-concentrated-skilled-researchers-wearing-uniform-doing-test-creating-vaccine_1157-48114.jpg?t=st=1720023309~exp=1720026909~hmac=c05dd4831f1caca7022811d4586af52792d27f32ecc5639d1684fe0f54344325&w=2000",
@@ -149,7 +164,8 @@ const posts = [
     title: "Oncology Testing",
     description:
       "My Care Labs is actively working on offering an array of oncology panels that can help detect different forms of cancers.",
-  },
+    location:"/testing-solutions/oncology-testing-solutions"
+    },
   {
     id: 5,
     imgUrl: "https://www.scripps.org/sparkle-assets/images/blood_test_samples_1200x750-59cd6b99366c6e716576ccd68351ed39.jpg",
@@ -157,6 +173,7 @@ const posts = [
     title: "Travel PCR Testing",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+      location:"/travel-pcr-testing"
   },
   // {
   //   id: 6,
