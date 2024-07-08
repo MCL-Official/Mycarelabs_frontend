@@ -10,8 +10,8 @@ const GetStartedCard = () => {
                 <div className='col-md-10'>
                     <div className="row get__card p-4" style={{ placeContent: "center" }}>
                         <div className="left-column col-md-6">
-                            <h2>Get Started Today!</h2>
-                            <p>Start the client onboarding process with confidence, using our automated Know Your Customer (KYC) verification solution.</p>
+                            <h2 className='text-left text-5xl'>A certified BBB accredited business</h2>
+                            <p className='text-left'>My Care Labs offers quick, hassle-free, and accurate COVID-19 RT-PCR testing. With same day results or within 24 hours, we have testing on-site at our laboratory and at pop-ups throughout California. My Care Labs takes your health seriously. We are a CLIA-certified laboratory, part of the California Covid Task Force, partner with CDPH, and report directly to CDC</p>
                         </div>
                         <div className="right-column col-md-5">
                             <div className="our__sol__button">

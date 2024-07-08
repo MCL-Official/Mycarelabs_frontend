@@ -9,7 +9,7 @@ const Blogs = () => {
   useEffect(() => {
     const getBlogData = async () => {
       try {
-        const response = await axios.get('http://165.22.223.26:5000/admin/blog/'); // Adjust the URL as needed
+        const response = await axios.get('https://backend.mycaretrading.com/admin/blog/'); // Adjust the URL as needed
         setBlogData(response.data);
       } catch (error) {
         console.error('Error fetching blog data:', error);

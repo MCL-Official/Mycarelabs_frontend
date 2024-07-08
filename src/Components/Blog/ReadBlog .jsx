@@ -16,7 +16,7 @@ const ReadBlog = () => {
   useEffect(() => {
     const getBlogData = async () => {
       try {
-        const response = await axios.get(`http://165.22.223.26:5000/admin/blog/${blog_id}`);
+        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/${blog_id}`);
         setBlogData(response.data);
         if (response.data.tags) {
           setTagArray(response.data.tags.split(','));
