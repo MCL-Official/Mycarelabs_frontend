@@ -82,111 +82,111 @@ const Testimonial = ({ imgSrc, name, title, company, content }) => (
 
 export const OPTIONS = [
   {
-    title: "Startups",
+    title: "Reliable Results",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Jeff"
-        name="Jeff W."
+        name="Reliable Results"
         title="CEO"
         company="The Company"
-        content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit qui unde perspiciatis nam in maxime impedit repudiandae veniam quibusdam enim, velit minus necessitatibus quaerat quos similique, odio earum!"
+        content="Our state-of-the-art laboratory equipment and skilled technicians ensure precise and dependable Vitamin D test results."
       />
     ),
   },
   {
-    title: "YouTubers",
+    title: "Experienced Professionals",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Dan"
         name="Dan S."
-        title="YouTuber"
+        title="Experienced Professionals"
         company="@TheChannel"
-        content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis qui fuga, deserunt doloribus, vero autem libero sed dolorum nostrum quidem in soluta magni eos excepturi."
+        content="At My Care Labs, our team includes experienced pathologists and laboratory technicians dedicated to maintaining the highest standards of quality in vitamin D assessment."
       />
     ),
   },
   {
-    title: "Bloggers",
+    title: "Convenient Location",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Carey"
-        name="Carey J."
+        name="Convenient Location"
         title="Writer"
         company="theblog.com"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quo harum."
+        content="Situated in Fremont, California, our lab is easily accessible, providing convenience for individuals seeking Vitamin D testing."
       />
     ),
   },
   {
-    title: "Authors",
+    title: "Cutting-edge Facilities",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Dani"
-        name="Moriah H."
+        name="Cutting-edge Facilities"
         title="Author"
         company="Books About Things"
-        content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis qui fuga, deserunt doloribus, vero autem libero sed dolorum nostrum quidem in soluta magni eos excepturi."
+        content="My Care Labs is equipped with modern facilities, adhering to the latest advancements in medical technology for efficient and accurate testing."
       />
     ),
   },
   {
-    title: "Designers",
+    title: "Scheduling",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Phil"
-        name="Phil K."
+        name="Scheduling"
         title="UI/UX Design"
         company="The Other Company"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex a laborum earum quo unde pariatur consequuntur molestias!"
+        content="Schedule your Vitamin D test at My Care Labs by booking an appointment. We offer flexible scheduling to accommodate your convenience."
       />
     ),
   },
   {
-    title: "Consultants",
+    title: "Sample Collection",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Stetson"
-        name="Stetson R."
+        name="Sample Collection"
         title="Consultant"
         company="The Company Company"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, dicta. Doloremque, hic magnam? Eveniet quisquam porro rerum, voluptatem et aliquam eaque nesciunt quod magni veritatis tempora ducimus!"
+        content="Our skilled phlebotomists will collect a small blood sample, utilizing advanced and minimally invasive techniques for your comfort."
       />
     ),
   },
   {
-    title: "Photographers",
+    title: "Laboratory Analysis",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Patty"
-        name="Patty G."
+        name="Laboratory Analysis"
         title="Photographer"
         company="@ThePictureLady"
-        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quam? Quia veniam cupiditate officiis."
+        content="The collected sample undergoes comprehensive laboratory analysis using cutting-edge technology to measure Vitamin D levels accurately."
       />
     ),
   },
   {
-    title: "Videographers",
+    title: "Results Delivery",
     Content: () => (
       <Testimonial
         imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Kert"
-        name="Kert Y."
+        name="Results Delivery"
         title="Film Maker"
         company="@MovieDude"
-        content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, eius corrupti! Alias dolore quibusdam ipsum magnam delectus nulla sint harum ab?"
+        content="Expect timely and confidential delivery of your Vitamin D test results once the analysis is complete."
       />
     ),
   },
-  {
-    title: "Local Business",
-    Content: () => (
-      <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Joanne"
-        name="Joanne F."
-        title="Business Owner"
-        company="The Local Company"
-        content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis qui fuga, deserunt doloribus, vero autem libero sed dolorum nostrum quidem in soluta magni eos excepturi."
-      />
-    ),
-  },
+  // {
+  //   title: "Local Business",
+  //   Content: () => (
+  //     <Testimonial
+  //       imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Joanne"
+  //       name="Joanne F."
+  //       title="Business Owner"
+  //       company="The Local Company"
+  //       content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis qui fuga, deserunt doloribus, vero autem libero sed dolorum nostrum quidem in soluta magni eos excepturi."
+  //     />
+  //   ),
+  // },
 ];

@@ -24,7 +24,7 @@ export const Copy = () => {
         </Link>
       </div>
       <h1 className="max-w-4xl text-center text-4xl font-black leading-[1.15] md:text-7xl md:leading-[1.15]">
-        Launch your product with a cool landing page
+      Vitamin D Test Services
       </h1>
       <p className="mx-auto my-4 max-w-3xl text-center text-base leading-relaxed md:my-6 md:text-2xl md:leading-relaxed">
         Your 1-2 sentence elevator pitch for what your product does and why goes

@@ -78,14 +78,13 @@ const Copy = () => {
         </a>
       </div>
       <h1 className="max-w-4xl text-center text-4xl font-black leading-[1.15] md:text-6xl md:leading-[1.15]">
-        Launch your product with a cool landing page
+      Vitamin-D Test Services
       </h1>
       <p className="mx-auto my-4 max-w-3xl text-center text-base leading-relaxed md:my-6 md:text-xl md:leading-relaxed">
-        Your 1-2 sentence elevator pitch for what your product does and why goes
-        here. Be concise, get to the point, don't use jargon.
+      Among our many specialized services that we offer is the Vitamin D test, a crucial assessment tool for maintaining optimal health. Our advanced facilities and experienced professionals ensure reliable results, contributing to your overall well-being.
       </p>
       <button className="rounded-lg bg-indigo-600 p-3 uppercase text-white transition-colors hover:bg-indigo-700">
-        <span className="font-bold">Get started - </span> no CC required
+        <span className="font-bold">Book </span> Appointment
       </button>
     </>
   );

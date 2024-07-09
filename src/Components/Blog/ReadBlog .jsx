@@ -42,7 +42,7 @@ const ReadBlog = () => {
       <div className="container mx-auto mt-5 px-4">
         <div className="relative w-full h-[70vh] mb-3">
           <img src={blogData.banner_image} alt="Blog Banner" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-10 transform -translate-y-1/2 bg-white bg-opacity-60 p-3 text-end text-gray-800 rounded-3 w-full max-w-xs">
+          <div className="absolute top-1/2 left-10 transform -translate-y-1/2 bg-white bg-opacity-60 p-3 text-left text-gray-800 rounded-3 w-full max-w-xs">
             <div dangerouslySetInnerHTML={{ __html: blogData.banner_content }}></div>
             <p>
               Published By: <span className="text-theme font-bold text-lg">{blogData.added_by}</span>
@@ -51,34 +51,34 @@ const ReadBlog = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-2">
-            <h1 className="text-3xl font-bold mb-3">{blogData.name}</h1>
-            <div className="text-gray-600 mb-5">
+            <h1 className="text-3xl font-bold mb-3 text-left">{blogData.name}</h1>
+            <div className="text-gray-600 mb-5 text-left">
               <p>Category: <span className="text-blue-600">{blogData.category}</span></p>
               <p>Published on: <span className="text-gray-600">{blogData.createdAt}</span></p>
             </div>
             <div className="flex gap-2 mb-3">
               {tagArray.length > 0 &&
                 tagArray.map((item, index) => (
-                  <div key={index} className="bg-gray-200 px-3 py-2 rounded-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay={index * 200}>
+                  <div key={index} className="bg-gray-200 px-3 py-2 rounded-full text-left" data-aos="fade-right" data-aos-duration="1000" data-aos-delay={index * 200}>
                     {item}
                   </div>
                 ))}
             </div>
-            <div className="prose">
+            <div className="prose text-left">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_content }}></div>
             </div>
             
             <QuoteCard quote="A spring of truth shall flow from it: like a new star it shall scatter the darkness of ignorance, and cause a light heretofore unknown to shine amongst men." author="Andrio Domeco" />
             
-            <div className="prose">
+            <div className="prose text-left">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_short_content1 }}></div>
             </div>
-            <div className="prose">
+            <div className="prose text-left">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_short_content2 }}></div>
             </div>
           </div>
           <div className="space-y-8">
-            <div className="bg-blue-500 p-5 text-white rounded-lg">
+            <div className="bg-blue-500 p-5 text-white rounded-lg text-left">
               <h3 className="text-lg font-bold mb-2">Join our newsletter!</h3>
               <p className="mb-3">Enter your email to receive our latest newsletter.</p>
               <input type="email" placeholder="Your email address" className="w-full p-2 mb-3 rounded-lg text-gray-800" />
@@ -86,28 +86,25 @@ const ReadBlog = () => {
               <p className="text-xs mt-3">Don't worry, we don't spam</p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-3">Popular Articles</h3>
+              <h3 className="text-lg font-bold mb-3 text-left">Popular Articles</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg"
- alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
-                  <div>
+                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg" alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                  <div className="text-left">
                     <h4 className="text-md font-bold">Create engaging online courses</h4>
                     <p className="text-xs">By Glomiya Lucy</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg"
- alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
-                  <div>
+                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg" alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                  <div className="text-left">
                     <h4 className="text-md font-bold">The ultimate formula for launching online course</h4>
                     <p className="text-xs">By Andrio Jeson</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg"
- alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
-                  <div>
+                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg" alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                  <div className="text-left">
                     <h4 className="text-md font-bold">50 Best web design tips & tricks</h4>
                     <p className="text-xs">By Unknown</p>
                   </div>
