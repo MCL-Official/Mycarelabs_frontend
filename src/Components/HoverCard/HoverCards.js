@@ -10,6 +10,8 @@ import img3 from "../../Assets/img2.jpg";
 import img from "../../Assets/img.jpg";
 import img1 from "../../Assets/img3.jpg";
 import img4 from "../../Assets/img4.jpg";
+import { Helmet } from "react-helmet";
+
 
 const images = [
   "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1719954263~exp=1719957863~hmac=08690e59529a0bc028e23fda8e4fa0f44750548434c108235e7e0f403667f131&w=2000",
@@ -152,6 +154,13 @@ const HoverCards = () => {
   }, []);
 
   return (
+    <>
+    <Helmet>
+       <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+       <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+       <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+       <meta name="author" content="My Care Labs" />
+     </Helmet>
     <div className="mt-5 overflow-hidden bg-gradient-to-b from-blue-300 via-transparent to-white">
       <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
@@ -242,6 +251,7 @@ const HoverCards = () => {
         </div>
       </DragCloseDrawer>
     </div>
+    </>
   );
 };
 
