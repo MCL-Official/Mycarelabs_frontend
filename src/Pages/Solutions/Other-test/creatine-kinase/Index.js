@@ -91,7 +91,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/4046950/pexels-photo-4046950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -188,7 +188,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3602778/pexels-photo-3602778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -204,7 +204,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/5327653/pexels-photo-5327653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -280,7 +280,7 @@ const Index = () => {
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/4210606/pexels-photo-4210606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
