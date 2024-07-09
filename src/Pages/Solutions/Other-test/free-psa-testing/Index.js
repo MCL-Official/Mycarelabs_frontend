@@ -5,7 +5,7 @@ import HoverCards from '../../../../Components/HoverCard/HoverCards'
 const Index = () => {
   return (
     <div>
-      <Hero/>
+      {/* <Hero/> */}
       <section class="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 <div
@@ -73,7 +73,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3881247/pexels-photo-3881247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -163,7 +163,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/163944/pexels-photo-163944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -179,7 +179,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/5726794/pexels-photo-5726794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -270,7 +270,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3735770/pexels-photo-3735770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -284,7 +284,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3683080/pexels-photo-3683080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -364,7 +364,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3825368/pexels-photo-3825368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -378,7 +378,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -455,7 +455,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3683051/pexels-photo-3683051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -469,7 +469,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>

@@ -67,7 +67,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full ">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=600" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -149,7 +149,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/207601/pexels-photo-207601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -165,7 +165,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/208518/pexels-photo-208518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -240,7 +240,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/305565/pexels-photo-305565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -254,7 +254,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -346,7 +346,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -360,7 +360,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
@@ -433,7 +433,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
           <div class="h-full">
             <article class="h-full">
               <div class="h-full">
-                <img class="h-full object-cover rounded-2xl" src="https://inviqa.com/sites/default/files/styles/pullout/public/2020-08/XD-1.jpeg?h=f75d236a&itok=PBoXPDmW" width="733" height="412" alt='""' typeof="foaf:Image" />
+                <img class="h-full object-cover rounded-2xl" src="https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="733" height="412" alt='""' typeof="foaf:Image" />
               </div>
             </article>
           </div>
