@@ -3,10 +3,18 @@ import Hero from '../../../../Components/SOLUTION/Other-solution/crp-tests/Hero'
 import Content  from '../../../../Components/SOLUTION/Other-solution/crp-tests/Content'
 import Faq1 from '../../../Faq/Faq1'
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel'
+import { Helmet } from "react-helmet";
+
 
 const Index = () => {
   return (
     <div>
+        <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       <Hero/>
       <Content/>
       {/* <Faq1/> */}

@@ -4,6 +4,8 @@ import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
 import { DisappearingFeatures } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/DisappearingFeatures';
 import Sample from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/Sample';
+import { Helmet } from "react-helmet";
+
 
 const liverFunctionalityTestData = [
   {
@@ -114,6 +116,12 @@ const liverFunctionalityTestData = [
 const Index = () => {
   return (
     <div>
+        <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       <Sample/>
       {/* <DisappearingFeatures/> */}
       {/* {liverFunctionalityTestData.map((data, index) => (

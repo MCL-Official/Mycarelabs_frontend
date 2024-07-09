@@ -4,6 +4,8 @@ import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import { RenalTest } from '../../../../Components/SOLUTION/Wellness-testing/renal-function-test/RenalTest';
 import SwapColumnFeatures from '../../../../Components/SOLUTION/Wellness-testing/renal-function-test/SwapColumnFeatures';
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
+import { Helmet } from "react-helmet";
+
 
 const renalTestData = [
   {
@@ -110,6 +112,12 @@ const renalTestData = [
 const Index = () => {
   return (
     <div>
+        <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       <RenalTest/>
       <SwapColumnFeatures/>
       {/* {renalTestData.map((data, index) => (

@@ -2,10 +2,18 @@ import React from 'react'
 import Hero from '../../../../Components/SOLUTION/Other-solution/creatine-kinase/Hero'
 import Content from '../../../../Components/SOLUTION/Other-solution/creatine-kinase/Content'
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel'
+import { Helmet } from "react-helmet";
+
 
 const Index = () => {
   return (
     <div>
+        <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       <Hero/>
 {/* <section class="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

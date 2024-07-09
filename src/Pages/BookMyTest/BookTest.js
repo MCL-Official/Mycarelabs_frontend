@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from "../../Components/button/Button";
 import Navbar from '../../Components/Navbar/Navbar';
+import { Helmet } from "react-helmet";
+
 
 const img = "https://imagesuploadforwebsite.s3.amazonaws.com/card1.jpg";
 const img1 = "https://imagesuploadforwebsite.s3.amazonaws.com/card2.jpg";
@@ -132,6 +134,12 @@ const BookTest = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       {/* <Navbar /> */}
       <div className="mt-5 via-transparent to-white">
         <div className="text-center mb-4">
