@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams,useLocation } from 'react-router-dom';
+// import { useLocation, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import QuoteCard from './QuoteCard'; // Adjust the import path as necessary
 
 const ReadBlog = () => {
   const navigate = useNavigate();
-  const { id: blog_id } = useParams();
+  const location = useLocation();
+  const { blog_id } = location.state || {};
+  // const { blog_id } = useParams(); // Get blog_id from URL parameters
   const [blogData, setBlogData] = useState({});
   const [seoData, setSeoData] = useState({});
   const [tagArray, setTagArray] = useState([]);
   
-  console.log(blog_id);
+  console.log(blog_id,"sdkjdsbndsn");
 
   useEffect(() => {
     const getBlogData = async () => {
@@ -52,14 +55,14 @@ const ReadBlog = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-2">
             <h1 className="text-3xl font-bold mb-3 text-left">{blogData.name}</h1>
-            <div className="text-gray-600 mb-5 text-left">
+            <div className="text-gray-600 mb-5 text-left flex justify-between">
               <p>Category: <span className="text-blue-600">{blogData.category}</span></p>
               <p>Published on: <span className="text-gray-600">{blogData.createdAt}</span></p>
             </div>
-            <div className="flex gap-2 mb-3">
+            <div className="flex gap-2 mb-3 text-left">
               {tagArray.length > 0 &&
                 tagArray.map((item, index) => (
-                  <div key={index} className="bg-gray-200 px-3 py-2 rounded-full text-left" data-aos="fade-right" data-aos-duration="1000" data-aos-delay={index * 200}>
+                  <div key={index} className="bg-gray-200 px-3 py-2 rounded-full" data-aos="fade-right" data-aos-duration="1000" data-aos-delay={index * 200}>
                     {item}
                   </div>
                 ))}

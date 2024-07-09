@@ -6,12 +6,14 @@ import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const [blogData, setBlogData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 9;
   const navigate = useNavigate();
 
   useEffect(() => {
     const getBlogData = async () => {
       try {
-        const response = await axios.get('https://backend.mycaretrading.com/admin/blog/'); // Adjust the URL as needed
+        const response = await axios.get('https://backend.mycaretrading.com/admin/blog'); // Adjust the URL as needed
         setBlogData(response.data);
       } catch (error) {
         console.error('Error fetching blog data:', error);
@@ -20,7 +22,38 @@ const Blogs = () => {
     getBlogData();
   }, []);
 
-  console.log(blogData,"asdcjdndsnv");
+  const handleNavigation = (blogId, blogName) => {
+    if (!blogName) {
+      console.error('Blog name is undefined for blogId:', blogId);
+      return;
+    }
+    const formattedBlogName = blogName
+      .replace(/\s+|\|+|\.|,|:/g, '-') // Replaces spaces, pipes, dots, commas, and colons with hyphens
+      .replace(/-+/g, '-') // Removes consecutive hyphens
+      .toLowerCase();
+    const encodedBlogName = encodeURIComponent(formattedBlogName);
+    console.log('Navigating to:', `/readBlog/${encodedBlogName}`);
+    navigate(`/readBlog/${encodedBlogName}`, { state: { blog_id: blogId } });
+  };
+
+  // Get current blogs
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = blogData?.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  const totalPages = Math.ceil(blogData.length / blogsPerPage);
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <section className="py-32">
@@ -53,24 +86,43 @@ const Blogs = () => {
         </div>
 
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-          {blogData.map((item) => (
-            <li className="w-full mx-auto group sm:max-w-sm" key={item.blog_id}>
-              <a href="#" onClick={() => navigate(`/readBlog/${item._id}`, { state: { blog_id: item._id } })}>
-                <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full rounded-lg" />
-                <div className="mt-3 space-y-2">
-                  <span className="block text-indigo-600 text-sm">{item.date}</span>
-                  <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
-                    {item.name}
-                  </h3>
-                  <div className="prose">
-              <div dangerouslySetInnerHTML={{ __html: item.blog_short_content1 }}></div>
-            </div>
-                  {/* <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">{item.blog_short_content1}</p> */}
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+  {currentBlogs?.map((item) => (
+    <li className="w-full mx-auto group sm:max-w-sm" key={item._id}>
+      <a href="#" onClick={() => handleNavigation(item._id, item.name)} className="block no-underline">
+        <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full rounded-lg" />
+        <div className="mt-3 space-y-2">
+          <span className="block text-indigo-600 text-sm">{item.date}</span>
+          <h3 className="text-xl text-gray-800 duration-150 group-hover:text-indigo-600 font-bold">
+            {item.name}
+          </h3>
+          <div className="prose text-left">
+            <div dangerouslySetInnerHTML={{ __html: item.blog_short_content1 }}></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  ))}
+</ul>
+
+
+
+
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+            className={`px-4 py-2 mx-2 ${currentPage === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500 text-white'} rounded`}
+          >
+            Previous
+          </button>
+          <button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className={`px-4 py-2 mx-2 ${currentPage === totalPages ? 'bg-gray-300 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500 text-white'} rounded`}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </section>
   );
