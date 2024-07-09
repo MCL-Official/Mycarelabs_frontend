@@ -6,6 +6,8 @@ import HoverCards from '../../../Components/HoverCard/HoverCards'
 import GetStartedCard from '../../../Components/GetStartedCard/Getstarted'
 import cancerScreeningImage from '../../../Assets/doctor-group.png';
 import BookTestDetails from '../../BookMyTest/BookDetails'
+import { Helmet } from "react-helmet";
+
 
 const Index = () => {
   const cardData = [
@@ -17,6 +19,13 @@ const Index = () => {
     },]
   return (
     <>
+    
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
     <div className='mt-5'>
     {console.log(cardData,"sdkjvdsn")}
      <div

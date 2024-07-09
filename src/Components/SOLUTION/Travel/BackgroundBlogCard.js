@@ -6,6 +6,8 @@ import {
   Typography,
   Avatar,
 } from '@material-tailwind/react';
+import { Helmet } from "react-helmet";
+
 
 export function BackgroundBlogCard() {
   const cards = [
@@ -41,6 +43,13 @@ export function BackgroundBlogCard() {
   ];
 
   return (
+    <>
+    <Helmet>
+       <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+       <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+       <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+       <meta name="author" content="My Care Labs" />
+     </Helmet>
     <div className="flex flex-wrap justify-center gap-4 p-4 bg-white">
       {cards.map((card, index) => (
         <div key={index} className="relative group h-[30rem] w-full max-w-[20rem] overflow-hidden rounded-xl">
@@ -80,5 +89,6 @@ export function BackgroundBlogCard() {
         </div>
       ))}
     </div>
+    </>
   );
 }

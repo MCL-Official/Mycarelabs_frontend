@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import DoctorVideo from "../Assets/myvid.mp4"; // Ensure you have the video file in the specified path
-// import DoctorVideo from "../myvid.mp4"; // Ensure you have the video file in the specified path
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import "../Styles/Hero.css";
 
 function Hero() {
@@ -32,6 +32,7 @@ function Hero() {
       window.removeEventListener("scroll", onPageScroll);
     };
   }, []);
+
   const words = [
     "Book Your Test",
     "Book Your Appointments",
@@ -42,7 +43,6 @@ function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [letterIndex, setLetterIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -76,38 +76,34 @@ function Hero() {
     return () => clearInterval(interval);
   }, [displayText, wordIndex, letterIndex, isTyping, words]);
 
-  // useEffect(() => {
-  //   const cursorInterval = setInterval(() => {
-  //     setShowCursor(prevShowCursor => !prevShowCursor);
-  //   }, 500); // Cursor blink speed
-
-  //   return () => clearInterval(cursorInterval);
-  // }, []);
   return (
     <div className="section-container">
+      <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
+      
       <div className="hero-section">
         <video
           className="hero-video"
-          src={
-            // "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/home-video-new.mp4"
-            // "https://imagesuploadforwebsite.s3.amazonaws.com/My+Care+Labs_V2+1+(1).mp4"
-            DoctorVideo
-          }
+          src={DoctorVideo}
           autoPlay
           muted
           loop
           playsInline
+          title="Welcome to My Care Labs"
         />
         <div className="text-section">
-          <p className=" text-4xl pt-28">Welcome to </p>
+          <p className="text-4xl pt-28">Welcome to </p>
           <h2 className="sample text-6xl">My Care Labs</h2>
           <p className="text-description mb-2">
-            Discover Compherensive Health Solutions at My Care Labs. From
-            infectious deseases to wellness and Toxicology , we're here for your
+            Discover Comprehensive Health Solutions at My Care Labs. From
+            infectious diseases to wellness and toxicology, we're here for your
             well-being.
           </p>
           <h1 className="h-14">{displayText}</h1>
-          {/* <h1>{displayText}{showCursor && '|'}</h1> */}
           <button
             className="text-appointment-btn"
             type="button"

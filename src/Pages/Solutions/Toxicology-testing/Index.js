@@ -4,6 +4,8 @@ import HoverCards from '../../../Components/HoverCard/HoverCards'
 import InsuranceAccepted from '../../../Components/InsuranceAccepted'
 import GetStartedCard from '../../../Components/GetStartedCard/Getstarted'
 import { CheckCircleIcon } from '@heroicons/react/20/solid';
+import { Helmet } from "react-helmet";
+
 
 const Index = () => {
   const substances = [
@@ -17,6 +19,13 @@ const Index = () => {
   return (
     <>
     <div>
+  
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
     <div className="text-center py-8">
       <h2 className="text-2xl font-semibold text-blue-500">Why is toxicology drug testing needed?</h2>
       <h1 className="text-gray-700 mt-4">Toxicology drug testing is needed for many reasons, such as:</h1>

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 export function Sampletest () {
 
     const team = [
@@ -58,7 +60,15 @@ export function Sampletest () {
     ]
 
     return (
+      
         <section className="py-14">
+              
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-xl">
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">

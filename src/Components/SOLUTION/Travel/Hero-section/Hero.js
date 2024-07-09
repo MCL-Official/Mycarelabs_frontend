@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { Helmet } from "react-helmet";
+
 
 export function Hero() {
 
@@ -14,6 +16,13 @@ export function Hero() {
 
     return (
         <>
+        
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
           
             <section className="py-28">
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">

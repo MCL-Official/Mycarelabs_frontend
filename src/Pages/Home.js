@@ -17,10 +17,19 @@ import ShuffleHero from "../Components/shuffel/SuffleHero";
 import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
 import FeatureComponent from "../Components/Accordain/FeatureComponent";
 import ImageContainer from "../Components/Form/ImageContainer";
+import { Helmet } from "react-helmet";
+
 
 function Home() {
   return (
     <div className="home-section">
+      
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       {/* <Navbar /> */}
       <Hero />
       <FeatureComponent />

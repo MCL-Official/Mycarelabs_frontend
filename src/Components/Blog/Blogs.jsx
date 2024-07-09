@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Helmet } from "react-helmet";
+
 
 const Blogs = () => {
   const [blogData, setBlogData] = useState([]);
@@ -22,6 +24,13 @@ const Blogs = () => {
 
   return (
     <section className="py-32">
+      
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
           <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">Latest blog posts</h1>

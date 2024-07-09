@@ -5,6 +5,8 @@ import img3 from "../../Assets/img2.jpg";
 import img from "../../Assets/img.jpg";
 import img1 from "../../Assets/img3.jpg";
 import img4 from "../../Assets/img4.jpg";
+import { Helmet } from "react-helmet";
+
 
 const features = {
   Toxicology: {
@@ -189,6 +191,13 @@ function FeatureComponent() {
       : -1;
 
   return (
+    <>
+     <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
     <div className="flex justify-center items-center min-h-screen py-4  ">
       <div className="w-full lg:w-4/5 px-2 overflow-hidden bg-gradient-to-r from-blue-300 via-transparent to-white bd">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent">
@@ -272,6 +281,7 @@ function FeatureComponent() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
