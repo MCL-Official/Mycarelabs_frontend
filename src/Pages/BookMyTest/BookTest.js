@@ -32,7 +32,7 @@ const BookTest = () => {
 
   const handleBookNowClick = (id) => {
     console.log('Navasas' , id);
-    navigate(`/bookTest/${id}`);
+    navigate(`/covid-test-locations/${id}`);
   };
 
   const cardData = [

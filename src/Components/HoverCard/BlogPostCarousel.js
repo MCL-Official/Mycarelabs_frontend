@@ -136,7 +136,7 @@ const posts = [
     title: "Wellness Testing Solutions",
     description:
       "Transform your workplace with on-site wellness testing from My Care Labs.",
-      location :"/testing-solutions/wellness-testing",
+      location :"/testing-solutions/wellness-testing-solutions/",
     
   },
   {
@@ -146,7 +146,7 @@ const posts = [
     title: "Toxicology Testing",
     description:
       "In light of HR managers’ need to recruit and retain top talent, we offers drug testing for businesses and other organizations.",
-        location:"/testing-solutions/toxicology-testing-solutions",
+        location:"/testing-solutions/toxicology-testing-solutions/",
     },
   {
     id: 3,
@@ -155,7 +155,7 @@ const posts = [
     title: "Infectious Disease Testing",
     description:
       "My Care Labs was founded during the COVID-19 Pandemic. We provide fast, simple, accurate infectious disease testing.",
-       location:"/infectious-disease-testing"
+       location:"/testing-solutions/infectious-disease-testing-solutions"
     },
   {
     id: 4,
@@ -164,7 +164,7 @@ const posts = [
     title: "Oncology Testing",
     description:
       "My Care Labs is actively working on offering an array of oncology panels that can help detect different forms of cancers.",
-    location:"/testing-solutions/oncology-testing-solutions"
+    location:"//testing-solutions/oncology-testing-solutions/"
     },
   {
     id: 5,
@@ -173,7 +173,7 @@ const posts = [
     title: "Travel PCR Testing",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
-      location:"/travel-pcr-testing"
+      location:"/travel-testing/"
   },
   // {
   //   id: 6,
