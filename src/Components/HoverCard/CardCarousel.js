@@ -152,7 +152,7 @@ const items = [
     title: "Oncology Testing",
     description:
       "My Care Labs is actively working on offering an array of oncology panels that can help detect different forms of cancers.",
-    location:"//testing-solutions/oncology-testing-solutions/"
+    location:"/testing-solutions/oncology-testing-solutions/"
   },
   {
     id: 5,

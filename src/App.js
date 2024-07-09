@@ -25,6 +25,7 @@ import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
 import TestingGroup from "./Pages/Solutions/Infectious-desiase/Testing-for-group/TestingGroup";
 import TestingSchool from "./Pages/Solutions/Infectious-desiase/Testing-school/TestingSchool";
 import Anemia from "./Pages/Solutions/Wellness-testing/Anemis-testing/Index";
+import Solution from "./Pages/Solutions/Wellness-testing/Solution";
 import Basic from "./Pages/Solutions/Wellness-testing/Basic-metabolic/Index";
 import CMP from "./Pages/Solutions/Wellness-testing/Comprensive-metabolic/Index";
 import Liver from "./Pages/Solutions/Wellness-testing/Liver-function/Index";
@@ -63,7 +64,7 @@ function App() {
           <Route path="/group-covid-testing/" element={<TestingGroup/>} />
           <Route path="/testing-for-schools/" element={<TestingSchool/>} />
           <Route path="/testing-for-nursing-homes/" element={<TestingNurcing/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/" element={<TestingSchool/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/" element={<Solution/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" element={<Anemia/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" element={<Basic/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" element={<Liver/>} />

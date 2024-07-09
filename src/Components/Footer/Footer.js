@@ -76,25 +76,31 @@ function Footer() {
           <p className="ft-list-title">Talk To Us</p>
           <ul className="ft-list-items">
             <li>
-              <a href="mailto:support@healthplus.com">support@mycarelabs.com</a>
+              <a href="mailto:support@mycarelabs.com">support@mycarelabs.com</a>
             </li>
             <li>
-              <a href="mailto:appointment@healthplus.com">
+              {/* <a href="mailto:appointment@healthplus.com">
                 appointment@hmycarelabs.com
+              </a> */}
+            </li>
+            <li>
+              <a href="tel:+1-800-790-4550">Call: +1-800-790-4550</a>
+            </li>
+            <li>
+              <a href="tel:+1-888-289-9940">Fax: +1-888-289-9940</a>
+            </li>
+            <li>
+              <a href="tel:+022 2326 6232">5500 Stewart Avenue, Suite 108,
+                <br></br>
+                Fremont, CA 94538
               </a>
-            </li>
-            <li>
-              <a href="tel:+022 5454 5252">+022 5454 5252</a>
-            </li>
-            <li>
-              <a href="tel:+022 2326 6232">+022 2326 6232</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="ft-copyright">
-        <p>© 2013-2023 MyCareLabs. All rights reserved.</p>
+        <p>Copyright © 2024 My Care Labs. All Rights Reserved.</p>
 
         <ul className="ft-social-links">
           <li>

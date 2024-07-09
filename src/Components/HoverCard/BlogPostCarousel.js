@@ -11,6 +11,7 @@ const CARD_SIZE = CARD_WIDTH + MARGIN;
 const BREAKPOINTS = {
   sm: 640,
   lg: 1024,
+  
 };
 
 const BlogPostCarousel = () => {

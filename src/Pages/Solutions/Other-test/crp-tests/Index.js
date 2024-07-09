@@ -441,7 +441,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
       </div>
     </section>
 
-<Faq1/>
+{/* <Faq1/> */}
 <CardCarousel/>
 
   <div class="container flex items-center bg-blue-900 rounded-full	 my-5">
