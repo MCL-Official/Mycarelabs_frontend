@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
+
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -32,6 +34,12 @@ const Faq = () => {
 
   return (
     <div className="max-w-4xl mx-auto py-5 mt-5">
+        <Helmet>
+        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <meta name="author" content="My Care Labs" />
+      </Helmet>
       <h2 className="text-2xl font-bold mb-6 text-center">Frequently asked questions.</h2>
       {faqs.map((faq, index) => (
         <div key={index} className="border-b border-gray-200">
