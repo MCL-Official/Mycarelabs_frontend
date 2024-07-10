@@ -25,7 +25,7 @@ import {
     <div className="col-span-12 flex flex-col justify-between border-r border-neutral-700 md:col-span-6">
       <div className="px-6 py-20 md:px-12 md:py-24">
         <h1 className="text-4xl uppercase leading-tight md:text-5xl md:leading-tight">
-          <span className="text-emerald-300">Liver Function Panel Tests </span>
+          <span className="text-blue-400">Liver Function Panel Tests </span>
         </h1>
         {CONTENT[idx].content}
       </div>

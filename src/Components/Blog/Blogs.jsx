@@ -118,8 +118,9 @@ const Blogs = () => {
           {loading
             ? Array.from({ length: blogsPerPage }).map((_, index) => <SkeletonLoader key={index} />)
             : blogData?.map((item) => (
-                <li className="w-full mx-auto group sm:max-w-sm bg-white shadow-lg rounded-lg overflow-hidden" key={item._id}>
-                  <a href="#" onClick={() => handleNavigation(item._id, item.name)} className="block no-underline">
+              <li className="w-full mx-auto group sm:max-w-sm bg-white shadow-lg rounded-lg overflow-hidden" key={item._id}>
+                  {console.log(item,"sdvkjsjvksdvjsbnvdjksdvb")}
+                  <a href="#" onClick={() => handleNavigation(item._id, item.meta_title)} className="block no-underline">
                     <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full h-48 object-cover object-center" />
                     <div className="p-4">
                       <h3 className=" text-left text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-bold mb-2">

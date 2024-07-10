@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import QuoteCard from './QuoteCard'; // Adjust the import path as necessary
 
 const ReadBlog = () => {
   const location = useLocation();
+  const { id } = useParams();
   const { blogData: initialBlogData } = location.state || {};
   const [blogData, setBlogData] = useState(initialBlogData || {});
   const [tagArray, setTagArray] = useState([]);
@@ -13,19 +14,36 @@ const ReadBlog = () => {
   const [latestBlogs, setLatestBlogs] = useState([]);
   const [sameCategoryBlogs, setSameCategoryBlogs] = useState([]);
   const [popularBlogs, setPopularBlogs] = useState([]);
+  const [loading, setLoading] = useState(!initialBlogData);
 
   useEffect(() => {
-    if (!initialBlogData) return;
+    const fetchBlogData = async () => {
+      console.log(initialBlogData,":sdjhgjhvbdsjbsdvhjb");
+      if (!initialBlogData) {
+        try {
+          const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/routename/${id}`);
+          const data = response.data;
+          setBlogData(data);
+          setLoading(false);
+        } catch (error) {
+          console.error('Error fetching blog data:', error);
+          setLoading(false);
+        }
+      }
+    };
 
-    // setTagArray(initialBlogData.tags.split(','));
+    fetchBlogData();
+  }, [id, initialBlogData]);
+
+  useEffect(() => {
+    if (!blogData.category) return;
 
     const fetchAdditionalData = async () => {
       try {
-        // Fetch additional data
         const [randomResponse, latestResponse, sameCategoryResponse, popularResponse] = await Promise.all([
           axios.get('https://backend.mycaretrading.com/admin/blog/random'),
           axios.get('https://backend.mycaretrading.com/admin/blog/latest'),
-          axios.get(`https://backend.mycaretrading.com/admin/blog/category/${initialBlogData.category}`),
+          axios.get(`https://backend.mycaretrading.com/admin/blog/category/${blogData.category}`),
           axios.get('https://backend.mycaretrading.com/admin/blog/popular')
         ]);
 
@@ -34,15 +52,18 @@ const ReadBlog = () => {
         setSameCategoryBlogs(sameCategoryResponse.data);
         setPopularBlogs(popularResponse.data);
 
+        if (blogData.tags) {
+          setTagArray(blogData.tags.split(','));
+        }
       } catch (error) {
         console.error('Error fetching additional blog data:', error);
       }
     };
 
     fetchAdditionalData();
-  }, [initialBlogData]);
+  }, [blogData.category]);
 
-  console.log(blogData, "dsksdskjnd");
+  if (loading) return <div>Loading...</div>;
 
   return (
     <>
@@ -113,7 +134,7 @@ const ReadBlog = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-3 text-left"> Latest Blogs</h3>
+              <h3 className="text-lg font-bold mb-3 text-left">Latest Blogs</h3>
               <div className="space-y-3">
                 {latestBlogs.map(blog => (
                   <div key={blog._id} className="flex items-center space-x-3">
