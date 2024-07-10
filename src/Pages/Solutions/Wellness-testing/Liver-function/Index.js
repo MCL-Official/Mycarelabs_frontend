@@ -4,6 +4,7 @@ import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
 import { DisappearingFeatures } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/DisappearingFeatures';
 import Sample from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/Sample';
+import { FiftyFiftyHero } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/FiftyFiftyHero';
 
 const liverFunctionalityTestData = [
   {
@@ -115,6 +116,7 @@ const Index = () => {
   return (
     <div>
       <Sample/>
+      <FiftyFiftyHero/>
       {/* <DisappearingFeatures/> */}
       {/* {liverFunctionalityTestData.map((data, index) => (
         <AnemiaTesting

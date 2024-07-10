@@ -1,26 +1,52 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Helmet } from "react-helmet";
+
+const SkeletonLoader = () => {
+  return (
+    <div className="w-full mx-auto group sm:max-w-sm animate-pulse">
+      <div className="h-48 bg-gray-300 rounded-lg"></div>
+      <div className="mt-3 space-y-2">
+        <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+        <div className="h-6 bg-gray-300 rounded"></div>
+        <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+      </div>
+    </div>
+  );
+};
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Use 'smooth' for smooth scrolling, 'auto' for instant scrolling
+  });
+};
 
 
 const Blogs = () => {
   const [blogData, setBlogData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(false);
   const blogsPerPage = 9;
   const navigate = useNavigate();
 
   useEffect(() => {
-    const getBlogData = async () => {
+    const getBlogData = async (page) => {
+      setLoading(true);
       try {
-        const response = await axios.get('https://backend.mycaretrading.com/admin/blog'); // Adjust the URL as needed
-        setBlogData(response.data);
+        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`);
+        setBlogData(response.data.blogs);
+        setCurrentPage(response.data.currentPage);
+        setTotalPages(response.data.totalPages);
       } catch (error) {
         console.error('Error fetching blog data:', error);
+      } finally {
+        setLoading(false);
       }
     };
-    getBlogData();
-  }, []);
+    getBlogData(currentPage);
+  }, [currentPage]);
 
   const handleNavigation = (blogId, blogName) => {
     if (!blogName) {
@@ -36,34 +62,22 @@ const Blogs = () => {
     navigate(`/readBlog/${encodedBlogName}`, { state: { blog_id: blogId } });
   };
 
-  // Get current blogs
-  const indexOfLastBlog = currentPage * blogsPerPage;
-  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = blogData?.slice(indexOfFirstBlog, indexOfLastBlog);
-
-  const totalPages = Math.ceil(blogData.length / blogsPerPage);
-
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
+    scrollToTop();
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
+    scrollToTop();
   };
 
   return (
     <section className="py-32">
-      
-     <Helmet>
-        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
-        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
-        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
-        <meta name="author" content="My Care Labs" />
-      </Helmet>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
           <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">Latest blog posts</h1>
@@ -86,26 +100,25 @@ const Blogs = () => {
         </div>
 
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-  {currentBlogs?.map((item) => (
-    <li className="w-full mx-auto group sm:max-w-sm" key={item._id}>
-      <a href="#" onClick={() => handleNavigation(item._id, item.name)} className="block no-underline">
-        <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full rounded-lg" />
-        <div className="mt-3 space-y-2">
-          <span className="block text-indigo-600 text-sm">{item.date}</span>
-          <h3 className="text-xl text-gray-800 duration-150 group-hover:text-indigo-600 font-bold">
-            {item.name}
-          </h3>
-          <div className="prose text-left">
-            <div dangerouslySetInnerHTML={{ __html: item.blog_short_content1 }}></div>
-          </div>
-        </div>
-      </a>
-    </li>
-  ))}
-</ul>
-
-
-
+          {loading
+            ? Array.from({ length: blogsPerPage }).map((_, index) => <SkeletonLoader key={index} />)
+            : blogData?.map((item) => (
+                <li className="w-full mx-auto group sm:max-w-sm" key={item._id}>
+                  <a href="#" onClick={() => handleNavigation(item._id, item.name)}>
+                    <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full rounded-lg" />
+                    <div className="mt-3 space-y-2">
+                      <span className="block text-indigo-600 text-sm">{item.date}</span>
+                      <h3 className="text-lg text-left text-gray-800 duration-150 group-hover:text-indigo-600 font-bold mb-2">
+              {item.name}
+            </h3>
+            <div className="prose text-left text-gray-600">
+              <div dangerouslySetInnerHTML={{ __html: item.blog_short_content1 }}></div>
+            </div>
+                    </div>
+                  </a>
+                </li>
+              ))}
+        </ul>
 
         <div className="flex justify-center mt-10">
           <button
