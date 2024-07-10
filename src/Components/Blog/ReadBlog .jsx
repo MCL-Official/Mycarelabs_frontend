@@ -1,38 +1,69 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams,useLocation } from 'react-router-dom';
-// import { useLocation, useParams } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import QuoteCard from './QuoteCard'; // Adjust the import path as necessary
 
 const ReadBlog = () => {
-  const navigate = useNavigate();
   const location = useLocation();
-  const { blog_id } = location.state || {};
-  // const { blog_id } = useParams(); // Get blog_id from URL parameters
-  const [blogData, setBlogData] = useState({});
-  const [seoData, setSeoData] = useState({});
+  const { id } = useParams();
+  const { blogData: initialBlogData } = location.state || {};
+  const [blogData, setBlogData] = useState(initialBlogData || {});
   const [tagArray, setTagArray] = useState([]);
-  
-  console.log(blog_id,"sdkjdsbndsn");
+  const [randomBlogs, setRandomBlogs] = useState([]);
+  const [latestBlogs, setLatestBlogs] = useState([]);
+  const [sameCategoryBlogs, setSameCategoryBlogs] = useState([]);
+  const [popularBlogs, setPopularBlogs] = useState([]);
+  const [loading, setLoading] = useState(!initialBlogData);
 
   useEffect(() => {
-    const getBlogData = async () => {
-      try {
-        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/${blog_id}`);
-        setBlogData(response.data);
-        if (response.data.tags) {
-          setTagArray(response.data.tags.split(','));
+    const fetchBlogData = async () => {
+      console.log(initialBlogData,":sdjhgjhvbdsjbsdvhjb");
+      if (!initialBlogData) {
+        try {
+          const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/routename/${id}`);
+          const data = response.data;
+          setBlogData(data);
+          setLoading(false);
+        } catch (error) {
+          console.error('Error fetching blog data:', error);
+          setLoading(false);
         }
-      } catch (error) {
-        console.error('Error fetching blog data:', error);
       }
     };
 
-    getBlogData();
-  }, [blog_id]);
+    fetchBlogData();
+  }, [id, initialBlogData]);
 
-  console.log(blogData, "dsksdskjnd");
+  useEffect(() => {
+    if (!blogData.category) return;
+
+    const fetchAdditionalData = async () => {
+      try {
+        const [randomResponse, latestResponse, sameCategoryResponse, popularResponse] = await Promise.all([
+          axios.get('https://backend.mycaretrading.com/admin/blog/random'),
+          axios.get('https://backend.mycaretrading.com/admin/blog/latest'),
+          axios.get(`https://backend.mycaretrading.com/admin/blog/category/${blogData.category}`),
+          axios.get('https://backend.mycaretrading.com/admin/blog/popular')
+        ]);
+
+        setRandomBlogs(randomResponse.data);
+        setLatestBlogs(latestResponse.data);
+        setSameCategoryBlogs(sameCategoryResponse.data);
+        setPopularBlogs(popularResponse.data);
+
+        if (blogData.tags) {
+          setTagArray(blogData.tags.split(','));
+        }
+      } catch (error) {
+        console.error('Error fetching additional blog data:', error);
+      }
+    };
+
+    fetchAdditionalData();
+  }, [blogData.category]);
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <>
@@ -40,7 +71,7 @@ const ReadBlog = () => {
         <title>{blogData.meta_title}</title>
         <meta name="description" content={blogData.meta_description} />
         <meta name="tags" content={blogData.meta_tags} />
-        <meta name="robots" content={seoData.metaKey} />
+        <meta name="robots" content="index, follow" />
       </Helmet>
       <div className="container mx-auto mt-5 px-4">
         <div className="relative w-full h-[70vh] mb-3">
@@ -57,7 +88,7 @@ const ReadBlog = () => {
             <h1 className="text-3xl font-bold mb-3 text-left">{blogData.name}</h1>
             <div className="text-gray-600 mb-5 text-left flex justify-between">
               <p>Category: <span className="text-blue-600">{blogData.category}</span></p>
-              <p>Published on: <span className="text-gray-600">{blogData.createdAt}</span></p>
+              <p>Published on: <span className="text-gray-600">{new Date(blogData.createdAt).toLocaleDateString()}</span></p>
             </div>
             <div className="flex gap-2 mb-3 text-left">
               {tagArray.length > 0 &&
@@ -89,29 +120,59 @@ const ReadBlog = () => {
               <p className="text-xs mt-3">Don't worry, we don't spam</p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-3 text-left">Popular Articles</h3>
+              <h3 className="text-lg font-bold mb-3 text-left">Popular Blogs</h3>
               <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg" alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
-                  <div className="text-left">
-                    <h4 className="text-md font-bold">Create engaging online courses</h4>
-                    <p className="text-xs">By Glomiya Lucy</p>
+                {popularBlogs.map(blog => (
+                  <div key={blog._id} className="flex items-center space-x-3">
+                    <img src={blog.banner_image} alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                    <div className="text-left">
+                      <h4 className="text-md font-bold">{blog.name}</h4>
+                      <p className="text-xs">By {blog.added_by}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg" alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
-                  <div className="text-left">
-                    <h4 className="text-md font-bold">The ultimate formula for launching online course</h4>
-                    <p className="text-xs">By Andrio Jeson</p>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-3 text-left">Latest Blogs</h3>
+              <div className="space-y-3">
+                {latestBlogs.map(blog => (
+                  <div key={blog._id} className="flex items-center space-x-3">
+                    <img src={blog.banner_image} alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                    <div className="text-left">
+                      <h4 className="text-md font-bold">{blog.name}</h4>
+                      <p className="text-xs">By {blog.added_by}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <img src="http://165.22.223.26/jouls/RID1719600979514.jpg" alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
-                  <div className="text-left">
-                    <h4 className="text-md font-bold">50 Best web design tips & tricks</h4>
-                    <p className="text-xs">By Unknown</p>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-3 text-left">Random Articles</h3>
+              <div className="space-y-3">
+                {randomBlogs.map(blog => (
+                  <div key={blog._id} className="flex items-center space-x-3">
+                    <img src={blog.banner_image} alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                    <div className="text-left">
+                      <h4 className="text-md font-bold">{blog.name}</h4>
+                      <p className="text-xs">By {blog.added_by}</p>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-3 text-left">Same Category Blogs</h3>
+              <div className="space-y-3">
+                {sameCategoryBlogs.map(blog => (
+                  <div key={blog._id} className="flex items-center space-x-3">
+                    <img src={blog.banner_image} alt="Article Thumbnail" className="w-16 h-16 object-cover rounded-lg" />
+                    <div className="text-left">
+                      <h4 className="text-md font-bold">{blog.name}</h4>
+                      <p className="text-xs">By {blog.added_by}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

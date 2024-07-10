@@ -5,26 +5,26 @@ import { AnimatePresence, motion } from "framer-motion";
 const AccordionSolutions = () => {
   const [open, setOpen] = useState(solutions[0].id);
   const imgSrc = solutions.find((s) => s.id === open)?.imgSrc;
+
   return (
     <section className="px-8 py-12 bg-white">
-      <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px]">
+      <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_1fr]">
         <div>
           <h3 className="text-4xl font-bold mb-8">Solutions</h3>
           <div className="flex flex-col gap-4">
-            {solutions.map((q) => {
-              return (
-                <Solution {...q} key={q.id} open={open} setOpen={setOpen} index={q.id} />
-              );
-            })}
+            {solutions.map((q) => (
+              <Solution {...q} key={q.id} open={open} setOpen={setOpen} index={q.id} />
+            ))}
           </div>
         </div>
+
         <AnimatePresence mode="wait">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             key={imgSrc}
-            className="bg-slate-300 rounded-2xl aspect-[4/3] lg:aspect-auto"
+            className="bg-slate-300 rounded-2xl h-full"
             style={{
               backgroundImage: `url(${imgSrc})`,
               backgroundPosition: "center",
@@ -104,7 +104,7 @@ const solutions = [
     description:
       "The Anticonvulsant Test is a diagnostic procedure designed to measure the levels of Anticonvulsant in the blood. Anticonvulsant is an anticonvulsant and mood-stabilizing medication prescribed to manage epilepsy, bipolar disorder, and certain types of nerve pain.",
     imgSrc:
-      "https://media2.giphy.com/media/SsTcO55LJDBsI/giphy.gif?cid=ecf05e47hfid50hu34mzkabzoy46hrftyl6g6656uygzmnpy&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://img.freepik.com/free-vector/blood-research-concept-illustration_114360-24763.jpg?t=st=1719954685~exp=1719958285~hmac=796ba3b38bdae9308915de0e3a4bd4791914c7fb5e57eeab14ba4006957a0974&w=1800",
   },
   {
     id: 2,
@@ -113,22 +113,22 @@ const solutions = [
       `Optimizing Medication Management: The primary purpose of Anticonvulsant Tests is to optimize the management of Anticonvulsant medication  
       Ensuring Therapeutic Efficacy: Maintaining Anticonvulsant levels within the therapeutic range is essential for its efficacy in treating conditions such as epilepsy and nerve pain`,
     imgSrc:
-      "https://media3.giphy.com/media/3oz8xR9wKr8TaazlQc/giphy.gif?cid=ecf05e47izzshtedbk9y9dv6f5yvdsbakp7tth2n58vsdd7p&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",
   },
   {
     id: 3,
-    title: "Why Choose Care Labs for Anticonvulsant Testing?",
+    title: "Why Choose Care Labs?",
     description:
       "Our state-of-the-art laboratory equipment and skilled technicians ensure precise and dependable Anticonvulsant Test results alos have Convenient Location",
     imgSrc:
-      "https://media1.giphy.com/media/VkMV9TldsPd28/giphy.gif?cid=ecf05e478ipd21u861g034loyqpc66eseytcl7lzjbk1wqrh&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://img.freepik.com/free-photo/friendly-hospital-phlebotomist-collecting-blood-sample-from-patient-lab-preparation-blood-test-by-female-doctor-medical-uniform-table-white-bright-room_657921-879.jpg?t=st=1719954878~exp=1719958478~hmac=ac2da6b69d4364b72d893f73be159b5d70705531a4c4d786a19868165d1f93b0&w=2000",
   },
   {
     id: 4,
-    title: "Why Choose Care Labs for Anticonvulsant Testing?",
+    title: "The Anticonvulsant Testing Process!",
     description:
       "Our state-of-the-art laboratory equipment and skilled technicians ensure precise and dependable Anticonvulsant Test results alos have Convenient Location",
     imgSrc:
-      "https://media1.giphy.com/media/VkMV9TldsPd28/giphy.gif?cid=ecf05e478ipd21u861g034loyqpc66eseytcl7lzjbk1wqrh&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://img.freepik.com/free-photo/two-doctors-lab_23-2147822684.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user",
   },
 ];

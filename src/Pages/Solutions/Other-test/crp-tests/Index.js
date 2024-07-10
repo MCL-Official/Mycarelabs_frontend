@@ -33,7 +33,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
         
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
-                <a href="/bookTest"
+                <a href="/covid-test-locations"
                     class="w-full flex no-underline items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-600 md:py-4 md:text-lg md:px-10">
                     Book Appointment
                 </a>
@@ -449,7 +449,7 @@ The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to
       </div>
     </section>
 
-<Faq1/>
+{/* <Faq1/> */}
 <CardCarousel/>
 
   <div class="container flex items-center bg-blue-900 rounded-full	 my-5">

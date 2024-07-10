@@ -5,7 +5,7 @@ const NeumorphismButton = ({ slug, cardData }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/bookTest/${slug}`, { state: { cardData } });
+    navigate(`/covid-test-locations/${slug}`, { state: { cardData } });
     console.log("Navigating with card data:", cardData);
   };
 

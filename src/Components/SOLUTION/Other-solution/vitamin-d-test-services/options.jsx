@@ -85,7 +85,7 @@ export const OPTIONS = [
     title: "Reliable Results",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Jeff"
+        imgSrc="https://img.freepik.com/free-photo/two-doctors-lab_23-2147822684.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user"
         name="Reliable Results"
         title="CEO"
         company="The Company"
@@ -97,7 +97,7 @@ export const OPTIONS = [
     title: "Experienced Professionals",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Dan"
+        imgSrc="https://img.freepik.com/free-vector/blood-research-concept-illustration_114360-24763.jpg?t=st=1719954685~exp=1719958285~hmac=796ba3b38bdae9308915de0e3a4bd4791914c7fb5e57eeab14ba4006957a0974&w=1800"
         name="Dan S."
         title="Experienced Professionals"
         company="@TheChannel"
@@ -109,7 +109,7 @@ export const OPTIONS = [
     title: "Convenient Location",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Carey"
+        imgSrc="https://img.freepik.com/free-photo/two-doctors-lab_23-2147822684.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user"
         name="Convenient Location"
         title="Writer"
         company="theblog.com"
@@ -121,7 +121,7 @@ export const OPTIONS = [
     title: "Cutting-edge Facilities",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Dani"
+        imgSrc="https://img.freepik.com/free-photo/group-doctors-cooperating-while-examining-xray-patient-hopital_637285-11164.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user"
         name="Cutting-edge Facilities"
         title="Author"
         company="Books About Things"
@@ -133,7 +133,7 @@ export const OPTIONS = [
     title: "Scheduling",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Phil"
+        imgSrc="https://img.freepik.com/free-photo/doctor-is-going-examine-his-patient-using-his-stethoscope-sitting-people_1150-6561.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user"
         name="Scheduling"
         title="UI/UX Design"
         company="The Other Company"
@@ -145,7 +145,7 @@ export const OPTIONS = [
     title: "Sample Collection",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Stetson"
+        imgSrc="https://img.freepik.com/free-vector/blood-research-concept-illustration_114360-24763.jpg?t=st=1719954685~exp=1719958285~hmac=796ba3b38bdae9308915de0e3a4bd4791914c7fb5e57eeab14ba4006957a0974&w=1800"
         name="Sample Collection"
         title="Consultant"
         company="The Company Company"
@@ -157,7 +157,7 @@ export const OPTIONS = [
     title: "Laboratory Analysis",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Patty"
+        imgSrc="https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000"
         name="Laboratory Analysis"
         title="Photographer"
         company="@ThePictureLady"
@@ -169,7 +169,7 @@ export const OPTIONS = [
     title: "Results Delivery",
     Content: () => (
       <Testimonial
-        imgSrc="https://api.dicebear.com/8.x/notionists/svg?seed=Kert"
+        imgSrc="https://img.freepik.com/free-photo/two-doctors-lab_23-2147822684.jpg?uid=R151749250&ga=GA1.1.386726752.1715621031&semt=ais_user"
         name="Results Delivery"
         title="Film Maker"
         company="@MovieDude"

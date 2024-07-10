@@ -25,6 +25,7 @@ import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
 import TestingGroup from "./Pages/Solutions/Infectious-desiase/Testing-for-group/TestingGroup";
 import TestingSchool from "./Pages/Solutions/Infectious-desiase/Testing-school/TestingSchool";
 import Anemia from "./Pages/Solutions/Wellness-testing/Anemis-testing/Index";
+import Solution from "./Pages/Solutions/Wellness-testing/Solution";
 import Basic from "./Pages/Solutions/Wellness-testing/Basic-metabolic/Index";
 import CMP from "./Pages/Solutions/Wellness-testing/Comprensive-metabolic/Index";
 import Liver from "./Pages/Solutions/Wellness-testing/Liver-function/Index";
@@ -53,25 +54,25 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/faq" element={<Faq/>} />
-          <Route path="/bookTest" element={<BookTest />} />
-          <Route path="/bookTest/:id" element={<BookTestDetails />} />
+          <Route path="/covid-test-locations" element={<BookTest />} />
+          <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
           <Route path="/Blogs" element={<Blogs />} />
           <Route path="/readBlog/:id" element={<ReadBlog />} />
-          <Route path="/infectious-disease-testing" element={<Infectious/>} />
-          <Route path="/travel-pcr-testing" element={<Travel/>} />
-          <Route path="/home-pcr-test-kit" element={<Covid19/>} />
-          <Route path="/group-testing" element={<TestingGroup/>} />
-          <Route path="/school-testing" element={<TestingSchool/>} />
-          <Route path="/nursing-home-testing" element={<TestingNurcing/>} />
-          <Route path="/testing-solutions/wellness-testing" element={<TestingSchool/>} />
-          <Route path="/testing-solutions/anemia-profile-test" element={<Anemia/>} />
-          <Route path="/testing-solutions/basic-metabolic-panel" element={<Basic/>} />
-          <Route path="/testing-solutions/liver-function-tests" element={<Liver/>} />
-          <Route path="/testing-solutions/renal-function-test" element={<Renal/>} />
-          <Route path="/testing-solutions/thyroid-function-test" element={<Thyroid/>} />
-          <Route path="/testing-solutions/comprehensive-metabolic-panel" element={<CMP/>} />
-          <Route path="/testing-solutions/oncology-testing-solutions" element={<Oncology/>} />
-          <Route path="/testing-solutions/toxicology-testing-solutions" element={<Toxicology/>} />
+          <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious/>} />
+          <Route path="/travel-testing/" element={<Travel/>} />
+          <Route path="/covid-rt-pcr-home-test-kit/" element={<Covid19/>} />
+          <Route path="/group-covid-testing/" element={<TestingGroup/>} />
+          <Route path="/testing-for-schools/" element={<TestingSchool/>} />
+          <Route path="/testing-for-nursing-homes/" element={<TestingNurcing/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/" element={<Solution/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" element={<Anemia/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" element={<Basic/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" element={<Liver/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" element={<Renal/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP/>} />
+          <Route path="//testing-solutions/oncology-testing-solutions/" element={<Oncology/>} />
+          <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology/>} />
           <Route path="/creatine-kinase" element={<Index/>} />
           <Route path="/crp-tests" element={<Index1/>} />
           <Route path="/free-psa-testing" element={<Index2/>} />
