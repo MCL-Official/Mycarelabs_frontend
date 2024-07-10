@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ShuffleHero = () => {
+  const navigate=useNavigate()
+  const sample =()=>{
+navigate('/covid-test-locations')
+  }
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
@@ -14,7 +19,7 @@ const ShuffleHero = () => {
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
         Magnesium, an essential mineral, plays a pivotal role in various biochemical processes within the body. From nerve function and muscle contraction to maintaining a healthy heart rhythm, magnesium is integral to our overall well-being. Monitoring magnesium levels is crucial, and one effective way to achieve this is through a magnesium blood test. In this comprehensive guide, we’ll delve into the significance of magnesium, the reasons for testing, interpreting results, and the implications for your health.
         </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={sample}>
           Book Now 
         </button>
       </div>

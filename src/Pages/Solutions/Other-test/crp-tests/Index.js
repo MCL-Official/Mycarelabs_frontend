@@ -17,7 +17,7 @@ const Index = () => {
       </Helmet>
       <Hero/>
       <Content/>
-      <Faq1/>
+      {/* <Faq1/> */}
       {/* <section class="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 <div

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function HeroAnti () {
     return (
         <section>
@@ -13,12 +15,12 @@ export function HeroAnti () {
                     Anticonvulsants, also known as antiepileptic drugs (AEDs) or antiseizure drugs, are a diverse group of pharmacological agents used in the treatment of epileptic seizures. These medications help suppress the excessive rapid firing of neurons during seizures and prevent the spread of the seizure within the brain¹. Some anticonvulsants also act as mood stabilizers and are used in the treatment of bipolar disorder and borderline personality disorder. Additionally, they are increasingly being used for the treatment of neuropathic pain. However, it’s important to note that anticonvulsants provide symptomatic treatment only and have not been demonstrated to alter the course of epilepsy itself.
                     </p>
                     <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                        <a href="javascript:void(0)" className="block py-2 px-4 text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
+                        <Link to="/covid-test-locations" className="block py-2 px-4 text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                             Book Apointment
-                        </a>
-                        <a href="javascript:void(0)" className="block py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg">
+                        </Link>
+                        <Link to="/about" className="block py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg">
                             Get access
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="mt-14">

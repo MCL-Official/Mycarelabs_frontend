@@ -45,6 +45,7 @@ import {
   SiGenius,
   SiGodaddy,
 } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 
 export const NeuHero = () => {
   return (
@@ -59,6 +60,10 @@ export const NeuHero = () => {
 };
 
 const Copy = () => {
+  const navigate= useNavigate();
+  const sample=()=>{
+    navigate('/covid-test-locations')
+  }
   return (
     <>
       <div className="mb-1.5 rounded-full bg-zinc-600">
@@ -83,7 +88,7 @@ const Copy = () => {
       <p className="mx-auto my-4 max-w-3xl text-center text-base leading-relaxed md:my-6 md:text-xl md:leading-relaxed">
       Among our many specialized services that we offer is the Vitamin D test, a crucial assessment tool for maintaining optimal health. Our advanced facilities and experienced professionals ensure reliable results, contributing to your overall well-being.
       </p>
-      <button className="rounded-lg bg-indigo-600 p-3 uppercase text-white transition-colors hover:bg-indigo-700">
+      <button className="rounded-lg bg-indigo-600 p-3 uppercase text-white transition-colors hover:bg-indigo-700" onClick={sample}>
         <span className="font-bold">Book </span> Appointment
       </button>
     </>

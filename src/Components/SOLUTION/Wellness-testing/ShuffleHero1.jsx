@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Sample from "./basic-metabolic-panel/Sample";
+import { useNavigate } from "react-router-dom";
 
 const ShuffleHero1 = () => {
+  const navigate = useNavigate()
+  const Sample= ()=>{
+    navigate("/covid-test-locations")
+  }
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
@@ -11,7 +17,7 @@ const ShuffleHero1 = () => {
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
         My Care Labs provides routine blood work for both our regular patients and clients. Call or book now to gain a better understanding of your health.        </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={Sample}>
           Book Now 
         </button>
         <p className="text-xs md:text-sm font-medium mt-4 text-left">
