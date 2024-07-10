@@ -98,7 +98,7 @@ const ReadBlog = () => {
                   </div>
                 ))}
             </div>
-            <div className="prose text-left">
+            <div className="prose text-justify">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_content }}></div>
             </div>
 
