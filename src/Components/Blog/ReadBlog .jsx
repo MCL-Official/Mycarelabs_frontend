@@ -5,36 +5,27 @@ import axios from 'axios';
 import QuoteCard from './QuoteCard'; // Adjust the import path as necessary
 
 const ReadBlog = () => {
-  const navigate = useNavigate();
   const location = useLocation();
-  const { blog_id } = location.state || {};
-  const [blogData, setBlogData] = useState({});
+  const { blogData: initialBlogData } = location.state || {};
+  const [blogData, setBlogData] = useState(initialBlogData || {});
   const [tagArray, setTagArray] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
   const [latestBlogs, setLatestBlogs] = useState([]);
   const [sameCategoryBlogs, setSameCategoryBlogs] = useState([]);
   const [popularBlogs, setPopularBlogs] = useState([]);
 
-  console.log(blog_id, "sdkjdsbndsn");
-
   useEffect(() => {
-    const getBlogData = async () => {
+    if (!initialBlogData) return;
+
+    // setTagArray(initialBlogData.tags.split(','));
+
+    const fetchAdditionalData = async () => {
       try {
-        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/${blog_id}`);
-        console.log(response,"ksdvhbdsvhjsbhdjsvb");
-        setBlogData(response?.data);
-        // if (response?.data?.tags) {
-        //   setTagArray(response?.data?.tags?.split(','));
-        // }
-
-        // Update views count
-        // await axios.put(`https://backend.mycaretrading.com/admin/blog/${blog_id}/update-views`);
-
         // Fetch additional data
         const [randomResponse, latestResponse, sameCategoryResponse, popularResponse] = await Promise.all([
           axios.get('https://backend.mycaretrading.com/admin/blog/random'),
           axios.get('https://backend.mycaretrading.com/admin/blog/latest'),
-          axios.get(`https://backend.mycaretrading.com/admin/blog/category/${response.data.category}`),
+          axios.get(`https://backend.mycaretrading.com/admin/blog/category/${initialBlogData.category}`),
           axios.get('https://backend.mycaretrading.com/admin/blog/popular')
         ]);
 
@@ -44,12 +35,12 @@ const ReadBlog = () => {
         setPopularBlogs(popularResponse.data);
 
       } catch (error) {
-        console.error('Error fetching blog data:', error);
+        console.error('Error fetching additional blog data:', error);
       }
     };
 
-    getBlogData();
-  }, [blog_id]);
+    fetchAdditionalData();
+  }, [initialBlogData]);
 
   console.log(blogData, "dsksdskjnd");
 
