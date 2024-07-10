@@ -7,6 +7,7 @@ import BlogPostCarousel from '../../../Components/HoverCard/BlogPostCarousel'
 import TabsFeatures1 from '../../../Components/SOLUTION/Wellness-testing/TabsFeatures1'
 import GetStartedCard from '../../../Components/GetStartedCard/Getstarted'
 import FaqWellness from '../../Faq/FaqWellness'
+import FaqWellness2 from '../../Faq/FaqWellness2'
 
 const Solution = () => {
   return (
@@ -17,6 +18,7 @@ const Solution = () => {
 <ShuffleHero1/>
 <DateTimePicker/>
   <TabsFeatures1/>
+<FaqWellness2/>
 <FaqWellness/>
 <BlogPostCarousel/>
 <GetStartedCard/>

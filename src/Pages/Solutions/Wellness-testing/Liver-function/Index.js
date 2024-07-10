@@ -6,8 +6,6 @@ import { DisappearingFeatures } from '../../../../Components/SOLUTION/Wellness-t
 import Sample from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/Sample';
 
 import { Helmet } from "react-helmet";
-
-=======
 import { FiftyFiftyHero } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/FiftyFiftyHero';
 
 

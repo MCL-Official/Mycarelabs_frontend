@@ -5,10 +5,8 @@ const ShuffleHero1 = () => {
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
-          Better every day
-        </span>
-        <h3 className="text-4xl md:text-6xl font-semibold">
+       
+        <h3 className="text-4xl md:text-6xl font-semibold text-black">
          Wellness Testing Solutions
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
@@ -16,6 +14,12 @@ const ShuffleHero1 = () => {
         <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
           Book Now 
         </button>
+        <p className="text-xs md:text-sm font-medium mt-4 text-left">
+  <span className="text-orange-500">ATTENTION: </span>
+  <span className="text-black">
+    wellness testing patients: If you are registering for any of the following panels (Renal Function, CMP, BMP, or Lipid), please make sure you are fasting for a minimum of 8 hours before your appointment. Water is permitted during the fasting period. Additionally, please consult with your doctor if you should avoid taking any medication for our wellness test.   </span>
+</p>
+
       </div>
       <ShuffleGrid />
     </section>

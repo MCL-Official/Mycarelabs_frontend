@@ -44,7 +44,7 @@ import {
       });
     }, []);
   
-    const backgroundImage = useMotionTemplate`conic-gradient(from ${turn}turn, #6EE7B700 75%, #6EE7B7 100%)`;
+    const backgroundImage = useMotionTemplate`conic-gradient(from ${turn}turn, #6EE7B700 75%, #60A5FA 100%)`;
   
     return (
       <form
@@ -62,7 +62,7 @@ import {
         <button
           onClick={(e) => e.stopPropagation()}
           type="submit"
-          className="group flex shrink-0 items-center gap-1.5 bg-emerald-300 px-4 py-3 text-sm font-medium text-neutral-900 transition-transform active:scale-[0.985]"
+          className="group flex shrink-0 items-center gap-1.5 bg-blue-400 px-4 py-3 text-sm font-medium text-neutral-900 transition-transform active:scale-[0.985]"
         >
           <span>Join Waitlist</span>
           <FiArrowRight className="-mr-4 opacity-0 transition-all group-hover:-mr-0 group-hover:opacity-100" />
@@ -181,7 +181,7 @@ import {
     {
       content: (
         <p>
-          <a href="#" className="text-emerald-300 hover:underline">
+          <a href="#" className="text-blue-400 hover:underline">
             Alanine Aminotransferase (ALT) :{" "}
           </a>
           ALT is an enzyme primarily found in liver cells. Elevated levels of ALT in the bloodstream indicate liver damage or injury, commonly associated with conditions like hepatitis or liver disease. It’s crucial in assessing liver health and monitoring the progression of liver diseases.

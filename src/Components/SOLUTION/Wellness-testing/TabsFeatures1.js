@@ -86,10 +86,9 @@ const Tab = ({ selected, Icon, title, setSelected, tabNum }) => {
 const Feature1 = () => (
     <div className="flex flex-col md:flex-row items-center p-4 text-left">
       <div className="w-full md:w-1/2  md:ml-4 mb-4 md:mb-0">
-        <h2 className="text-2xl font-bold mb-4">1. Wellness Testing</h2>
+        <h2 className="text-2xl font-bold mb-4">1. Comprehensive Wellness Testing</h2>
         <p className="mb-4">
-        My Care Labs brings the lab to you with our mobile testing. Organizations such as senior care homes, hospices, etc can simply book their scheduled testing day and our medical staff will be dispatched to your facility for and easy collection.
-        </p>
+        At My Care Labs, we believe in the power of proactive health management. Our wellness testing services offer a detailed analysis of your health through routine blood work. From cholesterol levels and blood sugar to vitamin deficiencies and hormonal imbalances, our tests provide critical insights to help you and your healthcare provider make informed decisions.        </p>
       </div>
       <div className="w-full md:w-1/2">
         <ExampleFeature Icon={FiSearch} />
@@ -101,11 +100,9 @@ const Feature1 = () => (
   const Feature2 = () => (
     <div className="flex flex-col md:flex-row-reverse items-center p-4 text-left">
       <div className="w-full md:w-1/2 md:ml-4 mb-4 md:mb-0">
-        <h2 className="text-2xl font-bold mb-4">2. Men’s Wellness Panels</h2>
+        <h2 className="text-2xl font-bold mb-4">2. Personalized Health Monitoring</h2>
         <p className="mb-4">
-        Comprehensive metabolic panel (CMP): This panel measures glucose levels, electrolyte balance, liver and kidney function, and other important indicators of overall health.
-        </p>
-        <p className="mb-4">
+        Understanding your health should never be a guessing game. We offer personalized wellness testing that goes beyond routine blood work. Our state-of-the-art laboratory and experienced medical professionals deliver accurate results, tailored to your unique health needs. Whether you're monitoring chronic conditions or taking preventive measures, our tests are designed to provide clarity. </p>        {/* <p className="mb-4">
         Lipid panel: This panel measures cholesterol levels and triglycerides, which are important indicators of heart health.   
         </p>
         <p className="mb-4">
@@ -113,7 +110,7 @@ const Feature1 = () => (
         </p>
         <p className="mb-4">
         Testosterone panel: This panel measures testosterone levels, which can be important for men’s reproductive health and overall well-being.     
-        </p>
+        </p> */}
       </div>
       <div className="w-full md:w-1/2">
         <ExampleFeature2 Icon={FiSave} />
@@ -125,16 +122,17 @@ const Feature1 = () => (
 const Feature3 = () => (
   <div className="flex flex-col md:flex-row items-center p-4">
     <div className="w-full md:w-1/2  md:ml-4 mb-4 md:mb-0">
-      <h2 className="text-2xl font-bold mb-4">3. Women’s Wellness Panels</h2>
-      <p className="mb-4">Comprehensive metabolic panel (CMP): This panel measures glucose levels, electrolyte balance, liver and kidney function, and other important indicators of overall health</p>
-      <p className="mb-3">
+      <h2 className="text-2xl font-bold mb-4 mr-3 text-left">3. Routine Blood Work for Preventive Care</h2>
+      <p className="mb-4 mr-3 text-left">
+      Regular health check-ups are essential for early detection and prevention of diseases. Our routine blood work services are your foundation of preventive care. We offer a variety of tests that screen for common health issues, helping you catch potential problems early. With our user-friendly online portal, accessing your results and tracking your health over time has never been easier.         </p>
+      {/* <p className="mb-3">
       Lipid panel: This panel measures cholesterol levels and triglycerides, which are important indicators of heart health. 
-      </p>
-      <p className="mb-3">
+      </p> */}
+      {/* <p className="mb-3">
       Complete blood count (CBC): This panel measures various components of the blood, including red and white blood cells, platelets, and hemoglobin levels.    </p>
     
       <p className="mb-3">
-      Hormone panel: This panel measures various hormones, including estrogen and progesterone, which can be important for women’s reproductive health and overall well-being.    </p>
+      Hormone panel: This panel measures various hormones, including estrogen and progesterone, which can be important for women’s reproductive health and overall well-being.    </p> */}
     </div>
     <div className="w-full md:w-1/2">
       <ExampleFeature3 Icon={FiMonitor} />
@@ -176,17 +174,17 @@ const Feature5 = () => (
 
 const ExampleFeature = ({ Icon }) => (
   <div className="w-full px-0 py-8 md:px-8">
-     <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-vector/family-protected-from-virus_23-2148554386.jpg?w=740&t=st=1719925251~exp=1719925851~hmac=614929ff6522b239b5e664386d8644a8f30651b89224d1b30310a09a2959b9bb" alt="billboard image" />
+     <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-photo/coronavirus-blood-samples-arrangement-lab_23-2149107259.jpg?ga=GA1.1.386726752.1715621031&semt=ais_user" alt="billboard image" />
   </div>
 );
 const ExampleFeature2 = ({ Icon }) => (
   <div className="w-full px-0 py-8 md:px-8">
-      <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96 space-between" src="https://img.freepik.com/free-vector/virus-cure-concept-illustration_23-2148496475.jpg?w=740&t=st=1719925320~exp=1719925920~hmac=461d7f3a8e8bb8a51bf1f22d319362bc5c13f4c70ef46c62272f309fe8ea07b9" alt="billboard image" />
+      <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96 space-between" src="https://img.freepik.com/free-vector/people-with-healthy-lifestyles-illustration_53876-43170.jpg?ga=GA1.1.386726752.1715621031&semt=ais_user" alt="billboard image" />
       </div>
 );
 const ExampleFeature3 = ({ Icon }) => (
   <div className="w-full px-0 py-8 md:px-8">
-      <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-vector/school-new-normal_23-2148674219.jpg?w=740&t=st=1719924545~exp=1719925145~hmac=59efbfe70ee10aa861026d127565bd330a54636deb2729599ae0c76535a5abdd" alt="billboard image" />
+      <img class="lg:rounded-t-lg sm:rounded-sm xs:rounded-sm  h-70 w-96" src="https://img.freepik.com/free-photo/hand-with-protective-gloves-holding-blood-samples-covid-test_23-2148958363.jpg?ga=GA1.1.386726752.1715621031&semt=ais_user" alt="billboard image" />
 
 </div>
 );
@@ -198,17 +196,17 @@ const ExampleFeature4 = ({ Icon }) => (
 
 const FEATURES = [
   {
-    title: "Wellness Testing",
+    title: "Comprehensive Wellness Testing",
     Icon: FiSearch,
     Feature: Feature1,
   },
   {
-    title: "Men’s Wellness Panels",
+    title: "Personalized Health Monitoring",
     Icon: FiSave,
     Feature: Feature2,
   },
   {
-    title: "Interpreting Magnesium Blood Test Results",
+    title: "Routine Blood Work for Preventive Care",
     Icon: FiMonitor,
     Feature: Feature3,
   },
