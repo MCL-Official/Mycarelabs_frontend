@@ -76,6 +76,15 @@ const Blogs = () => {
     scrollToTop();
   };
 
+
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = String(date.getFullYear()).slice(-2);
+    return `${day}/${month}/${year}`;
+  };
   return (
     <section className="py-32">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -100,24 +109,27 @@ const Blogs = () => {
         </div>
 
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-          {loading
-            ? Array.from({ length: blogsPerPage }).map((_, index) => <SkeletonLoader key={index} />)
-            : blogData?.map((item) => (
-                <li className="w-full mx-auto group sm:max-w-sm" key={item._id}>
-                  <a href="#" onClick={() => handleNavigation(item._id, item.name)}>
-                    <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full rounded-lg" />
-                    <div className="mt-3 space-y-2">
-                      <span className="block text-indigo-600 text-sm">{item.date}</span>
-                      <h3 className="text-lg text-left text-gray-800 duration-150 group-hover:text-indigo-600 font-bold mb-2">
+        {loading
+  ? Array.from({ length: blogsPerPage }).map((_, index) => <SkeletonLoader key={index} />)
+  : blogData?.map((item) => (
+    <li className="w-full mx-auto group sm:max-w-sm bg-white shadow-lg rounded-lg overflow-hidden" key={item._id}>
+        {console.log(item,"sdkhkvbsdhbs")}
+        <a href="#" onClick={() => handleNavigation(item._id, item.name)} className="block no-underline">
+          <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full h-48 object-cover object-center" />
+          <div className="p-4">
+            <h3 className=" text-left text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-bold mb-2">
               {item.name}
             </h3>
             <div className="prose text-left text-gray-600">
               <div dangerouslySetInnerHTML={{ __html: item.blog_short_content1 }}></div>
             </div>
-                    </div>
-                  </a>
-                </li>
-              ))}
+            <span className="block text-right text-indigo-600 text-sm mb-1">{formatDate(item.createdAt)}</span>
+            <span className="block text-left text-indigo-600 text-sm mb-1">{item?.views}</span>
+          </div>
+        </a>
+      </li>
+    ))}
+
         </ul>
 
         <div className="flex justify-center mt-10">
