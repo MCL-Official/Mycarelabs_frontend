@@ -18,7 +18,7 @@ const ReadBlog = () => {
 
   useEffect(() => {
     const fetchBlogData = async () => {
-      console.log(initialBlogData,":sdjhgjhvbdsjbsdvhjb");
+      console.log(initialBlogData, ":sdjhgjhvbdsjbsdvhjb");
       if (!initialBlogData) {
         try {
           const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/routename/${id}`);
@@ -76,8 +76,8 @@ const ReadBlog = () => {
       <div className="container mx-auto mt-5 px-4">
         <div className="relative w-full h-[70vh] mb-3">
           <img src={blogData.banner_image} alt="Blog Banner" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-10 transform -translate-y-1/2 bg-white bg-opacity-60 p-3 text-left text-gray-800 rounded-3 w-full max-w-xs">
-            <div dangerouslySetInnerHTML={{ __html: blogData.banner_content }}></div>
+          <div className="absolute top-1/2  text-justify left-10 transform -translate-y-1/2 bg-white bg-opacity-60 p-3 text-gray-800 rounded-3 w-full max-w-xs">
+            <div className="text-justify" dangerouslySetInnerHTML={{ __html: blogData.banner_content }}></div>
             <p>
               Published By: <span className="text-theme font-bold text-lg">{blogData.added_by}</span>
             </p>
@@ -101,9 +101,9 @@ const ReadBlog = () => {
             <div className="prose text-left">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_content }}></div>
             </div>
-            
+
             <QuoteCard quote="A spring of truth shall flow from it: like a new star it shall scatter the darkness of ignorance, and cause a light heretofore unknown to shine amongst men." author="Andrio Domeco" />
-            
+
             <div className="prose text-left">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_short_content1 }}></div>
             </div>

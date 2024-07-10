@@ -56,8 +56,8 @@ function App() {
           <Route path="/faq" element={<Faq/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
-          <Route path="/Blogs" element={<Blogs />} />
-          <Route path="/readBlog/:id" element={<ReadBlog />} />
+          <Route path="/blog" element={<Blogs />} />
+          <Route path="/blog/:id" element={<ReadBlog />} />
           <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious/>} />
           <Route path="/travel-testing/" element={<Travel/>} />
           <Route path="/covid-rt-pcr-home-test-kit/" element={<Covid19/>} />

@@ -55,15 +55,21 @@ const Blogs = () => {
     try {
       const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/${blogId}`);
       const blogData = response.data;
-      
+     
       const formattedBlogName = blogName
-        .replace(/\s+|\|+|\.|,|:/g, '-') // Replaces spaces, pipes, dots, commas, and colons with hyphens
-        .replace(/-+/g, '-') // Removes consecutive hyphens
-        .toLowerCase();
-      const encodedBlogName = encodeURIComponent(formattedBlogName);
-      console.log('Navigating to:', `/readBlog/${encodedBlogName}`);
+      .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+      .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+      .replace(/-+/g, '-') // Removes consecutive hyphens
+      .replace(/-+$/, '') // Removes trailing hyphens
+      .toLowerCase();
+    
+    // const encodedBlogName = encodeURIComponent(formattedBlogName);
+    
+
+const encodedBlogName = encodeURIComponent(formattedBlogName);
+      console.log('Navigating to:', `/blog/${encodedBlogName}`);
       
-      navigate(`/readBlog/${encodedBlogName}`, { state: { blogData } });
+      navigate(`/blog/${encodedBlogName}`, { state: { blogData } });
     } catch (error) {
       console.error('Error fetching blog data:', error);
     }

@@ -303,7 +303,7 @@ function Navbar() {
 
               <li className="group relative hover:scale-110 duration-300">
                 <Link
-                  to="/Blogs"
+                  to="blog"
                   className={`block no-underline px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0`}
                   onClick={() => handleClick("Blog")}
                 >
