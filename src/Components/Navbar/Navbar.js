@@ -179,7 +179,7 @@ function Navbar() {
                 <a
                   href="#"
                   className={`flex no-underline items-center justify-between w-full px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"}`}
-                  onClick={() => handleButtonClick("bookButton", "/bookTest")}
+                  onClick={() => handleButtonClick("bookButton", "/covid-test-locations")}
                 >
                   COVID-19 Testing Locations
                 </a>
@@ -201,56 +201,56 @@ function Navbar() {
                         className="absolute top-full left-0 transform   mt-1 w-auto bg-blue-100 bg-opacity-95 text-black shadow-lg rounded-lg z-50 flex space-x-12 px-4 py-2 text-left"
                       >
                         <div className="space-y-4 text-left">
-                          <Link to="/infectious-disease-testing" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/infectious-disease-testing-solutions" className="block no-underline text-black hover:text-blue-500">
                             <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Infectious Disease Testing Solutions</h5>
                           </Link>
-                          <Link to="/travel-pcr-testing" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/travel-testing/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Travel PCR Testing</p>
                           </Link>
-                          <Link to="/group-testing" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/group-covid-testing/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Testing for Groups</p>
                           </Link>
-                          <Link to="/school-testing" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-for-schools/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Testing for Schools</p>
                           </Link>
-                          <Link to="/nursing-home-testing" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-for-nursing-homes/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Testing for Nursing Homes</p>
                           </Link>
-                          <Link to="/home-pcr-test-kit" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/covid-rt-pcr-home-test-kit/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">At-Home COVID-19 PCR Test Kit</p>
                           </Link>
                         </div>
                         <div className="border-l-2 border-gray-200 my-auto h-16"></div>
                         <div className="space-y-3 text-left">
-                          <Link to="/testing-solutions/wellness-testing" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/" className="block no-underline text-black hover:text-blue-500">
                             <h5 className="font-bold text-sm whitespace-nowrap hover:text-blue-500">Wellness Testing Solutions</h5>
                           </Link>
-                          <Link to="/testing-solutions/anemia-profile-test" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Anemia Profile Test</p>
                           </Link>
-                          <Link to="/testing-solutions/basic-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Basic Metabolic Panel</p>
                           </Link>
-                          <Link to="/testing-solutions/liver-function-tests" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Liver Function Panel Tests</p>
                           </Link>
-                          <Link to="/testing-solutions/renal-function-test" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Renal Function Panel Test</p>
                           </Link>
-                          <Link to="/testing-solutions/thyroid-function-test" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Thyroid Function Panel Test</p>
                           </Link>
-                          <Link to="/testing-solutions/comprehensive-metabolic-panel" className="block no-underline text-black hover:text-blue-500">
+                          <Link to="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Comprehensive Metabolic Panel (CMP) Test</p>
                           </Link>
                         </div>
                         <div className="border-l-2 border-gray-200 my-auto h-16"></div>
                         <div className="flex flex-col justify-between whitespace-nowrap text-left border-black" style={{ height: '100%' }}>
-                          <Link to="/testing-solutions/toxicology-testing-solutions" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-end">
+                          <Link to="/testing-solutions/toxicology-testing-solutions/" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-end">
                             <h5 className="font-bold text-sm hover:text-blue-500">Toxicology Testing Solutions</h5>
                           </Link>
                           <div className="border-b border-gray-200 my-2 w-full"></div> {/* Add dividing line */}
-                          <Link to="/testing-solutions/oncology-testing-solutions" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-start">
+                          <Link to="/testing-solutions/oncology-testing-solutions/" className="block no-underline text-black hover:text-blue-500 flex-1 flex items-start">
                             <h5 className="font-bold text-sm hover:text-blue-500">Oncology Testing Solutions</h5>
                           </Link>
                         </div>
@@ -303,7 +303,7 @@ function Navbar() {
 
               <li className="group relative hover:scale-110 duration-300">
                 <Link
-                  to="/Blogs"
+                  to="blog"
                   className={`block no-underline px-2 ${textSize} ${textColor === "white" ? "text-white" : "text-black"} border-b border-gray-100 hover:text-blue-700 md:hover:bg-transparent md:border-0 md:p-0`}
                   onClick={() => handleClick("Blog")}
                 >
@@ -332,7 +332,7 @@ function Navbar() {
               >
                 <button
                   className="nav-link navbar-button group relative hover:scale-110 hover:bg-slate-500 duration-300"
-                  onClick={() => handleButtonClick("bookButton", "/bookTest")}
+                  onClick={() => handleButtonClick("bookButton", "/covid-test-locations")}
                   style={{
                     ...linkStyle,
                     backgroundColor:

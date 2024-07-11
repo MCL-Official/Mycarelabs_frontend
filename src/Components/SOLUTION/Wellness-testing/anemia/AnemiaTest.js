@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function AnemiaTest ()  {
     return (
         <section className="relative max-w-screen-xl mx-auto py-4 px-4 md:px-8">
@@ -9,14 +11,14 @@ export function AnemiaTest ()  {
                     </h3>
                     <p className="text-gray-500 leading-relaxed mt-3">
                     Welcome to Care Labs, your trusted medical laboratory in Fremont, California, dedicated to providing accurate and comprehensive diagnostic services. One of our specialized offerings is the Anemia Profile Test, a comprehensive assessment tool designed to evaluate various aspects related to anemia. Our advanced facilities and experienced professionals ensure reliable results, contributing to your overall well-being.                   </p>
-                    <a
+                    <Link
                         className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-                        href="javascript:void()">
+                        to="/covid-test-locations">
                         Book Now
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                     <img 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
       </a>
     </div>
     {/* Image Container */}
-    <a href="#" className="relative bottom-0 left-auto right-0 top-10 mt-20  h-[480px] w-full font-bold text-[#1353fe] lg:absolute lg:h-64 lg:w-64">
+    <Link to="/covid-test-locations" className="relative bottom-0 left-auto right-0 top-10 mt-20  h-[480px] w-full font-bold text-[#1353fe] lg:absolute lg:h-64 lg:w-64">
       <iframe class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl" 
             src="https://www.youtube.com/embed/ZSE3s32KjE8" 
             title="YouTube video player" 
@@ -32,7 +33,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-10 h-full -rotate-6 rounded-xl bg-[#00000033] lg:-rotate-3"></div>
       <div className="absolute inset-0 -z-10 h-full rounded-2xl bg-black"></div>
       <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63914ea79e127d1bd7939a6a_Play.svg" alt="" className="absolute bottom-1/2 left-1/2 right-auto top-auto z-10 inline-block -translate-x-1/2 translate-y-1/2" /> */}
-    </a>
+    </Link>
   </div>
   {/* Background Images */}
   {/* <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905b9f809b5c8180ce30c5_pattern-1.svg" alt="" className="absolute bottom-0 left-0 right-auto top-auto -z-10 inline-block md:bottom-1/2 md:left-0 md:right-auto md:top-auto" />

@@ -1,27 +1,31 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Sample from "./basic-metabolic-panel/Sample";
 import { useNavigate } from "react-router-dom";
 
-const ShuffleHero = () => {
-  const navigate=useNavigate()
-  const sample =()=>{
-navigate('/covid-test-locations')
+const ShuffleHero1 = () => {
+  const navigate = useNavigate()
+  const Sample= ()=>{
+    navigate("/covid-test-locations")
   }
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
-          Better every day
-        </span>
-        <h3 className="text-4xl md:text-6xl font-semibold">
-        Magnesium Test in Blood
+       
+        <h3 className="text-4xl md:text-6xl font-semibold text-black">
+         Wellness Testing Solutions
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-        Magnesium, an essential mineral, plays a pivotal role in various biochemical processes within the body. From nerve function and muscle contraction to maintaining a healthy heart rhythm, magnesium is integral to our overall well-being. Monitoring magnesium levels is crucial, and one effective way to achieve this is through a magnesium blood test. In this comprehensive guide, we’ll delve into the significance of magnesium, the reasons for testing, interpreting results, and the implications for your health.
-        </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={sample}>
+        My Care Labs provides routine blood work for both our regular patients and clients. Call or book now to gain a better understanding of your health.        </p>
+        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={Sample}>
           Book Now 
         </button>
+        <p className="text-xs md:text-sm font-medium mt-4 text-left">
+  <span className="text-orange-500">ATTENTION: </span>
+  <span className="text-black">
+    wellness testing patients: If you are registering for any of the following panels (Renal Function, CMP, BMP, or Lipid), please make sure you are fasting for a minimum of 8 hours before your appointment. Water is permitted during the fasting period. Additionally, please consult with your doctor if you should avoid taking any medication for our wellness test.   </span>
+</p>
+
       </div>
       <ShuffleGrid />
     </section>
@@ -150,4 +154,4 @@ const ShuffleGrid = () => {
   );
 };
 
-export default ShuffleHero;
+export default ShuffleHero1;

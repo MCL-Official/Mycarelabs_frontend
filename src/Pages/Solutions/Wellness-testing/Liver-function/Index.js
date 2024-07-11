@@ -4,7 +4,9 @@ import GetStartedCard from '../../../../Components/GetStartedCard/Getstarted';
 import CardCarousel from '../../../../Components/HoverCard/CardCarousel';
 import { DisappearingFeatures } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/DisappearingFeatures';
 import Sample from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/Sample';
+
 import { Helmet } from "react-helmet";
+import { FiftyFiftyHero } from '../../../../Components/SOLUTION/Wellness-testing/liver-function-tests/FiftyFiftyHero';
 
 
 const liverFunctionalityTestData = [
@@ -123,6 +125,7 @@ const Index = () => {
         <meta name="author" content="My Care Labs" />
       </Helmet>
       <Sample/>
+      <FiftyFiftyHero/>
       {/* <DisappearingFeatures/> */}
       {/* {liverFunctionalityTestData.map((data, index) => (
         <AnemiaTesting

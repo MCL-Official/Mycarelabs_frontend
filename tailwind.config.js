@@ -6,6 +6,9 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        textAlign: {
+          justify: 'justify',
+        },
         moveRight: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },

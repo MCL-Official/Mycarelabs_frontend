@@ -2,6 +2,7 @@ import React from 'react'
 import Hero12 from '../../../../Components/SOLUTION/Other-solution/total-psa-test-services/Hero12'
 import BlogPostCarousel from '../../../../Components/HoverCard/BlogPostCarousel'
 import { Helmet } from "react-helmet";
+import ContextHero from '../../../../Components/SOLUTION/Other-solution/total-psa-test-services/ContextHero';
 
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
         <meta name="author" content="My Care Labs" />
       </Helmet>
    <Hero12/>
+   <ContextHero/>
    <BlogPostCarousel/>
    </>
   )
