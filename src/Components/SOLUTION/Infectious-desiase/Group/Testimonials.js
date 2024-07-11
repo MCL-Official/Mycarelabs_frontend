@@ -5,19 +5,19 @@ export function Testimonials ()  {
             avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
             name: "Martin escobar",
             title: "Founder of meta",
-            quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae."
+            quote: "The Healthcare Success team has proven to be extremely effective in increasing Urgent Care patient volume. Their expertise in search engine optimization, social media, and online advertising continue to generate a high volume of new patient referrals to our centers. I would highly recommend them."
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/46.jpg",
             name: "Simon andrew",
             title: "Software engineer",
-            quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+            quote: "We were highly impressed with the thoroughness of the  The Healthcare Success team was extremely knowledgeable in their recommend the Healthcare Success team to any organization seeking ways to improve their patient volume and financial growth opportunities."
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/86.jpg",
             name: "Micheal worin",
             title: "Product designer",
-            quote: "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain."
+            quote: "The Healthcare Success team has proven to be extremely effective in increasing Urgent Care patient volume. Their expertise in search engine optimization, social media, and online advertising continue to generate a high volume of new patient referrals to our centers. I would highly recommend them."
         },
     ]
 
@@ -29,7 +29,6 @@ export function Testimonials ()  {
                         Hear from our customers
                     </h3>
                     <p className="mt-3 text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum magna lorem, euismod volutpat arcu volutpat et.
                     </p>
                 </div>
                 <div className="mt-12">
