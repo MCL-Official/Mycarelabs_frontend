@@ -18,6 +18,7 @@ import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
 import FeatureComponent from "../Components/Accordain/FeatureComponent";
 import ImageContainer from "../Components/Form/ImageContainer";
 import { Helmet } from "react-helmet";
+import { SlideInAuth } from "../Components/Contact/SlideInAuth";
 
 
 function Home() {
@@ -36,7 +37,8 @@ function Home() {
       <HoverCards />
       <InsuranceAccepted />
       <Info />
-      <ImageContainer/>
+      <SlideInAuth/>
+      {/* <ImageContainer/> */}
       {/* <Footer /> */}
 
       {/* <TextParallaxContentExample/> */}

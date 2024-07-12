@@ -18,27 +18,32 @@ import svg15 from "../../Assets/insurance14.png";
 import { useNavigate } from 'react-router-dom';
 
 const ImageContainer = () => {
-  const navigate=useNavigate()
-  const HandleEmptyClick=()=>{
+  const navigate = useNavigate();
+  const HandleEmptyClick = () => {
     console.log("muskan");
-    navigate('/empty')
-  }
+    navigate('/empty');
+  };
+
   return (
-    <div className="relative w-full h-screen mt-14">
+    <div className="relative w-full min-h-screen mt-14">
       <div
         className="absolute top-0 left-0 w-full h-[75%] bg-cover bg-center"
         style={{
           backgroundImage: `url('https://appinventiv.com/wp-content/themes/twentynineteen-child/images/contact-bg-banner-desktop.webp')`,
         }}
       >
-        <div className="text-left text-white max-w-lg absolute bottom-1/4 left-1/4 transform -translate-x-1/2 translate-y-1/4">
-          <h1 className="text-6xl font-bold mb-6">Kickstart Your Medial Journey Today</h1>
-          <p className="mb-8 text-2xl">Get all your questions answered by our business development team.</p>
-          <div className="flex space-x-4">
-            <button className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600"
-            onClick={HandleEmptyClick()}>View Locations</button>
-            <button 
-              className="bg-blue-500 text-white py-3 px-6 text-lg rounded hover:bg-blue-600"
+        <div className="text-left text-white max-w-lg absolute bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-1/4 p-4 md:p-8">
+          <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6">Kickstart Your Medical Journey Today</h1>
+          <p className="mb-4 md:mb-8 text-lg md:text-2xl">Get all your questions answered by our business development team.</p>
+          <div className="flex space-x-2 md:space-x-4">
+            <button
+              className="bg-blue-500 text-white py-2 px-4 md:py-3 md:px-6 text-sm md:text-lg rounded hover:bg-blue-600"
+              onClick={HandleEmptyClick}
+            >
+              View Locations
+            </button>
+            <button
+              className="bg-blue-500 text-white py-2 px-4 md:py-3 md:px-6 text-sm md:text-lg rounded hover:bg-blue-600"
               onClick={() => window.location.href = 'https://mycarelabs.com/blog/'}
             >
               Blogs
@@ -46,58 +51,19 @@ const ImageContainer = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-2 left-1/3 transform translate-x-1/2 w-full max-w-2xl p-4 rounded-lg z-10">
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-full md:w-1/2 lg:w-1/3 p-2 md:p-4 rounded-lg z-10">
         <ContactForm />
       </div>
-      <div className="absolute bottom-20 left-1/3 transform -translate-x-1/2 w-full max-w-5xl flex space-x-8 z-0 p-4">
-        <div className="w-full">
-          <Marquee speed={55} gradient={false} pauseOnHover={true}>
-            <div className="flex items-center space-x-24">
-              <div>
-                <img src={svg2} className="h-16 object-contain" alt="Insurance" />
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-full max-w-3xl p-4 z-0">
+        <Marquee speed={55} gradient={false} pauseOnHover={true}>
+          <div className="flex items-center space-x-4 md:space-x-8 lg:space-x-24">
+            {[svg2, svg3, svg4, svg5, svg6, svg7, svg8, svg9, svg10, svg11, svg12, svg13, svg14, svg15].map((src, index) => (
+              <div key={index}>
+                <img src={src} className="h-8 md:h-12 lg:h-16 object-contain" alt="Insurance" />
               </div>
-              <div>
-                <img src={svg3} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg4} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg5} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg6} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg7} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg8} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg9} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg10} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg11} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg12} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg13} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg14} className="h-16 object-contain" alt="Insurance" />
-              </div>
-              <div>
-                <img src={svg15} className="h-16 object-contain" alt="Insurance" />
-              </div>
-            </div>
-          </Marquee>
-        </div>
+            ))}
+          </div>
+        </Marquee>
       </div>
     </div>
   );
