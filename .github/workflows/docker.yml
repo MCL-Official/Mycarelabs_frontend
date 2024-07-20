@@ -20,4 +20,4 @@ jobs:
     - name: Remove existing Docker container
       run: docker rm -f admin-container || true
     - name: Run Docker container
-      run: docker run --name admin-container -d -p 3000:3000 harsh9945/my_care_labs:latest
+      run: docker run -p 3000:3000 harsh9945/my_care_labs:latest
