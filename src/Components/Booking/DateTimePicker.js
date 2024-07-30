@@ -120,8 +120,9 @@ console.log(cardData,"sdkhbsdbgvds");
     try {
       await axios.post('https://backend.mycaretrading.com/admin/appointments', appointmentDetails);
       alert('Appointment booked successfully!');
-      // navigate("https://us.crelio.solutions/crm/#/web/book-package/online-self-registration")
-      window.location.href = 'https://us.crelio.solutions/crm/#/web/book-package/online-self-registration';
+      navigate("/bookingcompletion")
+      // window.location.href = 'https://us.crelio.solutions/crm/#/web/book-package/online-self-registration';
+
  
     } catch (error) {
       console.error('Error booking appointment', error);

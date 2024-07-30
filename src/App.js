@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home";
@@ -42,6 +42,7 @@ import Index4 from "./Pages/Solutions/Other-test/anticonvulsant-test-services/In
 import Index5 from "./Pages/Solutions/Other-test/vitamin-d-test-services/Index";
 import Index6 from "./Pages/Solutions/Other-test/total-psa-test-services/Index";
 import Team from "./Pages/Company/Team2";
+import ConfirmBooking from "./Pages/ConfirmedBooking/ConfirmBooking";
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/faq" element={<Faq/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
+          <Route path="/bookingcompletion" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:id" element={<ReadBlog />} />

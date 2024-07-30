@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Hero from "../Components/Hero";
 import Info from "../Components/Info";
@@ -19,9 +19,55 @@ import FeatureComponent from "../Components/Accordain/FeatureComponent";
 import ImageContainer from "../Components/Form/ImageContainer";
 import { Helmet } from "react-helmet";
 import { SlideInAuth } from "../Components/Contact/SlideInAuth";
+import axios from "axios";
 
 
 function Home() {
+
+  const [location, setLocation] = useState({ latitude: null, longitude: null });
+  const [error, setError] = useState(null);
+console.log(location,"adatsag");
+useEffect(() => {
+  const fetchGeolocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation((prevLocation) => ({
+            ...prevLocation,
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          }));
+        },
+        (error) => {
+          console.error('Geolocation error:', error);
+          fetchIpLocation();
+        }
+      );
+    } else {
+      setError('Geolocation is not supported by this browser.');
+      fetchIpLocation();
+    }
+  };
+
+  const fetchIpLocation = async () => {
+    try {
+      const response = await axios.get('https://ipapi.co/json/');
+      console.log(response.data,"dskvhbdsvhbdv")
+      setLocation({
+        latitude: null,
+        longitude: null,
+        city: response.data.city,
+        region: response.data.region,
+        country: response.data.country_name,
+      });
+    } catch (error) {
+      console.error('IP Location error:', error);
+      setError('Unable to fetch location information.');
+    }
+  };
+
+  fetchGeolocation();
+}, []);
   return (
     <div className="home-section">
       

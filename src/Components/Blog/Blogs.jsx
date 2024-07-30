@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { FaShareAlt } from 'react-icons/fa'; // Import the share icon from react-icons
 
 const SkeletonLoader = () => {
   return (
@@ -63,10 +64,8 @@ const Blogs = () => {
       .replace(/-+$/, '') // Removes trailing hyphens
       .toLowerCase();
     
-    // const encodedBlogName = encodeURIComponent(formattedBlogName);
-    
 
-const encodedBlogName = encodeURIComponent(formattedBlogName);
+      const encodedBlogName = encodeURIComponent(formattedBlogName);
       console.log('Navigating to:', `/blog/${encodedBlogName}`);
       
       navigate(`/blog/${encodedBlogName}`, { state: { blogData } });
@@ -97,6 +96,22 @@ const encodedBlogName = encodeURIComponent(formattedBlogName);
     return `${day}/${month}/${year}`;
   };
 
+  const handleShare = (item) => {
+    const url = window.location.origin + `/blog/${encodeURIComponent(item.meta_title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase())}`;
+    const text = `Check out this blog: ${item.name}`;
+    
+    if (navigator.share) {
+      navigator.share({
+        title: item.name,
+        text: text,
+        url: url
+      }).catch(error => console.error('Error sharing', error));
+    } else {
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}%20${encodeURIComponent(url)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  };
+
   return (
     <section className="py-32">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -125,7 +140,6 @@ const encodedBlogName = encodeURIComponent(formattedBlogName);
             ? Array.from({ length: blogsPerPage }).map((_, index) => <SkeletonLoader key={index} />)
             : blogData?.map((item) => (
               <li className="w-full mx-auto group sm:max-w-sm bg-white shadow-lg rounded-lg overflow-hidden" key={item._id}>
-                  {console.log(item,"sdvkjsjvksdvjsbnvdjksdvb")}
                   <a href="#" onClick={() => handleNavigation(item._id, item.meta_title)} className="block no-underline">
                     <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full h-48 object-cover object-center" />
                     <div className="p-4">
@@ -137,6 +151,12 @@ const encodedBlogName = encodeURIComponent(formattedBlogName);
                       </div>
                       <span className="block text-right text-indigo-600 text-sm mb-1">{formatDate(item.createdAt)}</span>
                       <span className="block text-left text-indigo-600 text-sm mb-1">{item?.views}{" "}Views</span>
+                      <button
+                        onClick={() => handleShare(item)}
+                        className="mt-2 flex items-center text-indigo-600 hover:text-indigo-800"
+                      >
+                        <FaShareAlt className="w-5 h-5 mr-1" /> Share
+                      </button>
                     </div>
                   </a>
                 </li>
