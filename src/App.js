@@ -43,6 +43,11 @@ import Index5 from "./Pages/Solutions/Other-test/vitamin-d-test-services/Index";
 import Index6 from "./Pages/Solutions/Other-test/total-psa-test-services/Index";
 import Team from "./Pages/Company/Team2";
 import ConfirmBooking from "./Pages/ConfirmedBooking/ConfirmBooking";
+import { SlideInAuth } from "./Components/Contact/SlideInAuth";
+import FeatureComponent from "./Components/Accordain/FeatureComponent";
+import HoverCards from "./Components/HoverCard/HoverCards";
+import NeumorphismButton from "./Components/button/Button";
+import DrawerButton from "./Components/Custome_Modal/DrawerButton";
 
 
 function App() {
@@ -58,6 +63,7 @@ function App() {
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
+          <Route path="/covid-test-locations" element={<DrawerButton/>} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:id" element={<ReadBlog />} />
           <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious/>} />
@@ -83,6 +89,11 @@ function App() {
           <Route path="/vitamin-d-test-services" element={<Index5/>} />
           <Route path="/total-psa-test-services" element={<Index6/>} />
           <Route path="/about" element={<Team/>} />
+          <Route path="/contact" element={<SlideInAuth/>}/>
+          <Route path="/testingSol" element={<FeatureComponent/>}/>
+          <Route path="/testingLoc" element={<HoverCards/>}/>
+          <Route path="loc" element={<DateTimePicker/>}/>
+          
 
 
 
