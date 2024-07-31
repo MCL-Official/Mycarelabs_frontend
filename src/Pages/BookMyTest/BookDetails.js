@@ -14,7 +14,7 @@ const BookTestDetails = () => {
   const [startDate, setStartDate] = useState();
   const location = useLocation();
   const cardData = location.state?.cardData;
-  console.log(cardData);
+  console.log(cardData,'ashcbaschac');
   
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {

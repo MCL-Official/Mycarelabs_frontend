@@ -1,10 +1,93 @@
 import React from "react";
 import "../../Styles/Footer.css";
 import SubscribeNewsletter from "../SubscribeNewsletter";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../../Assets/Logo1.png";
 
 function Footer() {
+
+  // const match = () => {
+  //    cardData.category
+  // }
+
+  const images = [
+    "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1719954263~exp=1719957863~hmac=08690e59529a0bc028e23fda8e4fa0f44750548434c108235e7e0f403667f131&w=2000",
+    "https://img.freepik.com/free-photo/beautiful-manhattan-bridge-new-york-usa_181624-48458.jpg?t=st=1719954266~exp=1719957866~hmac=73b10f4318bceabf068b52ec1650bbd1fdcf461ce06775a0c40acc3b63049a1a&w=2000",
+    "https://img.freepik.com/free-photo/tokyo-skyline-with-tokyo-tower-rainbow-bridge_1339-6783.jpg?t=st=1719954311~exp=1719957911~hmac=ff2ae36d9febf6279c18ecf7a75458fbd9fc36f59d6bcc3e1f6ca036b808d532&w=2000",
+    "https://img.freepik.com/free-photo/empire-state-building-daylight_23-2150897493.jpg?t=st=1719954413~exp=1719958013~hmac=426c13ce93779b5ca5b1a8752df1adf6adb8ed2f2af97d96269c72c8a60af5b3&w=900",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
+  ];
+
+  const cardData = [
+    {
+      category: "NorCal: Fremont Lab",
+      title: "Fremont Laboratory",
+      shortDescription:
+        "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
+      longDescription:
+        "Detailed information about our infectious disease testing services...",
+    },
+    {
+      category: "SoCal: Riverside Mobile Testing",
+      title: "Riverside Mobile Testing",
+      shortDescription:
+        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+      longDescription:
+        "Detailed information about our toxicology testing services...",
+    },
+    {
+      category: "NorCal: Bay Area Mobile Testing",
+      title: "SF Bay Area / Silicon Valley Mobile Testing",
+      shortDescription:
+        "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
+      longDescription:
+        "Detailed information about our wellness testing services...",
+    },
+    {
+      category: "SoCal: Riverside Pop-up",
+      title: "Riverside Gurdwara",
+      shortDescription:
+        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+      longDescription:
+        "Detailed information about our mobile testing services...",
+    },
+    {
+      category: "FedEx Overnight Test Kits",
+      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
+      shortDescription:
+        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
+      longDescription: "Detailed information about our at-home test kits...",
+    },
+    {
+      category: "NorCal: Union City Pop-up",
+      title: "Union City Pop-up",
+      shortDescription:
+        "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
+      longDescription: "Detailed information about our light solutions...",
+    },
+    {
+      category: "SoCal: Corona Mobile Testing",
+      title: "Mobile Testing: Corona, CA",
+      shortDescription:
+        "Same-day Covid/Flu PCR results available. To speed up your testing.",
+      longDescription: "Detailed information about our audio solutions...",
+    },
+  ];
+
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (item,index) => {
+    const cardWithImage = {
+      ...item,
+      imageUrl: images[index % images.length],
+    };  
+    navigate(`/covid-test-locations/${item.id}`, {
+      state: { cardData: cardWithImage },
+    });
+  };
+
   return (
     <div className="footer-section">
       <div className="footer-container">
@@ -28,16 +111,16 @@ function Footer() {
           <ul className="ft-list-items">
           
             <li>
-              <a href="#services">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="#services">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </li>
             <li>
-              <a href="#services">Testing Solutions</a>
+              <a href="/testingSol">Testing Solutions</a>
             </li>
             <li>
-              <a href="#services">Testing Locations</a>
+              <a href="/testingLoc">Testing Locations</a>
             </li>
             <li>
               <a href="#services">Book An Appointment</a>
@@ -48,17 +131,34 @@ function Footer() {
         <div className="ft-list">
           <p className="ft-list-title">All Locations</p>
           <ul className="ft-list-items">
-            <li>
-              <Link to={"/legal"}>NorCal: Bay Area Mobile Testing</Link>
+      {cardData && cardData.length > 0 ? (
+        cardData.map((item,index) => {
+          console.log(item.category, "sajchasc");
+          return (
+            <li key={item.id}>
+              <button onClick={() => handleNavigation(item,index)}>
+                {item.category}
+              </button>
+            </li>
+          );
+        })
+      ) : (
+        <p>No locations available.</p>
+      )}
+    </ul>
+
+          {/* <ul className="ft-list-items">
+            <li  >
+              {cardData.category}
             </li>
             <li>
-              <Link to={"/legal"}>NorCal: Fremont Lab</Link>
+              <Link to={"/covid-test-locations/:id"}>NorCal: Fremont Lab</Link>
             </li>
             <li>
-              <Link to={"/legal"}>NorCal: Union City Pop-up</Link>
+              <Link to={"/covid-test-locations/:id"}>NorCal: Union City Pop-up</Link>
             </li>
             <li>
-              <Link to={"/legal"}>SoCal: Corona Mobile Testing</Link>
+              <Link to={"/covid-test-locations/:id"}>SoCal: Corona Mobile Testing</Link>
             </li>
             <li>
               <Link to={"/legal"}>SoCal: Riverside Pop-up</Link>
@@ -69,7 +169,7 @@ function Footer() {
             <li>
               <Link to={"/legal"}>At-Home COVID-19 PCR Test Kit</Link>
             </li>
-          </ul>
+          </ul> */}
         </div>
 
         <div className="ft-list" id="contact">
