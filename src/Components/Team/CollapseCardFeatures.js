@@ -1,3 +1,4 @@
+import { icon } from "@fortawesome/fontawesome-svg-core";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -57,7 +58,7 @@ const CollapseCardFeatures = () => {
   );
 };
 
-const Feature = ({ position, index, title, description, Icon }) => {
+const Feature = ({ position, index, title, description, iconSrc }) => {
   const translateAmt =
     position >= index ? index * 100 : index * 100 - 100 * (index - position);
 
@@ -72,7 +73,7 @@ const Feature = ({ position, index, title, description, Icon }) => {
         index % 2 ? "bg-black text-white" : " bg-white"
       }`}
     >
-      <Icon className="absolute right-2 top-2 text-7xl opacity-20" />
+      <img src={iconSrc} alt={title} className="absolute right-2 top-2 w-16 h-16 opacity-100" />
       <h3 className="mb-8 text-3xl font-bold">{title}</h3>
       <p>{description}</p>
     </motion.div>
@@ -84,26 +85,26 @@ export default CollapseCardFeatures;
 const features = [
   {
     title: "On Demand",
-    Icon: FiUpload,
+    iconSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUc-cAjLTSr4KfkbseHVM8Btu7oTdqOGYQA&s",
     description:
       "The most caring companies deploy My Care Labs’ health testing to increase employee retention and business stability.",
     
   },
   {
     title: "Team On Location",
-    Icon: FiArrowUp,
+    iconSrc: "https://png.pngtree.com/png-vector/20191024/ourlarge/pngtree-team-icon-isolated-on-abstract-background-png-image_1855162.jpg",
     description:
       "Public entities trusted by their communities trust My Care Labs to power their public health initiatives.",
   },
   {
     title: "Medical Assistant",
-    Icon: FiTarget,
+    iconSrc: "https://media.istockphoto.com/id/1384892983/vector/first-aid-icon-healthcare-and-medicine-humanitarian-aid-medical-cross-symbol.jpg?s=612x612&w=0&k=20&c=Ki3lHkF4eFxUbMdYAWfR1rtuKDao57rRB6EWhk_XyMc=",
     description:
       "Testing, tracking, and vaccine programs to keep kids and their families safe and healthy for a bright future.",
   },
   {
     title: "No Cost With Insurance",
-    Icon: FiLink,
+    iconSrc : "https://as1.ftcdn.net/v2/jpg/02/73/32/80/1000_F_273328038_pBxXai6PVN1eLXnH65ZVgy954nzAEMSt.jpg",
     description:
       "My Care Labs works hand-in-glove with California Department of Public Health, CalREDIE, and CDC.",
   },
