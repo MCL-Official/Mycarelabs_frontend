@@ -1,7 +1,7 @@
 import React from "react";
 import "../../Styles/Footer.css";
 import SubscribeNewsletter from "../SubscribeNewsletter";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo1 from "../../Assets/Logo1.png";
 
 function Footer() {

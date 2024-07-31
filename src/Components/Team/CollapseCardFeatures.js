@@ -83,33 +83,34 @@ export default CollapseCardFeatures;
 
 const features = [
   {
-    title: "Faster uploads",
+    title: "On Demand",
     Icon: FiUpload,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe deserunt ipsum rerum natus fugit ex minima voluptas ratione quaerat. Ea!",
+      "The most caring companies deploy My Care Labs’ health testing to increase employee retention and business stability.",
+    
   },
   {
-    title: "99.99% uptime",
+    title: "Team On Location",
     Icon: FiArrowUp,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, vitae sed? Maxime!",
+      "Public entities trusted by their communities trust My Care Labs to power their public health initiatives.",
   },
   {
-    title: "Unlimited requests",
+    title: "Medical Assistant",
     Icon: FiTarget,
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ab perspiciatis earum quibusdam laudantium non nihil nesciunt?",
+      "Testing, tracking, and vaccine programs to keep kids and their families safe and healthy for a bright future.",
   },
   {
-    title: "500+ integrations",
+    title: "No Cost With Insurance",
     Icon: FiLink,
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo nobis officia, nostrum eligendi accusamus unde ad cumque, magnam deleniti adipisci fugiat facere. Veniam?",
+      "My Care Labs works hand-in-glove with California Department of Public Health, CalREDIE, and CDC.",
   },
-  {
-    title: "Modern tooling",
-    Icon: FiTool,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe quo!",
-  },
+  // {
+  //   title: "Modern tooling",
+  //   Icon: FiTool,
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe quo!",
+  // },
 ];

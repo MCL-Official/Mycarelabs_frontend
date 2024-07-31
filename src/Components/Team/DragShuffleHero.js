@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
 const DragShuffleHero = () => {
-  const [order, setOrder] = useState(["front", "middle", "back"]);
+  const [order, setOrder] = useState([
+    "first", "second", "third", "fourth", "fifth", "sixth", "seventh"
+  ]);
 
   const handleShuffle = () => {
     const orderCopy = [...order];
@@ -38,25 +40,53 @@ const DragShuffleHero = () => {
         </div>
         <div className="relative h-[450px] w-[350px]">
           <Card
-            imgUrl="/imgs/head-shots/7.jpg"
-            testimonial="I feel like I've learned as much from X as I did completing my masters. It's the first thing I read every morning."
-            author="Jenn F. - Marketing Director @ Square"
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2023/11/Ellipse-9-1.png"
+            testimonial="Harvey Singh"
+            author="Chief Executive Officer "
             handleShuffle={handleShuffle}
             position={order[0]}
           />
           <Card
-            imgUrl="/imgs/head-shots/8.jpg"
-            testimonial="My boss thinks I know what I'm doing. Honestly, I just read this newsletter."
-            author="Adrian Y. - Product Marketing @ Meta"
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2024/01/Ellipse-9-4-min.png"
+            testimonial="Aman Singh"
+            author="Vice President Global Operations"
             handleShuffle={handleShuffle}
             position={order[1]}
           />
           <Card
-            imgUrl="/imgs/head-shots/9.jpg"
-            testimonial="Can not believe this is free. If X was $5,000 a month, it would be worth every penny. I plan to name my next child after X."
-            author="Devin R. - Growth Marketing Lead @ OpenAI"
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2023/11/Ellipse-11.png"
+            testimonial="Dr. Carl Johnson"
+            author="Medical Director"
             handleShuffle={handleShuffle}
             position={order[2]}
+          />
+          <Card
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2023/12/Mask-group-7-min.png"
+            testimonial="Kshitij Jayarajan"
+            author="VP, Marketing"
+            handleShuffle={handleShuffle}
+            position={order[3]}
+          />
+          <Card
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2023/12/Mask-group-6-min.png"
+            testimonial="Emily Garcia"
+            author="Marketing Manager"
+            handleShuffle={handleShuffle}
+            position={order[4]}
+          />
+          <Card
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2024/01/Ellipse-9-2.png"
+            testimonial="Soun Kanwar"
+            author="Communications Director"
+            handleShuffle={handleShuffle}
+            position={order[5]}
+          />
+          <Card
+            imgUrl="https://mycarelabs.com/wp-content/uploads/2023/11/Ellipse-17.png"
+            testimonial="Ralph Giron"
+            author="General Manager"
+            handleShuffle={handleShuffle}
+            position={order[6]}
           />
         </div>
       </div>
@@ -81,33 +111,44 @@ const Card = ({ handleShuffle, testimonial, position, imgUrl, author }) => {
     mousePosRef.current = 0;
   };
 
-  const x = position === "front" ? "0%" : position === "middle" ? "33%" : "66%";
-  const rotateZ =
-    position === "front" ? "-6deg" : position === "middle" ? "0deg" : "6deg";
-  const zIndex = position === "front" ? "2" : position === "middle" ? "1" : "0";
+  // Define styles based on the position
+  const x = position === "first" ? "0%" : 
+            position === "second" ? "33%" : 
+            position === "third" ? "66%" :
+            position === "fourth" ? "99%" :
+            position === "fifth" ? "132%" :
+            position === "sixth" ? "165%" :
+            position === "seventh" ? "198%" : "0%";
+  
+  const rotateZ = position === "first" ? "-6deg" : 
+                   position === "second" ? "0deg" : 
+                   position === "third" ? "6deg" :
+                   position === "fourth" ? "12deg" :
+                   position === "fifth" ? "-12deg" :
+                   position === "sixth" ? "18deg" :
+                   position === "seventh" ? "-18deg" : "0deg";
+  
+  const zIndex = position === "first" ? "2" : 
+                  position === "second" ? "1" : 
+                  position === "third" ? "0" :
+                  position === "fourth" ? "-1" :
+                  position === "fifth" ? "-2" :
+                  position === "sixth" ? "-3" :
+                  position === "seventh" ? "-4" : "0";
 
-  const draggable = position === "front";
+  const draggable = position === "first";
 
   return (
     <motion.div
-      style={{
-        zIndex,
-      }}
+      style={{ zIndex }}
       animate={{ rotate: rotateZ, x }}
       drag
       dragElastic={0.35}
       dragListener={draggable}
-      dragConstraints={{
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
+      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
-      transition={{
-        duration: 0.35,
-      }}
+      transition={{ duration: 0.35 }}
       className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-slate-700 bg-slate-800/20 p-6 shadow-xl backdrop-blur-md ${
         draggable ? "cursor-grab active:cursor-grabbing" : ""
       }`}
@@ -117,10 +158,10 @@ const Card = ({ handleShuffle, testimonial, position, imgUrl, author }) => {
         alt={`Image of ${author}`}
         className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-slate-700 bg-slate-200 object-cover"
       />
-      <span className="text-center text-lg italic text-slate-400">
-        "{testimonial}"
+      <span className="text-center text-2xl italic text-slate-400">
+        {testimonial}
       </span>
-      <span className="text-center text-sm font-medium text-indigo-400">
+      <span className="text-center text-lg font-medium text-indigo-400">
         {author}
       </span>
     </motion.div>
