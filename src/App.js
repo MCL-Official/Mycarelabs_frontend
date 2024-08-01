@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Home from "./Pages/Home";
-// import Legal from "./Pages/Legal";
-// import NotFound from "./Pages/NotFound";
-// import Appointment from "./Pages/Appointment";
+import { Helmet } from 'react-helmet-async'; // Import Helmet for managing the document head
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Home from "./Pages/Home";
 import EmptyPage from "./Pages/EmptyPage/EmptyPage";
 import BookTest from "./Pages/BookMyTest/BookTest";
 import BookTestDetails from "./Pages/BookMyTest/BookDetails";
 import Blogs from "./Components/Blog/Blogs";
-import ReadBlog from "./Components/Blog/ReadBlog ";
+import ReadBlog from "./Components/Blog/ReadBlog";
 import Navbar from "./Components/Navbar/Navbar";
 import DateTimePicker from "./Components/Booking/DateTimePicker";
 import Content from "./Components/content/Content";
 import Navbar2 from "./Components/Navbar/Navbar2";
 import Infectious from "./Pages/Solutions/Infectious-desiase/Infectious";
-// import '@fortawesome/fontawesome-free/css/all.min.css';
 import Faq from "./Pages/Faq/Faq";
-
 import Footer from "./Components/Footer/Footer";
 import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
 import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
@@ -49,83 +46,78 @@ import HoverCards from "./Components/HoverCard/HoverCards";
 import NeumorphismButton from "./Components/button/Button";
 import DrawerButton from "./Components/Custome_Modal/DrawerButton";
 
-
 function App() {
+  useEffect(() => {
+    // This useEffect hook can be used to initialize GTM-related functionalities if needed
+  }, []);
+
   return (
     <div className="App">
-      <Router >
+      <Helmet>
+        {/* Google Tag Manager */}
+        <script>
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-56PKS4B9');
+          `}
+        </script>
+        {/* End Google Tag Manager */}
+      </Helmet>
+
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56PKS4B9"
+                height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>
+      </noscript>
+      {/* End Google Tag Manager (noscript) */}
+
+      <Router>
         <Navbar />
-        {/* <Navbar2/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
-          <Route path="/faq" element={<Faq/>} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
-          <Route path="/covid-test-locations" element={<DrawerButton/>} />
+          <Route path="/covid-test-locations" element={<DrawerButton />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:id" element={<ReadBlog />} />
-          <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious/>} />
-          <Route path="/travel-testing/" element={<Travel/>} />
-          <Route path="/covid-rt-pcr-home-test-kit/" element={<Covid19/>} />
-          <Route path="/group-covid-testing/" element={<TestingGroup/>} />
-          <Route path="/testing-for-schools/" element={<TestingSchool/>} />
-          <Route path="/testing-for-nursing-homes/" element={<TestingNurcing/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/" element={<Solution/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" element={<Anemia/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" element={<Basic/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" element={<Liver/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" element={<Renal/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP/>} />
-          <Route path="//testing-solutions/oncology-testing-solutions/" element={<Oncology/>} />
-          <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology/>} />
-          <Route path="/creatine-kinase" element={<Index/>} />
-          <Route path="/crp-tests" element={<Index1/>} />
-          <Route path="/free-psa-testing" element={<Index2/>} />
-          <Route path="/magnesium-test-in-blood" element={<Index3/>} />
-          <Route path="/anticonvulsant-test-services" element={<Index4/>} />
-          <Route path="/vitamin-d-test-services" element={<Index5/>} />
-          <Route path="/total-psa-test-services" element={<Index6/>} />
-          <Route path="/about" element={<Team/>} />
-          <Route path="/contact" element={<SlideInAuth/>}/>
-          <Route path="/testingSol" element={<FeatureComponent/>}/>
-          <Route path="/testingLoc" element={<HoverCards/>}/>
-          <Route path="loc" element={<DateTimePicker/>}/>
-          
-
-
-
-
-    
-
-
-
-
-
-
-
-          {/* <Route path="/booking" element={<DateTimePicker />} /> */}
-          {/* <Route path="/appointment" element={<Appointment />} /> */}
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious />} />
+          <Route path="/travel-testing/" element={<Travel />} />
+          <Route path="/covid-rt-pcr-home-test-kit/" element={<Covid19 />} />
+          <Route path="/group-covid-testing/" element={<TestingGroup />} />
+          <Route path="/testing-for-schools/" element={<TestingSchool />} />
+          <Route path="/testing-for-nursing-homes/" element={<TestingNurcing />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/" element={<Solution />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" element={<Anemia />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" element={<Basic />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" element={<Liver />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" element={<Renal />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP />} />
+          <Route path="//testing-solutions/oncology-testing-solutions/" element={<Oncology />} />
+          <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology />} />
+          <Route path="/creatine-kinase" element={<Index />} />
+          <Route path="/crp-tests" element={<Index1 />} />
+          <Route path="/free-psa-testing" element={<Index2 />} />
+          <Route path="/magnesium-test-in-blood" element={<Index3 />} />
+          <Route path="/anticonvulsant-test-services" element={<Index4 />} />
+          <Route path="/vitamin-d-test-services" element={<Index5 />} />
+          <Route path="/total-psa-test-services" element={<Index6 />} />
+          <Route path="/about" element={<Team />} />
+          <Route path="/contact" element={<SlideInAuth />} />
+          <Route path="/testingSol" element={<FeatureComponent />} />
+          <Route path="/testingLoc" element={<HoverCards />} />
+          <Route path="loc" element={<DateTimePicker />} />
         </Routes>
-      <Footer/>
+        <Footer />
       </Router>
     </div>
   );
 }
 
 export default App;
-
-// import React from 'react'
-
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>Radhe shyam</h1>
-//     </div>
-//   )
-// }
-
-// export default App
