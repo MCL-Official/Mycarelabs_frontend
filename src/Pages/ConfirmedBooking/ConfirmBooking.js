@@ -6,12 +6,19 @@ const ConfirmBooking = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Use 'smooth' for smooth scrolling, 'auto' for instant scrolling
+      behavior: 'smooth'
     });
   };
 
   useEffect(() => {
     scrollToTop(); // Scroll to the top when the component mounts
+
+    // Send the custom event to GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'confirmBooking',
+      bookingValue: 1 // You can add more data here if needed
+    });
 
     const timer = setInterval(() => {
       setCountdown(prevCountdown => prevCountdown - 1);

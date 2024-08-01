@@ -237,7 +237,7 @@ const DateTimePicker = (cardData) => {
                 </div>
               </div>
               <div className="text-center text-gray-700 mt-4">
-                Time zone <span className="font-semibold">India Standard Time (7:34pm)</span>
+                {/* Time zone <span className="font-semibold">India Standard Time (7:34pm)</span> */}
               </div>
               <button className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" onClick={handleContinue}>
                 Continue
