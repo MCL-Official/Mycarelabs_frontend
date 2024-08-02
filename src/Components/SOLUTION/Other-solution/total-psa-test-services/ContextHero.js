@@ -4,7 +4,7 @@ const ContextHero = () => {
     const navigation = [
         {
             name: "What is a PSA",
-            image: "https://aci.edu/wp-content/uploads/2018/02/Depositphotos_11194384_original-e1518199867636.jpg?w=186",  // Replace with the correct path
+            image: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",  // Replace with the correct path
             text: `
                 <h2>1. What is a Prostate-Specific Antigen (PSA) Test?</h2>
                 <p>The PSA test is a blood test designed to measure the levels of prostate-specific antigen; a protein produced by the prostate gland. This screening tool plays a crucial role in assessing the health of the prostate and detecting potential issues early on.</p>

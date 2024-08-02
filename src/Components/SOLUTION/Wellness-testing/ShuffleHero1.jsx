@@ -52,7 +52,7 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://aci.edu/wp-content/uploads/2018/02/Depositphotos_11194384_original-e1518199867636.jpg?w=186",
+    src: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ const squareData = [
   },
   {
     id: 4,
-    src: "https://img.freepik.com/free-photo/high-angle-health-professional-drawing-blood_23-2149404714.jpg?t=st=1719954904~exp=1719958504~hmac=8db9b38de189cdd1c74b6d96b3af91a3e60ca14b1d4fcef8c75417168b476f6b&w=2000",
+    src: "https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000",
   },
   {
     id: 5,

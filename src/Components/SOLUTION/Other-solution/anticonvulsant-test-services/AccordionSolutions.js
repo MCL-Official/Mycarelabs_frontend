@@ -113,7 +113,7 @@ const solutions = [
       `Optimizing Medication Management: The primary purpose of Anticonvulsant Tests is to optimize the management of Anticonvulsant medication  
       Ensuring Therapeutic Efficacy: Maintaining Anticonvulsant levels within the therapeutic range is essential for its efficacy in treating conditions such as epilepsy and nerve pain`,
     imgSrc:
-      "https://aci.edu/wp-content/uploads/2018/02/Depositphotos_11194384_original-e1518199867636.jpg?w=186",
+      "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",
   },
   {
     id: 3,

@@ -159,7 +159,7 @@ const features = [
     description:
       "The primary focus of the Anemia Profile Test is to evaluate red blood cell parameters, iron levels, and other factors crucial for identifying the specific type and cause of anemia.",
     contentPosition: "l",
-    imageUrl: "https://aci.edu/wp-content/uploads/2018/02/Depositphotos_11194384_original-e1518199867636.jpg?w=186", // Replace with your image URL
+    imageUrl: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000", // Replace with your image URL
     // Icon: FiSearch,
   },
   {
@@ -189,7 +189,7 @@ const features = [
     description:
       'For additional information on the Anemia Profile Test, we recommend referring to reputable sources such as My Care Labs. Understanding the test and its implications is crucial for identifying and addressing anemia effectively.'
 ,    contentPosition: "r",
-    imageUrl:  'https://img.freepik.com/free-photo/high-angle-health-professional-drawing-blood_23-2149404714.jpg?t=st=1719954904~exp=1719958504~hmac=8db9b38de189cdd1c74b6d96b3af91a3e60ca14b1d4fcef8c75417168b476f6b&w=2000', // Replace with your image URL
+    imageUrl:  'https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000', // Replace with your image URL
     Icon: FiDollarSign,
   },
   {
@@ -199,7 +199,7 @@ const features = [
     description:
       'For additional information on the Anemia Profile Test, we recommend referring to reputable sources such as My Care Labs. Understanding the test and its implications is crucial for identifying and addressing anemia effectively.'
 ,    contentPosition: "l",
-    imageUrl:  'https://envato-shoebox-0.imgix.net/a4c8/5702-af1b-4e4d-a4de-d2d692ec3a33/IMG_0747.jpg?auto=compress%2Cformat&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&w=1600&fit=max&markalign=center%2Cmiddle&markalpha=18&s=75fe333d01a097e1d65c01be63853c1c', // Replace with your image URL
+    imageUrl:  'https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000', // Replace with your image URL
     Icon: FiDollarSign,
   },
 ];

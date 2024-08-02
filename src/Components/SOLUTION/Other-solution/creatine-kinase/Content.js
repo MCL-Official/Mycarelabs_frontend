@@ -9,7 +9,7 @@ const Content = () => {
   <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
     {/* Title */}
     <div className="mx-auto text-center">
-      <h2 className="text-3xl font-bold md:text-5xl">Connect your app with 130+popular tools</h2>
+      <h2 className="text-3xl font-bold md:text-5xl">Connecting you with the new world</h2>
       <p className="mx-auto mb-8 mt-4 max-w-lg text-[#647084] md:mb-12 lg:mb-16">Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam,purus sit amet luctus magna fringilla urna</p>
     </div>
     {/* Content */}
