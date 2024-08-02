@@ -132,8 +132,8 @@ export default BlogPostCarousel;
 const posts = [
   {
     id: 1,
-    imgUrl: "https://img.freepik.com/free-photo/medium-shot-woman-holding-balloon-flask_23-2148581907.jpg?t=st=1720023294~exp=1720026894~hmac=a3999cb46c2de608866e232349d84f01490095f49086b0afd1807efdd29c4cd3&w=2000",
-    author: "John Anderson",
+    imgUrl: "https://img.freepik.com/free-photo/medical-lab-worker-analyzing-blood-serum-conducting-virus-test-modern-equipped-lab-late-night-team-specialists-examining-vaccine-evolution-using-high-tech-treatment-against-covid19_482257-13621.jpg?t=st=1722632868~exp=1722636468~hmac=31f668f96bcfff7b70539d2d91a8ebd44b4a3c2f3dd3412ec1930987b400704c&w=2000",
+    author: "MY Care Labs",
     title: "Wellness Testing Solutions",
     description:
       "Transform your workplace with on-site wellness testing from My Care Labs.",
@@ -142,8 +142,8 @@ const posts = [
   },
   {
     id: 2,
-    imgUrl: "https://img.freepik.com/free-photo/researching-laboratory_1384-149.jpg?t=st=1720023298~exp=1720026898~hmac=33a10a6390b35645aefc5ea412b0b8f0748c210baffafa3675cfffecb81b6f7c&w=2000",
-    author: "Kyle Parsons",
+    imgUrl: "https://img.freepik.com/free-photo/medium-shot-woman-looking-through-microscope_23-2148926618.jpg?t=st=1722632920~exp=1722636520~hmac=590b47a7ea8193278eddc0a14d4f2c5757095f8f618aad319c8ddb37d3fa1384&w=2000",
+    author: "MY Care Labs",
     title: "Toxicology Testing",
     description:
       "In light of HR managers’ need to recruit and retain top talent, we offers drug testing for businesses and other organizations.",
@@ -151,8 +151,8 @@ const posts = [
     },
   {
     id: 3,
-    imgUrl: "https://img.freepik.com/free-photo/doctor-performing-medical-research-lab_23-2149335681.jpg?t=st=1720023304~exp=1720026904~hmac=4626e8d3ce94e1b7c7f9ab7630d297ababc5d694a6b5fbe4bd3b1c36fabdcad4&w=2000",
-    author: "Andrea Bates",
+    imgUrl: "https://img.freepik.com/free-photo/mediums-hot-woman-wearing-goggles_23-2148926622.jpg?t=st=1722633014~exp=1722636614~hmac=ed2d1370bc5dfc2f69b8ca05050462a4e15fe954e9f8ae655d63b93889ed6505&w=1060",
+    author: "MY Care Labs",
     title: "Infectious Disease Testing",
     description:
       "My Care Labs was founded during the COVID-19 Pandemic. We provide fast, simple, accurate infectious disease testing.",
@@ -160,8 +160,8 @@ const posts = [
     },
   {
     id: 4,
-    imgUrl: "https://img.freepik.com/free-photo/new-test-concentrated-skilled-researchers-wearing-uniform-doing-test-creating-vaccine_1157-48114.jpg?t=st=1720023309~exp=1720026909~hmac=c05dd4831f1caca7022811d4586af52792d27f32ecc5639d1684fe0f54344325&w=2000",
-    author: "Jess Drum",
+    imgUrl: "https://img.freepik.com/free-photo/lab-technicians-talking-video-call-with-professional-chemist-doctor-explaning-vaccine-reactions_482257-507.jpg?t=st=1722633058~exp=1722636658~hmac=951a328e1de4971cd9691e5e6396550a5beecc52444452047c0db784920d0edf&w=2000",
+    author: "MY Care Labs",
     title: "Oncology Testing",
     description:
       "My Care Labs is actively working on offering an array of oncology panels that can help detect different forms of cancers.",
@@ -170,7 +170,7 @@ const posts = [
   {
     id: 5,
     imgUrl: "https://www.scripps.org/sparkle-assets/images/blood_test_samples_1200x750-59cd6b99366c6e716576ccd68351ed39.jpg",
-    author: "Phil White",
+    author: "MY Care Labs",
     title: "Travel PCR Testing",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",

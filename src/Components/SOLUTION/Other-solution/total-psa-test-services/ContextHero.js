@@ -14,7 +14,7 @@ const ContextHero = () => {
         },
         {
             name: "What is it Used For?",
-            image: "https://img.freepik.com/free-photo/asian-women-working-together-chemical-project_23-2148776749.jpg?t=st=1719954975~exp=1719958575~hmac=d8a9d57b35d7a297eda1d6a52f050ae919c396bef1efa084e42be06257542068&w=2000",  // Replace with the correct path
+            image: "https://img.freepik.com/free-photo/skillful-nurse-is-doing-blood-test-woman-clinic-gilr-sitting-near-table_1157-48562.jpg?t=st=1722633320~exp=1722636920~hmac=3962718496859f442df985b5dde99b8487bc9ba57ee86fca0b6c746850594ebf&w=2000",  // Replace with the correct path
             text: `
                 <h2>2. What is it Used For?</h2>
                 <p><strong>Early Detection of Prostate Conditions:</strong> The primary purpose of the PSA test is to aid in the early detection of prostate conditions, particularly prostate cancer. Regular screening allows for timely intervention and improved outcomes.</p>
@@ -35,7 +35,7 @@ const ContextHero = () => {
         },
         {
             name: "The Total PSA Testing Process",
-            image: "https://img.freepik.com/free-photo/friendly-hospital-phlebotomist-collecting-blood-sample-from-patient-lab-preparation-blood-test-by-female-doctor-medical-uniform-table-white-bright-room_657921-879.jpg?t=st=1719954878~exp=1719958478~hmac=ac2da6b69d4364b72d893f73be159b5d70705531a4c4d786a19868165d1f93b0&w=2000",  // Replace with the correct path
+            image: "https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000",  // Replace with the correct path
             text: `
                 <h2>4. The Total PSA Testing Process</h2>
                 <p><strong>Scheduling:</strong> Book an appointment with My Care Labs for your Total PSA test. We offer flexible scheduling to accommodate your convenience.</p>

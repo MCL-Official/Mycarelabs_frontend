@@ -38,7 +38,7 @@ const Sample = () => {
         </div>
       </div>
       {/* Hero Image */}
-      <img src="https://img.freepik.com/free-photo/medium-shot-woman-holding-balloon-flask_23-2148581907.jpg?t=st=1720023294~exp=1720026894~hmac=a3999cb46c2de608866e232349d84f01490095f49086b0afd1807efdd29c4cd3&w=2000" alt="" className="inline-block h-full w-full max-w-[640px]" />
+      <img src="https://img.freepik.com/free-photo/medical-lab-worker-analyzing-blood-serum-conducting-virus-test-modern-equipped-lab-late-night-team-specialists-examining-vaccine-evolution-using-high-tech-treatment-against-covid19_482257-13621.jpg?t=st=1722632868~exp=1722636468~hmac=31f668f96bcfff7b70539d2d91a8ebd44b4a3c2f3dd3412ec1930987b400704c&w=2000" alt="" className="inline-block h-full w-full max-w-[640px]" />
     </div>
   </div>
 </header>

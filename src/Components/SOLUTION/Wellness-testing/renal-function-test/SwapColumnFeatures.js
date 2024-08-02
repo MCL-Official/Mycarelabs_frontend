@@ -169,7 +169,7 @@ const features = [
     description:
       'Our state-of-the-art laboratory equipment and skilled technicians ensure precise and dependable Anemia Profile Test results.At Care Labs, our team includes experienced pathologists and laboratory technicians dedicated to maintaining the highest standards of quality in anemia assessments.',
     contentPosition: "r",
-    imageUrl: "https://img.freepik.com/free-photo/asian-women-working-together-chemical-project_23-2148776749.jpg?t=st=1719954975~exp=1719958575~hmac=d8a9d57b35d7a297eda1d6a52f050ae919c396bef1efa084e42be06257542068&w=2000", // Replace with your image URL
+    imageUrl: "https://img.freepik.com/free-photo/skillful-nurse-is-doing-blood-test-woman-clinic-gilr-sitting-near-table_1157-48562.jpg?t=st=1722633320~exp=1722636920~hmac=3962718496859f442df985b5dde99b8487bc9ba57ee86fca0b6c746850594ebf&w=2000", // Replace with your image URL
     Icon: FiPlay,
   },
   {
