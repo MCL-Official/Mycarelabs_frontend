@@ -45,7 +45,7 @@ const BookTest = () => {
       shortDescription:
         "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
       longDescription:
-        "Detailed information about our infectious disease testing services...",
+        "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
       timing: "Mon-Fri 8:30 AM - 6:00 PM, Sat-Sun 9:00 AM - 4:00 PM",
       location: "Fremont, CA 94538"
     },
@@ -56,7 +56,7 @@ const BookTest = () => {
       shortDescription:
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
-        "Detailed information about our toxicology testing services...",
+        "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
       timing: "Mon-Fri 9:00 AM - 5:00 PM (Appointment only)",
       location: "Riverside County"
     },
@@ -67,7 +67,7 @@ const BookTest = () => {
       shortDescription:
         "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
       longDescription:
-        "Detailed information about our wellness testing services...",
+        " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
       timing: "Mon-Fri 9:00 AM - 4:00 PM, Sat-Sun (Appointment only)",
       location: "Alameda County"
     },
@@ -78,7 +78,7 @@ const BookTest = () => {
       shortDescription:
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
-        "Detailed information about our mobile testing services...",
+        " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
       timing: "Sundays 11:30 AM - 3:30 PM",
       location: "Riverside County"
     },
@@ -88,7 +88,7 @@ const BookTest = () => {
       title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
       shortDescription:
         "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
-      longDescription: "Detailed information about our at-home test kits...",
+      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
       timing: "At Your Home",
       location: ""
     },

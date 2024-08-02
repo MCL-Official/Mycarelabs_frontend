@@ -1,153 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>http://example.com/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.mycarelabs.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/empty</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/faq</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>http://example.com/empty</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.mycarelabs.com/covid-test-locations</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/bookingcompletion</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/blog</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/infectious-disease-testing-solutions</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/travel-testing</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/covid-rt-pcr-home-test-kit</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/group-covid-testing</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-for-schools</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-for-nursing-homes</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions/anemia-profile-test</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions/basic-metabolic-panel</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions/liver-function-panel-tests</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions/renal-function-panel-test</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/oncology-testing-solutions</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/testing-solutions/toxicology-testing-solutions</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/creatine-kinase</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/crp-tests</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/free-psa-testing</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/magnesium-test-in-blood</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/anticonvulsant-test-services</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/vitamin-d-test-services</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/total-psa-test-services</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mycarelabs.com/about</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>http://example.com/faq</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.mycarelabs.com/contact</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>http://example.com/covid-test-locations</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.mycarelabs.com/testingSol</loc>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>http://example.com/covid-test-locations/{id}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.mycarelabs.com/testingLoc</loc>
+    <priority>0.5</priority>
   </url>
+
   <url>
-    <loc>http://example.com/blog</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.mycarelabs.com/loc</loc>
+    <priority>0.5</priority>
   </url>
-  <url>
-    <loc>http://example.com/blog/{id}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/infectious-disease-testing-solutions</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/travel-testing/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/covid-rt-pcr-home-test-kit/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/group-covid-testing/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-for-schools/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-for-nursing-homes/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/anemia-profile-test/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/renal-function-panel-test/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/oncology-testing-solutions/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/testing-solutions/toxicology-testing-solutions/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/creatine-kinase</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/crp-tests</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/free-psa-testing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/magnesium-test-in-blood</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/anticonvulsant-test-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/vitamin-d-test-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/total-psa-test-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://example.com/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
 </urlset>

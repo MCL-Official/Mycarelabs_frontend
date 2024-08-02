@@ -60,13 +60,13 @@ const DragShuffleHero = () => {
             handleShuffle={handleShuffle}
             position={order[2]}
           />
-          <Card
+          {/* <Card
             imgUrl="https://mycarelabs.com/wp-content/uploads/2023/12/Mask-group-7-min.png"
             testimonial="Kshitij Jayarajan"
             author="VP, Marketing"
             handleShuffle={handleShuffle}
             position={order[3]}
-          />
+          /> */}
           <Card
             imgUrl="https://mycarelabs.com/wp-content/uploads/2023/12/Mask-group-6-min.png"
             testimonial="Emily Garcia"

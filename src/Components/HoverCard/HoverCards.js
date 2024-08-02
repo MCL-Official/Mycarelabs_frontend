@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 
 const images = [
-  "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1719954263~exp=1719957863~hmac=08690e59529a0bc028e23fda8e4fa0f44750548434c108235e7e0f403667f131&w=2000",
+  "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1722551112~exp=1722554712~hmac=4b0d8f08a71f2decf6172fd1d99823374d83836e786a52051c825fdae163b780&w=2000",
   "https://img.freepik.com/free-photo/beautiful-manhattan-bridge-new-york-usa_181624-48458.jpg?t=st=1719954266~exp=1719957866~hmac=73b10f4318bceabf068b52ec1650bbd1fdcf461ce06775a0c40acc3b63049a1a&w=2000",
   "https://img.freepik.com/free-photo/tokyo-skyline-with-tokyo-tower-rainbow-bridge_1339-6783.jpg?t=st=1719954311~exp=1719957911~hmac=ff2ae36d9febf6279c18ecf7a75458fbd9fc36f59d6bcc3e1f6ca036b808d532&w=2000",
   "https://img.freepik.com/free-photo/empire-state-building-daylight_23-2150897493.jpg?t=st=1719954413~exp=1719958013~hmac=426c13ce93779b5ca5b1a8752df1adf6adb8ed2f2af97d96269c72c8a60af5b3&w=900",
@@ -38,7 +38,7 @@ const cardData = [
     shortDescription:
       "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
     longDescription:
-      "Detailed information about our infectious disease testing services...",
+      "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
   },
   {
     category: "SoCal: Riverside Mobile Testing",
@@ -46,7 +46,7 @@ const cardData = [
     shortDescription:
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription:
-      "Detailed information about our toxicology testing services...",
+      "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
   },
   {
     category: "NorCal: Bay Area Mobile Testing",
@@ -54,7 +54,7 @@ const cardData = [
     shortDescription:
       "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
     longDescription:
-      "Detailed information about our wellness testing services...",
+      " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
   },
   {
     category: "SoCal: Riverside Pop-up",
@@ -62,14 +62,14 @@ const cardData = [
     shortDescription:
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription:
-      "Detailed information about our mobile testing services...",
+      " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
   },
   {
     category: "FedEx Overnight Test Kits",
     title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
     shortDescription:
       "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
-    longDescription: "Detailed information about our at-home test kits...",
+    longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
   },
   {
     category: "NorCal: Union City Pop-up",

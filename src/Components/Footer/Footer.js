@@ -26,7 +26,7 @@ function Footer() {
       shortDescription:
         "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
       longDescription:
-        "Detailed information about our infectious disease testing services...",
+        "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
     },
     {
       category: "SoCal: Riverside Mobile Testing",
@@ -34,7 +34,7 @@ function Footer() {
       shortDescription:
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
-        "Detailed information about our toxicology testing services...",
+        "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
     },
     {
       category: "NorCal: Bay Area Mobile Testing",
@@ -42,7 +42,7 @@ function Footer() {
       shortDescription:
         "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
       longDescription:
-        "Detailed information about our wellness testing services...",
+        " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
     },
     {
       category: "SoCal: Riverside Pop-up",
@@ -50,14 +50,14 @@ function Footer() {
       shortDescription:
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
-        "Detailed information about our mobile testing services...",
+        " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
     },
     {
       category: "FedEx Overnight Test Kits",
       title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
       shortDescription:
         "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
-      longDescription: "Detailed information about our at-home test kits...",
+      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
     },
     {
       category: "NorCal: Union City Pop-up",
@@ -79,11 +79,17 @@ function Footer() {
   const navigate = useNavigate();
 
   const handleNavigation = (item,index) => {
+    console.log("handleNavigationv",index,item);
     const cardWithImage = {
       ...item,
       imageUrl: images[index % images.length],
     };  
-    navigate(`/covid-test-locations/${item.id}`, {
+    
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scrolling animation
+    });
+    navigate(`/covid-test-locations/${index}`, {
       state: { cardData: cardWithImage },
     });
   };
