@@ -24,7 +24,7 @@ export function HeroAnti () {
                     </div>
                 </div>
                 <div className="mt-14">
-                    <img src="https://img.freepik.com/free-photo/laboratory-worker-coverall-suit-is-adjusting-microscope_1157-31351.jpg?t=st=1720023418~exp=1720027018~hmac=779cb6e8444a5af0b7f938434994ce9829d7dfb3c15d7f82857a4a3ebeee49a1&w=2000" className="w-full shadow-lg rounded-lg border" alt="" />
+                    <img src="https://www.bannerhealth.com/healthcareblog/-/media/images/project/healthcareblog/hero-images/2022/03/how-to-prepare-for-a-blood-draw.ashx" className="w-full shadow-lg rounded-lg border" alt="" />
                 </div>
             </div>
         </section>

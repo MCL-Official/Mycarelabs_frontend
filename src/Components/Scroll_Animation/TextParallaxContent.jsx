@@ -463,13 +463,13 @@ const contentData = [
     content: <ExampleContent3 />,
   },
   {
-    imgUrl: "https://img.freepik.com/free-photo/medical-lab-worker-analyzing-blood-serum-conducting-virus-test-modern-equipped-lab-late-night-team-specialists-examining-vaccine-evolution-using-high-tech-treatment-against-covid19_482257-13621.jpg?t=st=1722632868~exp=1722636468~hmac=31f668f96bcfff7b70539d2d91a8ebd44b4a3c2f3dd3412ec1930987b400704c&w=2000",
+    imgUrl: "https://www.rabkindermpath.com/blog/admin/uploads/2022/laboratory_1_1668587970.jpg",
     subheading: "Mobile Testing",
     heading: "5. Educational Resources",
     content: <ExampleContent4 />,
   },
   {
-    imgUrl: "https://img.freepik.com/free-photo/medium-shot-woman-looking-through-microscope_23-2148926618.jpg?t=st=1722632920~exp=1722636520~hmac=590b47a7ea8193278eddc0a14d4f2c5757095f8f618aad319c8ddb37d3fa1384&w=2000",
+    imgUrl: "https://img.freepik.com/free-photo/researching-laboratory_1384-149.jpg?t=st=1720023298~exp=1720026898~hmac=33a10a6390b35645aefc5ea412b0b8f0748c210baffafa3675cfffecb81b6f7c&w=2000",
     subheading: "Mobile Testing",
     heading: "6. Common Thyroid Tests",
     content: <ExampleContent5 />,

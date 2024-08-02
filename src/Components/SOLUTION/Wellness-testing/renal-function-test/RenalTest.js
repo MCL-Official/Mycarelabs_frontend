@@ -22,7 +22,7 @@ export function RenalTest ()  {
                 </div>
                 <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                     <img 
-                        src="https://img.freepik.com/free-photo/female-researcher-male-colleague-laboratory-with-test-tubes-safety-glasses_23-2148816412.jpg?t=st=1719950338~exp=1719953938~hmac=834456c33cebbbe24c51f3effd38a00168ddc51b035c067f541fe2cf3f1cf8d3&w=1380" 
+                        src="https://www.bannerhealth.com/healthcareblog/-/media/images/project/healthcareblog/hero-images/2022/03/how-to-prepare-for-a-blood-draw.ashx" 
                         alt="" 
                         className="w-full" 
                     />

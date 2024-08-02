@@ -132,7 +132,7 @@ export default BlogPostCarousel;
 const posts = [
   {
     id: 1,
-    imgUrl: "https://img.freepik.com/free-photo/medical-lab-worker-analyzing-blood-serum-conducting-virus-test-modern-equipped-lab-late-night-team-specialists-examining-vaccine-evolution-using-high-tech-treatment-against-covid19_482257-13621.jpg?t=st=1722632868~exp=1722636468~hmac=31f668f96bcfff7b70539d2d91a8ebd44b4a3c2f3dd3412ec1930987b400704c&w=2000",
+    imgUrl: "https://pennstatehealthnews.org/wp-content/uploads/2019/07/PSH-MMBloodwork-1200x768.jpg",
     author: "MY Care Labs",
     title: "Wellness Testing Solutions",
     description:
