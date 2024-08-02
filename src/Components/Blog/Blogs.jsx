@@ -56,7 +56,7 @@ const Blogs = () => {
     if (searchValue.trim() !== '') {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:5100/admin/blog/search/${encodeURIComponent(searchValue)}`);
+        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/search/${encodeURIComponent(searchValue)}`);
         setBlogData(response.data);
       } catch (error) {
         console.error('Error searching for blogs:', error);

@@ -5,15 +5,8 @@ import Navbar from '../../Components/Navbar/Navbar';
 import { Helmet } from "react-helmet";
 
 
-const img = "https://imagesuploadforwebsite.s3.amazonaws.com/card1.jpg";
-const img1 = "https://imagesuploadforwebsite.s3.amazonaws.com/card2.jpg";
-const img2 = "https://imagesuploadforwebsite.s3.amazonaws.com/card3.jpg";
-const img3 = "https://imagesuploadforwebsite.s3.amazonaws.com/card5.jpg";
-const img5 = "https://imagesuploadforwebsite.s3.amazonaws.com/card6.jpg";
-const img60 = "https://imagesuploadforwebsite.s3.amazonaws.com/card4.jpg";
-const img6 = "https://imagesuploadforwebsite.s3.amazonaws.com/card4.webp";
 
-// const images = [img, img1, img2, img3, img5, img6];
+// Images
 const images = [
   "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1722551112~exp=1722554712~hmac=4b0d8f08a71f2decf6172fd1d99823374d83836e786a52051c825fdae163b780&w=2000",
   "https://www.hospitalmanagement.net/wp-content/uploads/sites/9/2022/05/Top-health-systems-in-the-US-by-number-of-hospitals-affiliated-1.jpg",
@@ -22,20 +15,10 @@ const images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
 ];
+
+// Component
 const BookTest = () => {
   const navigate = useNavigate();
-  const [drawerOpen, setDrawerOpen] = useState(false); // State to control drawer
-  const [drawerContent, setDrawerContent] = useState(""); // State to control drawer content
-
-  const handleLearnMoreClick = (content) => {
-    setDrawerContent(content);
-    setDrawerOpen(true);
-  };
-
-  const handleBookNowClick = (id) => {
-    console.log('Navasas' , id);
-    navigate(`/covid-test-locations/${id}`);
-  };
 
   const cardData = [
     {
@@ -113,15 +96,15 @@ const BookTest = () => {
       location: "Corona, CA 92882"
     },
     {
-        id: 8,
-        category: "SoCal: Corona Mobile Testing",
-        title: "Mobile Testing: Corona, CA",
-        shortDescription:
-          "Same-day Covid/Flu PCR results available. To speed up your testing.",
-        longDescription: "Detailed information about our audio solutions...",
-        timing: "Mon-Fri 9:00 AM - 5:00 PM",
-        location: "Corona, CA 92882"
-      },
+      id: 8,
+      category: "SoCal: Corona Mobile Testing",
+      title: "Mobile Testing: Corona, CA",
+      shortDescription:
+        "Same-day Covid/Flu PCR results available. To speed up your testing.",
+      longDescription: "Detailed information about our audio solutions...",
+      timing: "Mon-Fri 9:00 AM - 5:00 PM",
+      location: "Corona, CA 92882"
+    },
   ];
 
   useEffect(() => {
@@ -181,7 +164,7 @@ const BookTest = () => {
                       {card.shortDescription}
                       <button
                         className="text-sm text-blue-500 hover:underline ml-1"
-                        onClick={() => handleLearnMoreClick(card.longDescription)}
+                        // onClick={() => handleLearnMoreClick(card.longDescription)}
                       >
                         Learn More
                       </button>
@@ -195,8 +178,7 @@ const BookTest = () => {
                   </div>
                   <div className="flex justify-center mt-auto">
                     {console.log(card.id,"carrdddddddd")}
-                    <Button   slug={index}
-                      cardData={{ ...card, imageUrl: images[index % images.length] }} />
+                    <Button cardData={{ ...card, imageUrl: images[index % images.length] }} />
                   </div>
                 </div>
               </div>

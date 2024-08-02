@@ -10,6 +10,8 @@ import { Helmet } from "react-helmet";
 import Faq from '../Faq/Faq';
 import Locations from '../../Components/Locations/Locations';
 import { Feature } from '../../Components/SOLUTION/Infectious-desiase/Group/Feature';
+import GetStartedCard from '../../Components/GetStartedCard/Getstarted';
+import TabsFeatures from './TabsFeatures';
 
 
 const BookTestDetails = () => {
@@ -61,12 +63,28 @@ const BookTestDetails = () => {
       <div className="relative container mx-auto z-15" style={{ marginTop: '-29.5vh' }}>
         {/* <div className="bg-white p-8 shadow-lg rounded-lg" style={{ background: 'none' }}> */}
           <DateTimePicker cardData={cardData} />
-          <Faq/>
+        
+          <TabsFeatures/> 
+      <Locations/>
+
+
+
+
+
+
+        </div>
+       
           <div className="flex justify-center mt-5 bg-gradient-to-r from-blue-500 to-white p-10  rounded border-[1px]">
        <div className="text-center flex items-center">
     <div className="mr-5 text-white">
-      <h2 className="text-2xl font-bold">Work with the best</h2>
-      <p className="mt-2 text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, ullam tenetur quam debitis illo nemo aliquid animi ad provident?</p>
+      <h2 className="text-2xl font-bold">Creating Your Needs</h2>
+      <p className="mt-2 text-gray-700 text-left">Your health and safety are our top priorities. We are dedicated to ensuring that your PCR testing experience is as seamless as possible. Our team of healthcare professionals is committed to providing accurate results 
+        and a safe testing environment. We know that PCR testing is a critical step in ensuring public health, and we take this responsibility seriously. You can rely on My Care Labs for comprehensive and reliable PCR testing services in Fremont, California.</p>
+      <p className="mt-2 text-gray-700 text-left">In summary, My Care Labs in Fremont, California, offers same-day PCR testing result services with convenient appointment options through our website, walk-in availability, or a Toll-Free Number for phone bookings. We provide free PCR tests and ensure prompt results, making us your trusted choice for COVID testing in the area. </p>
+     
+      <p className="mt-2 text-gray-700 text-left">Do not let testing be a hurdle in your plans or peace of mind. Choose My Care Labs for your PCR testing needs, and experience efficient, reliable, and fast service. We are committed to supporting the health and safety of our community, and we are here to support you every step of the way.  </p>
+      <p className="mt-2 text-gray-700 text-left">With My Care Labs, you are not just a client; you are a valued member of our community, and your health matters to us. Let us be your partner in staying safe and informed during these challenging times.  </p>
+     
       <a href="#" className="text-blue-500 hover:underline mt-4 inline-block">SEE CASE STUDIES →</a>
     </div>
     <div>
@@ -76,15 +94,10 @@ const BookTestDetails = () => {
     </div>
   </div>
 </div>
+      
+        <Faq/>
 
-      <Locations/>
-
-
-
-
-
-
-        </div>
+        <GetStartedCard/>
         <HoverDevCards/>
           {/* <Footer/> */}
       {/* </div> */}

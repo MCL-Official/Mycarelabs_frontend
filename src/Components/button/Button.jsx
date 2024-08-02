@@ -1,11 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { FiSend } from "react-icons/fi";
 
-const NeumorphismButton = ({ slug, cardData }) => {
+const NeumorphismButton = ({ cardData }) => {
   const navigate = useNavigate();
+// Utility function to format the category name
+const formatCategoryName = (categoryName) => {
+  return categoryName
+    .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+    .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+    .replace(/-+/g, '-') // Removes consecutive hyphens
+    .replace(/-+$/, '') // Removes trailing hyphens
+    .toLowerCase();
+};
+  // Format the category name
+  const formattedCategory = formatCategoryName(cardData.category);
 
   const handleClick = () => {
-    navigate(`/covid-test-locations/${slug}`, { state: { cardData } });
+    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
     console.log("Navigating with card data:", cardData);
   };
 
