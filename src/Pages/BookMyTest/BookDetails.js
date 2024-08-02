@@ -8,10 +8,13 @@ import HoverDevCards from '../../Components/Seetings/HoverDevCards';
 import { DivOrigami } from '../../Components/LogoOrigami/DivOrigami';
 import { Helmet } from "react-helmet";
 import Faq from '../Faq/Faq';
+import Locations from '../../Components/Locations/Locations';
+import { Feature } from '../../Components/SOLUTION/Infectious-desiase/Group/Feature';
 
 
 const BookTestDetails = () => {
   const { id } = useParams();
+  console.log(id,"dkvjsdvjn");
   const [startDate, setStartDate] = useState();
   const location = useLocation();
   const cardData = location.state?.cardData;
@@ -67,11 +70,14 @@ const BookTestDetails = () => {
       <a href="#" className="text-blue-500 hover:underline mt-4 inline-block">SEE CASE STUDIES →</a>
     </div>
     <div>
+
+
       <DivOrigami/>
     </div>
   </div>
 </div>
 
+      <Locations/>
 
 
 
