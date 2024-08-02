@@ -2,167 +2,167 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/</loc>
+    <loc>https://mycaremedicalcenter.org/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/empty</loc>
+    <loc>https://mycaremedicalcenter.org/empty</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/faq</loc>
+    <loc>https://mycaremedicalcenter.org/faq</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/covid-test-locations</loc>
+    <loc>https://mycaremedicalcenter.org/covid-test-locations</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/bookingcompletion</loc>
+    <loc>https://mycaremedicalcenter.org/bookingcompletion</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/blog</loc>
+    <loc>https://mycaremedicalcenter.org/blog</loc>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/infectious-disease-testing-solutions</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/infectious-disease-testing-solutions</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/travel-testing</loc>
+    <loc>https://mycaremedicalcenter.org/travel-testing</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/covid-rt-pcr-home-test-kit</loc>
+    <loc>https://mycaremedicalcenter.org/covid-rt-pcr-home-test-kit</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/group-covid-testing</loc>
+    <loc>https://mycaremedicalcenter.org/group-covid-testing</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-for-schools</loc>
+    <loc>https://mycaremedicalcenter.org/testing-for-schools</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-for-nursing-homes</loc>
+    <loc>https://mycaremedicalcenter.org/testing-for-nursing-homes</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/anemia-profile-test</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/anemia-profile-test</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/basic-metabolic-panel</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/basic-metabolic-panel</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/liver-function-panel-tests</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/liver-function-panel-tests</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/renal-function-panel-test</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/renal-function-panel-test</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/oncology-testing-solutions</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/oncology-testing-solutions</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testing-solutions/toxicology-testing-solutions</loc>
+    <loc>https://mycaremedicalcenter.org/testing-solutions/toxicology-testing-solutions</loc>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/creatine-kinase</loc>
+    <loc>https://mycaremedicalcenter.org/creatine-kinase</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/crp-tests</loc>
+    <loc>https://mycaremedicalcenter.org/crp-tests</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/free-psa-testing</loc>
+    <loc>https://mycaremedicalcenter.org/free-psa-testing</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/magnesium-test-in-blood</loc>
+    <loc>https://mycaremedicalcenter.org/magnesium-test-in-blood</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/anticonvulsant-test-services</loc>
+    <loc>https://mycaremedicalcenter.org/anticonvulsant-test-services</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/vitamin-d-test-services</loc>
+    <loc>https://mycaremedicalcenter.org/vitamin-d-test-services</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/total-psa-test-services</loc>
+    <loc>https://mycaremedicalcenter.org/total-psa-test-services</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/about</loc>
+    <loc>https://mycaremedicalcenter.org/about</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/contact</loc>
+    <loc>https://mycaremedicalcenter.org/contact</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testingSol</loc>
+    <loc>https://mycaremedicalcenter.org/testingSol</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/testingLoc</loc>
+    <loc>https://mycaremedicalcenter.org/testingLoc</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://test.mycaremedicalcenter.org/loc</loc>
+    <loc>https://mycaremedicalcenter.org/loc</loc>
     <priority>0.5</priority>
   </url>
 
