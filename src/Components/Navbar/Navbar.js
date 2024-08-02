@@ -38,6 +38,7 @@ function Navbar() {
   }, [location])
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
+    const threshold = 30;
 
     if (latest > previous && latest > 500) {
       setHidden(true);
@@ -72,6 +73,13 @@ function Navbar() {
 
   const openNav = () => {
     setNav(!nav);
+    if (!nav) {
+      setBgColor("white");
+      setTextColor("black")
+    // } else if (location.pathname === "/") {
+    //   // Restore previous background if on the home page
+    //   setBgColor(scrollY.get() > 30 ? "white" : "transparent");
+    }
   };
 
   const handleClick = (id) => {

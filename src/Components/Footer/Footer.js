@@ -123,7 +123,7 @@ function Footer() {
               <a href="/testingLoc">Testing Locations</a>
             </li>
             <li>
-              <a href="#services">Book An Appointment</a>
+              <a href="/testingLoc">Book An Appointment</a>
             </li>
           </ul>
         </div>
