@@ -13,9 +13,10 @@ const Team2 = () => {
   return (
     <div>
         <Helmet>
-        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
-        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
-        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <title>        About Us | My Care Labs - Trusted Diagnostic Services</title>
+        <meta name="description" content="
+Learn about My Care Labs, your trusted partner in diagnostic testing. Discover our commitment to quality, reliability, and exceptional patient care." />
+        <meta name="keywords" content="diagnostic services, My Care Labs, quality lab testing" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
       {/* <Teamsample/> */}

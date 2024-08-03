@@ -118,9 +118,9 @@ const BookTest = () => {
   return (
     <>
       <Helmet>
-        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
-        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
-        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+        <title>COVID Test Locations Near You | My Care Labs</title>
+        <meta name="description" content="Locate convenient COVID test sites near you with My Care Labs. Reliable, accurate testing for your safety and peace of mind. Schedule your appointment today" />
+        <meta name="keywords" content="COVID test locations, My Care Labs, COVID testing near me" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
       {/* <Navbar /> */}
