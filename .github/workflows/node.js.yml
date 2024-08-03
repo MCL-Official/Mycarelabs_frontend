@@ -40,7 +40,7 @@ jobs:
         run: |
           echo "Starting CloudFront invalidation"
           export AWS_DEFAULT_REGION=us-east-1
-          aws cloudfront create-invalidation --distribution-id E1B98IR8F34NZA --paths "/*"  
+          aws cloudfront create-invalidation --distribution-id E12Q9LXMC15WAI --paths "/*"  
           echo "Invalidation completed"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESSKEY }}
