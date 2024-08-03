@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home";
 // import Legal from "./Pages/Legal";
@@ -18,7 +18,7 @@ import Navbar2 from "./Components/Navbar/Navbar2";
 import Infectious from "./Pages/Solutions/Infectious-desiase/Infectious";
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 import Faq from "./Pages/Faq/Faq";
-
+import { trackPageView } from './analytics';
 import Footer from "./Components/Footer/Footer";
 import Travel from "./Pages/Solutions/Infectious-desiase/Travel-testing/Travel";
 import Covid19 from "./Pages/Solutions/Infectious-desiase/At-home-test/Covid19";
@@ -49,11 +49,21 @@ import HoverCards from "./Components/HoverCard/HoverCards";
 import NeumorphismButton from "./Components/button/Button";
 import DrawerButton from "./Components/Custome_Modal/DrawerButton";
 
+const PageViewTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
+
+  return null;
+};
 
 function App() {
   return (
     <div className="App">
       <Router >
+      <PageViewTracker />
         <Navbar />
         {/* <Navbar2/> */}
         <Routes>
