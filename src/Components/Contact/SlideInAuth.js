@@ -73,12 +73,12 @@ const Form = () => {
               htmlFor="rt-password-input"
               className="mb-1 inline-block text-sm font-medium"
             >
-              phone<span className="text-red-600">*</span>
+              Phone<span className="text-red-600">*</span>
             </label>
             <input
               id="rt-password-input"
               type="text"
-              placeholder="Re-type your password"
+              placeholder="Type your phone"
               className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
               required
             />
@@ -148,7 +148,7 @@ const SupplementalContent = () => {
           className="mb-2 text-3xl font-semibold leading-[1.25] text-white lg:text-4xl"
           variants={primaryVariants}
         >
-          Connecting Designers
+          Connecting 
           <br />
           with Opportunities
         </motion.h2>
