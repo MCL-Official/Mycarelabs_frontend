@@ -71,7 +71,7 @@ function App() {
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/faq" element={<Faq/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
-          <Route path="/bookingcompletion" element={<ConfirmBooking />} />
+          <Route path="/bookingcompletion/:id" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
           <Route path="/covid-test-locations" element={<DrawerButton/>} />
           <Route path="/blog" element={<Blogs />} />

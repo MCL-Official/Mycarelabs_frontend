@@ -34,6 +34,18 @@ const LeftContainer = ({ cardData }) => {
 };
 
 const DateTimePicker = (cardData) => {
+  console.log(cardData?.cardData?.category,"dskvjbjbdhsvbhjvb");
+  // const data = 
+  const formatCategoryName = (data) => {
+    return data
+      .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+      .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+      .replace(/-+/g, '-') // Removes consecutive hyphens
+      .replace(/-+$/, '') // Removes trailing hyphens
+      .toLowerCase();
+  };
+
+  const formattedCategory = formatCategoryName(cardData?.cardData?.category);
   const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
@@ -147,7 +159,7 @@ const DateTimePicker = (cardData) => {
         id: Math.random(),
         text: 'Appointment booked successfully!'
       });
-      navigate("/bookingcompletion");
+      navigate(`/bookingcompletion/${formattedCategory}`);
     } catch (error) {
       setIsLoading(false);
       console.error('Error booking appointment', error);
