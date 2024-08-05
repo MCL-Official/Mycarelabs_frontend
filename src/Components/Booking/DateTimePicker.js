@@ -37,12 +37,22 @@ const DateTimePicker = (cardData) => {
   console.log(cardData?.cardData?.category,"dskvjbjbdhsvbhjvb");
   // const data = 
   const formatCategoryName = (data) => {
-    return data
-      .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
-      .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
-      .replace(/-+/g, '-') // Removes consecutive hyphens
-      .replace(/-+$/, '') // Removes trailing hyphens
-      .toLowerCase();
+    console.log("datadatadatadatadata",data)
+    try {
+      if (typeof data !== 'string') {
+        throw new Error('Input must be a string');
+      }
+  
+      return data
+        .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+        .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+        .replace(/-+/g, '-') // Removes consecutive hyphens
+        .replace(/-+$/, '') // Removes trailing hyphens
+        .toLowerCase();
+    } catch (error) {
+      console.error('Error formatting category name:', error.message);
+      return '';
+    }
   };
 
   const formattedCategory = formatCategoryName(cardData?.cardData?.category);
@@ -202,12 +212,12 @@ const DateTimePicker = (cardData) => {
                 <div className={`w-full ${showTimes ? 'md:w-3/5' : ''} transition-all duration-500 max-h-96 overflow-y-auto`}>
                   <div className="grid grid-cols-7 gap-2 mb-4">
                     {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
-                      <div key={day} className="text-center text-gray-500">{day}</div>
+                      <div key={day} className="text-center text-xs sm:text-lg text-gray-500">{day}</div>
                     ))}
                     {Array.from({ length: daysInMonth(monthIndex, year) }, (_, day) => (
                       <button
                         key={day}
-                        className={`text-center rounded p-2 ${selectedDate === `${months[monthIndex]} ${day + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                        className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${day + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         onClick={() => handleDateClick(day)}
                       >
                         {day + 1}
@@ -259,7 +269,8 @@ const DateTimePicker = (cardData) => {
             <form className="w-full" onSubmit={(e) => e.preventDefault()}>
               <h2 className="text-xl font-semibold mb-6">Enter Details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex flex-col">
+                
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>First Name</label>
                   <input
                     type="text"
@@ -270,7 +281,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Last Name</label>
                   <input
                     type="text"
@@ -281,7 +292,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Email</label>
                   <input
                     type="email"
@@ -292,7 +303,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Phone</label>
                   <input
                     type="tel"
@@ -303,7 +314,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Reason for testing?</label>
                   <select
                     name="reason"
@@ -320,7 +331,7 @@ const DateTimePicker = (cardData) => {
                     <option value="Other">Other</option>
                   </select>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Zip Code</label>
                   <input
                     type="text"
@@ -331,7 +342,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col col-span-2">
+                <div className="flex flex-col col-span-2 ">
                   <label>Additional Instructions</label>
                   <textarea
                     name="instructions"
