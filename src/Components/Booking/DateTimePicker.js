@@ -259,7 +259,8 @@ const DateTimePicker = (cardData) => {
             <form className="w-full" onSubmit={(e) => e.preventDefault()}>
               <h2 className="text-xl font-semibold mb-6">Enter Details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex flex-col">
+                
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>First Name</label>
                   <input
                     type="text"
@@ -270,7 +271,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Last Name</label>
                   <input
                     type="text"
@@ -281,7 +282,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Email</label>
                   <input
                     type="email"
@@ -292,7 +293,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Phone</label>
                   <input
                     type="tel"
@@ -303,7 +304,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Reason for testing?</label>
                   <select
                     name="reason"
@@ -320,7 +321,7 @@ const DateTimePicker = (cardData) => {
                     <option value="Other">Other</option>
                   </select>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Zip Code</label>
                   <input
                     type="text"
@@ -331,7 +332,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col col-span-2">
+                <div className="flex flex-col col-span-2 ">
                   <label>Additional Instructions</label>
                   <textarea
                     name="instructions"
