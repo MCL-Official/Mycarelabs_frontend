@@ -22,10 +22,10 @@ Learn about My Care Labs, your trusted partner in diagnostic testing. Discover o
       {/* <Teamsample/> */}
       <br></br>
       <br></br>
-      <Sampletest/>
+      {/* <Sampletest/> */}
       <CollapseCardFeatures/>
       <CountUpStats/>
-      <DragShuffleHero/>
+      {/* <DragShuffleHero/> */}
       <ContactForm/>
       {/* <br></br>
       <br></br>
