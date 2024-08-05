@@ -33,7 +33,7 @@ const Faq = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto py-5 mt-5">
+    <div className="max-w-4xl sm:mx-auto px-2 py-5 mt-5">
         <Helmet>
         <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
         <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />

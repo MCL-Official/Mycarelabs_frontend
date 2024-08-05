@@ -9,19 +9,19 @@ const Locations = () => {
       <h2 className="text-2xl font-bold mt-2">
         Same Day Results <span className="text-red-500">For Groups,</span> individuals, Travelers
       </h2>
-      <div className="flex justify-center mt-8 space-x-8">
-  <div className="text-center">
+      <div className="flex flex-col sm:flex-row justify-center mt-8 space-x-8">
+  <div className="text-center mx-auto">
     <img
       src="https://img.freepik.com/free-vector/blue-round-clock_1048-961.jpg?t=st=1722615915~exp=1722619515~hmac=4f9b110c135d28861a979040858b6105ef8a6fbced2eb8da82752c082e05473e&w=1800"
       alt="Same Day Results"
       className="w-48 h-48 mx-auto mb-2 object-cover" 
     />
     <h3 className="font-bold">Same Day Results</h3>
-    <p className="text-gray-600">
+    <p className="text-gray-600 ">
       Rapid same-day results: My Care Labs, your trusted healthcare partner.
     </p>
   </div>
-  <div className="text-center">
+  <div className="text-center mx-auto">
     <img
       src="https://img.freepik.com/free-vector/father-shaking-hands-with-insurance-agent_74855-4412.jpg?t=st=1722615989~exp=1722619589~hmac=76ff5c12a009a8488f1f6b9b77cb0234014e5b8a8caf08a861dbd95f147e597d&w=1800"
       alt="No Cost for Insurance"
@@ -32,7 +32,7 @@ const Locations = () => {
       Our services are offered at no cost for patients with insurance.
     </p>
   </div>
-  <div className="text-center">
+  <div className="text-center mx-auto">
     <img
       src="https://img.freepik.com/free-vector/no-date-calendar_78370-7221.jpg?t=st=1722617494~exp=1722621094~hmac=b2d9215caf635d8b1477c6ec8783ee672991fbe0340d7b5bd40e49c3e7d6d648&w=1800"
       alt="No Appointments Needed"
@@ -43,7 +43,7 @@ const Locations = () => {
       Walk-in tests: Swift results at My Care Labs for your convenience.
     </p>
   </div>
-  <div className="text-center">
+  <div className="text-center mx-auto">
     <img
       src="https://img.freepik.com/free-vector/large-group-people-silhouette-crowded-together-heart-shape-isolated-white-background-vector_90220-2591.jpg?t=st=1722618057~exp=1722621657~hmac=d8276aab9f15b48afea7cbf041b0dae9ad550f03814b0ab8150512d8c0091872&w=1800"
       alt="Trusted by Millions of People"
