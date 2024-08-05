@@ -37,12 +37,22 @@ const DateTimePicker = (cardData) => {
   console.log(cardData?.cardData?.category,"dskvjbjbdhsvbhjvb");
   // const data = 
   const formatCategoryName = (data) => {
-    return data
-      .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
-      .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
-      .replace(/-+/g, '-') // Removes consecutive hyphens
-      .replace(/-+$/, '') // Removes trailing hyphens
-      .toLowerCase();
+    console.log("datadatadatadatadata",data)
+    try {
+      if (typeof data !== 'string') {
+        throw new Error('Input must be a string');
+      }
+  
+      return data
+        .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+        .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+        .replace(/-+/g, '-') // Removes consecutive hyphens
+        .replace(/-+$/, '') // Removes trailing hyphens
+        .toLowerCase();
+    } catch (error) {
+      console.error('Error formatting category name:', error.message);
+      return '';
+    }
   };
 
   const formattedCategory = formatCategoryName(cardData?.cardData?.category);
@@ -202,12 +212,12 @@ const DateTimePicker = (cardData) => {
                 <div className={`w-full ${showTimes ? 'md:w-3/5' : ''} transition-all duration-500 max-h-96 overflow-y-auto`}>
                   <div className="grid grid-cols-7 gap-2 mb-4">
                     {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
-                      <div key={day} className="text-center text-gray-500">{day}</div>
+                      <div key={day} className="text-center text-xs sm:text-lg text-gray-500">{day}</div>
                     ))}
                     {Array.from({ length: daysInMonth(monthIndex, year) }, (_, day) => (
                       <button
                         key={day}
-                        className={`text-center rounded p-2 ${selectedDate === `${months[monthIndex]} ${day + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                        className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${day + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         onClick={() => handleDateClick(day)}
                       >
                         {day + 1}

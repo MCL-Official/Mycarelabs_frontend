@@ -31,7 +31,7 @@ const FaqWellness = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto py-5 mt-5">
+    <div className="max-w-4xl sm:mx-auto pl-5 pr-1 py-5 mt-5">
       <h2 className="text-2xl font-bold mb-6 text-center">Frequently asked questions</h2>
       {faqs.map((faq, index) => (
         <div key={index} className="border-b border-gray-200">

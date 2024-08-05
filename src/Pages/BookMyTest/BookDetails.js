@@ -50,17 +50,17 @@ const BookTestDetails = () => {
         <meta name="author" content="My Care Labs" />
       </Helmet>
       <div
-        className="relative bg-cover bg-center h-[75vh]"
+        className="relative bg-cover bg-center h-[30rem]"
         style={{ backgroundImage: `url(${cardData?.imageUrl})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-4">
-          <h1 className="text-4xl font-bold mb-2">{cardData?.title}</h1>
+          <h1 className="text-4xl font-bold sm:mt-1 mt-10 mb-2">{cardData?.title}</h1>
           <p className="text-lg font-bold">{cardData?.shortDescription}</p>
           <p className="text-lg mt-2">{cardData?.longDescription}</p>
         </div>
       </div>
-      <div className="relative container mx-auto z-15" style={{ marginTop: '-29.5vh' }}>
+      <div className="relative container mx-auto z-15" style={{ marginTop: '-5rem' }}>
         {/* <div className="bg-white p-8 shadow-lg rounded-lg" style={{ background: 'none' }}> */}
           <DateTimePicker cardData={cardData} />
         
