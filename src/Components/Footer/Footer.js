@@ -211,7 +211,7 @@ function Footer() {
         <ul className="ft-social-links">
           <li>
             <a
-              href="https://linkedin.com/in/"
+              href="https://www.linkedin.com/company/mycarelabs"
               title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -228,7 +228,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/MyCareLabsOfficial/"
               title="FaceBook"
               target="_blank"
               rel="noopener noreferrer"
