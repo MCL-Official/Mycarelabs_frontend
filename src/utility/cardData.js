@@ -93,49 +93,106 @@ export const cardData = [
     "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
-  ]; 
-
-
- export  const testingSolutions = [
+  ]; export const testingSolutions = [
     {
-        category: "Infectious Disease Testing Solutions",
-        tests: [
-            "Travel PCR Testing",
-            "Testing for Groups",
-            "Testing for Schools",
-            "Testing for Nursing Homes",
-            "At-Home COVID-19 PCR Test Kit"
-        ]
+      category: "Infectious Disease Testing Solutions",
+      route: "/testing-solutions/infectious-disease-testing-solutions", // Add category route
+      tests: [
+        {
+          name: "Travel PCR Testing",
+          route: "/travel-testing",
+        },
+        {
+          name: "Testing for Groups",
+          route: "/group-covid-testing",
+        },
+        {
+          name: "Testing for Schools",
+          route: "/testing-for-schools",
+        },
+        {
+          name: "Testing for Nursing Homes",
+          route: "/testing-for-nursing-homes",
+        },
+        {
+          name: "At-Home COVID-19 PCR Test Kit",
+          route: "/covid-rt-pcr-home-test-kit",
+        },
+      ],
     },
     {
-        category: "Wellness Testing Solutions",
-        tests: [
-            "Anemia Profile Test",
-            "Basic Metabolic Panel",
-            "Liver Function Panel Tests",
-            "Renal Function Panel Test",
-            "Thyroid Function Panel Test",
-            "Comprehensive Metabolic Panel (CMP) Test"
-        ]
+      category: "Wellness Testing Solutions",
+      route: "/testing-solutions/wellness-testing-solutions/", // Add category route
+      tests: [
+        {
+          name: "Anemia Profile Test",
+          route: "/testing-solutions/wellness-testing-solutions/anemia-profile-test",
+        },
+        {
+          name: "Basic Metabolic Panel",
+          route: "/testing-solutions/wellness-testing-solutions/basic-metabolic-panel",
+        },
+        {
+          name: "Liver Function Panel Tests",
+          route: "/testing-solutions/wellness-testing-solutions/liver-function-panel-tests",
+        },
+        {
+          name: "Renal Function Panel Test",
+          route: "/testing-solutions/wellness-testing-solutions/renal-function-panel-test",
+        },
+        {
+          name: "Thyroid Function Panel Test",
+          route: "/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test",
+        },
+        {
+          name: "Comprehensive Metabolic Panel (CMP) Test",
+          route: "/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test",
+        },
+      ],
     },
     {
-        category: "Toxicology Testing Solutions",
-        tests: []
+      category: "Toxicology Testing Solutions",
+      route: "/toxicology-testing-solutions", // Add category route
+      tests: [],
     },
     {
-        category: "Oncology Testing Solutions",
-        tests: []
+      category: "Oncology Testing Solutions",
+      route: "/oncology-testing-solutions", // Add category route
+      tests: [],
     },
     {
-        category: "Other Tests",
-        tests: [
-            "Creatine Kinase",
-            "CRP Tests",
-            "Free Psa Testing",
-            "Magnesium Test in Blood",
-            "Anticonvulsant Test Services",
-            "Vitamin D Test Services",
-            "Total PSA Test Services"
-        ]
-    }
-];
+      category: "Other Tests",
+      // route: "/other-tests", // Add category route
+      tests: [
+        {
+          name: "Creatine Kinase",
+          route: "/creatine-kinase",
+        },
+        {
+          name: "CRP Tests",
+          route: "/crp-tests",
+        },
+        {
+          name: "Free Psa Testing",
+          route: "/free-psa-testing",
+        },
+        {
+          name: "Magnesium Test in Blood",
+          route: "/magnesium-test-in-blood",
+        },
+        {
+          name: "Anticonvulsant Test Services",
+          route: "/anticonvulsant-test-services",
+        },
+        {
+          name: "Vitamin D Test Services",
+          route: "/vitamin-d-test-services",
+        },
+        {
+          name: "Total PSA Test Services",
+          route: "/total-psa-test-services",
+        },
+      ],
+    },
+  ];
+  

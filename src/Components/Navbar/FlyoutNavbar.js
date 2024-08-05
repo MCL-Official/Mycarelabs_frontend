@@ -1,21 +1,18 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; // Import Link component
 import { FiMenu, FiArrowRight, FiX, FiChevronDown } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
-import {
-  useMotionValueEvent,
-  AnimatePresence,
-  useScroll,
-  motion,
-} from "framer-motion";
+import { useMotionValueEvent, AnimatePresence, useScroll, motion } from "framer-motion";
 import useMeasure from "react-use-measure";
 import logo1 from "../../Assets/Logo1.png";
-import { cardData, images ,testingSolutions} from "../../utility/cardData";
+import { cardData, images, testingSolutions } from "../../utility/cardData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Example = () => {
   return (
     <>
       <FlyoutNav />
-    
     </>
   );
 };
@@ -30,9 +27,9 @@ const FlyoutNav = () => {
   // Handle scroll direction
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    setScrolled(latest > 250 ? true : false);
+    setScrolled(latest > 20 ? true : false);
 
-    if (latest > previous && latest > 500) {
+    if (latest > previous && latest > 250) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -53,9 +50,12 @@ const FlyoutNav = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
-        <div className="hidden gap-6 lg:flex">
+        <div className="hidden gap-6 lg:flex items-center justify-between">
           <Links isHome={isHome} scrolled={scrolled} />
           <CTAs isHome={isHome} scrolled={scrolled} />
+          <a href="tel:+1234567890" className="mr-3 self-center text-black">
+            <FontAwesomeIcon icon={faPhone} size="xl" />
+          </a>
         </div>
         <MobileMenu isHome={isHome} scrolled={scrolled} />
       </div>
@@ -65,16 +65,13 @@ const FlyoutNav = () => {
 
 const Logo = ({ color = "white" }) => {
   return (
-    <a
-      href="/"
-      className="flex items-center md:mr-5 space-x-3 rtl:space-x-reverse"
-    >
+    <Link to="/" className="flex items-start md:mr-5 space-x-3 rtl:space-x-reverse">
       <img
         src={logo1}
-        className="max-w-[120px] max-h-[60px]" // Adjusted the size
+        className="max-w-[250px] max-h-[60px]" // Adjusted the size
         alt="Flowbite Logo"
       />
-    </a>
+    </Link>
   );
 };
 
@@ -84,7 +81,7 @@ const Links = ({ isHome, scrolled }) => {
       {LINKS.map((l) => (
         <NavLink
           key={l.text}
-          href={l.href}
+          to={l.href}
           FlyoutContent={l.component}
           isHome={isHome}
           scrolled={scrolled}
@@ -96,7 +93,7 @@ const Links = ({ isHome, scrolled }) => {
   );
 };
 
-const NavLink = ({ children, href, FlyoutContent, isHome, scrolled }) => {
+const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
   const [open, setOpen] = useState(false);
   const showFlyout = FlyoutContent && open;
 
@@ -106,8 +103,8 @@ const NavLink = ({ children, href, FlyoutContent, isHome, scrolled }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <a
-        href={href}
+      <Link
+        to={to}
         className={`relative font-semibold no-underline text-xl ${
           isHome ? (scrolled ? "text-black" : "text-white") : "text-black"
         }`}
@@ -119,7 +116,7 @@ const NavLink = ({ children, href, FlyoutContent, isHome, scrolled }) => {
           }}
           className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
         />
-      </a>
+      </Link>
       <AnimatePresence>
         {showFlyout && (
           <motion.div
@@ -163,9 +160,27 @@ const CTAs = ({ isHome, scrolled }) => {
 };
 
 const AboutUsContent = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+// const sample = {{...cardData , imageUrl: images[index % images.length] }}
   if (!cardData || !images || cardData.length === 0 || images.length === 0) {
     return null; // Return null to render nothing if the arrays are not available
   }
+
+  const formatCategoryName = (categoryName) => {
+    return categoryName
+      .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+      .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+      .replace(/-+/g, '-') // Removes consecutive hyphens
+      .replace(/-+$/, '') // Removes trailing hyphens
+      .toLowerCase();
+  };
+
+  const handleBookNowClick = (card) => {
+    console.log(card,"dlvmsdvv");
+    
+    const formattedCategory = formatCategoryName(card.category);
+    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData:card } });
+  };
   return (
     <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
       <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-4 lg:col-span-4">
@@ -177,12 +192,12 @@ const AboutUsContent = () => {
             Placeholder is the world's leading placeholder company.
           </p>
         </div>
-        <a
-          href="#"
+        <Link
+          to="/covid-test-locations"
           className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
         >
           Learn more <FiArrowRight />
-        </a>
+        </Link>
       </div>
       <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 lg:grid-cols-2">
         {cardData.slice(0, 4).map((card, index) => (
@@ -205,12 +220,12 @@ const AboutUsContent = () => {
                   <strong>Location:</strong> {card.location}
                 </p>
               </div>
-              <a
-                href="#"
+              <button
+                onClick={() => handleBookNowClick(card)}
                 className="mt-3 px-3 py-1 text-center text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-semibold w-full"
               >
                 Book Now
-              </a>
+              </button>
             </div>
           </div>
         ))}
@@ -219,50 +234,45 @@ const AboutUsContent = () => {
   );
 };
 
-
-
-
-
-
 const PricingContent = () => {
   return (
     <div className="w-full bg-white p-6 shadow-none lg:w-[250px] lg:shadow-xl">
       <div className="grid grid-cols-2 lg:grid-cols-1">
         <div className="mb-3 space-y-3">
           <h3 className="font-semibold">For Individuals</h3>
-          <a
-            href="#"
+          <Link
+            to="#"
             className="block text-sm text-black no-underline hover:underline"
           >
             Introduction
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="block text-sm text-black no-underline hover:underline"
           >
             Pay as you go
-          </a>
+          </Link>
         </div>
         <div className="mb-6 space-y-3">
           <h3 className="font-semibold">For Companies</h3>
-          <a
-            href="#"
+          <Link
+            to="#"
             className="block text-sm text-black no-underline hover:underline"
           >
             Startups
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="block text-sm text-black no-underline hover:underline"
           >
             SMBs
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="block text-sm text-black no-underline hover:underline"
           >
             Enterprise
-          </a>
+          </Link>
         </div>
       </div>
       <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
@@ -273,24 +283,22 @@ const PricingContent = () => {
 };
 
 
-
-
 const CareersContent = () => {
   return (
     <div className="grid w-full grid-cols-12 overflow-hidden rounded-lg shadow-xl lg:w-[750px]">
       <div className="col-span-12 flex flex-col justify-between bg-gradient-to-b from-indigo-700 to-indigo-500 p-6 lg:col-span-4">
         <div className="mb-6">
-          <h2 className="mb-2 text-2xl font-bold text-white">Careers</h2>
+          <h2 className="mb-2 text-2xl font-bold text-white">Solutions</h2>
           <p className="text-sm text-indigo-100">
-            Placeholder was rated a top place to work by Placeholder.
+           Solution that we provide to keep you healthy and going.
           </p>
         </div>
-        <a
-          href="#"
+        <Link
+          to="#"
           className="flex items-center gap-1 text-sm font-medium text-indigo-200 hover:text-white hover:underline"
         >
-          Careers site <FiArrowRight />
-        </a>
+          Solutions <FiArrowRight />
+        </Link>
       </div>
       <div className="col-span-12 grid grid-cols-2 gap-6 bg-white p-6 lg:col-span-8 lg:grid-cols-3">
         {testingSolutions
@@ -300,17 +308,20 @@ const CareersContent = () => {
               key={index}
               className="flex flex-col space-y-4 border-b-2 border-gray-100 pb-4 transition-all duration-200 ease-in-out hover:bg-gray-50"
             >
-              <h3 className="font-semibold text-lg text-gray-800 leading-tight">
+              <Link
+                to={solution.route} // Navigate to category route
+                className="font-semibold text-lg  text-gray-800  no-underline leading-tight hover:text-blue-800 hover:underline"
+              >
                 {solution.category}
-              </h3>
+              </Link>
               {solution.tests.map((test, idx) => (
-                <a
+                <Link
                   key={idx}
-                  href="#"
-                  className="block text-sm text-blue-600 hover:text-blue-800 hover:underline"
+                  to={test.route} // Navigate to test route
+                  className="block text-sm text-blue-600 no-underline  hover:text-blue-800 hover:underline"
                 >
-                  {test}
-                </a>
+                  {test.name}
+                </Link>
               ))}
             </div>
           ))}
@@ -330,15 +341,15 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
           className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-2 text-start text-base font-medium"
           onClick={() => setOpen((pv) => !pv)}
         >
-          <a
+          <Link
             onClick={(e) => {
               e.stopPropagation();
               setMenuOpen(false);
             }}
-            href={href}
+            to={href}
           >
             {children}
-          </a>
+          </Link>
           <motion.div
             animate={{ rotate: open ? "180deg" : "0deg" }}
             transition={{
@@ -350,17 +361,17 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
           </motion.div>
         </div>
       ) : (
-        <a
+        <Link
           onClick={(e) => {
             e.stopPropagation();
             setMenuOpen(false);
           }}
-          href="#"
+          to={href}
           className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-2 text-start text-base font-medium"
         >
           <span>{children}</span>
           <FiArrowRight />
-        </a>
+        </Link>
       )}
       {FoldContent && (
         <motion.div
@@ -446,11 +457,11 @@ const LINKS = [
   },
   {
     text: "Company",
-    href: "#",
-    component: PricingContent,
+    href: "/about",
+    // component: PricingContent,
   },
   {
     text: "Blog",
-    href: "#",
+    href: "/blog",
   },
 ];
