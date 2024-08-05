@@ -48,6 +48,7 @@ import FeatureComponent from "./Components/Accordain/FeatureComponent";
 import HoverCards from "./Components/HoverCard/HoverCards";
 import NeumorphismButton from "./Components/button/Button";
 import DrawerButton from "./Components/Custome_Modal/DrawerButton";
+import Example from "./Components/Navbar/FlyoutNavbar";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -65,6 +66,7 @@ function App() {
       <Router >
       <PageViewTracker />
         <Navbar />
+        {/* <Example/> */}
         {/* <Navbar2/> */}
         <Routes>
           <Route path="/" element={<Home />} />
