@@ -105,19 +105,6 @@ function App() {
           <Route path="/testing-solutions" element={<FeatureComponent/>}/>
           <Route path="/testingLoc" element={<HoverCards/>}/>
           <Route path="loc" element={<DateTimePicker/>}/>
-          
-
-
-
-
-    
-
-
-
-
-
-
-
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
           {/* <Route path="*" element={<NotFound />} /> */}
@@ -129,15 +116,3 @@ function App() {
 }
 
 export default App;
-
-// import React from 'react'
-
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>Radhe shyam</h1>
-//     </div>
-//   )
-// }
-
-// export default App

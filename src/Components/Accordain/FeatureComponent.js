@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import img5 from "../../Assets/img5.png";
 import img3 from "../../Assets/img2.jpg";
 import img from "../../Assets/img.jpg";
 import img1 from "../../Assets/img3.jpg";
 import img4 from "../../Assets/img4.jpg";
 import { Helmet } from "react-helmet";
-
 
 const features = {
   Toxicology: {
@@ -15,6 +15,7 @@ const features = {
       "MyCare Labs offers comprehensive toxicology testing services, ensuring accurate and timely results for various needs. Their state-of-the-art facilities and experienced professionals provide reliable screening for drugs, alcohol, and other substances.",
     buttonText: `BOOK TEST FOR Toxicology `,
     image: img1,
+    route: "/testing-solutions/toxicology-testing-solutions/", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -37,8 +38,9 @@ const features = {
     title: "Infectious Disease",
     description:
       "MyCare Labs provides top-tier testing solutions for infectious diseases,featuring an all-in-one swab for COVID-19, Influenza A/B, and RSV. Discover comprehensive and advanced diagnostics with MyCare Labs' reliable services.",
-    buttonText: `BOOK TEST FOR InfectiousDisease`,
+    buttonText: `BOOK TEST FOR Infectious Disease`,
     image: img3,
+    route: "/testing-solutions/infectious-disease-testing-solutions", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -61,8 +63,9 @@ const features = {
     title: "Wellness Testing",
     description:
       "MyCare Labs provides the best testing solutions, prioritizing your well-being with comprehensive wellness testing services.Take proactive steps towards a healthier, happier you with MyCare Labs' advanced diagnostics.",
-    buttonText: `BOOK TEST FOR WellnessTesting`,
+    buttonText: `BOOK TEST FOR Wellness Testing`,
     image: img,
+    route: "/testing-solutions/wellness-testing-solutions/", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -89,6 +92,7 @@ const features = {
       " MyCare Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
     buttonText: `Book Test For Mobile Testing`,
     image: img4,
+    route: "/covid-test-locations/socal-corona-mobile-testing", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -115,6 +119,7 @@ const features = {
       "Our At-home Test Kits offer a convenient way to monitor your health. Order now for peace of mind.",
     buttonText: `BOOK TEST FOR AT HOME TEST KITS`,
     image: img5,
+    route: "/covid-test-locations/socal-corona-mobile-testing", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -142,10 +147,17 @@ function FeatureComponent() {
   const [previousFeature, setPreviousFeature] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const navigate = useNavigate(); // Use navigate
+
   const handleClick = (feature) => {
     setIsAnimating(true);
     setPreviousFeature(selectedFeature);
     setSelectedFeature(feature);
+  };
+
+  const handleButtonClick = () => {
+    const route = features[selectedFeature].route;
+    navigate(route); // Navigate to the selected feature's route
   };
 
   const imageVariants = {
@@ -273,7 +285,8 @@ function FeatureComponent() {
               exit="exit"
               custom={direction}
               variants={textVariants}
-              className="bg-blue-600 text-white px-4 py-2 rounded w-full "
+              className="bg-blue-600 text-white px-4 py-2 rounded w-full"
+              onClick={handleButtonClick} // Add onClick handler
             >
               {features[selectedFeature].buttonText}
             </motion.button>
