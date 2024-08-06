@@ -102,7 +102,7 @@ function App() {
           <Route path="/total-psa-test-services" element={<Index6/>} />
           <Route path="/about" element={<Team/>} />
           <Route path="/contact" element={<SlideInAuth/>}/>
-          <Route path="/testingSol" element={<FeatureComponent/>}/>
+          <Route path="/testing-solutions" element={<FeatureComponent/>}/>
           <Route path="/testingLoc" element={<HoverCards/>}/>
           <Route path="loc" element={<DateTimePicker/>}/>
           
