@@ -123,13 +123,13 @@ function Footer() {
               <a href="/contact">Contact Us</a>
             </li>
             <li>
-              <a href="/testingSol">Testing Solutions</a>
+              <a href="/testing-solutions">Testing Solutions</a>
             </li>
             <li>
-              <a href="/testingLoc">Testing Locations</a>
+              <a href="/covid-test-locations">Testing Locations</a>
             </li>
             <li>
-              <a href="/testingLoc">Book An Appointment</a>
+              <a href="/covid-test-locations">Book An Appointment</a>
             </li>
           </ul>
         </div>
