@@ -28,6 +28,7 @@ import Anemia from "./Pages/Solutions/Wellness-testing/Anemis-testing/Index";
 import Solution from "./Pages/Solutions/Wellness-testing/Solution";
 import Basic from "./Pages/Solutions/Wellness-testing/Basic-metabolic/Index";
 import CMP from "./Pages/Solutions/Wellness-testing/Comprensive-metabolic/Index";
+import Lipid from "./Pages/Solutions/Wellness-testing/Lipid-testing/Index";
 import Liver from "./Pages/Solutions/Wellness-testing/Liver-function/Index";
 import Renal from "./Pages/Solutions/Wellness-testing/Renal-function/Index";
 import Thyroid from "./Pages/Solutions/Wellness-testing/Thyroid-function/Index";
@@ -91,6 +92,7 @@ function App() {
           <Route path="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" element={<Renal/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP/>} />
+          <Route path="/testing-solutions/wellness-testing-solutions/lipid-profile-test/" element={<Lipid/>} />
           <Route path="//testing-solutions/oncology-testing-solutions/" element={<Oncology/>} />
           <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology/>} />
           <Route path="/creatine-kinase" element={<Index/>} />

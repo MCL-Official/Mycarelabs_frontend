@@ -231,6 +231,9 @@ function Navbar() {
                           <Link to="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Basic Metabolic Panel</p>
                           </Link>
+                          <Link to="/testing-solutions/wellness-testing-solutions/lipid-profile-test/" className="block no-underline text-black hover:text-blue-500">
+                            <p className="text-sm mb-1 hover:text-blue-500">Lipid Profile Test</p>
+                          </Link>
                           <Link to="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" className="block no-underline text-black hover:text-blue-500">
                             <p className="text-sm mb-1 hover:text-blue-500">Liver Function Panel Tests</p>
                           </Link>
