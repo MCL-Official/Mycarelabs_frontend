@@ -92,7 +92,7 @@ const features = {
       " MyCare Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
     buttonText: `Book Test For Mobile Testing`,
     image: img4,
-    route: "/covid-test-locations/socal-corona-mobile-testing", // Add route
+    route: "/covid-test-locations", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -119,7 +119,7 @@ const features = {
       "Our At-home Test Kits offer a convenient way to monitor your health. Order now for peace of mind.",
     buttonText: `BOOK TEST FOR AT HOME TEST KITS`,
     image: img5,
-    route: "/covid-test-locations/socal-corona-mobile-testing", // Add route
+    route: "/covid-test-locations", // Add route
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
