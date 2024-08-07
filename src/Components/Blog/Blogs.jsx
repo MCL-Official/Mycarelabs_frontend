@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FaShareAlt } from 'react-icons/fa'; // Import the share icon from react-icons
@@ -32,42 +32,54 @@ const Blogs = () => {
   const blogsPerPage = 9;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const getBlogData = async (page) => {
-      setLoading(true);
-      try {
-        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`);
-        setBlogData(response.data.blogs);
-        setCurrentPage(response.data.currentPage);
-        setTotalPages(response.data.totalPages);
-      } catch (error) {
-        console.error('Error fetching blog data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    getBlogData(currentPage);
-  }, [currentPage]);
+  const getBlogData = useCallback(async (page) => {
+    setLoading(true);
+    try {
+      const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`);
+      setBlogData(response.data.blogs);
+      setCurrentPage(response.data.currentPage);
+      setTotalPages(response.data.totalPages);
+    } catch (error) {
+      console.error('Error fetching blog data:', error);
+    } finally {
+      setLoading(false);
+    }
+  }, [blogsPerPage]);
 
-  const handleSearchChange = async (e) => {
+  // Fetch initial data on component mount and whenever currentPage changes
+  useEffect(() => {
+    if (searchTerm === '') {
+      getBlogData(currentPage);
+    }
+  }, [currentPage, searchTerm, getBlogData]);
+
+  // Handle search changes with debounce
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      if (searchTerm.trim() !== '') {
+        setLoading(true);
+        axios
+          .get(`https://backend.mycaretrading.com/admin/blog/search/${encodeURIComponent(searchTerm)}`)
+          .then((response) => {
+            setBlogData(response.data);
+            setTotalPages(1); // Reset totalPages since search results don't have pagination
+            setCurrentPage(1); // Reset to the first page of search results
+          })
+          .catch((error) => {
+            console.error('Error searching for blogs:', error);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }
+    }, 500); // 500ms debounce
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [searchTerm]);
+
+  const handleSearchChange = (e) => {
     const searchValue = e.target.value;
     setSearchTerm(searchValue);
-
-    if (searchValue.trim() !== '') {
-      setLoading(true);
-      try {
-        const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/search/${encodeURIComponent(searchValue)}`);
-        setBlogData(response.data);
-      } catch (error) {
-        console.error('Error searching for blogs:', error);
-      } finally {
-        setLoading(false);
-      }
-    } else {
-      // If search term is empty, reset to default blogs
-      setCurrentPage(1); // Reset to page 1
-      // getBlogData(1); // Fetch initial data for page 1
-    }
   };
 
   const handleNavigation = async (blogId, blogName) => {
