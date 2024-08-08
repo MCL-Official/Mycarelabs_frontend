@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiStar } from "react-icons/fi";
+import axios from 'axios';
 
 export const SlideInAuth = () => {
   return (
     <section className="grid min-h-screen grid-cols-1 bg-slate-50 md:grid-cols-[1fr,_400px] lg:grid-cols-[1fr,_600px]">
-      {/* <Logo /> */}
       <Form />
       <SupplementalContent />
     </section>
@@ -13,6 +13,31 @@ export const SlideInAuth = () => {
 };
 
 const Form = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: '',
+  });
+  const [notification, setNotification] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://backend.mycaretrading.com/portal/admin/api/registerform', formData);
+      setNotification({ type: 'success', message: 'Contact form details sent successfully!' });
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+    } catch (error) {
+      setNotification({ type: 'error', message: 'Failed to send contact form details. Please try again.' });
+    }
+  };
+
   return (
     <motion.div
       initial="initial"
@@ -28,25 +53,27 @@ const Form = () => {
           variants={primaryVariants}
           className="mb-2 text-center text-4xl font-semibold"
         >
-            Contact Form
-{/* <a href="tel:+18007904550" className="text-blue-500">+1-800-790-4550</a> */}
+          Contact Form
         </motion.h1>
         <motion.p variants={primaryVariants} className="mb-8 text-center">
-        Fill out the Contact Form below and we will contact you as soon as possible or use our toll-free number 
+          Fill out the Contact Form below and we will contact you as soon as possible or use our toll-free number 
         </motion.p>
 
-        <form onSubmit={(e) => e.preventDefault()} className="w-full">
+        <form onSubmit={handleSubmit} className="w-full">
           <motion.div variants={primaryVariants} className="mb-2 w-full">
             <label
-              htmlFor="email-input"
+              htmlFor="name-input"
               className="mb-1 inline-block text-sm font-medium"
             >
               Name<span className="text-red-600">*</span>
             </label>
             <input
-              id="email-input"
+              id="name-input"
+              name="name"
               type="text"
-              placeholder="Enter your email"
+              value={formData.name}
+              onChange={handleInputChange}
+              placeholder="Enter your name"
               className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
               required
             />
@@ -54,15 +81,18 @@ const Form = () => {
 
           <motion.div variants={primaryVariants} className="mb-2 w-full">
             <label
-              htmlFor="password-input"
+              htmlFor="email-input"
               className="mb-1 inline-block text-sm font-medium"
             >
               Email<span className="text-red-600">*</span>
             </label>
             <input
-              id="password-input"
-              type="text"
-              placeholder="Enter your password"
+              id="email-input"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Enter your email"
               className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
               required
             />
@@ -70,34 +100,57 @@ const Form = () => {
 
           <motion.div variants={primaryVariants} className="mb-4 w-full">
             <label
-              htmlFor="rt-password-input"
+              htmlFor="phone-input"
               className="mb-1 inline-block text-sm font-medium"
             >
               Phone<span className="text-red-600">*</span>
             </label>
             <input
-              id="rt-password-input"
+              id="phone-input"
+              name="phone"
               type="text"
-              placeholder="Type your phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              placeholder="Enter your phone"
               className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
               required
             />
           </motion.div>
 
-          <motion.div
-            variants={primaryVariants}
-            className="mb-4 flex w-full items-start gap-1.5"
-          >
-            <input
-              type="checkbox"
-              id="terms-checkbox"
-              className="h-4 w-4 accent-indigo-600"
-              required
-            />
-            <label htmlFor="terms-checkbox" className="text-xs">
-              By signing up, I agree to the terms and conditions, privacy
-              policy, and cookie policy
+          <motion.div variants={primaryVariants} className="mb-4 w-full">
+            <label
+              htmlFor="company-input"
+              className="mb-1 inline-block text-sm font-medium"
+            >
+              Company
             </label>
+            <input
+              id="company-input"
+              name="company"
+              type="text"
+              value={formData.company}
+              onChange={handleInputChange}
+              placeholder="Enter your company"
+              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
+            />
+          </motion.div>
+
+          <motion.div variants={primaryVariants} className="mb-4 w-full">
+            <label
+              htmlFor="message-input"
+              className="mb-1 inline-block text-sm font-medium"
+            >
+              Message
+            </label>
+            <textarea
+              id="message-input"
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Enter your message"
+              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
+              required
+            ></textarea>
           </motion.div>
 
           <motion.button
@@ -110,13 +163,12 @@ const Form = () => {
           >
             Submit
           </motion.button>
-          {/* <motion.p variants={primaryVariants} className="text-xs">
-            Already have an account?{" "}
-            <a className="text-indigo-600 underline" href="#">
-              Sign in
-            </a>
-          </motion.p> */}
         </form>
+        {notification && (
+          <div className={`mt-4 p-2 text-white rounded ${notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'}`}>
+            {notification.message}
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -211,29 +263,6 @@ const SupplementalContent = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
-
-const Logo = () => {
-  // Temp logo from https://logoipsum.com/
-  return (
-    <svg
-      width="50"
-      height="39"
-      viewBox="0 0 50 39"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="absolute left-[50%] top-4 -translate-x-[50%] fill-slate-950 md:left-4 md:-translate-x-0"
-    >
-      <path
-        d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-        stopColor="#000000"
-      ></path>
-      <path
-        d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-        stopColor="#000000"
-      ></path>
-    </svg>
   );
 };
 
