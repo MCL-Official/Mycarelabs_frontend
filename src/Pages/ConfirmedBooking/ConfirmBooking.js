@@ -33,7 +33,7 @@ const ConfirmBooking = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <div className="text-2xl font-bold">Redirecting in {countdown} seconds...</div>
+      <div className="text-2xl font-bold">Redirecting to HIPAA compliant patient registration page {countdown} seconds...</div>
     </div>
   );
 }
