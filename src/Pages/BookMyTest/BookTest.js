@@ -40,7 +40,7 @@ const BookTest = () => {
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
         "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
-      timing: "Mon-Fri 9:00 AM - 5:00 PM (Appointment only)",
+      timing: "Mon-Fri 8:30 AM - 6:00 PM (Appointment only)",
       location: "Riverside County"
     },
     {
@@ -51,7 +51,7 @@ const BookTest = () => {
         "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
       longDescription:
         " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
-      timing: "Mon-Fri 9:00 AM - 4:00 PM, Sat-Sun (Appointment only)",
+      timing: "Mon-Fri 8:30 AM - 6:00 PM, Sat-Sun (Appointment only)",
       location: "Alameda County"
     },
     {
@@ -62,7 +62,7 @@ const BookTest = () => {
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
         " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
-      timing: "Sundays 11:30 AM - 3:30 PM",
+      timing: " Mon-Fri 8:30 AM - 6:00 PM",
       location: "Riverside County"
     },
     {
@@ -82,7 +82,7 @@ const BookTest = () => {
       shortDescription:
         "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
       longDescription: "Detailed information about our light solutions...",
-      timing: "Mon, Wed, Fri 8:30 AM - 4:00 PM",
+      timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
       location: "Union City, CA 94587"
     },
     {
@@ -92,7 +92,7 @@ const BookTest = () => {
       shortDescription:
         "Same-day Covid/Flu PCR results available. To speed up your testing.",
       longDescription: "Detailed information about our audio solutions...",
-      timing: "Mon-Fri 9:00 AM - 5:00 PM",
+      timing: "Mon-Fri 8:30 AM - 6:00 PM",
       location: "Corona, CA 92882"
     },
     {
@@ -102,7 +102,7 @@ const BookTest = () => {
       shortDescription:
         "Same-day Covid/Flu PCR results available. To speed up your testing.",
       longDescription: "Detailed information about our audio solutions...",
-      timing: "Mon-Fri 9:00 AM - 5:00 PM",
+      timing: "Mon-Fri 8:30 AM - 6:00 PM",
       location: "Corona, CA 92882"
     },
   ];
