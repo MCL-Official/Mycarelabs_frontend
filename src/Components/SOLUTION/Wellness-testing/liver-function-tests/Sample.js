@@ -17,7 +17,7 @@ const Sample = () => {
       <div className="max-w-[720px] max-[991px]:[grid-area:1/1/2/2] lg:max-w-[842px]">
         {/* Heading Text */}
         <div>
-          <h2 className="mb-4 text-3xl font-semibold md:text-5xl">Liver  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center bg-no-repeat px-4 text-white">Function </span> <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/63915f9749aaab0572c48dae_Rectangle%2018.svg')] bg-cover bg-center bg-no-repeat px-4 text-white">Panel</span>  Tests</h2>
+          <h2 className="mb-4 text-3xl mt-3  font-semibold md:text-5xl">Liver  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center bg-no-repeat px-4 text-white">Function </span> <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/63915f9749aaab0572c48dae_Rectangle%2018.svg')] bg-cover bg-center bg-no-repeat px-4 text-white">Panel</span>  Tests</h2>
           <p className="max-w-[480px] text-[#636262]">The liver, an essential organ in the human body, performs a multitude of crucial functions, from filtering blood to metabolizing nutrients and detoxifying harmful substances. </p>
         </div>
         {/* Divider */}

@@ -41,13 +41,13 @@ const BlogPostCarousel = () => {
   };
 
   return (
-    <section className="bg-neutral-100 py-8" ref={ref}>
-      <div className="relative overflow-hidden p-4">
+    <section className="bg-neutral-100 w-screen sm:w-full py-8" ref={ref}>
+      <div className="relative overflow-hidden  p-4">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-between">
-            <h2 className="mb-4 text-4xl">Other Recommended Tests</h2>
+            <h2 className="mb-4 text-3xl md:text-4xl">Other Recommended Tests</h2>
 
-            <div className="flex items-center gap-2">
+            <div className=" flex items-center gap-2">
               <button
                 className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${
                   CAN_SHIFT_LEFT ? "" : "opacity-30"
@@ -75,7 +75,7 @@ const BlogPostCarousel = () => {
             transition={{
               ease: "easeInOut",
             }}
-            className="flex"
+            className="flex sm:flex-row flex-col mx-auto items-center "
           >
             {posts.map((post) => {
               return <Post key={post.id} {...post} />;
@@ -99,14 +99,14 @@ const Post = ({ imgUrl, author, title, description, location}) => {
         marginRight: MARGIN,
       }}
     >
-      <a className="no-underline" href={location}>
+      <a className="no-underline text-center mx-auto" href={location}>
       <img
         src={imgUrl}
-        className="mb-3 h-[200px] w-full rounded-lg object-cover"
+        className="mb-3 h-[200px] w-auto mx-auto  ml-2 rounded-lg object-cover"
         alt={`An image for a fake blog post titled ${title}`}
       />
    
-      <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
+      <span className="rounded-md border-[1px] w-auto border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
         {author} 
       </span>
      

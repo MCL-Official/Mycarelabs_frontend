@@ -19,7 +19,7 @@ const Index = () => {
 <div
     class="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
     <div class="sm:text-center lg:text-left">
-        <h1 class="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
+        <h1 class="text-4xl mt-4 sm:mt-1 tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
             <span class="block xl:inline">Free PSA </span>
             <span class="block text-indigo-600 xl:inline">Testing</span>
         </h1>
@@ -50,7 +50,7 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
 </section>
       
 
-<div class="container flex items-center bg-blue-400 my-5">
+<div class="container mx-auto flex items-center bg-blue-400 my-5">
 
     <div class="px-2 container mt-3 mb-6 sm:mt-24">
         <div class="text-center">
@@ -509,14 +509,14 @@ Prostate health is a critical aspect of men’s overall well-being, and as medic
     </section>
 
 <HoverCards/>
-  <div class="container flex items-center bg-blue-900 rounded-full	 my-5">
+  <div class="container overflow-hidden flex items-center bg-blue-900 rounded-full my-5">
 
-<div class="px-4 container mt-16 mb-16 sm:mt-24">
+<div class="px-5 md:px-4 container mt-12 mb-16 sm:mt-20">
     <div class="text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight text-gray-200 sm:text-5xl md:text-6xl font-title">
+        <h1 class="text-xl font-extrabold tracking-tight text-gray-200 sm:text-4xl md:text-5xl font-title">
             <span class="block">My Care Labs is a certified BBB accredited business member.</span>
         </h1>
-        <p class="text-base text-gray-300">
+        <p class="text-sm sm:text-2xl text-gray-300">
         My Care Labs offers quick, hassle-free, and accurate COVID-19 RT-PCR testing. With same day results or within 24 hours, we have testing on-site at our laboratory and at pop-ups throughout California. My Care Labs takes your health seriously. We are a CLIA-certified laboratory, part of the California Covid Task Force, partner with CDPH, and report directly to CDC.
         </p>
        

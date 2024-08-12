@@ -48,7 +48,7 @@ const Solution = ({ title, description, index, open, setOpen }) => {
       <motion.div
         initial={false}
         animate={{
-          height: isOpen ? "240px" : "72px",
+          height: isOpen ? "22rem" : "5rem",
         }}
         className="p-6 rounded-[7px] bg-white flex flex-col justify-between relative z-20"
       >
@@ -58,7 +58,7 @@ const Solution = ({ title, description, index, open, setOpen }) => {
             animate={{
               color: isOpen ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 1)",
             }}
-            className="text-xl font-medium w-fit bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text"
+            className="text-lg sm:text-2xl font-medium w-fit bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text"
           >
             {title}
           </motion.p>
@@ -67,7 +67,7 @@ const Solution = ({ title, description, index, open, setOpen }) => {
             animate={{
               opacity: isOpen ? 1 : 0,
             }}
-            className="mt-4 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent"
+            className="mt-2 text-sm sm:text-xl bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent"
           >
             {description}
           </motion.p>
@@ -77,7 +77,7 @@ const Solution = ({ title, description, index, open, setOpen }) => {
           animate={{
             opacity: isOpen ? 1 : 0,
           }}
-          className="-ml-6 -mr-6 -mb-6 mt-4 py-2 rounded-b-md flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
+          className="-ml-6 -mr-6 -mb-6 py-2 rounded-b-md flex items-center justify-center gap-1 group transition-[gap] bg-gradient-to-r from-violet-600 to-indigo-600 text-white"
         >
           <span>Learn more</span>
           <FiArrowRight className="group-hover:translate-x-1 transition-transform" />

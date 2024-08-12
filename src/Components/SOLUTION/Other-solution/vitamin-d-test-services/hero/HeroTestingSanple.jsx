@@ -66,7 +66,7 @@ const Copy = () => {
   }
   return (
     <>
-      <div className="mb-1.5 rounded-full bg-zinc-600">
+      <div className="mb-1.5 mt-5  rounded-full bg-zinc-600">
         <a
           href="#"
           target="_blank"

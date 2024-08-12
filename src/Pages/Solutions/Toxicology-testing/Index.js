@@ -27,26 +27,26 @@ const Index = () => {
         <meta name="author" content="My Care Labs" />
       </Helmet>
     <div className="text-center py-8">
-      <h2 className="text-2xl font-semibold text-blue-500">Why is toxicology drug testing needed?</h2>
+      <h2 className="text-2xl font-semibold md:mt-10 mt-12 text-blue-500">Why is toxicology drug testing needed?</h2>
       <h1 className="text-gray-700 mt-4">Toxicology drug testing is needed for many reasons, such as:</h1>
-      <div className="flex flex-wrap justify-center mt-8 space-x-8">
-        <div className="text-left max-w-xs mb-8">
+      <div className="flex flex-wrap   justify-center mt-8 md:space-x-8">
+        <div className="md:text-left text-center max-w-xs mb-8">
           <div className="flex items-start mb-2">
-            <CheckCircleIcon className="w-12 h-12 text-red-500 mr-2" />
+            <CheckCircleIcon className="w-12 h-12 text-red-500 mx-2" />
             <p className="text-gray-700">To ensure safety and compliance in workplaces that require high levels of performance, responsibility, or security, such as transportation, construction, defense, healthcare, and education.</p>
           </div>
           <div className="flex items-start mb-2">
-            <CheckCircleIcon className="w-10 h-10 text-red-500 mr-2" />
+            <CheckCircleIcon className="w-10 h-10 text-red-500 mx-2" />
             <p className="text-gray-700">To monitor and support individuals who are in treatment for substance use disorders, or who are under legal supervision, such as probation or parole.</p>
           </div>
         </div>
-        <div className="text-left max-w-xs mb-8">
+        <div className="md:text-left text-center max-w-xs mb-8">
           <div className="flex items-start mb-2">
-            <CheckCircleIcon className="w-10 h-10 text-red-500 mr-2" />
+            <CheckCircleIcon className="w-10 h-10 text-red-500 mx-2" />
             <p className="text-gray-700">To provide evidence in legal cases involving drug-related offenses, such as driving under the influence, possession, or distribution.</p>
           </div>
           <div className="flex items-start mb-2">
-          <CheckCircleIcon className="w-10 h-10 text-red-500 mr-2" />
+          <CheckCircleIcon className="w-10 h-10 text-red-500 mx-2" />
             <p className="text-gray-700">To screen for potential health risks or complications associated with drug use, such as overdose, addiction, or organ damage.</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const Index = () => {
       <h2 className="text-2xl font-bold mt-2">
         Same Day Results <span className="text-red-500">For Groups,</span> individuals, Travelers
       </h2>
-      <div className="flex justify-center mt-8 space-x-8">
+      <div className="flex md:flex-row flex-col justify-center mt-8  md:space-x-78">
   <div className="text-center">
     <img
       src="https://img.freepik.com/free-vector/blue-round-clock_1048-961.jpg?t=st=1722615915~exp=1722619515~hmac=4f9b110c135d28861a979040858b6105ef8a6fbced2eb8da82752c082e05473e&w=1800"
@@ -118,11 +118,11 @@ const Index = () => {
       <p className="text-gray-700 mt-4">
         At My Care Labs, we test for a wide range of substances, including:
       </p>
-      <div className="flex justify-center mt-8 space-x-8">
-        <div className="grid grid-cols-3 gap-4">
+      <div className="flex justify-center mt-8 md:space-x-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
           {substances.map((substance, index) => (
             <div key={index} className="flex items-center">
-              <CheckCircleIcon className="w-10 h-10 text-red-500 mr-2" />
+              <CheckCircleIcon className="md:w-10 md:h-10 w-5 h-5 text-red-500 mr-2" />
               <p className="text-gray-700">{substance}</p>
             </div>
           ))}

@@ -10,7 +10,7 @@ const Hero = () => {
     {/* Component */}
     <div className="grid grid-cols-1 items-center gap-12 sm:gap-20 md:grid-cols-2">
       {/* Heading Div */}
-      <div className="max-w-[720px] lg:max-w-[842px]">
+      <div className="max-w-[720px] mt-4 lg:max-w-[842px]">
         <h1 className="mb-4 text-4xl font-semibold md:text-6xl">Creatine  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">Kinase</span></h1>
         <p className="mb-6 max-w-[528px] text-xl text-[#636262] md:mb-10 lg:mb-12 text-left">Creatine Kinase (CK) is an essential enzyme found in various tissues, primarily in the muscles and the heart. It plays a crucial role in energy production, specifically in the transfer of phosphate groups in the generation of adenosine triphosphate (ATP), the primary energy currency of cells. CK blood tests, also known as creatine phosphokinase (CPK) tests, measure the levels of this enzyme in the bloodstream. Let’s delve deeper into the significance of CK blood tests, their interpretation, and their varied applications in clinical settings.</p>
         <Link to="/covid-test-locations" className="mb-6 inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(19,_83,_254)_6px_6px] md:mb-10 lg:mb-12">Get Started</Link>

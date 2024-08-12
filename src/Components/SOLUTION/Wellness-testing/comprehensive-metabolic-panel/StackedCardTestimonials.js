@@ -7,7 +7,7 @@ const StackedCardTestimonials = () => {
   return (
     <section className="bg-white py-24 px-4 lg:px-8 grid items-center grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden">
       <div className="p-4">
-        <h3 className="text-5xl text-slate-800 font-semibold">What is a Comprehensive Metabolic Panel (CMP) Test?</h3>
+        <h3 className="md:text-5xl text-4xl text-slate-800 font-semibold">What is a Comprehensive Metabolic Panel (CMP) Test?</h3>
         <p className="text-slate-500 my-4">
           The CMP test is a blood test that provides valuable insights into your body’s overall health. It evaluates multiple aspects, 
           including glucose levels, electrolyte balance, kidney function, liver health, and more.
@@ -71,7 +71,7 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
 
 const Cards = ({ testimonials, selected, setSelected }) => {
   return (
-    <div className="p-4 relative h-[450px] lg:h-[500px] shadow-xl">
+    <div className="lg:p-4 relative h-[570px] lg:h-[550px] shadow-xl">
       {testimonials.map((t, i) => {
         return (
           <Card
@@ -121,14 +121,14 @@ const Card = ({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute top-0 left-0 w-full min-h-full p-8 lg:p-12 cursor-pointer flex flex-col justify-between"
+      className="absolute top-0 left-0 w-full min-h-full p-4 lg:p-12 cursor-pointer flex flex-col justify-between"
     >
-      <img src={image} alt={`${title} image`} className="w-24 h-24 mx-auto object-cover rounded-full" />
-      <h4 className="text-2xl font-semibold mt-4">{title}</h4>
+      <img src={image} alt={`${title} image`} className="md:w-24 md:h-24 w-20 h-20 mx-auto object-cover rounded-full" />
+      <h4 className="text-2xl font-semibold mt-2 lg:mt-4">{title}</h4>
       {points.map((point, index) => (
-        <div key={index} className="my-2">
-          <h5 className="text-lg font-semibold text-left">{point.heading}</h5>
-          <p className="text-base text-left">{point.content}</p>
+        <div key={index} className="lg:my-2 my-1">
+          <h5 className="lg:text-lg md:text-base text-sm font-semibold text-left">{point.heading}</h5>
+          <p className="lg:text-base md:text-sm text-xs text-left">{point.content}</p>
         </div>
       ))}
     </motion.div>

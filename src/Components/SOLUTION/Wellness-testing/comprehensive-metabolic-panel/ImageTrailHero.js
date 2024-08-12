@@ -82,13 +82,13 @@ const NavBar = () => {
 
 const Copy = () => {
   return (
-    <div className="absolute bottom-0 left-0 right-0 z-[999999]">
-      <div className="mx-auto flex max-w-7xl items-end justify-between p-4 md:p-8">
+    <div className="absolute bottom-0 left-0 right-0 z-[999]">
+      <div className="mx-auto flex max-w-7xl items-end justify-center md:justify-between p-0 md:p-8">
         <div>
-          <h1 className="mb-6 max-w-4xl text-6xl font-black leading-[1.1] text-slate-900 md:text-7xl">
+          <h1 className="mb-6 max-w-4xl  font-black leading-[1.1] text-slate-900 md:text-7xl">
           Comprehensive Metabolic <span className="text-indigo-500">Panel (CMP) Test</span>
           </h1>
-          <p className="max-w-xl text-slate-700 md:text-lg">
+          <p className="max-w-xl mb-2 text-slate-700 text-sm md:text-lg">
           Medical diagnostics play an important role in evaluating our health, and the Comprehensive Metabolic Panel 
           (CMP) test stands as a crucial tool in assessing various aspects of our body’s functionality. Let’s go 
           into what the CMP test entails, its significance, preparation, and what the results can reveal about your health.
