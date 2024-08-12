@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const ConfirmBooking = () => {
-  const [countdown, setCountdown] = useState(5);
+  const [countdown, setCountdown] = useState(2);
 
   const scrollToTop = () => {
     window.scrollTo({

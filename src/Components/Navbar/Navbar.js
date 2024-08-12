@@ -333,7 +333,7 @@ function Navbar() {
                   marginBottom: nav ? "5px" : "0",
                 }}
               >
-                <button
+                {/* <button
                   className="nav-link navbar-button group relative hover:scale-110 hover:bg-slate-500 duration-300"
                   onClick={() => handleButtonClick("bookButton", "/covid-test-locations")}
                   style={{
@@ -374,7 +374,7 @@ function Navbar() {
                 >
                   View Test Results
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
-                </button>
+                </button> */}
               </div>
               <form
                 className="flex px-2 text-black"
