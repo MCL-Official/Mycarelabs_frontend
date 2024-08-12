@@ -109,7 +109,7 @@ function Hero() {
             type="button"
             onClick={handleBookAppointmentClick}
           >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
+            <FontAwesomeIcon icon={faCalendarCheck} /> Select Test Location
           </button>
           <div className="text-stats">
             <div className="text-stats-container">
