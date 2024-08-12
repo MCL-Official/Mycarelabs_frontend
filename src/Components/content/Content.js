@@ -29,7 +29,7 @@ export default function Content() {
           <rect width="100%" height="100%" strokeWidth={0} fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
         </svg>
       </div>
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <div className="mx-auto grid max-w-3xl text-center grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
@@ -42,9 +42,9 @@ export default function Content() {
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="mx-auto -mt-12 md:-mt-5 lg:mt-28 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
-            className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+            className="w-[48rem] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
             // src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
             src="https://media.istockphoto.com/id/1336071300/photo/coronavirus-covid-19-new-variant-mutation.jpg?s=612x612&w=0&k=20&c=Ce5p292PNk9lFh6QaHWHxqiKQ1kNWfgscll7s5u6QZI="
             alt=""
@@ -58,20 +58,20 @@ export default function Content() {
               Covid-19 RT-PCR Tests With Same-Day Or Within 24 Hours Test Result Reporting, Dependent On California Test Site Location. Coming Soon: 
               Flu And RSV Testing..
               </p>
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                <li className="flex gap-x-3">
+              <ul role="list" className="mt-8 space-y-8 text-center text-gray-600">
+                <li className="flex gap-x-2">
                   <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">Testing Made Easy.</strong> Book A Discovery Call Today So We Can Determine The Best Fit For Your Organization’s Needs.
                   </span>
                 </li>
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">For Business Travelers And Leisure Vacationers.</strong> We Offer Pre-Flight And Pre-Cruise Travel Testing. Our Normal Rate Is $225 For Travel Testing With Covid Redipass PDF/QR Code Reporting.
                   </span>
                 </li>
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
                     <strong className="font-semibold text-gray-900">We Provide Individual/Small Group Testing.</strong> Our Silicon Valley Laboratory, Pop-Up Test Site Locations Throughout Northern And Southern California, And Mobile-Testing-On-Demand In Select Metro Areas.

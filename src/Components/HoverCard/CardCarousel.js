@@ -3,8 +3,8 @@ import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
-const CARD_WIDTH = 350;
-const CARD_HEIGHT = 350;
+const CARD_WIDTH = 305;
+const CARD_HEIGHT = 305;
 const MARGIN = 20;
 const CARD_SIZE = CARD_WIDTH + MARGIN;
 

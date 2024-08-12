@@ -65,7 +65,7 @@ const ContextHero = () => {
              
             </div>
             <div className="mt-6 md:mt-4">
-                <ul className="w-full border-b flex items-center gap-x-3 overflow-x-auto">
+                <ul className="w-full border-b flex items-center sm:gap-x-3 overflow-x-auto">
                     {navigation.map((item, idx) => (
                         <li
                             key={idx}
@@ -74,7 +74,7 @@ const ContextHero = () => {
                         >
                             <a
                                 href="javascript:void(0)"
-                                className="py-2.5 px-4 rounded-lg duration-150 text-sm hover:text-indigo-600 hover:bg-gray-50 active:bg-gray-100 font-medium"
+                                className="py-2.5 sm:px-4 px-1 rounded-lg duration-150 text-sm hover:text-indigo-600 hover:bg-gray-50 active:bg-gray-100 font-medium"
                             >
                                 {item.name}
                             </a>

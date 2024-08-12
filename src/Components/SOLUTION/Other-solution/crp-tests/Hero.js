@@ -9,7 +9,7 @@ const Hero = () => {
   <div className="relative mx-auto flex w-full max-w-[1120px] flex-col items-start px-5 py-16 md:px-10 md:py-24 lg:py-32">
     {/* Heading Div */}
     <div className="lg:max-w-[80%]">
-      <h1 className="mb-5 text-4xl font-semibold md:text-8xl lg:mb-8">CRP  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/6390526ac2a607693620c97b_Rectangle%2010.svg')] bg-cover bg-center bg-no-repeat px-4 text-white">Tests</span>.</h1>
+      <h1 className="mb-5 mt-4 md:mt-1 text-4xl font-semibold md:text-8xl lg:mb-8">CRP  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/6390526ac2a607693620c97b_Rectangle%2010.svg')] bg-cover bg-center bg-no-repeat px-4 text-white">Tests</span>.</h1>
       <p className="mb-5 max-w-[528px] text-xl text-[#636262] lg:mb-8">The C-reactive protein (CRP) blood test is a valuable tool used in healthcare to assess inflammation levels in the body. This test measures the amount of CRP, a protein produced by the liver, in the blood. Elevated CRP levels are indicative of inflammation, which can arise due to various underlying causes. Understanding the significance of this test, its uses, interpretation, and implications is crucial for maintaining optimal health and managing various medical conditions.</p>
     </div>
     {/* Button Wrap */}

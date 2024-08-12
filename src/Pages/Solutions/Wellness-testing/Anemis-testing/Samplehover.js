@@ -8,7 +8,7 @@ const Samplehover = () => {
   <div className="mx-auto w-full max-w-5xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
     {/* Heading Text */}
     <div className="mx-auto mb-8 w-full max-w-3xl text-center">
-      <h2 className="mb-4 text-3xl font-semibold md:text-5xl">Thyroid function  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">panel test</span></h2>
+      <h2 className="mb-4 text-3xl mt-2 font-semibold md:text-5xl">Thyroid function  <span className="bg-[url('https://assets.website-files.com/63904f663019b0d8edf8d57c/639156ce1c70c97aeb755c8a_Rectangle%2010%20(1).svg')] bg-cover bg-center px-4 text-white">panel test</span></h2>
       <p className="mx-auto mt-4 max-w-[528px] text-[#636262] md:mb-12 lg:mb-16">Thyroid function plays a crucial role in maintaining overall health, regulating metabolism, and influencing various bodily functions. </p>
     </div>
     {/* Content Div */}

@@ -18,7 +18,7 @@ import Marquee from "react-fast-marquee";
 
 const InsuranceAccepted = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mb-3 mx-auto'>
       <div className="flex flex-col items-center mt-1">
         <h2 className="text-blue-600 text-5xl font-bold mr-2 py-12">Our Partners</h2>
         <div className="w-full md:w-10/12">

@@ -62,19 +62,19 @@ export function HorizontalCard() {
 
   return (
     <div className="overflow-hidden relative">
-      <div className="flex w-[200%] animate-moveRight hover-stop sm:flex-row flex-col">
+      <div className="flex w-fit md:w-[300%] mx-auto md:animate-moveRight hover-stop md:flex-row flex-col">
         {duplicatedCards.map((card, index) => (
           <a key={index} href={card.location} className="no-underline">
-            <Card className="w-full max-w-[20rem] sm:max-w-[48rem] mx-4 mb-4 sm:mb-0 h-full flex-col sm:flex-row">
+            <Card className="max-w-[20rem] sm:max-w-[48rem] mx-4 mb-4 sm:mb-0 h-full flex-col md:flex-row">
               <CardHeader
                 shadow={false}
                 floated={false}
-                className="m-0 w-full sm:w-2/5 shrink-0 rounded-r-none"
+                className="m-0  w-full sm:w-2/5 shrink-0 md:rounded-r-none"
               >
                 <img
                   src={card.imgSrc}
                   alt="card-image"
-                  className="h-48 sm:h-full w-full object-cover"
+                  className="h-48 w-full sm:h-full object-cover"
                 />
               </CardHeader>
               <CardBody className="flex flex-col justify-between h-full">
