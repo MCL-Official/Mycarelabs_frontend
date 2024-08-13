@@ -61,10 +61,10 @@ export function BackgroundBlogCard() {
               floated={false}
               shadow={false}
               color="transparent"
-              className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center transition-opacity duration-300 ease-in-out group-hover:opacity-20"
+              className="absolute inset-0 m-0 h-full w-full rounded-none bg-cover bg-center transition-opacity duration-300 ease-in-out "
               style={{ backgroundImage: `url(${card.imageUrl})` }}
             >
-              <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/90 via-black/80 transition-opacity duration-300 ease-in-out group-hover:opacity-50" />
+              <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/90 via-black/80 transition-opacity duration-300 ease-in-out group-hover:opacity-10" />
             </CardHeader>
             <CardBody className="relative py-10 px-4 md:px-6">
               <Typography

@@ -66,12 +66,6 @@ const BookTestDetails = () => {
         
           <TabsFeatures/> 
       <Locations/>
-
-
-
-
-
-
         </div>
        
           <div className="sm:flex justify-center  mt-5 bg-gradient-to-r from-blue-500 to-white p-10  rounded border-[1px]">
