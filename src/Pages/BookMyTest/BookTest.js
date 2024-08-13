@@ -8,10 +8,12 @@ import { Helmet } from "react-helmet";
 
 // Images
 const images = [
-  "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1722551112~exp=1722554712~hmac=4b0d8f08a71f2decf6172fd1d99823374d83836e786a52051c825fdae163b780&w=2000",
-  "https://www.hospitalmanagement.net/wp-content/uploads/sites/9/2022/05/Top-health-systems-in-the-US-by-number-of-hospitals-affiliated-1.jpg",
-  "https://timesreview-images.s3.amazonaws.com/wp-content/uploads/sites/3/2011/11/11235607/PBMC1.jpg",
+  "https://i.ibb.co/m6khGkq/1.jpg",
+  "https://i.ibb.co/9ygMhcC/2.jpg",
+  "https://i.ibb.co/CmkJZKf/5.jpg",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
+  "https://i.ibb.co/PTcg4Sq/6.jpg",
+  "https://i.ibb.co/ZBLZ7zp/7.jpg",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
 ];
