@@ -14,29 +14,29 @@ export function BackgroundBlogCard() {
     {
       title: "Bay Area COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://mycarelabs.com/wp-content/uploads/2023/10/Rectangle-25-2.png",
-      avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
+      // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "If you’re boarding a plane in the San Francisco Bay Area or Silicon Valley, find out the COVID-19 testing requirements for your destination countries and plan accordingly."
     },
     {
       title: "San Francisco International Airport (SFO) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://mycarelabs.com/wp-content/uploads/2023/10/Rectangle-6-4.png",
-      avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
+      imageUrl: "https://img.freepik.com/free-photo/empire-state-building-daylight_23-2150897493.jpg?t=st=1719954413~exp=1719958013~hmac=426c13ce93779b5ca5b1a8752df1adf6adb8ed2f2af97d96269c72c8a60af5b3&w=900",
+      // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "My Care Labs operates free* COVID-19 PCR test sites around the SF Bay Area for travelers flying out of SFO. Make sure to check if your destinations require a negative COVID PCR test with this handy map."
     },
     {
       title: "Oakland International Airport (OAK) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://mycarelabs.com/wp-content/uploads/2023/10/Rectangle-23-2.png",
-      avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
+      // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "Traveling internationally from the Oakland metro? During the Delta and Omicron COVID waves, it was challenging at times to obtain Travel clearance COVID PCR tests in Oakland."
     },
     {
       title: "San Jose International Airport (SJC) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://mycarelabs.com/wp-content/uploads/2023/10/Rectangle-24-2.png",
-      avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
+      // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "My Care Labs operates free* COVID-19 PCR test sites around the SF Bay Area for travelers flying out of SFO. Make sure to check if your destinations require a negative COVID PCR test with this handy map."
     },
     // Add more card objects here
@@ -74,13 +74,13 @@ export function BackgroundBlogCard() {
               >
                 {card.title}
               </Typography>
-              <Avatar
+              {/* <Avatar
                 size="mb"
                 variant="circular"
                 alt={card.author}
                 className="border-2 border-white"
                 src={card.avatarUrl}
-              />
+              /> */}
               <Typography variant="h5" className="mb-2 text-white text-sm">
                 {card.description}
               </Typography>
