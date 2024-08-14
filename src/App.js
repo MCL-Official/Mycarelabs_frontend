@@ -50,6 +50,7 @@ import HoverCards from "./Components/HoverCard/HoverCards";
 import NeumorphismButton from "./Components/button/Button";
 import DrawerButton from "./Components/Custome_Modal/DrawerButton";
 import Example from "./Components/Navbar/FlyoutNavbar";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 // import Careers from "./Pages/Careers/Careers";
 // import JobApplicationForm from "./Components/Careers/JobApplicationForm";
 // import JobDetail from "./Components/Careers/JobDetail";
@@ -80,6 +81,7 @@ function App() {
           {/* <Route path="/careers" element={<JobListings />} /> */}
           {/* <Route path="/careers/:id" element={<JobDetail />} /> */}
           <Route path="/faq" element={<Faq/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion/:id" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
