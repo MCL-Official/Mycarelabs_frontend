@@ -388,7 +388,7 @@ function Navbar() {
                 /> */}
                
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+1-800-790-4550"
                   className="mr-3 self-center text-black"
                 >
                   <FontAwesomeIcon icon={faPhone} size="2xl" />
