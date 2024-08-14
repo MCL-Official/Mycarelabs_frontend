@@ -376,20 +376,22 @@ function Navbar() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
                 </button> */}
               </div>
+              <p className={` font-bold text-2xl pr-5  ${textColor === "white" ? "text-blue-600" : "text-orange-600"} `}>Need Help? Call Us</p>
               <form
-                className="flex px-2 text-black"
+                className="flex  text-black"
               >
-                <input
+                {/* <input
                   className="form-control mr-2 p-2 border border-gray-300 bg-transparent rounded text-black"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
-                />
+                /> */}
+               
                 <a
                   href="tel:+1234567890"
                   className="mr-3 self-center text-black"
                 >
-                  <FontAwesomeIcon icon={faPhone} size="xl" />
+                  <FontAwesomeIcon icon={faPhone} size="2xl" />
                 </a>
               </form>
 
