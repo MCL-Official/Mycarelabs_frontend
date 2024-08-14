@@ -15,12 +15,12 @@ const Sample = () => {
         Panel (BMP).</h1>
         <p className="mb-6 max-w-lg text-base text-[#636262] md:mb-10 lg:mb-12">Blood tests play a crucial role in assessing various aspects of our health. Among these tests, the Basic Metabolic Panel (BMP) holds significance in providing essential insights into our body’s metabolic functions. Let’s discuss as to what a BMP entails, its components, and why it’s a valuable tool in healthcare</p>
         {/* Hero Form */}
-        <div className="mb-5 w-full pb-8 md:mb-6 lg:mb-4">
+        {/* <div className="mb-5 w-full pb-8 md:mb-6 lg:mb-4">
           <form name="email-form" method="get" className="flex max-w-[90%] flex-col items-start sm:flex-row">
             <input type="email" className="mb-5 mr-6 h-9 w-full bg-[#f2f2f7] px-6 py-7 text-sm text-[#333333] focus:border-[#3898ec]" maxLength="256" name="email" placeholder="Enter your email" required="" />
             <input type="submit" value="Subscribe" className="inline-block w-full cursor-pointer bg-[#276ef1] px-6 py-3 font-semibold text-white transition [box-shadow:rgb(171,_196,245)-8px_8px] hover:[box-shadow:rgb(171,_196,_245)0px_0px] sm:w-36" />
           </form>
-        </div>
+        </div> */}
         {/* Hero Info */}
         <div className="grid w-full grid-flow-row grid-cols-3 gap-4">
           <div>

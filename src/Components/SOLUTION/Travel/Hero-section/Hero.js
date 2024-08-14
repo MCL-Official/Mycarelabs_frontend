@@ -50,7 +50,7 @@ export function Hero() {
                     </div>
                     <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
                         <img
-                            src="https://img.freepik.com/free-photo/skillful-nurse-is-doing-blood-test-woman-clinic-gilr-sitting-near-table_1157-48562.jpg?t=st=1722633320~exp=1722636920~hmac=3962718496859f442df985b5dde99b8487bc9ba57ee86fca0b6c746850594ebf&w=2000"
+                            src="https://i.ibb.co/cJ654jq/Untitled-1280-x-720-px-1300-x-1000-px.png"
                             className=" md:rounded-tl-[108px]"
                             alt=""
                         />

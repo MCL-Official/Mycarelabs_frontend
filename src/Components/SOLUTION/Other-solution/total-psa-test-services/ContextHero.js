@@ -14,7 +14,7 @@ const ContextHero = () => {
         },
         {
             name: "What is it Used For?",
-            image: "https://img.freepik.com/free-photo/skillful-nurse-is-doing-blood-test-woman-clinic-gilr-sitting-near-table_1157-48562.jpg?t=st=1722633320~exp=1722636920~hmac=3962718496859f442df985b5dde99b8487bc9ba57ee86fca0b6c746850594ebf&w=2000",  // Replace with the correct path
+            image: "https://i.ibb.co/cJ654jq/Untitled-1280-x-720-px-1300-x-1000-px.png",  // Replace with the correct path
             text: `
                 <h2>2. What is it Used For?</h2>
                 <p><strong>Early Detection of Prostate Conditions:</strong> The primary purpose of the PSA test is to aid in the early detection of prostate conditions, particularly prostate cancer. Regular screening allows for timely intervention and improved outcomes.</p>
