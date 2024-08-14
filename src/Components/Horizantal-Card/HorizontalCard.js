@@ -15,7 +15,7 @@ export function HorizontalCard() {
       description:
         'My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B',
       imgSrc:
-        'https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000',
+        'https://i.ibb.co/gjbJTny/3.png',
       location: '/travel-testing/',
     },
     {
@@ -42,7 +42,7 @@ export function HorizontalCard() {
       description:
         'We provide on-site and self-service PCR Covid/RSV/Flu testing for nursing homes throughout California.',
       imgSrc:
-        'https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000',
+        'https://i.ibb.co/XXmTtnP/5.png',
       location: '/testing-for-nursing-homes/',
     },
     {

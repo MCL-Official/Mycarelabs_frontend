@@ -159,7 +159,7 @@ const features = [
     description:
       "The primary focus of the Anemia Profile Test is to evaluate red blood cell parameters, iron levels, and other factors crucial for identifying the specific type and cause of anemia.",
     contentPosition: "l",
-    imageUrl: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000", // Replace with your image URL
+    imageUrl: "https://i.ibb.co/gjbJTny/3.png", // Replace with your image URL
     // Icon: FiSearch,
   },
   {
@@ -179,7 +179,7 @@ const features = [
     description:
       'Schedule your Anemia Profile Test at Care Labs by booking an appointment. We offer flexible scheduling to accommodate your convenience.Our skilled phlebotomists will collect a small blood sample using advanced and minimally invasive techniques for your comfort.The collected sample undergoes comprehensive laboratory analysis using innovative technology to assess red blood cell parameters, iron levels, and other relevant factors.'
  ,    contentPosition: "l",
-    imageUrl: "https://img.freepik.com/free-photo/coronavirus-test-assortment-lab_23-2149107257.jpg?t=st=1719954931~exp=1719958531~hmac=9d043decf6673000fa1c4ca424bac760d5782668f55c05b2caa7d4e406db2622&w=2000", // Replace with your image URL
+    imageUrl: "https://i.ibb.co/b79svsR/4.png", // Replace with your image URL
     Icon: FiDollarSign,
   },
   {
@@ -189,7 +189,7 @@ const features = [
     description:
       'For additional information on the Anemia Profile Test, we recommend referring to reputable sources such as My Care Labs. Understanding the test and its implications is crucial for identifying and addressing anemia effectively.'
 ,    contentPosition: "r",
-    imageUrl:  'https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000', // Replace with your image URL
+    imageUrl:  'https://i.ibb.co/XXmTtnP/5.png', // Replace with your image URL
     Icon: FiDollarSign,
   },
   {
@@ -199,7 +199,7 @@ const features = [
     description:
       'For additional information on the Anemia Profile Test, we recommend referring to reputable sources such as My Care Labs. Understanding the test and its implications is crucial for identifying and addressing anemia effectively.'
 ,    contentPosition: "l",
-    imageUrl:  'https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000', // Replace with your image URL
+    imageUrl:  'https://i.ibb.co/XXmTtnP/5.png', // Replace with your image URL
     Icon: FiDollarSign,
   },
 ];

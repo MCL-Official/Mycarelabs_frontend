@@ -157,7 +157,7 @@ export const OPTIONS = [
     title: "Laboratory Analysis",
     Content: () => (
       <Testimonial
-        imgSrc="https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000"
+        imgSrc="https://i.ibb.co/gjbJTny/3.png"
         name="Laboratory Analysis"
         title="Photographer"
         company="@ThePictureLady"

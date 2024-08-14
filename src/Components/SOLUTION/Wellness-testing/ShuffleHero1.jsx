@@ -52,7 +52,7 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",
+    src: "https://i.ibb.co/gjbJTny/3.png",
   },
   {
     id: 2,
@@ -60,15 +60,15 @@ const squareData = [
   },
   {
     id: 3,
-    src: "https://img.freepik.com/free-photo/coronavirus-test-assortment-lab_23-2149107257.jpg?t=st=1719954931~exp=1719958531~hmac=9d043decf6673000fa1c4ca424bac760d5782668f55c05b2caa7d4e406db2622&w=2000",
+    src: "https://i.ibb.co/b79svsR/4.png",
   },
   {
     id: 4,
-    src: "https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000",
+    src: "https://i.ibb.co/XXmTtnP/5.png",
   },
   {
     id: 5,
-    src: "https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000",
+    src: "https://i.ibb.co/XXmTtnP/5.png",
   },
   {
     id: 6,

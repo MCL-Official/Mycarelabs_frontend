@@ -4,7 +4,7 @@ const ContextHero = () => {
     const navigation = [
         {
             name: "What is a PSA",
-            image: "https://img.freepik.com/free-photo/front-view-asian-women-working-together-chemical-project_23-2148776747.jpg?t=st=1719954992~exp=1719958592~hmac=aca523616acc66080469fbcee673438a6c98008479540d75dfe351a03d11686d&w=2000",  // Replace with the correct path
+            image: "https://i.ibb.co/gjbJTny/3.png",  // Replace with the correct path
             text: `
                 <h2>1. What is a Prostate-Specific Antigen (PSA) Test?</h2>
                 <p>The PSA test is a blood test designed to measure the levels of prostate-specific antigen; a protein produced by the prostate gland. This screening tool plays a crucial role in assessing the health of the prostate and detecting potential issues early on.</p>
@@ -24,7 +24,7 @@ const ContextHero = () => {
         },
         {
             name: "Why Choose My Care Labs?",
-            image: "https://img.freepik.com/free-photo/coronavirus-test-assortment-lab_23-2149107257.jpg?t=st=1719954931~exp=1719958531~hmac=9d043decf6673000fa1c4ca424bac760d5782668f55c05b2caa7d4e406db2622&w=2000",  // Replace with the correct path
+            image: "https://i.ibb.co/b79svsR/4.png",  // Replace with the correct path
             text: `
                 <h2>3. Why Choose My Care Labs for Total PSA Testing?</h2>
                 <p><strong>Accurate and Reliable Results:</strong> Our cutting-edge laboratory equipment and skilled technicians guarantee precise and dependable results.</p>
@@ -35,7 +35,7 @@ const ContextHero = () => {
         },
         {
             name: "The Total PSA Testing Process",
-            image: "https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000",  // Replace with the correct path
+            image: "https://i.ibb.co/XXmTtnP/5.png",  // Replace with the correct path
             text: `
                 <h2>4. The Total PSA Testing Process</h2>
                 <p><strong>Scheduling:</strong> Book an appointment with My Care Labs for your Total PSA test. We offer flexible scheduling to accommodate your convenience.</p>

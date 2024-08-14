@@ -10,7 +10,7 @@ const Content = () => {
     <div className="grid grid-cols-1 items-center justify-center gap-12 sm:gap-20 lg:grid-cols-2">
       {/* Image Div */}
       <div className="relative h-full max-h-[560px] w-[85%] overflow-visible max-[991px]:left-4 md:w-[95%] lg:w-full">
-      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt=""/>
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://i.ibb.co/znmP6yc/5.png" alt=""/>
       <div className="absolute bottom-0 left-[-16px] right-0 top-4 -z-[1] h-full w-full rounded-2xl bg-black"></div>
       </div>
       {/* Content Div */}
@@ -25,22 +25,22 @@ const Content = () => {
           {/* Feature Item */}
           <div className="flex items-center">
             <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block" />
-            <p className="text-[#636262]">300+ UI Blocks</p>
+            <p className="text-[#636262]">3000+ Patients</p>
           </div>
           {/* Feature Item */}
           <div className="flex items-center">
             <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block" />
-            <p className="text-[#636262]">Full Responsive</p>
+            <p className="text-[#636262]">Wide Avaliblity</p>
           </div>
           {/* Feature Item */}
           <div className="flex items-center">
             <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block" />
-            <p className="text-[#636262]">New UI Blocks</p>
+            <p className="text-[#636262]">New Test</p>
           </div>
           {/* Feature Item */}
           <div className="flex items-center">
             <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block" />
-            <p className="text-[#636262]">Just Copy &amp; Paste</p>
+            <p className="text-[#636262]">Just Test &amp; Rest</p>
           </div>
         </div>
         {/* Divider */}

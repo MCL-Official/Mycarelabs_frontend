@@ -132,7 +132,7 @@ export default BlogPostCarousel;
 const posts = [
   {
     id: 1,
-    imgUrl: "https://i.ibb.co/M9St76s/1.png",
+    imgUrl: "https://i.ibb.co/XXmTtnP/5.png",
     author: "MY Care Labs",
     title: "Wellness Testing Solutions",
     description:

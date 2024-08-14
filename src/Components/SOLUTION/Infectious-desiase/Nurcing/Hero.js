@@ -94,7 +94,7 @@ const Hero = () => {
               <div className="lg:ml-auto lg:text-right">
                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                   <img
-                    src="https://dc1fpv8kkq7dm.cloudfront.net/images/medical/master_images/651147b59c0aa-Top%2010%20Hospitals%20In%20United%20States%20Of%20America%20(USA).jpg"
+                    src="https://i.ibb.co/pvBkRYq/2.png"
                     alt="hero"
                     className="max-w-full lg:ml-auto"
                   />

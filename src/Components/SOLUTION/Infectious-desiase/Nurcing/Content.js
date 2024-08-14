@@ -4,7 +4,7 @@ export function Content()  {
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                     <div className="flex-1 sm:hidden lg:block">
-                        <img src="https://img.freepik.com/free-photo/medical-technologist-doing-blood-draw-services-patient-lab-assistant-with-sterile-rubber-gloves-taking-blood-sample-from-patient_657921-350.jpg?t=st=1722633264~exp=1722636864~hmac=ecf3acd29c9347fb3c93ee80e140899a4d48e72af4cb6bff985d840f8369e1e6&w=2000" className="md:max-w-lg sm:rounded-lg" alt="" />
+                        <img src="https://i.ibb.co/XXmTtnP/5.png" className="md:max-w-lg sm:rounded-lg" alt="" />
                     </div>
                     <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
                         <h3 className="text-indigo-600 font-semibold">

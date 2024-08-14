@@ -39,7 +39,7 @@ const Samplehover = () => {
       </div>
       {/* Image Div */}
       <div className="relative left-4 h-full max-h-[560px] w-[85%] md:left-0 md:w-[95%] lg:w-full">
-        <img src="https://mycarelabs.com/wp-content/uploads/2024/01/image-205.jpg" alt="" className="relative mx-auto block h-[560px] w-full -rotate-[3.5deg] rounded-2xl object-cover" />
+        <img src="https://i.ibb.co/bKfZJL0/7.png" alt="" className="relative mx-auto block h-[560px] w-full -rotate-[3.5deg] rounded-2xl object-cover" />
         <div className="absolute bottom-0 left-4 right-0 top-4 -z-10 h-full w-full rounded-2xl bg-black"></div>
       </div>
     </div>
