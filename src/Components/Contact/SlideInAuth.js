@@ -19,12 +19,16 @@ const Form = () => {
     phone: '',
     company: '',
     message: '',
+    agreeToTerms: false, // New state for the checkbox
   });
   const [notification, setNotification] = useState(null);
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value, // Handle checkbox change
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -32,7 +36,7 @@ const Form = () => {
     try {
       const response = await axios.post('https://backend.mycaretrading.com/portal/admin/api/registerform', formData);
       setNotification({ type: 'success', message: 'Contact form details sent successfully!' });
-      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', message: '', agreeToTerms: false });
     } catch (error) {
       setNotification({ type: 'error', message: 'Failed to send contact form details. Please try again.' });
     }
@@ -151,6 +155,30 @@ const Form = () => {
               className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-blue-600"
               required
             ></textarea>
+          </motion.div>
+
+          {/* Informational content above checkbox */}
+          <motion.p variants={primaryVariants} className="mb-4 text-sm text-gray-700 text-left">
+            By checking this box, I consent to receive messages from My Care Labs regarding my test results, 
+            appointment reminders, and other related information. I understand that these messages may be sent via 
+            email, SMS, or phone call.
+          </motion.p>
+
+          {/* Checkbox input */}
+          <motion.div variants={primaryVariants} className="mb-4 w-full">
+            <label className="inline-flex items-center">
+              <input
+                type="checkbox"
+                name="agreeToTerms"
+                checked={formData.agreeToTerms}
+                onChange={handleInputChange}
+                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                required
+              />
+              <span className="ml-2 text-sm text-gray-700">
+              I agree to receive messages from My Care Labs.
+              </span>
+            </label>
           </motion.div>
 
           <motion.button
