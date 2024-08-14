@@ -132,7 +132,7 @@ export default BlogPostCarousel;
 const posts = [
   {
     id: 1,
-    imgUrl: "https://pennstatehealthnews.org/wp-content/uploads/2019/07/PSH-MMBloodwork-1200x768.jpg",
+    imgUrl: "https://i.ibb.co/M9St76s/1.png",
     author: "MY Care Labs",
     title: "Wellness Testing Solutions",
     description:
@@ -142,7 +142,7 @@ const posts = [
   },
   {
     id: 2,
-    imgUrl: "https://img.freepik.com/free-photo/medium-shot-woman-looking-through-microscope_23-2148926618.jpg?t=st=1722632920~exp=1722636520~hmac=590b47a7ea8193278eddc0a14d4f2c5757095f8f618aad319c8ddb37d3fa1384&w=2000",
+    imgUrl: "https://i.ibb.co/pvBkRYq/2.png",
     author: "MY Care Labs",
     title: "Toxicology Testing",
     description:
@@ -151,7 +151,7 @@ const posts = [
     },
   {
     id: 3,
-    imgUrl: "https://img.freepik.com/free-photo/mediums-hot-woman-wearing-goggles_23-2148926622.jpg?t=st=1722633014~exp=1722636614~hmac=ed2d1370bc5dfc2f69b8ca05050462a4e15fe954e9f8ae655d63b93889ed6505&w=1060",
+    imgUrl: "https://i.ibb.co/gjbJTny/3.png",
     author: "MY Care Labs",
     title: "Infectious Disease Testing",
     description:
@@ -160,7 +160,7 @@ const posts = [
     },
   {
     id: 4,
-    imgUrl: "https://img.freepik.com/free-photo/lab-technicians-talking-video-call-with-professional-chemist-doctor-explaning-vaccine-reactions_482257-507.jpg?t=st=1722633058~exp=1722636658~hmac=951a328e1de4971cd9691e5e6396550a5beecc52444452047c0db784920d0edf&w=2000",
+    imgUrl: "https://i.ibb.co/b79svsR/4.png",
     author: "MY Care Labs",
     title: "Oncology Testing",
     description:
@@ -169,7 +169,7 @@ const posts = [
     },
   {
     id: 5,
-    imgUrl: "https://www.scripps.org/sparkle-assets/images/blood_test_samples_1200x750-59cd6b99366c6e716576ccd68351ed39.jpg",
+    imgUrl: "https://i.ibb.co/XXmTtnP/5.png",
     author: "MY Care Labs",
     title: "Travel PCR Testing",
     description:
