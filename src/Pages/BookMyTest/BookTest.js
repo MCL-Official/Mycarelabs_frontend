@@ -21,6 +21,19 @@ const images = [
 // Component
 const BookTest = () => {
   const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  useEffect(() => {
+    scrollToTop(); // Scroll to the top when the component mounts
+
+    // Send the custom event to GTM
+  
+    });
 
   const cardData = [
     {
@@ -87,26 +100,26 @@ const BookTest = () => {
       timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
       location: "Union City, CA 94587"
     },
-    {
-      id: 7,
-      category: "SoCal: Corona Mobile Testing",
-      title: "Mobile Testing: Corona, CA",
-      shortDescription:
-        "Same-day Covid/Flu PCR results available. To speed up your testing.",
-      longDescription: "Detailed information about our audio solutions...",
-      timing: "Mon-Fri 8:30 AM - 6:00 PM",
-      location: "Corona, CA 92882"
-    },
-    {
-      id: 8,
-      category: "SoCal: Corona Mobile Testing",
-      title: "Mobile Testing: Corona, CA",
-      shortDescription:
-        "Same-day Covid/Flu PCR results available. To speed up your testing.",
-      longDescription: "Detailed information about our audio solutions...",
-      timing: "Mon-Fri 8:30 AM - 6:00 PM",
-      location: "Corona, CA 92882"
-    },
+    // {
+    //   id: 7,
+    //   category: "SoCal: Corona Mobile Testing",
+    //   title: "Mobile Testing: Corona, CA",
+    //   shortDescription:
+    //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
+    //   longDescription: "Detailed information about our audio solutions...",
+    //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
+    //   location: "Corona, CA 92882"
+    // },
+    // {
+    //   id: 8,
+    //   category: "SoCal: Corona Mobile Testing",
+    //   title: "Mobile Testing: Corona, CA",
+    //   shortDescription:
+    //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
+    //   longDescription: "Detailed information about our audio solutions...",
+    //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
+    //   location: "Corona, CA 92882"
+    // },
   ];
 
   useEffect(() => {

@@ -64,26 +64,26 @@ export const cardData = [
       timing: "Mon, Wed, Fri 8:30 AM - 4:00 PM",
       location: "Union City, CA 94587"
     },
-    {
-      id: 7,
-      category: "SoCal: Corona Mobile Testing",
-      title: "Mobile Testing: Corona, CA",
-      shortDescription:
-        "Same-day Covid/Flu PCR results available. To speed up your testing.",
-      longDescription: "Detailed information about our audio solutions...",
-      timing: "Mon-Fri 8:30 AM - 6:00 PM",
-      location: "Corona, CA 92882"
-    },
-    {
-      id: 8,
-      category: "SoCal: Corona Mobile Testing",
-      title: "Mobile Testing: Corona, CA",
-      shortDescription:
-        "Same-day Covid/Flu PCR results available. To speed up your testing.",
-      longDescription: "Detailed information about our audio solutions...",
-      timing: "Mon-Fri 8:30 AM - 6:00 PM",
-      location: "Corona, CA 92882"
-    },
+    // {
+    //   id: 7,
+    //   category: "SoCal: Corona Mobile Testing",
+    //   title: "Mobile Testing: Corona, CA",
+    //   shortDescription:
+    //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
+    //   longDescription: "Detailed information about our audio solutions...",
+    //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
+    //   location: "Corona, CA 92882"
+    // },
+    // {
+    //   id: 8,
+    //   category: "SoCal: Corona Mobile Testing",
+    //   title: "Mobile Testing: Corona, CA",
+    //   shortDescription:
+    //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
+    //   longDescription: "Detailed information about our audio solutions...",
+    //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
+    //   location: "Corona, CA 92882"
+    // },
   ];
 
  export const images = [

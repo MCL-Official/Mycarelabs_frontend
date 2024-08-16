@@ -79,13 +79,13 @@ const cardData = [
       "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
     longDescription: "Detailed information about our light solutions...",
   },
-  {
-    category: "SoCal: Corona Mobile Testing",
-    title: "Mobile Testing: Corona, CA",
-    shortDescription:
-      "Same-day Covid/Flu PCR results available. To speed up your testing.",
-    longDescription: "Detailed information about our audio solutions...",
-  },
+  // {
+  //   category: "SoCal: Corona Mobile Testing",
+  //   title: "Mobile Testing: Corona, CA",
+  //   shortDescription:
+  //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
+  //   longDescription: "Detailed information about our audio solutions...",
+  // },
 ];
 
 const HoverCards = () => {
