@@ -59,14 +59,14 @@ import {
           className="w-full bg-transparent text-sm text-white placeholder-neutral-500 focus:outline-0"
         />
   
-        <button
+        {/* <button
           onClick={(e) => e.stopPropagation()}
           type="submit"
           className="group flex shrink-0 items-center gap-1.5 bg-blue-400 px-4 py-3 text-sm font-medium text-neutral-900 transition-transform active:scale-[0.985]"
         >
           <span>Join Waitlist</span>
           <FiArrowRight className="-mr-4 opacity-0 transition-all group-hover:-mr-0 group-hover:opacity-100" />
-        </button>
+        </button> */}
   
         <div className="pointer-events-none absolute inset-0 z-10">
           <motion.div

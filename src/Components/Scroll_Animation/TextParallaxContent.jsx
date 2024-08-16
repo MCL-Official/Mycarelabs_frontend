@@ -51,9 +51,9 @@ const ExampleContent = () => (
                 <p class="text-lg"><strong>Calcitonin :</strong> Regulates calcium levels in the blood and contributes to bone health.</p>
             </li>
         
-            <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
+            {/* <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
         </ul>
      
     </div>
@@ -96,10 +96,10 @@ const ExampleContent1 = () => (
                 </svg>
                 <p class="text-lg"><strong>Graves' Disease:</strong> Another autoimmune disorder causing hyperthyroidism due to antibodies stimulating the thyroid</p>
             </li>
-     
+{/*      
             <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
         </ul>
       {/* <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
         MyCare Labs provides top-tier testing solutions for infectious diseases,
@@ -168,9 +168,9 @@ const ExampleContent2 = () => (
                 </svg>
                 <p class="text-lg"><strong>Cold Sensitivity or Heat Intolerance:</strong> Thyroid hormones regulate body temperature.</p>
             </li>
-            <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
+            {/* <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
         </ul>
      
     </div>
@@ -245,9 +245,9 @@ const ExampleContent3 = () => (
           <p className="text-lg"><strong>Reverse Triiodothyronine (rT3) :</strong> rT3 is a less common test that evaluates the inactive form of T3. Elevated levels may indicate a non-thyroidal illness.</p>
         </li>
       </ul>
-      <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
+      {/* <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
     </div>
   </div>
 );
@@ -327,9 +327,9 @@ const ExampleContent4 = () => (
           <p className="text-lg"><strong>Positive TPOAb and TgAb :</strong> Presence of antibodies indicates an autoimmune thyroid condition.</p>
         </li>
       </ul>
-      <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
+      {/* <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
     </div>
   </div>
 );
@@ -430,9 +430,9 @@ const ExampleContent5 = () => (
           <p className="text-lg"><strong>Lifestyle Factors Impacting Thyroid Health :</strong> Certain lifestyle factors can influence thyroid function, including diet, stress management, and adequate sleep. Addressing these factors can support overall thyroid health.</p>
         </li>
       </ul>
-      <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
+      {/* <button className="w-full rounded bg-blue-600 px-9 py-4 text-xl text-white transition-colors hover:bg-blue-500 md:w-fit">
         Learn more <FiArrowUpRight className="inline" />
-      </button>
+      </button> */}
     </div>
   </div>
 );

@@ -18,15 +18,15 @@ const TestingNurcing = () => {
         <meta name="author" content="My Care Labs" />
       </Helmet>
       <Hero />
-      <DateTimePicker />
+      {/* <DateTimePicker /> */}
       <Content />
-      <div className="flex justify-center items-center my-8">
+      {/* <div className="flex justify-center items-center my-8">
         <img 
           src="https://mycarelabs.com/wp-content/uploads/2023/11/Nursing-Homes-1187x1536-1.jpg" 
           className="md:max-w-lg sm:rounded-lg" 
           alt="Nursing Homes" 
         />
-      </div>
+      </div> */}
       <BlogPostCarousel/>
       <GetStartedCard />
     </div>

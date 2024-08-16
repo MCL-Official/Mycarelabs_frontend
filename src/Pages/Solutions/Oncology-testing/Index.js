@@ -39,10 +39,10 @@ const Index = () => {
           <p className="md:text-lg text-base mt-2">{cardData?.[0]?.longDescription}</p>
         </div>
       </div>
-      <div className="relative container mx-auto z-15" style={{ marginTop: '-4.5rem' }}>
+      {/* <div className="relative container mx-auto z-15" style={{ marginTop: '-4.5rem' }}>
           <DateTimePicker cardData={cardData} />
 
-        </div>
+        </div> */}
       <div className="text-center py-8 mt-5">
       <p className="text-blue-500 font-semibold">We Ensure Safe Testing</p>
       <h2 className="text-2xl font-bold mt-2">

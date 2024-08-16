@@ -78,13 +78,13 @@ const ConfirmBooking = () => {
           break;
         default:
           // Show a different message and button for cases not listed
-          setRedirectMessage("We don't provide this specific test. Please explore the other tests we offer.");
+          setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
           setShowButton(true); // Show the button
           break;
       }
     } else {
       // Fallback message and button if no title is found
-      setRedirectMessage("We don't provide this specific test. Please explore the other tests we offer.");
+      setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
       setShowButton(true); // Show the button
     }
   }, [data, countdown]);

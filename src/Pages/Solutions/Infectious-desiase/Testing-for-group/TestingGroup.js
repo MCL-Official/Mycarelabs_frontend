@@ -23,7 +23,7 @@ const TestingGroup = () => {
       <br></br>
       <br></br>
       <Index/>
-      <DateTimePicker/>
+      {/* <DateTimePicker/> */}
       <Feature/>
       <Testimonials/>
       <Faq/>

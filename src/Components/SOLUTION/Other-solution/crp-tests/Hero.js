@@ -14,11 +14,11 @@ const Hero = () => {
     </div>
     {/* Button Wrap */}
     <div className="flex">
-      <a href="#" className="mr-5 inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(19,_83,_254)_6px_6px] md:mr-6">Get Started</a>
-      <a href="#" className="flex flex-row items-center rounded-xl border border-solid border-[#1353fe] px-6 py-3 font-semibold text-[#1353fe] [box-shadow:rgb(19,_83,_254)_6px_6px]">
+      <Link to="/covid-test-locations" className="mr-5 inline-block rounded-xl bg-black px-8 py-4 text-center font-semibold text-white [box-shadow:rgb(19,_83,_254)_6px_6px] md:mr-6">Book TestNow</Link>
+      {/* <a href="#" className="flex flex-row items-center rounded-xl border border-solid border-[#1353fe] px-6 py-3 font-semibold text-[#1353fe] [box-shadow:rgb(19,_83,_254)_6px_6px]">
         <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905a575ec39b6784fc687c_Play.svg" alt="" className="mr-2 inline-block w-6" />
         <p className="text-black">View Showreel</p>
-      </a>
+      </a> */}
     </div>
     {/* Image Container */}
     <Link to="/covid-test-locations" className="relative bottom-0 left-auto right-0 top-10 mt-20  h-[480px] w-full font-bold text-[#1353fe] lg:absolute lg:h-64 lg:w-64">

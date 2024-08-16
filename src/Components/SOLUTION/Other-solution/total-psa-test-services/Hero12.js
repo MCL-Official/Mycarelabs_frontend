@@ -24,7 +24,7 @@ const Hero12 = () => {
                  and why it’s a valuable tool in healthcare. </p>
             {/* Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row items-center">
-              <button className="m-1.5 py-2.5 px-5 rounded-md bg-blue-500 text-white font-semibold uppercase hover:bg-teal-400" onClick={sample}>Start your journey</button>
+              <button className="m-1.5 py-2.5 px-5 rounded-md bg-blue-500 text-white font-semibold uppercase hover:bg-teal-400" onClick={sample}>Book Our Test</button>
               {/* <button className="m-1.5 py-2.5 px-5 rounded-md border-2 border-gray-300 text-gray-400 font-semibold uppercase hover:text-teal-400 hover:border-teal-400">Take a test drive</button> */}
             </div>
           </div>

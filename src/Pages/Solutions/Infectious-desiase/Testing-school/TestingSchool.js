@@ -24,7 +24,7 @@ const TestingSchool = () => {
 <h1>
   Book Your appointment
   </h1>
-      <DateTimePicker/>
+      {/* <DateTimePicker/> */}
       </div>
       <BookAppointment/>
       <Faq/>

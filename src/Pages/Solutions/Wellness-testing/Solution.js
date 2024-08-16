@@ -16,7 +16,7 @@ const Solution = () => {
            <br></br>
    
 <ShuffleHero1/>
-<DateTimePicker/>
+{/* <DateTimePicker/> */}
   <TabsFeatures1/>
 <FaqWellness2/>
 <FaqWellness/>
