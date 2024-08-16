@@ -16,7 +16,7 @@ const GetStartedCard = () => {
                         <div className="right-column col-md-5">
                             <div className="our__sol__button">
                                 {/* Use Ant Design Button for better styling and consistency */}
-                                <Button type="primary" className="explore-now-button">Explore Now</Button>
+                                {/* <Button type="primary" className="explore-now-button">Explore Now</Button> */}
                                 <div className="white__circle"></div>
                             </div>
                         </div>
