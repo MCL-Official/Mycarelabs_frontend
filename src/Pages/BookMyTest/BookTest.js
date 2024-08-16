@@ -87,19 +87,19 @@ const BookTest = () => {
       shortDescription:
         "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
       longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
-      timing: "At Your Home",
-      location: ""
+      timing: "Anytime",
+      location: "At Your Home"
     },
-    {
-      id: 6,
-      category: "NorCal: Union City Pop-up",
-      title: "Union City Pop-up",
-      shortDescription:
-        "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
-      longDescription: "Detailed information about our light solutions...",
-      timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
-      location: "Union City, CA 94587"
-    },
+    // {
+    //   id: 6,
+    //   category: "NorCal: Union City Pop-up",
+    //   title: "Union City Pop-up",
+    //   shortDescription:
+    //     "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
+    //   longDescription: "Detailed information about our light solutions...",
+    //   timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
+    //   location: "Union City, CA 94587"
+    // },
     // {
     //   id: 7,
     //   category: "SoCal: Corona Mobile Testing",
@@ -184,7 +184,7 @@ const BookTest = () => {
                         Learn More
                       </button>
                     </p>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-gray-600 mb-2 ">
                       <span className="font-bold">Hours: </span>{card.timing}
                     </p>
                     <p className="text-sm text-gray-600 mb-2">

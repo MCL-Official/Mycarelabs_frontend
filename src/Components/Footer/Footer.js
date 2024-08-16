@@ -59,13 +59,13 @@ function Footer() {
         "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
       longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
     },
-    {
-      category: "NorCal: Union City Pop-up",
-      title: "Union City Pop-up",
-      shortDescription:
-        "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
-      longDescription: "Detailed information about our light solutions...",
-    },
+    // {
+    //   category: "NorCal: Union City Pop-up",
+    //   title: "Union City Pop-up",
+    //   shortDescription:
+    //     "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
+    //   longDescription: "Detailed information about our light solutions...",
+    // },
     // {
     //   category: "SoCal: Corona Mobile Testing",
     //   title: "Mobile Testing: Corona, CA",

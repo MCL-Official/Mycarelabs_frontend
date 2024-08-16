@@ -54,16 +54,16 @@ export const cardData = [
       timing: "At Your Home",
       location: ""
     },
-    {
-      id: 6,
-      category: "NorCal: Union City Pop-up",
-      title: "Union City Pop-up",
-      shortDescription:
-        "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
-      longDescription: "Detailed information about our light solutions...",
-      timing: "Mon, Wed, Fri 8:30 AM - 4:00 PM",
-      location: "Union City, CA 94587"
-    },
+    // {
+    //   id: 6,
+    //   category: "NorCal: Union City Pop-up",
+    //   title: "Union City Pop-up",
+    //   shortDescription:
+    //     "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
+    //   longDescription: "Detailed information about our light solutions...",
+    //   timing: "Mon, Wed, Fri 8:30 AM - 4:00 PM",
+    //   location: "Union City, CA 94587"
+    // },
     // {
     //   id: 7,
     //   category: "SoCal: Corona Mobile Testing",
