@@ -66,7 +66,7 @@ const cardData = [
       " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
   },
   {
-    category: "FedEx Overnight Test Kits",
+    category: "At Home Test Kit",
     title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
     shortDescription:
       "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",

@@ -46,7 +46,7 @@ export const cardData = [
     },
     {
       id: 5,
-      category: "FedEx Overnight Test Kits",
+      category: "At Home Test Kit",
       title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
       shortDescription:
         "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
