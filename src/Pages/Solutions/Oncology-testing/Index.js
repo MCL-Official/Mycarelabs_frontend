@@ -15,7 +15,7 @@ const Index = () => {
       stepNumber: 1,
       title: "Men's & Women's Wellness Testing Solutions",
       longDescription:"Attention wellness testing patients: If you are registering for any of the following panels (Renal Function, CMP, BMP, or Lipid), please make sure you are fasting for a minimum of 8 hours before your appointment. Water is permitted during the fasting period. Additionally, please consult with your doctor if you should avoid taking any medication for our wellness test.",
-      image: 'https://mycarelabs.com/wp-content/uploads/2024/01/image-205.jpg'
+      image: 'https://i.ibb.co/b79svsR/4.png'
     },]
   return (
     <>
