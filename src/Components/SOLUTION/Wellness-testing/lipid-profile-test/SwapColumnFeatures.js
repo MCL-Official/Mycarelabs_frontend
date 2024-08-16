@@ -150,7 +150,7 @@ const features = [
       "Lipid Profile Tests are crucial for assessing cholesterol levels in your body. They help determine the risk of cardiovascular diseases by evaluating HDL, LDL, and triglycerides, providing a comprehensive view of your lipid health.",
     contentPosition: "r",
     imageUrl:
-      "https://img.freepik.com/free-vector/blood-research-concept-illustration_114360-24763.jpg?t=st=1719954685~exp=1719958285~hmac=796ba3b38bdae9308915de0e3a4bd4791914c7fb5e57eeab14ba4006957a0974&w=1800",
+      "https://i.ibb.co/pvBkRYq/2.png",
     // Icon: FiEye,
   },
   {

@@ -104,7 +104,7 @@ const solutions = [
     description:
       "The Anticonvulsant Test is a diagnostic procedure designed to measure the levels of Anticonvulsant in the blood. Anticonvulsant is an anticonvulsant and mood-stabilizing medication prescribed to manage epilepsy, bipolar disorder, and certain types of nerve pain.",
     imgSrc:
-      "https://img.freepik.com/free-vector/blood-research-concept-illustration_114360-24763.jpg?t=st=1719954685~exp=1719958285~hmac=796ba3b38bdae9308915de0e3a4bd4791914c7fb5e57eeab14ba4006957a0974&w=1800",
+      "https://i.ibb.co/pvBkRYq/2.png",
   },
   {
     id: 2,

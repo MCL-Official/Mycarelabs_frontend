@@ -469,7 +469,7 @@ const contentData = [
     content: <ExampleContent4 />,
   },
   {
-    imgUrl: "https://img.freepik.com/free-photo/researching-laboratory_1384-149.jpg?t=st=1720023298~exp=1720026898~hmac=33a10a6390b35645aefc5ea412b0b8f0748c210baffafa3675cfffecb81b6f7c&w=2000",
+    imgUrl: "https://i.ibb.co/pvBkRYq/2.png",
     subheading: "Mobile Testing",
     heading: "6. Common Thyroid Tests",
     content: <ExampleContent5 />,

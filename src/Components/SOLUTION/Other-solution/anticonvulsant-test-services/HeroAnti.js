@@ -18,13 +18,14 @@ export function HeroAnti () {
                         <Link to="/covid-test-locations" className="block py-2 px-4 text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                             Book Apointment
                         </Link>
-                        <Link to="/about" className="block py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg">
+                        {/* <Link to="/about" className="block py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg">
                             Get access
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 <div className="mt-14">
-                    <img src="https://img.freepik.com/free-photo/laboratory-worker-coverall-suit-is-adjusting-microscope_1157-31351.jpg?t=st=1720023418~exp=1720027018~hmac=779cb6e8444a5af0b7f938434994ce9829d7dfb3c15d7f82857a4a3ebeee49a1&w=2000" className="w-full shadow-lg rounded-lg border" alt="" />
+                    {/* <img src="https://i.ibb.co/vzGZPFx/10.png" className="w-full shadow-lg rounded-lg border" alt="" /> */}
+                    <img src="https://i.ibb.co/pvBkRYq/2.png" className="w-full shadow-lg rounded-lg border" alt="" />
                 </div>
             </div>
         </section>

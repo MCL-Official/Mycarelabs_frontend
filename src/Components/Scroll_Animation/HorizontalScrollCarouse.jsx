@@ -91,11 +91,11 @@ const cards = [
     title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
     id: 5,
   },
-  // {
-  //   url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeMsPl9ceVjkpraPS7GB-cieU0CRTkYydcUg&s",
-  //   title: "Union City Pop-up",
-  //   id: 6,
-  // },
+  {
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeMsPl9ceVjkpraPS7GB-cieU0CRTkYydcUg&s",
+    title: "Union City Pop-up",
+    id: 6,
+  },
   {
     url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuWe7r-uPgnvEh52FMRtK0PgIHGy_73Lxr4Q&s",
     title: "Mobile Testing: Corona, CA",

@@ -90,36 +90,36 @@ const BookTest = () => {
       timing: "Anytime",
       location: "At Your Home"
     },
-    // {
-    //   id: 6,
-    //   category: "NorCal: Union City Pop-up",
-    //   title: "Union City Pop-up",
-    //   shortDescription:
-    //     "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
-    //   longDescription: "Detailed information about our light solutions...",
-    //   timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
-    //   location: "Union City, CA 94587"
-    // },
-    // {
-    //   id: 7,
-    //   category: "SoCal: Corona Mobile Testing",
-    //   title: "Mobile Testing: Corona, CA",
-    //   shortDescription:
-    //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
-    //   longDescription: "Detailed information about our audio solutions...",
-    //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
-    //   location: "Corona, CA 92882"
-    // },
-    // {
-    //   id: 8,
-    //   category: "SoCal: Corona Mobile Testing",
-    //   title: "Mobile Testing: Corona, CA",
-    //   shortDescription:
-    //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
-    //   longDescription: "Detailed information about our audio solutions...",
-    //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
-    //   location: "Corona, CA 92882"
-    // },
+    {
+      id: 6,
+      category: "NorCal: Union City Pop-up",
+      title: "Union City Pop-up",
+      shortDescription:
+        "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
+      longDescription: "Detailed information about our light solutions...",
+      timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
+      location: "Union City, CA 94587"
+    },
+    {
+      id: 7,
+      category: "SoCal: Corona Mobile Testing",
+      title: "Mobile Testing: Corona, CA",
+      shortDescription:
+        "Same-day Covid/Flu PCR results available. To speed up your testing.",
+      longDescription: "Detailed information about our audio solutions...",
+      timing: "Mon-Fri 8:30 AM - 6:00 PM",
+      location: "Corona, CA 92882"
+    },
+    {
+      id: 8,
+      category: "SoCal: Corona Mobile Testing",
+      title: "Mobile Testing: Corona, CA",
+      shortDescription:
+        "Same-day Covid/Flu PCR results available. To speed up your testing.",
+      longDescription: "Detailed information about our audio solutions...",
+      timing: "Mon-Fri 8:30 AM - 6:00 PM",
+      location: "Corona, CA 92882"
+    },
   ];
 
   useEffect(() => {

@@ -108,7 +108,7 @@ const thyroidTestData = [
         content: 'These tests measure the levels of the thyroid hormones T3 and T4 in the blood, providing insights into thyroid function.'
       }
     ],
-    image: 'https://via.placeholder.com/150'
+    image: 'https://i.ibb.co/pvBkRYq/2.png'
   }
 ];
 
