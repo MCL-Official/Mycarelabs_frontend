@@ -11,7 +11,7 @@ function Navbar() {
   const [hidden, setHidden] = useState(false);
   const [bgColor, setBgColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
-  const [textSize, setTextSize] = useState("text-lg");
+  const [textSize, setTextSize] = useState("text-xl");
   const [activeLink, setActiveLink] = useState("");
   const location = useLocation();
   const [location1, setLocation] = useState();
@@ -376,8 +376,11 @@ function Navbar() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#007bff] transition-all duration-300 group-hover:w-full"></span>
                 </button> */}
               </div>
-              <p className={` font-bold text-2xl pr-5  ${textColor === "white" ? "text-blue-600" : "text-orange-600"} `}>Need Help? Call Us</p>
-              <form
+              <p className={`font-bold text-2xl pr-5 ${textColor === "white" ? "text-white" : "text-orange-600"}`}>
+  Need Help? Call Us
+  <br />
+  <span className="text-xl">800-790-4550</span>
+</p> <form
                 className="flex  text-black"
               >
                 {/* <input
