@@ -5,11 +5,6 @@ import { useNavigate } from "react-router-dom";
 import logo1 from "../../Assets/Logo1.png";
 
 function Footer() {
-
-  // const match = () => {
-  //    cardData.category
-  // }
-
   const images = [
     "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1719954263~exp=1719957863~hmac=08690e59529a0bc028e23fda8e4fa0f44750548434c108235e7e0f403667f131&w=2000",
     "https://img.freepik.com/free-photo/beautiful-manhattan-bridge-new-york-usa_181624-48458.jpg?t=st=1719954266~exp=1719957866~hmac=73b10f4318bceabf068b52ec1650bbd1fdcf461ce06775a0c40acc3b63049a1a&w=2000",
@@ -75,23 +70,26 @@ function Footer() {
     },
   ];
 
-
   const navigate = useNavigate();
 
-  const handleNavigation = (item,index) => {
-    console.log("handleNavigationv",index,item);
-    const cardWithImage = {
-      ...item,
-      imageUrl: images[index % images.length],
-    };  
-    
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Smooth scrolling animation
+  // Utility function to format the category name
+  const formatCategoryName = (categoryName) => {
+    return categoryName
+      .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
+      .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
+      .replace(/-+/g, '-') // Removes consecutive hyphens
+      .replace(/-+$/, '') // Removes trailing hyphens
+      .toLowerCase();
+  };
+
+  const handleNavigation = (item, index) => {
+    const formattedCategory = formatCategoryName(item.category);
+
+    navigate(`/bookingcompletion/${formattedCategory}`, {
+      state: { cardData: { ...item, imageUrl: images[index % images.length] } },
     });
-    navigate(`/covid-test-locations/${index}`, {
-      state: { cardData: cardWithImage },
-    });
+
+    console.log("Navigating with card data:", item);
   };
 
   return (
@@ -140,45 +138,18 @@ function Footer() {
         <div className="ft-list">
           <p className="ft-list-title">All Locations</p>
           <ul className="ft-list-items">
-      {cardData && cardData.length > 0 ? (
-        cardData.map((item,index) => {
-          console.log(item.category, "sajchasc");
-          return (
-            <li key={item.id}>
-              <button onClick={() => handleNavigation(item,index)}>
-                {item.category}
-              </button>
-            </li>
-          );
-        })
-      ) : (
-        <p>No locations available.</p>
-      )}
-    </ul>
-
-          {/* <ul className="ft-list-items">
-            <li  >
-              {cardData.category}
-            </li>
-            <li>
-              <Link to={"/covid-test-locations/:id"}>NorCal: Fremont Lab</Link>
-            </li>
-            <li>
-              <Link to={"/covid-test-locations/:id"}>NorCal: Union City Pop-up</Link>
-            </li>
-            <li>
-              <Link to={"/covid-test-locations/:id"}>SoCal: Corona Mobile Testing</Link>
-            </li>
-            <li>
-              <Link to={"/legal"}>SoCal: Riverside Pop-up</Link>
-            </li>
-            <li>
-              <Link to={"/legal"}>SoCal: Riverside Mobile Testing</Link>
-            </li>
-            <li>
-              <Link to={"/legal"}>At-Home COVID-19 PCR Test Kit</Link>
-            </li>
-          </ul> */}
+            {cardData && cardData.length > 0 ? (
+              cardData.map((item, index) => (
+                <li key={item.title}>
+                  <button onClick={() => handleNavigation(item, index)}>
+                    {item.category}
+                  </button>
+                </li>
+              ))
+            ) : (
+              <p>No locations available.</p>
+            )}
+          </ul>
         </div>
 
         <div className="ft-list" id="contact">
@@ -188,11 +159,6 @@ function Footer() {
               <a href="mailto:support@mycarelabs.com">support@mycarelabs.com</a>
             </li>
             <li>
-              {/* <a href="mailto:appointment@healthplus.com">
-                appointment@hmycarelabs.com
-              </a> */}
-            </li>
-            <li>
               <a href="tel:+1-800-790-4550">Call: +1-800-790-4550</a>
             </li>
             <li>
@@ -200,7 +166,7 @@ function Footer() {
             </li>
             <li>
               <a href="tel:+022 2326 6232">5500 Stewart Avenue, Suite 108,
-                <br></br>
+                <br />
                 Fremont, CA 94538
               </a>
             </li>
@@ -212,22 +178,22 @@ function Footer() {
         <p>Copyright © 2024 My Care Labs. All Rights Reserved.</p>
 
         <ul className="ft-social-links">
-        <li>
-    <a
-      href="https://www.instagram.com/mycarelabsofficial/"
-      title="Instagram"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 448 512"
-      >
-        <path d="M224.1 141c-63.6 0-115.1 51.5-115.1 115.1S160.5 371.2 224.1 371.2s115.1-51.5 115.1-115.1S287.7 141 224.1 141zm0 190.6c-41.7 0-75.5-33.8-75.5-75.5s33.8-75.5 75.5-75.5 75.5 33.8 75.5 75.5-33.8 75.5-75.5 75.5zm146.4-194.8c0 14.9-12 26.9-26.9 26.9h-27.2c-14.9 0-26.9-12-26.9-26.9v-27.2c0-14.9 12-26.9 26.9-26.9h27.2c14.9 0 26.9 12 26.9 26.9v27.2zm76.1 27.2c-1.7-35.7-9.9-67.3-35.8-93.2-25.9-25.9-57.5-34.1-93.2-35.8-36.7-2.1-147.3-2.1-184 0-35.7 1.7-67.3 9.9-93.2 35.8s-34.1 57.5-35.8 93.2c-2.1 36.7-2.1 147.3 0 184 1.7 35.7 9.9 67.3 35.8 93.2 25.9 25.9 57.5 34.1 93.2 35.8 36.7 2.1 147.3 2.1 184 0 35.7-1.7 67.3-9.9 93.2-35.8 25.9-25.9 34.1-57.5 35.8-93.2 2.1-36.7 2.1-147.3 0-184zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.2 9s-102.8 2.6-132.2-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.2s-2.6-102.8 9-132.2c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.2-9s102.8-2.6 132.2 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.2s2.6 102.8-9 132.2z" />
-      </svg>
-    </a>
-  </li>
+          <li>
+            <a
+              href="https://www.instagram.com/mycarelabsofficial/"
+              title="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M224.1 141c-63.6 0-115.1 51.5-115.1 115.1S160.5 371.2 224.1 371.2s115.1-51.5 115.1-115.1S287.7 141 224.1 141zm0 190.6c-41.7 0-75.5-33.8-75.5-75.5s33.8-75.5 75.5-75.5 75.5 33.8 75.5 75.5-33.8 75.5-75.5 75.5zm146.4-194.8c0 14.9-12 26.9-26.9 26.9h-27.2c-14.9 0-26.9-12-26.9-26.9v-27.2c0-14.9 12-26.9 26.9-26.9h27.2c14.9 0 26.9 12 26.9 26.9v27.2zm76.1 27.2c-1.7-35.7-9.9-67.3-35.8-93.2-25.9-25.9-57.5-34.1-93.2-35.8-36.7-2.1-147.3-2.1-184 0-35.7 1.7-67.3 9.9-93.2 35.8s-34.1 57.5-35.8 93.2c-2.1 36.7-2.1 147.3 0 184 1.7 35.7 9.9 67.3 35.8 93.2 25.9 25.9 57.5 34.1 93.2 35.8 36.7 2.1 147.3 2.1 184 0 35.7-1.7 67.3-9.9 93.2-35.8 25.9-25.9 34.1-57.5 35.8-93.2 2.1-36.7 2.1-147.3 0-184zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.2 9s-102.8 2.6-132.2-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.2s-2.6-102.8 9-132.2c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99.2-9 132.2-9s102.8-2.6 132.2 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.2s2.6 102.8-9 132.2z" />
+              </svg>
+            </a>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/company/mycarelabs"
@@ -278,9 +244,7 @@ function Footer() {
               </svg>
             </a>
           </li>
-  
-</ul>
-        {/* </ul> */}
+        </ul>
       </div>
     </div>
   );
