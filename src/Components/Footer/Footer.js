@@ -131,6 +131,9 @@ function Footer() {
             <li>
               <a href="/covid-test-locations">Book An Appointment</a>
             </li>
+            <li>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </li>
           </ul>
         </div>
 
