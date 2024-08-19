@@ -25,9 +25,9 @@ const PrivacyPolicy = () => {
           <li className="mb-2">
             <strong>Directly from You:</strong> When you interact with our services, register for medical tests, or contact us, you may provide us with personal information such as your name, email address, phone number, and payment details.
           </li>
-          <li className="mb-2">
+          {/* <li className="mb-2">
             <strong>Automatically:</strong> We may automatically collect certain information when you use our services, such as your IP address, browser type, device information, and browsing behavior.
-          </li>
+          </li> */}
           <li className="mb-2">
             <strong>From Third Parties:</strong> We may receive information about you from third-party sources, including partners, affiliates, and public databases.
           </li>
