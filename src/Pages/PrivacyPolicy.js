@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
         <br></br>
         <br></br>
         <br></br>
-      <h1 className="text-3xl font-bold mb-6">Privacy Policy for My care labs</h1>
+      <h1 className="text-3xl font-bold mb-6">Privacy Policy </h1>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
         </p>
         <ul className="list-disc pl-6 mb-4">
           <li className="mb-2">
-            <strong>Directly from You:</strong> When you interact with our services, register for an account, make a purchase, or contact us, you may provide us with personal information such as your name, email address, phone number, and payment details.
+            <strong>Directly from You:</strong> When you interact with our services, register for medical tests, or contact us, you may provide us with personal information such as your name, email address, phone number, and payment details.
           </li>
           <li className="mb-2">
             <strong>Automatically:</strong> We may automatically collect certain information when you use our services, such as your IP address, browser type, device information, and browsing behavior.
@@ -70,9 +70,9 @@ const PrivacyPolicy = () => {
           <li className="mb-2">
             <strong>In Business Transfers:</strong> If MyCare Labs undergoes a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.
           </li>
-          <li className="mb-2">
+          {/* <li className="mb-2">
             <strong>Directly from You:</strong> When you interact with our services, register for medical tests, or contact us, you may provide us with personal information such as your name, email address, phone number, and payment details.
-          </li>
+          </li> */}
         </ul>
       </section>
 
