@@ -12,7 +12,7 @@ const features = {
   Toxicology: {
     title: "Toxicology",
     description:
-      "MyCare Labs offers comprehensive toxicology testing services, ensuring accurate and timely results for various needs. Their state-of-the-art facilities and experienced professionals provide reliable screening for drugs, alcohol, and other substances.",
+      "My Care Labs offers comprehensive toxicology testing services, ensuring accurate and timely results for various needs. Their state-of-the-art facilities and experienced professionals provide reliable screening for drugs, alcohol, and other substances.",
     buttonText: `BOOK TEST FOR Toxicology `,
     image: img1,
     route: "/testing-solutions/toxicology-testing-solutions/", // Add route
@@ -37,7 +37,7 @@ const features = {
   "Infectious Disease": {
     title: "Infectious Disease",
     description:
-      "MyCare Labs provides top-tier testing solutions for infectious diseases,featuring an all-in-one swab for COVID-19, Influenza A/B, and RSV. Discover comprehensive and advanced diagnostics with MyCare Labs' reliable services.",
+      "My Care Labs provides top-tier testing solutions for infectious diseases,featuring an all-in-one swab for COVID-19, Influenza A/B, and RSV. Discover comprehensive and advanced diagnostics with MyCare Labs' reliable services.",
     buttonText: `BOOK TEST FOR Infectious Disease`,
     image: img3,
     route: "/testing-solutions/infectious-disease-testing-solutions", // Add route
@@ -62,7 +62,7 @@ const features = {
   "Wellness Testing": {
     title: "Wellness Testing",
     description:
-      "MyCare Labs provides the best testing solutions, prioritizing your well-being with comprehensive wellness testing services.Take proactive steps towards a healthier, happier you with MyCare Labs' advanced diagnostics.",
+      "My Care Labs provides the best testing solutions, prioritizing your well-being with comprehensive wellness testing services.Take proactive steps towards a healthier, happier you with MyCare Labs' advanced diagnostics.",
     buttonText: `BOOK TEST FOR Wellness Testing`,
     image: img,
     route: "/testing-solutions/wellness-testing-solutions/", // Add route
@@ -89,7 +89,7 @@ const features = {
   "Mobile Testing": {
     title: "Mobile Testing",
     description:
-      " MyCare Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
+      " My Care Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
     buttonText: `Book Test For Mobile Testing`,
     image: img4,
     route: "/covid-test-locations", // Add route
@@ -210,7 +210,7 @@ function FeatureComponent() {
         <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
-    <div className="flex justify-center items-center min-h-screen py-4  ">
+      <div className="flex justify-center items-center min-h-screen py-4  ">
       <div className="w-full lg:w-4/5 px-2 overflow-hidden bg-gradient-to-r from-blue-300 via-transparent to-white bd">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent">
           <div className="relative inline-block bg-transparent text-center">
@@ -220,7 +220,7 @@ function FeatureComponent() {
             <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
               We Provide
             </span>
-            <div className="info-description mt-8 sm:text-sm md:text-xl lg:text-xl pb-12 font-normal">
+            <div className="info-description text-black mt-8 sm:text-sm md:text-xl lg:text-xl pb-12 font-normal">
               My Care Labs offers quick, easy, and accurate RT-PCR testing for
               COVID-19, RSV, and Influenza A/B. We provide on-site testing at
               our lab and pop-up locations throughout California, with results
@@ -244,6 +244,12 @@ function FeatureComponent() {
               </button>
             </div>
           ))}
+                      {/* <div className="info-description text-black mt-8 sm:text-sm md:text-xl lg:text-xl pb-12 font-normal">
+              My Care Labs offers quick, easy, and accurate RT-PCR testing for
+              COVID-19, RSV, and Influenza A/B. We provide on-site testing at
+              our lab and pop-up locations throughout California, with results
+              available the same day or within 24 hours.
+            </div> */}
         </div>
         <div className="rounded-2xl border-2 p-6 bg-white flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] transition-all shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px] ${selectedFeature === feature ? 'border-blue-600 text-blue-600' : 'border-gray-300'}">
           <AnimatePresence custom={direction} mode="wait">
@@ -278,7 +284,7 @@ function FeatureComponent() {
                 </p>
               </motion.div>
             </AnimatePresence>
-            <motion.button
+            {/* <motion.button
               key={features[selectedFeature].buttonText}
               initial="initial"
               animate="animate"
@@ -289,7 +295,7 @@ function FeatureComponent() {
               onClick={handleButtonClick} // Add onClick handler
             >
               {features[selectedFeature].buttonText}
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
       </div>
