@@ -12,7 +12,7 @@ const features = {
   Toxicology: {
     title: "Toxicology",
     description:
-      "My Care Labs offers comprehensive toxicology testing services, ensuring accurate and timely results for various needs. Their state-of-the-art facilities and experienced professionals provide reliable screening for drugs, alcohol, and other substances.",
+      "My Care Labs offers Therapeutic Drug Monitoring and Drugs of Abuse testing for various needs. Our facility and medical professionals provide reliable screening for drugs, alcohol, and other substances.",
     buttonText: `BOOK TEST FOR Toxicology `,
     image: img1,
     route: "/testing-solutions/toxicology-testing-solutions/", // Add route
@@ -37,7 +37,7 @@ const features = {
   "Infectious Disease": {
     title: "Infectious Disease",
     description:
-      "My Care Labs provides top-tier testing solutions for infectious diseases,featuring an all-in-one swab for COVID-19, Influenza A/B, and RSV. Discover comprehensive and advanced diagnostics with MyCare Labs' reliable services.",
+      "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options. ",
     buttonText: `BOOK TEST FOR Infectious Disease`,
     image: img3,
     route: "/testing-solutions/infectious-disease-testing-solutions", // Add route
@@ -62,7 +62,7 @@ const features = {
   "Wellness Testing": {
     title: "Wellness Testing",
     description:
-      "My Care Labs provides the best testing solutions, prioritizing your well-being with comprehensive wellness testing services.Take proactive steps towards a healthier, happier you with MyCare Labs' advanced diagnostics.",
+      "My Care Labs provides the quickest and most accurate testing solutions, prioritizing your well-being with our wellness testing services. Take proactive steps towards a healthier, happier you with My Care Labs. ",
     buttonText: `BOOK TEST FOR Wellness Testing`,
     image: img,
     route: "/testing-solutions/wellness-testing-solutions/", // Add route
@@ -89,7 +89,7 @@ const features = {
   "Mobile Testing": {
     title: "Mobile Testing",
     description:
-      " My Care Labs provides the solution of mobile testing, allowing you to test from the comfort of your home. Explore the convenience and ease by scheduling your test where it suits you best.",
+      " My Care Labs offers mobile testing, allowing you to test from the comfort of your home. This service is available for patients within 10-15 miles of our Fremont Laboratory. ",
     buttonText: `Book Test For Mobile Testing`,
     image: img4,
     route: "/covid-test-locations", // Add route
@@ -257,7 +257,7 @@ function FeatureComponent() {
               key={features[selectedFeature].image}
               src={features[selectedFeature].image}
               alt={features[selectedFeature].title}
-              className="w-full lg:w-1/2 h-64 lg:h-96 object-cover mb-4 lg:mb-0 rounded-2xl"
+              className="w-full lg:w-1/2 h-64 lg:h-96 object-contain mb-4 lg:mb-0 rounded-2xl"
               initial="initial"
               animate="animate"
               exit="exit"
