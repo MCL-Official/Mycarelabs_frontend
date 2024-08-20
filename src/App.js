@@ -51,6 +51,7 @@ import NeumorphismButton from "./Components/button/Button";
 import DrawerButton from "./Components/Custome_Modal/DrawerButton";
 import Example from "./Components/Navbar/FlyoutNavbar";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import NotFound from "./Pages/NotFound";
 // import Careers from "./Pages/Careers/Careers";
 // import JobApplicationForm from "./Components/Careers/JobApplicationForm";
 // import JobDetail from "./Components/Careers/JobDetail";
@@ -118,7 +119,7 @@ function App() {
           <Route path="loc" element={<DateTimePicker/>}/>
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       <Footer/>
       </Router>
