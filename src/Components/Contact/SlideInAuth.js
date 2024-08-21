@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiStar } from "react-icons/fi";
 import axios from 'axios';
+import { Link } from "react-router-dom"; 
 
 export const SlideInAuth = () => {
   return (
@@ -11,7 +12,6 @@ export const SlideInAuth = () => {
     </section>
   );
 };
-
 const Form = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -159,14 +159,7 @@ const Form = () => {
 
           {/* Informational content above checkbox */}
           <motion.p variants={primaryVariants} className="mb-4 text-sm text-gray-700 text-left">
-            By checking this box, I consent to receive messages from My Care Labs regarding my test results, 
-            appointment reminders, and other related information. I understand that these messages may be sent via 
-            email, SMS, or phone call.
-          </motion.p>
-
-          {/* Checkbox input */}
-          <motion.div variants={primaryVariants} className="mb-4 w-full">
-            <label className="inline-flex items-center">
+          <label className="inline-flex items-center">
               <input
                 type="checkbox"
                 name="agreeToTerms"
@@ -176,9 +169,28 @@ const Form = () => {
                 required
               />
               <span className="ml-2 text-sm text-gray-700">
-              I agree to receive messages from My Care Labs.
+              I agree to receive messages from My Care Labs. By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>.
+         
               </span>
             </label>
+            {/* I agree to receive messages from My Care Labs. By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>. */}
+          </motion.p>
+
+          {/* Checkbox input */}
+          <motion.div variants={primaryVariants} className="mb-4 w-full">
+            {/* <label className="inline-flex items-center">
+              <input
+                type="checkbox"
+                name="agreeToTerms"
+                checked={formData.agreeToTerms}
+                onChange={handleInputChange}
+                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                required
+              />
+              <span className="ml-2 text-sm text-gray-700">
+                I agree to receive messages from My Care Labs.
+              </span>
+            </label> */}
           </motion.div>
 
           <motion.button
@@ -201,7 +213,6 @@ const Form = () => {
     </motion.div>
   );
 };
-
 const SupplementalContent = () => {
   return (
     <div className="group sticky top-4 m-4 h-80 overflow-hidden rounded-3xl rounded-tl-[4rem] bg-slate-950 md:h-[calc(100vh_-_2rem)]">
@@ -315,3 +326,4 @@ const avatarVariants = {
     opacity: 1,
   },
 };
+
