@@ -169,7 +169,7 @@ const Form = () => {
                 required
               />
               <span className="ml-2 text-sm text-gray-700">
-              I agree to receive messages from My Care Labs. By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>.
+              By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>.
          
               </span>
             </label>
