@@ -166,7 +166,7 @@ const Form = () => {
                 checked={formData.agreeToTerms}
                 onChange={handleInputChange}
                 className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                required
+                
               />
               <span className="ml-2 text-sm text-gray-700">
               By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>.

@@ -71,8 +71,7 @@ const PrivacyPolicy = () => {
             <strong>In Business Transfers:</strong> If MyCare Labs undergoes a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.
           </li>
           <li className="mb-2">
-            <strong>SMS Consent:</strong> The customer SMS consent and phone number will not be shared to any 3rd party for marketing purposes in any circumstances
-          </li>
+            <strong>SMS Consent:</strong> Phone numbers (personal information) collected for SMS consent will not be shared with third parties or affiliates for marketing purposes under any circumstances.    </li>
           {/* <li className="mb-2">
             <strong>Directly from You:</strong> When you interact with our services, register for medical tests, or contact us, you may provide us with personal information such as your name, email address, phone number, and payment details.
           </li> */}
