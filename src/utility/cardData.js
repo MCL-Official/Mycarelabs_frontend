@@ -19,7 +19,7 @@ export  const cardData = [
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription:
       "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
-    timing: "Mon-Fri 8:30 AM - 6:00 PM (Appointment only)",
+    timing: "Mon-Fri 10:00 AM - 3:00 PM (Appointment only)",
     location: "Riverside County"
   },
   {
@@ -30,7 +30,7 @@ export  const cardData = [
       "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
     longDescription:
       " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
-    timing: "Mon-Fri 8:30 AM - 6:00 PM, Sat-Sun (Appointment only)",
+    timing: "Mon-Fri 10:00 AM - 3:00 PM, Sat-Sun (Appointment only)",
     location: "Alameda County"
   },
   {
@@ -41,7 +41,7 @@ export  const cardData = [
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription:
       " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
-    timing: " Mon-Fri 8:30 AM - 6:00 PM",
+    timing: "Sun 11:00 AM - 2:30 PM",
     location: "Riverside County"
   },
   {
