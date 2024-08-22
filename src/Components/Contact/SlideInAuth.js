@@ -247,8 +247,8 @@ const SupplementalContent = () => {
           variants={primaryVariants}
           className="mb-6 max-w-md text-sm text-slate-300"
         >
-          Bloop is the home of makers, making amazing things, and getting paid.
-          Find your dream job with us.
+          {/* Bloop is the home of makers, making amazing things, and getting paid.
+          Find your dream job with us. */}
         </motion.p>
         {/* <div className="flex items-center gap-4">
           <div className="flex items-center">
