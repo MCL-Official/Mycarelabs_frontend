@@ -52,6 +52,7 @@ import DrawerButton from "./Components/Custome_Modal/DrawerButton";
 import Example from "./Components/Navbar/FlyoutNavbar";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import NotFound from "./Pages/NotFound";
+import PrivacyNotice from "./Pages/PrivacyNotice ";
 // import Careers from "./Pages/Careers/Careers";
 // import JobApplicationForm from "./Components/Careers/JobApplicationForm";
 // import JobDetail from "./Components/Careers/JobDetail";
@@ -72,12 +73,13 @@ function App() {
     <div className="App">
       <Router >
       <PageViewTracker />
-        <Navbar />
-        {/* <Example/> */}
+        {/* <Navbar /> */}
+        <Example/>
         {/* <Navbar2/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
+          <Route path="/hipaa-information" element={<PrivacyNotice />} />
           {/* <Route path="/careers" element={<Careers />} /> */}
           {/* <Route path="/careers" element={<JobListings />} /> */}
           {/* <Route path="/careers/:id" element={<JobDetail />} /> */}

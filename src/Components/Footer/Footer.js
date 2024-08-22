@@ -132,6 +132,9 @@ function Footer() {
             <li>
               <a href="/privacy-policy">Privacy Policy</a>
             </li>
+            <li>
+              <a href="/hipaa-information">HIPAA Information</a>
+            </li>
           </ul>
         </div>
 

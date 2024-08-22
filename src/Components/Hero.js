@@ -1,10 +1,24 @@
 import React, { useEffect, useState } from "react";
-import DoctorVideo from "../Assets/myvid.mp4"; // Ensure you have the video file in the specified path
+import DoctorVideo from "../Assets/myvid1.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "../Styles/Hero.css";
+
+import logo1 from "../Assets/Logo1.png";
+
+const Logo = ({ color = "white" }) => {
+  return (
+    <Link to="/" className="flex justify-center items-center  lg:mb-0 lg:mr-5">
+      <img
+        src="https://i.ibb.co/L12cxJP/logo.png"
+        className="max-w-[200px] max-h-[200px] lg:max-w-[450px] lg:max-h-[460px]"
+        alt="Flowbite Logo"
+      />
+    </Link>
+  );
+};
 
 function Hero() {
   const navigate = useNavigate();
@@ -47,22 +61,18 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (isTyping) {
-        // Typing mode: Add one letter at a time
         if (letterIndex < words[wordIndex].length) {
           setDisplayText(
             (prevText) => prevText + words[wordIndex][letterIndex]
           );
           setLetterIndex((prevIndex) => prevIndex + 1);
         } else {
-          // End of word: Switch to backspacing mode
           setIsTyping(false);
         }
       } else {
-        // Backspacing mode: Remove one letter at a time
         if (displayText.length > 0) {
           setDisplayText((prevText) => prevText.slice(0, -1));
         } else {
-          // End of backspacing: Switch to next word or loop back
           setWordIndex((prevIndex) =>
             prevIndex === words.length - 1 ? 0 : prevIndex + 1
           );
@@ -70,9 +80,8 @@ function Hero() {
           setIsTyping(true);
         }
       }
-    }, 150); // Adjust typing speed here
+    }, 150);
 
-    // Clear interval on component unmount
     return () => clearInterval(interval);
   }, [displayText, wordIndex, letterIndex, isTyping, words]);
 
@@ -84,7 +93,7 @@ function Hero() {
         <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
-      
+
       <div className="hero-section">
         <video
           className="hero-video"
@@ -96,14 +105,9 @@ function Hero() {
           title="Welcome to My Care Labs"
         />
         <div className="text-section">
-          <p className="text-4xl pt-28">Welcome to </p>
-          <h2 className="sample text-6xl">My Care Labs</h2>
-          <p className="text-description mb-2">
-            Discover Comprehensive Health Solutions at My Care Labs. From
-            infectious diseases to wellness and toxicology, we're here for your
-            well-being.
-          </p>
-          <h1 className="h-14">{displayText}</h1>
+        <p className="text-4xl pt-20">Welcome to </p>
+          <Logo />
+          <h1 className="h-14 text-headline">{displayText}</h1>
           <button
             className="text-appointment-btn"
             type="button"
@@ -113,18 +117,18 @@ function Hero() {
           </button>
           <div className="text-stats">
             <div className="text-stats-container">
-              <p>145k+</p>
-              <p>Receive Patients</p>
+              <p>50k+</p>
+              <p>Patients Tested</p>
             </div>
 
             <div className="text-stats-container">
-              <p>50+</p>
-              <p>Expert Doctors</p>
+              <p>7 days a Week</p>
+              <p>Days Open</p>
             </div>
 
             <div className="text-stats-container">
-              <p>10+</p>
-              <p>Years of Experience</p>
+              <p>24-hour Results</p>
+              <p>Turnaround Time</p>
             </div>
           </div>
         </div>

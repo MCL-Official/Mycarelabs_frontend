@@ -16,6 +16,7 @@ import Footer from "../Components/Footer/Footer";
 import ShuffleHero from "../Components/shuffel/SuffleHero";
 import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
 import FeatureComponent from "../Components/Accordain/FeatureComponent";
+import {FeatureToggles} from "../Components/feature-toggles/FeatureToggles";
 import ImageContainer from "../Components/Form/ImageContainer";
 import { Helmet } from "react-helmet";
 import { SlideInAuth } from "../Components/Contact/SlideInAuth";
@@ -79,6 +80,7 @@ useEffect(() => {
       </Helmet>
       {/* <Navbar /> */}
       <Hero />
+      {/* <FeatureToggles/> */}
       <FeatureComponent />
       <HoverCards />
       <InsuranceAccepted />

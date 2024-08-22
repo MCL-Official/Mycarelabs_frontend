@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import Link component
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Import Link component
 import { FiMenu, FiArrowRight, FiX, FiChevronDown } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
 import { useMotionValueEvent, AnimatePresence, useScroll, motion } from "framer-motion";
@@ -17,12 +17,15 @@ const Example = () => {
   );
 };
 
+
 const FlyoutNav = () => {
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
   const [lastScrollY, setLastScrollY] = useState(0);
-  const isHome = window.location.pathname === "/";
+  // const isHome = window.location.pathname === "/";
+  const isHome = location.pathname === "/";
 
   // Handle scroll direction
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -53,7 +56,7 @@ const FlyoutNav = () => {
         <div className="hidden gap-6 lg:flex items-center justify-between">
           <Links isHome={isHome} scrolled={scrolled} />
           <CTAs isHome={isHome} scrolled={scrolled} />
-          <a href="tel:+1234567890" className="mr-3 self-center text-black">
+          <a href="tel:+1-800-790-4550" className="mr-3 self-center text-black">
             <FontAwesomeIcon icon={faPhone} size="xl" />
           </a>
         </div>
@@ -97,6 +100,9 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
   const [open, setOpen] = useState(false);
   const showFlyout = FlyoutContent && open;
 
+  const handleClick = () => {
+    setOpen(false); // Close the dropdown on link click
+  };
   return (
     <div
       onMouseEnter={() => setOpen(true)}
@@ -105,6 +111,7 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
     >
       <Link
         to={to}
+        onClick={handleClick}
         className={`relative font-semibold no-underline text-xl ${
           isHome ? (scrolled ? "text-black" : "text-white") : "text-black"
         }`}
@@ -129,7 +136,7 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
           >
             <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
             <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
-            <FlyoutContent />
+            <FlyoutContent handleClick={handleClick} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -138,6 +145,11 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
 };
 
 const CTAs = ({ isHome, scrolled }) => {
+  const navigate = useNavigate()
+  const data =()=>{
+    // navigate()
+    window.location.href ="https://patient-in.creliohealth.com/patient/login"
+  } 
   return (
     <div className="flex items-center gap-3">
       <button
@@ -148,18 +160,19 @@ const CTAs = ({ isHome, scrolled }) => {
               : "text-white border-white hover:bg-green-600 hover:text-white"
             : "bg-green-600 text-white"
         }`}
+        onClick={()=>data()}
       >
         <FaUserCircle />
-        <span>Book My Test</span>
+        <span>Check Your Test Result</span>
       </button>
-      <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white">
-        Schedule a Demo
-      </button>
+      {/* <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white">
+      Check Your Test Result
+      </button> */}
     </div>
   );
 };
 
-const AboutUsContent = () => {
+const AboutUsContent = ({ handleClick }) => {
   const navigate = useNavigate(); // Initialize useNavigate
 // const sample = {{...cardData , imageUrl: images[index % images.length] }}
   if (!cardData || !images || cardData.length === 0 || images.length === 0) {
@@ -174,63 +187,64 @@ const AboutUsContent = () => {
       .replace(/-+$/, '') // Removes trailing hyphens
       .toLowerCase();
   };
-
+  
   const handleBookNowClick = (card) => {
-    console.log(card,"dlvmsdvv");
-    
     const formattedCategory = formatCategoryName(card.category);
-    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData:card } });
+    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: card } });
+    console.log("Navigating with card data:", card);
+    handleClick();
   };
   return (
-    <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
-      <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-4 lg:col-span-4">
-        <div>
-          <h2 className="mb-2 text-lg font-semibold text-white">
-            COVID-19 Testing Locations
-          </h2>
-          <p className="mb-4 max-w-xs text-xs text-neutral-400">
-            Placeholder is the world's leading placeholder company.
-          </p>
-        </div>
-        <Link
-          to="/covid-test-locations"
-          className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
-        >
-          Learn more <FiArrowRight />
-        </Link>
+    <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[950px] xl:grid-cols-12">
+    <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-4 lg:col-span-4 xl:col-span-4">
+      <div>
+        <h2 className="mb-2 text-lg font-semibold text-white">
+          COVID-19 Testing Locations
+        </h2>
+        <p className="mb-4 max-w-xs text-xs text-neutral-400">
+          Placeholder is the world's leading placeholder company.
+        </p>
       </div>
-      <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 lg:grid-cols-2">
-        {cardData.slice(0, 4).map((card, index) => (
-          <div
-            key={card.id}
-            className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
-          >
-            <img
-              src={images[index % images.length]}
-              alt={card.title}
-              className="h-16 w-full object-cover" // Reduced image height
-            />
-            <div className="p-2 flex-grow flex flex-col justify-between">
-              <div>
-                <h2 className="font-bold text-sm my-1">{card.title}</h2>
-                <p className="text-xs text-gray-800 mt-1">
-                  <strong>Hours:</strong> {card.timing}
-                </p>
-                <p className="text-xs text-gray-800">
-                  <strong>Location:</strong> {card.location}
-                </p>
-              </div>
-              <button
-                onClick={() => handleBookNowClick(card)}
-                className="mt-3 px-3 py-1 text-center text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-semibold w-full"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Link
+        to="/covid-test-locations"
+        className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
+      >
+        Learn more <FiArrowRight />
+      </Link>
     </div>
+    <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 xl:col-span-8 xl:grid-cols-3">
+      {cardData.slice(0, 6).map((card, index) => (
+        <div
+          key={card.id}
+          className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
+        >
+          <img
+            src={images[index % images.length]}
+            alt={card.title}
+            className="h-24 w-full object-cover" // Adjusted image height for larger size
+          />
+          <div className="p-3 flex-grow flex flex-col justify-between">
+            <div>
+              <h2 className="font-bold text-sm my-1">{card.title}</h2>
+              <p className="text-xs text-gray-800 mt-1">
+                <strong>Hours:</strong> {card.timing}
+              </p>
+              <p className="text-xs text-gray-800">
+                <strong>Location:</strong> {card.location}
+              </p>
+            </div>
+            <button
+              onClick={() => handleBookNowClick(card)}
+              className="mt-3 px-3 py-2 text-center text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-semibold w-full"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  
   );
 };
 
@@ -283,7 +297,7 @@ const PricingContent = () => {
 };
 
 
-const CareersContent = () => {
+const CareersContent = ({ handleClick }) => {
   return (
     <div className="grid w-full grid-cols-12 overflow-hidden rounded-lg shadow-xl lg:w-[750px]">
       <div className="col-span-12 flex flex-col justify-between bg-gradient-to-b from-indigo-700 to-indigo-500 p-6 lg:col-span-4">
@@ -294,7 +308,7 @@ const CareersContent = () => {
           </p>
         </div>
         <Link
-          to="#"
+          to="#" 
           className="flex items-center gap-1 text-sm font-medium text-indigo-200 hover:text-white hover:underline"
         >
           Solutions <FiArrowRight />
@@ -310,6 +324,7 @@ const CareersContent = () => {
             >
               <Link
                 to={solution.route} // Navigate to category route
+                onClick={handleClick}
                 className="font-semibold text-lg  text-gray-800  no-underline leading-tight hover:text-blue-800 hover:underline"
               >
                 {solution.category}
@@ -317,6 +332,7 @@ const CareersContent = () => {
               {solution.tests.map((test, idx) => (
                 <Link
                   key={idx}
+                  onClick={handleClick}
                   to={test.route} // Navigate to test route
                   className="block text-sm text-blue-600 no-underline  hover:text-blue-800 hover:underline"
                 >
