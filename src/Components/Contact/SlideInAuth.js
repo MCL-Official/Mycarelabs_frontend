@@ -250,7 +250,7 @@ const SupplementalContent = () => {
           Bloop is the home of makers, making amazing things, and getting paid.
           Find your dream job with us.
         </motion.p>
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <div className="flex items-center">
             <motion.img
               variants={avatarVariants}
@@ -299,7 +299,7 @@ const SupplementalContent = () => {
               from over 100,000 reviews
             </motion.p>
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );
