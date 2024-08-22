@@ -12,24 +12,24 @@ export function Sampletest () {
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
-        {
-            avatar: "https://mycarelabs.com/wp-content/uploads/2024/01/Ellipse-9-4-min.png",
-            name: "Aman Singh",
-            title: "Vice President Global Operations",
-            desc: "",
-            linkedin: "javascript:void(0)",
-            twitter: "javascript:void(0)",
-            github: "javascript:void(0)"
-        },
-        {
-            avatar: "https://mycarelabs.com/wp-content/uploads/2023/11/Ellipse-11.png",
-            name: "Dr. Carl Johnson",
-            title: "Medical Director",
-            desc: "",
-            linkedin: "javascript:void(0)",
-            twitter: "javascript:void(0)",
-            github: "javascript:void(0)"
-        },
+        // {
+        //     avatar: "https://mycarelabs.com/wp-content/uploads/2024/01/Ellipse-9-4-min.png",
+        //     name: "Aman Singh",
+        //     title: "Vice President Global Operations",
+        //     desc: "",
+        //     linkedin: "javascript:void(0)",
+        //     twitter: "javascript:void(0)",
+        //     github: "javascript:void(0)"
+        // },
+        // {
+        //     avatar: "https://mycarelabs.com/wp-content/uploads/2023/11/Ellipse-11.png",
+        //     name: "Dr. Carl Johnson",
+        //     title: "Medical Director",
+        //     desc: "",
+        //     linkedin: "javascript:void(0)",
+        //     twitter: "javascript:void(0)",
+        //     github: "javascript:void(0)"
+        // },
         {
             avatar: "https://i.ibb.co/QFFt4z4/3.png",
             name: "Emily Garcia",
@@ -79,14 +79,14 @@ export function Sampletest () {
                     </p> */}
                 </div>
                 <div className="mt-12">
-                    <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+                    <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
                         {
                             team.map((item, idx) => (
                                 <li key={idx}>
                                     <div className="w-full h-60 sm:h-52 md:h-56">
                                         <img
                                             src={item.avatar}
-                                            className="w-full h-full object-contain object-center shadow-md rounded-xl"
+                                            className="w-full h-full  object-cover object-center shadow-md rounded-xl"
                                             alt=""
                                         />
                                     </div>

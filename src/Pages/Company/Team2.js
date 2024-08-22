@@ -5,6 +5,8 @@ import { CountUpStats } from '../../Components/Team/CountUpStats'
 import DragShuffleHero from '../../Components/Team/DragShuffleHero'
 import CollapseCardFeatures from '../../Components/Team/CollapseCardFeatures'
 import { Helmet } from "react-helmet";
+import { Index } from '../Careers/Index'
+import ScrollingTestimonials from '../../Components/ScrollingTestimonials'
 
 
 // import Teamsample from '../../Components/Team/Teamsample'
@@ -22,9 +24,11 @@ Learn about My Care Labs, your trusted partner in diagnostic testing. Discover o
       {/* <Teamsample/> */}
       <br></br>
       <br></br>
-      {/* <Sampletest/> */}
+      <Sampletest/>
       <CollapseCardFeatures/>
       <CountUpStats/>
+      {/* <Index/> */}
+      <ScrollingTestimonials/>
       {/* <DragShuffleHero/> */}
       <ContactForm/>
       {/* <br></br>
