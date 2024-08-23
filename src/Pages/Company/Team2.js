@@ -7,6 +7,7 @@ import CollapseCardFeatures from '../../Components/Team/CollapseCardFeatures'
 import { Helmet } from "react-helmet";
 import { Index } from '../Careers/Index'
 import ScrollingTestimonials from '../../Components/ScrollingTestimonials'
+import { Testimonials } from '../../Components/SOLUTION/Infectious-desiase/Group/Testimonials'
 
 
 // import Teamsample from '../../Components/Team/Teamsample'
@@ -28,7 +29,8 @@ Learn about My Care Labs, your trusted partner in diagnostic testing. Discover o
       <CollapseCardFeatures/>
       <CountUpStats/>
       {/* <Index/> */}
-      <ScrollingTestimonials/>
+      {/* <ScrollingTestimonials/> */}
+      <Testimonials/>
       {/* <DragShuffleHero/> */}
       <ContactForm/>
       {/* <br></br>

@@ -3,30 +3,30 @@ export function Testimonials ()  {
     const testimonials = [
         {
             avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-            name: "Martin escobar",
-            title: "Founder of meta",
-            quote: "The Healthcare Success team has proven to be extremely effective in increasing Urgent Care patient volume. Their expertise in search engine optimization, social media, and online advertising continue to generate a high volume of new patient referrals to our centers. I would highly recommend them."
+            name: "Jen S.",
+            // title: "Founder of meta",
+            quote: "I just got tested here last week and My Care Labs took care of me. It was easy and quick. I called ahead and they told me I could just walk-in that day. The staff got me situated and took my sample and I got results the same day later in the afternoon. so quick!"
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/46.jpg",
             name: "Simon andrew",
-            title: "Software engineer",
-            quote: "We were highly impressed with the thoroughness of the  The Healthcare Success team was extremely knowledgeable in their recommend the Healthcare Success team to any organization seeking ways to improve their patient volume and financial growth opportunities."
+            // title: "Software engineer",
+            quote: "I just got tested here last week and My Care Labs took care of me. It was easy and quick. I called ahead and they told me I could just walk-in that day. The staff got me situated and took my sample and I got results the same day later in the afternoon. so quick!"
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-            name: "Micheal worin",
-            title: "Product designer",
-            quote: "The Healthcare Success team has proven to be extremely effective in increasing Urgent Care patient volume. Their expertise in search engine optimization, social media, and online advertising continue to generate a high volume of new patient referrals to our centers. I would highly recommend them."
+            name: "Paul A,",
+            // title: "Product designer",
+            quote: "My family and I needed a PCR test for COVID clearance for travel. It’s actually difficult to find a anyone that could perform it without hefty charges.Olivia went out of her way to come to our house to perform the PCR test for my wife. "
         },
     ]
 
     return (
-        <section className="relative py-14">
-            <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
+        <section className="relative py-14 bg-blue-500">
+            <div className="relative z-10 max-w-screen-xl mx-auto px-4 bg- md:px-8">
                 <div className="max-w-xl sm:text-center md:mx-auto">
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        Hear from our customers
+                    Patients Love My Care Labs
                     </h3>
                     <p className="mt-3 text-gray-600">
                     </p>
