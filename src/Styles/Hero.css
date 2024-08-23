@@ -178,7 +178,7 @@
     }
 }
 
-.scroll-up {
+/* .scroll-up {
     width: 45px;
     height: 45px;
     display: none;
@@ -197,7 +197,7 @@
 }  
 .show-scroll {
     display: flex;
-}
+} */
 
 @media screen and (max-width: 900px) {
     .text-section {
