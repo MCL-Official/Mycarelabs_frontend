@@ -68,7 +68,7 @@ const FlyoutNav = () => {
 
 const Logo = ({ color = "white" }) => {
   return (
-    <Link to="/" className="flex items-start md:mr-5 space-x-3 rtl:space-x-reverse">
+    <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
         src={logo1}
         className="max-w-[250px] max-h-[60px]" // Adjusted the size

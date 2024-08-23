@@ -147,7 +147,7 @@ function FeatureComponent() {
   const [previousFeature, setPreviousFeature] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const scrollToRef = useRef(null); // Create a ref for the section to scroll to
 
   const handleClick = (feature) => {
@@ -161,7 +161,7 @@ function FeatureComponent() {
 
   const handleButtonClick = () => {
     const route = features[selectedFeature].route;
-    navigate(route); 
+    navigate(route);
   };
 
   const imageVariants = {
@@ -200,8 +200,8 @@ function FeatureComponent() {
 
   const direction =
     selectedFeature &&
-    previousFeature &&
-    Object.keys(features).indexOf(selectedFeature) >
+      previousFeature &&
+      Object.keys(features).indexOf(selectedFeature) >
       Object.keys(features).indexOf(previousFeature)
       ? 1
       : -1;
@@ -220,27 +220,27 @@ function FeatureComponent() {
         />
         <meta name="author" content="My Care Labs" />
       </Helmet>
-      <div className="flex justify-center items-center pt-2   xl:pt-10 2xl:pt-20 min-h-screen bg-gradient-to-r from-blue-200 via-white to-blue-200">       <div className="w-full lg:w-4/5  overflow-hidden ">
-        <h3 className="flex justify-center text-2xl font-bold bg-transparent">          <div className="relative inline-block bg-transparent text-center mb-4">
-          
-              <span  ref={scrollToRef} className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mr-2">
+      <div className="flex justify-center items-center pt-2 xl:pt-10 2xl:pt-20 min-h-screen bg-gradient-to-r from-blue-200 via-white to-blue-200">
+        <div className="w-full xl:w-4/5 2xl:max-w-[1440px] mx-auto overflow-hidden">
+          <h3 className="flex justify-center text-2xl font-bold bg-transparent">
+            <div className="relative inline-block bg-transparent text-center mb-4">
+              <span ref={scrollToRef} className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl 4xl:text-8xl  font-bold mr-2">
                 Solutions
               </span>
-              <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+              <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl font-bold">
                 We Provide
               </span>
             </div>
           </h3>
 
-          <div className="flex justify-center flex-wrap gap-3 mb-6  lg:mb-64 xl:mb-96 2xl:mb-32">
+          <div className="flex justify-center flex-wrap gap-3 lg:gap-8 mb-6 lg:mb-64 xl:mb-24 2xl:mb-32">
             {Object.keys(features).map((feature) => (
               <div className="flex items-center justify-center" key={feature}>
                 <button
-                  className={` w-full rounded-2xl text-xs md:text-lg border-2 min-w-[120px] md:min-w-[200px] border-black px-2 py-2 md:px-2 md:py-4 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${
-                    selectedFeature === feature
+                  className={`w-full rounded-2xl text-xs md:text-lg xl:text-xl border-2 min-w-[120px] md:min-w-[200px] border-black px-2 py-2 md:px-4 md:py-48 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${selectedFeature === feature
                       ? "bg-blue-500 text-white"
                       : "bg-white"
-                  }`}
+                    }`}
                   onClick={() => handleClick(feature)}
                 >
                   {feature}
@@ -255,15 +255,14 @@ function FeatureComponent() {
             </div>
           </div>
           <div
-             // Attach the ref to this section
-            className="rounded-2xl border-2 p-6  lg-pb- bg-white flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] transition-all shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px] ${selectedFeature === feature ? 'border-blue-600 text-blue-600' : 'border-gray-300'}"
+            className="rounded-2xl border-2 p-6 lg:pb-12 bg-white flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] xl:h-[45rem] 2xl:h-[50rem] transition-all shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px]"
           >
             <AnimatePresence custom={direction} mode="wait">
               <motion.img
                 key={features[selectedFeature].image}
                 src={features[selectedFeature].image}
                 alt={features[selectedFeature].title}
-                className="w-full lg:w-1/2 h-64 lg:h-96 object-contain mb-4 lg:mb-0 rounded-2xl"
+                className="w-full lg:w-1/2 h-64 lg:h-full object-contain mb-4 lg:mb-0 rounded-2xl"
                 initial="initial"
                 animate="animate"
                 exit="exit"
@@ -282,10 +281,10 @@ function FeatureComponent() {
                   variants={textVariants}
                   className="h-full"
                 >
-                  <h2 className="text-4xl font-bold text-orange-600 ">
+                  <h2 className="text-4xl font-bold text-orange-600">
                     {features[selectedFeature].title}
                   </h2>
-                  <p className=" text-2xl  h-full flex items-center">
+                  <p className="text-2xl h-full flex items-center">
                     {features[selectedFeature].description}
                   </p>
                 </motion.div>

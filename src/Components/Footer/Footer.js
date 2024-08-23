@@ -100,11 +100,11 @@ function Footer() {
             <p className="ft-title">
             <img src={logo1} className="h-20" alt="Flowbite Logo" />
             </p>
-            <p className="ft-description">
+            {/* <p className="ft-description">
               Talk to online doctors and get medical advice, online
               prescriptions, refills and medical notes within minutes. On-demand
               healthcare services at your fingertips.
-            </p>
+            </p> */}
           </div>
 
           <SubscribeNewsletter />
