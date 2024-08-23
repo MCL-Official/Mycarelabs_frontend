@@ -35,13 +35,13 @@ const CollapseCardFeatures = () => {
           </h2>
           <div className="flex gap-2">
             <button
-              className="h-fit bg-black p-4 text-2xl text-white transition-colors hover:bg-neutral-700"
+              className="h-fit bg-blue-500 p-4 text-2xl text-white transition-colors hover:bg-blue-700"
               onClick={shiftLeft}
             >
               <FiChevronLeft />
             </button>
             <button
-              className="h-fit bg-black p-4 text-2xl text-white transition-colors hover:bg-neutral-700"
+              className="h-fit bg-blue-500 p-4 text-2xl text-white transition-colors hover:bg-blue-700"
               onClick={shiftRight}
             >
               <FiChevronRight />
@@ -70,11 +70,11 @@ const Feature = ({ position, index, title, description, iconSrc }) => {
         duration: 0.35,
       }}
       className={`relative flex min-h-[250px] w-10/12 max-w-lg shrink-0 flex-col justify-between overflow-hidden p-8 shadow-lg md:w-3/5 ${
-        index % 2 ? "bg-black text-white" : " bg-white"
+        index % 2 ? "bg-blue-500 text-white" : " bg-white"
       }`}
     >
       <img src={iconSrc} alt={title} className="absolute right-2 top-2 w-16 h-16 opacity-100" />
-      <h3 className="mb-8 text-3xl font-bold">{title}</h3>
+      <h3 className="mb-8 text-3xl font-bold text-black">{title}</h3>
       <p>{description}</p>
     </motion.div>
   );

@@ -11,7 +11,7 @@ export function Testimonials ()  {
             avatar: "https://randomuser.me/api/portraits/men/46.jpg",
             name: "Simon andrew",
             // title: "Software engineer",
-            quote: "I just got tested here last week and My Care Labs took care of me. It was easy and quick. I called ahead and they told me I could just walk-in that day. The staff got me situated and took my sample and I got results the same day later in the afternoon. so quick!"
+            quote: "Amazing place!!! Mateo and Nathaly were so supportive when my mother and I went there today to get our PCR tests before travel. It is so nerve-wrecking to travel nowadays and they had the results THE SAME DAY!!! That is so amazing ."
         },
         {
             avatar: "https://randomuser.me/api/portraits/men/86.jpg",
