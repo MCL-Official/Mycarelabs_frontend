@@ -134,12 +134,12 @@ function Hero() {
         </div>
       </div>
 
-      <div
+      {/* <div
         onClick={scrollToTop}
         className={`scroll-up ${goUp ? "show-scroll" : ""}`}
       >
         <FontAwesomeIcon icon={faAngleUp} />
-      </div>
+      </div> */}
     </div>
   );
 }
