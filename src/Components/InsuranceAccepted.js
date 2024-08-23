@@ -2,7 +2,7 @@ import React from 'react';
 import svg1 from "../Assets/image.jpg";
 import svg2 from "../Assets/insurance1.jpeg";
 import svg3 from "../Assets/insurance2.png";
-import svg4 from "../Assets/insurance3.png";
+// import svg4 from "../Assets/insurance3.png";
 import svg5 from "../Assets/insurance4.png";
 import svg6 from "../Assets/insurance5.png";
 import svg7 from "../Assets/insurance6.png";
@@ -23,9 +23,9 @@ const InsuranceAccepted = () => {
         <h2 className="text-blue-600 text-5xl font-bold mr-2 py-12">Our Partners</h2>
         <div className="w-full md:w-10/12">
           <div className="flex items-center h-20"> {/* Increased height */}
-            <span className=" text-blue-600 relative text-2xl font-bol top-4 left-0 md:left-5 w-32 mr-10"> {/* Adjusted position */}
-              Trusted by
-            </span>
+            {/* <span className=" text-blue-600 relative text-2xl font-bol top-4 left-0 md:left-5 w-32 mr-10"> Adjusted position */}
+              {/* Trusted by */}
+            {/* </span> */}
 
             <Marquee speed={55} gradient={false} pauseOnHover={true}>
               <div className="flex items-center space-x-24"> {/* Increased horizontal spacing */}
@@ -35,9 +35,9 @@ const InsuranceAccepted = () => {
                 <div>
                   <img src={svg3} className="h-16 object-contain" alt="Insurance" />
                 </div>
-                <div>
+                {/* <div>
                   <img src={svg4} className="h-16 object-contain" alt="Insurance" />
-                </div>
+                </div> */}
                 <div>
                   <img src={svg5} className="h-16 object-contain" alt="Insurance" />
                 </div>
