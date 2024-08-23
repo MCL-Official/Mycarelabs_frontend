@@ -70,14 +70,16 @@ export function Sampletest () {
         <meta name="author" content="My Care Labs" />
       </Helmet>
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="max-w-xl">
-                    <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        Meet Our Team
-                    </h3>
-                    {/* <p className="text-gray-600 mt-3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy.
-                    </p> */}
-                </div>
+            <div className="max-w-xl mx-auto text-center">
+    <h3 className="text-gray-800 text-3xl py-12 font-semibold sm:text-4xl">
+        Meet Our Team
+    </h3>
+    {/* Uncomment the paragraph below if you decide to use the descriptive text again in the future */}
+    {/* <p className="text-gray-600 mt-3">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+    </p> */}
+</div>
+
                 <div className="mt-12">
                     <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
                         {
