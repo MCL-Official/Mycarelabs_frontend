@@ -59,7 +59,7 @@ export function Index  ()  {
                 <section>
                     <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
                         <div className='flex-none space-y-5 max-w-xl'>
-                            <a href="javascript:void(0)" className='inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white'>
+                            {/* <a href="javascript:void(0)" className='inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white'>
                                 <span className='inline-block rounded-full px-3 py-1 bg-indigo-600 text-white'>
                                     News
                                 </span>
@@ -69,7 +69,7 @@ export function Index  ()  {
                                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                                     </svg>
                                 </p>
-                            </a>
+                            </a> */}
                             <h1 className="text-4xl text-gray-800 font-extrabold sm:text-5xl">
                             Covid Testing For Groups
                             </h1>

@@ -23,21 +23,21 @@ export function BackgroundBlogCard() {
       author: "Tania Andrew",
       imageUrl: "https://img.freepik.com/free-photo/empire-state-building-daylight_23-2150897493.jpg?t=st=1719954413~exp=1719958013~hmac=426c13ce93779b5ca5b1a8752df1adf6adb8ed2f2af97d96269c72c8a60af5b3&w=900",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
-      description: "My Care Labs operates free* COVID-19 PCR test sites around the SF Bay Area for travelers flying out of SFO. Make sure to check if your destinations require a negative COVID PCR test with this handy map."
+      description: "My Care Labs provides infectious disease testing solutions to individuals around the SF Bay Area. Specifically for people flying out of SFO. Make sure to check if your destinations require a negative test result and book your next appointment with us."
     },
     {
       title: "Oakland International Airport (OAK) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
-      description: "Traveling internationally from the Oakland metro? During the Delta and Omicron COVID waves, it was challenging at times to obtain Travel clearance COVID PCR tests in Oakland."
+      description: "Are you going to be traveling soon and want to make sure you're healthy before the big trip? Make sure to order our at-home test kit before your next flight."
     },
     {
       title: "San Jose International Airport (SJC) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
-      description: "My Care Labs operates free* COVID-19 PCR test sites around the SF Bay Area for travelers flying out of SFO. Make sure to check if your destinations require a negative COVID PCR test with this handy map."
+      description: "Many of our San Jose neighbors trust us to give us quick and accurate results before their big trips."
     },
     // Add more card objects here
   ];

@@ -27,8 +27,8 @@ const Faq = () => {
       answer: "Our Patientxchange portal allows you to download a PDF or Readipass (travel) QR code of your test results. You can log into your patient portal on our website."
     },
     {
-      question: "Will I receive an EOB or bill?",
-      answer: "The time it takes to process a claim can vary, but we strive to handle all claims as quickly and efficiently as possible."
+      question: "What is an Explanation of Benefits?",
+      answer: "An EOB (Explanation of Benefits) is a formal notice from your insurance provider stating what they have covered. This is not a bill/charge, but a detailed overview of the services My Care Labs has rendered and what your provider has covered."
     }
   ];
 
