@@ -106,9 +106,9 @@ const Post = ({ imgUrl, author, title, description, location}) => {
         alt={`An image for a fake blog post titled ${title}`}
       />
    
-      <span className="rounded-md border-[1px] w-auto border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
+      {/* <span className="rounded-md border-[1px] w-auto border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
         {author} 
-      </span>
+      </span> */}
      
       <p className="mt-1.5 text-lg font-medium">{title}</p>
       <p className="text-sm text-neutral-500">{description}</p>
@@ -133,7 +133,7 @@ const posts = [
   {
     id: 1,
     imgUrl: "https://i.ibb.co/XXmTtnP/5.png",
-    author: "MY Care Labs",
+    // author: "MY Care Labs",
     title: "Wellness Testing Solutions",
     description:
       "Transform your workplace with on-site wellness testing from My Care Labs.",
@@ -143,7 +143,7 @@ const posts = [
   {
     id: 2,
     imgUrl: "https://i.ibb.co/pvBkRYq/2.png",
-    author: "MY Care Labs",
+    // author: "MY Care Labs",
     title: "Toxicology Testing",
     description:
       "In light of HR managers’ need to recruit and retain top talent, we offers drug testing for businesses and other organizations.",
@@ -152,7 +152,7 @@ const posts = [
   {
     id: 3,
     imgUrl: "https://i.ibb.co/gjbJTny/3.png",
-    author: "MY Care Labs",
+    // author: "MY Care Labs",
     title: "Infectious Disease Testing",
     description:
       "My Care Labs was founded during the COVID-19 Pandemic. We provide fast, simple, accurate infectious disease testing.",
@@ -161,21 +161,21 @@ const posts = [
   {
     id: 4,
     imgUrl: "https://i.ibb.co/b79svsR/4.png",
-    author: "MY Care Labs",
+    // author: "MY Care Labs",
     title: "Oncology Testing",
     description:
       "My Care Labs is actively working on offering an array of oncology panels that can help detect different forms of cancers.",
     location:"//testing-solutions/oncology-testing-solutions/"
     },
-  {
-    id: 5,
-    imgUrl: "https://i.ibb.co/XXmTtnP/5.png",
-    author: "MY Care Labs",
-    title: "Travel PCR Testing",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
-      location:"/travel-testing/"
-  },
+  // {
+  //   id: 5,
+  //   imgUrl: "https://i.ibb.co/XXmTtnP/5.png",
+  //   author: "MY Care Labs",
+  //   title: "Travel PCR Testing",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
+  //     location:"/travel-testing/"
+  // },
   // {
   //   id: 6,
   //   imgUrl: "/imgs/blog/6.png",
