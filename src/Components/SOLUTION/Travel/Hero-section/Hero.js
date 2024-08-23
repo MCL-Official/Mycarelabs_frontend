@@ -38,7 +38,7 @@ export function Hero() {
                         My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B. Get ready to relax and explore on your vacation with same-day or 24-hour turaround at our Silicon Valley lab and at public pop-ups throughout California.                        </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <Link to="/covid-test-locations" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
-                                Our testing Locations
+                                Our Testing Locations
                             </Link>
                             <Link to="/about" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
                                 About Us
