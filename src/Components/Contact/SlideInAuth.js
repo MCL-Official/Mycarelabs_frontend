@@ -218,7 +218,7 @@ const SupplementalContent = () => {
     <div className="group sticky top-4 m-4 h-80 overflow-hidden rounded-3xl rounded-tl-[4rem] bg-slate-950 md:h-[calc(100vh_-_2rem)]">
       <img
         alt="An example image"
-        src="https://appinventiv.com/wp-content/themes/twentynineteen-child/images/contact-bg-banner-desktop.webp"
+        src="https://i.ibb.co/zmVVPMm/2.png"
         className="h-full w-full bg-white object-cover transition-all duration-500 group-hover:scale-105 group-hover:opacity-50"
       />
 
@@ -236,7 +236,7 @@ const SupplementalContent = () => {
         className="absolute inset-0 flex flex-col items-start justify-end bg-gradient-to-t from-slate-950/90 to-slate-950/0 p-8"
       >
         <motion.h2
-          className="mb-2 text-3xl font-semibold leading-[1.25] text-white lg:text-4xl"
+          className="mb-2 text-3xl font-semibold leading-[1.25] text-white lg:text-5xl"
           variants={primaryVariants}
         >
           Connecting 
