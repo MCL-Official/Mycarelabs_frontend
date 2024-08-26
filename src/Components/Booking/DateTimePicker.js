@@ -33,6 +33,7 @@ const LeftContainer = ({ cardData }) => {
     </div>
   );
 };
+// const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
 
 const DateTimePicker = (cardData) => {
   console.log(cardData?.cardData?.category,"dskvjbjbdhsvbhjvb");
@@ -82,38 +83,33 @@ const DateTimePicker = (cardData) => {
     Service: ''
   });
   const [invalidFields, setInvalidFields] = useState({});
-
+  
   const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
 
-  const daysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
+  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  // const emptyCells = firstDayOfMonth;/
+  const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+  const firstDayOfMonth = new Date(year, monthIndex, 1).getDay();
+
+  // Calculate the number of empty cells at the start of the calendar grid
+  const emptyCells = firstDayOfMonth;
 
   const handlePreviousMonth = () => {
+    setMonthIndex(prev => prev === 0 ? 11 : prev - 1);
     if (monthIndex === 0) {
-      setMonthIndex(11);
-      setYear(year - 1);
-    } else {
-      setMonthIndex(monthIndex - 1);
+      setYear(prev => prev - 1);
     }
   };
 
   const handleNextMonth = () => {
+    setMonthIndex(prev => prev === 11 ? 0 : prev + 1);
     if (monthIndex === 11) {
-      setMonthIndex(0);
-      setYear(year + 1);
-    } else {
-      setMonthIndex(monthIndex + 1);
+      setYear(prev => prev + 1);
     }
   };
-
-  const timeSlots = [
-    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
-    "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
-    "5:00 PM", "5:30 PM", "6:00 PM"
-  ];
 
   const handleDateClick = (day) => {
     const date = `${months[monthIndex]} ${day + 1}, ${year}`;
@@ -122,10 +118,37 @@ const DateTimePicker = (cardData) => {
   };
 
   const handleTimeClick = (time) => {
-    setShrinkButton(time);
     setSelectedTime(time);
-    setTimeout(() => setShrinkButton(null), 300); // Reset after the animation duration
   };
+
+
+  // const handleNextMonth = () => {
+  //   if (monthIndex === 11) {
+  //     setMonthIndex(0);
+  //     setYear(year + 1);
+  //   } else {
+  //     setMonthIndex(monthIndex + 1);
+  //   }
+  // };
+
+  const timeSlots = [
+    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
+    "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
+    "5:00 PM", "5:30 PM", "6:00 PM"
+  ];
+
+  // const handleDateClick = (day) => {
+  //   const date = `${months[monthIndex]} ${day + 1}, ${year}`;
+  //   setSelectedDate(date);
+  //   setShowTimes(true);
+  // };
+
+  // const handleTimeClick = (time) => {
+  //   setShrinkButton(time);
+  //   setSelectedTime(time);
+  //   setTimeout(() => setShrinkButton(null), 300); // Reset after the animation duration
+  // };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -214,18 +237,18 @@ const DateTimePicker = (cardData) => {
               <div className="flex flex-col md:flex-row">
                 <div className={`w-full ${showTimes ? 'md:w-3/5' : ''} transition-all duration-500 max-h-96 overflow-y-auto`}>
                   <div className="grid grid-cols-7 gap-2 mb-4">
-                    {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
-                      <div key={day} className="text-center text-xs sm:text-lg text-gray-500">{day}</div>
-                    ))}
-                    {Array.from({ length: daysInMonth(monthIndex, year) }, (_, day) => (
-                      <button
-                        key={day}
-                        className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${day + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                        onClick={() => handleDateClick(day)}
-                      >
-                        {day + 1}
-                      </button>
-                    ))}
+                  {daysOfWeek.map(day => (
+                  <div key={day} className="text-center text-xs sm:text-lg text-gray-500">{day}</div>
+                ))}
+                {Array.from({ length: emptyCells }, (_, index) => (
+                  <div key={index} className="text-center text-xs sm:text-lg p-1"></div>
+                ))}
+                {Array.from({ length: daysInMonth }, (_, index) => (
+                  <button key={index} className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${index + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                    onClick={() => handleDateClick(index)}>
+                    {index + 1}
+                  </button>
+                ))}
                   </div>
                 </div>
                 <div className={`transition-all duration-500 ${showTimes ? 'w-full md:w-2/5 pl-0 md:pl-4' : 'w-0'}`}>
