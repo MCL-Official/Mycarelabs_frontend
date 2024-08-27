@@ -1,13 +1,21 @@
 // src/components/JobDetail.js
 
 import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 const JobDetail = () => {
 
+const navigate = useNavigate()
     const location = useLocation();
     const { job } = location.state || {};
     console.log(job,"CDJnsdjvnnsjdnsdvs");
+    const handleApply = () => {
+      if (job?._id) {
+          navigate('/apply', { state: { jobId: job._id } });
+      } else {
+          console.log("Job ID is undefined");
+      }
+  };
     
     // const job = jobs?.[0];
   return (
@@ -21,7 +29,7 @@ const JobDetail = () => {
           <h1 className="text-2xl font-bold">{job?.title}</h1>
           <h2 className="text-lg text-gray-500">{job?.company}</h2>
         </div>
-        <button className="bg-blue-700 text-white px-4 py-2 rounded">Apply Now</button>
+        <button  onClick={handleApply} className="bg-blue-700 text-white px-4 py-2 rounded">Apply Now</button>
       </div>
 
       {/* Job Details */}

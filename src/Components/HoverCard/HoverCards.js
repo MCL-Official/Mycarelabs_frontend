@@ -162,7 +162,7 @@ const HoverCards = () => {
        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
        <meta name="author" content="My Care Labs" />
      </Helmet>
-    <div className="mt-10 overflow-hidden bg-gradient-to-b from-blue-300 via-transparent to-white">
+    <div className=" overflow-hidden bg-gradient-to-b from-blue-200 via-transparent to-white">
       <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
           <div className="relative inline-block pt-6 md:pt-12 px-4 sm:px-6 md:px-10 bg-transparent pb-3">

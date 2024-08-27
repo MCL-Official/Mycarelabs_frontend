@@ -16,7 +16,7 @@ const JobListings = () => {
 const applyForJob=(job)=>{
     console.log(job,"sdkjdvsjvdns");
     
-    navigate(`${job?.id}`, { state: { job }  })
+    navigate(`${job?._id}`, { state: { job }  })
 }
 
   return (

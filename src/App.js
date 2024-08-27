@@ -53,10 +53,13 @@ import Example from "./Components/Navbar/FlyoutNavbar";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import NotFound from "./Pages/NotFound";
 import PrivacyNotice from "./Pages/PrivacyNotice ";
-// import Careers from "./Pages/Careers/Careers";
-// import JobApplicationForm from "./Components/Careers/JobApplicationForm";
-// import JobDetail from "./Components/Careers/JobDetail";
-// import JobListings from "./Components/Careers/JobListings";
+import GoogleStories from "./Pages/GoogleStories ";
+import Careers from "./Pages/Careers/Careers";
+import JobApplicationForm from "./Components/Careers/JobApplicationForm";
+import JobDetail from "./Components/Careers/JobDetail";
+import JobListings from "./Components/Careers/JobListings";
+import ApplyPage from "./Components/Careers/ApplyPage";
+import SuccessPage from "./Components/Careers/SuccessPage";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -79,10 +82,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
+          <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
+          <Route path="/success" element={<SuccessPage />} />
           {/* <Route path="/careers" element={<Careers />} /> */}
-          {/* <Route path="/careers" element={<JobListings />} /> */}
-          {/* <Route path="/careers/:id" element={<JobDetail />} /> */}
+          <Route path="/careers" element={<JobListings />} />
+          <Route path="/careers/:id" element={<JobDetail />} />
+          <Route path="/Apply" element={<ApplyPage />} />
           <Route path="/faq" element={<Faq/>} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
