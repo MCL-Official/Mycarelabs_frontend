@@ -4,6 +4,7 @@ import { FiMenu, FiArrowRight, FiX, FiChevronDown } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
 import { useMotionValueEvent, AnimatePresence, useScroll, motion } from "framer-motion";
 import useMeasure from "react-use-measure";
+import { IoCall } from "react-icons/io5";
 import logo1 from "../../Assets/Logo1.png";
 import { cardData, images, testingSolutions } from "../../utility/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,9 +57,9 @@ const FlyoutNav = () => {
         <div className="hidden gap-6 lg:flex items-center justify-between">
           <Links isHome={isHome} scrolled={scrolled} />
           <CTAs isHome={isHome} scrolled={scrolled} />
-          <a href="tel:+1-800-790-4550" className="mr-3 self-center text-black">
+          {/* <a href="tel:+1-800-790-4550" className="mr-3 self-center text-black">
             <FontAwesomeIcon icon={faPhone} size="xl" />
-          </a>
+          </a> */}
         </div>
         <MobileMenu isHome={isHome} scrolled={scrolled} />
       </div>
@@ -165,8 +166,22 @@ const CTAs = ({ isHome, scrolled }) => {
         <FaUserCircle />
         <span>Check Your Test Result</span>
       </button>
+      {/* <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white"> */}
+      <a
+      href="tel:+1-800-790-4550"
+      className={`flex items-center gap-2 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${
+        isHome
+          ? scrolled
+            ? "bg-orange-600 text-white"
+            : "text-white border-white hover:bg-orange-600 hover:text-white"
+          : "bg-orange-600 text-white"
+      }`}
+    >
+      <FontAwesomeIcon icon={faPhone} size="lg" />
+      <span>+1-800-790-4550</span>
+    </a>
       {/* <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white">
-      Check Your Test Result
+      <FaUserCircle /> +1-800-790-4550
       </button> */}
     </div>
   );
