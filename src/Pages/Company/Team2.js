@@ -9,6 +9,8 @@ import { Index } from '../Careers/Index'
 import ScrollingTestimonials from '../../Components/ScrollingTestimonials'
 import { Testimonials } from '../../Components/SOLUTION/Infectious-desiase/Group/Testimonials'
 
+import About3 from './About3'
+
 
 // import Teamsample from '../../Components/Team/Teamsample'
 
@@ -23,9 +25,8 @@ Learn about My Care Labs, your trusted partner in diagnostic testing. Discover o
         <meta name="author" content="My Care Labs" />
       </Helmet>
       {/* <Teamsample/> */}
-      <br></br>
-      <br></br>
       <Sampletest/>
+      {/* <About3/> */}
       <CollapseCardFeatures/>
       <CountUpStats/>
       {/* <Index/> */}
