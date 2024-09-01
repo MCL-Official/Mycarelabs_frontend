@@ -20,7 +20,9 @@ const Example = () => {
 
 
 const FlyoutNav = () => {
+
   const location = useLocation();
+  const data  = ({bg:"#00000"})
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
@@ -49,7 +51,7 @@ const FlyoutNav = () => {
       } ${
         scrolled || !isHome
           ? "bg-white py-2 shadow-xl" // Reduced padding
-          : "bg-transparent py-4 shadow-none" // Reduced padding
+          : "bg-white py-2 shadow-none" // Reduced padding
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -114,7 +116,7 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
         to={to}
         onClick={handleClick}
         className={`relative font-semibold no-underline text-xl ${
-          isHome ? (scrolled ? "text-black" : "text-white") : "text-black"
+          isHome ? (scrolled ? "text-black" : "text-black") : "text-black"
         }`}
       >
         {children}
@@ -157,9 +159,9 @@ const CTAs = ({ isHome, scrolled }) => {
         className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 font-semibold transition-colors ${
           isHome
             ? scrolled
-              ? "bg-green-600 text-white"
-              : "text-white border-white hover:bg-green-600 hover:text-white"
-            : "bg-green-600 text-white"
+              ? "bg-yellow-600 text-white"
+              : "text-white border-white bg-yellow-600 hover:text-white"
+            : "bg-yellow-600 text-white"
         }`}
         onClick={()=>data()}
       >
@@ -173,7 +175,7 @@ const CTAs = ({ isHome, scrolled }) => {
         isHome
           ? scrolled
             ? "bg-orange-600 text-white"
-            : "text-white border-white hover:bg-orange-600 hover:text-white"
+            : "text-white border-white bg-orange-600 hover:text-white"
           : "bg-orange-600 text-white"
       }`}
     >
@@ -214,10 +216,14 @@ const AboutUsContent = ({ handleClick }) => {
     <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-4 lg:col-span-4 xl:col-span-4">
       <div>
         <h2 className="mb-2 text-lg font-semibold text-white">
-          COVID-19 Testing Locations
+           Testing Locations
         </h2>
         <p className="mb-4 max-w-xs text-xs text-neutral-400">
         Choose the Location or Service That is Most Convenient for You!
+        </p>
+        <p className="mb-4 max-w-xs text-lg text-neutral-400">
+        5500 Stewart Avenue, Suite 108,
+        Fremont, CA 94538
         </p>
       </div>
       <Link
@@ -250,7 +256,7 @@ const AboutUsContent = ({ handleClick }) => {
             </div>
             <button
               onClick={() => handleBookNowClick(card)}
-              className="mt-3 px-3 py-2 text-center text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg text-xs font-semibold w-full"
+              className="mt-3 px-3 py-2 text-center text-white bg-green-600 hover:bg-green-500 rounded-lg text-xs font-semibold w-full"
             >
               Book Now
             </button>
@@ -475,9 +481,11 @@ const MobileMenu = ({ isHome, scrolled }) => {
 
 export default Example;
 
+
 const LINKS = [
   {
-    text: "COVID-19 Testing Locations",
+    text2: "COVID-19 ",
+    text: "Testing Locations",
     href: "/covid-test-locations",
     component: AboutUsContent,
   },

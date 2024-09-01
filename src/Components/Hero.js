@@ -107,13 +107,13 @@ function Hero() {
         <div className="text-section">
         <p className="text-4xl pt-20">Welcome to </p>
           <Logo />
-          <h1 className="h-14 text-headline">{displayText}</h1>
+          {/* <h1 className="h-14 text-headline">{displayText}</h1> */}
           <button
             className="text-appointment-btn"
             type="button"
             onClick={handleBookAppointmentClick}
           >
-            <FontAwesomeIcon icon={faCalendarCheck} /> Select Test Location
+            <FontAwesomeIcon icon={faCalendarCheck} /> Book Appointment
           </button>
           <div className="text-stats">
             <div className="text-stats-container">
