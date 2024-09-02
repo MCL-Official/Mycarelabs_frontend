@@ -59,7 +59,7 @@
     color: white;
     border: 1px solid transparent;
     border-radius: 28px;
-    background-color: #1A8EFD;
+    background-color: #16A34A;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .8px;
@@ -68,9 +68,9 @@
 }
 
 .text-appointment-btn:hover {
-    color: #1A8EFD;
+    color: #16A34A;
     background-color: transparent;
-    border: 1px solid #1A8EFD;
+    border: 1px solid #16A34A;
 }
 
 .text-stats {
@@ -94,7 +94,7 @@
 
 .text-stats-container p:first-child {
     margin-bottom: 8px;
-    color: #2563EB;
+    color: #00000;
     font-family: 'Rubik', sans-serif;
     font-size: 32px;
     font-weight: bold;

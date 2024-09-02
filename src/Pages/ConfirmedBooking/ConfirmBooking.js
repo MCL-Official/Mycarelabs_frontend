@@ -28,37 +28,11 @@ const RoundedSlideButton = ({ onClick }) => {
     </button>
   );
 };
-const RoundedSlideButton1 = ({ onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`
-        relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
-        border-blue-500 px-4 py-2 font-semibold
-        uppercase text-blue-500 transition-all duration-500
-        
-        before:absolute before:inset-0
-        before:-z-10 before:translate-x-[150%]
-        before:translate-y-[150%] before:scale-[2.5]
-        before:rounded-[100%] before:bg-blue-500
-        before:transition-transform before:duration-1000
-        before:content-[""]
-
-        hover:scale-105 hover:text-neutral-900
-        hover:before:translate-x-[0%]
-        hover:before:translate-y-[0%]
-        active:scale-95`}
-    >
-      <span>Call Me</span>
-    </button>
-  );
-};
 
 const ConfirmBooking = () => {
   const [countdown, setCountdown] = useState(1); // Countdown starts from 5 seconds
   const [redirectMessage, setRedirectMessage] = useState('');
   const [showButton, setShowButton] = useState(false);
-  const [showButton1, setShowButton1] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const data = location.state;
@@ -83,9 +57,8 @@ const ConfirmBooking = () => {
     if (data && data?.cardData) {
       switch (data?.cardData?.title) {
         case 'Fremont Laboratory':
-          setRedirectMessage(`For all wellness test appointments, please give a call at (800)-790-4550 to book your appointment.`);
-          setShowButton1(true);
-          // startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/online-self-registration");
+          setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
+          startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/online-self-registration");
           break;
         case 'Riverside Mobile Testing':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
@@ -133,10 +106,6 @@ const ConfirmBooking = () => {
   const handleButtonClick = () => {
     navigate('/covid-test-locations');
   };
-  const handleButtonClick1 = () => {
-    // navigate('/covid-test-locations');
-    window.location.href ="tel:+1-800-790-4550"
-  };
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
@@ -149,13 +118,6 @@ const ConfirmBooking = () => {
           className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
           See Available Tests
         </RoundedSlideButton>
-      )}
-      {showButton1 && (
-        <RoundedSlideButton1 
-          onClick={handleButtonClick1} 
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-         Call Me
-        </RoundedSlideButton1>
       )}
     </div>
   );
