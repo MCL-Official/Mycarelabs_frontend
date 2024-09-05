@@ -102,7 +102,7 @@ const ReadBlog = () => {
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_content }}></div>
             </div>
 
-            <QuoteCard quote="A spring of truth shall flow from it: like a new star it shall scatter the darkness of ignorance, and cause a light heretofore unknown to shine amongst men." author="Andrio Domeco" />
+            {/* <QuoteCard quote="A spring of truth shall flow from it: like a new star it shall scatter the darkness of ignorance, and cause a light heretofore unknown to shine amongst men." author="Andrio Domeco" /> */}
 
             <div className="prose text-left">
               <div dangerouslySetInnerHTML={{ __html: blogData.blog_short_content1 }}></div>
