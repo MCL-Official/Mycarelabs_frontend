@@ -85,7 +85,7 @@ const ReadBlog = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-2">
-            <h1 className="text-3xl font-bold mb-3 text-left">{blogData.name}</h1>
+            <h1 className="text-4xl font-extrabold mb-3 text-left">{blogData.name}</h1>
             <div className="text-gray-600 mb-5 text-left flex justify-between">
               <p>Category: <span className="text-blue-600">{blogData.category}</span></p>
               <p>Published on: <span className="text-gray-600">{new Date(blogData.createdAt).toLocaleDateString()}</span></p>
