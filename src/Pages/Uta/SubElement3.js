@@ -3,7 +3,7 @@ import testingMethodsImage from '../../Assets/uti3.png'; // Make sure to replace
 
 const SubElement3 = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row items-center overflow-hidden">
       {/* Image Container */}
       <div className="md:w-1/2">
         <img src={testingMethodsImage} alt="Testing Methods" className="w-full h-96 object-contain"/>

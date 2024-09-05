@@ -3,7 +3,7 @@ import leftImage from '../../Assets/uti2.png'; // Make sure to replace with your
 
 const SubElement2 = () => {
     return (
-      <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center rounded-lg overflow-hidden">
         {/* Image Container */}
         <div className="md:w-1/2">
           <img src={leftImage} alt="Description" className="w-full h-50 object-contain"/>
