@@ -68,8 +68,8 @@
 }
 
 .text-appointment-btn:hover {
-    color: #16A34A;
-    background-color: transparent;
+    color: white;
+    background-color: #22c55e;
     border: 1px solid #16A34A;
 }
 

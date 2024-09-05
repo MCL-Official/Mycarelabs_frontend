@@ -105,7 +105,7 @@ function Hero() {
           title="Welcome to My Care Labs"
         />
         <div className="text-section">
-        <p className="text-4xl pt-20">Welcome to </p>
+        <p className="text-4xl font-bold pt-20">Test With </p>
           <Logo />
           {/* <h1 className="h-14 text-headline">{displayText}</h1> */}
           <button
