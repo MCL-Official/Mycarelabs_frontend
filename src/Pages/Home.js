@@ -21,6 +21,7 @@ import ImageContainer from "../Components/Form/ImageContainer";
 import { Helmet } from "react-helmet";
 import { SlideInAuth } from "../Components/Contact/SlideInAuth";
 import axios from "axios";
+import HoverCards1 from "../Components/HoverCard/HoverCards1";
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
@@ -80,12 +81,13 @@ useEffect(() => {
         <meta name="author" content="My Care Labs" />
       </Helmet>
       {/* <Navbar /> */}
-      <Hero />
+      {/* <Hero /> */}
       {/* <FeatureToggles/> */}
+      <HoverCards1 />
       <FeatureComponent />
-      <HoverCards />
       <InsuranceAccepted />
       <Info />
+      <HoverCards />
       <SlideInAuth/>
       {/* <ImageContainer/> */}
       {/* <Footer /> */}

@@ -32,7 +32,6 @@ const images = [
 //   "https://imagesuploadforwebsite.s3.amazonaws.com/card4.jpg",
 // ];
 
-
 const cardData = [
   {
     // category: "Northern California: Fremont Lab",
@@ -92,7 +91,7 @@ const cardData = [
 ];
 
 
-const HoverCards = () => {
+const HoverCards1 = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerContent, setDrawerContent] = useState("");
   const carouselRef = useRef(null);
@@ -166,8 +165,8 @@ const HoverCards = () => {
        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
        <meta name="author" content="My Care Labs" />
      </Helmet>
-    <div className=" overflow-hidden bg-gradient-to-b from-blue-200 via-transparent to-white">
-      <div className="text-center mb-4">
+    <div className=" overflow-hidden ">
+      {/* <div className="text-center mb-4">
         <h3 className="flex justify-center text-2xl font-bold bg-transparent pt-8">
           <div className="relative inline-block pt-6 md:pt-12 px-4 sm:px-6 md:px-10 bg-transparent pb-3">
             <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2">
@@ -186,7 +185,10 @@ const HoverCards = () => {
             and at pop-ups throughout California.
           </p>
         </div>
-      </div>
+      </div> */}
+      <br></br>
+      <br></br>
+      <br></br>
 
       <div className="relative">
         <button
@@ -197,7 +199,7 @@ const HoverCards = () => {
         </button>
         <div
           ref={carouselRef}
-          className="flex overflow-x-auto space-x-8 p-4 mb-7 pb-5 scrollbar-hide"
+          className="flex overflow-x-auto space-x-8 p-4 mb-2 pb-2 scrollbar-hide"
         >
           {cardData.slice(0, 7).map((card, index) => (
             <div
@@ -260,4 +262,4 @@ const HoverCards = () => {
   );
 };
 
-export default HoverCards;
+export default HoverCards1;
