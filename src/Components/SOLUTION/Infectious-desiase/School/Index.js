@@ -50,7 +50,7 @@ export function Index() {
                     Easy COVID-19/RSV/Flu Testing For Schools
                     </h1>
                     <p className="max-w-xl mx-auto xl:mx-0">
-                    We provide on-site and self-service PCR Covid/RSV/Flu testing for schools throughout California. As a member of the California Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC. Enter to win $150 for your school with our 5-minute survey! Three school winners will be chosen March 1st, 2023.
+                    We provide on-site and self-service PCR Covid/RSV/Flu testing for schools throughout California. As a member of the California Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC. .
                               </p>
                     <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 xl:justify-start">
                         <Link to="/testing-solutions/infectious-disease-testing-solutions" className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg md:inline-flex">

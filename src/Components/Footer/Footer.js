@@ -16,7 +16,8 @@ function Footer() {
 
   const cardData = [
     {
-      category: "NorCal: Fremont Lab",
+      // category: "Northern California: Fremont Lab",
+      category: "Northern California: Fremont Lab",
       title: "Fremont Laboratory",
       shortDescription:
         "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
@@ -24,7 +25,8 @@ function Footer() {
         "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
     },
     {
-      category: "SoCal: Riverside Mobile Testing",
+      category: "Southern cal: Riverside County Mobile Testing",
+      // category: "Northern California: Fremont Lab",
       title: "Riverside Mobile Testing",
       shortDescription:
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
@@ -32,7 +34,7 @@ function Footer() {
         "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
     },
     {
-      category: "NorCal: Bay Area Mobile Testing",
+      category: "Northern California Mobile Testing",
       title: "SF Bay Area / Silicon Valley Mobile Testing",
       shortDescription:
         "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
@@ -40,7 +42,7 @@ function Footer() {
         " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
     },
     {
-      category: "SoCal: Riverside Pop-up",
+      category: "Riverside Gurdwara Pop-Up",
       title: "Riverside Gurdwara",
       shortDescription:
         "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
@@ -48,7 +50,7 @@ function Footer() {
         " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
     },
     {
-      category: "At Home Test Kit",
+      category: "At-home Test Kit",
       title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
       shortDescription:
         "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",

@@ -2,7 +2,7 @@
 export  const cardData = [
   {
     id: 1,
-    category: "NorCal: Fremont Lab",
+    category: "Northern California: Fremont Lab",
     title: "Fremont Laboratory",
     shortDescription:
       "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
@@ -13,7 +13,7 @@ export  const cardData = [
   },
   {
     id: 2,
-    category: "SoCal: Riverside Mobile Testing",
+    category: "Southern California: Riverside County Mobile Testing",
     title: "Riverside Mobile Testing",
     shortDescription:
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
@@ -24,7 +24,7 @@ export  const cardData = [
   },
   {
     id: 3,
-    category: "NorCal: Bay Area Mobile Testing",
+    category: "Northern California Mobile Testing",
     title: "SF Bay Area / Silicon Valley Mobile Testing",
     shortDescription:
       "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
@@ -35,7 +35,7 @@ export  const cardData = [
   },
   {
     id: 4,
-    category: "SoCal: Riverside Pop-up",
+    category: "Riverside Gurdwara Pop-Up",
     title: "Riverside Gurdwara",
     shortDescription:
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
@@ -46,7 +46,7 @@ export  const cardData = [
   },
   {
     id: 5,
-    category: "At Home Test Kit",
+    category: "At-home Test Kit",
     title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
     shortDescription:
       "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",

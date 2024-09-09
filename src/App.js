@@ -60,6 +60,7 @@ import JobDetail from "./Components/Careers/JobDetail";
 import JobListings from "./Components/Careers/JobListings";
 import ApplyPage from "./Components/Careers/ApplyPage";
 import SuccessPage from "./Components/Careers/SuccessPage";
+import Uta from "./Pages/Uta/Uta.js";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -82,6 +83,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
+          <Route path="/uat" element={<Uta />} />
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
           <Route path="/success" element={<SuccessPage />} />

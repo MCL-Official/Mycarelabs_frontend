@@ -74,7 +74,7 @@ const Logo = ({ color = "white" }) => {
     <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
         src={logo1}
-        className="max-w-[250px] max-h-[60px]" // Adjusted the size
+        className="max-w-[250px] max-h-[75px]" // Adjusted the size
         alt="Flowbite Logo"
       />
     </Link>
@@ -246,7 +246,7 @@ const AboutUsContent = ({ handleClick }) => {
           />
           <div className="p-3 flex-grow flex flex-col justify-between">
             <div>
-              <h2 className="font-bold text-sm my-1">{card.title}</h2>
+              <h2 className="font-bold text-sm my-1">{card.category}</h2>
               <p className="text-xs text-gray-800 mt-1">
                 <strong>Hours:</strong> {card.timing}
               </p>
