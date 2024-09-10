@@ -2,7 +2,7 @@ import React from "react";
 import "../../Styles/Footer.css";
 import SubscribeNewsletter from "../SubscribeNewsletter";
 import { useNavigate } from "react-router-dom";
-import logo1 from "../../Assets/Logo1.png";
+import logo1 from "../../Assets/logo3.png";
 
 function Footer() {
   const images = [
