@@ -55,7 +55,8 @@ const ConfirmBooking = () => {
     });
 
     if (data && data?.cardData) {
-      switch (data?.cardData?.title) {
+      switch (data?.cardData?.cardData?.title) {
+      // switch (data?.cardData?.title) {
         case 'Fremont Laboratory':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
           startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/online-self-registration");

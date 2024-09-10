@@ -195,7 +195,7 @@ const DateTimePicker = (cardData) => {
         id: Math.random(),
         text: 'Appointment booked successfully!'
       });
-      navigate(`/bookingcompletion/${formattedCategory}`);
+      navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
     } catch (error) {
       setIsLoading(false);
       console.error('Error booking appointment', error);
@@ -273,7 +273,7 @@ const DateTimePicker = (cardData) => {
                                   className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${shrinkButton === time ? 'transform scale-50' : ''} ${selectedTime === time ? 'bg-blue-500 text-white border-blue-500' : 'bg-white text-blue-500 border-blue-500'}`}
                                   onClick={() => handleTimeClick(time)}
                                 >
-                                  {selectedTime === time ? "Next" : time}
+                                  {selectedTime === time ? "Selected" : time}
                                 </button>
                               </div>
                             </CSSTransition>

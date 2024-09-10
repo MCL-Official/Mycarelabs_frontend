@@ -16,7 +16,8 @@ const formatCategoryName = (categoryName) => {
   const formattedCategory = formatCategoryName(cardData.category);
 
   const handleClick = () => {
-    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
     // navigate(`/bookingcompletion`, { state: { cardData } });
     console.log("Navigating with card data:", cardData);
   };
