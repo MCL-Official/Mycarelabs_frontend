@@ -79,14 +79,21 @@ const ConfirmBooking = () => {
           break;
         default:
           // Show a different message and button for cases not listed
-          setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
-          setShowButton(true); // Show the button
+          // setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
+          // setShowButton(true); // Show the button
+          setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
+      startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/self-testing-kit-for-covid-19-pre-book-your-order-999256");
+
           break;
       }
     } else {
       // Fallback message and button if no title is found
+      // ----------check------------
       setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
       setShowButton(true); // Show the button
+      // setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
+      // startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/self-testing-kit-for-covid-19-pre-book-your-order-999256");
+  
     }
   }, [data, countdown]);
 

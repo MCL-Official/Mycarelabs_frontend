@@ -28,6 +28,7 @@ const LeftContainer = ({ cardData }) => {
         <div className="text-center">
           <h3 className="text-lg font-semibold mb-2">Get in Touch</h3>
           <p className="text-blue-500">support@mycarelabs.com</p>
+          <p className="text-blue-500">+1-800-790-4550</p>
         </div>
       </div>
     </div>
@@ -36,15 +37,15 @@ const LeftContainer = ({ cardData }) => {
 // const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
 
 const DateTimePicker = (cardData) => {
-  console.log(cardData?.cardData?.category,"dskvjbjbdhsvbhjvb");
+  console.log(cardData?.cardData?.category, "dskvjbjbdhsvbhjvb");
   // const data = 
   const formatCategoryName = (data) => {
-    console.log("datadatadatadatadata",data)
+    console.log("datadatadatadatadata", data)
     try {
       if (typeof data !== 'string') {
         throw new Error('Input must be a string');
       }
-  
+
       return data
         .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
         .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
@@ -83,7 +84,7 @@ const DateTimePicker = (cardData) => {
     Service: ''
   });
   const [invalidFields, setInvalidFields] = useState({});
-  
+
   const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
@@ -150,10 +151,40 @@ const DateTimePicker = (cardData) => {
   //   setTimeout(() => setShrinkButton(null), 300); // Reset after the animation duration
   // };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  function formatPhoneNumber(value) {
+    // Remove all non-digit characters from the input
+    const digits = value.replace(/\D/g, '');
+
+    // Limit the input to 10 digits
+    const trimmed = digits.slice(0, 10);
+
+    // Format the digits based on the expected phone number format
+    const match = trimmed.match(/^(\d{1,3})(\d{0,3})(\d{0,4})$/);
+    if (match) {
+      // Reformat the number to (xxx) xxx-xxxx
+      return `${match[1] ? `(${match[1]}` : ''}${match[2] ? `) ${match[2]}` : ''}${match[3] ? `-${match[3]}` : ''}`;
+    }
+    return value;
+  }
+
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    if (name === 'phone') {
+      // Format the phone number before setting it in state
+      const formattedPhoneNumber = formatPhoneNumber(value);
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: formattedPhoneNumber
+      }));
+    } else {
+      // Handle other inputs normally
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+      }));
+    }
+  }
+
 
   const handleContinue = () => {
     setShowForm(true);
@@ -166,8 +197,8 @@ const DateTimePicker = (cardData) => {
     if (!formData.lastName) newInvalidFields.lastName = true;
     if (!formData.email) newInvalidFields.email = true;
     if (!formData.phone) newInvalidFields.phone = true;
-    if (!formData.reason) newInvalidFields.reason = true;
-    if (!formData.zipCode) newInvalidFields.zipCode = true;
+    // if (!formData.reason) newInvalidFields.reason = true;
+    // if (!formData.zipCode) newInvalidFields.zipCode = true;
     if (!selectedDate) newInvalidFields.selectedDate = true;
     if (!selectedTime) newInvalidFields.selectedTime = true;
 
@@ -182,7 +213,7 @@ const DateTimePicker = (cardData) => {
 
     const appointmentDetails = {
       ...formData,
-       date: moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").format(),
+      date: moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").format(),
       time: selectedTime,
     };
 
@@ -195,7 +226,35 @@ const DateTimePicker = (cardData) => {
         id: Math.random(),
         text: 'Appointment booked successfully!'
       });
-      navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+      console.log("sdkjvsdsvsdvjsvsd,", formattedCategory);
+
+
+      // at-home-test-kit
+      // northern-california-fremont-lab
+      // southern-california-riverside-county-mobile-testing
+      // northern-california-mobile-testing
+      // riverside-gurdwara-pop-up
+      if (formattedCategory === 'northern-california-fremont-lab') {
+        navigate(`/fremont-laboratory-thank-you`, { state: { appointmentDetails } });
+      } else if (formattedCategory === 'southern-california-riverside-county-mobile-testing') {
+        navigate(`/riverside-mobile-testing-thank-you`, { state: { appointmentDetails } });
+      } else if (formattedCategory === 'northern-california-mobile-testing') {
+        navigate(`/california-mobile-testing-thank-you`, { state: { appointmentDetails } });
+      }
+      else if (formattedCategory === 'riverside-gurdwara-pop-up') {
+        navigate(`/riverside-gurdwara-thank-you`, { state: { appointmentDetails } });
+      }
+      else if (formattedCategory === 'at-home-test-kit') {
+        // navigate(`/thankyoupage3`, { state: { cardData } });
+
+        // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+      }
+      else {
+        // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+
+        console.log("sdkjvsdsvsdvjsvsd,", formattedCategory);
+      }
+      // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
     } catch (error) {
       setIsLoading(false);
       console.error('Error booking appointment', error);
@@ -209,11 +268,11 @@ const DateTimePicker = (cardData) => {
   return (
     <div className="relative flex justify-center items-center min-h-screen p-4">
       <div className={`bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex flex-col md:flex-row overflow-hidden ${isLoading ? 'blur-0' : ''}`}>
-      {isLoading && (
-        <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-75 z-50">
-          <Example />
-        </div>
-      )}
+        {isLoading && (
+          <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-75 z-50">
+            <Example />
+          </div>
+        )}
         <LeftContainer cardData={cardData} />
         <div className="w-full md:w-3/4 pl-0 md:pl-4 transition-all duration-500">
           {!showForm ? (
@@ -237,18 +296,18 @@ const DateTimePicker = (cardData) => {
               <div className="flex flex-col md:flex-row">
                 <div className={`w-full ${showTimes ? 'md:w-3/5' : ''} transition-all duration-500 max-h-96 overflow-y-auto`}>
                   <div className="grid grid-cols-7 gap-2 mb-4">
-                  {daysOfWeek.map(day => (
-                  <div key={day} className="text-center text-xs sm:text-lg text-gray-500">{day}</div>
-                ))}
-                {Array.from({ length: emptyCells }, (_, index) => (
-                  <div key={index} className="text-center text-xs sm:text-lg p-1"></div>
-                ))}
-                {Array.from({ length: daysInMonth }, (_, index) => (
-                  <button key={index} className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${index + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                    onClick={() => handleDateClick(index)}>
-                    {index + 1}
-                  </button>
-                ))}
+                    {daysOfWeek.map(day => (
+                      <div key={day} className="text-center text-xs sm:text-lg text-gray-500">{day}</div>
+                    ))}
+                    {Array.from({ length: emptyCells }, (_, index) => (
+                      <div key={index} className="text-center text-xs sm:text-lg p-1"></div>
+                    ))}
+                    {Array.from({ length: daysInMonth }, (_, index) => (
+                      <button key={index} className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${index + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                        onClick={() => handleDateClick(index)}>
+                        {index + 1}
+                      </button>
+                    ))}
                   </div>
                 </div>
                 <div className={`transition-all duration-500 ${showTimes ? 'w-full md:w-2/5 pl-0 md:pl-4' : 'w-0'}`}>
@@ -295,22 +354,24 @@ const DateTimePicker = (cardData) => {
             <form className="w-full" onSubmit={(e) => e.preventDefault()}>
               <h2 className="text-xl font-semibold mb-6">Enter Details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label>First Name</label>
+
+                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                  <label>First Name*</label>
                   <input
                     type="text"
                     name="firstName"
+                     placeholder='John'
                     value={formData.firstName}
                     onChange={handleInputChange}
                     className={`border p-2 rounded ${invalidFields.firstName ? 'border-red-500' : ''}`}
                     required
                   />
                 </div>
-                <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label>Last Name</label>
+                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                  <label>Last Name*</label>
                   <input
                     type="text"
+                    placeholder='Doh'
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
@@ -318,29 +379,31 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label>Email</label>
+                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                  <label>Email*</label>
                   <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={`border p-2 rounded ${invalidFields.email ? 'border-red-500' : ''}`}
-                    required
+                    type="email"  // Specifies the type as email for built-in validation
+                    placeholder='abc@gmail.com'
+                    name="email"  // Name attribute used to identify the element in form data handling
+                    value={formData.email}  // Controlled component, value is driven by React state
+                    onChange={handleInputChange}  // Updates state upon input changes
+                    className={`border p-2 rounded ${invalidFields.email ? 'border-red-500' : ''}`}  // Conditional styling
+                    required  // Makes the field required for form submission
                   />
                 </div>
-                <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label>Phone</label>
+                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                  <label>Phone*</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
                     className={`border p-2 rounded ${invalidFields.phone ? 'border-red-500' : ''}`}
+                    placeholder="(xxx) xxx-xxxx"
                     required
                   />
                 </div>
-                <div className="flex flex-col col-span-2 md:col-span-1">
+                {/* <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Reason for testing?</label>
                   <select
                     name="reason"
@@ -386,8 +449,8 @@ const DateTimePicker = (cardData) => {
                     onChange={handleInputChange}
                     className="border p-2 rounded"
                   />
-                </div>
-                <div className="flex flex-col col-span-2">
+                </div> */}
+                <div className="flex text-xl flex-col col-span-2">
                   <label>How did you find My Care Labs?</label>
                   <select
                     name="foundVia"
@@ -405,7 +468,7 @@ const DateTimePicker = (cardData) => {
                   </select>
                 </div>
               </div>
-              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-2xl py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
               </button>
             </form>

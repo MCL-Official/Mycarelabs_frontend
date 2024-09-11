@@ -61,6 +61,7 @@ import JobListings from "./Components/Careers/JobListings";
 import ApplyPage from "./Components/Careers/ApplyPage";
 import SuccessPage from "./Components/Careers/SuccessPage";
 import Uta from "./Pages/Uta/Uta.js";
+import Thankyou from "./Pages/Thankyou.js";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -83,7 +84,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
-          <Route path="/uat" element={<Uta />} />
+          <Route path="/uti" element={<Uta />} />
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
           <Route path="/success" element={<SuccessPage />} />
@@ -92,6 +93,10 @@ function App() {
           <Route path="/careers/:id" element={<JobDetail />} />
           <Route path="/Apply" element={<ApplyPage />} />
           <Route path="/faq" element={<Faq/>} />
+          <Route path="/riverside-mobile-testing-thank-you" element={<Thankyou/>} />
+          <Route path="/fremont-laboratory-thank-you" element={<Thankyou/>} />
+          <Route path="/california-mobile-testing-thank-you" element={<Thankyou/>} />
+          <Route path="/riverside-gurdwara-thank-you" element={<Thankyou/>} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion/:id" element={<ConfirmBooking />} />
