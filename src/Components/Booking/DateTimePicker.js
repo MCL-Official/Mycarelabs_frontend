@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Example from './BarLoader';  // Ensure correct path
 import StackedNotifications from './StackedNotifications';  // Ensure correct path
 import moment from 'moment-timezone';
+import { FiArrowLeft } from 'react-icons/fi';
 
 const LeftContainer = ({ cardData }) => {
   return (
@@ -60,6 +61,7 @@ const DateTimePicker = (cardData) => {
 
   const formattedCategory = formatCategoryName(cardData?.cardData?.category);
   const navigate = useNavigate();
+  const today = new Date();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [shrinkButton, setShrinkButton] = useState(null);
@@ -112,15 +114,23 @@ const DateTimePicker = (cardData) => {
     }
   };
 
+  const isDateInPast = (day, month, year) => {
+    const date = new Date(year, month, day + 1);
+    return date.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0);
+  };
+
+  const isTimeInPast = (time) => {
+    if (!selectedDate) return false;
+    const selectedDateTime = new Date(`${selectedDate} ${time}`);
+    return selectedDateTime.getTime() <= Date.now();
+  };
   const handleDateClick = (day) => {
-    const date = `${months[monthIndex]} ${day + 1}, ${year}`;
+    if (isDateInPast(day, monthIndex, year)) return; // Prevent selecting past dates
+    const date = `${year}-${monthIndex + 1}-${day + 1}`;
     setSelectedDate(date);
     setShowTimes(true);
   };
 
-  const handleTimeClick = (time) => {
-    setSelectedTime(time);
-  };
 
 
   // const handleNextMonth = () => {
@@ -150,6 +160,30 @@ const DateTimePicker = (cardData) => {
   //   setSelectedTime(time);
   //   setTimeout(() => setShrinkButton(null), 300); // Reset after the animation duration
   // };
+
+  const handleTimeClick = (time) => {
+    if (isTimeInPast(time)) return; // Prevent selecting past times
+    setSelectedTime(time);
+  };
+
+  const timeButtonClass = (time) => {
+    if (isTimeInPast(time)) return "bg-gray-200 text-gray-400 cursor-not-allowed"; // Non-selectable times
+    return selectedTime === time ? "bg-blue-500 text-white border-blue-500" : "bg-white text-blue-500 border-blue-500 hover:bg-blue-100";
+  };
+  // const date = `${monthIndex + 1}-${day + 1}-${year}`;
+
+  const isDateSelectable = (day) => {
+    const date = new Date(year, monthIndex, day + 1);
+    return date >= new Date(new Date().setHours(0, 0, 0, 0));
+  };
+
+  const dateButtonClass = (day) => {
+    const fullDate = `${year}-${monthIndex + 1}-${day + 1}`;
+    if (selectedDate === fullDate) return "bg-blue-500 text-white"; // Selected date
+    if (!isDateSelectable(day)) return "bg-gray-200 text-gray-500 cursor-not-allowed"; // Past date or not open
+    return "bg-gray-300 hover:bg-gray-400 cursor-pointer"; // Selectable date
+  };
+
 
   function formatPhoneNumber(value) {
     // Remove all non-digit characters from the input
@@ -279,19 +313,9 @@ const DateTimePicker = (cardData) => {
             <>
               <h2 className="text-xl font-semibold mb-6">Select a Date & Time</h2>
               <div className="flex justify-between items-center mb-4">
-                <button
-                  className="border border-gray-300 rounded px-2 py-1"
-                  onClick={handlePreviousMonth}
-                >
-                  &lt;
-                </button>
+                <button className="border border-gray-300 rounded px-2 py-1" onClick={handlePreviousMonth}>&lt;</button>
                 <span className="text-lg font-semibold">{months[monthIndex]} {year}</span>
-                <button
-                  className="border border-gray-300 rounded px-2 py-1"
-                  onClick={handleNextMonth}
-                >
-                  &gt;
-                </button>
+                <button className="border border-gray-300 rounded px-2 py-1" onClick={handleNextMonth}>&gt;</button>
               </div>
               <div className="flex flex-col md:flex-row">
                 <div className={`w-full ${showTimes ? 'md:w-3/5' : ''} transition-all duration-500 max-h-96 overflow-y-auto`}>
@@ -303,11 +327,14 @@ const DateTimePicker = (cardData) => {
                       <div key={index} className="text-center text-xs sm:text-lg p-1"></div>
                     ))}
                     {Array.from({ length: daysInMonth }, (_, index) => (
-                      <button key={index} className={`text-center text-xs sm:text-lg rounded p-1 ${selectedDate === `${months[monthIndex]} ${index + 1}, ${year}` ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                        onClick={() => handleDateClick(index)}>
+                      <button key={index}
+                        className={`text-center text-xs sm:text-lg rounded p-1 ${dateButtonClass(index)}`}
+                        onClick={() => handleDateClick(index)}
+                        disabled={!isDateSelectable(index)}>
                         {index + 1}
                       </button>
                     ))}
+
                   </div>
                 </div>
                 <div className={`transition-all duration-500 ${showTimes ? 'w-full md:w-2/5 pl-0 md:pl-4' : 'w-0'}`}>
@@ -324,19 +351,21 @@ const DateTimePicker = (cardData) => {
                                 enter: 'opacity-0 transform scale-75',
                                 enterActive: `opacity-100 transform scale-100 transition-all duration-300 delay-${index * 100}`,
                                 exit: 'opacity-100 transform scale-100',
-                                exitActive: 'opacity-0 transform scale-75 transition-all duration-300'
+                                exitActive: 'opacity-0 transform scale-75 transition-all duration-300',
                               }}
                             >
                               <div className="relative mb-2">
                                 <button
-                                  className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${shrinkButton === time ? 'transform scale-50' : ''} ${selectedTime === time ? 'bg-blue-500 text-white border-blue-500' : 'bg-white text-blue-500 border-blue-500'}`}
+                                  className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${timeButtonClass(time)}`}
                                   onClick={() => handleTimeClick(time)}
+                                  disabled={isTimeInPast(time)} // Disable button if time is in the past
                                 >
                                   {selectedTime === time ? "Selected" : time}
                                 </button>
                               </div>
                             </CSSTransition>
                           ))}
+
                         </TransitionGroup>
                       </>
                     )}
@@ -352,22 +381,37 @@ const DateTimePicker = (cardData) => {
             </>
           ) : (
             <form className="w-full" onSubmit={(e) => e.preventDefault()}>
-              <h2 className="text-xl font-semibold mb-6">Enter Details</h2>
+              <div className="flex justify-between items-center w-full">
+                <button
+                  type="button"
+                  className="text-blue-500 hover:text-blue-700 transition-colors duration-300 flex items-center"
+                  onClick={() => setShowForm(false)}
+                >
+                  <FiArrowLeft className="mr-2" />
+                  Back
+                </button>
+                <h2 className="text-xl font-semibold mb-6 flex-1 text-center">Enter Details</h2>
+                <div className="opacity-0">  // Invisible spacer to balance the header
+                  <FiArrowLeft className="mr-2" />
+                  Back
+                </div>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                <div className="flex flex-col   col-span-2 md:col-span-1">
                   <label>First Name*</label>
                   <input
                     type="text"
                     name="firstName"
-                     placeholder='John'
+                    placeholder='John'
                     value={formData.firstName}
                     onChange={handleInputChange}
                     className={`border p-2 rounded ${invalidFields.firstName ? 'border-red-500' : ''}`}
                     required
                   />
                 </div>
-                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                <div className="flex flex-col   col-span-2 md:col-span-1">
                   <label>Last Name*</label>
                   <input
                     type="text"
@@ -379,7 +423,7 @@ const DateTimePicker = (cardData) => {
                     required
                   />
                 </div>
-                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                <div className="flex flex-col  col-span-2 md:col-span-1">
                   <label>Email*</label>
                   <input
                     type="email"  // Specifies the type as email for built-in validation
@@ -391,7 +435,7 @@ const DateTimePicker = (cardData) => {
                     required  // Makes the field required for form submission
                   />
                 </div>
-                <div className="flex flex-col  text-xl col-span-2 md:col-span-1">
+                <div className="flex flex-col   col-span-2 md:col-span-1">
                   <label>Phone*</label>
                   <input
                     type="tel"
@@ -430,8 +474,8 @@ const DateTimePicker = (cardData) => {
                     className={`border p-2 rounded ${invalidFields.zipCode ? 'border-red-500' : ''}`}
                     required
                   />
-                </div>
-                <div className="flex flex-col col-span-2 ">
+                </div> */}
+                {/* <div className="flex flex-col col-span-2 ">
                   <label>Additional Instructions</label>
                   <textarea
                     name="instructions"
@@ -439,8 +483,8 @@ const DateTimePicker = (cardData) => {
                     onChange={handleInputChange}
                     className="border p-2 rounded"
                   ></textarea>
-                </div>
-                <div className="flex flex-col col-span-2">
+                </div> */}
+                {/* <div className="flex flex-col col-span-2">
                   <label>Passport Details (if applicable)</label>
                   <input
                     type="text"
@@ -450,7 +494,7 @@ const DateTimePicker = (cardData) => {
                     className="border p-2 rounded"
                   />
                 </div> */}
-                <div className="flex text-xl flex-col col-span-2">
+                <div className="flex flex-col col-span-2">
                   <label>How did you find My Care Labs?</label>
                   <select
                     name="foundVia"
@@ -468,7 +512,7 @@ const DateTimePicker = (cardData) => {
                   </select>
                 </div>
               </div>
-              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-2xl py-2 rounded mt-24 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
               </button>
             </form>
