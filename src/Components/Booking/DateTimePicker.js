@@ -16,20 +16,28 @@ const LeftContainer = ({ cardData }) => {
         <h2 className="text-xl font-bold mb-2">Booking For</h2>
         <p className="text-gray-600 mb-4">{cardData?.cardData?.title}</p>
         <div className="w-full h-64 mb-4">
-          <iframe
+         {cardData?.cardData?.title=="Riverside Mobile Testing"? <iframe
             width="100%"
             height="100%"
             frameBorder="0"
             scrolling="no"
             marginHeight="0"
             marginWidth="0"
-            src="https://maps.google.com/maps?q=Fremont,%20CA%2094538&z=15&output=embed"
-          ></iframe>
+            src="https://maps.google.com/maps?q=Riverside,%20CA%2092508&z=15&output=embed"
+          ></iframe>: <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight="0"
+          marginWidth="0"
+          src="https://maps.google.com/maps?q=Fremont,%20CA%2094538&z=15&output=embed"
+        ></iframe>}
         </div>
         <div className="text-center">
-          <h3 className="text-lg font-semibold mb-2">Get in Touch</h3>
-          <p className="text-blue-500">support@mycarelabs.com</p>
-          <p className="text-blue-500">+1-800-790-4550</p>
+          <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
+          <p className="text-blue-500 text-xl">support@mycarelabs.com</p>
+          <p className="text-blue-500 text-xl">+1-800-790-4550</p>
         </div>
       </div>
     </div>
@@ -63,11 +71,13 @@ const DateTimePicker = (cardData) => {
   const navigate = useNavigate();
   const today = new Date();
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate1, setSelectedDate1] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [shrinkButton, setShrinkButton] = useState(null);
   const [monthIndex, setMonthIndex] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
   const [showTimes, setShowTimes] = useState(false);
+  const [showOtherInput, setShowOtherInput] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState(null);
@@ -131,8 +141,10 @@ const DateTimePicker = (cardData) => {
   };
   const handleDateClick = (day) => {
     if (isDateInPast(day, monthIndex, year) ) return; // Prevent selecting past dates
-    const date = `${year}-${monthIndex + 1}-${day + 1}`;
-    setSelectedDate(date);
+    const date = `${monthIndex + 1}-${day + 1}-${year}`;
+    const date1 = `${year}-${monthIndex + 1}-${day + 1}`;
+    setSelectedDate(date1);
+    setSelectedDate1(date);
     setShowTimes(true);
   };
 
@@ -189,27 +201,35 @@ const DateTimePicker = (cardData) => {
     return "bg-blue-200 hover:bg-blue-500 cursor-pointer"; // Selectable date
   };
 
-
   function formatPhoneNumber(value) {
     // Remove all non-digit characters from the input
     const digits = value.replace(/\D/g, '');
-
-    // Limit the input to 10 digits
+  
+    // Format the phone number as (xxx) xxx-xxxx
+    
     const trimmed = digits.slice(0, 10);
-
-    // Format the digits based on the expected phone number format
-    const match = trimmed.match(/^(\d{1,3})(\d{0,3})(\d{0,4})$/);
+    const match = trimmed.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
     if (match) {
-      // Reformat the number to (xxx) xxx-xxxx
       return `${match[1] ? `(${match[1]}` : ''}${match[2] ? `) ${match[2]}` : ''}${match[3] ? `-${match[3]}` : ''}`;
     }
+  
     return value;
   }
+  
 
   function handleInputChange(event) {
     const { name, value } = event.target;
+  
+    if (name === 'foundVia') {
+      if (value === 'Other') {
+        setShowOtherInput(true);
+      } else {
+        setShowOtherInput(false);
+      }
+    }
+
     if (name === 'phone') {
-      // Format the phone number before setting it in state
+      // Format the phone number and keep only digits
       const formattedPhoneNumber = formatPhoneNumber(value);
       setFormData(prevState => ({
         ...prevState,
@@ -223,7 +243,7 @@ const DateTimePicker = (cardData) => {
       }));
     }
   }
-
+  
 
   const handleContinue = () => {
     setShowForm(true);
@@ -346,7 +366,7 @@ const DateTimePicker = (cardData) => {
                   <div className="overflow-y-auto max-h-96">
                     {showTimes && (
                       <>
-                        <div className="text-center text-lg font-semibold mb-4">{selectedDate}</div>
+                        <div className="text-center text-lg font-semibold mb-4">{selectedDate1}</div>
                         <TransitionGroup>
                           {timeSlots.map((time, index) => (
                             <CSSTransition
@@ -365,7 +385,7 @@ const DateTimePicker = (cardData) => {
                                   onClick={() => handleTimeClick(time)}
                                   disabled={isTimeInPast(time)} // Disable button if time is in the past
                                 >
-                                  {selectedTime === time ? "Selected" : time}
+                                  {selectedTime === time ? time : time}
                                 </button>
                               </div>
                             </CSSTransition>
@@ -396,10 +416,10 @@ const DateTimePicker = (cardData) => {
                   Back
                 </button>
                 <h2 className="text-xl font-semibold mb-6 flex-1 text-center">Enter Details</h2>
-                <div className="opacity-0">  // Invisible spacer to balance the header
+                {/* <div className="opacity-0">  
                   <FiArrowLeft className="mr-2" />
                   Back
-                </div>
+                </div> */}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -451,6 +471,7 @@ const DateTimePicker = (cardData) => {
                     placeholder="(xxx) xxx-xxxx"
                     required
                   />
+                   {invalidFields.phone && <p className="text-red-500 text-xs mt-1">Phone number is required</p>}
                 </div>
                 {/* <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Reason for testing?</label>
@@ -516,6 +537,19 @@ const DateTimePicker = (cardData) => {
                     <option value="Other">Other</option>
                   </select>
                 </div>
+                {showOtherInput && (
+  <div className="flex flex-col col-span-2 ">
+    <label>If other, please specify below</label>
+    <input
+      type="text"
+      name="otherInput"
+      value={formData.otherInput}
+      onChange={handleInputChange}
+      className="border p-2 rounded"
+      placeholder="Enter details"
+    />
+  </div>
+)}
               </div>
               <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
