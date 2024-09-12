@@ -22,6 +22,7 @@ import { Helmet } from "react-helmet";
 import { SlideInAuth } from "../Components/Contact/SlideInAuth";
 import axios from "axios";
 import HoverCards1 from "../Components/HoverCard/HoverCards1";
+import Video from "../Components/Video/Video";
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
@@ -84,10 +85,11 @@ useEffect(() => {
       {/* <Hero /> */}
       {/* <FeatureToggles/> */}
       <HoverCards1 />
+      <Info />
       <FeatureComponent />
       <InsuranceAccepted />
-      <Info />
-      <HoverCards />
+      <Video/>
+      {/* <HoverCards /> */}
       <SlideInAuth/>
       {/* <ImageContainer/> */}
       {/* <Footer /> */}

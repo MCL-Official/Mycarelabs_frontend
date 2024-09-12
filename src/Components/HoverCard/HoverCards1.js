@@ -214,9 +214,7 @@ const HoverCards1 = () => {
                 />
                 <div className="p-4 bg-white flex flex-col justify-between flex-grow">
                   <div>
-                    <span className="text-sm text-blue-400">
-                      {/* {card.title} */}
-                    </span>
+                   
                     <h5 className="text-lg font-bold mb-1">{card.category}</h5>
                     <p className="text-sm text-gray-600 mb-2 line-clamp-2">
                       {card.shortDescription}
@@ -229,8 +227,15 @@ const HoverCards1 = () => {
                         Learn More
                       </button>
                     </p>
+                    <div className="mb-1">
+
+                    <span className="text-sm  text-blue-400">
+                   { card.category=="Northern California: Fremont Lab"? "Walk-ins are welcome":""}
+                      {/* walk-ins are welcome */}
+                    </span>
+                    </div>
                   </div>
-                  <div className="flex justify-center mt-auto">
+                  <div className="flex justify-center mt-2">
                     <NeumorphismButton
                       slug={index}
                       cardData={{ ...card, imageUrl: images[index % images.length] }}

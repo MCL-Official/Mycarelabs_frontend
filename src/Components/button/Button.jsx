@@ -3,6 +3,8 @@ import { FiSend } from "react-icons/fi";
 
 const NeumorphismButton = ({ cardData }) => {
   const navigate = useNavigate();
+  // console.log(cardData);
+  
 // Utility function to format the category name
 const formatCategoryName = (categoryName) => {
   return categoryName
@@ -42,7 +44,8 @@ const formatCategoryName = (categoryName) => {
     `}
     >
       <FiSend />
-      <span>Book Now</span>
+      {cardData.category==="At-home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
+      
     </button>
   );
 };
