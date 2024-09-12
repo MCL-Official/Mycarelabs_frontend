@@ -13,8 +13,7 @@ const SubElement2 = () => {
         <div className="md:w-1/2 p-4 md:p-8">
           <h1 className="text-5xl font-bold text-gray-800 mb-2 text-left">What is a UTI?</h1>
           <p className="text-gray-600 text-lg  text-left pt-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          A urinary tract infection (UTI) is a common condition that occurs when bacteria enter the urinary system, causing infection in any part of the urinary tract. This includes the kidneys, bladder, ureters, and urethra. UTIs can affect anyone but are more common in women. Symptoms often include a burning sensation during urination, frequent urges to urinate, and cloudy or strong-smelling urine. Left untreated, a UTI can lead to more serious health issues, including kidney infections. Early detection and treatment are key to preventing complications and ensuring a swift recovery.           </p>
         </div>
       </div>
     )

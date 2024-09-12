@@ -229,8 +229,8 @@ const HoverCards1 = () => {
                     </p>
                     <div className="mb-1">
 
-                    <span className="text-sm  text-blue-400">
-                   { card.category=="Northern California: Fremont Lab"? "Walk-ins are welcome":""}
+                    <span className="text-sm font-bold  text-orange-600">
+                   { card.category=="Northern California: Fremont Lab" ? "Walk-ins Welcome!":""}
                       {/* walk-ins are welcome */}
                     </span>
                     </div>

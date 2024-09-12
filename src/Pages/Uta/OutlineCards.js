@@ -49,19 +49,19 @@ export const OutlineCards = () => {
                 </div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 sm:flex-row">
         <Card
-          title="Discover"
+          title="Women"
           href="#"
-          bgUrl="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          bgUrl="https://i.ibb.co/0yKX4jb/7.png"
         />
         <Card
-          title="Learn"
+          title="Men"
           href="#"
-          bgUrl="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          bgUrl="https://i.ibb.co/MS473K1/8.png"
         />
         <Card
-          title="Grow"
+          title="Elderly"
           href="#"
-          bgUrl="https://images.unsplash.com/photo-1521649415036-659258dc424f?q=80&w=2548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          bgUrl="https://i.ibb.co/mS5GYvf/9.png"
         />
       </div>
       <Cursor cursorRef={cursorRef} />
@@ -78,10 +78,10 @@ const Card = ({ bgUrl, title, href }) => {
         backgroundPosition: "center",
         height: '300px'
       }}
-      className="outline-card flex aspect-square w-full flex-col justify-end overflow-hidden rounded-lg bg-neutral-400 bg-[size:100%] shadow-xl shadow-neutral-900/30 transition-[background-size] duration-500 hover:bg-[size:110%]"
+      className="outline-card flex aspect-square w-full flex-col justify-end overflow-hidden rounded-lg bg-white bg-[size:100%] shadow-xl shadow-neutral-900/30 transition-[background-size] duration-500 hover:bg-[size:110%]"
     >
       <div className="pointer-events-none flex items-center justify-between bg-gradient-to-t from-black to-black/0 p-6 pt-8 text-xl font-medium text-white md:text-2xl">
-        <h3>{title}</h3>
+        <h3 className="text-xl font-bold text-black">{title}</h3>
         <FiArrowRight />
       </div>
     </a>

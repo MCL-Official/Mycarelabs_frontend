@@ -9,25 +9,21 @@ const FaqWellness = () => {
 
   const faqs = [
     {
-      question: "What are the types of wellness tests available?",
-      answer: "Common wellness tests include blood tests (such as complete blood count, lipid profile, and glucose levels), urine tests, hormone panels, vitamin and mineral screenings, and other assessments. These tests help evaluate overall health, detect deficiencies, and identify risk factors for chronic diseases."
+      question: "What should I do if I think I have a UTI?",
+      answer: "If you think you have a UTI, it's important to seek medical attention promptly. My Care Labs offers UTI testing 7 days a week, with results available within 24 hours to help you start treatment as soon as possible."
     },
     {
-      question: "Do I need to fast before taking wellness tests?",
-      answer: "Fasting requirements depend on the specific test. For example, lipid profiles and glucose tests often require fasting for 8-12 hours to ensure accurate results. Always follow your healthcare provider’s instructions regarding fasting or other preparations before your test."
+      question: "Can UTIs go away on their own?",
+      answer: "While some mild UTIs may resolve on their own, it is generally recommended to seek treatment to avoid complications, such as kidney infections, which can become more serious."
     },
     {
-      question: "What is the purpose of wellness testing?",
-      answer: "The purpose of wellness testing is to assess overall health, identify potential health risks early, monitor existing conditions, and guide personalized healthcare plans. These tests provide valuable insights into your physical well-being and help in the prevention and management of diseases."
+      question: "What happens if a UTI is left untreated?",
+      answer: "If left untreated, a UTI can spread to the kidneys, leading to a more serious infection known as pyelonephritis. Kidney infections can cause permanent damage and may require hospitalization."
     },
     {
-      question: "How often should I undergo wellness testing?",
-      answer: "The frequency of wellness testing varies based on age, health status, family history, and individual risk factors. Generally, adults should have quarterly check-ups that include basic wellness tests. Your healthcare provider can recommend a personalized testing schedule based on your specific needs."
+      question: "Why should I choose My Care Labs for UTI testing?",
+      answer: "My Care Labs offers fast, accurate UTI testing with convenient same-day or 24-hour results. We are open 7 days a week and provide accessible testing options to ensure you get the care you need as soon as possible"
     },
-    {
-      question: "Are wellness tests covered by insurance?",
-      answer: "Coverage for wellness tests varies by insurance plan and provider. Many health insurance plans cover preventive services, including certain wellness tests, without additional costs to the patient. It is important to check with your insurance provider to understand what tests are covered and any associated costs. For uninsured patients, we offer discounted wellness testing on Tuesdays and Thursdays."
-    }
   ];
 
   return (

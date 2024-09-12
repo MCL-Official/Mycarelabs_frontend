@@ -1,17 +1,18 @@
+import { CgProfile } from "react-icons/cg";
 export function Testimonials() {
     const testimonials = [
         {
-            avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+            avatar: "https://i.ibb.co/NV3sJ4S/1.png",
             name: "Jen S.",
             quote: "I just got tested here last week and My Care Labs took care of me. It was easy and quick. I called ahead and they told me I could just walk-in that day. The staff got me situated and took my sample and I got results the same day later in the afternoon. so quick!"
         },
         {
-            avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+            avatar: "https://i.ibb.co/xmmTd5v/2.png",
             name: "Simon andrew",
             quote: "Amazing place!!! Mateo and Nathaly were so supportive when my mother and I went there today to get our PCR tests before travel. It is so nerve-wrecking to travel nowadays and they had the results THE SAME DAY!!! That is so amazing ."
         },
         {
-            avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+            avatar: "https://i.ibb.co/tDHSWFS/3.png",
             name: "Paul A,",
             quote: "My family and I both needed a PCR test for COVID clearance for travel. It’s actually difficult to find a anyone that could perform it without hefty charges. Olivia went out of her way to come to our house to perform the PCR test for my wife."
         },
@@ -21,7 +22,7 @@ export function Testimonials() {
         <section className="relative py-14 bg-blue-500">
             <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="max-w-xl sm:text-center md:mx-auto">
-                    <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                    <h3 className="text-gray-800 text-3xl font-bold sm:text-4xl">
                         Patients Love My Care Labs
                     </h3>
                     <p className="mt-3 text-gray-600"></p>

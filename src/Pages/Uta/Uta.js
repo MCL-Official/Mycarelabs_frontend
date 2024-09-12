@@ -9,6 +9,7 @@ import FaqWellness from './FaqWellness'
 import SubElement4 from './SubElement4'
 import { OutlineCards } from './OutlineCards'
 import SlidePricing from './SliderPricing'
+import { SlideInAuth } from '../../Components/Contact/SlideInAuth'
 
 const Uta = () => {
   return (
@@ -23,9 +24,10 @@ const Uta = () => {
       <SubElement2/>
       <OutlineCards/>
       <SubElement3/>
-      <SlidePricing/>
+      {/* <SlidePricing/> */}
       <InsuranceAccepted />
       <FaqWellness/>
+       <SlideInAuth/>
 
     </div>
   )

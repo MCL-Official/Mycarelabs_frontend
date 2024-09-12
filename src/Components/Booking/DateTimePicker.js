@@ -119,13 +119,18 @@ const DateTimePicker = (cardData) => {
     return date.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0);
   };
 
+  const isWeekend = (day) => {
+    const date = new Date(year, monthIndex, day + 1);
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 0 || dayOfWeek === 6;  // Sunday (0) or Saturday (6)
+  };
   const isTimeInPast = (time) => {
     if (!selectedDate) return false;
     const selectedDateTime = new Date(`${selectedDate} ${time}`);
     return selectedDateTime.getTime() <= Date.now();
   };
   const handleDateClick = (day) => {
-    if (isDateInPast(day, monthIndex, year)) return; // Prevent selecting past dates
+    if (isDateInPast(day, monthIndex, year) ) return; // Prevent selecting past dates
     const date = `${year}-${monthIndex + 1}-${day + 1}`;
     setSelectedDate(date);
     setShowTimes(true);
@@ -180,8 +185,8 @@ const DateTimePicker = (cardData) => {
   const dateButtonClass = (day) => {
     const fullDate = `${year}-${monthIndex + 1}-${day + 1}`;
     if (selectedDate === fullDate) return "bg-blue-500 text-white"; // Selected date
-    if (!isDateSelectable(day)) return "bg-gray-200 text-gray-500 cursor-not-allowed"; // Past date or not open
-    return "bg-gray-300 hover:bg-gray-400 cursor-pointer"; // Selectable date
+    if (!isDateSelectable(day) ||  isWeekend(day)) return "bg-gray-100 text-gray-500 cursor-not-allowed"; // Past date or not open
+    return "bg-blue-200 hover:bg-blue-500 cursor-pointer"; // Selectable date
   };
 
 
@@ -330,7 +335,7 @@ const DateTimePicker = (cardData) => {
                       <button key={index}
                         className={`text-center text-xs sm:text-lg rounded p-1 ${dateButtonClass(index)}`}
                         onClick={() => handleDateClick(index)}
-                        disabled={!isDateSelectable(index)}>
+                        disabled={!isDateSelectable(index) || isWeekend(index)}>
                         {index + 1}
                       </button>
                     ))}

@@ -179,7 +179,7 @@ const BookTest = () => {
                   <div>
                  
                     <h5 className="text-lg font-bold mb-1 ">{card.category}</h5>
-                    <p className="text-sm text-gray-600  mb-2 line-clamp-2">
+                    <p className="text-sm text-gray-600  text-left mb-2 line-clamp-2">
                       {card.shortDescription}
                       <button
                         className="text-sm text-blue-500 hover:underline ml-1"
@@ -188,20 +188,20 @@ const BookTest = () => {
                         Learn More
                       </button>
                     </p>
-                    <p className="text-sm text-gray-600 mb-2 ">
+                    <p className="text-sm text-left text-gray-600 mb-2 ">
                       <span className="font-bold">Hours: </span>{card.timing}
                     </p>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-left text-gray-600 mb-2">
                       <span className="font-bold">Location: </span>{card.location}
                     </p>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-left text-gray-600 mb-2">
                       <span className="font-bold">Call Us: </span>{card.Contact} 
                     </p>
                   </div>
                   <div className="mb-1">
 
-                    <span className="text-sm  text-blue-400">
-                   { card.category=="Northern California: Fremont Lab" ? "Walk-ins are welcome":""}
+                    <span className="text-sm font-bold  text-orange-600">
+                   { card.category=="Northern California: Fremont Lab" ? "Walk-ins Welcome!":""}
                       {/* walk-ins are welcome */}
                     </span>
                     </div>

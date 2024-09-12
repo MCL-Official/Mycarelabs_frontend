@@ -93,7 +93,10 @@ export  const cardData = [
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/PTcg4Sq/6.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg",  "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
-     ]; export const testingSolutions = [
+     ]; 
+     
+     
+     export const testingSolutions = [
     {
       category: "Infectious Disease Testing Solutions",
       route: "/testing-solutions/infectious-disease-testing-solutions", // Add category route
