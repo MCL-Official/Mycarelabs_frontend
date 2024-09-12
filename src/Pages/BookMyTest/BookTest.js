@@ -19,6 +19,7 @@ const images = [
 ];
 
 // Component
+
 const BookTest = () => {
   const navigate = useNavigate();
   const scrollToTop = () => {
@@ -206,7 +207,7 @@ const BookTest = () => {
                     </span>
                     </div>
                   <div className="flex justify-center mt-auto">
-                    {console.log(card.id,"carrdddddddd")}
+                    {/* {console.log(card.id,"carrdddddddd")} */}
                     <Button cardData={{ ...card, imageUrl: images[index % images.length] }} />
                   </div>
                 </div>
