@@ -8,13 +8,15 @@ import {
 import { Helmet } from "react-helmet";
 import { MotionConfig, motion } from "framer-motion";
 
-// https://i.ibb.co/9w3s7gd/edfsf.png
+// https://i.ibb.co/JxtLLhX/Blue-Anafsf.png
 // https://i.ibb.co/NCz8Kt8/dadfs.png
   // "https://i.ibb.co/NCz8Kt8/dadfs.png",
+  
+  // "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png"
 const images = [
-  "https://i.ibb.co/m6khGkq/1.jpg",
+  "https://i.ibb.co/Jswx1fx/afljsdg.png",
   "https://i.ibb.co/NCz8Kt8/dadfs.png",
-  "https://i.ibb.co/9w3s7gd/edfsf.png",
+  "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/PTcg4Sq/6.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",

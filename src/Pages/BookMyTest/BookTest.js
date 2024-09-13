@@ -8,9 +8,9 @@ import { Helmet } from "react-helmet";
 
 // Images
 const images = [
-  "https://i.ibb.co/m6khGkq/1.jpg",
+  "https://i.ibb.co/Jswx1fx/afljsdg.png",
   "https://i.ibb.co/NCz8Kt8/dadfs.png",
-  "https://i.ibb.co/9w3s7gd/edfsf.png",
+  "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/PTcg4Sq/6.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg",
@@ -137,8 +137,8 @@ const BookTest = () => {
             </p>
           </div>
         </div>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="container mx-auto px-1">
+          <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {cardData.slice(0, 8).map((card, index) => (
               <div key={index} className="rounded-xl overflow-hidden shadow-lg flex flex-col">
                 <img
