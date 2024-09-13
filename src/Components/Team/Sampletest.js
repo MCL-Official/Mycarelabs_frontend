@@ -4,7 +4,7 @@ export function Sampletest () {
 
     const team = [
         {
-            avatar: "https://i.ibb.co/TLHH3gT/2.png",
+            avatar: "https://i.ibb.co/GPHpyRv/1.png",
             name: "Harvey Singh",
             title: "Chief Executive Officer ",
             desc: "",
@@ -12,15 +12,15 @@ export function Sampletest () {
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
-        // {
-        //     avatar: "https://mycarelabs.com/wp-content/uploads/2024/01/Ellipse-9-4-min.png",
-        //     name: "Aman Singh",
-        //     title: "Vice President Global Operations",
-        //     desc: "",
-        //     linkedin: "javascript:void(0)",
-        //     twitter: "javascript:void(0)",
-        //     github: "javascript:void(0)"
-        // },
+        {
+            avatar: "https://i.ibb.co/Thv7q7k/5.png",
+            name: "Aman Singh",
+            title: "Vice President, Global Operations",
+            desc: "",
+            linkedin: "javascript:void(0)",
+            twitter: "javascript:void(0)",
+            github: "javascript:void(0)"
+        },
         // {
         //     avatar: "https://mycarelabs.com/wp-content/uploads/2023/11/Ellipse-11.png",
         //     name: "Dr. Carl Johnson",
@@ -31,7 +31,16 @@ export function Sampletest () {
         //     github: "javascript:void(0)"
         // },
         {
-            avatar: "https://i.ibb.co/QFFt4z4/3.png",
+            avatar: "https://i.ibb.co/YyXtZZd/sdad.png",
+            name: "Kishan Singh",
+            title: "Vice President, India Operatoins",
+            desc: "",
+            linkedin: "javascript:void(0)",
+            twitter: "javascript:void(0)",
+            github: "javascript:void(0)"
+        },
+        {
+            avatar: "https://i.ibb.co/dtVPXMC/2.png",
             name: "Emily Garcia",
             title: "Marketing Manager",
             desc: "",
@@ -40,7 +49,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/j5yJxDJ/5.png",
+            avatar: "https://i.ibb.co/4pZJvwR/3.png",
             name: "Soun Kanwar",
             title: "Communications Director",
             desc: "",
@@ -48,10 +57,19 @@ export function Sampletest () {
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
+        // {
+        //     avatar: "https://i.ibb.co/RhxPbXs/4.png",
+        //     name: "Pramo Virk",
+        //     title: "VP of Europe Operation",
+        //     desc: "",
+        //     linkedin: "javascript:void(0)",
+        //     twitter: "javascript:void(0)",
+        //     github: "javascript:void(0)"
+        // },
         {
-            avatar: "https://i.ibb.co/RhxPbXs/4.png",
-            name: "Pramo Virk",
-            title: "VP of Europe Operation",
+            avatar: "https://i.ibb.co/9qsSKMB/4.png",
+            name: "Ralph Giron",
+            title: "General Manager, USA",
             desc: "",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",

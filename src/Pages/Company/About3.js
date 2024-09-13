@@ -1,22 +1,33 @@
 import React from "react";
-
+ 
 const About3 = () => {
     return (
         <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
             {/* <p className="font-normal text-sm leading-3 text-indigo-700 hover:text-indigo-800 cursor-pointer pb-2">About</p> */}
             <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
                 <div className="w-full lg:w-6/12">
-                    <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">We are here to make great design accessible and delightfull for everyone</h2>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire,</p>
+                    <h2 className="w-full text-5xl pb-4 text-blue-600 font-extrabold lg:text-6xl lg:leading-10 leading-9">Our Story</h2>
+                    <div className="mt-6 text-gray-600 text-left">
+  <p className="max-w-xl text-left mx-auto xl:mx-0">
+    We are a CLIA-certified laboratory and a member of the California Department of Public Health (CDPH) and California COVID Task Force. Our commitment to public health continues as we regularly add new testing options to meet the evolving needs of our communities. My Care Labs was established in 2021 in response to the growing need for COVID-19 testing during the pandemic.
+  </p>
+  <p className=" max-w-xl text-left mx-auto xl:mx-0">
+    As the pandemic began to subside, My Care Labs shifted its focus towards expanding our diagnostic services. At the beginning of 2024, we started offering additional tests, growing our test and service menu.
+  </p>
+  <p className="max-w-xl text-left mx-auto xl:mx-0">
+    Additionally, we also partner with nursing homes, care homes, schools, nearby hospitals, and other facilities throughout California to provide essential diagnostic services to these populations. We have also launched our discounted wellness testing program, available on Tuesdays and Thursdays, as a commitment to serving overlooked and underserved communities. This initiative has allowed us to provide affordable access to essential diagnostic services for individuals who may otherwise face financial barriers to healthcare.
+  </p>
+</div>
+ 
                 </div>
                 <div className="w-full lg:w-6/12">
-                    <img className="lg:block hidden w-full" src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png" alt="people discussing on board" />
-                    <img className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/16fPqrg/Rectangle-122-2.png" alt="people discussing on board" />
-                    <img className="sm:hidden block w-full" src="https://i.ibb.co/Jxhpxh6/Rectangle-122.png" alt="people discussing on board" />
+                    <img className="lg:block hidden w-full" src="https://i.ibb.co/jfFvWVR/6.png" alt="people discussing on board" />  
+                    <img className="lg:hidden sm:block hidden w-full" src="https://i.ibb.co/jfFvWVR/6.png" alt="people discussing on board" />
+                    <img className="sm:hidden block w-full" src="https://i.ibb.co/jfFvWVR/6.png" alt="people discussing on board" />
                 </div>
             </div>
-
-            <div className="relative mt-24">
+ 
+            {/* <div className="relative mt-24">
                 <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
                     <div className="z-20 w-12 h-12 bg-gray-800 rounded-full flex justify-center items-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +37,7 @@ const About3 = () => {
                             <path d="M5 14.0001C5.93464 13.084 7.19124 12.5708 8.5 12.5708C9.80876 12.5708 11.0654 13.084 12 14.0001C12.9346 14.9162 14.1912 15.4294 15.5 15.4294C16.8088 15.4294 18.0654 14.9162 19 14.0001" stroke="white" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
-
+ 
                     <svg className="z-20" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="24" cy="24" r="24" fill="#1F2937" />
                         <path d="M26 15V19C26 19.2652 26.1054 19.5196 26.2929 19.7071C26.4804 19.8946 26.7348 20 27 20H31" stroke="white" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
@@ -34,7 +45,7 @@ const About3 = () => {
                         <path d="M30 26H33M15 26H18H15ZM22.5 26H25.5H22.5Z" stroke="white" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M17 22V17C17 16.4696 17.2107 15.9609 17.5858 15.5858C17.9609 15.2107 18.4696 15 19 15H26L31 20V22" stroke="white" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-
+ 
                     <svg className="z-20 sm:block hidden" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="24" cy="24" r="24" fill="#1F2937" />
                         <path d="M21 23C23.2091 23 25 21.2091 25 19C25 16.7909 23.2091 15 21 15C18.7909 15 17 16.7909 17 19C17 21.2091 18.7909 23 21 23Z" stroke="white" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
@@ -70,14 +81,14 @@ const About3 = () => {
                     </svg>
                 </div>
                 <hr className="z-10 absolute top-2/4 w-full bg-gray-200" />
-            </div>
-            <div className="sm:hidden grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+            </div> */}
+            {/* <div className="sm:hidden grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
                 <div>
                     <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">400k User</p>
                     <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 </div>
-            </div>
-
+            </div> */}
+{/*  
             <div className="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
                 <div className="w-full lg:w-6/12">
                     <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Mission</h2>
@@ -86,7 +97,7 @@ const About3 = () => {
                 </div>
                 <div className="w-full lg:w-6/12">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
-                        {/* <!-- Team Card --> */}
+           
                         <div className="flex p-4 shadow-md">
                             <div className="mr-6">
                                 <svg className="mr-6" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,8 +111,7 @@ const About3 = () => {
                                 <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                             </div>
                         </div>
-
-                        {/* <!-- Board Card --> */}
+ 
                         <div className="flex p-4 shadow-md">
                             <div className="mr-6">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,8 +126,7 @@ const About3 = () => {
                                 <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                             </div>
                         </div>
-
-                        {/* <!-- Press Card --> */}
+ 
                         <div className="flex p-4 shadow-md">
                             <div className="mr-6">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,9 +141,9 @@ const About3 = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
-
+ 
 export default About3;
