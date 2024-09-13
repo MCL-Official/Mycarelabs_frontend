@@ -99,13 +99,13 @@ export function ContactForm() {
           <div className="max-w-lg space-y-3">
             <h3 className="text-indigo-600 font-semibold">Contact</h3>
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">Let us know how we can help</p>
-            <p>We’re here to help and answer any question you might have. We look forward to hearing from you! Please fill out the form or use the contact information below.</p>
+            <p className='text-xl'>We’re here to help and answer any question you might have. We look forward to hearing from you! Please fill out the form or use the contact information below.</p>
             <div>
               <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
                 {contactMethods.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-x-3">
                     <div className="flex-none text-gray-400">{item.icon}</div>
-                    <p>{item.contact}</p>
+                    <p className='text-xl font-bold'>{item.contact}</p>
                   </li>
                 ))}
               </ul>
