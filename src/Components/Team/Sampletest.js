@@ -57,15 +57,15 @@ export function Sampletest () {
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
-        // {
-        //     avatar: "https://i.ibb.co/RhxPbXs/4.png",
-        //     name: "Pramo Virk",
-        //     title: "VP of Europe Operation",
-        //     desc: "",
-        //     linkedin: "javascript:void(0)",
-        //     twitter: "javascript:void(0)",
-        //     github: "javascript:void(0)"
-        // },
+        {
+            avatar: "https://i.ibb.co/ZLz23Lq/DFYHF.png",
+            name: "Pramo Virk",
+            title: "VP of Europe Operation",
+            desc: "",
+            linkedin: "javascript:void(0)",
+            twitter: "javascript:void(0)",
+            github: "javascript:void(0)"
+        },
         {
             avatar: "https://i.ibb.co/9qsSKMB/4.png",
             name: "Ralph Giron",
