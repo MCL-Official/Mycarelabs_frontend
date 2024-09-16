@@ -33,7 +33,7 @@ export function Sampletest () {
         {
             avatar: "https://i.ibb.co/QCsCtsb/sdad.png",
             name: "Kishan Singh",
-            title: "Vice President, India Operatoins",
+            title: "Vice President, India Operations",
             desc: "",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
@@ -60,7 +60,7 @@ export function Sampletest () {
         {
             avatar: "https://i.ibb.co/0G8HJ6R/4.png",
             name: "Pramo Virk",
-            title: "VP of Europe Operation",
+            title: "Vice President, Europe Operations",
             desc: "",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
