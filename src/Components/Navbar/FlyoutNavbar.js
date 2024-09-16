@@ -209,17 +209,19 @@ const AboutUsContent = ({ handleClick }) => {
     console.log(cardData,'sdvkjvnsvnsdjvsdnjvcnsjsdnv');
     
     const formattedCategory = formatCategoryName(cardData.category);
-    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: card } });
+    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: cardData } });
 
-    if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
-      navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-   }else{
+    // THE BOOKING SYSTEM TTHAT I HAVE CREATED 
 
-     // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-     navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-     // navigate(`/bookingcompletion`, { state: { cardData } });
-     console.log("Navigating with card data:", cardData);
-   }
+  //   if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
+  //     navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+  //  }else{
+
+  //    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+  //    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+  //    // navigate(`/bookingcompletion`, { state: { cardData } });
+  //    console.log("Navigating with card data:", cardData);
+  //  }
     // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: card } });
     // console.log("Navigating with card data:", card);
     handleClick();

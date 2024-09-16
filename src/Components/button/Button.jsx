@@ -17,18 +17,26 @@ const formatCategoryName = (categoryName) => {
   // Format the category name
   const formattedCategory = formatCategoryName(cardData.category);
 
-  // console.log(cardData,'sdvksdvjsnvjdsknvjdsnvjvnsdj');
   const handleClick = () => {
-    console.log(cardData,'sdvksdvjsnvjdsknvjdsnvjvnsdj');
-    if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
-       navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-    }else{
+    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
 
-      // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-      // navigate(`/bookingcompletion`, { state: { cardData } });
-      console.log("Navigating with card data:", cardData);
-    }
+    
+
+  //  this is for our own booking system that i have created 
+
+
+
+
+
+    // if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
+    //    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    // }else{
+    //   navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    //   // navigate(`/bookingcompletion`, { state: { cardData } });
+    // }
+
+
+
   };
 
   return (
