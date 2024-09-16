@@ -14,9 +14,9 @@ import { Helmet } from "react-helmet";
 
 
 const images = [
-  "https://i.ibb.co/m6khGkq/1.jpg",
-  "https://i.ibb.co/9ygMhcC/2.jpg",
-  "https://i.ibb.co/CmkJZKf/5.jpg",
+  "https://i.ibb.co/Jswx1fx/afljsdg.png",
+  "https://i.ibb.co/NCz8Kt8/dadfs.png",
+  "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/PTcg4Sq/6.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
@@ -212,9 +212,7 @@ const HoverCards = () => {
                 />
                 <div className="p-4 bg-white flex flex-col justify-between flex-grow">
                   <div>
-                    <span className="text-sm text-blue-400">
-                      {/* {card.title} */}
-                    </span>
+                
                     <h5 className="text-lg font-bold mb-1">{card.category}</h5>
                     <p className="text-sm text-gray-600 mb-2 line-clamp-2">
                       {card.shortDescription}
@@ -228,6 +226,13 @@ const HoverCards = () => {
                       </button>
                     </p>
                   </div>
+                  <div className="mb-1">
+
+                    <span className="text-sm  text-blue-400">
+                   { card.category=="Northern California: Fremont Lab"? "Walk-ins are welcome":""}
+                      {/* walk-ins are welcome */}
+                    </span>
+                    </div>
                   <div className="flex justify-center mt-auto">
                     <NeumorphismButton
                       slug={index}

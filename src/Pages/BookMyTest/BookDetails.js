@@ -62,7 +62,7 @@ const BookTestDetails = () => {
       </div>
       <div className="relative container mx-auto z-15" style={{ marginTop: '-5rem' }}>
         {/* <div className="bg-white p-8 shadow-lg rounded-lg" style={{ background: 'none' }}> */}
-          {/* <DateTimePicker cardData={cardData} /> */}
+          <DateTimePicker cardData={cardData} />
         
           <TabsFeatures/> 
       <Locations/>

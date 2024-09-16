@@ -26,9 +26,10 @@ Learn about My Care Labs, your trusted partner in diagnostic testing. Discover o
       </Helmet>
       {/* <Teamsample/> */}
       <Sampletest/>
+      <Index/>
+      <About3/>
       <CollapseCardFeatures/>
       <CountUpStats/>
-      {/* <Index/> */}
       {/* <ScrollingTestimonials/> */}
       <Testimonials/>
       {/* <DragShuffleHero/> */}

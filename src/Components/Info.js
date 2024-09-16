@@ -35,15 +35,16 @@ const cardData = [
   }
 ];
 
-function Info() {
+function Info({ scrollToAuth }) {
   const [selectedCard, setSelectedCard] = useState(null);
 
   const handleCardClick = (index) => {
     setSelectedCard(index);
+    scrollToAuth(); 
   };
 
   return (
-    <div className="p-8 text-center bg-white" id="services">
+    <div className=" text-center bg-white" id="services">
       <div className="my-16 text-transparent bg-clip-text bg-gradient-to-r from-[#6C2FAC] to-white">
         <h3 className="font-poppins text-4xl font-bold">
           <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">Communities </span>

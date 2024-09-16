@@ -205,10 +205,25 @@ const AboutUsContent = ({ handleClick }) => {
       .toLowerCase();
   };
   
-  const handleBookNowClick = (card) => {
-    const formattedCategory = formatCategoryName(card.category);
-    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: card } });
-    console.log("Navigating with card data:", card);
+  const handleBookNowClick = (cardData) => {
+    console.log(cardData,'sdvkjvnsvnsdjvsdnjvcnsjsdnv');
+    
+    const formattedCategory = formatCategoryName(cardData.category);
+    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: cardData } });
+
+    // THE BOOKING SYSTEM TTHAT I HAVE CREATED 
+
+  //   if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
+  //     navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+  //  }else{
+
+  //    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+  //    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+  //    // navigate(`/bookingcompletion`, { state: { cardData } });
+  //    console.log("Navigating with card data:", cardData);
+  //  }
+    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: card } });
+    // console.log("Navigating with card data:", card);
     handleClick();
   };
   return (
@@ -255,7 +270,7 @@ const AboutUsContent = ({ handleClick }) => {
               </p>
             </div>
             <button
-              onClick={() => handleBookNowClick(card)}
+              onClick={() => handleBookNowClick({ ...card, imageUrl: images[index % images.length] })}
               className="mt-3 px-3 py-2 text-center text-white bg-green-600 hover:bg-green-500 rounded-lg text-xs font-semibold w-full"
             >
               Book Now

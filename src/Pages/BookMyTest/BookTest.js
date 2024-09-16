@@ -8,9 +8,9 @@ import { Helmet } from "react-helmet";
 
 // Images
 const images = [
-  "https://i.ibb.co/m6khGkq/1.jpg",
-  "https://i.ibb.co/9ygMhcC/2.jpg",
-  "https://i.ibb.co/CmkJZKf/5.jpg",
+  "https://i.ibb.co/Jswx1fx/afljsdg.png",
+  "https://i.ibb.co/NCz8Kt8/dadfs.png",
+  "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/PTcg4Sq/6.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg",
@@ -19,6 +19,7 @@ const images = [
 ];
 
 // Component
+
 const BookTest = () => {
   const navigate = useNavigate();
   const scrollToTop = () => {
@@ -32,101 +33,71 @@ const BookTest = () => {
     scrollToTop(); // Scroll to the top when the component mounts
 
     // Send the custom event to GTM
-  
-    });
 
-    const cardData = [
-      {
-        id: 1,
-        category: "Northern California: Fremont Lab",
-        title: "Fremont Laboratory",
-        shortDescription:
-          "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
-        longDescription:
-          "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
-        timing: "Mon-Fri 8:30 AM - 6:00 PM, Sat-Sun 9:00 AM - 4:00 PM",
-        location: "Fremont, CA 94538",
-     Contact: "1-800-790-4550"
-      },
-      {
-        id: 2,
-        category: "Southern California: Riverside County Mobile Testing",
-        title: "Riverside Mobile Testing",
-        shortDescription:
-          "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
-        longDescription:
-          "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
-        timing: "Mon-Fri 10:00 AM - 3:00 PM (Appointment only)",
-        location: "Riverside County",
-     Contact: "1-800-790-4550"
-      },
-      {
-        id: 3,
-        category: "Northern California Mobile Testing",
-        title: "SF Bay Area / Silicon Valley Mobile Testing",
-        shortDescription:
-          "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
-        longDescription:
-          " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
-        timing: "Mon-Fri 10:00 AM - 3:00 PM, Sat-Sun (Appointment only)",
-        location: "Alameda County",
-     Contact: "1-800-790-4550"
-      },
-      {
-        id: 4,
-        category: "Riverside Gurdwara Pop-Up",
-        title: "Riverside Gurdwara",
-        shortDescription:
-          "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
-        longDescription:
-          " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
-        timing: "Sun 11:00 AM - 2:30 PM",
-        location: "Riverside County",
-     Contact: "1-800-790-4550"
-      },
-      {
-        id: 5,
-        category: "At-home Test Kit",
-        title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
-        shortDescription:
-          "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
-        longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
-        timing: "Anytime",
-        location: "At Your Home",
-     Contact: "1-800-790-4550"
-      },
-      // {
-      //   id: 6,
-      //   category: "NorCal: Union City Pop-up",
-      //   title: "Union City Pop-up",
-      //   shortDescription:
-      //     "My Care Labs offers $0 out of pocket COVID-19 PCR and Rapid testing in Union City.",
-      //   longDescription: "Detailed information about our light solutions...",
-      //   timing: "Mon, Wed, Fri 8:30 AM - 6:00 PM",
-      //   location: "Union City, CA 94587"
-      // },
-      // {
-      //   id: 7,
-      //   category: "SoCal: Corona Mobile Testing",
-      //   title: "Mobile Testing: Corona, CA",
-      //   shortDescription:
-      //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
-      //   longDescription: "Detailed information about our audio solutions...",
-      //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
-      //   location: "Corona, CA 92882"
-      // },
-      // {
-      //   id: 8,
-      //   category: "SoCal: Corona Mobile Testing",
-      //   title: "Mobile Testing: Corona, CA",
-      //   shortDescription:
-      //     "Same-day Covid/Flu PCR results available. To speed up your testing.",
-      //   longDescription: "Detailed information about our audio solutions...",
-      //   timing: "Mon-Fri 8:30 AM - 6:00 PM",
-      //   location: "Corona, CA 92882"
-      // },
-    ];
-  
+  });
+
+  const cardData = [
+    {
+      id: 1,
+      category: "Northern California: Fremont Lab",
+      title: "Fremont Laboratory",
+      shortDescription:
+        "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
+      longDescription:
+        "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
+      timing: "8:30 AM - 6:00 PM",
+      location: "Fremont, CA 94538",
+      Contact: "1-800-790-4550"
+    },
+    {
+      id: 2,
+      category: "Riverside City Mobile Testing",
+      title: "Riverside Mobile Testing",
+      shortDescription:
+        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+      longDescription:
+        "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
+      timing: "10:00 AM - 3:00 PM",
+      location: "Riverside County",
+      Contact: "1-800-790-4550"
+    },
+    {
+      id: 3,
+      category: "Bay Area Mobile Testing",
+      title: "SF Bay Area / Silicon Valley Mobile Testing",
+      shortDescription:
+        "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
+      longDescription:
+        " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
+      timing: "10:00 AM - 3:00 PM",
+      location: "Bay Area ",
+      Contact: "1-800-790-4550"
+    },
+    {
+      id: 4,
+      category: "Riverside Gurdwara Pop-Up",
+      title: "Riverside Gurdwara",
+      shortDescription:
+        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+      longDescription:
+        " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
+      timing: "11:00 AM - 2:30 PM",
+      location: "Riverside City",
+      Contact: "1-800-790-4550"
+    },
+    {
+      id: 5,
+      category: "At-home Test Kit",
+      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
+      shortDescription:
+        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
+      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
+      timing: "Anytime",
+      location: "At Your Home",
+      Contact: "1-800-790-4550"
+    },
+  ];
+
 
   useEffect(() => {
     images.forEach((src) => {
@@ -134,7 +105,7 @@ const BookTest = () => {
       img.src = src;
     });
   }, []);
-  console.log(cardData,"carddadada");
+  console.log(cardData, "carddadada");
 
   return (
     <>
@@ -153,7 +124,7 @@ const BookTest = () => {
                 Our Testing
               </span>
               <span className="text-gray-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-                Locations... 
+                Locations...
               </span>
             </div>
           </h3>
@@ -166,8 +137,8 @@ const BookTest = () => {
             </p>
           </div>
         </div>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="container mx-auto px-1">
+          <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {cardData.slice(0, 8).map((card, index) => (
               <div key={index} className="rounded-xl overflow-hidden shadow-lg flex flex-col">
                 <img
@@ -177,31 +148,37 @@ const BookTest = () => {
                 />
                 <div className="p-4 bg-white flex flex-col justify-between flex-grow">
                   <div>
-                    <span className="text-sm text-blue-400">
-                      {/* {card.title} */}
-                    </span>
-                    <h5 className="text-lg font-bold mb-1">{card.category}</h5>
-                    <p className="text-sm text-gray-600 mb-2 line-clamp-2">
-                      {card.shortDescription}
-                      <button
-                        className="text-sm text-blue-500 hover:underline ml-1"
-                        // onClick={() => handleLearnMoreClick(card.longDescription)}
-                      >
-                        Learn More
-                      </button>
+
+                    <h5 className="text-lg whitespace-nowrap text-red-500 text-ellipsis max-w-full font-bold mb-1">{card.category}</h5>
+
+                    <h3 className="text-lg whitespace-nowrap text-blue-500 text-ellipsis max-w-full  mt-4 font-bold mb-1">Operation Hours</h3>
+
+                    <div className="flex text-black  justify-center "><p className="text-mb font-medium font-inter text-black">
+                      {card.category === "Riverside Gurdwara Pop-Up"
+                        ? "Sunday :"
+                        : card.category === "At-home Test Kit"
+                          ? ""
+                          : "Mon - Fri : "}
                     </p>
-                    <p className="text-sm text-gray-600 mb-2 ">
-                      <span className="font-bold">Hours: </span>{card.timing}
-                    </p>
-                    <p className="text-sm text-gray-600 mb-2">
-                      <span className="font-bold">Location: </span>{card.location}
-                    </p>
-                    <p className="text-sm text-gray-600 mb-2">
-                      <span className="font-bold">Call Us: </span>{card.Contact} 
-                    </p>
+                      <p className="text-black font-medium ml-2">{" "}{card.category == "At-home Test Kit" ? "We bring the lab to your doorstep!" : card.timing}</p>
+                    </div>
+                    <p className="text-mb  text-black font-medium  mt-4">
+                        <span className="font-extrabold">Location : </span>{card.location}
+                      </p>
+                      <p className="text-mb  font-medium text-black mb-2">
+                        <span className="font-extrabold">Call Us : </span>{card.Contact}
+                      </p>
+                      <div className="mb-1">
+
+                        <span className="text-base font-bold  text-orange-600">
+                          {card.category == "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
+                          {card.category == "Riverside City Mobile Testing" ? " Appointment only" : ""}
+                          {card.category == "Bay Area Mobile Testing" ? " Appointment only" : ""}
+                        </span>
+                      </div>
                   </div>
                   <div className="flex justify-center mt-auto">
-                    {console.log(card.id,"carrdddddddd")}
+                    {/* {console.log(card.id,"carrdddddddd")} */}
                     <Button cardData={{ ...card, imageUrl: images[index % images.length] }} />
                   </div>
                 </div>

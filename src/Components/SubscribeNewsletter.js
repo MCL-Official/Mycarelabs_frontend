@@ -32,7 +32,7 @@ function SubscribeNewsletter() {
 
   return (
     <div className="ft-info-p2">
-      <p className="ft-input-title">Stay Update to our Newsletter</p>
+      <p className="ft-input-title">Please subscribe to our newsletter!</p>
       <input
         type="text"
         inputMode="email"

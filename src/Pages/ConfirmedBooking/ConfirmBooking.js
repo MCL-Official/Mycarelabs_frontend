@@ -54,7 +54,10 @@ const ConfirmBooking = () => {
       bookingValue: 1 // You can add more data here if needed
     });
 
-    if (data && data?.cardData) {
+    if (data && data?.cardData) {      
+
+      // THIS IS FOR THE BOOKING SYSTEM THAT I HAVE CREATED 
+      // switch (data?.cardData?.cardData?.title) {      
       switch (data?.cardData?.title) {
         case 'Fremont Laboratory':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
@@ -78,14 +81,21 @@ const ConfirmBooking = () => {
           break;
         default:
           // Show a different message and button for cases not listed
-          setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
-          setShowButton(true); // Show the button
+          // setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
+          // setShowButton(true); // Show the button
+          setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
+      // startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/self-testing-kit-for-covid-19-pre-book-your-order-999256");
+
           break;
       }
     } else {
       // Fallback message and button if no title is found
+      // ----------check------------
       setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
       setShowButton(true); // Show the button
+      // setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
+      // startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/self-testing-kit-for-covid-19-pre-book-your-order-999256");
+  
     }
   }, [data, countdown]);
 

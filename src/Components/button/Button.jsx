@@ -3,6 +3,8 @@ import { FiSend } from "react-icons/fi";
 
 const NeumorphismButton = ({ cardData }) => {
   const navigate = useNavigate();
+  // console.log(cardData);
+  
 // Utility function to format the category name
 const formatCategoryName = (categoryName) => {
   return categoryName
@@ -17,8 +19,24 @@ const formatCategoryName = (categoryName) => {
 
   const handleClick = () => {
     navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-    // navigate(`/bookingcompletion`, { state: { cardData } });
-    console.log("Navigating with card data:", cardData);
+
+    
+
+  //  this is for our own booking system that i have created 
+
+
+
+
+
+    // if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
+    //    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    // }else{
+    //   navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    //   // navigate(`/bookingcompletion`, { state: { cardData } });
+    // }
+
+
+
   };
 
   return (
@@ -27,6 +45,7 @@ const formatCategoryName = (categoryName) => {
       className={`
         px-4 py-2 rounded-full 
         flex items-center gap-2 
+        font-bold
         shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
         transition-all
           text-white
@@ -34,7 +53,8 @@ const formatCategoryName = (categoryName) => {
     `}
     >
       <FiSend />
-      <span>Book Now</span>
+      {cardData.category==="At-home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
+      
     </button>
   );
 };

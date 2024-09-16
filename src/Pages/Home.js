@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Hero from "../Components/Hero";
 import Info from "../Components/Info";
@@ -22,10 +22,19 @@ import { Helmet } from "react-helmet";
 import { SlideInAuth } from "../Components/Contact/SlideInAuth";
 import axios from "axios";
 import HoverCards1 from "../Components/HoverCard/HoverCards1";
+import Video from "../Components/Video/Video";
+import { Testimonials } from "../Components/SOLUTION/Infectious-desiase/Group/Testimonials";
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
 function Home() {
+  const authSectionRef = useRef(null);
+
+  const scrollToAuth = () => {
+    if (authSectionRef.current) {
+      authSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   const [error, setError] = useState(null);
@@ -84,11 +93,15 @@ useEffect(() => {
       {/* <Hero /> */}
       {/* <FeatureToggles/> */}
       <HoverCards1 />
+      <Info scrollToAuth={scrollToAuth} />
       <FeatureComponent />
       <InsuranceAccepted />
-      <Info />
-      <HoverCards />
-      <SlideInAuth/>
+      <Video/>
+      <Testimonials/>
+      {/* <HoverCards /> */}
+      <div ref={authSectionRef}>
+        <SlideInAuth />
+      </div>
       {/* <ImageContainer/> */}
       {/* <Footer /> */}
 
