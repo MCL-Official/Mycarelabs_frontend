@@ -87,13 +87,13 @@ function Footer() {
   const handleNavigation = (item, index) => {
     const formattedCategory = formatCategoryName(item.category);
 
-    // navigate(`/bookingcompletion/${formattedCategory}`, {
-    //   state: { cardData: { ...item, imageUrl: images[index % images.length] } },
-    // });
-    
-    navigate(`/covid-test-locations/${formattedCategory}`, {
+    navigate(`/bookingcompletion/${formattedCategory}`, {
       state: { cardData: { ...item, imageUrl: images[index % images.length] } },
     });
+    
+    // navigate(`/covid-test-locations/${formattedCategory}`, {
+    //   state: { cardData: { ...item, imageUrl: images[index % images.length] } },
+    // });
 
     console.log("Navigating with card data:", item);
   };
