@@ -25,7 +25,22 @@ function Footer() {
         "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
     },
     {
-      category: "Southern cal: Riverside County Mobile Testing",
+      category: "Bay Area Mobile Testing",
+      title: "SF Bay Area / Silicon Valley Mobile Testing",
+      shortDescription:
+        "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
+      longDescription:
+        " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
+    },
+    {
+      category: "At-Home Test Kit",
+      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
+      shortDescription:
+        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
+      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
+    },
+    {
+      category: "Riverside City Mobile Testing",
       // category: "Northern California: Fremont Lab",
       title: "Riverside Mobile Testing",
       shortDescription:
@@ -33,14 +48,7 @@ function Footer() {
       longDescription:
         "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
     },
-    {
-      category: "Northern California Mobile Testing",
-      title: "SF Bay Area / Silicon Valley Mobile Testing",
-      shortDescription:
-        "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
-      longDescription:
-        " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
-    },
+  
     {
       category: "Riverside Gurdwara Pop-Up",
       title: "Riverside Gurdwara",
@@ -49,13 +57,7 @@ function Footer() {
       longDescription:
         " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
     },
-    {
-      category: "At-home Test Kit",
-      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
-      shortDescription:
-        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
-      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
-    },
+   
     // {
     //   category: "NorCal: Union City Pop-up",
     //   title: "Union City Pop-up",
@@ -116,71 +118,85 @@ function Footer() {
           <SubscribeNewsletter />
         </div>
 
-        <div className="ft-list">
-          <p className="ft-list-title">Home</p>
-          <ul className="ft-list-items">
-          
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/contact">Contact Us</a>
-            </li>
-            <li>
-              <a href="/testing-solutions">Testing Solutions</a>
-            </li>
-            <li>
-              <a href="/covid-test-locations">Testing Locations</a>
-            </li>
-            <li>
-              <a href="/covid-test-locations">Book An Appointment</a>
-            </li>
-            <li>
-              <a href="/privacy-policy">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="/hipaa-information">HIPAA Information</a>
-            </li>
-          </ul>
-        </div>
+        <div className="ft-list" style={{ textAlign: "left", display: "inline-block", paddingLeft: "20px" }}>
+  <p className="ft-list-title" style={{ marginBottom: "10px" }}>Home</p>
+  <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="/contact">Contact Us</a>
+    </li>
+    <li>
+      <a href="/testing-solutions">Testing Solutions</a>
+    </li>
+    <li>
+      <a href="/covid-test-locations">Testing Locations</a>
+    </li>
+    <li>
+      <a href="/covid-test-locations">Book An Appointment</a>
+    </li>
+    <li>
+      <a href="/privacy-policy">Privacy Policy</a>
+    </li>
+    <li>
+      <a href="/hipaa-information">HIPAA Information</a>
+    </li>
+  </ul>
+</div>
 
-        <div className="ft-list">
-          <p className="ft-list-title">All Locations</p>
-          <ul className="ft-list-items">
-            {cardData && cardData.length > 0 ? (
-              cardData.map((item, index) => (
-                <li key={item.title}>
-                  <button onClick={() => handleNavigation(item, index)}>
-                    {item.category}
-                  </button>
-                </li>
-              ))
-            ) : (
-              <p>No locations available.</p>
-            )}
-          </ul>
-        </div>
 
-        <div className="ft-list" id="contact">
-          <p className="ft-list-title">Talk To Us</p>
-          <ul className="ft-list-items">
-            <li>
-              <a href="mailto:support@mycarelabs.com">support@mycarelabs.com</a>
-            </li>
-            <li>
-              <a href="tel:+1-800-790-4550">Call: +1-800-790-4550</a>
-            </li>
-            <li>
-              <a href="tel:+1-888-289-9940">Fax: +1-888-289-9940</a>
-            </li>
-            <li>
-              <a href="tel:+022 2326 6232">5500 Stewart Avenue, Suite 108,
-                <br />
-                Fremont, CA 94538
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        <div className="ft-list" style={{ textAlign: "left", display: "inline-block", paddingLeft: "20px" }}>
+  <p className="ft-list-title" style={{ marginBottom: "10px" }}>All Locations</p>
+  <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+    {cardData && cardData.length > 0 ? (
+      cardData.map((item, index) => (
+        <li key={item.title} style={{ marginBottom: "10px" }}>
+          <button
+            onClick={() => handleNavigation(item, index)}
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              color: "#a5a7ac",
+              // textDecoration: "underline",
+              cursor: "pointer",
+              padding: "0",
+            }}
+          >
+            {item.category}
+          </button>
+        </li>
+      ))
+    ) : (
+      <p>No locations available.</p>
+    )}
+  </ul>
+</div>
+
+
+        <div className="ft-list" id="contact" style={{ textAlign: "left", display: "inline-block", paddingLeft: "20px" }}>
+  <p className="ft-list-title" style={{ marginBottom: "10px" }}>Talk To Us</p>
+  <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+    <li>
+      <a href="mailto:support@mycarelabs.com">support@mycarelabs.com</a>
+    </li>
+    <li>
+      <a href="tel:+1-800-790-4550">Call: +1-800-790-4550</a>
+    </li>
+    <li>
+      <a href="tel:+1-888-289-9940">Fax: +1-888-289-9940</a>
+    </li>
+    <li>
+      <a href="tel:+022 2326 6232">
+        5500 Stewart Avenue, Suite 108,
+        <br />
+        Fremont, CA 94538
+      </a>
+    </li>
+  </ul>
+</div>
+
       </div>
 
       <div className="ft-copyright">

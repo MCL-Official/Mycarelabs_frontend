@@ -50,7 +50,7 @@ const cardData = [
   },
   {
     id: 3,
-    category: "At-home Test Kit",
+    category: "At-Home Test Kit",
     title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
     shortDescription:
       "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
