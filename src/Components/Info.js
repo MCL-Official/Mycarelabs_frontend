@@ -5,7 +5,7 @@ import { faHeartPulse, faTruckMedical, faTooth } from "@fortawesome/free-solid-s
 const cardData = [
   {
     title: "Employers",
-    description: "Streamline employee health with our comprehensive testing solutions. Ensure a safe workplace environment with efficient and reliable testing services tailored for employers.",
+    description: "Streamline employee health with our comprehensive testing solutions. Ensure a safe workplace environment with efficient and reliable testing services tailored for .",
     icon: faTruckMedical
   },
   {
@@ -53,12 +53,9 @@ function Info({ scrollToAuth }) {
             </span>
         </h3>
         <p className="my-10 mx-4 text-center text-gray-700 font-rubik tracking-wide leading-7 text-base sm:text-sm md:text-xl lg:text-xl pb-6">
-        My Care Labs offers quick, hassle-free, and accurate COVID-19 RT-PCR testing. 
-          With same day results or within 24 hours, we have testing on-site at our 
-          laboratory and at pop-ups throughout California. My Care Labs provides 24 – 
-          48hr results to not only the general public at our laboratory and pop-ups, 
-          but also through group mobile testing, nursing homes, public and private schools, 
-          businesses, houses of worship, and other large organizations.
+          We provide quick, hassle-free, and accurate diagnostic testing solution. 
+          With same day results or within 24 hours, we offer testing on-site at our laboratory, 
+          pop-up location and concierge mobile testing throughout California.
         </p>
       </div>
 
