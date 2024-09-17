@@ -150,8 +150,8 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
 const CTAs = ({ isHome, scrolled }) => {
   const navigate = useNavigate()
   const data =()=>{
-    // navigate()
-    window.location.href ="https://patient-in.creliohealth.com/patient/login"
+    // navigate()https://patient-us.creliohealth.com/patient/login
+    window.location.href ="https://patient-us.creliohealth.com/patient/login"
   } 
   return (
     <div className="flex items-center gap-3">

@@ -24,6 +24,8 @@ import axios from "axios";
 import HoverCards1 from "../Components/HoverCard/HoverCards1";
 import Video from "../Components/Video/Video";
 import { Testimonials } from "../Components/SOLUTION/Infectious-desiase/Group/Testimonials";
+import BlogPostCarousel from "../Components/Blog/BlogPostCarousel";
+import Caontact from "../Components/Accordain/Caontact";
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
@@ -95,10 +97,12 @@ useEffect(() => {
       <HoverCards1 />
       <Info scrollToAuth={scrollToAuth} />
       <FeatureComponent />
+      <BlogPostCarousel/>
       <InsuranceAccepted />
       <Video/>
       <Testimonials/>
       {/* <HoverCards /> */}
+      <Caontact/>
       <div ref={authSectionRef}>
         <SlideInAuth />
       </div>
