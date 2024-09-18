@@ -36,6 +36,10 @@
     letter-spacing: .8px;
     line-height: 1.7rem;
 }
+.ft-list {
+    display: flex;
+    flex-direction: column;
+}
 .ft-input-title {
     color: white;
     font-family: 'Rubik', sans-serif;

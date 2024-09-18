@@ -10,13 +10,13 @@ import { Helmet } from "react-helmet";
 const images = [
   "https://i.ibb.co/Jswx1fx/afljsdg.png",
   "https://i.ibb.co/NCz8Kt8/dadfs.png",
+  "https://i.ibb.co/PTcg4Sq/6.jpg",
   "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
-  "https://i.ibb.co/PTcg4Sq/6.jpg",
-  "https://i.ibb.co/ZBLZ7zp/7.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
+  "https://i.ibb.co/ZBLZ7zp/7.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
 ];
+
 
 // Component
 
@@ -46,23 +46,11 @@ const BookTest = () => {
       longDescription:
         "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
       timing: "8:30 AM - 6:00 PM",
-      location: "Fremont, CA 94538",
+      location: "5500 Stewart Avenue, Suite 108, Fremont, CA 94538",
       Contact: "1-800-790-4550"
     },
     {
       id: 2,
-      category: "Riverside City Mobile Testing",
-      title: "Riverside Mobile Testing",
-      shortDescription:
-        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
-      longDescription:
-        "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
-      timing: "10:00 AM - 3:00 PM",
-      location: "Riverside County",
-      Contact: "1-800-790-4550"
-    },
-    {
-      id: 3,
       category: "Bay Area Mobile Testing",
       title: "SF Bay Area / Silicon Valley Mobile Testing",
       shortDescription:
@@ -74,7 +62,31 @@ const BookTest = () => {
       Contact: "1-800-790-4550"
     },
     {
+      id: 3,
+      category: "At-Home Test Kit",
+      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
+      shortDescription:
+        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
+      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
+      timing: "Anytime",
+      location: "At Your Home",
+      Contact: "1-800-790-4550"
+    },
+    {
       id: 4,
+      category: "Riverside City Mobile Testing",
+      title: "Riverside Mobile Testing",
+      shortDescription:
+        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+      longDescription:
+        "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
+      timing: "10:00 AM - 3:00 PM",
+      location: "Riverside County",
+      Contact: "1-800-790-4550"
+    },
+    
+    {
+      id: 5,
       category: "Riverside Gurdwara Pop-Up",
       title: "Riverside Gurdwara",
       shortDescription:
@@ -85,17 +97,7 @@ const BookTest = () => {
       location: "Riverside City",
       Contact: "1-800-790-4550"
     },
-    {
-      id: 5,
-      category: "At-home Test Kit",
-      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
-      shortDescription:
-        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
-      longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
-      timing: "Anytime",
-      location: "At Your Home",
-      Contact: "1-800-790-4550"
-    },
+  
   ];
 
 
