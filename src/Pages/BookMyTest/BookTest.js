@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Button from "../../Components/button/Button";
 import Navbar from '../../Components/Navbar/Navbar';
 import { Helmet } from "react-helmet";
+import { MotionConfig, motion } from 'framer-motion';
+import { twMerge } from 'tailwind-merge';
+import myImage from '../../Assets/22.png';
 
 
 
@@ -47,7 +50,7 @@ const BookTest = () => {
         "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
       timing: "8:30 AM - 6:00 PM",
       location: "5500 Stewart Avenue, Suite 108, Fremont, CA 94538",
-      Contact: "1-800-790-4550"
+      Contact: "800-790-4550"
     },
     {
       id: 2,
@@ -84,7 +87,7 @@ const BookTest = () => {
       location: "Riverside County",
       Contact: "1-800-790-4550"
     },
-    
+
     {
       id: 5,
       category: "Riverside Gurdwara Pop-Up",
@@ -97,10 +100,13 @@ const BookTest = () => {
       location: "Riverside City",
       Contact: "1-800-790-4550"
     },
-  
+
   ];
 
+  const sample = () => {
+    console.log("harsh sackanca");
 
+  }
   useEffect(() => {
     images.forEach((src) => {
       const img = new Image();
@@ -139,22 +145,32 @@ const BookTest = () => {
             </p>
           </div>
         </div>
-        <div className="container mx-auto px-1">
-          <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <div className="container mx-auto px-0">
+          <div className="grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {cardData.slice(0, 8).map((card, index) => (
-              <div key={index} className="rounded-xl overflow-hidden shadow-lg flex flex-col">
+              <div key={index} className="relative group rounded-xl overflow-hidden shadow-lg flex flex-col">
+                {/* Image */}
                 <img
-                  src={images[index % images.length]} // Adjusted to use % to cycle through images
+                  src={images[index % images.length]}
                   className="h-56 w-full object-cover"
                   alt={card.title}
                 />
-                <div className="p-4 bg-white flex flex-col justify-between flex-grow">
+
+                {/* Hover Dropdown */}
+                <div className="absolute top-[-100%] left-0 right-0  group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4" style={{ background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))' }}>
+                  <h5 className="text-2xl font-bold text-white text-left">{card.title}</h5>
+                  <p className="text-base text-white text-left  mt-2">{card.shortDescription}</p>
+                </div>
+
+                {/* Card Content */}
+                <div className="p-4 bg-white flex flex-col justify-between flex-grow z-10 relative">
                   <div>
-
-                    <h5 className="text-lg whitespace-nowrap text-red-500 text-ellipsis max-w-full font-bold mb-1">{card.category}</h5>
-
-                    <h3 className="text-lg whitespace-nowrap text-blue-500 text-ellipsis max-w-full  mt-4 font-bold mb-1">Operation Hours</h3>
-
+                    <h5 className="text-lg whitespace-nowrap  text-red-500 text-ellipsis max-w-full font-bold mb-1 font-inter">{card.category}</h5>
+                    <h3 className="text-lg font-bold mt-2 mb-1 font-inter" style={{
+                      background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}>Operation Hours</h3>
                     <div className="flex text-black  justify-center "><p className="text-mb font-medium font-inter text-black">
                       {card.category === "Riverside Gurdwara Pop-Up"
                         ? "Sunday :"
@@ -164,23 +180,35 @@ const BookTest = () => {
                     </p>
                       <p className="text-black font-medium ml-2">{" "}{card.category == "At-home Test Kit" ? "We bring the lab to your doorstep!" : card.timing}</p>
                     </div>
-                    <p className="text-mb  text-black font-medium  mt-4">
-                        <span className="font-extrabold">Location : </span>{card.location}
-                      </p>
-                      <p className="text-mb  font-medium text-black mb-2">
-                        <span className="font-extrabold">Call Us : </span>{card.Contact}
-                      </p>
-                      <div className="mb-1">
 
-                        <span className="text-base font-bold  text-orange-600">
-                          {card.category == "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
-                          {card.category == "Riverside City Mobile Testing" ? " Appointment only" : ""}
-                          {card.category == "Bay Area Mobile Testing" ? " Appointment only" : ""}
-                        </span>
-                      </div>
+                    <h3 className="text-lg text-blue-500 font-bold font-inter" style={{
+                      background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}>Location</h3>
+                    <p className="text-black font-medium ">{card.location}</p>
+
+                    <div className='flex flex-wrap  justify-center mt-4 hover:cursor-pointer' onClick={sample}>
+                      <img src={myImage} alt="My Image" />
+                      <p className="  text-blue-500 text-xl font-bold mb-2 hover:cursor-pointer font-inter" style={{
+                        background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}>
+                        <span className="font-bold"> </span>{card.Contact}
+                      </p>
+                    </div>
+
+                    <div className="mb-1">
+                      <span className=" text-lg font-bold" style={{
+                      background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}>
+                        {card.category == "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
+                        {card.category == "Riverside City Mobile Testing" ? " Appointment only" : ""}
+                        {card.category == "Bay Area Mobile Testing" ? " Appointment only" : ""}
+                      </span>
+                    </div>
                   </div>
                   <div className="flex justify-center mt-auto">
-                    {/* {console.log(card.id,"carrdddddddd")} */}
                     <Button cardData={{ ...card, imageUrl: images[index % images.length] }} />
                   </div>
                 </div>

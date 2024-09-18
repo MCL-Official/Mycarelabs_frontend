@@ -5,6 +5,7 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
+import myImage from '../../Assets/22.png';
 import { Helmet } from "react-helmet";
 import { MotionConfig, motion } from "framer-motion";
 
@@ -154,6 +155,10 @@ const HoverCards1 = () => {
     });
   }, []);
 
+  const sample = () => {
+    console.log("harsh sackanca");
+
+  }
   return (
     <>
       <Helmet>
@@ -174,81 +179,112 @@ const HoverCards1 = () => {
           >
             <MdOutlineKeyboardArrowLeft size={24} />
           </button>
-          <div
-            ref={carouselRef}
-            className="flex overflow-x-auto space-x-8 p-4 mb-2 pb-2 scrollbar-hide"
+          <div 
+            ref={carouselRef}  className="flex overflow-x-auto space-x-8 p-4 mb-2 pb-2 scrollbar-hide">
+  
+  {cardData.slice(0, 8).map((card, index) => (
+    <div
+      key={index}
+      className="relative group   rounded-xl flex-shrink-0 w-80 h-112 transition-transform transform  hover:shadow-2xl shadow-lg flex flex-col "
+    >
+      {/* Image */}
+      <img
+        src={images[index % images.length]}
+        className="h-64 w-full object-cover" // Adjust height and width
+        alt={card.title}
+      />
+
+      {/* Hover Dropdown */}
+      <div
+        className="absolute top-[-100%] left-0 right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
+        style={{
+          background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+        }}
+      >
+        <h5 className="text-2xl font-bold text-white text-left">{card.title}</h5>
+        <p className="text-base text-white text-left mt-2">{card.shortDescription}</p>
+      </div>
+
+      {/* Card Content */}
+      <div className="p-6 bg-white flex flex-col justify-between flex-grow z-10 relative">
+        <div>
+          <h5 className="text-lg whitespace-nowrap text-red-500 text-ellipsis max-w-full font-bold mb-1 font-inter">
+            {card.category}
+          </h5>
+          <h3
+            className="text-lg font-bold mt-2 mb-1 font-inter"
+            style={{
+              background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
           >
-            {cardData.slice(0, 7).map((card, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-80 h-112 transition-transform transform  hover:shadow-2xl"
-              >
-                <div className="rounded-xl overflow-hidden shadow-lg h-full flex flex-col">
-                  <div className="relative">
-                    <img
-                      src={images[index % images.length]}
-                      className="h-56 w-full object-cover"
-                      alt={card.title}
-                    />
-
-                    {/* Overlay that appears on hover */}
-                    <motion.div
-                      className="absolute inset-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                    >
-                      <div className="h-2/5">
-                        <p className="font-bold text-lg">{card.title}</p>
-                        <p className="text-sm">{card.shortDescription}</p>
-                      </div>
-                    </motion.div>
-                  </div>
-                  <div className="p-4 bg-white flex flex-col justify-between flex-grow">
-                    <div>
-
-                      <h5 className="text-lg whitespace-nowrap text-red-500 text-ellipsis max-w-full font-bold mb-1">{card.category}</h5>
-
-                      <h3 className="text-lg whitespace-nowrap text-blue-500 text-ellipsis max-w-full  mt-4 font-bold mb-1">Operation Hours</h3>
-
-                      <div className="flex text-black  justify-center "><p className="text-mb font-medium font-inter text-black">
-                        {card.category === "Riverside Gurdwara Pop-Up"
-                          ? "Sunday :"
-                          : card.category === "At-home Test Kit"
-                            ? ""
-                            : "Mon - Fri : "}
-                      </p>
-                        <p className="text-black font-medium ml-2">{" "}{card.category == "At-home Test Kit" ? "We bring the lab to your doorstep!" : card.timing}</p>
-                      </div>
-                      {/* <div className="flex  text-black justify-evenly">
-                        <p className="mr-1 text-black font-medium ">Sat - Sun</p>
-                        <p className="text-black  font-medium">9:00 AM - 4:00 PM</p>
-                      </div> */}
-                      <p className="text-mb  text-black font-medium  mt-4">
-                        <span className="font-extrabold">Location : </span>{card.location}
-                      </p>
-                      <p className="text-mb  font-medium text-black mb-2">
-                        <span className="font-extrabold">Call Us : </span>{card.Contact}
-                      </p>
-                      <div className="mb-1">
-
-                        <span className="text-base font-bold  text-orange-600">
-                          {card.category == "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
-                          {card.category == "Riverside City Mobile Testing" ? " Appointment only" : ""}
-                          {card.category == "Bay Area Mobile Testing" ? " Appointment only" : ""}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex justify-center mt-2">
-                      <NeumorphismButton
-                        slug={index}
-                        cardData={{ ...card, imageUrl: images[index % images.length] }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+            Operation Hours
+          </h3>
+          <div className="flex text-black justify-center">
+            <p className="text-mb font-medium font-inter text-black">
+              {card.category === "Riverside Gurdwara Pop-Up"
+                ? "Sunday :"
+                : card.category === "At-home Test Kit"
+                ? ""
+                : "Mon - Fri : "}
+            </p>
+            <p className="text-black font-medium ml-2">
+              {" "}
+              {card.category === "At-home Test Kit" ? "We bring the lab to your doorstep!" : card.timing}
+            </p>
           </div>
+
+          <h3
+            className="text-lg text-blue-500 font-bold font-inter"
+            style={{
+              background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            Location
+          </h3>
+          <p className="text-black font-medium ">{card.location}</p>
+
+          <div className="flex flex-wrap justify-center mt-4 hover:cursor-pointer" onClick={sample}>
+            <img src={myImage} alt="My Image" />
+            <p
+              className="text-blue-500 text-xl font-bold mb-2 hover:cursor-pointer font-inter"
+              style={{
+                background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              <span className="font-bold"> </span>
+              {card.Contact}
+            </p>
+          </div>
+
+          <div className="mb-1">
+            <span
+              className="text-lg font-extrabold"
+              style={{
+                background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              {card.category === "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
+              {card.category === "Riverside City Mobile Testing" ? " Appointment only" : ""}
+              {card.category === "Bay Area Mobile Testing" ? " Appointment only" : ""}
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-center mt-auto">
+          <NeumorphismButton cardData={{ ...card, imageUrl: images[index % images.length] }} />
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
           <button
             className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10"
             onClick={scrollRight}
