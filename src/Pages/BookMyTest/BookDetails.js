@@ -12,6 +12,7 @@ import Locations from '../../Components/Locations/Locations';
 import { Feature } from '../../Components/SOLUTION/Infectious-desiase/Group/Feature';
 import GetStartedCard from '../../Components/GetStartedCard/Getstarted';
 import TabsFeatures from './TabsFeatures';
+import {CrelioData} from "../../Components/Booking/data"
 
 
 const BookTestDetails = () => {
@@ -22,6 +23,7 @@ const BookTestDetails = () => {
   const cardData = location.state?.cardData;
   console.log(cardData,'ashcbaschac');
   
+  console.log(CrelioData,"sdvjsvnsdvnjvsn");
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,10 +51,12 @@ const BookTestDetails = () => {
         <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
+
+      
       <div
         className="relative bg-cover bg-center h-[30rem]"
         style={{ backgroundImage: `url(${cardData?.imageUrl})` }}
-      >
+        >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-4">
           <h1 className="text-4xl font-bold sm:mt-1 mt-10 mb-2">{cardData?.title}</h1>
@@ -62,7 +66,7 @@ const BookTestDetails = () => {
       </div>
       <div className="relative container mx-auto z-15" style={{ marginTop: '-5rem' }}>
         {/* <div className="bg-white p-8 shadow-lg rounded-lg" style={{ background: 'none' }}> */}
-          <DateTimePicker cardData={cardData} />
+          <DateTimePicker cardData={cardData} CrelioData={CrelioData} />
         
           <TabsFeatures/> 
       <Locations/>

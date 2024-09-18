@@ -43,11 +43,11 @@ const LeftContainer = ({ cardData }) => {
     </div>
   );
 };
-// const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
 
-const DateTimePicker = (cardData) => {
-  console.log(cardData?.cardData?.category, "dskvjbjbdhsvbhjvb");
-  // const data = 
+const DateTimePicker = ({cardData,CrelioData}) => {
+  // console.log(cardData?.cardData?.category, "dskvjbjbdhsvbhjvb");
+  console.log(CrelioData,'sdkjvnvdsvsnvjsdnsvnvsd');
+  
   const formatCategoryName = (data) => {
     console.log("datadatadatadatadata", data)
     try {
@@ -149,16 +149,6 @@ const DateTimePicker = (cardData) => {
   };
 
 
-
-  // const handleNextMonth = () => {
-  //   if (monthIndex === 11) {
-  //     setMonthIndex(0);
-  //     setYear(year + 1);
-  //   } else {
-  //     setMonthIndex(monthIndex + 1);
-  //   }
-  // };
-
   const timeSlots = [
     "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
     "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
@@ -166,18 +156,7 @@ const DateTimePicker = (cardData) => {
     "5:00 PM", "5:30 PM", "6:00 PM"
   ];
 
-  // const handleDateClick = (day) => {
-  //   const date = `${months[monthIndex]} ${day + 1}, ${year}`;
-  //   setSelectedDate(date);
-  //   setShowTimes(true);
-  // };
-
-  // const handleTimeClick = (time) => {
-  //   setShrinkButton(time);
-  //   setSelectedTime(time);
-  //   setTimeout(() => setShrinkButton(null), 300); // Reset after the animation duration
-  // };
-
+  
   const handleTimeClick = (time) => {
     if (isTimeInPast(time)) return; // Prevent selecting past times
     setSelectedTime(time);
@@ -260,7 +239,15 @@ const DateTimePicker = (cardData) => {
     // if (!formData.zipCode) newInvalidFields.zipCode = true;
     if (!selectedDate) newInvalidFields.selectedDate = true;
     if (!selectedTime) newInvalidFields.selectedTime = true;
+    CrelioData.fullName= formData.firstName;
+    CrelioData.mobile= formData.phone
+    CrelioData.email= formData.email
+    CrelioData.startDate= moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
+    CrelioData.endDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").add(30, 'minutes').utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
+ 
 
+    console.log(CrelioData,"sdkjvsbkjbsdvsdvn");
+    
     if (Object.keys(newInvalidFields).length > 0) {
       setInvalidFields(newInvalidFields);
       setNotification({
