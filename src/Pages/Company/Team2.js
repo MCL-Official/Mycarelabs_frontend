@@ -25,7 +25,7 @@ Learn about My Care Labs, your trusted partner in diagnostic testing. Discover o
         <meta name="author" content="My Care Labs" />
       </Helmet>
       {/* <Teamsample/> */}
-      <Sampletest/>
+      <Sampletest/> 
       <Index/>
       <About3/>
       <CollapseCardFeatures/>
