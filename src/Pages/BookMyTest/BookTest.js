@@ -13,7 +13,7 @@ import myImage from '../../Assets/22.png';
 const images = [
   "https://i.ibb.co/Jswx1fx/afljsdg.png",
   "https://i.ibb.co/NCz8Kt8/dadfs.png",
-  "https://i.ibb.co/PTcg4Sq/6.jpg",
+  "https://i.ibb.co/gRp4RjP/111.png",
   "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
@@ -44,20 +44,26 @@ const BookTest = () => {
       id: 1,
       category: "Northern California: Fremont Lab",
       title: "Fremont Laboratory",
-      shortDescription:
-        "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
-      longDescription:
-        "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
+      shortDescription: [
+        "COVID-19, RSV & FLU A/B",
+        "Wellness Testing ",
+        "Toxicology Testing",
+        "UTI Testing (coming soon)",
+      ],
       timing: "8:30 AM - 6:00 PM",
       location: "5500 Stewart Avenue, Suite 108, Fremont, CA 94538",
-      Contact: "800-790-4550"
+      Contact: "1-800-790-4550"
     },
     {
       id: 2,
       category: "Bay Area Mobile Testing",
-      title: "SF Bay Area / Silicon Valley Mobile Testing",
-      shortDescription:
-        "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
+      title: "Bay Area Mobile Testing",
+      shortDescription: [
+        " Available by appointment only",
+        "Must be within a 15 mile radius of Fremont Lab",
+        "Same day or 24 hour results"
+      ],
+      // "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
       longDescription:
         " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
       timing: "10:00 AM - 3:00 PM",
@@ -67,9 +73,13 @@ const BookTest = () => {
     {
       id: 3,
       category: "At-Home Test Kit",
-      title: "PCR COVID-19, RSV, and Influenza A/B Test Kit",
-      shortDescription:
-        "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
+      title: "At-Home Test Kit",
+      shortDescription: [
+        "Delivered right to your door step!",
+        "We provide the shipping and testing materials",
+        "Results within 24-48 hours"
+      ],
+      // "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, e to My Care Labs Medical Lab, your dedicated partner in health diagnostics, pe to My Care Labs Medicaproudly serving the Fremont, California community.",
       longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
       timing: "Anytime",
       location: "At Your Home",
@@ -80,7 +90,13 @@ const BookTest = () => {
       category: "Riverside City Mobile Testing",
       title: "Riverside Mobile Testing",
       shortDescription:
-        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+        [
+          " Available by appointment only",
+          "  MUST be within Riverside City",
+          "   Results within 24-48 hours"
+        ],
+
+      // "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
         "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
       timing: "10:00 AM - 3:00 PM",
@@ -93,7 +109,13 @@ const BookTest = () => {
       category: "Riverside Gurdwara Pop-Up",
       title: "Riverside Gurdwara",
       shortDescription:
-        "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
+        [
+          "Available by appointment only",
+          "Only on Sundays",
+          "Results within 24-48 hours"
+        ],
+
+      // "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
       longDescription:
         " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
       timing: "11:00 AM - 2:30 PM",
@@ -160,14 +182,27 @@ const BookTest = () => {
                 {/* Hover Dropdown */}
                 <div className="absolute top-[-100%] left-0 right-0  group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4" style={{ background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))' }}>
                   <h5 className="text-2xl font-bold text-white text-left">{card.title}</h5>
-                  <p className="text-base text-white text-left  mt-2">{card.shortDescription}</p>
+                  {/* <p className="text-base text-white text-left  mt-2">{card.shortDescription}</p> */}
+                  {Array.isArray(card.shortDescription) ? (
+                    <ul className="text-base mb-1 text-white text-left list-inside pl-0 mt-2 ">
+                      {card.shortDescription.map((item, idx) => (
+                        <li key={idx} className="list-disc"> {/* Use list-disc for bullet points */}
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-base mb-1 text-white text-left mt-2">
+                      {card.shortDescription}
+                    </p>
+                  )}
                 </div>
 
                 {/* Card Content */}
-                <div className="p-4 bg-white flex flex-col justify-between flex-grow z-10 relative">
+                <div className="p-6 bg-white flex flex-col justify-between flex-grow z-10 relative">
                   <div>
                     <h5 className="text-lg whitespace-nowrap  text-red-500 text-ellipsis max-w-full font-bold mb-1 font-inter">{card.category}</h5>
-                    <h3 className="text-lg font-bold mt-2 mb-1 font-inter" style={{
+                    <h3 className="text-lg font-bold mt-2 font-inter  mb-[-6px]" style={{
                       background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent'
                     }}>Operation Hours</h3>
@@ -181,7 +216,7 @@ const BookTest = () => {
                       <p className="text-black font-medium ml-2">{" "}{card.category == "At-home Test Kit" ? "We bring the lab to your doorstep!" : card.timing}</p>
                     </div>
 
-                    <h3 className="text-lg text-blue-500 font-bold font-inter" style={{
+                    <h3 className="text-lg text-blue-500 font-bold font-inter mb-[-4px]" style={{
                       background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent'
                     }}>Location</h3>
@@ -199,9 +234,9 @@ const BookTest = () => {
 
                     <div className="mb-1">
                       <span className=" text-lg font-bold" style={{
-                      background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}>
+                        background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}>
                         {card.category == "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
                         {card.category == "Riverside City Mobile Testing" ? " Appointment only" : ""}
                         {card.category == "Bay Area Mobile Testing" ? " Appointment only" : ""}

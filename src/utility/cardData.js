@@ -91,7 +91,7 @@ export  const cardData = [
     "https://i.ibb.co/NCz8Kt8/dadfs.png",
   "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
-  "https://i.ibb.co/PTcg4Sq/6.jpg",
+  "https://i.ibb.co/gRp4RjP/111.png",
   "https://i.ibb.co/ZBLZ7zp/7.jpg",  "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
      ]; 
      

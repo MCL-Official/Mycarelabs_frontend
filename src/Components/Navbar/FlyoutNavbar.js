@@ -185,7 +185,7 @@ const CTAs = ({ isHome, scrolled }) => {
       <span>+1-800-790-4550</span>
     </a>
       <a
-      href="/path-to-your-file.zip" 
+      href="/MY Care Labs TRF Master.pdf" 
       download 
       className={`flex items-center gap-1 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${
         isHome
