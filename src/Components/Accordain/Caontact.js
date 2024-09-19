@@ -23,7 +23,7 @@ const Caontact = () => {
         </svg>
         <div class="mt-4 text-center">
           <h4 class="text-gray-800 text-base font-bold">Visit office</h4>
-          <p class="text-sm text-gray-500 mt-2"> 5500 Stewart Avenue, Suite 108,
+          <p class="text-base font-semibold text-gray-500 mt-2"> 5500 Stewart Avenue, Suite 108,
           Fremont, CA 94538</p>
         </div>
       </div>
@@ -34,7 +34,7 @@ const Caontact = () => {
         </svg>
         <div class="mt-4 text-center">
           <h4 class="text-gray-800 text-base font-bold">Call us</h4>
-          <p class="text-sm text-gray-500 mt-2"> +1-800-790-4550</p>
+          <p class="text-base font-semibold text-gray-500 mt-2"> +1-800-790-4550</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const Caontact = () => {
         </svg>
         <div class="mt-4 text-center">
           <h4 class="text-gray-800 text-base font-bold">Chat to us</h4>
-          <p class="text-sm text-gray-500 mt-2">support@mycarelabs.com</p>
+          <p class="text-base font-semibold text-gray-500 mt-2">support@mycarelabs.com</p>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ const Caontact = () => {
         </svg>
         <div class="mt-4 text-center">
           <h4 class="text-gray-800 text-base font-bold">Fax</h4>
-          <p class="text-sm text-gray-500 mt-2">+1-888-289-9940</p>
+          <p class="text-base font-semibold text-gray-500 mt-2">+1-888-289-9940</p>
         </div>
       </div>
 
