@@ -25,12 +25,12 @@ function AboutCompany() {
             imageUrl:
                 'https://i.ibb.co/kSkNcws/7.png',
         },
-        {
-            name: 'Kishan Singh',
-            role: 'Vice President, India Operations',
-            imageUrl:
-                'https://i.ibb.co/pRCR5C0/6.png',
-        },
+        // {
+        //     name: 'Kishan Singh',
+        //     role: 'Vice President, India Operations',
+        //     imageUrl:
+        //         'https://i.ibb.co/pRCR5C0/6.png',
+        // },
         {
             name: 'Ralph Giron',
             role: 'General Manager, USA',
@@ -52,36 +52,34 @@ function AboutCompany() {
         // More people...
     ]
     return (
-        <div className="container mx-auto pt-6">
+        <div className="container mx-auto pt-2">
 
 
 
             <div className="bg-white py-24 sm:py-32">
-                <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-                    <div className="max-w-2xl">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Dedicated Team
-                        </p>
+                {/* <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3"> */}
+                    <div className=" flex justify-center mb-14 ">
+                        <h2 className="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
                     </div>
-                    <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                {/* </div> */}
+                    <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-y-16 xl:col-span-4">
                         {people.map((person) => (
                             <li key={person.name}>
-                                <div className="flex items-center gap-x-6">
-                                    <img alt="" src={person.imageUrl} className="h-16 w-16 rounded-full" />
+                                <div className="flex items-center text-center gap-x-4 border-2 border-black rounded-2xl ">
+                                    <img alt="" src={person.imageUrl} className="h-24 w-24 rounded-full" />
                                     <div>
-                                        <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                                        <h3 className="text-xl font-semibold leading-7  tracking-tight text-gray-900">{person.name}</h3>
                                         <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                                     </div>
                                 </div>
+                                {/* <button >Learn more</button> */}
                             </li>
                         ))}
                     </ul>
-                </div>
             </div>
             <div className="xl:w-full w-11/12 mx-auto">
                 <h1 className="text-gray-800 font-extrabold xl:text-5xl text-3xl mb-4 text-center xl:text-left md:text-left lg:text-left">Hear From Our Team</h1>
-                <p className="text-xl xl:text-left md:text-left lg:text-left md:w-full text-center xl:w-2/3 lg:w-2/3 w-11/12 mx-auto xl:mx-0 lg:mx-0 text-gray-600">Content</p>
+                {/* <p className="text-xl xl:text-left md:text-left lg:text-left md:w-full text-center xl:w-2/3 lg:w-2/3 w-11/12 mx-auto xl:mx-0 lg:mx-0 text-gray-600">Content</p> */}
             </div>
             <div className="flex flex-wrap mt-10 justify-between w-full md:w-11/12 md:mx-auto xl:mx-0 xl:w-full">
                 <div className="xl:w-3/4 lg:w-3/4 md:w-8/12 w-11/12 mx-auto xl:mx-0 lg:mx-0 md:ml-0 shadow-md border border-gray-200 p-8 rounded">

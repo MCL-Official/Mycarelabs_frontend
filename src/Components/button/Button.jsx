@@ -56,7 +56,7 @@ const formatCategoryName = (categoryName) => {
       {/* <div className="flex flex-row justify-center "> */}
 
       <FiSend />
-      {cardData.category==="At-home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
+      {cardData.category==="At-Home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
       {/* </div> */}
       
     </button>
