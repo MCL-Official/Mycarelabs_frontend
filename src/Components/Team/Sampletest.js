@@ -4,7 +4,7 @@ export function Sampletest () {
  
     const team = [
         {
-            avatar: "https://i.ibb.co/NC5zjr5/1.png",
+            avatar: "https://i.ibb.co/pwcpzQc/1.png",
             name: "Harvey Singh",
             title: "Chief Executive Officer ",
             desc: "",
@@ -13,7 +13,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/YNfcmLh/5.png",
+            avatar: "https://i.ibb.co/6yDHzWF/5.png",
             name: "Aman Singh",
             title: "Vice President, Global Operations",
             desc: "",
@@ -22,7 +22,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/vQ4c1cD/11.png",
+            avatar: "https://i.ibb.co/P9Grxrt/dbfdbfc.png",
             name: "Dr. Carl Johnson",
             title: "Medical Director",
             desc: "",
@@ -31,7 +31,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/QCsCtsb/sdad.png",
+            avatar: "https://i.ibb.co/pRCR5C0/6.png",
             name: "Kishan Singh",
             title: "Vice President, India Operations",
             desc: "",
@@ -40,7 +40,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/3FCmdS8/2.png",
+            avatar: "https://i.ibb.co/jwrkf3x/2.png",
             name: "Emily Garcia",
             title: "Marketing Manager",
             desc: "",
@@ -49,7 +49,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/n8vpYhf/3.png",
+            avatar: "https://i.ibb.co/mFwp2Qt/3.png",
             name: "Soun Kanwar",
             title: "Communications Director",
             desc: "",
@@ -58,7 +58,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/0G8HJ6R/4.png",
+            avatar: "https://i.ibb.co/kSkNcws/7.png",
             name: "Pramo Virk",
             title: "Vice President, Europe Operations",
             desc: "",
@@ -67,7 +67,7 @@ export function Sampletest () {
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/2qBFfYy/4.png",
+            avatar: "https://i.ibb.co/4WxF5g7/4.png",
             name: "Ralph Giron",
             title: "General Manager, USA",
             desc: "",
