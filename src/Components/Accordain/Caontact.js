@@ -10,8 +10,8 @@ const Caontact = () => {
     <div class="max-w-6xl mx-auto mb-12">
       <iframe 
         class="w-full h-72 border-0"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.776689773433!2d-121.98767452441406!3d37.49998097981282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc9ba3d6b441f%3A0x33b5edb8dff9468e!2s5500%20Stewart%20Ave%2C%20Suite%20108%2C%20Fremont%2C%20CA%2094538%2C%20USA!5e0!3m2!1sen!2sus!4v1694971476058!5m2!1sen!2sus"
-        allowfullscreen=""
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.7855926972115!2d-121.9839515!3d37.5171131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc7ea104a402f%3A0xc7146e61f8e25f8e!2sMy%20Care%20Labs!5e0!3m2!1sen!2sus!4v1694974079193!5m2!1sen!2sus"
+    allowfullscreen=""
         loading="lazy">
       </iframe>
     </div>

@@ -10,6 +10,8 @@ import { cardData, images, testingSolutions } from "../../utility/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
 const Example = () => {
   return (
     <>
@@ -182,6 +184,20 @@ const CTAs = ({ isHome, scrolled }) => {
       <FontAwesomeIcon icon={faPhone} size="lg" />
       <span>+1-800-790-4550</span>
     </a>
+      <a
+      href="/path-to-your-file.zip" 
+      download 
+      className={`flex items-center gap-1 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${
+        isHome
+          ? scrolled
+            ? "bg-orange-600 text-white"
+            : "text-white border-white bg-orange-600 hover:text-white"
+          : "bg-orange-600 text-white"
+      }`}
+    >
+      <FontAwesomeIcon icon={faDownload} size="lg" />
+      <span>TRF</span>
+    </a>
       {/* <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white">
       <FaUserCircle /> +1-800-790-4550
       </button> */}
@@ -290,17 +306,23 @@ const PricingContent = () => {
       <div className="grid grid-cols-2 lg:grid-cols-1">
         <div className="mb-3 space-y-3">
           <h3 className="font-semibold">About Us</h3>
-          <Link
+          {/* <Link
             to="/careers"
             className="block text-sm text-black no-underline hover:underline"
           >
             Careers
-          </Link>
+          </Link> */}
           <Link
             to="/about"
             className="block text-sm text-black no-underline hover:underline"
           >
             About Company
+          </Link>
+          <Link
+            to="/aboutcompany"
+            className="block text-sm text-black no-underline hover:underline"
+          >
+            Management teams
           </Link>
         </div>
         {/* <div className="mb-6 space-y-3">
@@ -325,9 +347,9 @@ const PricingContent = () => {
           </Link>
         </div> */}
       </div>
-      <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
+      {/* <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
         Contact sales
-      </button>
+      </button> */}
     </div>
   );
 };
@@ -512,7 +534,7 @@ const LINKS = [
   {
     text: "Company",
     href: "/about",
-    // component: PricingContent,
+    component: PricingContent,
   },
   {
     text: "Blog",
