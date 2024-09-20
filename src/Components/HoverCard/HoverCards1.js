@@ -44,7 +44,7 @@ const cardData = [
     category: "Bay Area Mobile Testing",
     title: "Bay Area Mobile Testing",
     shortDescription: [
-      " Available by appointment only",
+      "Available by appointment only",
       "Must be within a 15 mile radius of Fremont Lab",
       "Same day or 24 hour results"
     ],
