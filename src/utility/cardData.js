@@ -8,30 +8,30 @@ export  const cardData = [
       "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
     longDescription:
       "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
-    timing: "Mon-Fri 8:30 AM - 6:00 PM, Sat-Sun 9:00 AM - 4:00 PM",
-    location: "Fremont, CA 94538"
+      timing: "8:30 AM - 6:00 PM",
+          location: "Fremont, CA 94538"
   },
   {
     id: 2,
-    category: "Southern California: Riverside County Mobile Testing",
+    category: "Riverside City Mobile Testing",
     title: "Riverside Mobile Testing",
     shortDescription:
       "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription:
       "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
-    timing: "Mon-Fri 10:00 AM - 3:00 PM (Appointment only)",
-    location: "Riverside County"
+      timing: "10:00 AM - 3:00 PM",
+          location: "Riverside County"
   },
   {
     id: 3,
-    category: "Northern California Mobile Testing",
+    category: "Bay Area Mobile Testing",
     title: "SF Bay Area / Silicon Valley Mobile Testing",
     shortDescription:
       "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
     longDescription:
       " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
-    timing: "Mon-Fri 10:00 AM - 3:00 PM, Sat-Sun (Appointment only)",
-    location: "Alameda County"
+      timing: "10:00 AM - 3:00 PM",
+          location: "Alameda County"
   },
   {
     id: 4,
@@ -91,7 +91,7 @@ export  const cardData = [
     "https://i.ibb.co/NCz8Kt8/dadfs.png",
   "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
-  "https://i.ibb.co/gRp4RjP/111.png",
+  "https://i.ibb.co/W2h5h1J/DGDF.png",
   "https://i.ibb.co/ZBLZ7zp/7.jpg",  "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
      ]; 
      

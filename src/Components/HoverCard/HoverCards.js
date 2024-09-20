@@ -18,7 +18,7 @@ const images = [
   "https://i.ibb.co/NCz8Kt8/dadfs.png",
   "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
-  "https://i.ibb.co/gRp4RjP/111.png",
+  "https://i.ibb.co/W2h5h1J/DGDF.png",
   "https://i.ibb.co/ZBLZ7zp/7.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
 ];
