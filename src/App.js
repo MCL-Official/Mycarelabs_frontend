@@ -133,7 +133,7 @@ function App() {
           <Route path="/vitamin-d-test-services" element={<Index5/>} />
           <Route path="/total-psa-test-services" element={<Index6/>} />
           <Route path="/about" element={<Team/>} />
-          <Route path="/aboutcompany" element={<AboutCompany/>} />
+          <Route path="/management-team" element={<AboutCompany/>} />
           <Route path="/contact" element={<SlideInAuth/>}/>
           <Route path="/testing-solutions" element={<FeatureComponent/>}/>
           <Route path="/testingLoc" element={<HoverCards/>}/>

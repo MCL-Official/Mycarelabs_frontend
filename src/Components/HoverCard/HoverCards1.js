@@ -16,9 +16,9 @@ import { MotionConfig, motion } from "framer-motion";
 // "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png"
 const images = [
   "https://i.ibb.co/Jswx1fx/afljsdg.png",
-  "https://i.ibb.co/NCz8Kt8/dadfs.png",
-  "https://i.ibb.co/gRp4RjP/111.png",
   "https://i.ibb.co/JxtLLhX/Blue-Anafsf.png",
+  "https://i.ibb.co/gRp4RjP/111.png",
+  "https://i.ibb.co/NCz8Kt8/dadfs.png",
   "https://lightuptemples.com/wp-content/uploads/temple/profile_image/gurdwara-sahib-of-san-jose-usa.jpg",
   "https://i.ibb.co/ZBLZ7zp/7.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
@@ -52,7 +52,7 @@ const cardData = [
     longDescription:
       " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
     timing: "10:00 AM - 3:00 PM",
-    location: "Bay Area ",
+    location: "Must be within a 15 mile radius of Fremont Lab",
     Contact: "1-800-790-4550"
   },
   {
@@ -67,7 +67,7 @@ const cardData = [
     // "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, e to My Care Labs Medical Lab, your dedicated partner in health diagnostics, pe to My Care Labs Medicaproudly serving the Fremont, California community.",
     longDescription: "In our commitment to making healthcare accessible and convenient, we present our comprehensive range of At-Home Test Kits. Discover the power of self-testing with our user-friendly kits, including the At-Home Influenza Test Kit and the At-Home COVID Test Kit. ",
     timing: "Anytime",
-    location: "At Your Home",
+    location: "Order Online - We Bring the Lab to Your Doorstep",
     Contact: "1-800-790-4550"
   },
   {
@@ -76,16 +76,16 @@ const cardData = [
     title: "Riverside Mobile Testing",
     shortDescription:
       [
-        " Available by appointment only",
-        "  MUST be within Riverside City",
-        "   Results within 24-48 hours"
+        "Available by appointment only",
+        "Must be within Riverside City",
+        "Results within 24-48 hours"
       ],
 
     // "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     longDescription:
       "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
     timing: "10:00 AM - 3:00 PM",
-    location: "Riverside County",
+    location: "Must be within a 10 mile radius of Riverside City",
     Contact: "1-800-790-4550"
   },
 
@@ -104,7 +104,7 @@ const cardData = [
     longDescription:
       " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
     timing: "11:00 AM - 2:30 PM",
-    location: "Riverside City",
+    location: "7940 Mission Blvd, Riverside Valley, CA 92509",
     Contact: "1-800-790-4550"
   },
 
@@ -272,7 +272,7 @@ const HoverCards1 = () => {
                     </div>
 
                     <h3
-                      className="text-lg mt-2 text-blue-500 font-bold font-inter mb-[-4px]"
+                      className="text-lg mt-2 p  text-blue-500 font-bold font-inter mb-[-4px]"
                       style={{
                         background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
                         WebkitBackgroundClip: 'text',
@@ -283,10 +283,10 @@ const HoverCards1 = () => {
                     </h3>
                     <p className="text-black font-medium ">{card.location}</p>
 
-                    <div className="flex flex-wrap justify-center mt-4 hover:cursor-pointer" onClick={sample}>
+                    <div className="flex flex-wrap justify-center mt-4 hover:cursor-pointer " onClick={sample}>
                       <img src={myImage} alt="My Image" />
                       <p
-                        className="text-blue-500 text-xl font-bold mb-2 hover:cursor-pointer font-inter"
+                        className="text-blue-500 text-xl font-bold  hover:cursor-pointer font-inter mb-[-15px]"
                         style={{
                           background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
                           WebkitBackgroundClip: 'text',
@@ -310,7 +310,7 @@ const HoverCards1 = () => {
                         {card.category === "Northern California: Fremont Lab" ? "Walk-ins Welcome!" : ""}
                         {card.category === "Riverside City Mobile Testing" ? " Appointment only" : ""}
                         {card.category === "Bay Area Mobile Testing" ? " Appointment only" : ""}
-                        {card.category === "At-Home Test Kit" ? "We Bring Lab To Your Door Step" : ""}
+                        {card.category === "At-Home Test Kit" ? "At Your Home" : ""}
                       </span>
                     </div>
                   </div>

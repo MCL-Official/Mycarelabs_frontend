@@ -305,7 +305,7 @@ const PricingContent = () => {
     <div className="w-full bg-white p-6 shadow-none lg:w-[250px] lg:shadow-xl">
       <div className="grid grid-cols-2 lg:grid-cols-1">
         <div className="mb-3 space-y-3">
-          <h3 className="font-semibold">About Us</h3>
+          {/* <h3 className="font-semibold">About Us</h3> */}
           {/* <Link
             to="/careers"
             className="block text-sm text-black no-underline hover:underline"
@@ -319,7 +319,7 @@ const PricingContent = () => {
             About Company
           </Link>
           <Link
-            to="/aboutcompany"
+            to="/management-team"
             className="block text-sm text-black no-underline hover:underline"
           >
             Management teams
