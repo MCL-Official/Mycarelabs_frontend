@@ -62,6 +62,9 @@ import ApplyPage from "./Components/Careers/ApplyPage";
 import SuccessPage from "./Components/Careers/SuccessPage";
 import Uta from "./Pages/Uta/Uta.js";
 import Thankyou from "./Pages/Thankyou.js";
+import AboutCompany from "./Pages/Company/AboutCompany.js";
+import Banner from "./Components/Navbar/Banner.js";
+import Bannerreact from "./Components/Navbar/Bannerreact.js";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -79,6 +82,8 @@ function App() {
       <Router >
       <PageViewTracker />
         {/* <Navbar /> */}
+        {/* <Exampl */}
+         {/* <Banner/> */}
         <Example/>
         {/* <Navbar2/> */}
         <Routes>
@@ -128,6 +133,7 @@ function App() {
           <Route path="/vitamin-d-test-services" element={<Index5/>} />
           <Route path="/total-psa-test-services" element={<Index6/>} />
           <Route path="/about" element={<Team/>} />
+          <Route path="/management-team" element={<AboutCompany/>} />
           <Route path="/contact" element={<SlideInAuth/>}/>
           <Route path="/testing-solutions" element={<FeatureComponent/>}/>
           <Route path="/testingLoc" element={<HoverCards/>}/>

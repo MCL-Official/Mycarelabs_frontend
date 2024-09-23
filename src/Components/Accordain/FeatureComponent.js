@@ -14,7 +14,7 @@ const features = {
     description:
       "My Care Labs offers Therapeutic Drug Monitoring and Drugs of Abuse testing for various needs. Our facility and medical professionals provide reliable screening for drugs, alcohol, and other substances.",
     buttonText: `BOOK TEST FOR Toxicology `,
-    image: img1,
+    image: "https://i.ibb.co/ypgvFHc/2.png", // Direct image URL
     route: "/testing-solutions/toxicology-testing-solutions/",
     content: (
       <>
@@ -64,7 +64,7 @@ const features = {
     description:
       "My Care Labs provides the quickest and most accurate testing solutions, prioritizing your well-being with our wellness testing services. Take proactive steps towards a healthier, happier you with My Care Labs. ",
     buttonText: `BOOK TEST FOR Wellness Testing`,
-    image: img,
+    image: "https://i.ibb.co/ZGvGrV5/Untitled-1280-x-720-px-1300-x-1000-px.png", // Direct image URL
     route: "/testing-solutions/wellness-testing-solutions/",
     content: (
       <>
@@ -91,7 +91,7 @@ const features = {
     description:
       " My Care Labs offers mobile testing, allowing you to test from the comfort of your home. This service is available for patients within 10-15 miles of our Fremont Laboratory. ",
     buttonText: `Book Test For Mobile Testing`,
-    image: img4,
+    image: "https://i.ibb.co/v4HJHzc/MOBILE-TESTING.png", // Direct image URL
     route: "/covid-test-locations",
     content: (
       <>

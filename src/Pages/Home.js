@@ -26,6 +26,7 @@ import Video from "../Components/Video/Video";
 import { Testimonials } from "../Components/SOLUTION/Infectious-desiase/Group/Testimonials";
 import BlogPostCarousel from "../Components/Blog/BlogPostCarousel";
 import Caontact from "../Components/Accordain/Caontact";
+import Banner from "../Components/Navbar/Banner";
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
@@ -94,6 +95,7 @@ useEffect(() => {
       {/* <Navbar /> */}
       {/* <Hero /> */}
       {/* <FeatureToggles/> */}
+      {/* <Banner/> */}
       <HoverCards1 />
       <Info scrollToAuth={scrollToAuth} />
       <FeatureComponent />

@@ -29,13 +29,12 @@ export function Hero() {
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
                         <h1 className="text-sm text-indigo-600 font-medium">
-                            Over 200 successful deals
                         </h1>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                         California COVID-19 PCR Travel Testing
                         </h2>
                         <p>
-                        My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B. Get ready to relax and explore on your vacation with same-day or 24-hour turaround at our Silicon Valley lab and at public pop-ups throughout California.                        </p>
+                        My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B. Get ready to relax and explore on your vacation with same-day or 24-hour turaround at our Fremont lab and at public pop-ups throughout California.                        </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <Link to="/covid-test-locations" className="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
                                 Our Testing Locations

@@ -45,6 +45,12 @@ module.exports = {
       maxWidth: {
         'custom': '1440px', // You can adjust this value as needed
       },
+      colors: {
+        customBlue: '#074FA1',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [

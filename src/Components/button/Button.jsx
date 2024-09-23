@@ -45,15 +45,19 @@ const formatCategoryName = (categoryName) => {
       className={`
         px-4 py-2 rounded-full 
         flex items-center gap-2 
+        text-lg
         font-bold
         shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
         transition-all
           text-white
         bg-green-500
-    `}
+    ` } style={{ background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))' }}
     >
+      {/* <div className="flex flex-row justify-center "> */}
+
       <FiSend />
-      {cardData.category==="At-home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
+      {cardData.category==="At-Home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
+      {/* </div> */}
       
     </button>
   );
