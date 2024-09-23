@@ -366,7 +366,7 @@ const CareersContent = ({ handleClick }) => {
           </p>
         </div>
         <Link
-          to="#" 
+          to="testing-solutions/infectious-disease-testing-solutions" 
           className="flex items-center gap-1 text-sm font-medium text-indigo-200 hover:text-white hover:underline"
         >
           Solutions <FiArrowRight />
@@ -528,7 +528,7 @@ const LINKS = [
   },
   {
     text: "Solutions",
-    href: "#",
+    href: "/testing-solutions/infectious-disease-testing-solutions",
     component: CareersContent,
   },
   {
