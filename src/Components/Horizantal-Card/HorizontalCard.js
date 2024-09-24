@@ -84,7 +84,7 @@ export function HorizontalCard() {
                     color="gray"
                     className="mb-2 uppercase"
                   >
-                    startups
+                    {/* startups */}
                   </Typography>
                   <Typography
                     variant="h4"
