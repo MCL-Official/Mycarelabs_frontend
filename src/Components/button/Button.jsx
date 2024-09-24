@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { FiSend } from "react-icons/fi";
+import { useState } from "react";
 
 const NeumorphismButton = ({ cardData }) => {
   const navigate = useNavigate();
@@ -38,10 +39,13 @@ const formatCategoryName = (categoryName) => {
 
 
   };
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <button
       onClick={handleClick}
+      onMouseEnter={() => setIsHovered(true)}  // Handle hover start
+      onMouseLeave={() => setIsHovered(false)} // Handle hover end
       className={`
         px-4 py-2 rounded-full 
         flex items-center gap-2 
@@ -51,7 +55,16 @@ const formatCategoryName = (categoryName) => {
         transition-all
           text-white
         bg-green-500
-    ` } style={{ background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))' }}
+          hover:bg-green-300
+    ` } 
+    style={{
+      background: isHovered
+        ? 'linear-gradient(90deg, rgba(100, 182, 255, 1), rgba(86, 152, 195, 1))' // Lighter gradient on hover
+        : 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', // Default gradient
+      boxShadow: isHovered
+        ? '0px 4px 15px rgba(0, 0, 0, 0.2)' // Shadow on hover
+        : '0px 4px 10px rgba(0, 0, 0, 0.1)', // Default shadow
+    }}
     >
       {/* <div className="flex flex-row justify-center "> */}
 

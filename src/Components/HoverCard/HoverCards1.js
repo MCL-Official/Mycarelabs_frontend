@@ -202,23 +202,23 @@ const HoverCards1 = () => {
             <MdOutlineKeyboardArrowLeft size={24} />
           </button>
           <div
-            ref={carouselRef} className="flex overflow-x-auto space-x-8 p-4 mb-2 pb-2 scrollbar-hide">
+            ref={carouselRef} className="flex overflow-x-auto rounded-xl  space-x-8 p-4 mb-2 pb-2 scrollbar-hide">
 
             {cardData.slice(0, 8).map((card, index) => (
               <div
                 key={index}
-                className="relative group  flex-shrink-0 w-80 h-112 transition-transform transform  hover:shadow-2xl shadow-lg flex flex-col "
+                className="relative group  rounded-xl  overflow-hidden flex-shrink-0 w-80 h-112 transition-transform transform  hover:shadow-2xl shadow-lg flex flex-col "
               >
                 {/* Image */}
                 <img
                   src={images[index % images.length]}
-                  className="h-64 w-full object-cover" // Adjust height and width
+                  className="h-64 w-full rounded-xl  object-cover" // Adjust height and width
                   alt={card.title}
                 />
 
                 {/* Hover Dropdown */}
                 <div
-                  className="absolute top-[-100%] left-0 right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
+                  className="absolute  top-[-100%] left-0  rounded-xl  right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
                   style={{
                     background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
                   }}
