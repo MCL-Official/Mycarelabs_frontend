@@ -14,28 +14,28 @@ export function BackgroundBlogCard() {
     {
       title: "Bay Area COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
+      imageUrl: "https://i.ibb.co/c6q05G9/1.png",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "If you’re boarding a plane in the San Francisco Bay Area or Silicon Valley, find out the COVID-19 testing requirements for your destination countries and plan accordingly."
     },
     {
       title: "San Francisco International Airport (SFO) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://img.freepik.com/free-photo/empire-state-building-daylight_23-2150897493.jpg?t=st=1719954413~exp=1719958013~hmac=426c13ce93779b5ca5b1a8752df1adf6adb8ed2f2af97d96269c72c8a60af5b3&w=900",
+      imageUrl: "https://i.ibb.co/42WBYxJ/3.png",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "My Care Labs provides infectious disease testing solutions to individuals around the SF Bay Area. Specifically for people flying out of SFO. Make sure to check if your destinations require a negative test result and book your next appointment with us."
     },
     {
       title: "Oakland International Airport (OAK) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdhkRaRNqnPf_dcSF6D04L1TgE29yWRXr4ug&s",
+      imageUrl: "https://i.ibb.co/nD6PDqz/2.png",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "Are you going to be traveling soon and want to make sure you're healthy before the big trip? Make sure to order our at-home test kit before your next flight."
     },
     {
       title: "San Jose International Airport (SJC) COVID-19 Travel PCR Testing",
       author: "Tania Andrew",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rtn6aAU4qSAYnbhv9EFRk5xi-cPNfByTSA&s",
+      imageUrl: "https://i.ibb.co/jhJsyMv/4.png",
       // avatarUrl: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1480&q=80",
       description: "Many of our San Jose neighbors trust us to give us quick and accurate results before their big trips."
     },
@@ -70,7 +70,7 @@ export function BackgroundBlogCard() {
               <Typography
                 variant="h2"
                 color="white"
-                className="mb-4 text-lg font-medium leading-[1.5] transition-transform duration-300 ease-in-out group-hover:scale-110"
+                className="mb-4 pt-32 text-lg font-medium leading-[1.5] transition-transform duration-300 ease-in-out group-hover:scale-110"
               >
                 {card.title}
               </Typography>
@@ -81,7 +81,7 @@ export function BackgroundBlogCard() {
                 className="border-2 border-white"
                 src={card.avatarUrl}
               /> */}
-              <Typography variant="h5" className="mb-2 text-white text-sm">
+              <Typography variant="h5" className="mb-2 text-white text-sm pt-1">
                 {card.description}
               </Typography>
             </CardBody>
