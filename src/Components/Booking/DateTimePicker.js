@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import axios from 'axios';
 import logo1 from "../../Assets/Logo1.png";
@@ -16,7 +16,7 @@ const LeftContainer = ({ cardData }) => {
         <h2 className="text-xl font-bold mb-2">Booking For</h2>
         <p className="text-gray-600 mb-4">{cardData?.cardData?.title}</p>
         <div className="w-full h-64 mb-4">
-         {cardData?.cardData?.title=="Riverside Mobile Testing"? <iframe
+          {cardData?.cardData?.title == "Riverside Mobile Testing" ? <iframe
             width="100%"
             height="100%"
             frameBorder="0"
@@ -24,15 +24,15 @@ const LeftContainer = ({ cardData }) => {
             marginHeight="0"
             marginWidth="0"
             src="https://maps.google.com/maps?q=Riverside,%20CA%2092508&z=15&output=embed"
-          ></iframe>: <iframe
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          scrolling="no"
-          marginHeight="0"
-          marginWidth="0"
-          src="https://maps.google.com/maps?q=Fremont,%20CA%2094538&z=15&output=embed"
-        ></iframe>}
+          ></iframe> : <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            scrolling="no"
+            marginHeight="0"
+            marginWidth="0"
+            src="https://maps.google.com/maps?q=Fremont,%20CA%2094538&z=15&output=embed"
+          ></iframe>}
         </div>
         <div className="text-center">
           <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
@@ -44,10 +44,10 @@ const LeftContainer = ({ cardData }) => {
   );
 };
 
-const DateTimePicker = ({cardData,CrelioData}) => {
+const DateTimePicker = ({ cardData, CrelioData }) => {
   // console.log(cardData?.cardData?.category, "dskvjbjbdhsvbhjvb");
-  console.log(CrelioData,'sdkjvnvdsvsnvjsdnsvnvsd');
-  
+  console.log(CrelioData, 'sdkjvnvdsvsnvjsdnsvnvsd');
+
   const formatCategoryName = (data) => {
     console.log("datadatadatadatadata", data)
     try {
@@ -66,8 +66,47 @@ const DateTimePicker = ({cardData,CrelioData}) => {
       return '';
     }
   };
+  const formattedCategory = formatCategoryName(cardData?.category);
 
-  const formattedCategory = formatCategoryName(cardData?.cardData?.category);
+
+  const testId = [
+    {
+      testCode: "Wellness",
+      testID: 3956009,
+      testName: "Wellness",
+      // "category": "Northern California: Fremont Lab",
+    },
+    {
+      testID: 3972962,
+      testName: "Fremont Laboratory",
+      category: "northern-california-fremont-lab",
+    },
+    {
+      testCode: "Anemia Profile",
+      testID: 3956081,
+      testName: "Anemia Profile",
+    },
+
+    {
+      testCode: "Self testing kit for Covid-19- Pre book your order",
+      testID: 3956083,
+      testName: "At Home",
+      category: "at-home-test-kit"
+    },
+    {
+      testCode: "Book your Smart Combo Test (NorCal)",
+      testID: 3957499,
+      testName: "Riverside Gurdwara",
+      category: "riverside-gurdwara-pop-up",
+    },
+    {
+      testCode: "Riverside Mobile Testing",
+      testID: 3993056,
+      testName: "Riverside Mobile Testing",
+      category: "riverside-city-mobile-testing",
+    }
+  ]
+
   const navigate = useNavigate();
   const today = new Date();
   const [selectedDate, setSelectedDate] = useState(null);
@@ -81,6 +120,10 @@ const DateTimePicker = ({cardData,CrelioData}) => {
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [notification, setNotification] = useState(null);
+  const [TimeDetail, setTimeDetail] = useState([]);
+  const [bookedTimes, setBookedTimes] = useState([]);
+  const [disabledTimes, setDisabledTimes] = useState([]); 
+  const [testIdBooking, setTestIdBooking] = useState([])
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -93,9 +136,68 @@ const DateTimePicker = ({cardData,CrelioData}) => {
     foundVia: '',
     Employee: cardData?.cardData?.category,
     Location: cardData?.cardData?.location,
-    Service: ''
+    Service: '',
+    Lab: "",
+    refId: '',
   });
+
+console.log(disabledTimes,"sdkvjsnvkdsjdsjnsdjknvsjkvn");
+
+
+
+
+
+
+useEffect(() => {
+  const testIdforBooking = testId.find((data) => formattedCategory === data?.category);
+
+  const fetchData = async () => {
+    if (testIdforBooking) {
+      try {
+        // Make the API call
+        const { data } = await axios.get(`http://localhost:3000/admin/appointments/${testIdforBooking.testID}`);
+
+        // Log the full API response to check the structure
+        console.log("Full API response:", data);
+
+        // Check if `timedetails` exists and is an array
+        if (data && Array.isArray(data.timedetails)) {
+          const booked = data.timedetails.map((detail) => ({
+            date: moment(detail.date).format("YYYY-MM-DD"), // Format date for comparison
+            time: detail.time,
+          }));
+
+          setBookedTimes(booked); // Save booked times to state
+          console.log("Processed booked times:", booked);
+        } else {
+          console.log("Timedetails missing or not an array:", data?.timedetails);
+        }
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    } else {
+      console.log("No test ID found for booking");
+    }
+  };
+
+  fetchData();
+}, [formattedCategory]);
+
+
+  // at-home-test-kit
+  // northern-california-fremont-lab
+  // southern-california-riverside-county-mobile-testing
+  // northern-california-mobile-testing
+  // riverside-gurdwara-pop-up
+
+
+
+
+  console.log(testIdBooking?.category, "KSDVJNVJNVSJNDVN");
+
   const [invalidFields, setInvalidFields] = useState({});
+
+
 
   const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -124,6 +226,12 @@ const DateTimePicker = ({cardData,CrelioData}) => {
     }
   };
 
+  const isTimeBooked = (time) => {
+    if (!selectedDate) return false;
+    return bookedTimes.some((booked) => 
+      booked.date === selectedDate && moment(booked.time, 'h:mm A').format('h:mm A') === time
+    );
+  };
   const isDateInPast = (day, month, year) => {
     const date = new Date(year, month, day + 1);
     return date.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0);
@@ -139,15 +247,36 @@ const DateTimePicker = ({cardData,CrelioData}) => {
     const selectedDateTime = new Date(`${selectedDate} ${time}`);
     return selectedDateTime.getTime() <= Date.now();
   };
-  const handleDateClick = (day) => {
-    if (isDateInPast(day, monthIndex, year) ) return; // Prevent selecting past dates
-    const date = `${monthIndex + 1}-${day + 1}-${year}`;
-    const date1 = `${year}-${monthIndex + 1}-${day + 1}`;
-    setSelectedDate(date1);
-    setSelectedDate1(date);
-    setShowTimes(true);
-  };
 
+
+
+  // the changes to be removed 
+  // const handleDateClick = (day) => {
+  //   if (isDateInPast(day, monthIndex, year)) return; // Prevent selecting past dates
+  //   const date = `${monthIndex + 1}-${day + 1}-${year}`;
+  //   const date1 = `${year}-${monthIndex + 1}-${day + 1}`;
+  //   setSelectedDate(date1);
+  //   setSelectedDate1(date);
+  //   setShowTimes(true);
+  // };
+
+  const handleDateClick = (day) => {
+    const selectedDate = moment({ year, month: monthIndex, day: day + 1 }).format("YYYY-MM-DD"); // Keep date format
+    setSelectedDate(selectedDate);
+    const date = `${monthIndex + 1}-${day + 1}-${year}`;
+    setShowTimes(true);
+    
+    setSelectedDate1(date);
+
+    // Filter out the booked times for the selected date
+    const bookingsForSelectedDate = bookedTimes.filter((booking) =>
+      moment(booking.date).isSame(moment(selectedDate), 'day')
+  );
+  console.log(bookedTimes[0],"sdkjvnsjndjsvnsd");
+    
+    const disabledTimeSlots = bookingsForSelectedDate.map((booking) => booking.time);
+    setDisabledTimes(disabledTimeSlots);
+  };
 
   const timeSlots = [
     "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
@@ -156,14 +285,14 @@ const DateTimePicker = ({cardData,CrelioData}) => {
     "5:00 PM", "5:30 PM", "6:00 PM"
   ];
 
-  
+// ?changes to be removed 
   const handleTimeClick = (time) => {
-    if (isTimeInPast(time)) return; // Prevent selecting past times
+    if (isTimeInPast(time) || isTimeBooked(time)) return; // Prevent selecting past or booked times
     setSelectedTime(time);
   };
 
   const timeButtonClass = (time) => {
-    if (isTimeInPast(time)) return "bg-gray-200 text-gray-400 cursor-not-allowed"; // Non-selectable times
+    if (isTimeInPast(time)|| isTimeBooked(time)) return "bg-gray-200 text-gray-400 cursor-not-allowed"; // Non-selectable times
     return selectedTime === time ? "bg-blue-500 text-white border-blue-500" : "bg-white text-blue-500 border-blue-500 hover:bg-blue-100";
   };
   // const date = `${monthIndex + 1}-${day + 1}-${year}`;
@@ -174,31 +303,33 @@ const DateTimePicker = ({cardData,CrelioData}) => {
   };
 
   const dateButtonClass = (day) => {
-    const fullDate = `${year}-${monthIndex + 1}-${day + 1}`;
+    // const fullDate = `${year}-${monthIndex + 1}-${day + 1}`;
+    const fullDate = moment({ year, month: monthIndex, day: day + 1 }).format("YYYY-MM-DD");
+
     if (selectedDate === fullDate) return "bg-blue-500 text-white"; // Selected date
-    if (!isDateSelectable(day) ||  isWeekend(day)) return "bg-gray-100 text-gray-500 cursor-not-allowed"; // Past date or not open
+    if (!isDateSelectable(day) || isWeekend(day)) return "bg-gray-100 text-gray-500 cursor-not-allowed"; // Past date or not open
     return "bg-blue-200 hover:bg-blue-500 cursor-pointer"; // Selectable date
   };
 
   function formatPhoneNumber(value) {
     // Remove all non-digit characters from the input
     const digits = value.replace(/\D/g, '');
-  
+
     // Format the phone number as (xxx) xxx-xxxx
-    
+
     const trimmed = digits.slice(0, 10);
     const match = trimmed.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
     if (match) {
       return `${match[1] ? `(${match[1]}` : ''}${match[2] ? `) ${match[2]}` : ''}${match[3] ? `-${match[3]}` : ''}`;
     }
-  
+
     return value;
   }
-  
+
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-  
+
     if (name === 'foundVia') {
       if (value === 'Other') {
         setShowOtherInput(true);
@@ -222,32 +353,36 @@ const DateTimePicker = ({cardData,CrelioData}) => {
       }));
     }
   }
-  
+
 
   const handleContinue = () => {
     setShowForm(true);
   };
 
   const handleSubmit = async () => {
+
     // Check for required fields
     const newInvalidFields = {};
     if (!formData.firstName) newInvalidFields.firstName = true;
     if (!formData.lastName) newInvalidFields.lastName = true;
     if (!formData.email) newInvalidFields.email = true;
     if (!formData.phone) newInvalidFields.phone = true;
+    // if (!formData?.refId) newInvalidFields.refId = true;
+    // if (!formData?.Lab) newInvalidFields.Lab = true;
     // if (!formData.reason) newInvalidFields.reason = true;
     // if (!formData.zipCode) newInvalidFields.zipCode = true;
     if (!selectedDate) newInvalidFields.selectedDate = true;
     if (!selectedTime) newInvalidFields.selectedTime = true;
-    CrelioData.fullName= formData.firstName;
-    CrelioData.mobile= formData.phone
-    CrelioData.email= formData.email
-    CrelioData.startDate= moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
+    CrelioData.fullName = formData.firstName;
+    CrelioData.mobile = formData.phone
+    CrelioData.email = formData.email
+    CrelioData.billDetails.testList[0].testID = testIdBooking?.testID
+    CrelioData.startDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
     CrelioData.endDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").add(30, 'minutes').utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
- 
 
-    console.log(CrelioData,"sdkjvsbkjbsdvsdvn");
-    
+
+    console.log(CrelioData, "sdkjvsbkjbsdvsdvn");
+
     if (Object.keys(newInvalidFields).length > 0) {
       setInvalidFields(newInvalidFields);
       setNotification({
@@ -262,11 +397,14 @@ const DateTimePicker = ({cardData,CrelioData}) => {
       date: moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").format(),
       time: selectedTime,
     };
-
     setIsLoading(true);
-
     try {
-      await axios.post('https://backend.mycaretrading.com/admin/appointments', appointmentDetails);
+
+      await Promise.all([
+        // await axios.post(`http://localhost:3000/admin/appointments/api/proxy`, CrelioData),
+        await axios.post('http://localhost:3000/admin/appointments/', appointmentDetails)
+      ])
+
       setIsLoading(false);
       setNotification({
         id: Math.random(),
@@ -275,11 +413,6 @@ const DateTimePicker = ({cardData,CrelioData}) => {
       console.log("sdkjvsdsvsdvjsvsd,", formattedCategory);
 
 
-      // at-home-test-kit
-      // northern-california-fremont-lab
-      // southern-california-riverside-county-mobile-testing
-      // northern-california-mobile-testing
-      // riverside-gurdwara-pop-up
       if (formattedCategory === 'northern-california-fremont-lab') {
         navigate(`/fremont-laboratory-thank-you`, { state: { appointmentDetails } });
       } else if (formattedCategory === 'southern-california-riverside-county-mobile-testing') {
@@ -370,7 +503,7 @@ const DateTimePicker = ({cardData,CrelioData}) => {
                                 <button
                                   className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${timeButtonClass(time)}`}
                                   onClick={() => handleTimeClick(time)}
-                                  disabled={isTimeInPast(time)} // Disable button if time is in the past
+                                  disabled={isTimeInPast(time)|| isTimeBooked(time)} // Disable button if time is in the past
                                 >
                                   {selectedTime === time ? time : time}
                                 </button>
@@ -458,7 +591,7 @@ const DateTimePicker = ({cardData,CrelioData}) => {
                     placeholder="(xxx) xxx-xxxx"
                     required
                   />
-                   {invalidFields.phone && <p className="text-red-500 text-xs mt-1">Phone number is required</p>}
+                  {invalidFields.phone && <p className="text-red-500 text-xs mt-1">Phone number is required</p>}
                 </div>
                 {/* <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Reason for testing?</label>
@@ -525,18 +658,18 @@ const DateTimePicker = ({cardData,CrelioData}) => {
                   </select>
                 </div>
                 {showOtherInput && (
-  <div className="flex flex-col col-span-2 ">
-    <label>If other, please specify below</label>
-    <input
-      type="text"
-      name="otherInput"
-      value={formData.otherInput}
-      onChange={handleInputChange}
-      className="border p-2 rounded"
-      placeholder="Enter details"
-    />
-  </div>
-)}
+                  <div className="flex flex-col col-span-2 ">
+                    <label>If other, please specify below</label>
+                    <input
+                      type="text"
+                      name="otherInput"
+                      value={formData.otherInput}
+                      onChange={handleInputChange}
+                      className="border p-2 rounded"
+                      placeholder="Enter details"
+                    />
+                  </div>
+                )}
               </div>
               <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment

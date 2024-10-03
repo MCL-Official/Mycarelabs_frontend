@@ -58,6 +58,9 @@ const ConfirmBooking = () => {
       console.log(data?.cardData?.title,":sdjvhbdjhbhj");
          
 
+
+      console.log(data?.cardData?.title,"sampleds");
+      
       // THIS IS FOR THE BOOKING SYSTEM THAT I HAVE CREATED 
       // switch (data?.cardData?.cardData?.title) {      
       switch (data?.cardData?.title) {
