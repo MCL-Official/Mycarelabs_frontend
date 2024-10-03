@@ -54,7 +54,9 @@ const ConfirmBooking = () => {
       bookingValue: 1 // You can add more data here if needed
     });
 
-    if (data && data?.cardData) {      
+    if (data && data?.cardData) {   
+      console.log(data?.cardData?.title,":sdjvhbdjhbhj");
+         
 
 
       console.log(data?.cardData?.title,"sampleds");
