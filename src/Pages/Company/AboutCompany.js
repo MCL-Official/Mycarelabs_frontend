@@ -37,12 +37,12 @@ function AboutCompany() {
             imageUrl:
                 'https://i.ibb.co/4WxF5g7/4.png',
         },
-        {
-            name: 'Emily Garcia',
-            role: 'Marketing Manager',
-            imageUrl:
-                'https://i.ibb.co/jwrkf3x/2.png',
-        },
+        // {
+        //     name: 'Emily Garcia',
+        //     role: 'Marketing Manager',
+        //     imageUrl:
+        //         'https://i.ibb.co/jwrkf3x/2.png',
+        // },
         {
             name: 'Soun Kanwar',
             role: 'Communications Director',
@@ -181,23 +181,7 @@ function AboutCompany() {
     </div>
 </div>
 
-<div className="flex flex-wrap mt-10 justify-between w-full md:w-11/12 md:mx-auto xl:mx-0 xl:w-full">
-    {/* Left section for image */}
-    <div className="xl:w-1/4 lg:w-1/4 md:w-1/4 flex items-end xl:justify-start lg:justify-start md:justify-start sm:justify-center justify-center xl:pr-8 lg:pr-8 w-11/12 mx-auto xl:mx-0 lg:mx-0 mt-2">
-        <div className="h-64 w-64">
-            <img src="https://i.ibb.co/jwrkf3x/2.png" alt className="rounded h-full w-full object-cover shadow" />
-        </div>
-    </div>
-    {/* Right section for text */}
-    <div className="xl:w-3/4 lg:w-3/4 md:w-8/12 w-11/12 mx-auto xl:mx-0 lg:mx-0 md:ml-0 shadow-md border border-gray-200 p-8 rounded">
-        <p className="pb-8 text-base text-gray-800">Emily Garcia, in her role as Marketing & Business Development Manager, is instrumental in building bridges between My Care Labs and the community. Her responsibilities extend beyond traditional marketing, encompassing the development of meaningful partnerships.</p>
-        <p className="text-base text-gray-800">Emily’s strategic approach involves identifying opportunities for collaboration that not only benefit My Care Labs but also contribute to the overall health and well-being of the community. Through her efforts, Emily ensures that the laboratory is not just a service provider but an integral part of the community’s healthcare ecosystem.</p>
-        <div className="mt-8">
-            <p className="text-base text-gray-800 font-bold pb-1">- Emily Garcia</p>
-            <p className="text-sm text-gray-600 pl-2">Marketing & BD Manager</p>
-        </div>
-    </div>
-</div>
+
 <br></br>
 <br></br>
 <br></br>

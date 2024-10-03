@@ -39,15 +39,15 @@ export function Sampletest () {
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
-        {
-            avatar: "https://i.ibb.co/jwrkf3x/2.png",
-            name: "Emily Garcia",
-            title: "Marketing Manager",
-            desc: "",
-            linkedin: "javascript:void(0)",
-            twitter: "javascript:void(0)",
-            github: "javascript:void(0)"
-        },
+        // {
+        //     avatar: "https://i.ibb.co/jwrkf3x/2.png",
+        //     name: "Emily Garcia",
+        //     title: "Marketing Manager",
+        //     desc: "",
+        //     linkedin: "javascript:void(0)",
+        //     twitter: "javascript:void(0)",
+        //     github: "javascript:void(0)"
+        // },
         {
             avatar: "https://i.ibb.co/mFwp2Qt/3.png",
             name: "Soun Kanwar",
