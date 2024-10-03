@@ -54,7 +54,9 @@ const ConfirmBooking = () => {
       bookingValue: 1 // You can add more data here if needed
     });
 
-    if (data && data?.cardData) {      
+    if (data && data?.cardData) {   
+      console.log(data?.cardData?.title,":sdjvhbdjhbhj");
+         
 
       // THIS IS FOR THE BOOKING SYSTEM THAT I HAVE CREATED 
       // switch (data?.cardData?.cardData?.title) {      
@@ -67,7 +69,7 @@ const ConfirmBooking = () => {
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
           startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/riverside-mobile-testing");
           break;
-        case 'SF Bay Area / Silicon Valley Mobile Testing':
+        case 'Bay Area Mobile Testing':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
           startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/mobile-testing-and-at-home-test-kits");
           break;
@@ -84,7 +86,7 @@ const ConfirmBooking = () => {
           // setRedirectMessage("This location/service is currently unavailable. Please take a look at our at-home test kits or Mobile Testing for supplemental services");
           // setShowButton(true); // Show the button
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
-      // startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/self-testing-kit-for-covid-19-pre-book-your-order-999256");
+      startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/self-testing-kit-for-covid-19-pre-book-your-order-999256");
 
           break;
       }
