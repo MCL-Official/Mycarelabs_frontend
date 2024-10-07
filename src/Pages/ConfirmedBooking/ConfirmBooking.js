@@ -58,27 +58,24 @@ const ConfirmBooking = () => {
       console.log(data?.cardData?.title,":sdjvhbdjhbhj");
          
 
-
-      console.log(data?.cardData?.title,"sampleds");
-      
       // THIS IS FOR THE BOOKING SYSTEM THAT I HAVE CREATED 
       // switch (data?.cardData?.cardData?.title) {      
       switch (data?.cardData?.title) {
         case 'Fremont Laboratory':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
-          startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/online-self-registration");
+          startRedirectTimer("https://us.crelio.solutions/crm/#/web/book-package/online-self-registration?region=1000727&org=201818");
           break;
         case 'Riverside Mobile Testing':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
-          startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/riverside-mobile-testing");
+          startRedirectTimer("https://us.crelio.solutions/crm/#/web/book-package/riverside-mobile-testing?region=1000727&org=210195");
           break;
         case 'Bay Area Mobile Testing':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
-          startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/mobile-testing-and-at-home-test-kits");
+          startRedirectTimer("https://us.crelio.solutions/crm/#/web/book-package/mobile-testing-and-at-home-test-kits?region=1000727&org=210159");
           break;
         case 'Riverside Gurdwara':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
-          startRedirectTimer("https://us.livehealth.solutions/crm/#/web/book-package/book-your-smart-combo-test-norcal");
+          startRedirectTimer("https://us.crelio.solutions/crm/#/web/book-package/book-your-smart-combo-test-norcal?region=1000727&org=203364");
           break;
         case 'PCR COVID-19, RSV, and Influenza A/B Test Kit':
           setRedirectMessage(`Redirecting to HIPAA compliant patient registration page in ${countdown} seconds...`);
