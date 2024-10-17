@@ -47,36 +47,30 @@ export function Index() {
                         }
                     </div>
                     <h1 className="text-4xl text-gray-800 font-extrabold mx-auto md:text-5xl">
-                    Easy COVID-19/RSV/Flu Testing For Schools
+                        Easy COVID-19/RSV/Flu Testing For Schools
                     </h1>
                     <p className="max-w-xl mx-auto xl:mx-0">
-                    We provide on-site and self-service PCR Covid/RSV/Flu testing for schools throughout California. As a member of the California Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC. .
-                              </p>
-                    <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 xl:justify-start">
-                        <Link to="/testing-solutions/infectious-disease-testing-solutions" className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg md:inline-flex">
+                        We provide on-site and self-service PCR Covid/RSV/Flu testing for schools throughout California. As a member of the California Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC. .
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-x-3 gap-y-3">
+                        <Link to="/testing-solutions/infectious-disease-testing-solutions" className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg">
                             Browse More
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                 <path fillRule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clipRule="evenodd" />
                             </svg>
                         </Link>
-                        <Link to="/covid-test-locations" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
-                            Book Test 
+                        <Link to="/covid-test-locations" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg">
+                            Book Test
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                 <path fillRule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clipRule="evenodd" />
                             </svg>
                         </Link>
+
                     </div>
                 </div>
                 <div className="flex-1 max-w-xl mx-auto mt-14 xl:mt-0">
                     <div className="relative">
-                        <img src="https://www.hospitalmanagement.net/wp-content/uploads/sites/9/2022/05/Top-health-systems-in-the-US-by-number-of-hospitals-affiliated-1.jpg" className="rounded-lg" alt="" />
-                        <button className="absolute w-16 h-16 rounded-full inset-0 m-auto duration-150 bg-blue-500 hover:bg-blue-600 ring-offset-2 focus:ring text-white"
-                            onClick={() => setVideoPopUp(true)}
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 h-6 m-auto">
-                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                            </svg>
-                        </button>
+                        <img src="https://i.ibb.co/GM6hdLn/TRF.png" className="rounded-lg" alt="" />
                     </div>
                 </div>
             </div>

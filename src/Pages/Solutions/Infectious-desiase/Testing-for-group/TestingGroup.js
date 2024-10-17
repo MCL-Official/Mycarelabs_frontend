@@ -7,6 +7,7 @@ import Faq1 from '../../../Faq/Faq1'
 import Faq from '../../../Faq/Faq'
 import BlogPostCarousel from '../../../../Components/HoverCard/BlogPostCarousel'
 import { Helmet } from "react-helmet";
+import { Testimonials2 } from '../../../../Components/SOLUTION/Infectious-desiase/Group/Testimonials1'
 
 
 const TestingGroup = () => {
@@ -25,7 +26,8 @@ const TestingGroup = () => {
       <Index/>
       {/* <DateTimePicker/> */}
       <Feature/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
+      <Testimonials2/>
       <Faq/>
       <BlogPostCarousel/>
       <br></br>
