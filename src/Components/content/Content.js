@@ -1,7 +1,8 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 export default function Content() {
-  return (
+  return (<>
+
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
@@ -33,67 +34,69 @@ export default function Content() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">We Ensure Safe Testing</p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Infectious Disease Testing</h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
-              As you are aware, the current COVID-19 vaccines reduce the transmission of Delta and other variants and protect against serious illness and death. As you are aware, 
-              the current COVID-19 vaccines reduce the transmission.
-              </p>
+              <h1 className="mt-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                <span style={{ color: '#FF7244' }}>Infectious</span> <span style={{ color: '#7597E6' }}>Disease Testing</span>
+              </h1>
             </div>
           </div>
         </div>
-        <div className="mx-auto -mt-12 md:-mt-5 lg:mt-28 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="mx-auto -mt-40 md:-mt-28 lg:-mt-10 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             className="w-[48rem] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            // src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-            src="https://media.istockphoto.com/id/1336071300/photo/coronavirus-covid-19-new-variant-mutation.jpg?s=612x612&w=0&k=20&c=Ce5p292PNk9lFh6QaHWHxqiKQ1kNWfgscll7s5u6QZI="
+            src="https://i.ibb.co/DLr7JNV/CALENDAR.png"
             alt=""
           />
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p>
-              My Care Labs Was Founded During The Covid-19 Pandemic. We Provide Fast, Simple, Accurate Infectious Disease Testing Through Combination 
-              Covid-19 RT-PCR Tests With Same-Day Or Within 24 Hours Test Result Reporting, Dependent On California Test Site Location. Coming Soon: 
-              Flu And RSV Testing..
+            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg -mt-6">
+              <p className="text-xl leading-8 text-gray-700">
+                As you are aware, the current COVID-19 vaccines reduce the transmission of Delta and other variants and protect against serious illness and death. As you are aware,
+                the current COVID-19 vaccines reduce the transmission.
               </p>
-              <ul role="list" className="mt-8 space-y-8 text-center text-gray-600">
-                <li className="flex gap-x-2">
-                  <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Testing Made Easy.</strong> Book A Discovery Call Today So We Can Determine The Best Fit For Your Organization’s Needs.
-                  </span>
-                </li>
-                <li className="flex gap-x-2">
-                  <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">For Business Travelers And Leisure Vacationers.</strong> We Offer Pre-Flight And Pre-Cruise Travel Testing. Our Normal Rate Is $225 For Travel Testing With Covid Redipass PDF/QR Code Reporting.
-                  </span>
-                </li>
-                <li className="flex gap-x-2">
-                  <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">We Provide Individual/Small Group Testing.</strong> Our Silicon Valley Laboratory, Pop-Up Test Site Locations Throughout Northern And Southern California, And Mobile-Testing-On-Demand In Select Metro Areas.
-                  </span>
-                </li>
-              </ul>
-              <p className="mt-8">
-              We Have Provided And Supported Customized Covid Testing At Schools, Nursing Homes, Businesses, And Other Large Organizations Since 2021.
-               All Our CLIA-Certified Diagnostic Laboratory Services Are NO COST TO YOU With Any Insurance Plan And Low Cost For Uninsured Patients. 
-              We Only Bill Insurance Companies – Not You The Patient – Unless You Are Paying Cash In Special Circumstances.
+              <p className="text-xl leading-8 text-gray-700">
+                My Care Labs Was Founded During The Covid-19 Pandemic. We Provide Fast, Simple, Accurate Infectious Disease Testing Through Combination
+                Covid-19 RT-PCR Tests With Same-Day Or Within 24 Hours Test Result Reporting, Dependent On California Test Site Location. Coming Soon:
+                Flu And RSV Testing.
               </p>
-              {/* <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
-              <p className="mt-6">
-                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
-                Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
-                tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                turpis ipsum eu a sed convallis diam.
+
+              {/* <p className="text-lg leading-8 text-gray-700 mt-8">
+                We Have Provided And Supported Customized Covid Testing At Schools, Nursing Homes, Businesses, And Other Large Organizations Since 2021.
+                All Our CLIA-Certified Diagnostic Laboratory Services Are NO COST TO YOU With Any Insurance Plan And Low Cost For Uninsured Patients.
+                We Only Bill Insurance Companies – Not You The Patient – Unless You Are Paying Cash In Special Circumstances.
               </p> */}
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+    {/* to be done after some time  */}
+
+    {/* <div className="flex justify-center space-x-8 mt-4 mb-5">
+  <div className="border border-gray-300 p-4 rounded-lg shadow-lg flex items-center gap-x-4 max-w-lg">
+    <CloudArrowUpIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+    <span className="text-lg leading-8 text-gray-700">
+      <strong className="font-semibold text-gray-900">Testing Made Easy.</strong> Book A Discovery Call Today So We Can Determine The Best Fit For Your Organization’s Needs.
+    </span>
+  </div>
+  <div className="border border-gray-300 p-4 rounded-lg shadow-lg flex items-center gap-x-4 max-w-lg">
+    <LockClosedIcon className="h-10 w-6 text-indigo-600" aria-hidden="true" />
+    <span className="text-lg leading-8 text-gray-700">
+      <strong className="font-semibold text-gray-900">For Business Travelers And Leisure Vacationers.</strong> We Offer Pre-Flight And Pre-Cruise Travel Testing. Our Normal Rate Is $225 For Travel Testing With Covid Redipass PDF/QR Code Reporting.
+    </span>
+  </div>
+  <div className="border border-gray-300 p-4 rounded-lg shadow-lg flex items-center gap-x-4 max-w-lg">
+    <ServerIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+    <span className="text-lg leading-8 text-gray-700">
+      <strong className="font-semibold text-gray-900">We Provide Individual/Small Group Testing.</strong> Our Silicon Valley Laboratory, Pop-Up Test Site Locations Throughout Northern And Southern California, And Mobile-Testing-On-Demand In Select Metro Areas.
+    </span>
+  </div>
+</div> */}
+
+
+  </>
   )
 }
+
