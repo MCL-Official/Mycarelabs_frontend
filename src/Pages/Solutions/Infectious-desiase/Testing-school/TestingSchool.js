@@ -1,6 +1,6 @@
 import React from 'react'
 import { Index } from '../../../../Components/SOLUTION/Infectious-desiase/School/Index'
-import BookAppointment from '../../../../Components/BookAppointment'
+import BookAppointment from './BookApointment'
 import BookTestDetails from '../../../BookMyTest/BookDetails'
 import DateTimePicker from '../../../../Components/Booking/DateTimePicker'
 import Faq from '../../../Faq/Faq'
@@ -21,9 +21,9 @@ const TestingSchool = () => {
       <br></br>
       <Index/>
       <div className="container">
-<h1>
+{/* <h1>
   Book Your appointment
-  </h1>
+  </h1> */}
       {/* <DateTimePicker/> */}
       </div>
       <BookAppointment/>
