@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 
-
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -23,7 +22,7 @@ const Faq = () => {
       answer: "Your provider needs to send us a HIPAA-compliant request by email, fax, or call."
     },
     {
-      question: " How can I view and share My Care Labs COVID/RSV/Flu test results with my airline, friends, family, school, work, doctor, hospital, another clinic, insurance, etc? ",
+      question: "How can I view and share My Care Labs COVID/RSV/Flu test results with my airline, friends, family, school, work, doctor, hospital, another clinic, insurance, etc? ",
       answer: "Our Patientxchange portal allows you to download a PDF or Readipass (travel) QR code of your test results. You can log into your patient portal on our website."
     },
     {
@@ -33,28 +32,45 @@ const Faq = () => {
   ];
 
   return (
-    <div className="max-w-4xl sm:mx-auto pr-1 pl-5 py-5 mt-5">
-        <Helmet>
+    <div className="max-w-6xl mx-auto py-12 px-4 flex">
+      <Helmet>
         <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
         <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
         <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
-      <h2 className="text-2xl font-bold mb-6 text-center">Frequently asked questions.</h2>
-      {faqs.map((faq, index) => (
-        <div key={index} className="border-b border-gray-200">
-          <button
-            className="w-full text-left py-4 flex justify-between items-center"
-            onClick={() => toggleFaq(index)}
-          >
-            <span className="text-lg">{faq.question}</span>
-            <span className="text-2xl">{openIndex === index ? '-' : '+'}</span>
-          </button>
-          {openIndex === index && (
-            <div className="pb-4 text-gray-700">{faq.answer}</div>
-          )}
-        </div>
-      ))}
+      
+      {/* Left Image */}
+      <div className="hidden lg:block flex-shrink-0 mr-10">
+        <img
+          src="https://i.ibb.co/8x8Yg3S/Untitled-1280-x-720-px-1300-x-1000-px.png"
+          alt="FAQ icon"
+          className="w-80 h-auto rounded-lg pt-24 pr-5"
+        />
+      </div>
+
+      {/* Right FAQ Section */}
+      <div className="w-full">
+        <h2 className="text-4xl font-bold mb-8 text-orange-500 text-center">Frequently Asked Questions</h2>
+        {faqs.map((faq, index) => (
+          <div key={index} className="mb-4">
+            <button
+              className={`w-full text-left py-4 px-6 flex justify-between items-center rounded-xl shadow-lg transition-all duration-300 ${
+                openIndex === index ? "bg-orange-400 text-white" : "bg-white text-black"
+              }`}
+              onClick={() => toggleFaq(index)}
+            >
+              <span className="text-lg">{faq.question}</span>
+              <span className="text-2xl">{openIndex === index ? '-' : '+'}</span>
+            </button>
+            {openIndex === index && (
+              <div className="px-6 py-4 text-gray-700 bg-gray-50 rounded-b-xl">
+                {faq.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
