@@ -123,7 +123,7 @@ function App() {
           <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP/>} />
           <Route path="/testing-solutions/wellness-testing-solutions/lipid-profile-test/" element={<Lipid/>} />
-          <Route path="//testing-solutions/oncology-testing-solutions/" element={<Oncology/>} />
+          <Route path="/testing-solutions/oncology-testing-solutions/" element={<Oncology/>} />
           <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology/>} />
           <Route path="/creatine-kinase" element={<Index/>} />
           <Route path="/crp-tests" element={<Index1/>} />
