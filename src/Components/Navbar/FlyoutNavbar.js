@@ -8,7 +8,7 @@ import { IoCall } from "react-icons/io5";
 import logo1 from "../../Assets/Logo1.png";
 import { cardData, images, testingSolutions } from "../../utility/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faPhone ,faStar ,faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
@@ -24,7 +24,7 @@ const Example = () => {
 const FlyoutNav = () => {
 
   const location = useLocation();
-  const data  = ({bg:"#00000"})
+  const data = ({ bg: "#00000" })
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
@@ -48,13 +48,11 @@ const FlyoutNav = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full text-white transition-all duration-300 ease-out lg:px-12 ${
-        hidden ? "-translate-y-full" : "translate-y-0"
-      } ${
-        scrolled || !isHome
+      className={`fixed top-0 z-50 w-full text-white transition-all duration-300 ease-out lg:px-12 ${hidden ? "-translate-y-full" : "translate-y-0"
+        } ${scrolled || !isHome
           ? "bg-white py-2 shadow-xl" // Reduced padding
           : "bg-white py-2 shadow-none" // Reduced padding
-      }`}
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
@@ -117,9 +115,8 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
       <Link
         to={to}
         onClick={handleClick}
-        className={`relative font-semibold no-underline text-xl ${
-          isHome ? (scrolled ? "text-black" : "text-black") : "text-black"
-        }`}
+        className={`relative font-semibold no-underline text-xl ${isHome ? (scrolled ? "text-black" : "text-black") : "text-black"
+          }`}
       >
         {children}
         <span
@@ -151,53 +148,50 @@ const NavLink = ({ children, to, FlyoutContent, isHome, scrolled }) => {
 
 const CTAs = ({ isHome, scrolled }) => {
   const navigate = useNavigate()
-  const data =()=>{
+  const data = () => {
     // navigate()https://patient-us.creliohealth.com/patient/login
-    window.location.href ="https://patient-us.creliohealth.com/patient/login"
-  } 
+    window.location.href = "https://patient-us.creliohealth.com/patient/login"
+  }
   return (
     <div className="flex items-center gap-3">
       <button
-        className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 font-semibold transition-colors ${
-          isHome
-            ? scrolled
-              ? "bg-yellow-600 text-white"
-              : "text-white border-white bg-yellow-600 hover:text-white"
-            : "bg-yellow-600 text-white"
-        }`}
-        onClick={()=>data()}
+        className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 font-semibold transition-colors ${isHome
+          ? scrolled
+            ? "bg-yellow-600 text-white"
+            : "text-white border-white bg-yellow-600 hover:text-white"
+          : "bg-yellow-600 text-white"
+          }`}
+        onClick={() => data()}
       >
         <FaUserCircle />
         <span>Check Your Test Result</span>
       </button>
       {/* <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white"> */}
       <a
-      href="tel:+1-800-790-4550"
-      className={`flex items-center gap-2 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${
-        isHome
+        href="tel:+1-800-790-4550"
+        className={`flex items-center gap-2 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${isHome
           ? scrolled
             ? "bg-orange-600 text-white"
             : "text-white border-white bg-orange-600 hover:text-white"
           : "bg-orange-600 text-white"
-      }`}
-    >
-      <FontAwesomeIcon icon={faPhone} size="lg" />
-      <span>+1-800-790-4550</span>
-    </a>
+          }`}
+      >
+        <FontAwesomeIcon icon={faPhone} size="lg" />
+        <span>+1-800-790-4550</span>
+      </a>
       <a
-      href="/MY Care Labs TRF Master.pdf" 
-      download 
-      className={`flex items-center gap-1 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${
-        isHome
+        href="/MY Care Labs TRF Master.pdf"
+        download
+        className={`flex items-center gap-1 rounded-lg border-2 px-3 py-2 font-semibold transition-colors no-underline ${isHome
           ? scrolled
             ? "bg-orange-600 text-white"
             : "text-white border-white bg-orange-600 hover:text-white"
           : "bg-orange-600 text-white"
-      }`}
-    >
-      <FontAwesomeIcon icon={faDownload} size="lg" />
-      <span>TRF</span>
-    </a>
+          }`}
+      >
+        <FontAwesomeIcon icon={faDownload} size="lg" />
+        <span>TRF</span>
+      </a>
       {/* <button className="rounded-lg border-2 border-indigo-300 bg-indigo-300 px-4 py-2 font-semibold text-black transition-colors hover:border-orange-600 hover:bg-orange-600 hover:text-white">
       <FaUserCircle /> +1-800-790-4550
       </button> */}
@@ -207,7 +201,7 @@ const CTAs = ({ isHome, scrolled }) => {
 
 const AboutUsContent = ({ handleClick }) => {
   const navigate = useNavigate(); // Initialize useNavigate
-// const sample = {{...cardData , imageUrl: images[index % images.length] }}
+  // const sample = {{...cardData , imageUrl: images[index % images.length] }}
   if (!cardData || !images || cardData.length === 0 || images.length === 0) {
     return null; // Return null to render nothing if the arrays are not available
   }
@@ -220,139 +214,244 @@ const AboutUsContent = ({ handleClick }) => {
       .replace(/-+$/, '') // Removes trailing hyphens
       .toLowerCase();
   };
-  
+
   const handleBookNowClick = (cardData) => {
-    console.log(cardData,'sdvkjvnsvnsdjvsdnjvcnsjsdnv');
-    
+    console.log(cardData, 'sdvkjvnsvnsdjvsdnjvcnsjsdnv');
+
     const formattedCategory = formatCategoryName(cardData.category);
     navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: cardData } });
 
     // THE BOOKING SYSTEM TTHAT I HAVE CREATED 
 
-  //   if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
-  //     navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-  //  }else{
+    //   if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
+    //     navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    //  }else{
 
-  //    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-  //    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-  //    // navigate(`/bookingcompletion`, { state: { cardData } });
-  //    console.log("Navigating with card data:", cardData);
-  //  }
+    //    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    //    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    //    // navigate(`/bookingcompletion`, { state: { cardData } });
+    //    console.log("Navigating with card data:", cardData);
+    //  }
     // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: card } });
     // console.log("Navigating with card data:", card);
     handleClick();
   };
   return (
     <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[950px] xl:grid-cols-12">
-    <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-4 lg:col-span-4 xl:col-span-4">
-      <div>
-        <h2 className="mb-2 text-lg font-semibold text-white">
-           Testing Locations
-        </h2>
-        <p className="mb-4 max-w-xs text-xs text-neutral-400">
-        Choose the Location or Service That is Most Convenient for You!
-        </p>
-        <p className="mb-4 max-w-xs text-lg text-neutral-400">
-        5500 Stewart Avenue, Suite 108,
-        Fremont, CA 94538
-        </p>
-      </div>
-      <Link
-        to="/covid-test-locations"
-        className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
-      >
-        Learn more <FiArrowRight />
-      </Link>
-    </div>
-    <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 xl:col-span-8 xl:grid-cols-3">
-      {cardData.slice(0, 6).map((card, index) => (
-        <div
-          key={card.id}
-          className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
+      <div className="col-span-12 flex flex-col justify-between bg-neutral-950 p-4 lg:col-span-4 xl:col-span-4">
+        <div>
+          <h2 className="mb-2 text-lg font-semibold text-white">
+            Testing Locations
+          </h2>
+          <p className="mb-4 max-w-xs text-xs text-neutral-400">
+            Choose the Location or Service That is Most Convenient for You!
+          </p>
+          <p className="mb-4 max-w-xs text-lg text-neutral-400">
+            5500 Stewart Avenue, Suite 108,
+            Fremont, CA 94538
+          </p>
+        </div>
+        <Link
+          to="/covid-test-locations"
+          className="flex items-center gap-1 text-xs text-indigo-300 hover:underline"
         >
-          <img
-            src={images[index % images.length]}
-            alt={card.title}
-            className="h-24 w-full object-cover" // Adjusted image height for larger size
-          />
-          <div className="p-3 flex-grow flex flex-col justify-between">
-            <div>
-              <h2 className="font-bold text-sm my-1">{card.category}</h2>
-              <p className="text-xs text-gray-800 mt-1">
-                <strong>Hours:</strong> {card.timing}
-              </p>
-              <p className="text-xs text-gray-800">
-                <strong>Location:</strong> {card.location}
-              </p>
+          Learn more <FiArrowRight />
+        </Link>
+      </div>
+      <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 xl:col-span-8 xl:grid-cols-3">
+        {cardData.slice(0, 6).map((card, index) => (
+          <div
+            key={card.id}
+            className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
+          >
+            <img
+              src={images[index % images.length]}
+              alt={card.title}
+              className="h-24 w-full object-cover" // Adjusted image height for larger size
+            />
+            <div className="p-3 flex-grow flex flex-col justify-between">
+              <div>
+                <h2 className="font-bold text-sm my-1">{card.category}</h2>
+                <p className="text-xs text-gray-800 mt-1">
+                  <strong>Hours:</strong> {card.timing}
+                </p>
+                <p className="text-xs text-gray-800">
+                  <strong>Location:</strong> {card.location}
+                </p>
+              </div>
+              <button
+                onClick={() => handleBookNowClick({ ...card, imageUrl: images[index % images.length] })}
+                className="mt-3 px-3 py-2 text-center text-white bg-green-600 hover:bg-green-500 rounded-lg text-xs font-semibold w-full"
+              >
+                Book Now
+              </button>
             </div>
-            <button
-              onClick={() => handleBookNowClick({ ...card, imageUrl: images[index % images.length] })}
-              className="mt-3 px-3 py-2 text-center text-white bg-green-600 hover:bg-green-500 rounded-lg text-xs font-semibold w-full"
-            >
-              Book Now
-            </button>
           </div>
+        ))}
+      </div>
+    </div>
+
+  );
+};
+
+
+const PricingContent = () => {
+  const [isHovered, setIsHovered] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setIsHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(null);
+  };
+
+  return (
+    <div className="w-full bg-slate-50 p-6 shadow-none lg:w-[250px] lg:shadow-xl rounded-xl">
+      <div className="grid grid-cols-2 lg:grid-cols-1">
+        <div className="mb-3 space-y-3 relative">
+          {/* Main Links */}
+          <Link
+            to="/about"
+            className="block text-lg text-black no-underline hover:underline "
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
+          >
+            About Company
+          </Link>
+          {/* {isHovered === 1 && (
+            <div
+              className="absolute top-0 left-full w-[250px] bg-slate-50 shadow-lg p-3 space-y-2"
+              onMouseEnter={() => handleMouseEnter(1)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link
+                to="/company-overview"
+                className="block text-lg text-black no-underline hover:underline"
+              >
+                Company Overview
+              </Link>
+              <Link
+                to="/company-mission"
+                className="block text-lg text-black no-underline hover:underline"
+              >
+                Our Mission
+              </Link>
+            </div>
+          )} */}
+
+          <Link
+            to="/management-team"
+            className="block text-lg text-black no-underline hover:underline"
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Management Teams
+          </Link>
+          {/* {isHovered === 2 && (
+            <div
+              className="absolute top-0 left-full w-[250px] bg-slate-50 rounded-xl shadow-lg p-3 space-y-2"
+              onMouseEnter={() => handleMouseEnter(2)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link
+                to="/team-members"
+                className="block text-lg text-black no-underline hover:underline"
+              >
+                Team Members
+              </Link>
+              <Link
+                to="/leadership"
+                className="block text-lg text-black no-underline hover:underline"
+              >
+                Leadership
+              </Link>
+            </div>
+          )} */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+const PricingContent1 = () => {
+  const [isHovered, setIsHovered] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setIsHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(null);
+  };
+
+  return (
+    <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg ">
+    <div className="grid grid-cols-2 mt-2 lg:grid-cols-1">
+      {testingSolutions.map((solution, index) => (
+        <div key={index} className="mb-3 space-y-3  relative">
+          {/* Main Category */}
+          <Link
+            to={solution.route}
+            className={`block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 ${
+              isHovered === index ? "bg-slate-200 hover:shadow-lg" : ""
+            }`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {solution.category}
+            
+            {/* Render the dropdown arrow if the category has tests */}
+            {solution.tests.length > 0 && (
+              <FontAwesomeIcon icon={faChevronDown} className="ml-2 text-gray-500" />
+            )}
+
+            {/* Show 'New' Icon next to UTI Testing Solutions */}
+            {/* {solution.category === "UTI Testing Solutions" && (
+              <span className="relative inline-flex ml-2">
+                <span
+                  className="absolute top-[-15px] left-[24px] bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full"
+                  style={{ transform: 'translateY(-50%)' }} // Positions it slightly above
+                >
+                  NEW
+                </span>
+              </span>
+            )} */}
+             {solution.category === "UTI Testing Solutions" && (
+                <span className="ml-2 text-red-500">
+                  <FontAwesomeIcon icon={faStar} />
+                  <span className="ml-1 text-sm text-red-500">New</span>
+                </span>
+              )}
+          </Link>
+
+          {/* Submenu if tests exist */}
+          {isHovered === index && solution.tests.length > 0 && (
+            <div
+              className="absolute -top-3 left-full w-[250px] text-left bg-white shadow-lg p-2 space-y-2 rounded-lg"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {solution.tests.map((test, testIndex) => (
+                <Link
+                  key={testIndex}
+                  to={test.route}
+                  className="block text-base text-black no-underline hover:bg-slate-200 p-2 rounded-lg"
+                >
+                  {test.name}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       ))}
     </div>
   </div>
-  
   );
 };
 
-const PricingContent = () => {
-  return (
-    <div className="w-full bg-white p-6 shadow-none lg:w-[250px] lg:shadow-xl">
-      <div className="grid grid-cols-2 lg:grid-cols-1">
-        <div className="mb-3 space-y-3">
-          {/* <h3 className="font-semibold">About Us</h3> */}
-          {/* <Link
-            to="/careers"
-            className="block text-sm text-black no-underline hover:underline"
-          >
-            Careers
-          </Link> */}
-          <Link
-            to="/about"
-            className="block text-sm text-black no-underline hover:underline"
-          >
-            About Company
-          </Link>
-          <Link
-            to="/management-team"
-            className="block text-sm text-black no-underline hover:underline"
-          >
-            Management teams
-          </Link>
-        </div>
-        {/* <div className="mb-6 space-y-3">
-          <h3 className="font-semibold">For Companies</h3>
-          <Link
-            to="#"
-            className="block text-sm text-black no-underline hover:underline"
-          >
-            Startups
-          </Link>
-          <Link
-            to="#"
-            className="block text-sm text-black no-underline hover:underline"
-          >
-            SMBs
-          </Link>
-          <Link
-            to="#"
-            className="block text-sm text-black no-underline hover:underline"
-          >
-            Enterprise
-          </Link>
-        </div> */}
-      </div>
-      {/* <button className="w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white">
-        Contact sales
-      </button> */}
-    </div>
-  );
-};
 
 
 const CareersContent = ({ handleClick }) => {
@@ -361,12 +460,12 @@ const CareersContent = ({ handleClick }) => {
       <div className="col-span-12 flex flex-col justify-between bg-gradient-to-b from-indigo-700 to-indigo-500 p-6 lg:col-span-4">
         <div className="mb-6">
           <h2 className="mb-2 text-2xl font-bold text-white">Solutions</h2>
-          <p className="text-sm text-indigo-100">
-           Solution that we provide to keep you healthy and going.
+          <p className="text-sm text-indigo-300">
+            Solution that we provide to keep you healthy and going.
           </p>
         </div>
         <Link
-          to="testing-solutions/infectious-disease-testing-solutions" 
+          to="testing-solutions/infectious-disease-testing-solutions"
           className="flex items-center gap-1 text-sm font-medium text-indigo-200 hover:text-white hover:underline"
         >
           Solutions <FiArrowRight />
@@ -378,7 +477,7 @@ const CareersContent = ({ handleClick }) => {
           .map((solution, index) => (
             <div
               key={index}
-              className="flex flex-col space-y-4 border-b-2 border-gray-100 pb-4 transition-all duration-200 ease-in-out hover:bg-gray-50"
+              className="flex flex-col space-y-4 border-b-2 border-gray-200 pb-4 transition-all duration-200 ease-in-out hover:bg-gray-50"
             >
               <Link
                 to={solution.route} // Navigate to category route
@@ -472,9 +571,8 @@ const MobileMenu = ({ isHome, scrolled }) => {
     <div className="block lg:hidden">
       <button
         onClick={() => setOpen(true)}
-        className={`block text-xl ${
-          isHome ? (scrolled ? "text-neutral-950" : "text-white") : "text-neutral-950"
-        }`}
+        className={`block text-xl ${isHome ? (scrolled ? "text-neutral-950" : "text-white") : "text-neutral-950"
+          }`}
         style={{ padding: '4px 8px' }} // Reduced padding
       >
         <FiMenu />
@@ -529,7 +627,8 @@ const LINKS = [
   {
     text: "Solutions",
     href: "/testing-solutions/infectious-disease-testing-solutions",
-    component: CareersContent,
+    // component: CareersContent,
+    component: PricingContent1,
   },
   {
     text: "Company",

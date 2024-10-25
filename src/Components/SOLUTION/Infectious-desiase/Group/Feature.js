@@ -1,4 +1,4 @@
-export function Feature () {
+export function Feature() {
 
     const features = [
         {
@@ -56,12 +56,12 @@ export function Feature () {
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="relative max-w-2xl mx-auto sm:text-center">
                     <div className="relative z-10">
-                        <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                        We Ensure Safe Testing
-                        </h3>
+                        <button className="mt-5 py-4 px-12 border-4 border-blue-500 text-blue-500 text-2xl font-bold rounded-full hover:bg-blue-500 hover:text-white active:bg-blue-700 active:border-blue-700 shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                            We Ensure Safe Testing
+                        </button>
                         <p className="mt-3">
-                        Same Day Results For Groups,
-                        individuals, Travelers
+                            Same Day Results For Groups,
+                            individuals, Travelers
                         </p>
                     </div>
                     <div className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px]" style={{ background: "linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)" }}></div>

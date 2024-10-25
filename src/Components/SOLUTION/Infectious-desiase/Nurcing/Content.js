@@ -4,16 +4,13 @@ export function Content()  {
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                     <div className="flex-1 sm:hidden lg:block">
-                        <img src="https://i.ibb.co/XXmTtnP/5.png" className="md:max-w-lg sm:rounded-lg" alt="" />
+                        <img src="https://i.ibb.co/PtDBfN5/closeup-man-having-pcr-test-medical-clinic.jpg" className="md:max-w-lg sm:rounded-xl" alt="" />
                     </div>
                     <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-                        <h3 className="text-indigo-600 font-semibold">
-                            Professional services
-                        </h3>
                         <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                         My Care Labs Now Provides nursing homes Combo PCR Testing For Covid-19.
                         </p>
-                        <p className="mt-3 text-gray-600">
+                        <p className="mt-3 text-lgtext-gray-600">
                         My Care Labs provides testing for nursing homes across the state of California. We operate testing facilities in both Northern and Southern California as well as pop-up test sites accessible to the public. Since we have our own laboratory, there is virtually no wait time in receiving your Covid/Flu RT-PCR results by email, text, or phone. See our flyer on this page for a snapshot of benefits from our nursing home testing programs.                       </p>
                         <a href="javascript:void(0)" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
                             Learn more

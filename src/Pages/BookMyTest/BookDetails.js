@@ -69,7 +69,7 @@ const BookTestDetails = () => {
           <DateTimePicker cardData={cardData} CrelioData={CrelioData} />
         
           <TabsFeatures/> 
-      <Locations/>
+      {/* <Locations/> */}
         </div>
        
           <div className="sm:flex justify-center  mt-5 bg-gradient-to-r from-blue-500 to-white p-10  rounded border-[1px]">

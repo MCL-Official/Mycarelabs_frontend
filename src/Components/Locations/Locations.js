@@ -5,7 +5,7 @@ const Locations = () => {
   return (
     <div>
          <div className="text-center py-8 mt-5">
-      <p className="text-blue-500 font-semibold">We Ensure Safe Testing</p>
+      <p className="text-blue-500 font-semibold">We Ensure Safe Testing</p> 
       <h2 className="text-2xl font-bold mt-2">
         Same Day Results <span className="text-red-500">For Groups,</span> individuals, Travelers
       </h2>
@@ -38,7 +38,7 @@ const Locations = () => {
       alt="No Appointments Needed"
       className="w-48 h-48 mx-auto mb-2 object-cover" 
     />
-    <h3 className="font-bold">No Appointments Needed, Walk-Ins Welcome!</h3>
+    <h3 className="font-bold">  </h3>
     <p className="text-gray-600">
       Walk-in tests: Swift results at My Care Labs for your convenience.
     </p>

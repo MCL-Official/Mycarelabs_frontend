@@ -97,6 +97,11 @@ export  const cardData = [
      
      
      export const testingSolutions = [
+      {
+        category: "UTI Testing Solutions",
+        route: "/uti", // Add category route
+        tests: [],
+      },
     {
       category: "Infectious Disease Testing Solutions",
       route: "/testing-solutions/infectious-disease-testing-solutions", // Add category route
@@ -123,6 +128,7 @@ export  const cardData = [
         },
       ],
     },
+   
     {
       category: "Wellness Testing Solutions",
       route: "/testing-solutions/wellness-testing-solutions/", // Add category route
@@ -155,12 +161,13 @@ export  const cardData = [
     },
     {
       category: "Toxicology Testing Solutions",
-      route: "/toxicology-testing-solutions", // Add category route
+      route: "/testing-solutions/toxicology-testing-solutions", // Add category route
       tests: [],
     },
+    
     {
       category: "Oncology Testing Solutions",
-      route: "/oncology-testing-solutions", // Add category route
+      route: "/testing-solutions/oncology-testing-solutions", // Add category route
       tests: [],
     },
     {
