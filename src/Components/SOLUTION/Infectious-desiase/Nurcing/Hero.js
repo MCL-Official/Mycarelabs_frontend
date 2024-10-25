@@ -12,10 +12,9 @@ const Hero = () => {
                 <h1 className="mb-5 text-5xl font-bold !leading-[1.208] text-[#7597E6] dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
                   Testing For <span className="text-[#FF7244]">Nursing</span> Homes
                 </h1>
-                <p className="mb-8 text-lg max-w-[480px] text-base text-body-color dark:text-dark-6">
+                <p className="mb-8 text-lg max-w-[480px] text-base text-body-color dark:text-dark-6 -mt-6">
                   We provide on-site and self-service PCR Covid/RSV/Flu testing for nursing homes
-                  throughout California. As a member of the California
-                  Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC.
+                  throughout California. As a member of the California Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC.
                 </p>
                 <ul className="flex flex-wrap items-center">
                   <li>
