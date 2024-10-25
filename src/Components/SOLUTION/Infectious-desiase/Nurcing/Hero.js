@@ -9,19 +9,19 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-5/12">
               <div className="hero-content">
-                <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-dark dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
-                Testing For Nursing Homes
+                <h1 className="mb-5 text-5xl font-bold !leading-[1.208] text-[#7597E6] dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
+                  Testing For <span className="text-[#FF7244]">Nursing</span> Homes
                 </h1>
-                <p className="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
-                We provide on-site and self-service PCR Covid/RSV/Flu testing for nursing homes 
-                throughout California. As a member of the California 
-                Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC.
+                <p className="mb-8 text-lg max-w-[480px] text-base text-body-color dark:text-dark-6">
+                  We provide on-site and self-service PCR Covid/RSV/Flu testing for nursing homes
+                  throughout California. As a member of the California
+                  Covid Task Force, we partner directly with CDPH and report to both CalREDIE and CDC.
                 </p>
                 <ul className="flex flex-wrap items-center">
                   <li>
                     <Link
                       to="/covid-test-locations"
-                      className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
+                      className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
                     >
                       Book Now
                     </Link>
@@ -94,9 +94,9 @@ const Hero = () => {
               <div className="lg:ml-auto lg:text-right">
                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                   <img
-                    src="https://i.ibb.co/pvBkRYq/2.png"
+                    src="https://i.ibb.co/1Rqt1n3/123.png"
                     alt="hero"
-                    className="max-w-full lg:ml-auto"
+                    className="max-w-full lg:ml-auto rounded-xl"
                   />
                   <span className="absolute -bottom-8 -left-8 z-[-1]">
                     <svg
