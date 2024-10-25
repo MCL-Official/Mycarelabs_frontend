@@ -8,7 +8,7 @@ import { IoCall } from "react-icons/io5";
 import logo1 from "../../Assets/Logo1.png";
 import { cardData, images, testingSolutions } from "../../utility/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faPhone ,faStar} from "@fortawesome/free-solid-svg-icons";
 
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
@@ -388,20 +388,37 @@ const PricingContent1 = () => {
   };
 
   return (
-    <div className="w-full bg-white p-6 shadow-none lg:w-[300px] lg:shadow-xl rounded-xl">
-      <div className="grid grid-cols-2 lg:grid-cols-1">
+    <div className="w-full bg-white p-6 shadow-none lg:w-[320px] lg:shadow-xl rounded-xl">
+      <div className="grid grid-cols-2  lg:grid-cols-1">
         {testingSolutions.map((solution, index) => (
-          <div key={index} className="mb-3 space-y-3 relative">
+          <div key={index} className="mb-3 space-y-3  relative">
             {/* Main Category */}
             <Link
               to={solution.route}
-              className={`block text-base text-black no-underline text-left hover:bg-slate-200 py-2 ${
-                isHovered === index ? "bg-slate-200" : ""
+              className={`block text-base text-black no-underline text-left px-1  hover:bg-blue-300 py-2 ${
+                isHovered === index ? "bg-slate-200 hover:shadow-xl rounded-md"  : ""
               }`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
+                {solution.category === "UTI" && (
+                <span className="relative inline-flex ml-2">
+                  <span
+                    className="absolute top-[-15px] left-[24px] bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full"
+                    style={{ transform: 'translateY(-50%)' }} // Positions it slightly above
+                  >
+                    NEW
+                  </span>
+                </span>
+              )}
               {solution.category}
+              {/* {solution.category === "UTI" && (
+                <span className="ml-2 text-red-500">
+                  <FontAwesomeIcon icon={faStar} />
+                  <span className="ml-1 text-xs text-red-500">New</span>
+                </span>
+              )} */}
+               
             </Link>
             {/* Submenu if tests exist */}
             {isHovered === index && solution.tests.length > 0 && (
