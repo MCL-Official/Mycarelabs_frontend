@@ -97,6 +97,11 @@ export  const cardData = [
      
      
      export const testingSolutions = [
+      {
+        category: "UTI Testing Solutions",
+        route: "/uti", // Add category route
+        tests: [],
+      },
     {
       category: "Infectious Disease Testing Solutions",
       route: "/testing-solutions/infectious-disease-testing-solutions", // Add category route
@@ -123,11 +128,7 @@ export  const cardData = [
         },
       ],
     },
-    {
-      category: "UTI",
-      route: "/uti", // Add category route
-      tests: [],
-    },
+   
     {
       category: "Wellness Testing Solutions",
       route: "/testing-solutions/wellness-testing-solutions/", // Add category route

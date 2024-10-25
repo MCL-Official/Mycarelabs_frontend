@@ -8,7 +8,7 @@ import { IoCall } from "react-icons/io5";
 import logo1 from "../../Assets/Logo1.png";
 import { cardData, images, testingSolutions } from "../../utility/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPhone ,faStar} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faPhone ,faStar ,faChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
@@ -319,7 +319,7 @@ const PricingContent = () => {
           >
             About Company
           </Link>
-          {isHovered === 1 && (
+          {/* {isHovered === 1 && (
             <div
               className="absolute top-0 left-full w-[250px] bg-slate-50 shadow-lg p-3 space-y-2"
               onMouseEnter={() => handleMouseEnter(1)}
@@ -338,7 +338,7 @@ const PricingContent = () => {
                 Our Mission
               </Link>
             </div>
-          )}
+          )} */}
 
           <Link
             to="/management-team"
@@ -348,7 +348,7 @@ const PricingContent = () => {
           >
             Management Teams
           </Link>
-          {isHovered === 2 && (
+          {/* {isHovered === 2 && (
             <div
               className="absolute top-0 left-full w-[250px] bg-slate-50 rounded-xl shadow-lg p-3 space-y-2"
               onMouseEnter={() => handleMouseEnter(2)}
@@ -367,7 +367,7 @@ const PricingContent = () => {
                 Leadership
               </Link>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
@@ -388,60 +388,67 @@ const PricingContent1 = () => {
   };
 
   return (
-    <div className="w-full bg-white p-6 shadow-none lg:w-[320px] lg:shadow-xl rounded-xl">
-      <div className="grid grid-cols-2  lg:grid-cols-1">
-        {testingSolutions.map((solution, index) => (
-          <div key={index} className="mb-3 space-y-3  relative">
-            {/* Main Category */}
-            <Link
-              to={solution.route}
-              className={`block text-base text-black no-underline text-left px-1  hover:bg-blue-300 py-2 ${
-                isHovered === index ? "bg-slate-200 hover:shadow-xl rounded-md"  : ""
-              }`}
+    <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg ">
+    <div className="grid grid-cols-2 mt-2 lg:grid-cols-1">
+      {testingSolutions.map((solution, index) => (
+        <div key={index} className="mb-3 space-y-3  relative">
+          {/* Main Category */}
+          <Link
+            to={solution.route}
+            className={`block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 ${
+              isHovered === index ? "bg-slate-200 hover:shadow-lg" : ""
+            }`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {solution.category}
+            
+            {/* Render the dropdown arrow if the category has tests */}
+            {solution.tests.length > 0 && (
+              <FontAwesomeIcon icon={faChevronDown} className="ml-2 text-gray-500" />
+            )}
+
+            {/* Show 'New' Icon next to UTI Testing Solutions */}
+            {/* {solution.category === "UTI Testing Solutions" && (
+              <span className="relative inline-flex ml-2">
+                <span
+                  className="absolute top-[-15px] left-[24px] bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full"
+                  style={{ transform: 'translateY(-50%)' }} // Positions it slightly above
+                >
+                  NEW
+                </span>
+              </span>
+            )} */}
+             {solution.category === "UTI Testing Solutions" && (
+                <span className="ml-2 text-red-500">
+                  <FontAwesomeIcon icon={faStar} />
+                  <span className="ml-1 text-sm text-red-500">New</span>
+                </span>
+              )}
+          </Link>
+
+          {/* Submenu if tests exist */}
+          {isHovered === index && solution.tests.length > 0 && (
+            <div
+              className="absolute -top-3 left-full w-[250px] text-left bg-white shadow-lg p-2 space-y-2 rounded-lg"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-                {solution.category === "UTI" && (
-                <span className="relative inline-flex ml-2">
-                  <span
-                    className="absolute top-[-15px] left-[24px] bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full"
-                    style={{ transform: 'translateY(-50%)' }} // Positions it slightly above
-                  >
-                    NEW
-                  </span>
-                </span>
-              )}
-              {solution.category}
-              {/* {solution.category === "UTI" && (
-                <span className="ml-2 text-red-500">
-                  <FontAwesomeIcon icon={faStar} />
-                  <span className="ml-1 text-xs text-red-500">New</span>
-                </span>
-              )} */}
-               
-            </Link>
-            {/* Submenu if tests exist */}
-            {isHovered === index && solution.tests.length > 0 && (
-              <div
-                className="absolute top-0 left-full w-[250px] text-left bg-white shadow-lg p-2 space-y-2"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-              >
-                {solution.tests.map((test, testIndex) => (
-                  <Link
-                    key={testIndex}
-                    to={test.route}
-                    className="block text-base text-black no-underline hover:bg-slate-200 p-2"
-                  >
-                    {test.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+              {solution.tests.map((test, testIndex) => (
+                <Link
+                  key={testIndex}
+                  to={test.route}
+                  className="block text-base text-black no-underline hover:bg-slate-200 p-2 rounded-lg"
+                >
+                  {test.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
     </div>
+  </div>
   );
 };
 
