@@ -317,7 +317,7 @@ const PricingContent = () => {
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
           >
-            About Company
+            About Us
           </Link>
           {/* {isHovered === 1 && (
             <div
@@ -346,7 +346,8 @@ const PricingContent = () => {
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
           >
-            Management Teams
+            Management Team
+            
           </Link>
           {/* {isHovered === 2 && (
             <div

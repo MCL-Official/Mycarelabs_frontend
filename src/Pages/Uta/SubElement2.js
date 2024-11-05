@@ -8,7 +8,7 @@ const SubElement2 = () => {
       <div className="flex flex-col md:flex-row items-center rounded-lg overflow-hidden">
         {/* Image Container */}
         <div className="md:w-1/2">
-          <img src="https://i.ibb.co/VCns6N8/UTI-Potrait-1.png" alt="Description" className="w-full h-50 object-contain"/>
+          <img src="https://i.ibb.co/QPh4yy1/UTI-Potrait-2.png" alt="Description" className="w-full h-50 object-contain"/>
         </div>
         
         {/* Text Content Container */}
