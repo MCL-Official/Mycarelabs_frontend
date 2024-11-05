@@ -30,15 +30,15 @@ export function Sampletest () {
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
-        {
-            avatar: "https://i.ibb.co/pRCR5C0/6.png",
-            name: "Kishan Singh",
-            title: "Vice President, India Operations",
-            desc: "",
-            linkedin: "javascript:void(0)",
-            twitter: "javascript:void(0)",
-            github: "javascript:void(0)"
-        },
+        // {
+        //     avatar: "https://i.ibb.co/pRCR5C0/6.png",
+        //     name: "Kishan Singh",
+        //     title: "Vice President, India Operations",
+        //     desc: "",
+        //     linkedin: "javascript:void(0)",
+        //     twitter: "javascript:void(0)",
+        //     github: "javascript:void(0)"
+        // },
         // {
         //     avatar: "https://i.ibb.co/jwrkf3x/2.png",
         //     name: "Emily Garcia",
@@ -99,7 +99,7 @@ export function Sampletest () {
 </div>
  
                 <div className="mt-12">
-                    <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+                    <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
                         {
                             team.map((item, idx) => (
                                 <li key={idx}>
