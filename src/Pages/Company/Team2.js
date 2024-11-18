@@ -17,23 +17,22 @@ import About3 from './About3'
 const Team2 = () => {
   return (
     <div>
-        <Helmet>
-        <title>        About Us | My Care Labs - Trusted Diagnostic Services</title>
-        <meta name="description" content="
-Learn about My Care Labs, your trusted partner in diagnostic testing. Discover our commitment to quality, reliability, and exceptional patient care." />
+      <Helmet>
+        <title>About Us | My Care Labs - Trusted Diagnostic Services</title>
+        <meta name="description" content="Learn about My Care Labs, your trusted partner in diagnostic testing. Discover our commitment to quality, reliability, and exceptional patient care." />
         <meta name="keywords" content="diagnostic services, My Care Labs, quality lab testing" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
       {/* <Teamsample/> */}
-      <Sampletest/> 
-      <Index/>
-      <About3/>
-      <CollapseCardFeatures/>
-      <CountUpStats/>
+      <Sampletest />
+      <Index />
+      <About3 />
+      <CollapseCardFeatures />
+      <CountUpStats />
       {/* <ScrollingTestimonials/> */}
-      <Testimonials/>
+      <Testimonials />
       {/* <DragShuffleHero/> */}
-      <ContactForm/>
+      <ContactForm />
       {/* <br></br>
       <br></br>
       <br></br>

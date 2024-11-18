@@ -75,7 +75,7 @@ const Logo = ({ color = "white" }) => {
       <img
         src={logo1}
         className="max-w-[250px] max-h-[75px]" // Adjusted the size
-        alt="Flowbite Logo"
+        alt="My care labs"
       />
     </Link>
   );

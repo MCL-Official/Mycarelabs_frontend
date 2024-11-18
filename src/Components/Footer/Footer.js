@@ -106,7 +106,7 @@ function Footer() {
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-            <img src={logo1} className="h-20" alt="Flowbite Logo" />
+            <img src={logo1} className="h-20" alt="My care labs" />
             </p>
             {/* <p className="ft-description">
               Talk to online doctors and get medical advice, online
