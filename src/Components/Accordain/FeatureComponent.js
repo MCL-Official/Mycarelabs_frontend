@@ -9,6 +9,30 @@ import img4 from "../../Assets/img4.jpg";
 import { Helmet } from "react-helmet";
 
 const features = {
+  "Infectious Disease": {
+      title: "Infectious Disease",
+      description:
+        "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options.",
+      image: img3,
+      route: "/testing-solutions/infectious-disease-testing-solutions",
+    content: (
+      <>
+        <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
+          John Smith
+        </span>
+        <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-green-600">
+          Beth Davis
+        </span>
+        <h2 className="text-xl font-bold mt-2">Kanban Management Proposal</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dicta hic quo
+          a officiis. Mollitia architecto sed debitis laboriosam repellat
+          repudiandae veniam quidem nesciunt beatae quis. Esse placeat quasi
+          inventore blanditiis laboriosam?
+        </p>
+      </>
+    ),
+  },
   Toxicology: {
     title: "Toxicology",
     description:
@@ -34,35 +58,10 @@ const features = {
       </>
     ),
   },
-  "Infectious Disease": {
-    title: "Infectious Disease",
-    description:
-      "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options. ",
-    buttonText: `BOOK TEST FOR Infectious Disease`,
-    image: img3,
-    route: "/testing-solutions/infectious-disease-testing-solutions",
-    content: (
-      <>
-        <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
-          John Smith
-        </span>
-        <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-green-600">
-          Beth Davis
-        </span>
-        <h2 className="text-xl font-bold mt-2">Kanban Management Proposal</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dicta hic quo
-          a officiis. Mollitia architecto sed debitis laboriosam repellat
-          repudiandae veniam quidem nesciunt beatae quis. Esse placeat quasi
-          inventore blanditiis laboriosam?
-        </p>
-      </>
-    ),
-  },
   "Wellness Testing": {
     title: "Wellness Testing",
     description:
-      "My Care Labs provides the quickest and most accurate testing solutions, prioritizing your well-being with our wellness testing services. Take proactive steps towards a healthier, happier you with My Care Labs. ",
+      "My Care Labs provides the quickest and most accurate testing solutions, prioritizing your well-being with our wellness testing services. Take proactive steps towards a healthier, happier you with My Care Labs.",
     buttonText: `BOOK TEST FOR Wellness Testing`,
     image: "https://i.ibb.co/ZGvGrV5/Untitled-1280-x-720-px-1300-x-1000-px.png", // Direct image URL
     route: "/testing-solutions/wellness-testing-solutions/",
@@ -89,7 +88,7 @@ const features = {
   "Mobile Testing": {
     title: "Mobile Testing",
     description:
-      " My Care Labs offers mobile testing, allowing you to test from the comfort of your home. This service is available for patients within 10-15 miles of our Fremont Laboratory. ",
+      "My Care Labs offers mobile testing, allowing you to test from the comfort of your home. This service is available for patients within 10-15 miles of our Fremont Laboratory.",
     buttonText: `Book Test For Mobile Testing`,
     image: "https://i.ibb.co/v4HJHzc/MOBILE-TESTING.png", // Direct image URL
     route: "/covid-test-locations",
