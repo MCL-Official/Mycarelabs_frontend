@@ -99,6 +99,7 @@ function App() {
           <Route path="/Apply" element={<ApplyPage />} />
           <Route path="/faq" element={<Faq/>} />
           <Route path="/riverside-mobile-testing-thank-you" element={<Thankyou/>} />
+          <Route path="/bay-area-testing-thank-you" element={<Thankyou/>} />
           <Route path="/fremont-laboratory-thank-you" element={<Thankyou/>} />
           <Route path="/california-mobile-testing-thank-you" element={<Thankyou/>} />
           <Route path="/riverside-gurdwara-thank-you" element={<Thankyou/>} />

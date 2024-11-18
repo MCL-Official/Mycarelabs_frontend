@@ -26,6 +26,8 @@ const Index = () => {
         <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
         <meta name="author" content="My Care Labs" />
       </Helmet>
+      <br></br>
+      <br></br>
     <div className="text-center py-8">
       <h2 className="text-2xl font-semibold md:mt-10 mt-12 text-blue-500">Why is toxicology drug testing needed?</h2>
       <h1 className="text-gray-700 mt-4">Toxicology drug testing is needed for many reasons, such as:</h1>

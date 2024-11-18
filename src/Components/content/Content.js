@@ -1,4 +1,5 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom'
 
 export default function Content() {
   return (<>
@@ -50,16 +51,21 @@ export default function Content() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg -mt-6">
-              <p className="text-xl leading-8 text-gray-700">
+              {/* <p className="text-xl leading-8 text-gray-700">
                 As you are aware, the current COVID-19 vaccines reduce the transmission of Delta and other variants and protect against serious illness and death. As you are aware,
                 the current COVID-19 vaccines reduce the transmission.
-              </p>
+              </p> */}
               <p className="text-xl leading-8 text-gray-700">
                 My Care Labs Was Founded During The Covid-19 Pandemic. We Provide Fast, Simple, Accurate Infectious Disease Testing Through Combination
-                Covid-19 RT-PCR Tests With Same-Day Or Within 24 Hours Test Result Reporting, Dependent On California Test Site Location. Coming Soon:
-                Flu And RSV Testing.
+                Covid-19 RT-PCR Tests With Same-Day Or Within 24 Hours Test Result Reporting, Dependent On California Test Site Location. 
               </p>
-
+              <Link
+                                to="/covid-test-locations"
+                                className="block py-2 px-6  mt-5 text-center text-white text-xl font-bold no-underline duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none"
+                                style={{ backgroundColor: '#7597E6' }}
+                            >
+                                Our Testing Locations
+                            </Link>
               {/* <p className="text-lg leading-8 text-gray-700 mt-8">
                 We Have Provided And Supported Customized Covid Testing At Schools, Nursing Homes, Businesses, And Other Large Organizations Since 2021.
                 All Our CLIA-Certified Diagnostic Laboratory Services Are NO COST TO YOU With Any Insurance Plan And Low Cost For Uninsured Patients.

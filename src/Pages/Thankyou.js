@@ -24,7 +24,7 @@ const Thankyou = () => {
        <div class="flex items-center justify-center h-screen">
     <div class="p-6 rounded shadow-lg ring ring-indigo-600/50">
         <div class="flex flex-col items-center space-y-4">
-            <img src={logo1} className="h-24" alt="Flowbite Logo" />
+            <img src={logo1} className="h-24" alt="My care labs" />
             <svg xmlns="http://www.w3.org/2000/svg" class="text-green-600 w-28 h-28" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1">
                 <path stroke-linecap="round" stroke-linejoin="round"
