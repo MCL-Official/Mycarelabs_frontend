@@ -169,7 +169,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
       if (testIdforBooking) {
         try {
           // Make the API call
-          const { data } = await axios.get(`http://18.212.238.96:3001/admin/appointments/${testIdforBooking.testID}`);
+          const { data } = await axios.get(`https://backend.mycaretrading.com/admin/appointments/${testIdforBooking.testID}`);
 
           // Log the full API response to check the structure
           console.log("Full API response:", data);
@@ -416,8 +416,8 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
     try {
 
       await Promise.all([
-        await axios.post(`http://18.212.238.96:3001/admin/appointments/api/proxy`, CrelioData),
-        await axios.post('http://18.212.238.96:3001/admin/appointments/', { data: encryptedData })
+        await axios.post(`https://backend.mycaretrading.com/admin/appointments/api/proxy`, CrelioData),
+        await axios.post('https://backend.mycaretrading.com/admin/appointments/', { data: encryptedData })
       ])
 
       setIsLoading(false);
