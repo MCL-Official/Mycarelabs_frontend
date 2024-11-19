@@ -19,22 +19,25 @@ const formatCategoryName = (categoryName) => {
   const formattedCategory = formatCategoryName(cardData.category);
 
   const handleClick = () => {
-    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
 
     
 
   //  this is for our own booking system that i have created 
 
 
+console.log(cardData?.title,"dsdsvsvvdlvsdjvnskjvsdnkvn");
 
 
 
-    // if(cardData?.title=="PCR COVID-19, RSV, and Influenza A/B Test Kit"){
-    //    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
-    // }else{
-    //   navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    //   // navigate(`/bookingcompletion`, { state: { cardData } });
-    // }
+    if(cardData?.title=="Bay Area Mobile Testing"){
+      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    }else if(cardData?.title=="Fremont Laboratory"){
+      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    }else{
+      navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+      // navigate(`/bookingcompletion`, { state: { cardData } });
+    }
 
 
 

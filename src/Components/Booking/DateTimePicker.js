@@ -7,6 +7,7 @@ import Example from './BarLoader';  // Ensure correct path
 import StackedNotifications from './StackedNotifications';  // Ensure correct path
 import moment from 'moment-timezone';
 import { FiArrowLeft } from 'react-icons/fi';
+import CryptoJS from 'crypto-js';
 
 const LeftContainer = ({ cardData }) => {
   return (
@@ -67,7 +68,12 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     }
   };
   const formattedCategory = formatCategoryName(cardData?.category);
+console.log(formattedCategory,'skhjcbvsachjkbsacv');
 
+  const encryptData = (data) => {
+    const secretKey = 'your-secret-key'; // Use a strong key and keep it secret
+    return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
+  };
 
   const testId = [
     {
@@ -79,12 +85,19 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     {
       testID: 3972962,
       testName: "Fremont Laboratory",
+      // category: "Fremont Laboratory",
       category: "northern-california-fremont-lab",
     },
     {
       testCode: "Anemia Profile",
       testID: 3956081,
       testName: "Anemia Profile",
+    },
+    {
+      testCode: "Bay Area Mobile Testing",
+      testID: 3993044,
+       testName: "Bay Area Mobile Testing",
+      category: "bay-area-mobile-testing",
     },
 
     {
@@ -107,6 +120,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     }
   ]
 
+  const testIdforBooking = testId.find((data) => formattedCategory === data?.category);
+  console.log(testIdforBooking, "sdkjcnsdjkvnsndvn");
   const navigate = useNavigate();
   const today = new Date();
   const [selectedDate, setSelectedDate] = useState(null);
@@ -122,7 +137,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
   const [notification, setNotification] = useState(null);
   const [TimeDetail, setTimeDetail] = useState([]);
   const [bookedTimes, setBookedTimes] = useState([]);
-  const [disabledTimes, setDisabledTimes] = useState([]); 
+  const [disabledTimes, setDisabledTimes] = useState([]);
   const [testIdBooking, setTestIdBooking] = useState([])
   const [formData, setFormData] = useState({
     firstName: '',
@@ -138,50 +153,49 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     Location: cardData?.cardData?.location,
     Service: '',
     Lab: "",
-    refId: '',
+    refId: testIdforBooking?.testID,
   });
 
-console.log(disabledTimes,"sdkvjsnvkdsjdsjnsdjknvsjkvn");
+  console.log(disabledTimes, "sdkvjsnvkdsjdsjnsdjknvsjkvn");
 
 
 
 
 
 
-useEffect(() => {
-  const testIdforBooking = testId.find((data) => formattedCategory === data?.category);
+  useEffect(() => {
 
-  const fetchData = async () => {
-    if (testIdforBooking) {
-      try {
-        // Make the API call
-        const { data } = await axios.get(`http://localhost:3000/admin/appointments/${testIdforBooking.testID}`);
+    const fetchData = async () => {
+      if (testIdforBooking) {
+        try {
+          // Make the API call
+          const { data } = await axios.get(`http://18.212.238.96:3001/admin/appointments/${testIdforBooking.testID}`);
 
-        // Log the full API response to check the structure
-        console.log("Full API response:", data);
+          // Log the full API response to check the structure
+          console.log("Full API response:", data);
 
-        // Check if `timedetails` exists and is an array
-        if (data && Array.isArray(data.timedetails)) {
-          const booked = data.timedetails.map((detail) => ({
-            date: moment(detail.date).format("YYYY-MM-DD"), // Format date for comparison
-            time: detail.time,
-          }));
+          // Check if `timedetails` exists and is an array
+          if (data && Array.isArray(data.timedetails)) {
+            const booked = data.timedetails.map((detail) => ({
+              date: moment(detail.date).format("YYYY-MM-DD"), // Format date for comparison
+              time: detail.time,
+            }));
 
-          setBookedTimes(booked); // Save booked times to state
-          console.log("Processed booked times:", booked);
-        } else {
-          console.log("Timedetails missing or not an array:", data?.timedetails);
+            setBookedTimes(booked); // Save booked times to state
+            console.log("Processed booked times:", booked);
+          } else {
+            console.log("Timedetails missing or not an array:", data?.timedetails);
+          }
+        } catch (error) {
+          console.error("Error fetching data", error);
         }
-      } catch (error) {
-        console.error("Error fetching data", error);
+      } else {
+        console.log("No test ID found for booking");
       }
-    } else {
-      console.log("No test ID found for booking");
-    }
-  };
+    };
 
-  fetchData();
-}, [formattedCategory]);
+    fetchData();
+  }, [formattedCategory]);
 
 
   // at-home-test-kit
@@ -228,7 +242,7 @@ useEffect(() => {
 
   const isTimeBooked = (time) => {
     if (!selectedDate) return false;
-    return bookedTimes.some((booked) => 
+    return bookedTimes.some((booked) =>
       booked.date === selectedDate && moment(booked.time, 'h:mm A').format('h:mm A') === time
     );
   };
@@ -265,15 +279,15 @@ useEffect(() => {
     setSelectedDate(selectedDate);
     const date = `${monthIndex + 1}-${day + 1}-${year}`;
     setShowTimes(true);
-    
+
     setSelectedDate1(date);
 
     // Filter out the booked times for the selected date
     const bookingsForSelectedDate = bookedTimes.filter((booking) =>
       moment(booking.date).isSame(moment(selectedDate), 'day')
-  );
-  console.log(bookedTimes[0],"sdkjvnsjndjsvnsd");
-    
+    );
+    console.log(bookedTimes[0], "sdkjvnsjndjsvnsd");
+
     const disabledTimeSlots = bookingsForSelectedDate.map((booking) => booking.time);
     setDisabledTimes(disabledTimeSlots);
   };
@@ -285,14 +299,14 @@ useEffect(() => {
     "5:00 PM", "5:30 PM", "6:00 PM"
   ];
 
-// ?changes to be removed 
+  // ?changes to be removed 
   const handleTimeClick = (time) => {
     if (isTimeInPast(time) || isTimeBooked(time)) return; // Prevent selecting past or booked times
     setSelectedTime(time);
   };
 
   const timeButtonClass = (time) => {
-    if (isTimeInPast(time)|| isTimeBooked(time)) return "bg-gray-200 text-gray-400 cursor-not-allowed"; // Non-selectable times
+    if (isTimeInPast(time) || isTimeBooked(time)) return "bg-gray-200 text-gray-400 cursor-not-allowed"; // Non-selectable times
     return selectedTime === time ? "bg-blue-500 text-white border-blue-500" : "bg-white text-blue-500 border-blue-500 hover:bg-blue-100";
   };
   // const date = `${monthIndex + 1}-${day + 1}-${year}`;
@@ -367,7 +381,7 @@ useEffect(() => {
     if (!formData.lastName) newInvalidFields.lastName = true;
     if (!formData.email) newInvalidFields.email = true;
     if (!formData.phone) newInvalidFields.phone = true;
-    // if (!formData?.refId) newInvalidFields.refId = true;
+    if (!formData?.refId) newInvalidFields.refId = true;
     // if (!formData?.Lab) newInvalidFields.Lab = true;
     // if (!formData.reason) newInvalidFields.reason = true;
     // if (!formData.zipCode) newInvalidFields.zipCode = true;
@@ -376,7 +390,7 @@ useEffect(() => {
     CrelioData.fullName = formData.firstName;
     CrelioData.mobile = formData.phone
     CrelioData.email = formData.email
-    CrelioData.billDetails.testList[0].testID = testIdBooking?.testID
+    // CrelioData.billDetails.testList[0].testID = testIdBooking?.testID
     CrelioData.startDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
     CrelioData.endDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").add(30, 'minutes').utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
 
@@ -398,11 +412,12 @@ useEffect(() => {
       time: selectedTime,
     };
     setIsLoading(true);
+    const encryptedData = encryptData(appointmentDetails);
     try {
 
       await Promise.all([
-        // await axios.post(`http://localhost:3000/admin/appointments/api/proxy`, CrelioData),
-        await axios.post('http://localhost:3000/admin/appointments/', appointmentDetails)
+        await axios.post(`http://18.212.238.96:3001/admin/appointments/api/proxy`, CrelioData),
+        await axios.post('http://18.212.238.96:3001/admin/appointments/', { data: encryptedData })
       ])
 
       setIsLoading(false);
@@ -417,8 +432,12 @@ useEffect(() => {
         navigate(`/fremont-laboratory-thank-you`, { state: { appointmentDetails } });
       } else if (formattedCategory === 'southern-california-riverside-county-mobile-testing') {
         navigate(`/riverside-mobile-testing-thank-you`, { state: { appointmentDetails } });
-      } else if (formattedCategory === 'northern-california-mobile-testing') {
+      } 
+      else if (formattedCategory === 'northern-california-mobile-testing') {
         navigate(`/california-mobile-testing-thank-you`, { state: { appointmentDetails } });
+      }
+      else if (formattedCategory === 'bay-area-mobile-testing') {
+        navigate(`/bay-area-testing-thank-you`, { state: { appointmentDetails } });
       }
       else if (formattedCategory === 'riverside-gurdwara-pop-up') {
         navigate(`/riverside-gurdwara-thank-you`, { state: { appointmentDetails } });
@@ -503,7 +522,7 @@ useEffect(() => {
                                 <button
                                   className={`w-32 rounded p-2 border transition-all duration-300 ease-in-out ${timeButtonClass(time)}`}
                                   onClick={() => handleTimeClick(time)}
-                                  disabled={isTimeInPast(time)|| isTimeBooked(time)} // Disable button if time is in the past
+                                  disabled={isTimeInPast(time) || isTimeBooked(time)} // Disable button if time is in the past
                                 >
                                   {selectedTime === time ? time : time}
                                 </button>
