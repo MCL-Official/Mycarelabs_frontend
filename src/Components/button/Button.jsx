@@ -34,7 +34,19 @@ console.log(cardData?.title,"dsdsvsvvdlvsdjvnskjvsdnkvn");
       navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
     }else if(cardData?.title=="Fremont Laboratory"){
       navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    }else{
+    }else if(cardData?.title=="At-Home Test Kit"){
+      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    }
+  else if(cardData?.title=="Riverside Mobile Testing"){
+      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    }
+  else if(cardData?.title=="Riverside Gurdwara"){
+      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
+    }
+    
+    
+    
+    else{
       navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
       // navigate(`/bookingcompletion`, { state: { cardData } });
     }
