@@ -430,7 +430,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
 
       if (formattedCategory === 'northern-california-fremont-lab') {
         navigate(`/fremont-laboratory-thank-you`, { state: { appointmentDetails } });
-      } else if (formattedCategory === 'southern-california-riverside-county-mobile-testing') {
+      } else if (formattedCategory === 'riverside-city-mobile-testing') {
         navigate(`/riverside-mobile-testing-thank-you`, { state: { appointmentDetails } });
       } 
       else if (formattedCategory === 'northern-california-mobile-testing') {
@@ -443,7 +443,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
         navigate(`/riverside-gurdwara-thank-you`, { state: { appointmentDetails } });
       }
       else if (formattedCategory === 'at-home-test-kit') {
-        // navigate(`/thankyoupage3`, { state: { cardData } });
+        navigate(`/athome-testing-thank-you`, { state: { appointmentDetails } });
 
         // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
       }
