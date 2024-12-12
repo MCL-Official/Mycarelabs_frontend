@@ -1,37 +1,37 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartPulse, faTruckMedical, faTooth } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcaseMedical, faHeartbeat, faSchool, faHome, faPersonWalking, faPeopleArrows } from "@fortawesome/free-solid-svg-icons";
 
 const cardData = [
   {
     title: "Employers",
-    description: "Streamline employee health with our comprehensive testing solutions. Ensure a safe workplace environment with efficient and reliable testing services tailored for .",
-    icon: faTruckMedical
+    description: "Streamline employee health with our comprehensive testing solutions. Ensure a safe workplace environment with efficient and reliable testing services tailored for employers.",
+    icon: faBriefcaseMedical // Solid icon for medical services in workplaces
   },
   {
     title: "Patients",
     description: "Your health, our priority. Access accurate and timely diagnostic testing, fostering proactive healthcare for individuals. Stay informed, stay well.",
-    icon: faHeartPulse
+    icon: faHeartbeat // Solid icon for individual health and care
   },
   {
     title: "Schools",
     description: "Create a secure learning environment with our testing services designed for educational institutions. Prioritize the health of students and staff for a confident return to the classroom.",
-    icon: faHeartPulse
+    icon: faSchool // Solid icon for educational institutions
   },
   {
     title: "Nursing Homes",
     description: "Elevate resident care with our specialized testing solutions for nursing homes. Ensure the health and well-being of residents through advanced diagnostics and proactive healthcare measures.",
-    icon: faHeartPulse
+    icon: faPeopleArrows // Solid icon for communal care and senior living facilities
   },
   {
     title: "Rehabilitation Centers",
-    description: "The purpose of our services is to help individuals recover from illness, injury, or surgery, and drug abuse. Our features include physical, occupational, medical supervision, and both short-term and long-term care",
-    icon: faHeartPulse
+    description: "The purpose of our services is to help individuals recover from illness, injury, or surgery, and drug abuse. Our features include physical, occupational, medical supervision, and both short-term and long-term care.",
+    icon: faPersonWalking // Solid icon symbolizing recovery and rehabilitation
   },
   {
     title: "Home Health",
     description: "The purpose of our services is to provide medical and personal care at home. Our features include skilled nursing, home-based therapies, personal care assistance, and medical services in the home environment.",
-    icon: faTooth
+    icon: faHome // Solid icon representing home-based care
   }
 ];
 

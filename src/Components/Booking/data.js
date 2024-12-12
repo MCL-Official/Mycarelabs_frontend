@@ -42,7 +42,7 @@ export const CrelioData = {
       comments: "", // Any additional comments to be sent with the order
       testList: [
         {
-          testID: "3956081", // Unique ID of Crelio Tests
+          testID: "3993044", // Unique ID of Crelio Tests
           testCode: "", // Test code of the LIS
           sampleId: "", // Barcode number if using preprinted barcode
         },

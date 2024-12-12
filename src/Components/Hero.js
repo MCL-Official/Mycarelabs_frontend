@@ -14,7 +14,7 @@ const Logo = ({ color = "white" }) => {
       <img
         src="https://i.ibb.co/L12cxJP/logo.png"
         className="max-w-[200px] max-h-[200px] lg:max-w-[450px] lg:max-h-[460px]"
-        alt="Flowbite Logo"
+        alt="My care Labs"
       />
     </Link>
   );

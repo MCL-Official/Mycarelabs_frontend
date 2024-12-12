@@ -103,6 +103,7 @@ function App() {
           <Route path="/fremont-laboratory-thank-you" element={<Thankyou/>} />
           <Route path="/california-mobile-testing-thank-you" element={<Thankyou/>} />
           <Route path="/riverside-gurdwara-thank-you" element={<Thankyou/>} />
+          <Route path="/athome-testing-thank-you" element={<Thankyou/>} />
           <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion/:id" element={<ConfirmBooking />} />
