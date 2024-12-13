@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
- 
-export function Sampletest () {
- 
+
+export function Sampletest() {
+
     const team = [
         {
             avatar: "https://i.ibb.co/pwcpzQc/1.png",
@@ -60,44 +60,44 @@ export function Sampletest () {
         {
             avatar: "https://i.ibb.co/kSkNcws/7.png",
             name: "Pramo Virk",
-            title: "Vice President, Europe Operations",
+            title: "Chief Financial Officer",
             desc: "",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
         {
-            avatar: "https://i.ibb.co/4WxF5g7/4.png",
-            name: "Ralph Giron",
-            title: "General Manager, USA",
+            avatar: "https://i.ibb.co/hVxKLxZ/9.png",
+            name: "Rajtanu Banerjee",
+            title: "Vice President, Business Development",
             desc: "",
             linkedin: "javascript:void(0)",
             twitter: "javascript:void(0)",
             github: "javascript:void(0)"
         },
     ]
- 
+
     return (
-     
+
         <section className="py-14">
-             
-     <Helmet>
-        <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
-        <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
-        <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
-        <meta name="author" content="My Care Labs" />
-      </Helmet>
+
+            <Helmet>
+                <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
+                <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
+                <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
+                <meta name="author" content="My Care Labs" />
+            </Helmet>
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-            <div className="max-w-xl mx-auto text-center">
-    <h3 className="text-gray-800 text-3xl py-12 font-semibold sm:text-4xl">
-        Meet Our Team
-    </h3>
-    {/* Uncomment the paragraph below if you decide to use the descriptive text again in the future */}
-    {/* <p className="text-gray-600 mt-3">
+                <div className="max-w-xl mx-auto text-center">
+                    <h3 className="text-gray-800 text-3xl py-12 font-semibold sm:text-4xl">
+                        Meet Our Team
+                    </h3>
+                    {/* Uncomment the paragraph below if you decide to use the descriptive text again in the future */}
+                    {/* <p className="text-gray-600 mt-3">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
     </p> */}
-</div>
- 
+                </div>
+
                 <div className="mt-12">
                     <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
                         {
