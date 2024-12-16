@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight, FiStar } from "react-icons/fi";
 import axios from 'axios';
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 export const SlideInAuth = () => {
   return (
@@ -60,7 +60,7 @@ const Form = () => {
           Contact Form
         </motion.h1>
         <motion.p variants={primaryVariants} className="mb-8 text-center">
-          Fill out the Contact Form below and we will contact you as soon as possible or use our toll-free number 
+          Fill out the Contact Form below and we will contact you as soon as possible or use our toll-free number
         </motion.p>
 
         <form onSubmit={handleSubmit} className="w-full">
@@ -159,18 +159,18 @@ const Form = () => {
 
           {/* Informational content above checkbox */}
           <motion.p variants={primaryVariants} className="mb-4 text-sm text-gray-700 text-left">
-          <label className="inline-flex items-center">
+            <label className="inline-flex items-center">
               <input
                 type="checkbox"
                 name="agreeToTerms"
                 checked={formData.agreeToTerms}
                 onChange={handleInputChange}
                 className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                
+
               />
               <span className="ml-2 text-sm text-gray-700">
-              By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>.
-         
+                By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>.
+
               </span>
             </label>
             {/* I agree to receive messages from My Care Labs. By checking this box you agree to receive text messages from My Care Labs, you can reply stop to opt-out at any time. This is my <Link to="/privacy-policy" className="text-blue-600 underline">privacy policy</Link>. */}
@@ -199,7 +199,7 @@ const Form = () => {
               scale: 0.985,
             }}
             type="submit"
-            className="mb-1.5 w-full rounded bg-blue-600 px-4 py-2 text-center font-medium text-white transition-colors hover:bg-blue-700"
+            className="mb-1.5 w-full rounded bg-green-600 px-4 py-2 text-center font-medium text-white transition-colors hover:bg-blue-700"
           >
             Submit
           </motion.button>
@@ -239,7 +239,7 @@ const SupplementalContent = () => {
           className="mb-2 text-3xl font-semibold leading-[1.25] text-white lg:text-5xl"
           variants={primaryVariants}
         >
-          Connecting 
+          Connecting
           <br />
           with Opportunities
         </motion.h2>

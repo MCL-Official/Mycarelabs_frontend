@@ -40,21 +40,21 @@ function Info({ scrollToAuth }) {
 
   const handleCardClick = (index) => {
     setSelectedCard(index);
-    scrollToAuth(); 
+    scrollToAuth();
   };
 
   return (
     <div className=" text-center bg-white" id="services">
       <div className="my-16 text-transparent bg-clip-text bg-gradient-to-r from-[#6C2FAC] to-white">
         <h3 className="font-poppins text-4xl font-bold">
-          <span className="text-blue-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">Communities </span>
-          <span className="text-gray-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-          We Serve
-            </span>
+          <span className="text-red-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">Communities </span>
+          <span className="text-gray-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            We Serve
+          </span>
         </h3>
         <p className="my-10 mx-4 text-center text-gray-700 font-rubik tracking-wide leading-7 text-base sm:text-sm md:text-xl lg:text-xl pb-6">
-          We provide quick, hassle-free, and accurate diagnostic testing solution. 
-          With same day results or within 24 hours, we offer testing on-site at our laboratory, 
+          We provide quick, hassle-free, and accurate diagnostic testing solution.
+          With same day results or within 24 hours, we offer testing on-site at our laboratory,
           pop-up location and concierge mobile testing throughout California.
         </p>
       </div>
@@ -63,13 +63,12 @@ function Info({ scrollToAuth }) {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className={`group relative border-2 border-gray-300 rounded-lg p-4 transition-colors duration-300 cursor-pointer ${
-              selectedCard === index ? "bg-blue-300 text-white" : "bg-white hover:bg-blue-600 transition-all transform hover: hover:shadow-2xl hover:translate-y-1 active:shadow-inner"
-            }`}
+            className={`group relative border-2 border-gray-300 rounded-lg p-4 transition-colors duration-300 cursor-pointer ${selectedCard === index ? "bg-blue-300 text-white" : "bg-white hover:bg-blue-600 transition-all transform hover: hover:shadow-2xl hover:translate-y-1 active:shadow-inner"
+              }`}
             onClick={() => handleCardClick(index)}
           >
-              <span className={`absolute top-[-24px] left-1/2 transform -translate-x-1/2 p-2 rounded-full transition-transform duration-700 ${selectedCard === index ? "bg-white rotate-[180]" : "bg-blue-100 group-hover:rotate-[360deg]  "}`}>
-              <FontAwesomeIcon className={`${selectedCard === index ? "text-blue-200" : "text-blue-600"} text-2xl`} icon={card.icon} />
+            <span className={`absolute top-[-24px] left-1/2 transform -translate-x-1/2 p-2 rounded-full transition-transform duration-700 ${selectedCard === index ? "bg-white rotate-[180]" : "bg-blue-100 group-hover:rotate-[360deg]  "}`}>
+              <FontAwesomeIcon className={`${selectedCard === index ? "text-red-200" : "text-red-600"} text-2xl`} icon={card.icon} />
             </span>
             <p className={`mt-2 mb-4 font-bold text-2xl font-poppins tracking-wide ${selectedCard === index ? "text-black" : "text-black"}`}>{card.title}</p>
             <p className={`text-lg font-rubik leading-6 tracking-wide ${selectedCard === index ? "text-gray-700" : "text-gray-700"}`}>{card.description}</p>

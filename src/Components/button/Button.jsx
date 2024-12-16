@@ -5,61 +5,59 @@ import { useState } from "react";
 const NeumorphismButton = ({ cardData }) => {
   const navigate = useNavigate();
   // console.log(cardData);
-  
-// Utility function to format the category name
-const formatCategoryName = (categoryName) => {
-  return categoryName
-    .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
-    .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
-    .replace(/-+/g, '-') // Removes consecutive hyphens
-    .replace(/-+$/, '') // Removes trailing hyphens
-    .toLowerCase();
-};
+
+  // Utility function to format the category name
+  const formatCategoryName = (categoryName) => {
+    return categoryName
+      .replace(/[&%@!#^*+\|"'<>?]/g, "-") // Replaces special characters with hyphens
+      .replace(/\s+|\.|,|:/g, "-") // Replaces spaces, dots, commas, and colons with hyphens
+      .replace(/-+/g, "-") // Removes consecutive hyphens
+      .replace(/-+$/, "") // Removes trailing hyphens
+      .toLowerCase();
+  };
   // Format the category name
   const formattedCategory = formatCategoryName(cardData.category);
 
   const handleClick = () => {
     // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
 
-    
+    //  this is for our own booking system that i have created
 
-  //  this is for our own booking system that i have created 
+    console.log(cardData?.title, "dsdsvsvvdlvsdjvnskjvsdnkvn");
 
-
-console.log(cardData?.title,"dsdsvsvvdlvsdjvnskjvsdnkvn");
-
-
-
-    if(cardData?.title=="Bay Area Mobile Testing"){
-      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    }else if(cardData?.title=="Fremont Laboratory"){
-      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    }else if(cardData?.title=="At-Home Test Kit"){
-      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    }
-  else if(cardData?.title=="Riverside Mobile Testing"){
-      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    }
-  else if(cardData?.title=="Riverside Gurdwara"){
-      navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData } });
-    }
-    
-    
-    
-    else{
-      navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
+    if (cardData?.title == "Bay Area Mobile Testing") {
+      navigate(`/covid-test-locations/${formattedCategory}`, {
+        state: { cardData },
+      });
+    } else if (cardData?.title == "Fremont Laboratory") {
+      navigate(`/covid-test-locations/${formattedCategory}`, {
+        state: { cardData },
+      });
+    } else if (cardData?.title == "At-Home Test Kit") {
+      navigate(`/covid-test-locations/${formattedCategory}`, {
+        state: { cardData },
+      });
+    } else if (cardData?.title == "Riverside Mobile Testing") {
+      navigate(`/covid-test-locations/${formattedCategory}`, {
+        state: { cardData },
+      });
+    } else if (cardData?.title == "Riverside Gurdwara") {
+      navigate(`/covid-test-locations/${formattedCategory}`, {
+        state: { cardData },
+      });
+    } else {
+      navigate(`/bookingcompletion/${formattedCategory}`, {
+        state: { cardData },
+      });
       // navigate(`/bookingcompletion`, { state: { cardData } });
     }
-
-
-
   };
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <button
       onClick={handleClick}
-      onMouseEnter={() => setIsHovered(true)}  // Handle hover start
+      onMouseEnter={() => setIsHovered(true)} // Handle hover start
       onMouseLeave={() => setIsHovered(false)} // Handle hover end
       className={`
         px-4 py-2 rounded-full 
@@ -71,22 +69,26 @@ console.log(cardData?.title,"dsdsvsvvdlvsdjvnskjvsdnkvn");
           text-white
         bg-green-500
           hover:bg-green-300
-    ` } 
-    style={{
-      background: isHovered
-        ? 'linear-gradient(90deg, rgba(100, 182, 255, 1), rgba(86, 152, 195, 1))' // Lighter gradient on hover
-        : 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))', // Default gradient
-      boxShadow: isHovered
-        ? '0px 4px 15px rgba(0, 0, 0, 0.2)' // Shadow on hover
-        : '0px 4px 10px rgba(0, 0, 0, 0.1)', // Default shadow
-    }}
+    `}
+      style={{
+        background: isHovered
+          ? "linear-gradient(90deg, rgba(102, 255, 102, 1), rgba(51, 204, 51, 1))" // Lighter green gradient on hover
+          : "linear-gradient(90deg, rgba(0, 153, 0, 1), rgba(0, 102, 0, 1))", // Default green gradient
+
+        boxShadow: isHovered
+          ? "0px 4px 15px rgba(0, 0, 0, 0.2)" // Shadow on hover
+          : "0px 4px 10px rgba(0, 0, 0, 0.1)", // Default shadow
+      }}
     >
       {/* <div className="flex flex-row justify-center "> */}
 
       <FiSend />
-      {cardData.category==="At-Home Test Kit"?<span>Order Now</span>:<span>Book Now</span>}
+      {cardData.category === "At-Home Test Kit" ? (
+        <span>Order Now</span>
+      ) : (
+        <span>Book Now</span>
+      )}
       {/* </div> */}
-      
     </button>
   );
 };

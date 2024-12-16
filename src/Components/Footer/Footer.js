@@ -3,6 +3,7 @@ import "../../Styles/Footer.css";
 import SubscribeNewsletter from "../SubscribeNewsletter";
 import { useNavigate } from "react-router-dom";
 import logo1 from "../../Assets/logo3.png";
+import snowFooter from "../../Assets/snowFooter.png";
 
 function Footer() {
   const images = [
@@ -48,7 +49,7 @@ function Footer() {
       longDescription:
         "pre-register and you’ll breeze through our testing site in about five minutes. This service is by appointment only.",
     },
-  
+
     {
       category: "Riverside Gurdwara Pop-Up",
       title: "Riverside Gurdwara",
@@ -57,7 +58,7 @@ function Footer() {
       longDescription:
         " pre-register and you’ll breeze through our testing site in about five minutes. You can always register in person as well for drop-in testing – no appointment needed.",
     },
-   
+
     // {
     //   category: "NorCal: Union City Pop-up",
     //   title: "Union City Pop-up",
@@ -92,7 +93,7 @@ function Footer() {
     navigate(`/bookingcompletion/${formattedCategory}`, {
       state: { cardData: { ...item, imageUrl: images[index % images.length] } },
     });
-    
+
     // navigate(`/covid-test-locations/${formattedCategory}`, {
     //   state: { cardData: { ...item, imageUrl: images[index % images.length] } },
     // });
@@ -101,12 +102,13 @@ function Footer() {
   };
 
   return (
-    <div className="footer-section">
-      <div className="footer-container">
+    <div className="footer-section relative" style={{ backgroundImage: "linear-gradient(to right, #00001a , #3b475d)" }}>
+
+      <div className="footer-container" >
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-            <img src={logo1} className="h-20" alt="My care labs" />
+              <img src={logo1} className="h-20" alt="My care labs" />
             </p>
             {/* <p className="ft-description">
               Talk to online doctors and get medical advice, online
@@ -119,87 +121,87 @@ function Footer() {
         </div>
 
         <div className="ft-list" style={{ textAlign: "left", display: "inline-block", paddingLeft: "20px" }}>
-  <p className="ft-list-title" style={{ marginBottom: "10px" }}>Home</p>
-  <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
-    <li>
-      <a href="/about">About</a>
-    </li>
-    <li>
-      <a href="/contact">Contact Us</a>
-    </li>
-    <li>
-      <a href="/testing-solutions">Testing Solutions</a>
-    </li>
-    <li>
-      <a href="/covid-test-locations">Testing Locations</a>
-    </li>
-    <li>
-      <a href="/covid-test-locations">Book An Appointment</a>
-    </li>
-    <li>
-      <a href="/privacy-policy">Privacy Policy</a>
-    </li>
-    <li>
-      <a href="/hipaa-information">HIPAA Information</a>
-    </li>
-  </ul>
-</div>
+          <p className="ft-list-title" style={{ marginBottom: "10px" }}>Home</p>
+          <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+            <li>
+              <a href="/testing-solutions">Testing Solutions</a>
+            </li>
+            <li>
+              <a href="/covid-test-locations">Testing Locations</a>
+            </li>
+            <li>
+              <a href="/covid-test-locations">Book An Appointment</a>
+            </li>
+            <li>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/hipaa-information">HIPAA Information</a>
+            </li>
+          </ul>
+        </div>
 
 
 
         <div className="ft-list" style={{ textAlign: "left", display: "inline-block", paddingLeft: "20px" }}>
-  <p className="ft-list-title" style={{ marginBottom: "10px" }}>All Locations</p>
-  <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
-    {cardData && cardData.length > 0 ? (
-      cardData.map((item, index) => (
-        <li key={item.title} style={{ marginBottom: "10px" }}>
-          <button
-            onClick={() => handleNavigation(item, index)}
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              color: "#a5a7ac",
-              // textDecoration: "underline",
-              cursor: "pointer",
-              padding: "0",
-            }}
-          >
-            {item.category}
-          </button>
-        </li>
-      ))
-    ) : (
-      <p>No locations available.</p>
-    )}
-  </ul>
-</div>
+          <p className="ft-list-title" style={{ marginBottom: "10px" }}>All Locations</p>
+          <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+            {cardData && cardData.length > 0 ? (
+              cardData.map((item, index) => (
+                <li key={item.title} style={{ marginBottom: "10px" }}>
+                  <button
+                    onClick={() => handleNavigation(item, index)}
+                    style={{
+                      backgroundColor: "transparent",
+                      border: "none",
+                      color: "#a5a7ac",
+                      // textDecoration: "underline",
+                      cursor: "pointer",
+                      padding: "0",
+                    }}
+                  >
+                    {item.category}
+                  </button>
+                </li>
+              ))
+            ) : (
+              <p>No locations available.</p>
+            )}
+          </ul>
+        </div>
 
 
         <div className="ft-list" id="contact" style={{ textAlign: "left", display: "inline-block", paddingLeft: "20px" }}>
-  <p className="ft-list-title" style={{ marginBottom: "10px" }}>Talk To Us</p>
-  <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
-    <li>
-      <a href="mailto:support@mycarelabs.com">support@mycarelabs.com</a>
-    </li>
-    <li>
-      <a href="tel:+1-800-790-4550">Call: +1-800-790-4550</a>
-    </li>
-    <li>
-      <a href="tel:+1-888-289-9940">Fax: +1-888-289-9940</a>
-    </li>
-    <li>
-      <a href="tel:+022 2326 6232">
-        5500 Stewart Avenue, Suite 108,
-        <br />
-        Fremont, CA 94538
-      </a>
-    </li>
-  </ul>
-</div>
+          <p className="ft-list-title" style={{ marginBottom: "10px" }}>Talk To Us</p>
+          <ul className="ft-list-items" style={{ listStyle: "none", paddingLeft: "0", margin: "0" }}>
+            <li>
+              <a href="mailto:support@mycarelabs.com">support@mycarelabs.com</a>
+            </li>
+            <li>
+              <a href="tel:+1-800-790-4550">Call: +1-800-790-4550</a>
+            </li>
+            <li>
+              <a href="tel:+1-888-289-9940">Fax: +1-888-289-9940</a>
+            </li>
+            <li>
+              <a href="tel:+022 2326 6232">
+                5500 Stewart Avenue, Suite 108,
+                <br />
+                Fremont, CA 94538
+              </a>
+            </li>
+          </ul>
+        </div>
 
       </div>
 
-      <div className="ft-copyright">
+      <div className="ft-copyright ">
         <p>Copyright © 2024 My Care Labs. All Rights Reserved.</p>
 
         <ul className="ft-social-links">
@@ -270,6 +272,10 @@ function Footer() {
             </a>
           </li>
         </ul>
+      </div>
+      <div className="lg:pb-60 pb-24">
+
+        <img src={snowFooter} alt="snow" className="absolute bottom-0" />
       </div>
     </div>
   );
