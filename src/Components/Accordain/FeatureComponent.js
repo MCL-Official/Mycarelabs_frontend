@@ -12,11 +12,11 @@ import bellBorder from "../../Assets/bellBorder2.webp"
 
 const features = {
   "Infectious Disease": {
-      title: "Infectious Disease",
-      description:
-        "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options.",
-      image: img3,
-      route: "/testing-solutions/infectious-disease-testing-solutions",
+    title: "Infectious Disease",
+    description:
+      "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options.",
+    image: img3,
+    route: "/testing-solutions/infectious-disease-testing-solutions",
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -239,7 +239,7 @@ function FeatureComponent() {
               <div className="flex items-center justify-center" key={feature}>
                 <button
                   className={`w-full rounded-2xl text-xs md:text-lg xl:text-xl border-2 min-w-[120px] md:min-w-[200px] border-black px-2 py-2 md:px-4 md:py-48 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${selectedFeature === feature
-                    ? "bg-green-500 text-white"
+                    ? "bg-green-500 text-black"
                     : "bg-white"
                     }`}
                   onClick={() => handleClick(feature)}

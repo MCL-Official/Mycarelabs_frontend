@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
@@ -18,32 +18,37 @@ const BlogPostCarousel = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
   const [blogData, setBlogData] = useState([]);
-  console.log(blogData,"sdkjvsjnvdsnjv");
-  
+  console.log(blogData, "sdkjvsjnvdsnjv");
+
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(''); // New state for search term
+  const [searchTerm, setSearchTerm] = useState(""); // New state for search term
   const blogsPerPage = 9;
   const navigate = useNavigate();
 
-  const getBlogData = useCallback(async (page) => {
-    setLoading(true);
-    try {
-      const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`);
-      setBlogData(response.data.blogs);
-      setCurrentPage(response.data.currentPage);
-      setTotalPages(response.data.totalPages);
-    } catch (error) {
-      console.error('Error fetching blog data:', error);
-    } finally {
-      setLoading(false);
-    }
-  }, [blogsPerPage]);
+  const getBlogData = useCallback(
+    async (page) => {
+      setLoading(true);
+      try {
+        const response = await axios.get(
+          `https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`
+        );
+        setBlogData(response.data.blogs);
+        setCurrentPage(response.data.currentPage);
+        setTotalPages(response.data.totalPages);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [blogsPerPage]
+  );
 
   // Fetch initial data on component mount and whenever currentPage changes
   useEffect(() => {
-    if (searchTerm === '') {
+    if (searchTerm === "") {
       getBlogData(currentPage);
     }
   }, [currentPage, searchTerm, getBlogData]);
@@ -131,11 +136,11 @@ const Post = ({ banner_image, category, name, meta_description }) => {
         className="mb-3 h-[200px] w-full rounded-lg object-cover"
         alt={`An image for a fake blog post titled ${name}`}
       />
-      <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
+      <span className="rounded-md border-[1px] border-neutral-600 bg-neutral-100 px-2 py-1 text-sm uppercase text-neutral-800">
         {category}
       </span>
       <p className="mt-1.5 text-lg font-medium">{name}</p>
-      <p className="text-sm text-neutral-500">{meta_description}</p>
+      <p className="text-sm text-neutral-800">{meta_description}</p>
     </div>
   );
 };

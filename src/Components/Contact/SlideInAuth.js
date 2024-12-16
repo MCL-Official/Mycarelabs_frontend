@@ -199,7 +199,7 @@ const Form = () => {
               scale: 0.985,
             }}
             type="submit"
-            className="mb-1.5 w-full rounded bg-green-600 px-4 py-2 text-center font-medium text-white transition-colors hover:bg-blue-700"
+            className="mb-1.5 w-full rounded bg-green-600 px-4 py-2 text-center font-medium text-white transition-colors hover:bg-green-700"
           >
             Submit
           </motion.button>
