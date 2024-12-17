@@ -35,7 +35,7 @@ const cardData = [
       "Toxicology Testing",
       "UTI Testing (coming soon)",
     ],
-    timing: "8:30 AM - 6:00 PM",
+    timing: "8:30 AM - 5:00 PM",
     location: "5500 Stewart Avenue, Suite 108, Fremont, CA 94538",
     Contact: "1-800-790-4550"
   },
