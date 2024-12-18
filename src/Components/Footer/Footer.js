@@ -202,7 +202,7 @@ function Footer() {
       </div>
 
       <div className="ft-copyright ">
-        <p>Copyright © 2024 My Care Labs. All Rights Reserved.</p>
+        <p className="z-10">Copyright © 2024 My Care Labs. All Rights Reserved.</p>
 
         <ul className="ft-social-links">
           <li>

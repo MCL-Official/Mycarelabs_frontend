@@ -50,12 +50,14 @@ module.exports = {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'serif'],
+        poppins: ['Poppins', 'serif']
       },
     },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       addUtilities({
         '.scrollbar-hide': {
           /* IE and Edge */
