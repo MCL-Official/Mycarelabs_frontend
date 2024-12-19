@@ -100,7 +100,7 @@ const UtaComp = () => {
           {/* Right Side Image Section */}
           <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-md h-[400px] md:h-[500px] lg:h-[600px]">
             {/* highlight page */}
-            <div className="absolute p-3 lg:top-[27%] sm:top-[10%] top-[15%] sm:right-[60%] right-[50%] w-40 h-32 sm:w-56 sm:h-48 xl:w-72 xl:h-60 outline-1 rounded-2xl bg-white drop-shadow-lg sm:p-6 xl:text-xl sm:text-lg sm:leading-6 text-xs font-poppins">
+            <div className="absolute lg:top-[27%] sm:top-[10%] top-[15%] sm:right-[60%] right-[50%] w-40 h-32 sm:w-56 sm:h-40 xl:w-72 xl:h-52 outline-1 rounded-2xl bg-white drop-shadow-lg p-2 xl:text-xl sm:text-md sm:leading-6 text-xs font-poppins">
               Get ready for fast, reliable and professional UTI testing at My
               Care labs. Be the first to experience our seamless booking and
               accurate diagnostics.
