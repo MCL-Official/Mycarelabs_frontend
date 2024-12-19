@@ -68,7 +68,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     }
   };
   const formattedCategory = formatCategoryName(cardData?.category);
-console.log(formattedCategory,'skhjcbvsachjkbsacv');
+  console.log(formattedCategory, 'skhjcbvsachjkbsacv');
 
   const encryptData = (data) => {
     const secretKey = 'your-secret-key'; // Use a strong key and keep it secret
@@ -96,7 +96,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
     {
       testCode: "Bay Area Mobile Testing",
       testID: 3993044,
-       testName: "Bay Area Mobile Testing",
+      testName: "Bay Area Mobile Testing",
       category: "bay-area-mobile-testing",
     },
 
@@ -432,7 +432,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
         navigate(`/fremont-laboratory-thank-you`, { state: { appointmentDetails } });
       } else if (formattedCategory === 'riverside-city-mobile-testing') {
         navigate(`/riverside-mobile-testing-thank-you`, { state: { appointmentDetails } });
-      } 
+      }
       else if (formattedCategory === 'northern-california-mobile-testing') {
         navigate(`/california-mobile-testing-thank-you`, { state: { appointmentDetails } });
       }
@@ -539,7 +539,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
               <div className="text-center text-gray-700 mt-4">
                 {/* Time zone <span className="font-semibold">India Standard Time (7:34pm)</span> */}
               </div>
-              <button className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" onClick={handleContinue}>
+              <button id='#ContinueBook' className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" onClick={handleContinue}>
                 Continue
               </button>
             </>
@@ -690,7 +690,7 @@ console.log(formattedCategory,'skhjcbvsachjkbsacv');
                   </div>
                 )}
               </div>
-              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} id='BookAppnt' className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
               </button>
             </form>
