@@ -229,7 +229,7 @@ function FeatureComponent() {
               <span ref={scrollToRef} className="text-red-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl 4xl:text-8xl  font-bold mr-2">
                 Solutions
               </span>
-              <span className="text-red-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl font-bold"> We Provide
+              <span className="text-gray-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl font-bold"> We Provide
               </span>
             </div>
           </h3>
@@ -262,7 +262,7 @@ function FeatureComponent() {
             */
           }
           <div
-            className="rounded-2xl relative max-[1000px]:mt-32 bg-gradient-to-l from-red-500 to-white border-2 p-6 lg:pb-12 bg-white 
+            className="rounded-2xl relative max-[1000px]:mt-32 bg-gradient-to-r from-[#d5dff7] to-[#7698e6] border-2 p-6 lg:pb-12 bg-white 
             flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] xl:h-[45rem] 2xl:h-[50rem] transition-all 
             shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px]"
           >

@@ -1,8 +1,54 @@
 import background from "../../Assets/uti-background.png";
 import circle from "../../Assets/uti-circle1.png";
 import ladyImage from "../../Assets/uti-lady2.png";
+import { useEffect, useState } from "react";
 
 const UtaComp = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
+
+  const formatNumber = (number) => {
+    return number < 10 ? `0${number}` : number;
+  };
+
+  useEffect(() => {
+    // Adjust target date for the desired timezone (e.g., IST)
+    const targetDate = new Date("2025-01-15T00:00:00Z"); // UTC date
+    const timezoneOffset = targetDate.getTimezoneOffset() * 60000; // Offset in milliseconds
+    const localTargetDate = new Date(targetDate.getTime() - timezoneOffset); // Adjust for local timezone
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = localTargetDate - now;
+
+      if (difference <= 0) {
+        clearInterval(interval); // Stop the timer when the target date is reached
+      } else {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({
+          days: formatNumber(days),
+          hours: formatNumber(hours),
+          minutes: formatNumber(minutes),
+          seconds: formatNumber(seconds),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
   return (
     <>
       <section
@@ -38,7 +84,7 @@ const UtaComp = () => {
                 </span>
                 <div className="rounded-2xl bg-orange-500 drop-shadow-lg px-2 py-1 sm:px-3 sm:py-2">
                   <p className="text-3xl md:text-6xl text-white font-bold">
-                    02
+                    {timeLeft.days}
                   </p>
                 </div>
               </div>
@@ -46,11 +92,11 @@ const UtaComp = () => {
               {/* Hours */}
               <div className="flex flex-col items-center">
                 <span className="text-gray-600 text-xl sm:text-base mb-2">
-                  Days
+                  Hours
                 </span>
                 <div className="rounded-2xl bg-orange-500 drop-shadow-lg px-2 py-1 sm:px-3 sm:py-2">
                   <p className="text-3xl md:text-6xl text-white font-bold">
-                    02
+                    {timeLeft.hours}
                   </p>
                 </div>
               </div>
@@ -58,11 +104,11 @@ const UtaComp = () => {
               {/* Mins */}
               <div className="flex flex-col items-center">
                 <span className="text-gray-600 text-xl sm:text-base mb-2">
-                  Days
+                  Minutes
                 </span>
                 <div className="rounded-2xl bg-orange-500 drop-shadow-lg px-2 py-1 sm:px-3 sm:py-2">
                   <p className="text-3xl md:text-6xl text-white font-bold">
-                    02
+                    {timeLeft.minutes}
                   </p>
                 </div>
               </div>
@@ -70,11 +116,11 @@ const UtaComp = () => {
               {/* Sec */}
               <div className="flex flex-col items-center">
                 <span className="text-gray-600 text-xl sm:text-base mb-2">
-                  Days
+                  Seconds
                 </span>
                 <div className="rounded-2xl bg-orange-500 drop-shadow-lg px-2 py-1 sm:px-3 sm:py-2">
                   <p className="text-3xl md:text-6xl text-white font-bold">
-                    02
+                    {timeLeft.seconds}
                   </p>
                 </div>
               </div>
@@ -83,7 +129,7 @@ const UtaComp = () => {
             {/* Buttons */}
             <div className="flex flex-col items-center gap-4 justify-center mt-4">
               <a
-                href="/"
+                href="/uti"
                 className="py-2 px-4 text-xl text-white text-center font-medium bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 no-underline w-72"
               >
                 Learn More & Pre-Book
