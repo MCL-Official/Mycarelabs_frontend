@@ -23,25 +23,25 @@ const NeumorphismButton = ({ cardData }) => {
 
     //  this is for our own booking system that i have created
 
-    console.log(cardData?.title, "dsdsvsvvdlvsdjvnskjvsdnkvn");
+    console.log(cardData, "Card Data");
 
-    if (cardData?.title == "Bay Area Mobile Testing") {
+    if (cardData?.title === "Bay Area Mobile Testing") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "Fremont Laboratory") {
+    } else if (cardData?.title === "Fremont Laboratory") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "At-Home Test Kit") {
+    } else if (cardData?.title === "At-Home Test Kit") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "Riverside Mobile Testing") {
+    } else if (cardData?.title === "Riverside Mobile Testing") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "Riverside Gurdwara") {
+    } else if (cardData?.title === "Riverside Gurdwara") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
@@ -59,7 +59,6 @@ const NeumorphismButton = ({ cardData }) => {
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)} // Handle hover start
       onMouseLeave={() => setIsHovered(false)} // Handle hover end
-      id="#BookBtn"
       className={`
         px-4 py-2 rounded-full 
         flex items-center gap-2 
@@ -73,8 +72,9 @@ const NeumorphismButton = ({ cardData }) => {
     `}
       style={{
         background: isHovered
-          ? "linear-gradient(90deg, rgba(100, 182, 255, 1), rgba(86, 152, 195, 1))" // Lighter gradient on hover
-          : "linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))", // Default gradient
+          ? "#6e9eff" // Solid lighter blue on hover
+          : "#5084ff", // Solid default blue
+
         boxShadow: isHovered
           ? "0px 4px 15px rgba(0, 0, 0, 0.2)" // Shadow on hover
           : "0px 4px 10px rgba(0, 0, 0, 0.1)", // Default shadow

@@ -7,14 +7,17 @@ import img from "../../Assets/img.jpg";
 import img1 from "../../Assets/img3.jpg";
 import img4 from "../../Assets/img4.jpg";
 import { Helmet } from "react-helmet";
+import santaImg from "../../Assets/santaImg.webp";
+import bellBorder from "../../Assets/bellBorder2.webp"
+import bush from "../../Assets/bush.png"
 
 const features = {
   "Infectious Disease": {
-      title: "Infectious Disease",
-      description:
-        "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options.",
-      image: img3,
-      route: "/testing-solutions/infectious-disease-testing-solutions",
+    title: "Infectious Disease",
+    description:
+      "My Care Labs provides top-tier testing solutions for infectious diseases by using an all-in-one swab for COVID-19, Influenza A/B, and RSV. Learn more about our reliable services and wide array of diagnostic options.",
+    image: img3,
+    route: "/testing-solutions/infectious-disease-testing-solutions",
     content: (
       <>
         <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2">
@@ -219,15 +222,15 @@ function FeatureComponent() {
         />
         <meta name="author" content="My Care Labs" />
       </Helmet>
-      <div className="flex justify-center items-center pt-2 xl:pt-10 2xl:pt-20 min-h-screen bg-gradient-to-r from-blue-200 via-white to-blue-200">
-        <div className="w-full xl:w-4/5 2xl:max-w-[1440px] mx-auto overflow-hidden">
+      <div className="flex justify-center items-center pt-2 xl:pt-10 2xl:pt-20 min-h-screen bg-white relative">
+        <img src={bush} alt="" className="absolute top-0 right-0 h-72 w-80 max-[800px]:w-56 max-[800px]:h-48" />
+        <div className="w-full xl:w-4/5 2xl:max-w-[1440px] mx-auto overflow-hidden mt-40">
           <h3 className="flex justify-center text-2xl font-bold bg-transparent">
             <div className="relative inline-block bg-transparent text-center mb-4">
-              <span ref={scrollToRef} className="text-blue-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl 4xl:text-8xl  font-bold mr-2">
+              <span ref={scrollToRef} className="text-red-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl 4xl:text-8xl  font-bold mr-2">
                 Solutions
               </span>
-              <span className="text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl font-bold">
-                We Provide
+              <span className="text-gray-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl font-bold"> We Provide
               </span>
             </div>
           </h3>
@@ -237,8 +240,8 @@ function FeatureComponent() {
               <div className="flex items-center justify-center" key={feature}>
                 <button
                   className={`w-full rounded-2xl text-xs md:text-lg xl:text-xl border-2 min-w-[120px] md:min-w-[200px] border-black px-2 py-2 md:px-4 md:py-48 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-4xl ${selectedFeature === feature
-                      ? "bg-blue-500 text-white"
-                      : "bg-white"
+                    ? "bg-green-500 text-black"
+                    : "bg-white"
                     }`}
                   onClick={() => handleClick(feature)}
                 >
@@ -246,15 +249,23 @@ function FeatureComponent() {
                 </button>
               </div>
             ))}
-            <div className="info-description text-black mt-4 sm:text-sm md:text-xl lg:text-xl  font-normal">
+            <div className="info-description  mt-4 sm:text-sm md:text-xl lg:text-xl  font-normal">
               My Care Labs offers quick, easy, and accurate RT-PCR testing for
               COVID-19, RSV, and Influenza A/B. We provide on-site testing at
               our lab and pop-up locations throughout California, with results
               available the same day or within 24 hours.
             </div>
           </div>
+
+
+          {/*some css add for christmas
+            relative , max-[1000px]:mt-32 , 
+            */
+          }
           <div
-            className="rounded-2xl border-2 p-6 lg:pb-12 bg-white flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] xl:h-[45rem] 2xl:h-[50rem] transition-all shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px]"
+            className="rounded-2xl relative max-[1000px]:mt-32 bg-gradient-to-r from-[#d5dff7] to-[#7698e6] border-2 p-6 lg:pb-12 bg-white 
+            flex flex-col lg:flex-row mt-6 h-auto lg:h-[40rem] xl:h-[45rem] 2xl:h-[50rem] transition-all 
+            shadow-[3px_3px_0px_black] hover:translate-x-[3px] hover:translate-y-[3px]"
           >
             <AnimatePresence custom={direction} mode="wait">
               <motion.img
@@ -280,7 +291,8 @@ function FeatureComponent() {
                   variants={textVariants}
                   className="h-full"
                 >
-                  <h2 className="text-4xl font-bold text-orange-600">
+
+                  <h2 className="text-4xl font-bold text-white">
                     {features[selectedFeature].title}
                   </h2>
                   <p className="text-2xl h-full flex items-center">
@@ -289,8 +301,13 @@ function FeatureComponent() {
                 </motion.div>
               </AnimatePresence>
             </div>
+            <img src={santaImg} alt="" className="absolute -top-32 w-64 " />
           </div>
+
+
         </div>
+
+
       </div>
     </>
   );

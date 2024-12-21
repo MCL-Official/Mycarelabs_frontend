@@ -11,7 +11,7 @@ const CARD_SIZE = CARD_WIDTH + MARGIN;
 const BREAKPOINTS = {
   sm: 640,
   lg: 1024,
-  
+
 };
 
 const BlogPostCarousel = () => {
@@ -49,18 +49,16 @@ const BlogPostCarousel = () => {
 
             <div className=" flex items-center gap-2">
               <button
-                className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${
-                  CAN_SHIFT_LEFT ? "" : "opacity-30"
-                }`}
+                className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${CAN_SHIFT_LEFT ? "" : "opacity-30"
+                  }`}
                 disabled={!CAN_SHIFT_LEFT}
                 onClick={shiftLeft}
               >
                 <FiArrowLeft />
               </button>
               <button
-                className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${
-                  CAN_SHIFT_RIGHT ? "" : "opacity-30"
-                }`}
+                className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${CAN_SHIFT_RIGHT ? "" : "opacity-30"
+                  }`}
                 disabled={!CAN_SHIFT_RIGHT}
                 onClick={shiftRight}
               >
@@ -87,12 +85,12 @@ const BlogPostCarousel = () => {
   );
 };
 
-const Post = ({ imgUrl, author, title, description, location}) => {
-  
+const Post = ({ imgUrl, author, title, description, location }) => {
+
   return (
-    
+
     <div
-   
+
       className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
       style={{
         width: CARD_WIDTH,
@@ -100,23 +98,23 @@ const Post = ({ imgUrl, author, title, description, location}) => {
       }}
     >
       <a className="no-underline text-center mx-auto" href={location}>
-      <img
-        src={imgUrl}
-        className="mb-3 h-[200px] w-auto mx-auto  ml-2 rounded-lg object-cover"
-        alt={`An image for a fake blog post titled ${title}`}
-      />
-   
-      {/* <span className="rounded-md border-[1px] w-auto border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
+        <img
+          src={imgUrl}
+          className="mb-3 h-[200px] w-auto mx-auto  ml-2 rounded-lg object-cover"
+          alt={`An image for a fake blog post titled ${title}`}
+        />
+
+        {/* <span className="rounded-md border-[1px] w-auto border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
         {author} 
       </span> */}
-     
-      <p className="mt-1.5 text-lg font-medium">{title}</p>
-      <p className="text-sm text-neutral-500">{description}</p>
-      
+
+        <p className="mt-1.5 text-lg font-medium">{title}</p>
+        <p className="text-sm text-neutral-800">{description}</p>
+
       </a>
 
     </div>
-    
+
   );
 };
 
@@ -137,8 +135,8 @@ const posts = [
     title: "Wellness Testing Solutions",
     description:
       "Transform your workplace with on-site wellness testing from My Care Labs.",
-      location :"/testing-solutions/wellness-testing-solutions/",
-    
+    location: "/testing-solutions/wellness-testing-solutions/",
+
   },
   {
     id: 2,
@@ -147,8 +145,8 @@ const posts = [
     title: "Toxicology Testing",
     description:
       "In light of HR managers’ need to recruit and retain top talent, we offers drug testing for businesses and other organizations.",
-        location:"/testing-solutions/toxicology-testing-solutions/",
-    },
+    location: "/testing-solutions/toxicology-testing-solutions/",
+  },
   {
     id: 3,
     imgUrl: "https://i.ibb.co/gjbJTny/3.png",
@@ -156,8 +154,8 @@ const posts = [
     title: "Infectious Disease Testing",
     description:
       "My Care Labs was founded during the COVID-19 Pandemic. We provide fast, simple, accurate infectious disease testing.",
-       location:"/testing-solutions/infectious-disease-testing-solutions"
-    },
+    location: "/testing-solutions/infectious-disease-testing-solutions"
+  },
   {
     id: 4,
     imgUrl: "https://i.ibb.co/b79svsR/4.png",
@@ -165,8 +163,8 @@ const posts = [
     title: "Oncology Testing",
     description:
       "My Care Labs is actively working on offering an array of oncology panels that can help detect different forms of cancers.",
-    location:"//testing-solutions/oncology-testing-solutions/"
-    },
+    location: "//testing-solutions/oncology-testing-solutions/"
+  },
   // {
   //   id: 5,
   //   imgUrl: "https://i.ibb.co/XXmTtnP/5.png",

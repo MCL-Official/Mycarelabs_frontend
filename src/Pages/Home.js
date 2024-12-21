@@ -16,7 +16,7 @@ import Footer from "../Components/Footer/Footer";
 import ShuffleHero from "../Components/shuffel/SuffleHero";
 import { ClipPathLinks } from "../Components/Insurance/ClipPathLinks";
 import FeatureComponent from "../Components/Accordain/FeatureComponent";
-import {FeatureToggles} from "../Components/feature-toggles/FeatureToggles";
+import { FeatureToggles } from "../Components/feature-toggles/FeatureToggles";
 import ImageContainer from "../Components/Form/ImageContainer";
 import { Helmet } from "react-helmet";
 import { SlideInAuth } from "../Components/Contact/SlideInAuth";
@@ -27,6 +27,7 @@ import { Testimonials } from "../Components/SOLUTION/Infectious-desiase/Group/Te
 import BlogPostCarousel from "../Components/Blog/BlogPostCarousel";
 import Caontact from "../Components/Accordain/Caontact";
 import Banner from "../Components/Navbar/Banner";
+import UtaComp from "../Components/UTA-Comp/UtaComp";
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
@@ -41,52 +42,52 @@ function Home() {
 
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   const [error, setError] = useState(null);
-console.log(location,"adatsag");
-useEffect(() => {
-  const fetchGeolocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLocation((prevLocation) => ({
-            ...prevLocation,
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          }));
-        },
-        (error) => {
-          console.error('Geolocation error:', error);
-          fetchIpLocation();
-        }
-      );
-    } else {
-      setError('Geolocation is not supported by this browser.');
-      fetchIpLocation();
-    }
-  };
+  console.log(location, "adatsag");
+  useEffect(() => {
+    const fetchGeolocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            setLocation((prevLocation) => ({
+              ...prevLocation,
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+            }));
+          },
+          (error) => {
+            console.error('Geolocation error:', error);
+            fetchIpLocation();
+          }
+        );
+      } else {
+        setError('Geolocation is not supported by this browser.');
+        fetchIpLocation();
+      }
+    };
 
-  const fetchIpLocation = async () => {
-    try {
-      const response = await axios.get('https://ipapi.co/json/');
-      console.log(response.data,"dskvhbdsvhbdv")
-      setLocation({
-        latitude: null,
-        longitude: null,
-        city: response.data.city,
-        region: response.data.region,
-        country: response.data.country_name,
-      });
-    } catch (error) {
-      console.error('IP Location error:', error);
-      setError('Unable to fetch location information.');
-    }
-  };
+    const fetchIpLocation = async () => {
+      try {
+        const response = await axios.get('https://ipapi.co/json/');
+        console.log(response.data, "dskvhbdsvhbdv")
+        setLocation({
+          latitude: null,
+          longitude: null,
+          city: response.data.city,
+          region: response.data.region,
+          country: response.data.country_name,
+        });
+      } catch (error) {
+        console.error('IP Location error:', error);
+        setError('Unable to fetch location information.');
+      }
+    };
 
-  fetchGeolocation();
-}, []);
+    fetchGeolocation();
+  }, []);
   return (
     <div className="home-section">
-      
-     <Helmet>
+
+      <Helmet>
         <title>Welcome to My Care Labs | Comprehensive Health Solutions</title>
         <meta name="description" content="Discover comprehensive health solutions at My Care Labs. From infectious diseases to wellness and toxicology, we're here for your well-being." />
         <meta name="keywords" content="health solutions, My Care Labs, infectious diseases, wellness, toxicology, book appointments, check test results, home test kits" />
@@ -97,14 +98,16 @@ useEffect(() => {
       {/* <FeatureToggles/> */}
       {/* <Banner/> */}
       <HoverCards1 />
+      <UtaComp />
+
       <Info scrollToAuth={scrollToAuth} />
       <FeatureComponent />
-      <BlogPostCarousel/>
+      <BlogPostCarousel />
       <InsuranceAccepted />
-      <Video/>
-      <Testimonials/>
+      <Video />
+      <Testimonials />
       {/* <HoverCards /> */}
-      <Caontact/>
+      <Caontact />
       <div ref={authSectionRef}>
         <SlideInAuth />
       </div>

@@ -18,19 +18,19 @@ const Hero = () => {
           <p className="mt-2 text-xl md:text-2xl text-slate-700 font-semibold font-poppins">Get Accurate Results & Personalized Care</p>
           <div className="flex flex-col items-center">
 
-<button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-  <div className='flex text-xl'>
-    Book Your Test Now
-  </div>
-</button>
-<div className='text-black text-2xl font-bold mt-2'>OR</div>
-<button className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-  <div className='flex text-xl'>
-    Call Us: 800-790-4550
-  </div>
-</button>
+            {/*<button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+              <div className='flex text-xl'>
+                Book Your Test Now
+              </div>
+            </button>*/}
+            <div className='text-black text-2xl font-bold mt-2'>Know more</div>
+            <a href="tel:+1-800-790-4550" className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full no-underline">
+              <div className='flex text-xl'>
+                Call Us: 800-790-4550
+              </div>
+            </a>
 
-</div>
+          </div>
 
           {/* <p className="text-sm mt-4 text-black">Call Us: 800-790-4550</p> */}
         </div>

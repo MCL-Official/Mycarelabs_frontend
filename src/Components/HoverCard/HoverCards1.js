@@ -30,12 +30,13 @@ const cardData = [
     category: "Northern California: Fremont Lab",
     title: "Fremont Laboratory",
     shortDescription: [
-     "COVID-19, RSV & FLU A/B",
-        "Wellness Testing ",
-        "Toxicology Testing",
-        "UTI Testing (coming soon)",
+      "COVID-19, RSV & FLU A/B",
+      "Wellness Testing ",
+      "Toxicology Testing",
+      "UTI Testing (coming soon)",
     ],
-    timing: "8:30 AM - 6:00 PM",
+    longDescription: "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week for patients experiencing Covid-19 symptoms: high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is no-cost with most major insurances.",
+    timing: "8:30 AM - 5:00 PM",
     location: "5500 Stewart Avenue, Suite 108, Fremont, CA 94538",
     Contact: "1-800-790-4550"
   },
@@ -218,9 +219,9 @@ const HoverCards1 = () => {
 
                 {/* Hover Dropdown */}
                 <div
-                  className="absolute  top-[-100%] left-0  rounded-xl  right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
+                  className="absolute bg-gradient-to-l from-[#a3beff] to-[#5084ff]  top-[-100%] left-0  rounded-xl  right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
                   style={{
-                    background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+                    //background: 'linear-gradient(90deg, rgba(204, 0, 0, 1), rgba(153, 0, 0, 1))',
                   }}
                 >
                   <h5 className="text-xl font-extrabold text-white text-left">{card.title}</h5>
@@ -244,13 +245,12 @@ const HoverCards1 = () => {
                 {/* Card Content */}
                 <div className="p-6 bg-white flex flex-col justify-between flex-grow z-10 relative">
                   <div>
-                    <h5 className="text-lg whitespace-nowrap text-red-500 text-ellipsis max-w-full font-bold mb-1 font-inter">
+                    <h5 className="text-lg whitespace-nowrap text-red-600 text-ellipsis max-w-full font-bold mb-1 font-inter">
                       {card.category}
                     </h5>
                     <h3
-                      className="text-lg font-bold mt-2  font-inter mb-[-6px]"
+                      className="text-lg font-bold mt-2  font-inter mb-[-6px] bg-[#5084ff]"
                       style={{
-                        background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                       }}
@@ -272,9 +272,9 @@ const HoverCards1 = () => {
                     </div>
 
                     <h3
-                      className="text-lg mt-2 p  text-blue-500 font-bold font-inter mb-[-4px]"
+                      className="text-lg mt-2 p font-bold font-inter mb-[-4px] bg-[#5084ff]"
                       style={{
-                        background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
+
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                       }}
@@ -286,9 +286,8 @@ const HoverCards1 = () => {
                     <div className="flex flex-wrap justify-center mt-4 hover:cursor-pointer " onClick={sample}>
                       <img src={myImage} alt="My Image" />
                       <p
-                        className="text-blue-500 text-xl font-bold  hover:cursor-pointer font-inter mb-[-15px]"
+                        className="bg-[#5084ff] text-xl font-bold  hover:cursor-pointer font-inter mb-[-15px]"
                         style={{
-                          background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
                         }}
@@ -300,9 +299,8 @@ const HoverCards1 = () => {
 
                     <div className="mb-1">
                       <span
-                        className="text-lg font-extrabold"
+                        className="text-lg font-extrabold bg-[#5084ff]"
                         style={{
-                          background: 'linear-gradient(90deg, rgba(10, 122, 247, 1), rgba(6, 72, 145, 1))',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
                         }}

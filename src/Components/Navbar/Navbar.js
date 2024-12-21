@@ -377,10 +377,10 @@ function Navbar() {
                 </button> */}
               </div>
               <p className={`font-bold text-2xl pr-5 ${textColor === "white" ? "text-white" : "text-orange-600"}`}>
-  Need Help? Call Us
-  <br />
-  <span className="text-xl">800-790-4550</span>
-</p> <form
+                Need Help? Call Us
+                <br />
+                <span className="text-xl">800-790-4550</span>
+              </p> <form
                 className="flex  text-black"
               >
                 {/* <input
@@ -389,7 +389,7 @@ function Navbar() {
                   placeholder="Search"
                   aria-label="Search"
                 /> */}
-               
+
                 <a
                   href="tel:+1-800-790-4550"
                   className="mr-3 self-center text-black"
