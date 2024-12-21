@@ -9,6 +9,7 @@ import img4 from "../../Assets/img4.jpg";
 import { Helmet } from "react-helmet";
 import santaImg from "../../Assets/santaImg.webp";
 import bellBorder from "../../Assets/bellBorder2.webp"
+import bush from "../../Assets/bush.png"
 
 const features = {
   "Infectious Disease": {
@@ -222,7 +223,7 @@ function FeatureComponent() {
         <meta name="author" content="My Care Labs" />
       </Helmet>
       <div className="flex justify-center items-center pt-2 xl:pt-10 2xl:pt-20 min-h-screen bg-white relative">
-        <img src={bellBorder} style={{ width: "100%" }} alt="" className="absolute top-0 h-48 max-[1000px]:h-32" />
+        <img src={bush} alt="" className="absolute top-0 right-0 h-72 w-80 max-[800px]:w-56 max-[800px]:h-48" />
         <div className="w-full xl:w-4/5 2xl:max-w-[1440px] mx-auto overflow-hidden mt-40">
           <h3 className="flex justify-center text-2xl font-bold bg-transparent">
             <div className="relative inline-block bg-transparent text-center mb-4">

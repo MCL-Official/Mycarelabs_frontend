@@ -4,7 +4,7 @@ import SubscribeNewsletter from "../SubscribeNewsletter";
 import { useNavigate } from "react-router-dom";
 import logo1 from "../../Assets/logo3.png";
 import snowFooter from "../../Assets/snowFooter.png";
-
+import logoCh from "../../Assets/mycare_logo_ch2.png"
 function Footer() {
   const images = [
     "https://img.freepik.com/free-photo/statue-rainbow-bridge-night-tokyo-japan_335224-8.jpg?t=st=1719954263~exp=1719957863~hmac=08690e59529a0bc028e23fda8e4fa0f44750548434c108235e7e0f403667f131&w=2000",
@@ -108,7 +108,7 @@ function Footer() {
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-              <img src={logo1} className="h-20" alt="My care labs" />
+              <img src={logoCh} className="h-20" alt="My care labs" />
             </p>
             {/* <p className="ft-description">
               Talk to online doctors and get medical advice, online

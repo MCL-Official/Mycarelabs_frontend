@@ -219,7 +219,7 @@ const HoverCards1 = () => {
 
                 {/* Hover Dropdown */}
                 <div
-                  className="absolute bg-gradient-to-r from-[#a3beff] to-[#5084ff]  top-[-100%] left-0  rounded-xl  right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
+                  className="absolute bg-gradient-to-l from-[#a3beff] to-[#5084ff]  top-[-100%] left-0  rounded-xl  right-0 group-hover:top-0 transition-top duration-[150ms] ease-in-out z-20 p-4"
                   style={{
                     //background: 'linear-gradient(90deg, rgba(204, 0, 0, 1), rgba(153, 0, 0, 1))',
                   }}
@@ -249,7 +249,7 @@ const HoverCards1 = () => {
                       {card.category}
                     </h5>
                     <h3
-                      className="text-lg font-bold mt-2  font-inter mb-[-6px] bg-green-600"
+                      className="text-lg font-bold mt-2  font-inter mb-[-6px] bg-[#5084ff]"
                       style={{
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -272,7 +272,7 @@ const HoverCards1 = () => {
                     </div>
 
                     <h3
-                      className="text-lg mt-2 p  text-blue-500 font-bold font-inter mb-[-4px] bg-green-600"
+                      className="text-lg mt-2 p font-bold font-inter mb-[-4px] bg-[#5084ff]"
                       style={{
 
                         WebkitBackgroundClip: 'text',
@@ -286,7 +286,7 @@ const HoverCards1 = () => {
                     <div className="flex flex-wrap justify-center mt-4 hover:cursor-pointer " onClick={sample}>
                       <img src={myImage} alt="My Image" />
                       <p
-                        className="bg-green-600 text-xl font-bold  hover:cursor-pointer font-inter mb-[-15px]"
+                        className="bg-[#5084ff] text-xl font-bold  hover:cursor-pointer font-inter mb-[-15px]"
                         style={{
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -299,7 +299,7 @@ const HoverCards1 = () => {
 
                     <div className="mb-1">
                       <span
-                        className="text-lg font-extrabold bg-green-600"
+                        className="text-lg font-extrabold bg-[#5084ff]"
                         style={{
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',

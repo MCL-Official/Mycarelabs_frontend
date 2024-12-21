@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
+import { a } from "react-spring";
 
 const CARD_WIDTH = 350;
 const MARGIN = 20;
@@ -25,7 +26,6 @@ const BlogPostCarousel = () => {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState(""); // New state for search term
   const blogsPerPage = 9;
-  const navigate = useNavigate();
 
   const getBlogData = useCallback(
     async (page) => {
@@ -124,24 +124,26 @@ const BlogPostCarousel = () => {
 
 const Post = ({ banner_image, category, name, meta_description }) => {
   return (
-    <div
-      className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
-      style={{
-        width: CARD_WIDTH,
-        marginRight: MARGIN,
-      }}
-    >
-      <img
-        src={banner_image}
-        className="mb-3 h-[200px] w-full rounded-lg object-cover"
-        alt={`An image for a fake blog post titled ${name}`}
-      />
-      <span className="rounded-md border-[1px] border-neutral-600 bg-neutral-100 px-2 py-1 text-sm uppercase text-neutral-800">
-        {category}
-      </span>
-      <p className="mt-1.5 text-lg font-medium">{name}</p>
-      <p className="text-sm text-neutral-800">{meta_description}</p>
-    </div>
+    <a href="/blog" className="no-underline">
+      <div
+        className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
+        style={{
+          width: CARD_WIDTH,
+          marginRight: MARGIN,
+        }}
+      >
+        <img
+          src={banner_image}
+          className="mb-3 h-[200px] w-full rounded-lg object-cover"
+          alt={`An image for a fake blog post titled ${name}`}
+        />
+        <span className="rounded-md border-[1px] border-neutral-600 bg-neutral-100 px-2 py-1 text-sm uppercase text-neutral-800">
+          {category}
+        </span>
+        <p className="mt-1.5 text-lg font-medium text-black">{name}</p>
+        <p className="text-sm text-neutral-800">{meta_description}</p>
+      </div>
+    </a>
   );
 };
 

@@ -23,25 +23,25 @@ const NeumorphismButton = ({ cardData }) => {
 
     //  this is for our own booking system that i have created
 
-    console.log(cardData?.title, "dsdsvsvvdlvsdjvnskjvsdnkvn");
+    console.log(cardData, "Card Data");
 
-    if (cardData?.title == "Bay Area Mobile Testing") {
+    if (cardData?.title === "Bay Area Mobile Testing") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "Fremont Laboratory") {
+    } else if (cardData?.title === "Fremont Laboratory") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "At-Home Test Kit") {
+    } else if (cardData?.title === "At-Home Test Kit") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "Riverside Mobile Testing") {
+    } else if (cardData?.title === "Riverside Mobile Testing") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
-    } else if (cardData?.title == "Riverside Gurdwara") {
+    } else if (cardData?.title === "Riverside Gurdwara") {
       navigate(`/covid-test-locations/${formattedCategory}`, {
         state: { cardData },
       });
@@ -72,8 +72,8 @@ const NeumorphismButton = ({ cardData }) => {
     `}
       style={{
         background: isHovered
-          ? "linear-gradient(90deg, rgba(102, 255, 102, 1), rgba(51, 204, 51, 1))" // Lighter green gradient on hover
-          : "linear-gradient(90deg, rgba(0, 153, 0, 1), rgba(0, 102, 0, 1))", // Default green gradient
+          ? "#6e9eff" // Solid lighter blue on hover
+          : "#5084ff", // Solid default blue
 
         boxShadow: isHovered
           ? "0px 4px 15px rgba(0, 0, 0, 0.2)" // Shadow on hover
