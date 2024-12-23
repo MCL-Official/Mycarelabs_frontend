@@ -690,7 +690,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   </div>
                 )}
               </div>
-              <button type="button" onClick={handleSubmit} id='BookAppnt' className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} id='#BookAppnt' className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
               </button>
             </form>
