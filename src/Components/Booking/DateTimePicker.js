@@ -292,15 +292,17 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     setDisabledTimes(disabledTimeSlots);
   };
 
-  const timeSlots = [
-    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
-    "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
-    "5:00 PM", "5:30 PM", "6:00 PM"
-  ];
+  const isLimitedHours = ["2024-12-26", "2024-12-27", "2024-12-30", "2025-01-02", "2025-01-03"].includes(selectedDate);
+
+  const timeSlots = isLimitedHours
+    ? ["8:30 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM"]
+    : ["8:30 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"];
+
+
 
   // ?changes to be removed 
   const handleTimeClick = (time) => {
+
     if (isTimeInPast(time) || isTimeBooked(time)) return; // Prevent selecting past or booked times
     setSelectedTime(time);
   };
@@ -311,10 +313,29 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
   };
   // const date = `${monthIndex + 1}-${day + 1}-${year}`;
 
-  const isDateSelectable = (day) => {
-    const date = new Date(year, monthIndex, day + 1);
-    return date >= new Date(new Date().setHours(0, 0, 0, 0));
+  const isDateSelectable = (dateIndex) => {
+    const date = new Date(year, monthIndex, dateIndex + 1);
+    const day = date.getDay(); // Get the day of the week (0 = Sunday, 6 = Saturday)
+    const formattedDate = moment(date).format("YYYY-MM-DD");
+
+    // Closed dates
+    const closedDates = [
+      "2024-12-24", "2024-12-25", "2024-12-31", "2025-01-01"
+    ];
+
+    // Limited working hours dates
+    const limitedWorkingDates = [
+      "2024-12-26", "2024-12-27", "2024-12-30",
+      "2025-01-02", "2025-01-03"
+    ];
+
+    if (closedDates.includes(formattedDate)) return false; // Disable closed dates
+    if (limitedWorkingDates.includes(formattedDate)) return true; // Enable dates with limited hours
+
+    // Disable weekends (if applicable)
+    return day !== 0 && day !== 6;
   };
+
 
   const dateButtonClass = (day) => {
     // const fullDate = `${year}-${monthIndex + 1}-${day + 1}`;
@@ -491,12 +512,15 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                       <div key={index} className="text-center text-xs sm:text-lg p-1"></div>
                     ))}
                     {Array.from({ length: daysInMonth }, (_, index) => (
-                      <button key={index}
+                      <button
+                        key={index}
                         className={`text-center text-xs sm:text-lg rounded p-1 ${dateButtonClass(index)}`}
                         onClick={() => handleDateClick(index)}
-                        disabled={!isDateSelectable(index) || isWeekend(index)}>
+                        disabled={!isDateSelectable(index)}
+                      >
                         {index + 1}
                       </button>
+
                     ))}
 
                   </div>
