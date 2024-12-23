@@ -59,7 +59,8 @@
     color: white;
     border: 1px solid transparent;
     border-radius: 28px;
-    background-color: #16A34A;
+    background-color: #15803D;
+    /* Darker green for better contrast */
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .8px;
@@ -69,9 +70,11 @@
 
 .text-appointment-btn:hover {
     color: white;
-    background-color: #22c55e;
-    border: 1px solid #16A34A;
+    background-color: #16A34A;
+    /* Slightly lighter green for hover */
+    border: 1px solid #15803D;
 }
+
 
 .text-stats {
     margin-top: 40px;
@@ -85,7 +88,7 @@
     text-align: center;
 }
 
-.text-stats-container > p {
+.text-stats-container>p {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
@@ -117,7 +120,8 @@
 }
 
 .card-item {
-    flex: 0 0 250px; /* Smaller size for cards */
+    flex: 0 0 250px;
+    /* Smaller size for cards */
     border-radius: 10px;
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -134,7 +138,8 @@
 
 .card-image {
     width: 100%;
-    height: 120px; /* Adjust image height */
+    height: 120px;
+    /* Adjust image height */
     object-fit: cover;
 }
 
@@ -204,32 +209,42 @@
         width: 100%;
         padding: 0;
     }
-    .text-title, .text-description {
+
+    .text-title,
+    .text-description {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 600px) {
     .text-headline {
         font-size: 16px;
     }
+
     .text-title {
         font-size: 28px;
     }
+
     .text-description {
         font-size: 16px;
     }
+
     .text-appointment-btn {
         font-size: 16px;
     }
+
     .text-stats {
         gap: 18px;
     }
-    .text-stats-container > p {
+
+    .text-stats-container>p {
         font-size: 10px;
     }
+
     .text-stats-container p:first-child {
         font-size: 22px;
     }
+
     .scroll-up {
         bottom: 32px;
         right: 32px;

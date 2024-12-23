@@ -8,8 +8,8 @@ import { IoCall } from "react-icons/io5";
 import logo1 from "../../Assets/Logo1.png";
 import { cardData, images, testingSolutions } from "../../utility/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPhone ,faStar ,faChevronDown} from "@fortawesome/free-solid-svg-icons";
-
+import { faBars, faPhone, faStar, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import logoCh from "../../Assets/mycare_logo_ch.png"
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Example = () => {
@@ -73,7 +73,7 @@ const Logo = ({ color = "white" }) => {
   return (
     <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
-        src={logo1}
+        src={logoCh}
         className="max-w-[250px] max-h-[75px]" // Adjusted the size
         alt="My care labs"
       />
@@ -347,7 +347,7 @@ const PricingContent = () => {
             onMouseLeave={handleMouseLeave}
           >
             Management Team
-            
+
           </Link>
           {/* {isHovered === 2 && (
             <div
@@ -390,27 +390,26 @@ const PricingContent1 = () => {
 
   return (
     <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg ">
-    <div className="grid grid-cols-2 mt-2 lg:grid-cols-1">
-      {testingSolutions.map((solution, index) => (
-        <div key={index} className="mb-3 space-y-3  relative">
-          {/* Main Category */}
-          <Link
-            to={solution.route}
-            className={`block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 ${
-              isHovered === index ? "bg-slate-200 hover:shadow-lg" : ""
-            }`}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            {solution.category}
-            
-            {/* Render the dropdown arrow if the category has tests */}
-            {solution.tests.length > 0 && (
-              <FontAwesomeIcon icon={faChevronDown} className="ml-2 text-gray-500" />
-            )}
+      <div className="grid grid-cols-2 mt-2 lg:grid-cols-1">
+        {testingSolutions.map((solution, index) => (
+          <div key={index} className="mb-3 space-y-3  relative">
+            {/* Main Category */}
+            <Link
+              to={solution.route}
+              className={`block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 ${isHovered === index ? "bg-slate-200 hover:shadow-lg" : ""
+                }`}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {solution.category}
 
-            {/* Show 'New' Icon next to UTI Testing Solutions */}
-            {/* {solution.category === "UTI Testing Solutions" && (
+              {/* Render the dropdown arrow if the category has tests */}
+              {solution.tests.length > 0 && (
+                <FontAwesomeIcon icon={faChevronDown} className="ml-2 text-gray-500" />
+              )}
+
+              {/* Show 'New' Icon next to UTI Testing Solutions */}
+              {/* {solution.category === "UTI Testing Solutions" && (
               <span className="relative inline-flex ml-2">
                 <span
                   className="absolute top-[-15px] left-[24px] bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full"
@@ -420,36 +419,36 @@ const PricingContent1 = () => {
                 </span>
               </span>
             )} */}
-             {solution.category === "UTI Testing Solutions" && (
+              {solution.category === "UTI Testing Solutions" && (
                 <span className="ml-2 text-red-500">
                   <FontAwesomeIcon icon={faStar} />
                   <span className="ml-1 text-sm text-red-500">New</span>
                 </span>
               )}
-          </Link>
+            </Link>
 
-          {/* Submenu if tests exist */}
-          {isHovered === index && solution.tests.length > 0 && (
-            <div
-              className="absolute -top-3 left-full w-[250px] text-left bg-white shadow-lg p-2 space-y-2 rounded-lg"
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-            >
-              {solution.tests.map((test, testIndex) => (
-                <Link
-                  key={testIndex}
-                  to={test.route}
-                  className="block text-base text-black no-underline hover:bg-slate-200 p-2 rounded-lg"
-                >
-                  {test.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+            {/* Submenu if tests exist */}
+            {isHovered === index && solution.tests.length > 0 && (
+              <div
+                className="absolute -top-3 left-full w-[250px] text-left bg-white shadow-lg p-2 space-y-2 rounded-lg"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {solution.tests.map((test, testIndex) => (
+                  <Link
+                    key={testIndex}
+                    to={test.route}
+                    className="block text-base text-black no-underline hover:bg-slate-200 p-2 rounded-lg"
+                  >
+                    {test.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
   );
 };
 

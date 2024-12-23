@@ -539,7 +539,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
               <div className="text-center text-gray-700 mt-4">
                 {/* Time zone <span className="font-semibold">India Standard Time (7:34pm)</span> */}
               </div>
-              <button id='#ContinueBook' className="w-full bg-blue-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" onClick={handleContinue}>
+              <button className="w-full enabled:bg-blue-500 disabled:bg-gray-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" disabled={selectedTime ? false : true} onClick={handleContinue}>
                 Continue
               </button>
             </>
@@ -696,14 +696,14 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
             </form>
           )}
         </div>
-      </div>
+      </div >
       {notification && (
         <StackedNotifications
           notification={notification}
           setNotification={setNotification}
         />
       )}
-    </div>
+    </div >
   );
 };
 
