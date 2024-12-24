@@ -219,7 +219,7 @@ const AboutUsContent = ({ handleClick }) => {
     console.log(cardData, 'sdvkjvnsvnsdjvsdnjvcnsjsdnv');
 
     const formattedCategory = formatCategoryName(cardData.category);
-    navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData: cardData } });
+    navigate(`/covid-test-locations/${formattedCategory}`, { state: { cardData: cardData } });
 
     // THE BOOKING SYSTEM TTHAT I HAVE CREATED 
 
