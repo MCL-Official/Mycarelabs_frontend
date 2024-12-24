@@ -281,10 +281,12 @@ const AboutUsContent = ({ handleClick }) => {
               </div>
               <button
                 onClick={() => handleBookNowClick({ ...card, imageUrl: images[index % images.length] })}
-                className="mt-3 px-3 py-2 text-center text-white bg-green-600 hover:bg-green-500 rounded-lg text-xs font-semibold w-full"
+                className={`mt-3 px-3 py-2 text-center text-white ${card.title !== "Union City Pop-up" ? "bg-[#5084ff] hover:bg-[#a3beff]" : "bg-gray-500"} rounded-lg text-xs font-semibold w-full`}
+                disabled={card.title === "Union City Pop-up"}
               >
                 Book Now
               </button>
+
             </div>
           </div>
         ))}

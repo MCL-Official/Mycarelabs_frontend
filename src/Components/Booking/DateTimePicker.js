@@ -292,11 +292,15 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     setDisabledTimes(disabledTimeSlots);
   };
 
+  // for the chirstmas holidays and limited hours for specific regions or dates
   const isLimitedHours = ["2024-12-26", "2024-12-27", "2024-12-30", "2025-01-02", "2025-01-03"].includes(selectedDate);
 
+  const isBayAreaMobileTesting = formattedCategory === 'bay-area-mobile-testing';
   const timeSlots = isLimitedHours
     ? ["8:30 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM"]
-    : ["8:30 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"];
+    : isBayAreaMobileTesting
+      ? ["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM"]
+      : ["8:30 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM"];
 
 
 
