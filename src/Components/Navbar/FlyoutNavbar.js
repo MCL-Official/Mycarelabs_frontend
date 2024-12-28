@@ -273,7 +273,7 @@ const AboutUsContent = ({ handleClick }) => {
               <div>
                 <h2 className="font-bold text-sm my-1">{card.category}</h2>
                 <p className="text-xs text-gray-800 mt-1">
-                  <strong>Hours:</strong> {card.timing}
+                  <strong>{card.timing}</strong>
                 </p>
                 <p className="text-xs text-gray-800">
                   <strong>Location:</strong> {card.location}

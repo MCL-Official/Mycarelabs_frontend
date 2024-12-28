@@ -10,6 +10,7 @@ import SubElement4 from './SubElement4'
 import { OutlineCards } from './OutlineCards'
 import SlidePricing from './SliderPricing'
 import { SlideInAuth } from '../../Components/Contact/SlideInAuth'
+import UtaComp from "../../Components/UTA-Comp/UtaComp"
 
 const Uta = () => {
   return (
@@ -18,16 +19,17 @@ const Uta = () => {
       <br></br>
       <br></br>
       {/* <br></br> */}
-      <Hero/>
-      <SubElement/>
-      <SubElement1/>
-      <SubElement2/>
-      <OutlineCards/>
-      <SubElement3/>
+      {/*<Hero/>*/}
+      <UtaComp />
+      <SubElement />
+      <SubElement1 />
+      <SubElement2 />
+      <OutlineCards />
+      <SubElement3 />
       {/* <SlidePricing/> */}
       <InsuranceAccepted />
-      <FaqWellness/>
-       <SlideInAuth/>
+      <FaqWellness />
+      <SlideInAuth />
 
     </div>
   )

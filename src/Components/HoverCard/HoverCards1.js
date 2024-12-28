@@ -44,6 +44,7 @@ const cardData = [
     id: 2,
     category: "Bay Area Mobile Testing",
     title: "Bay Area Mobile Testing",
+    addedDescription: "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
     shortDescription: [
       "Available by appointment only",
       "Must be within a 15 mile radius of Fremont Lab",
@@ -60,6 +61,7 @@ const cardData = [
     id: 3,
     category: "At-Home Test Kit",
     title: "At-Home Test Kit",
+    addedDescription: "Welcome to My Care Labs Medical Lab, your dedicated partner in health diagnostics, proudly serving the Fremont, California community.",
     shortDescription: [
       "Delivered right to your door step!",
       "We provide the shipping and testing materials",
@@ -75,6 +77,7 @@ const cardData = [
     id: 4,
     category: "Riverside City Mobile Testing",
     title: "Riverside Mobile Testing",
+    addedDescription: "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     shortDescription:
       [
         "Available by appointment only",
@@ -94,6 +97,7 @@ const cardData = [
     id: 5,
     category: "Riverside Gurdwara Pop-Up",
     title: "Riverside Gurdwara",
+    addedDescription: "Get COVID-19/RSV/Flu PCR results in 24 hours. To speed up your testing appointment.",
     shortDescription:
       [
         "Available by appointment only",
