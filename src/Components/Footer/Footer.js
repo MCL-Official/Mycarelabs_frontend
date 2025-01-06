@@ -108,7 +108,7 @@ function Footer() {
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-              <img src={logoCh} className="h-20" alt="My care labs" />
+              <img src={logo1} className="h-20" alt="My care labs" />
             </p>
             {/* <p className="ft-description">
               Talk to online doctors and get medical advice, online
@@ -221,7 +221,7 @@ function Footer() {
               </svg>
             </a>
           </li>
-          <li>
+          <li >
             <a
               href="https://www.linkedin.com/company/mycarelabs"
               title="LinkedIn"
@@ -238,7 +238,7 @@ function Footer() {
             </a>
           </li>
 
-          <li>
+          <li >
             <a
               href="https://www.facebook.com/MyCareLabsOfficial/"
               title="FaceBook"
@@ -255,7 +255,7 @@ function Footer() {
             </a>
           </li>
 
-          <li>
+          <li >
             <a
               href="https://x.com/"
               title="Twitter"
@@ -273,10 +273,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div className="lg:pb-60 pb-24">
 
-        <img src={snowFooter} alt="snow" className="absolute bottom-0" />
-      </div>
     </div>
   );
 }

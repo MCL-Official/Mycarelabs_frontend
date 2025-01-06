@@ -155,7 +155,7 @@ const UtaComp = () => {
             <img
               src={circle}
               alt="Circle Design"
-              className="absolute top-2/4 left-1/4 w-[400px] -translate-y-1/2 sm:w-[500px] xl:w-[800px] -z-10"
+              className="absolute top-2/4 left-[10%] w-[400px] -translate-y-1/2 sm:w-[500px] xl:w-[800px] -z-10"
             />
             {/* Lady Image */}
             <img

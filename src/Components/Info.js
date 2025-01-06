@@ -47,7 +47,7 @@ function Info({ scrollToAuth }) {
     <div className=" text-center bg-white" id="services">
       <div className="my-16 text-transparent bg-clip-text bg-gradient-to-r from-[#6C2FAC] to-white">
         <h3 className="font-poppins text-4xl font-bold">
-          <span className="text-red-600 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">Communities </span>
+          <span className="text-[#5084ff] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mr-2 ">Communities </span>
           <span className="text-gray-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
             We Serve
           </span>
@@ -68,7 +68,7 @@ function Info({ scrollToAuth }) {
             onClick={() => handleCardClick(index)}
           >
             <span className={`absolute top-[-24px] left-1/2 transform -translate-x-1/2 p-2 rounded-full transition-transform duration-700 ${selectedCard === index ? "bg-white rotate-[180]" : "bg-blue-100 group-hover:rotate-[360deg]  "}`}>
-              <FontAwesomeIcon className={`${selectedCard === index ? "text-red-200" : "text-red-600"} text-2xl`} icon={card.icon} />
+              <FontAwesomeIcon className={`${selectedCard === index ? "text-[#5084ff]" : "text-[#5084ff]"} text-2xl`} icon={card.icon} />
             </span>
             <p className={`mt-2 mb-4 font-bold text-2xl font-poppins tracking-wide ${selectedCard === index ? "text-black" : "text-black"}`}>{card.title}</p>
             <p className={`text-lg font-rubik leading-6 tracking-wide ${selectedCard === index ? "text-gray-700" : "text-gray-700"}`}>{card.description}</p>

@@ -30,6 +30,7 @@ export function ContactForm() {
         </svg>
       ),
       contact: 'support@mycarelabs.com',
+      goto: "mailto:support@mycarelabs.com"
     },
     {
       icon: (
@@ -49,6 +50,7 @@ export function ContactForm() {
         </svg>
       ),
       contact: '+1-800-790-4550',
+      goto: "tel:+1-800-790-4550"
     },
     {
       icon: (
@@ -73,6 +75,7 @@ export function ContactForm() {
         </svg>
       ),
       contact: '5500 Stewart Avenue, Suite 108, Fremont, CA 94538',
+      goto: ""
     },
   ];
 
@@ -105,7 +108,7 @@ export function ContactForm() {
                 {contactMethods.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-x-3">
                     <div className="flex-none text-gray-400">{item.icon}</div>
-                    <p className='text-xl font-bold'>{item.contact}</p>
+                    <a className={`no-underline text-xl font-bold text-gray-700 ${idx === 2 ? "cursor-default" : "cursor-pointer"}`} href={item.goto}>{item.contact}</a>
                   </li>
                 ))}
               </ul>

@@ -223,11 +223,10 @@ function FeatureComponent() {
         <meta name="author" content="My Care Labs" />
       </Helmet>
       <div className="flex justify-center items-center pt-2 xl:pt-10 2xl:pt-20 min-h-screen bg-white relative">
-        <img src={bush} alt="" className="absolute top-0 right-0 h-72 w-80 max-[800px]:w-56 max-[800px]:h-48" />
         <div className="w-full xl:w-4/5 2xl:max-w-[1440px] mx-auto overflow-hidden mt-40">
           <h3 className="flex justify-center text-2xl font-bold bg-transparent">
             <div className="relative inline-block bg-transparent text-center mb-4">
-              <span ref={scrollToRef} className="text-red-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl 4xl:text-8xl  font-bold mr-2">
+              <span ref={scrollToRef} className="text-[#5084ff] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl 4xl:text-8xl  font-bold mr-2">
                 Solutions
               </span>
               <span className="text-gray-500 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-8xl font-bold"> We Provide
@@ -301,7 +300,6 @@ function FeatureComponent() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <img src={santaImg} alt="" className="absolute -top-32 w-64 " />
           </div>
 
 

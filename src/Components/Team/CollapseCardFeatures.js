@@ -69,9 +69,8 @@ const Feature = ({ position, index, title, description, iconSrc }) => {
         ease: "easeInOut",
         duration: 0.35,
       }}
-      className={`relative flex min-h-[250px] w-10/12 max-w-lg shrink-0 flex-col justify-between overflow-hidden p-8 shadow-lg md:w-3/5 ${
-        index % 2 ? "bg-blue-300 text-white" : " bg-white"
-      }`}
+      className={`relative flex min-h-[250px] w-10/12 max-w-lg shrink-0 flex-col justify-between overflow-hidden p-8 shadow-lg md:w-3/5 ${index % 2 ? "bg-blue-300 text-white" : " bg-white"
+        }`}
     >
       <img src={iconSrc} alt={title} className="absolute right-2 top-2 w-16 h-16 opacity-100" />
       <h3 className="mb-8 text-3xl font-bold text-black">{title}</h3>
@@ -88,7 +87,7 @@ const features = [
     iconSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUc-cAjLTSr4KfkbseHVM8Btu7oTdqOGYQA&s",
     description:
       "The most caring companies deploy My Care Labs’ health testing to increase employee retention and business stability.",
-    
+
   },
   {
     title: "Team On Location",
@@ -103,8 +102,8 @@ const features = [
       "Testing, tracking, and vaccine programs to keep kids and their families safe and healthy for a bright future.",
   },
   {
-    title: "No Cost With Insurance",
-    iconSrc : "https://as1.ftcdn.net/v2/jpg/02/73/32/80/1000_F_273328038_pBxXai6PVN1eLXnH65ZVgy954nzAEMSt.jpg",
+    title: "We accept most major insurances",
+    iconSrc: "https://as1.ftcdn.net/v2/jpg/02/73/32/80/1000_F_273328038_pBxXai6PVN1eLXnH65ZVgy954nzAEMSt.jpg",
     description:
       "My Care Labs works hand-in-glove with California Department of Public Health, CalREDIE, and CDC.",
   },

@@ -73,7 +73,7 @@ const Logo = ({ color = "white" }) => {
   return (
     <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
-        src={logoCh}
+        src={logo1}
         className="max-w-[250px] max-h-[75px]" // Adjusted the size
         alt="My care labs"
       />
@@ -522,10 +522,12 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
               setMenuOpen(false);
             }}
             to={href}
+            className="no-underline"
           >
             {children}
           </Link>
           <motion.div
+            className="pr-12"
             animate={{ rotate: open ? "180deg" : "0deg" }}
             transition={{
               duration: 0.3,
@@ -542,10 +544,10 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
             setMenuOpen(false);
           }}
           to={href}
-          className="flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-2 text-start text-base font-medium"
+          className="no-underline flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-2 text-start text-base font-medium"
         >
           <span>{children}</span>
-          <FiArrowRight />
+          <FiArrowRight className="mr-12" />
         </Link>
       )}
       {FoldContent && (
@@ -570,10 +572,10 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
 const MobileMenu = ({ isHome, scrolled }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="block lg:hidden">
+    <div className="block lg:hidden pr-8 sm:pr-12">
       <button
         onClick={() => setOpen(true)}
-        className={`block text-xl ${isHome ? (scrolled ? "text-neutral-950" : "text-white") : "text-neutral-950"
+        className={`block text-xl ${isHome ? (scrolled ? "text-neutral-950" : "text-neutral-950") : "text-neutral-950"
           }`}
         style={{ padding: '4px 8px' }} // Reduced padding
       >
@@ -590,7 +592,7 @@ const MobileMenu = ({ isHome, scrolled }) => {
           >
             <div className="flex items-center justify-between p-3">
               <Logo color="black" />
-              <button onClick={() => setOpen(false)}>
+              <button onClick={() => setOpen(false)} className="pr-8 sm:pr-12">
                 <FiX className="text-xl text-neutral-950" />
               </button>
             </div>
@@ -606,7 +608,7 @@ const MobileMenu = ({ isHome, scrolled }) => {
                 </MobileMenuLink>
               ))}
             </div>
-            <div className="flex justify-end bg-neutral-950 p-3">
+            <div className="flex justify-between bg-neutral-950 p-3">
               <CTAs isHome={isHome} scrolled={false} />
             </div>
           </motion.nav>
