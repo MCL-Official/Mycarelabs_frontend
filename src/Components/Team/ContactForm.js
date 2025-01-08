@@ -87,7 +87,7 @@ export function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://backend.mycaretrading.com/portal/admin/api/registerform', formData);
+      const response = await axios.post('https://bookingbackend.mycaretrading.com/portal/admin/api/registerform', formData);
       setNotification({ type: 'success', message: 'Contact form details sent successfully!' });
       setFormData({ name: '', email: '', company: '', message: '', phone: '' });
     } catch (error) {

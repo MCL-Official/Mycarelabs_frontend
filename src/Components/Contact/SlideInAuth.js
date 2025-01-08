@@ -34,7 +34,8 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://backend.mycaretrading.com/portal/admin/api/registerform', formData);
+      const response = await axios.post('https://bookingbackend.mycaretrading.com/portal/admin/api/registerform', formData);
+      console.log(response, ' res')
       setNotification({ type: 'success', message: 'Contact form details sent successfully!' });
       setFormData({ name: '', email: '', phone: '', company: '', message: '', agreeToTerms: false });
     } catch (error) {

@@ -32,7 +32,7 @@ const BlogPostCarousel = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`
+          `https://bookingbackend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`
         );
         setBlogData(response.data.blogs);
         setCurrentPage(response.data.currentPage);

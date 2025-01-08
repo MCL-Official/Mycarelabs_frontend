@@ -169,7 +169,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
       if (testIdforBooking) {
         try {
           // Make the API call
-          const { data } = await axios.get(`https://backend.mycaretrading.com/admin/appointments/${testIdforBooking.testID}`);
+          const { data } = await axios.get(`https://bookingbackend.mycaretrading.com/admin/appointments/${testIdforBooking.testID}`);
 
           // Log the full API response to check the structure
           console.log("Full API response:", data);
@@ -445,8 +445,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     try {
 
       await Promise.all([
-        await axios.post(`https://backend.mycaretrading.com/admin/appointments/api/proxy`, CrelioData),
-        await axios.post('https://backend.mycaretrading.com/admin/appointments/', { data: encryptedData })
+        await axios.post(`https://bookingbackend.mycaretrading.com/admin/appointments/api/proxy`, CrelioData),
+        await axios.post('https://bookingbackend.mycaretrading.com/admin/appointments/', { data: encryptedData })
       ])
 
       setIsLoading(false);

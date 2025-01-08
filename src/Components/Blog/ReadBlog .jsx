@@ -23,7 +23,7 @@ const ReadBlog = () => {
       setLoading(true); // Show loading state on navigation
       try {
         const response = await axios.get(
-          `https://backend.mycaretrading.com/admin/blog/routename/${id}`
+          `https://bookingbackend.mycaretrading.com/admin/blog/routename/${id}`
         );
         const data = response.data;
         setBlogData(data);
@@ -49,12 +49,18 @@ const ReadBlog = () => {
           sameCategoryResponse,
           popularResponse,
         ] = await Promise.all([
-          axios.get("https://backend.mycaretrading.com/admin/blog/random"),
-          axios.get("https://backend.mycaretrading.com/admin/blog/latest"),
           axios.get(
-            `https://backend.mycaretrading.com/admin/blog/category/${blogData.category}`
+            "https://bookingbackend.mycaretrading.com/admin/blog/random"
           ),
-          axios.get("https://backend.mycaretrading.com/admin/blog/popular"),
+          axios.get(
+            "https://bookingbackend.mycaretrading.com/admin/blog/latest"
+          ),
+          axios.get(
+            `https://bookingbackend.mycaretrading.com/admin/blog/category/${blogData.category}`
+          ),
+          axios.get(
+            "https://bookingbackend.mycaretrading.com/admin/blog/popular"
+          ),
         ]);
 
         setRandomBlogs(randomResponse.data);
@@ -83,7 +89,7 @@ const ReadBlog = () => {
     }
     try {
       const response = await axios.get(
-        `https://backend.mycaretrading.com/admin/blog/${blogId}`
+        `https://bookingbackend.mycaretrading.com/admin/blog/${blogId}`
       );
       const blogData = response.data;
 
