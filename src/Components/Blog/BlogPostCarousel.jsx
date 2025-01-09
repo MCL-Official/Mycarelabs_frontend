@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState, useCallback } from "react";
-import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
