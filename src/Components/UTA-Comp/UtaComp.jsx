@@ -17,7 +17,7 @@ const UtaComp = () => {
 
   useEffect(() => {
     // Adjust target date for the desired timezone (e.g., IST)
-    const targetDate = new Date("2025-01-15T00:00:00Z"); // UTC date
+    const targetDate = new Date("2025-01-25T00:00:00Z"); // UTC date
     const timezoneOffset = targetDate.getTimezoneOffset() * 60000; // Offset in milliseconds
     const localTargetDate = new Date(targetDate.getTime() - timezoneOffset); // Adjust for local timezone
 
@@ -129,10 +129,10 @@ const UtaComp = () => {
             {/* Buttons */}
             <div className="flex flex-col items-center gap-4 justify-center mt-4">
               <a
-                href="/uti"
+                href="#contact-form"
                 className="py-2 px-4 text-xl text-white text-center font-medium bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 no-underline w-72"
               >
-                Learn More & Pre-Book
+                Learn More
               </a>
               <a
                 href="tel:800-790-4550"
