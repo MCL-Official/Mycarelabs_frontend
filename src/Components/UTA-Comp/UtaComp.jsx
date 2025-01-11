@@ -49,6 +49,15 @@ const UtaComp = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
+  const smoothScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <>
       <section
@@ -128,12 +137,12 @@ const UtaComp = () => {
 
             {/* Buttons */}
             <div className="flex flex-col items-center gap-4 justify-center mt-4">
-              <a
-                href="#contact-form"
+              <button
+                onClick={() => smoothScroll("contact-form")}
                 className="py-2 px-4 text-xl text-white text-center font-medium bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 no-underline w-72"
               >
                 Learn More
-              </a>
+              </button>
               <a
                 href="tel:800-790-4550"
                 className="py-2 text-3xl px-4 flex items-center gap-2 text-orange-600 font-bold border border-orange-600 rounded-lg hover:bg-orange-50 no-underline w-72 flex justify-center"
