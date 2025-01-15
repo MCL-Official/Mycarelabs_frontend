@@ -82,8 +82,6 @@ const BookTestDetails = () => {
 
             <p className="mt-2 text-gray-700 text-left">Don’t let testing disrupt your plans or peace of mind. Choose My Care Labs for efficient, reliable, and prompt service. We are dedicated to supporting the health and safety of our community, every step of the way.
             At My Care Labs, you are more than a client—you are a valued member of our community. Your health matters to us, and we are here to help you stay informed and safe during these challenging times. </p>
-
-            <a href="#" className="text-white hover:underline mt-4 no-underline inline-block">SEE CASE STUDIES →</a>
           </div>
           <div>
 
