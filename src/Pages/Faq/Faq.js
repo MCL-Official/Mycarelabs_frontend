@@ -14,10 +14,6 @@ const Faq = () => {
       answer: "To schedule an appointment, book online at our booking page. You may also call our patient care team at 800-790-4550. We also offer walk-in and drive-through testing without appointment before our appointment times fill up."
     },
     {
-      question: "How much would it cost to me to do a Covid-19 test?",
-      answer: "It’s no cost to you with insurance coverage. You won’t pay any portion that your insurance doesn’t cover. If you do not have insurance and for travel testing, the cost is $250. We offer financial hardship applications as well – please ask if needed."
-    },
-    {
       question: "Can you send my results to my doctor / clinic/ hospital / other via fax or email?",
       answer: "Your provider needs to send us a HIPAA-compliant request by email, fax, or call."
     },

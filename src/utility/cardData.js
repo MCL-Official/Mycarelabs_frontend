@@ -7,7 +7,7 @@ export const cardData = [
     shortDescription:
       "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
     longDescription:
-      "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
+      "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week for patients experiencing Covid-19 symptoms: high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours.",
     timing: "8:30 AM - 5:00 PM",
     location: "Fremont, CA 94538"
   },
@@ -204,4 +204,9 @@ export const testingSolutions = [
       },
     ],
   },
+  {
+    category: "b2b",
+    route: "/b2b",
+    tests: []
+  }
 ];

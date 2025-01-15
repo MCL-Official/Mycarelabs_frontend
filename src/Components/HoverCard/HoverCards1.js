@@ -35,7 +35,7 @@ const cardData = [
       "Toxicology Testing",
       "UTI Testing (coming soon)",
     ],
-    longDescription: "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week for patients experiencing Covid-19 symptoms: high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is no-cost with most major insurances.",
+    longDescription: "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week for patients experiencing Covid-19 symptoms: high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours.",
     timing: "8:30 AM - 5:00 PM",
     location: "5500 Stewart Avenue, Suite 108, Fremont, CA 94538",
     Contact: "1-800-790-4550"
@@ -52,7 +52,7 @@ const cardData = [
     ],
     // "My Care Labs mobile testing service allows for our team to bring the lab to your doorstep or facility.",
     longDescription:
-      " Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
+      "Patients can simply schedule their mobile testing appointment online and then we dispatch our medical team to your desired location. Patients who test before 4:00pm will receive their results the same day and anytime after 4:00pm should expect their results the following business day. This service is by APPOINTMENT ONLY and operates within a 10 mile radius of Fremont.",
     timing: "10:00 AM - 3:00 PM",
     location: "Must be within a 15 mile radius of Fremont Lab",
     Contact: "1-800-790-4550"

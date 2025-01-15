@@ -23,7 +23,7 @@ function Footer() {
       shortDescription:
         "My Care Labs offers instant urgent COVID-19, RSV, and Influenza A/B PCR testing services 7 days a week.",
       longDescription:
-        "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours. Our smart combo test is $0 with any health insurance coverage.",
+        "high fever, chills, night sweats, etc. Patients receive PCR test results same-day or within 24 hours.",
     },
     {
       category: "Bay Area Mobile Testing",
