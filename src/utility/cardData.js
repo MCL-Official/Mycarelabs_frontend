@@ -204,9 +204,4 @@ export const testingSolutions = [
       },
     ],
   },
-  {
-    category: "b2b",
-    route: "/b2b",
-    tests: []
-  }
 ];

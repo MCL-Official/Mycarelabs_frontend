@@ -351,6 +351,15 @@ const PricingContent = () => {
             Management Team
 
           </Link>
+          <Link
+            to="/blog"
+            className="block text-lg text-black no-underline hover:underline"
+            onMouseEnter={() => handleMouseEnter(3)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Blogs
+
+          </Link>
           {/* {isHovered === 2 && (
             <div
               className="absolute top-0 left-full w-[250px] bg-slate-50 rounded-xl shadow-lg p-3 space-y-2"
@@ -640,7 +649,7 @@ const LINKS = [
     component: PricingContent,
   },
   {
-    text: "Blog",
-    href: "/blog",
+    text: "B2B",
+    href: "/b2b",
   },
 ];
