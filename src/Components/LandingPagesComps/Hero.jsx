@@ -86,7 +86,7 @@ const Hero = () => {
             </div>
             {/* Right Content (Form) */}
             <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg text-gray-900">
-              <h3 className="text-4xl font-bold text-center text-black">Get Started</h3>
+              <h3 className="text-4xl font-bold text-center text-black">REQUEST A CALL BACK</h3>
               <form className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Form Inputs (same as before) */}
                 <input
@@ -123,14 +123,14 @@ const Hero = () => {
                   type="submit"
                   className="col-span-1 sm:col-span-2 w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
                 >
-                  Get Started Now
+                  Submit
                 </button>
               </form>
-              <p className="mt-3 text-center text-gray-700">
+              <p className="mt-3 text-2xl text-center text-gray-700">
                 Call Us at{" "}
                 <a
                   href="tel:800-790-4550"
-                  className="text-blue-600 font-bold hover:underline no-underline"
+                  className="text-blue-600 text-2xl font-bold hover:underline no-underline"
                 >
                   800-790-4550
                 </a>
