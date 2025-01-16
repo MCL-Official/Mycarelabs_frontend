@@ -260,6 +260,7 @@ const AboutUsContent = ({ handleClick }) => {
       </div>
       <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 xl:col-span-8 xl:grid-cols-3">
         {cardData.slice(0, 6).map((card, index) => (
+          
           <div
             key={card.id}
             className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
