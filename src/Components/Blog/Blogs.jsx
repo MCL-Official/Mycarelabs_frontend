@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { FaShareAlt } from 'react-icons/fa'; // Import the share icon from react-icons
+import React, { useEffect, useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { FaShareAlt } from "react-icons/fa"; // Import the share icon from react-icons
 
 const SkeletonLoader = () => {
   return (
@@ -19,7 +19,7 @@ const SkeletonLoader = () => {
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // Use 'smooth' for smooth scrolling, 'auto' for instant scrolling
+    behavior: "smooth", // Use 'smooth' for smooth scrolling, 'auto' for instant scrolling
   });
 };
 
@@ -28,27 +28,32 @@ const Blogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(''); // New state for search term
+  const [searchTerm, setSearchTerm] = useState(""); // New state for search term
   const blogsPerPage = 9;
   const navigate = useNavigate();
 
-  const getBlogData = useCallback(async (page) => {
-    setLoading(true);
-    try {
-      const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`);
-      setBlogData(response.data.blogs);
-      setCurrentPage(response.data.currentPage);
-      setTotalPages(response.data.totalPages);
-    } catch (error) {
-      console.error('Error fetching blog data:', error);
-    } finally {
-      setLoading(false);
-    }
-  }, [blogsPerPage]);
+  const getBlogData = useCallback(
+    async (page) => {
+      setLoading(true);
+      try {
+        const response = await axios.get(
+          `https://bookingbackend.mycaretrading.com/admin/blog/working?page=${page}&limit=${blogsPerPage}`
+        );
+        setBlogData(response.data.blogs);
+        setCurrentPage(response.data.currentPage);
+        setTotalPages(response.data.totalPages);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [blogsPerPage]
+  );
 
   // Fetch initial data on component mount and whenever currentPage changes
   useEffect(() => {
-    if (searchTerm === '') {
+    if (searchTerm === "") {
       getBlogData(currentPage);
     }
   }, [currentPage, searchTerm, getBlogData]);
@@ -56,17 +61,21 @@ const Blogs = () => {
   // Handle search changes with debounce
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
-      if (searchTerm.trim() !== '') {
+      if (searchTerm.trim() !== "") {
         setLoading(true);
         axios
-          .get(`https://backend.mycaretrading.com/admin/blog/search/${encodeURIComponent(searchTerm)}`)
+          .get(
+            `https://bookingbackend.mycaretrading.com/admin/blog/search/${encodeURIComponent(
+              searchTerm
+            )}`
+          )
           .then((response) => {
             setBlogData(response.data);
             setTotalPages(1); // Reset totalPages since search results don't have pagination
             setCurrentPage(1); // Reset to the first page of search results
           })
           .catch((error) => {
-            console.error('Error searching for blogs:', error);
+            console.error("Error searching for blogs:", error);
           })
           .finally(() => {
             setLoading(false);
@@ -84,26 +93,28 @@ const Blogs = () => {
 
   const handleNavigation = async (blogId, blogName) => {
     if (!blogName) {
-      console.error('Blog name is undefined for blogId:', blogId);
+      console.error("Blog name is undefined for blogId:", blogId);
       return;
     }
     try {
-      const response = await axios.get(`https://backend.mycaretrading.com/admin/blog/${blogId}`);
+      const response = await axios.get(
+        `https://bookingbackend.mycaretrading.com/admin/blog/${blogId}`
+      );
       const blogData = response.data;
 
       const formattedBlogName = blogName
-        .replace(/[&%@!#^*+\|"'<>?]/g, '-') // Replaces special characters with hyphens
-        .replace(/\s+|\.|,|:/g, '-') // Replaces spaces, dots, commas, and colons with hyphens
-        .replace(/-+/g, '-') // Removes consecutive hyphens
-        .replace(/-+$/, '') // Removes trailing hyphens
+        .replace(/[&%@!#^*+\|"'<>?]/g, "-") // Replaces special characters with hyphens
+        .replace(/\s+|\.|,|:/g, "-") // Replaces spaces, dots, commas, and colons with hyphens
+        .replace(/-+/g, "-") // Removes consecutive hyphens
+        .replace(/-+$/, "") // Removes trailing hyphens
         .toLowerCase();
 
       const encodedBlogName = encodeURIComponent(formattedBlogName);
-      console.log('Navigating to:', `/blog/${encodedBlogName}`);
+      console.log("Navigating to:", `/blog/${encodedBlogName}`);
 
       navigate(`/blog/${encodedBlogName}`, { state: { blogData } });
     } catch (error) {
-      console.error('Error fetching blog data:', error);
+      console.error("Error fetching blog data:", error);
     }
   };
 
@@ -123,25 +134,33 @@ const Blogs = () => {
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = String(date.getFullYear()).slice(-2);
     return `${day}/${month}/${year}`;
   };
 
   const handleShare = (item) => {
-    const url = window.location.origin + `/blog/${encodeURIComponent(item.meta_title.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase())}`;
+    const url =
+      window.location.origin +
+      `/blog/${encodeURIComponent(
+        item.meta_title.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase()
+      )}`;
     const text = `Check out this blog: ${item.name}`;
 
     if (navigator.share) {
-      navigator.share({
-        title: item.name,
-        text: text,
-        url: url
-      }).catch(error => console.error('Error sharing', error));
+      navigator
+        .share({
+          title: item.name,
+          text: text,
+          url: url,
+        })
+        .catch((error) => console.error("Error sharing", error));
     } else {
-      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}%20${encodeURIComponent(url)}`;
-      window.open(whatsappUrl, '_blank');
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
+        text
+      )}%20${encodeURIComponent(url)}`;
+      window.open(whatsappUrl, "_blank");
     }
   };
 
@@ -149,12 +168,27 @@ const Blogs = () => {
     <section className="py-32">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
-          <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">Latest blog posts</h1>
-          <p className="text-gray-600">Blogs that are loved by the community. Updated every hour.</p>
+          <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">
+            Latest blog posts
+          </h1>
+          <p className="text-gray-600">
+            Blogs that are loved by the community. Updated every hour.
+          </p>
           <div className="items-center justify-center gap-3 sm:flex">
             <div className="relative">
-              <svg className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              <svg
+                className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                />
               </svg>
               <input
                 type="text"
@@ -172,44 +206,74 @@ const Blogs = () => {
 
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {loading
-            ? Array.from({ length: blogsPerPage }).map((_, index) => <SkeletonLoader key={index} />)
+            ? Array.from({ length: blogsPerPage }).map((_, index) => (
+                <SkeletonLoader key={index} />
+              ))
             : blogData?.map((item) => (
-              <li className="w-full mx-auto group sm:max-w-sm bg-white shadow-lg rounded-lg overflow-hidden" key={item._id}>
-                <a href="#" onClick={() => handleNavigation(item._id, item.meta_title)} className="block no-underline">
-                  <img src={item.banner_image} loading="lazy" alt={item.name} className="w-full h-48 object-cover object-center" />
-                  <div className="p-4">
-                    <h3 className=" text-left text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-bold mb-2">
-                      {item.name}
-                    </h3>
-                    <div className="prose text-left text-gray-600">
-                      <div dangerouslySetInnerHTML={{ __html: item.blog_short_content1 }}></div>
+                <li
+                  className="w-full mx-auto group sm:max-w-sm bg-white shadow-lg rounded-lg overflow-hidden"
+                  key={item._id}
+                >
+                  <a
+                    href="#"
+                    onClick={() => handleNavigation(item._id, item.meta_title)}
+                    className="block no-underline"
+                  >
+                    <img
+                      src={item.banner_image}
+                      loading="lazy"
+                      alt={item.name}
+                      className="w-full h-48 object-cover object-center"
+                    />
+                    <div className="p-4">
+                      <h3 className=" text-left text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-bold mb-2">
+                        {item.name}
+                      </h3>
+                      <div className="prose text-left text-gray-600">
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item.blog_short_content1,
+                          }}
+                        ></div>
+                      </div>
+                      <span className="block text-right text-indigo-600 text-sm mb-1">
+                        {formatDate(item.createdAt)}
+                      </span>
+                      <span className="block text-left text-indigo-600 text-sm mb-1">
+                        {item?.views} Views
+                      </span>
+                      <button
+                        onClick={() => handleShare(item)}
+                        className="mt-2 flex items-center text-indigo-600 hover:text-indigo-800"
+                      >
+                        <FaShareAlt className="w-5 h-5 mr-1" /> Share
+                      </button>
                     </div>
-                    <span className="block text-right text-indigo-600 text-sm mb-1">{formatDate(item.createdAt)}</span>
-                    <span className="block text-left text-indigo-600 text-sm mb-1">{item?.views}{" "}Views</span>
-                    <button
-                      onClick={() => handleShare(item)}
-                      className="mt-2 flex items-center text-indigo-600 hover:text-indigo-800"
-                    >
-                      <FaShareAlt className="w-5 h-5 mr-1" /> Share
-                    </button>
-                  </div>
-                </a>
-              </li>
-            ))}
+                  </a>
+                </li>
+              ))}
         </ul>
 
         <div className="flex justify-center mt-10">
           <button
             onClick={handlePrevPage}
             disabled={currentPage === 1}
-            className={`px-4 py-2 mx-2 ${currentPage === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500 text-white'} rounded`}
+            className={`px-4 py-2 mx-2 ${
+              currentPage === 1
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-500 text-white"
+            } rounded`}
           >
             Previous
           </button>
           <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 mx-2 ${currentPage === totalPages ? 'bg-gray-300 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500 text-white'} rounded`}
+            className={`px-4 py-2 mx-2 ${
+              currentPage === totalPages
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-indigo-600 hover:bg-indigo-500 text-white"
+            } rounded`}
           >
             Next
           </button>

@@ -55,6 +55,11 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      brightness: ['hover'], // Ensure hover is enabled for brightness
+    },
+  },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     function ({ addUtilities }) {

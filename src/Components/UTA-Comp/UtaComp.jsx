@@ -17,7 +17,7 @@ const UtaComp = () => {
 
   useEffect(() => {
     // Adjust target date for the desired timezone (e.g., IST)
-    const targetDate = new Date("2025-01-15T00:00:00Z"); // UTC date
+    const targetDate = new Date("2025-01-25T00:00:00Z"); // UTC date
     const timezoneOffset = targetDate.getTimezoneOffset() * 60000; // Offset in milliseconds
     const localTargetDate = new Date(targetDate.getTime() - timezoneOffset); // Adjust for local timezone
 
@@ -49,6 +49,15 @@ const UtaComp = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
+  const smoothScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <>
       <section
@@ -128,12 +137,12 @@ const UtaComp = () => {
 
             {/* Buttons */}
             <div className="flex flex-col items-center gap-4 justify-center mt-4">
-              <a
-                href="/uti"
+              <button
+                onClick={() => smoothScroll("contact-form")}
                 className="py-2 px-4 text-xl text-white text-center font-medium bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-500 no-underline w-72"
               >
-                Learn More & Pre-Book
-              </a>
+                Learn More
+              </button>
               <a
                 href="tel:800-790-4550"
                 className="py-2 text-3xl px-4 flex items-center gap-2 text-orange-600 font-bold border border-orange-600 rounded-lg hover:bg-orange-50 no-underline w-72 flex justify-center"
@@ -155,7 +164,7 @@ const UtaComp = () => {
             <img
               src={circle}
               alt="Circle Design"
-              className="absolute top-2/4 left-1/4 w-[400px] -translate-y-1/2 sm:w-[500px] xl:w-[800px] -z-10"
+              className="absolute top-2/4 left-[10%] w-[400px] -translate-y-1/2 sm:w-[500px] xl:w-[800px] -z-10"
             />
             {/* Lady Image */}
             <img

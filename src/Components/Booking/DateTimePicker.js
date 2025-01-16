@@ -169,7 +169,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
       if (testIdforBooking) {
         try {
           // Make the API call
-          const { data } = await axios.get(`https://backend.mycaretrading.com/admin/appointments/${testIdforBooking.testID}`);
+          const { data } = await axios.get(`https://bookingbackend.mycaretrading.com/admin/appointments/${testIdforBooking.testID}`);
 
           // Log the full API response to check the structure
           console.log("Full API response:", data);
@@ -292,15 +292,25 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     setDisabledTimes(disabledTimeSlots);
   };
 
-  const timeSlots = [
-    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
-    "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
-    "5:00 PM", "5:30 PM", "6:00 PM"
-  ];
+  // for the chirstmas holidays and limited hours for specific regions or dates
+  const isLimitedHours = ["2024-12-26", "2024-12-27", "2024-12-30", "2025-01-02", "2025-01-03"].includes(selectedDate);
+
+  const isBayAreaMobileTesting = formattedCategory === 'bay-area-mobile-testing'
+  const isRiverSideTesting = formattedCategory === 'riverside-city-mobile-testing'
+  const timeSlots = isLimitedHours
+    ? ["8:30 AM", "8:45 AM", "9:00 AM", "9:15 AM", "9:30 AM", "9:45 AM", "10:00 AM", "10:15 AM", "10:30 AM", "10:45 AM", "11:00 AM",
+      "11:15 AM", "11:30 AM", "11:45 AM", "12:00 PM", "12:15 PM", "12:30 PM", "12:45 PM", "1:00 PM", "1:15 PM", "1:30 PM", "1:45 PM", "2:00 PM", "2:15 PM", "2:15 PM", "2:30 PM", "2:45 PM", "3:00 PM"]
+    : isBayAreaMobileTesting || isRiverSideTesting
+      ? ["10:00 AM", "10:15 AM", "10:30 AM", "10:45 AM", "11:00 AM",
+        "11:15 AM", "11:30 AM", "11:45 AM", "12:00 PM", "12:15 PM", "12:30 PM", "12:45 PM", "1:00 PM", "1:15 PM", "1:30 PM", "1:45 PM", "2:00 PM", "2:15 PM", "2:15 PM", "2:30 PM", "2:45 PM", "3:00 PM"]
+      : ["8:30 AM", "8:45 AM", "9:00 AM", "9:15 AM", "9:30 AM", "9:45 AM", "10:00 AM", "10:15 AM", "10:30 AM", "10:45 AM", "11:00 AM",
+        "11:15 AM", "11:30 AM", "11:45 AM", "12:00 PM", "12:15 PM", "12:30 PM", "12:45 PM", "1:00 PM", "1:15 PM", "1:30 PM", "1:45 PM", "2:00 PM", "2:15 PM", "2:15 PM", "2:30 PM", "2:45 PM", "3:00 PM", "3:15 PM", "3:30 PM", "3:45 PM", "4:00 PM", "4:15 PM", "4:30 PM", "4:45 PM", "5:00 PM"];
+
+
 
   // ?changes to be removed 
   const handleTimeClick = (time) => {
+
     if (isTimeInPast(time) || isTimeBooked(time)) return; // Prevent selecting past or booked times
     setSelectedTime(time);
   };
@@ -311,10 +321,29 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
   };
   // const date = `${monthIndex + 1}-${day + 1}-${year}`;
 
-  const isDateSelectable = (day) => {
-    const date = new Date(year, monthIndex, day + 1);
-    return date >= new Date(new Date().setHours(0, 0, 0, 0));
+  const isDateSelectable = (dateIndex) => {
+    const date = new Date(year, monthIndex, dateIndex + 1);
+    const day = date.getDay(); // Get the day of the week (0 = Sunday, 6 = Saturday)
+    const formattedDate = moment(date).format("YYYY-MM-DD");
+
+    // Closed dates
+    const closedDates = [
+      "2024-12-24", "2024-12-25", "2024-12-31", "2025-01-01"
+    ];
+
+    // Limited working hours dates
+    const limitedWorkingDates = [
+      "2024-12-30",
+      "2025-01-02", "2025-01-03"
+    ];
+
+    if (closedDates.includes(formattedDate)) return false; // Disable closed dates
+    if (limitedWorkingDates.includes(formattedDate)) return true; // Enable dates with limited hours
+
+    // Disable weekends (if applicable)
+    return date >= new Date(new Date().setHours(0, 0, 0, 0))
   };
+
 
   const dateButtonClass = (day) => {
     // const fullDate = `${year}-${monthIndex + 1}-${day + 1}`;
@@ -416,8 +445,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     try {
 
       await Promise.all([
-        await axios.post(`https://backend.mycaretrading.com/admin/appointments/api/proxy`, CrelioData),
-        await axios.post('https://backend.mycaretrading.com/admin/appointments/', { data: encryptedData })
+        await axios.post(`https://bookingbackend.mycaretrading.com/admin/appointments/api/proxy`, CrelioData),
+        await axios.post('https://bookingbackend.mycaretrading.com/admin/appointments/', { data: encryptedData })
       ])
 
       setIsLoading(false);
@@ -491,12 +520,15 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                       <div key={index} className="text-center text-xs sm:text-lg p-1"></div>
                     ))}
                     {Array.from({ length: daysInMonth }, (_, index) => (
-                      <button key={index}
+                      <button
+                        key={index}
                         className={`text-center text-xs sm:text-lg rounded p-1 ${dateButtonClass(index)}`}
                         onClick={() => handleDateClick(index)}
-                        disabled={!isDateSelectable(index) || isWeekend(index)}>
+                        disabled={!isDateSelectable(index)}
+                      >
                         {index + 1}
                       </button>
+
                     ))}
 
                   </div>
@@ -539,7 +571,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
               <div className="text-center text-gray-700 mt-4">
                 {/* Time zone <span className="font-semibold">India Standard Time (7:34pm)</span> */}
               </div>
-              <button className="w-full enabled:bg-blue-500 disabled:bg-gray-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" disabled={selectedTime ? false : true} onClick={handleContinue}>
+              <button id="#ContinueBook" className="w-full enabled:bg-blue-500 disabled:bg-gray-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" disabled={selectedTime ? false : true} onClick={handleContinue}>
                 Continue
               </button>
             </>
@@ -690,7 +722,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   </div>
                 )}
               </div>
-              <button type="button" onClick={handleSubmit} className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} id='#BookAppnt' className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
               </button>
             </form>

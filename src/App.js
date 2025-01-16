@@ -65,6 +65,7 @@ import Thankyou from "./Pages/Thankyou.js";
 import AboutCompany from "./Pages/Company/AboutCompany.js";
 import Banner from "./Components/Navbar/Banner.js";
 import Bannerreact from "./Components/Navbar/Bannerreact.js";
+import B2b from "./Pages/LandingPagesB2b/B2b.jsx";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -80,16 +81,17 @@ function App() {
   return (
     <div className="App">
       <Router >
-      <PageViewTracker />
+        <PageViewTracker />
         {/* <Navbar /> */}
         {/* <Exampl */}
-         {/* <Banner/> */}
-        <Example/>
+        {/* <Banner/> */}
+        <Example />
         {/* <Navbar2/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/uti" element={<Uta />} />
+          <Route path="/b2b" element={<B2b />} />
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
           <Route path="/success" element={<SuccessPage />} />
@@ -97,54 +99,54 @@ function App() {
           <Route path="/careers" element={<JobListings />} />
           <Route path="/careers/:id" element={<JobDetail />} />
           <Route path="/Apply" element={<ApplyPage />} />
-          <Route path="/faq" element={<Faq/>} />
-          <Route path="/riverside-mobile-testing-thank-you" element={<Thankyou/>} />
-          <Route path="/bay-area-testing-thank-you" element={<Thankyou/>} />
-          <Route path="/fremont-laboratory-thank-you" element={<Thankyou/>} />
-          <Route path="/california-mobile-testing-thank-you" element={<Thankyou/>} />
-          <Route path="/riverside-gurdwara-thank-you" element={<Thankyou/>} />
-          <Route path="/athome-testing-thank-you" element={<Thankyou/>} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/riverside-mobile-testing-thank-you" element={<Thankyou />} />
+          <Route path="/bay-area-testing-thank-you" element={<Thankyou />} />
+          <Route path="/fremont-laboratory-thank-you" element={<Thankyou />} />
+          <Route path="/california-mobile-testing-thank-you" element={<Thankyou />} />
+          <Route path="/riverside-gurdwara-thank-you" element={<Thankyou />} />
+          <Route path="/athome-testing-thank-you" element={<Thankyou />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion/:id" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
-          <Route path="/covid-test-locations" element={<DrawerButton/>} />
+          <Route path="/covid-test-locations" element={<DrawerButton />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:id" element={<ReadBlog />} />
-          <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious/>} />
-          <Route path="/travel-testing/" element={<Travel/>} />
-          <Route path="/covid-rt-pcr-home-test-kit/" element={<Covid19/>} />
-          <Route path="/group-covid-testing/" element={<TestingGroup/>} />
-          <Route path="/testing-for-schools/" element={<TestingSchool/>} />
-          <Route path="/testing-for-nursing-homes/" element={<TestingNurcing/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/" element={<Solution/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" element={<Anemia/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" element={<Basic/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" element={<Liver/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" element={<Renal/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP/>} />
-          <Route path="/testing-solutions/wellness-testing-solutions/lipid-profile-test/" element={<Lipid/>} />
-          <Route path="/testing-solutions/oncology-testing-solutions/" element={<Oncology/>} />
-          <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology/>} />
-          <Route path="/creatine-kinase" element={<Index/>} />
-          <Route path="/crp-tests" element={<Index1/>} />
-          <Route path="/free-psa-testing" element={<Index2/>} />
-          <Route path="/magnesium-test-in-blood" element={<Index3/>} />
-          <Route path="/anticonvulsant-test-services" element={<Index4/>} />
-          <Route path="/vitamin-d-test-services" element={<Index5/>} />
-          <Route path="/total-psa-test-services" element={<Index6/>} />
-          <Route path="/about" element={<Team/>} />
-          <Route path="/management-team" element={<AboutCompany/>} />
-          <Route path="/contact" element={<SlideInAuth/>}/>
-          <Route path="/testing-solutions" element={<FeatureComponent/>}/>
-          <Route path="/testingLoc" element={<HoverCards/>}/>
-          <Route path="loc" element={<DateTimePicker/>}/>
+          <Route path="/testing-solutions/infectious-disease-testing-solutions" element={<Infectious />} />
+          <Route path="/travel-testing/" element={<Travel />} />
+          <Route path="/covid-rt-pcr-home-test-kit/" element={<Covid19 />} />
+          <Route path="/group-covid-testing/" element={<TestingGroup />} />
+          <Route path="/testing-for-schools/" element={<TestingSchool />} />
+          <Route path="/testing-for-nursing-homes/" element={<TestingNurcing />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/" element={<Solution />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/anemia-profile-test/" element={<Anemia />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/basic-metabolic-panel/" element={<Basic />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/liver-function-panel-tests/" element={<Liver />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/renal-function-panel-test/" element={<Renal />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/thyroid-function-panel-test/" element={<Thyroid />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test/" element={<CMP />} />
+          <Route path="/testing-solutions/wellness-testing-solutions/lipid-profile-test/" element={<Lipid />} />
+          <Route path="/testing-solutions/oncology-testing-solutions/" element={<Oncology />} />
+          <Route path="/testing-solutions/toxicology-testing-solutions/" element={<Toxicology />} />
+          <Route path="/creatine-kinase" element={<Index />} />
+          <Route path="/crp-tests" element={<Index1 />} />
+          <Route path="/free-psa-testing" element={<Index2 />} />
+          <Route path="/magnesium-test-in-blood" element={<Index3 />} />
+          <Route path="/anticonvulsant-test-services" element={<Index4 />} />
+          <Route path="/vitamin-d-test-services" element={<Index5 />} />
+          <Route path="/total-psa-test-services" element={<Index6 />} />
+          <Route path="/about" element={<Team />} />
+          <Route path="/management-team" element={<AboutCompany />} />
+          <Route path="/contact" element={<SlideInAuth />} />
+          <Route path="/testing-solutions" element={<FeatureComponent />} />
+          <Route path="/testingLoc" element={<HoverCards />} />
+          <Route path="loc" element={<DateTimePicker />} />
           {/* <Route path="/booking" element={<DateTimePicker />} /> */}
           {/* <Route path="/appointment" element={<Appointment />} /> */}
-          <Route path="*" element={<NotFound/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      <Footer/>
+        <Footer />
       </Router>
     </div>
   );

@@ -8,20 +8,22 @@ import TabsFeatures1 from '../../../Components/SOLUTION/Wellness-testing/TabsFea
 import GetStartedCard from '../../../Components/GetStartedCard/Getstarted'
 import FaqWellness from '../../Faq/FaqWellness'
 import FaqWellness2 from '../../Faq/FaqWellness2'
+import HoverCards1 from '../../../Components/HoverCard/HoverCards1'
 
 const Solution = () => {
   return (
     <div>
-           <br></br>
-           <br></br>
-   
-<ShuffleHero1/>
-{/* <DateTimePicker/> */}
-  <TabsFeatures1/>
-<FaqWellness2/>
-<FaqWellness/>
-<BlogPostCarousel/>
-<GetStartedCard/>
+      <br></br>
+      <br></br>
+
+      <ShuffleHero1 />
+      {/* <DateTimePicker/> */}
+      <HoverCards1 />
+      <TabsFeatures1 />
+      <FaqWellness2 />
+      <FaqWellness />
+      <BlogPostCarousel />
+      <GetStartedCard />
       {/* ddsdsdw */}
     </div>
   )
