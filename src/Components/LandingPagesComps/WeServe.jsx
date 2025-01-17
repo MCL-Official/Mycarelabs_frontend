@@ -73,9 +73,9 @@ const WeServe = () => {
           Our flexible and scalable solutions cater to healthcare providers,
           educational institutions, and treatment centers, ensuring:
         </p>
-        <p className="mt-2 text-lg text-center text-blue-600">
-          My Care Labs proudly partners with:
-        </p>
+        <h2 className="mt-2 text-2xl font-bold  text-center text-black">
+          <span className="text-[#7597e6]">My Care Labs</span> proudly partners with:
+        </h2>
 
         <div className="mt-8 relative">
           <Slider {...settings}>

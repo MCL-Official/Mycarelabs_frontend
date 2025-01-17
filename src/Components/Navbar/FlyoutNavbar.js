@@ -464,6 +464,45 @@ const PricingContent1 = () => {
   );
 };
 
+const LandingPages = () => {
+  const [isHovered, setIsHovered] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setIsHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(null);
+  };
+
+  return (
+    <div className="w-full bg-slate-50 p-6 shadow-none lg:w-[250px] lg:shadow-xl rounded-xl">
+      <div className="grid grid-cols-2 lg:grid-cols-1">
+        <div className="mb-3 space-y-3 relative">
+          {/* Main Links */}
+          <Link
+            to="/industries/overview"
+            className="block text-lg text-black no-underline hover:underline "
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Overview
+          </Link>
+          
+          <Link
+            to="/industries/assisted-living"
+            className="block text-lg text-black no-underline hover:underline"
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Assisted Living
+          </Link>
+    
+        </div>
+      </div>
+    </div>
+  );
+};
 
 
 const CareersContent = ({ handleClick }) => {
@@ -651,6 +690,7 @@ const LINKS = [
   },
   {
     text: "B2B",
-    href: "/b2b",
+    href: "/industries/overview",
+    component:LandingPages
   },
 ];

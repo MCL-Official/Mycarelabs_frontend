@@ -66,6 +66,7 @@ import AboutCompany from "./Pages/Company/AboutCompany.js";
 import Banner from "./Components/Navbar/Banner.js";
 import Bannerreact from "./Components/Navbar/Bannerreact.js";
 import B2b from "./Pages/LandingPagesB2b/B2b.jsx";
+import AssitedLiving from "./Pages/LandingPagesB2b/AssitedLiving.jsx";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -91,7 +92,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/uti" element={<Uta />} />
-          <Route path="/b2b" element={<B2b />} />
+          <Route path="/industries/overview" element={<B2b />} />
+          <Route path="/industries/assisted-living" element={<AssitedLiving/>}/>
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
           <Route path="/success" element={<SuccessPage />} />

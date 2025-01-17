@@ -1,6 +1,6 @@
 import card1 from "../../Assets/B2b_covidBack.webp";
 
-const Hero = () => {
+const Hero = ({title , subTitle , points}) => {
   return (
     <div>
       {/* Hero Section */}
@@ -20,8 +20,8 @@ const Hero = () => {
           <div className="text-center text-white mb-12">
             {" "}
             {/* Centered Heading */}
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Partner with My Care Labs
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              {title}
             </h1>
           </div>
           {/* Added py-20 for vertical padding */}
@@ -33,59 +33,35 @@ const Hero = () => {
               <div className="max-w-md mx-auto lg:mx-0">
                 {" "}
                 {/* Added max-w-md and mx-auto for centering on smaller screens */}
-                <p className="my-4 text-left text-xl md:text-2xl pl-8">
-                  What Sets Us Apart in Diagnostic Excellence
+                <p className="my-4 text-left text-[#ffe26d] text-xl md:text-2xl pl-8">
+                  {subTitle}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-left text-xl md:text-2xl ">
+                  {
+                    points.map((p , idx) => (
+                      <li key={idx} className="flex items-center text-left text-xl md:text-2xl ">
                     <span className="text-white font-bold text-2xl mr-2">
                       ●
                     </span>
-                    Mobile Phlebotomy
+                    {p}
                   </li>
-                  <li className="flex items-center text-left text-xl md:text-2xl">
-                    <span className="text-white font-bold text-2xl mr-2">
-                    ●
-                    </span>
-                    48-Hour Turnaround Time on UTI Testing
-                  </li>
-                  <li className="flex items-center text-left text-xl md:text-2xl">
-                    <span className="text-white font-bold text-2xl mr-2">
-                    ●
-                    </span>
-                    Labs Open Monday to Friday
-                  </li>
-                  <li className="flex items-center text-left text-xl md:text-2xl">
-                    <span className="text-white font-bold text-2xl mr-2">
-                    ●
-                    </span>
-                    Accurate & Reliable Results
-                  </li>
+                    ))
+                  }
                 </ul>
-                {/* <h3 className="text-xl font-bold mt-8">
-                  Proudly Partnered With
-                </h3> 
-                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                  {" "}
-                  
-                  <img
-                    src="calredie-logo.png"
-                    alt="CalREDIE"
-                    className="h-12"
-                  />
-                  <img src="cdph-logo.png" alt="CDPH" className="h-12" />
-                  <img
-                    src="california-covid-task-force-logo.png"
-                    alt="California COVID Task Force"
-                    className="h-12"
-                  />
-                  <img src="cdc-logo.png" alt="CDC" className="h-12" />
-                  <img src="clia-logo.png" alt="CLIA" className="h-12" />
-                </div> */}
               </div>
             </div>
             {/* Right Content (Form) */}
-            <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg text-gray-900">
+            <ContactFormHero/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ContactFormHero = () => {
+  return(
+    <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg text-gray-900">
               <h3 className="text-4xl font-bold text-center text-black">REQUEST A CALL BACK</h3>
               <form className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Form Inputs (same as before) */}
@@ -121,26 +97,22 @@ const Hero = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="col-span-1 sm:col-span-2 w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+                  className="col-span-1 sm:col-span-2 w-full py-2 bg-blue-600 text-2xl text-white font-semibold rounded-lg hover:bg-blue-700"
                 >
                   Submit
                 </button>
               </form>
-              <p className="mt-3 text-2xl text-center text-gray-700">
+              <p className="mt-3 text-3xl text-center text-gray-700">
                 Call Us at{" "}
                 <a
                   href="tel:800-790-4550"
-                  className="text-blue-600 text-2xl font-bold hover:underline no-underline"
+                  className="text-blue-600 text-3xl font-bold hover:underline no-underline"
                 >
                   800-790-4550
                 </a>
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )
+}
 
 export default Hero;

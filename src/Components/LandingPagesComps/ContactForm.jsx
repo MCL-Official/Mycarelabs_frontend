@@ -11,7 +11,7 @@ const ContactForm = () => {
     <section className="pt-16 pb-24 relative flex items-center justify-center overflow-hidden">
 
       {/* Form container with rounded corners and shadow */}
-      <div className="bg-sky-600 rounded-lg shadow-lg p-8 text-gray-900 flex flex-col sm:flex-row gap-8 w-full max-w-5xl">
+      <div className="bg-gradient-to-r from-[#7597e6] to-[#5050dd] rounded-lg shadow-lg p-8 text-gray-900 flex flex-col sm:flex-row gap-8 w-full max-w-5xl">
       <div className="w-full sm:w-1/2 rounded-lg bg-white">
           <div className="p-6  rounded-lg"> {/* Added padding and background to image container */}
             <div className="text-black"> {/* Container for text content */}
@@ -34,7 +34,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:w-1/2 bg-sky-600">
+        <div className="flex flex-col sm:w-1/2 bg-transparent">
           <h3 className="text-4xl font-semibold text-center text-white mb-4 sm:mb-0">REQUEST A CALL BACK</h3>
 
           <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -71,15 +71,15 @@ const ContactForm = () => {
             ></textarea>
             <button
               type="submit"
-              className="col-span-1 sm:col-span-2 w-full py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700"
+              className="col-span-1 sm:col-span-2 w-full text-2xl py-2 bg-[#ea580c] text-white font-semibold rounded-lg hover:[#ea580c]"
             >
-              Get Started Now
+              Submit
             </button>
           </form>
 
           <p className="mt-3 text-center text-2xl text-white">
             Call Us at{' '}
-            <a href="tel:800-790-4550" className="text-orange-600 font-bold text-2xl hover:underline no-underline">
+            <a href="tel:800-790-4550" className="text-[#ffe26d] font-bold text-2xl hover:underline no-underline">
               800-790-4550
             </a>
           </p>
