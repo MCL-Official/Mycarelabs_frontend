@@ -1,24 +1,8 @@
 import React from 'react'
-import ls1 from "../../Assets/ls1.webp";
-import ls2 from "../../Assets/ls2.webp";
-import ls3 from "../../Assets/ls3.webp";
 
-const HealthSolutions2 = () => {
-    const feature = [
-        {
-          img:ls1,
-          title:"On-site and Mobile Phlebotomy Services"
-        },
-        {
-          img:ls2,
-          title:"Routine Testing Panels for Chronic Conditions"
-        },
-        {
-          img:ls3,
-          title:"Wellness and Preventive Care Diagnostics"
-        },
+
+const HealthSolutions2 = ({features}) => {
     
-      ]
       return (
         <section className="py-16 bg-gray-50 px-[5rem] sm:px-[0.5rem]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +15,7 @@ const HealthSolutions2 = () => {
     
             <div  className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
     
-            {feature.map((f,idx) => (
+            {features.map((f,idx) => (
               <div key={idx} className="relative bg-white rounded-lg drop-shadow-lg overflow-hidden">
                 <img
                   src={f.img}

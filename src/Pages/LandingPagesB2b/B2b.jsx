@@ -8,7 +8,7 @@ import ContactForm from "../../Components/LandingPagesComps/ContactForm";
 const B2b = () => {
   const points = [
     "Mobile Phlebotomy",
-    "48-Hour Turnaround Time on UTI Testing",
+    "24-48 Hour Turnaround Time on UTI Testing",
     "Labs Open Monday to Friday",
    "Accurate & Reliable Results "    
   ]

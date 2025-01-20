@@ -310,13 +310,13 @@ const PricingContent = () => {
   };
 
   return (
-    <div className="w-full bg-slate-50 p-6 shadow-none lg:w-[250px] lg:shadow-xl rounded-xl">
-      <div className="grid grid-cols-2 lg:grid-cols-1">
+    <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg">
+      <div className="grid grid-cols-2 lg:grid-cols-1 mt-2">
         <div className="mb-3 space-y-3 relative">
           {/* Main Links */}
           <Link
             to="/about"
-            className="block text-lg text-black no-underline hover:underline "
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 lock text-lg text-black no-underline hover:underline "
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
           >
@@ -345,7 +345,7 @@ const PricingContent = () => {
 
           <Link
             to="/management-team"
-            className="block text-lg text-black no-underline hover:underline"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 "
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
           >
@@ -354,7 +354,7 @@ const PricingContent = () => {
           </Link>
           <Link
             to="/blog"
-            className="block text-lg text-black no-underline hover:underline"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 "
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}
           >
@@ -476,13 +476,13 @@ const LandingPages = () => {
   };
 
   return (
-    <div className="w-full bg-slate-50 p-6 shadow-none lg:w-[250px] lg:shadow-xl rounded-xl">
-      <div className="grid grid-cols-2 lg:grid-cols-1">
+    <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg">
+      <div className="grid grid-cols-2 mt-2 lg:grid-cols-1">
         <div className="mb-3 space-y-3 relative">
           {/* Main Links */}
           <Link
             to="/industries/overview"
-            className="block text-lg text-black no-underline hover:underline "
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
           >
@@ -491,11 +491,29 @@ const LandingPages = () => {
           
           <Link
             to="/industries/assisted-living"
-            className="block text-lg text-black no-underline hover:underline"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
           >
             Assisted Living
+          </Link>
+
+          <Link
+            to="/industries/home-health-hospices"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(3)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Home Health & Hospice Lab Services
+          </Link>
+
+          <Link
+            to="/industries/skilled-nursing"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(4)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Skilled Nursing Lab Services
           </Link>
     
         </div>
