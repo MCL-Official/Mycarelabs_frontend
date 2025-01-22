@@ -35,7 +35,7 @@ const PhysicianAndHospital = () => {
         <div>
           <Hero heroImg={heroImg} title={"Physician & Hospital Lab Services"} subTitle={"Advanced Diagnostics for Medical Professionals"} points={points}/>
           <ServiceSection />
-          <HealthSolutions2 features={features}/>
+          <HealthSolutions2 features={features} title={"Physicians & Hospitals"}/>
           <WeServe/>
           <ContactForm/>
         </div>

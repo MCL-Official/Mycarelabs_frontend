@@ -38,9 +38,9 @@ const MoreIndustries = () => {
             ]
       return (
         <div>
-          <Hero heroImg={heroImg} title={"Lab Services for Schools, Treatment Centers& More"} subTitle={"Diagnostics Tailored to Your Industry Needs"} points={points}/>
+          <Hero heroImg={heroImg} title={"Lab Services for Schools, Treatment Centers & More"} subTitle={"Diagnostics Tailored to Your Industry Needs"} points={points}/>
           <ServiceSection />
-          <HealthSolutions2 features={features}/>
+          <HealthSolutions2 features={features} title={"Your Industry"}/>
           <WeServe/>
           <ContactForm/>
         </div>

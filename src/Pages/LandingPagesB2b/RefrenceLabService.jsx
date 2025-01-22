@@ -35,7 +35,7 @@ const RefrenceLabService = () => {
         <div>
           <Hero heroImg={heroImg} title={"Reference Lab Services"} subTitle={"Partnering for Advanced Diagnostic Capabilities"} points={points}/>
           <ServiceSection />
-          <HealthSolutions2 features={features}/>
+          <HealthSolutions2 features={features} title={"Refrence lab"}/>
           <WeServe/>
           <ContactForm/>
         </div>

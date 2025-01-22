@@ -35,7 +35,7 @@ const HealthAndHospice = () => {
         <div>
           <Hero heroImg={heroImg} title={"Home Health & Hospice Lab Services"} subTitle={"Compassionate Diagnostics for Home Health and Hospice Care"} points={points}/>
           <ServiceSection />
-          <HealthSolutions2 features={features}/>
+          <HealthSolutions2 features={features} title={"Home Health & Hospices"}/>
           <WeServe/>
           <ContactForm/>
         </div>

@@ -76,7 +76,7 @@ const Logo = ({ color = "white" }) => {
     <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
         src={logo1}
-        className="max-w-[20rem] max-h-[10rem]" // Adjusted the size
+        className="max-w-[15rem] max-h-[5rem] md:max-w-[20rem] md:max-h-[10rem]" // Adjusted the size
         alt="My care labs"
       />
     </Link>
@@ -154,21 +154,202 @@ const CTAs = ({ isHome, scrolled }) => {
     // navigate()https://patient-us.creliohealth.com/patient/login
     window.location.href = "https://patient-us.creliohealth.com/patient/login"
   }
+  const dataForSearch = [
+    {
+      "id": 1,
+      "text": "Assisted Living",
+      "href": "/industries/assisted-living"
+    }, {
+      "id": 2,
+      "text": "Home Health & Hospice Lab Services",
+      "href": "/industries/home-health-hospices"
+    }, {
+      "id": 3,
+      "text": "Skilled Nursing Lab Services",
+      "href": "/industries/skilled-nursing"
+    }, {
+      "id": 4,
+      "text": "Physician Offices & Hospitals",
+      "href": "/industries/physician-offices-hospitals"
+    },
+     {
+      "id": 5,
+      "text": "Reference Lab Services",
+      "href": "/industries/reference-labs"
+    },
+     {
+      "id": 6,
+      "text": "More Industries",
+      "href": "/industries/more"
+    },
+     {
+      "id": 7,
+      "text": "UTI Testing Solutions",
+      "href": "/uti"
+    },
+     {
+      "id": 8,
+      "text": "Infectious Disease Testing Solutions",
+      "href": "/testing-solutions/infectious-disease-testing-solutions"
+    },
+     {
+      "id": 9,
+      "text": "Wellness Testing Solutionss",
+      "href": "/testing-solutions/wellness-testing-solutions/"
+    },
+     {
+      "id": 10,
+      "text": "Toxicology Testing Solutions",
+      "href": "/testing-solutions/toxicology-testing-solutions"
+    },
+     {
+      "id": 11,
+      "text": "Oncology Testing Solutions",
+      "href": "/testing-solutions/oncology-testing-solutions"
+    },
+     {
+      "id": 12,
+      "text": "Testing for Groups",
+      "href": "/group-covid-testing"
+    },
+     {
+      "id": 13,
+      "text": "Testing for Schools",
+      "href": "/testing-for-schools"
+    },
+     {
+      "id": 14,
+      "text": "Testing for Nursing Homes",
+      "href": "/testing-for-nursing-homes"
+    },
+     {
+      "id": 15,
+      "text": "At-Home COVID-19 PCR Test Kit",
+      "href": "/covid-rt-pcr-home-test-kit"
+    },
+     {
+      "id": 16,
+      "text": "Anemia Profile Test",
+      "href": "/testing-solutions/wellness-testing-solutions/anemia-profile-test"
+    },
+     {
+      "id": 17,
+      "text": "Basic Metabolic Panel",
+      "href": "/testing-solutions/wellness-testing-solutions/basic-metabolic-panel"
+    },
+     {
+      "id": 18,
+      "text": "Liver Function Panel Tests",
+      "href": "/testing-solutions/wellness-testing-solutions/liver-function-panel-tests"
+    },
+     {
+      "id": 19,
+      "text": "Renal Function Panel Test",
+      "href": "/testing-solutions/wellness-testing-solutions/renal-function-panel-test"
+    },
+     {
+      "id": 20,
+      "text": "Thyroid Function Panel Test",
+      "href": "testing-solutions/wellness-testing-solutions/thyroid-function-panel-test"
+    },
+     {
+      "id": 21,
+      "text": "Comprehensive Metabolic Panel (CMP) Test",
+      "href": "testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test"
+    },
+     {
+      "id": 22,
+      "text": "Creatine Kinase",
+      "href": "/creatine-kinase"
+    },
+     {
+      "id": 23,
+      "text": "CRP Tests",
+      "href": "/crp-tests"
+    },
+     {
+      "id": 24,
+      "text": "Free Psa Testing",
+      "href": "/free-psa-testing"
+    },
+     {
+      "id": 25,
+      "text": "Magnesium Test in Blood",
+      "href": "/magnesium-test-in-blood"
+    },
+     {
+      "id": 26,
+      "text": "Anticonvulsant Test Services",
+      "href": "/anticonvulsant-test-services"
+    },
+     {
+      "id": 27,
+      "text": "Vitamin D Test Services",
+      "href": "/vitamin-d-test-services"
+    },
+     {
+      "id": 28,
+      "text": "Total PSA Test Services",
+      "href": "/total-psa-test-services"
+    },
+  ]
+  const [searchText, setSearchText] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchText(value);
+
+    // Filter the list based on the search input
+    const filtered = dataForSearch.filter((item) =>
+      item.text.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredResults(filtered);
+  };
+
+  const handleItemClick = (href) => {
+    // Redirect the user to the item's link
+    window.location.href = href;
+  };
   return (
     <div className="flex items-center gap-3">
 
-      <div className="flex items-center justify-between gap-3 w-[16rem] rounded-sm border-2 bg-[#e6e5e1] px-4 py-2 shadow-sm">
-        {/* Search Icon */}
-        <img className="w-4 h-4" src={serachIcon} alt="search_icon" />
+      <div className="relative">
 
-        {/* Search Input */}
-        <input
-          type="text"
-          placeholder="Search"
-          className="flex-grow bg-transparent text-gray-800 text-left placeholder-gray-500 focus:outline-none"
-        />
+        <div className=" flex items-center justify-between gap-3 w-[16rem] rounded-sm border-2 bg-[#e6e5e1] px-4 py-2 shadow-sm">
+          {/* Search Icon */}
+          <img className="w-4 h-4" src={serachIcon} alt="search_icon" />
+
+          {/* Search Input */}
+          <input
+            type="text"
+            placeholder="Search"
+            value={searchText}
+          onChange={handleSearchChange}
+            className="flex-grow bg-transparent text-gray-800 text-left placeholder-gray-500 focus:outline-none"
+          />
+        </div>
+        {/* Search Results Dropdown */}
+        {searchText && (
+          <div className="absolute w-full bg-[#e6e5e1] shadow-md text-left mt-1 rounded-sm z-10">
+            <ul>
+              {filteredResults.length > 0 ? (
+                filteredResults.map((item) => (
+                  <li
+                    key={item.id}
+                    onClick={() => handleItemClick(item.href)}
+                    className="p-2 cursor-pointer hover:bg-gray-300 text-black"
+                  >
+                    {item.text}
+                  </li>
+                ))
+              ) : (
+                <li className="p-2 text-black">No results found</li>
+              )}
+            </ul>
+          </div>
+        )}
       </div>
-
 
 
       <button

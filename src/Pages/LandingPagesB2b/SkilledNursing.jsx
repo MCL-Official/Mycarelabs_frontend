@@ -40,7 +40,7 @@ const SkilledNursing = () => {
         points={points}
       />
       <ServiceSection />
-      <HealthSolutions2 features={features} />
+      <HealthSolutions2 features={features} title={"Skilled Nursing"}/>
       <WeServe />
       <ContactForm />
     </div>

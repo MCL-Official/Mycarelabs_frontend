@@ -36,7 +36,7 @@ const AssitedLiving = () => {
     <div>
       <Hero heroImg={heroImg} title={"Assisted Living Lab Services"} subTitle={"Tailored Diagnostics for Assisted Living Communities:"} points={points}/>
       <ServiceSection />
-      <HealthSolutions2 features={features}/>
+      <HealthSolutions2 features={features} title={"Assisted Living"}/>
       <WeServe/>
       <ContactForm/>
     </div>

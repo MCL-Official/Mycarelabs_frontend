@@ -36,7 +36,7 @@ export function Hero() {
                             </div>
                         </h2>
                         <p className="text-lg">
-                            My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B. Get ready to relax and explore on your vacation with same-day or 24-hour turaround at our Fremont lab and at public pop-ups throughout California.                        </p>
+                            My Care Labs offers quick, hassle-free, and accurate Travel Testing for COVID-19, RSV, and Influenza A/B. Get ready to relax and explore on your vacation with same-day or 24-hour turnaround at our Fremont lab and at public pop-ups throughout California.                        </p>
                         <div className="flex justify-center items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <Link
                                 to="/covid-test-locations"
