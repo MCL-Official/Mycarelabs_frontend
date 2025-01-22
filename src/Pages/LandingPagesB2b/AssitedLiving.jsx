@@ -4,9 +4,10 @@ import ServiceSection from "../../Components/LandingPagesComps/ServiceSection";
 import HealthSolutions2 from "../../Components/LandingPagesComps/HealthSolutions2";
 import WeServe from "../../Components/LandingPagesComps/WeServe";
 import ContactForm from "../../Components/LandingPagesComps/ContactForm";
-import ls1 from "../../Assets/ls1.webp";
-import ls2 from "../../Assets/ls2.webp";
-import ls3 from "../../Assets/ls3.webp";
+import ls1 from "../../Assets/B2B IMAGES/ASSISTED LIVING/Assisted living 1.webp";
+import ls2 from "../../Assets/B2B IMAGES/ASSISTED LIVING/Assisted living 2.webp";
+import ls3 from "../../Assets/B2B IMAGES/ASSISTED LIVING/Assisted living 3.webp";
+import heroImg from "../../Assets/B2B IMAGES/ASSISTED LIVING/Assisted living.webp"
 
 const AssitedLiving = () => {
 
@@ -33,7 +34,7 @@ const AssitedLiving = () => {
     ]
   return (
     <div>
-      <Hero title={"Assisted Living Lab Services"} subTitle={"Tailored Diagnostics for Assisted Living Communities:"} points={points}/>
+      <Hero heroImg={heroImg} title={"Assisted Living Lab Services"} subTitle={"Tailored Diagnostics for Assisted Living Communities:"} points={points}/>
       <ServiceSection />
       <HealthSolutions2 features={features}/>
       <WeServe/>

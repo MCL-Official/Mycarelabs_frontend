@@ -4,6 +4,7 @@ import ServiceSection from "../../Components/LandingPagesComps/ServiceSection";
 import HealthSolutions from "../../Components/LandingPagesComps/HealthSoultions";
 import WeServe from "../../Components/LandingPagesComps/WeServe";
 import ContactForm from "../../Components/LandingPagesComps/ContactForm";
+import card1 from "../../Assets/B2b_covidBack.webp";
 
 const B2b = () => {
   const points = [
@@ -14,7 +15,7 @@ const B2b = () => {
   ]
   return (
     <div>
-      <Hero title={"Partner with My Care Labs"} subTitle={"What Sets Us Apart in Diagnostic Excellence:"} points={points}/>
+      <Hero title={"Partner with My Care Labs"} subTitle={"What Sets Us Apart in Diagnostic Excellence:"} points={points} heroImg={card1}/>
       <ServiceSection />
       <HealthSolutions/>
       <WeServe/>

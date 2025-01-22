@@ -4,9 +4,10 @@ import ServiceSection from "../../Components/LandingPagesComps/ServiceSection";
 import HealthSolutions2 from "../../Components/LandingPagesComps/HealthSolutions2";
 import WeServe from "../../Components/LandingPagesComps/WeServe";
 import ContactForm from "../../Components/LandingPagesComps/ContactForm";
-import ls1 from "../../Assets/ls1.webp";
-import ls2 from "../../Assets/ls2.webp";
-import ls3 from "../../Assets/ls3.webp";
+import ls1 from "../../Assets/B2B IMAGES/Home Health & Hospices Page/Home Health & Hospices Page 1.webp";
+import ls2 from "../../Assets/B2B IMAGES/Home Health & Hospices Page/Home Health & Hospices Page 2.webp";
+import ls3 from "../../Assets/B2B IMAGES/Home Health & Hospices Page/Home Health & Hospices Page 3.webp";
+import heroImg from "../../Assets/B2B IMAGES/Home Health & Hospices Page/Home Health & Hospices Page.webp"
 
 const HealthAndHospice = () => {
 
@@ -32,7 +33,7 @@ const HealthAndHospice = () => {
             ]
       return (
         <div>
-          <Hero title={"Home Health & Hospice Lab Services"} subTitle={"Compassionate Diagnostics for Home Health and Hospice Care"} points={points}/>
+          <Hero heroImg={heroImg} title={"Home Health & Hospice Lab Services"} subTitle={"Compassionate Diagnostics for Home Health and Hospice Care"} points={points}/>
           <ServiceSection />
           <HealthSolutions2 features={features}/>
           <WeServe/>

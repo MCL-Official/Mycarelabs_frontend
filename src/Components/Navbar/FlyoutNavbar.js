@@ -11,6 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone, faStar, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import logoCh from "../../Assets/mycare_logo_ch.png"
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import serachIcon from "../../Assets/search-svgrepo-com.svg"
 
 const Example = () => {
   return (
@@ -56,9 +58,9 @@ const FlyoutNav = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
-        <div className="hidden gap-6 lg:flex items-center justify-between">
-          <Links isHome={isHome} scrolled={scrolled} />
+        <div className="hidden gap-3 lg:flex lg:flex-col items-end py-2">
           <CTAs isHome={isHome} scrolled={scrolled} />
+          <Links isHome={isHome} scrolled={scrolled} />
           {/* <a href="tel:+1-800-790-4550" className="mr-3 self-center text-black">
             <FontAwesomeIcon icon={faPhone} size="xl" />
           </a> */}
@@ -74,7 +76,7 @@ const Logo = ({ color = "white" }) => {
     <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
         src={logo1}
-        className="max-w-[250px] max-h-[75px]" // Adjusted the size
+        className="max-w-[20rem] max-h-[10rem]" // Adjusted the size
         alt="My care labs"
       />
     </Link>
@@ -83,7 +85,7 @@ const Logo = ({ color = "white" }) => {
 
 const Links = ({ isHome, scrolled }) => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-10">
       {LINKS.map((l) => (
         <NavLink
           key={l.text}
@@ -154,6 +156,21 @@ const CTAs = ({ isHome, scrolled }) => {
   }
   return (
     <div className="flex items-center gap-3">
+
+      <div className="flex items-center justify-between gap-3 w-[16rem] rounded-sm border-2 bg-[#e6e5e1] px-4 py-2 shadow-sm">
+        {/* Search Icon */}
+        <img className="w-4 h-4" src={serachIcon} alt="search_icon" />
+
+        {/* Search Input */}
+        <input
+          type="text"
+          placeholder="Search"
+          className="flex-grow bg-transparent text-gray-800 text-left placeholder-gray-500 focus:outline-none"
+        />
+      </div>
+
+
+
       <button
         className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 font-semibold transition-colors ${isHome
           ? scrolled
@@ -260,7 +277,7 @@ const AboutUsContent = ({ handleClick }) => {
       </div>
       <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 xl:col-span-8 xl:grid-cols-3">
         {cardData.slice(0, 6).map((card, index) => (
-          
+
           <div
             key={card.id}
             className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
@@ -488,7 +505,7 @@ const LandingPages = () => {
           >
             Overview
           </Link>
-          
+
           <Link
             to="/industries/assisted-living"
             className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
@@ -515,7 +532,31 @@ const LandingPages = () => {
           >
             Skilled Nursing Lab Services
           </Link>
-    
+          <Link
+            to="/industries/physician-offices-hospitals"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(5)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Physician Offices & Hospitals
+          </Link>
+          <Link
+            to="/industries/reference-labs"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(6)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Reference Lab Services
+          </Link>
+          <Link
+            to="/industries/more"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(7)}
+            onMouseLeave={handleMouseLeave}
+          >
+            More Industries
+          </Link>
+
         </div>
       </div>
     </div>
@@ -707,8 +748,8 @@ const LINKS = [
     component: PricingContent,
   },
   {
-    text: "B2B",
+    text: "Who We Serve",
     href: "/industries/overview",
-    component:LandingPages
+    component: LandingPages
   },
 ];
