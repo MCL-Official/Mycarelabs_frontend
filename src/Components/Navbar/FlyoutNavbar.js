@@ -292,6 +292,11 @@ const CTAs = ({ isHome, scrolled }) => {
       "text": "Total PSA Test Services",
       "href": "/total-psa-test-services"
     },
+     {
+      "id": 29,
+      "text": "Urgent Care Centers",
+      "href": "/industries/urgent-care"
+    },
   ]
   const [searchText, setSearchText] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
@@ -730,9 +735,17 @@ const LandingPages = () => {
             Reference Lab Services
           </Link>
           <Link
-            to="/industries/more"
+            to="/industries/urgent-care"
             className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(7)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Urgent Care Centers
+          </Link>
+          <Link
+            to="/industries/more"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(8)}
             onMouseLeave={handleMouseLeave}
           >
             More Industries

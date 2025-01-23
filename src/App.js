@@ -72,6 +72,7 @@ import SkilledNursing from "./Pages/LandingPagesB2b/SkilledNursing.jsx";
 import PhysicianAndHospital from "./Pages/LandingPagesB2b/PhysicianAndHospital.jsx";
 import RefrenceLabService from "./Pages/LandingPagesB2b/RefrenceLabService.jsx";
 import MoreIndustries from "./Pages/LandingPagesB2b/MoreIndustries.jsx";
+import UrgentCare from "./Pages/LandingPagesB2b/UrgentCare.jsx";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -103,6 +104,7 @@ function App() {
           <Route path="/industries/skilled-nursing" element={<SkilledNursing/>}/>
           <Route path="/industries/physician-offices-hospitals" element={<PhysicianAndHospital/>}/>
           <Route path="/industries/reference-labs" element={<RefrenceLabService/>}/>
+          <Route path="/industries/urgent-care" element={<UrgentCare/>}/>
           <Route path="/industries/more" element={<MoreIndustries/>}/>
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
