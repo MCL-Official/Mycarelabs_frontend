@@ -7,7 +7,7 @@ import ContactForm from "../../Components/LandingPagesComps/ContactForm";
 import ls1 from "../../Assets/B2B IMAGES/B2B Urgent Care Centers Page/ucc1.webp";
 import ls2 from "../../Assets/B2B IMAGES/B2B Urgent Care Centers Page/ucc2.webp";
 import ls3 from "../../Assets/B2B IMAGES/B2B Urgent Care Centers Page/ucc3.webp";
-import heroImg from "../../Assets/B2B IMAGES/B2B IMAGES/B2B Urgent Care Centers Page/UCCHero.webp";
+import heroImg from "../../Assets/B2B IMAGES/B2B Urgent Care Centers Page/UCCHero.webp";
 
 const UrgentCare = () => {
   const points = [
