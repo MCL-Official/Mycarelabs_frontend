@@ -11,6 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone, faStar, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import logoCh from "../../Assets/mycare_logo_ch.png"
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import serachIcon from "../../Assets/search-svgrepo-com.svg"
 
 const Example = () => {
   return (
@@ -56,9 +58,9 @@ const FlyoutNav = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Logo />
-        <div className="hidden gap-6 lg:flex items-center justify-between">
-          <Links isHome={isHome} scrolled={scrolled} />
+        <div className="hidden gap-3 lg:flex lg:flex-col items-end py-2">
           <CTAs isHome={isHome} scrolled={scrolled} />
+          <Links isHome={isHome} scrolled={scrolled} />
           {/* <a href="tel:+1-800-790-4550" className="mr-3 self-center text-black">
             <FontAwesomeIcon icon={faPhone} size="xl" />
           </a> */}
@@ -74,7 +76,7 @@ const Logo = ({ color = "white" }) => {
     <Link to="/" className="flex items-start md:mr-5 xl:mr-0 2xl:ml-[-70px] space-x-3 rtl:space-x-reverse">
       <img
         src={logo1}
-        className="max-w-[250px] max-h-[75px]" // Adjusted the size
+        className="max-w-[15rem] max-h-[5rem] md:max-w-[20rem] md:max-h-[10rem]" // Adjusted the size
         alt="My care labs"
       />
     </Link>
@@ -83,7 +85,7 @@ const Logo = ({ color = "white" }) => {
 
 const Links = ({ isHome, scrolled }) => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-10">
       {LINKS.map((l) => (
         <NavLink
           key={l.text}
@@ -152,8 +154,209 @@ const CTAs = ({ isHome, scrolled }) => {
     // navigate()https://patient-us.creliohealth.com/patient/login
     window.location.href = "https://patient-us.creliohealth.com/patient/login"
   }
+  const dataForSearch = [
+    {
+      "id": 1,
+      "text": "Assisted Living",
+      "href": "/industries/assisted-living"
+    }, {
+      "id": 2,
+      "text": "Home Health & Hospice Lab Services",
+      "href": "/industries/home-health-hospices"
+    }, {
+      "id": 3,
+      "text": "Skilled Nursing Lab Services",
+      "href": "/industries/skilled-nursing"
+    }, {
+      "id": 4,
+      "text": "Physician Offices & Hospitals",
+      "href": "/industries/physician-offices-hospitals"
+    },
+     {
+      "id": 5,
+      "text": "Reference Lab Services",
+      "href": "/industries/reference-labs"
+    },
+     {
+      "id": 6,
+      "text": "More Industries",
+      "href": "/industries/more"
+    },
+     {
+      "id": 7,
+      "text": "UTI Testing Solutions",
+      "href": "/uti"
+    },
+     {
+      "id": 8,
+      "text": "Infectious Disease Testing Solutions",
+      "href": "/testing-solutions/infectious-disease-testing-solutions"
+    },
+     {
+      "id": 9,
+      "text": "Wellness Testing Solutionss",
+      "href": "/testing-solutions/wellness-testing-solutions/"
+    },
+     {
+      "id": 10,
+      "text": "Toxicology Testing Solutions",
+      "href": "/testing-solutions/toxicology-testing-solutions"
+    },
+     {
+      "id": 11,
+      "text": "Oncology Testing Solutions",
+      "href": "/testing-solutions/oncology-testing-solutions"
+    },
+     {
+      "id": 12,
+      "text": "Testing for Groups",
+      "href": "/group-covid-testing"
+    },
+     {
+      "id": 13,
+      "text": "Testing for Schools",
+      "href": "/testing-for-schools"
+    },
+     {
+      "id": 14,
+      "text": "Testing for Nursing Homes",
+      "href": "/testing-for-nursing-homes"
+    },
+     {
+      "id": 15,
+      "text": "At-Home COVID-19 PCR Test Kit",
+      "href": "/covid-rt-pcr-home-test-kit"
+    },
+     {
+      "id": 16,
+      "text": "Anemia Profile Test",
+      "href": "/testing-solutions/wellness-testing-solutions/anemia-profile-test"
+    },
+     {
+      "id": 17,
+      "text": "Basic Metabolic Panel",
+      "href": "/testing-solutions/wellness-testing-solutions/basic-metabolic-panel"
+    },
+     {
+      "id": 18,
+      "text": "Liver Function Panel Tests",
+      "href": "/testing-solutions/wellness-testing-solutions/liver-function-panel-tests"
+    },
+     {
+      "id": 19,
+      "text": "Renal Function Panel Test",
+      "href": "/testing-solutions/wellness-testing-solutions/renal-function-panel-test"
+    },
+     {
+      "id": 20,
+      "text": "Thyroid Function Panel Test",
+      "href": "testing-solutions/wellness-testing-solutions/thyroid-function-panel-test"
+    },
+     {
+      "id": 21,
+      "text": "Comprehensive Metabolic Panel (CMP) Test",
+      "href": "testing-solutions/wellness-testing-solutions/comprehensive-metabolic-panel-cmp-test"
+    },
+     {
+      "id": 22,
+      "text": "Creatine Kinase",
+      "href": "/creatine-kinase"
+    },
+     {
+      "id": 23,
+      "text": "CRP Tests",
+      "href": "/crp-tests"
+    },
+     {
+      "id": 24,
+      "text": "Free Psa Testing",
+      "href": "/free-psa-testing"
+    },
+     {
+      "id": 25,
+      "text": "Magnesium Test in Blood",
+      "href": "/magnesium-test-in-blood"
+    },
+     {
+      "id": 26,
+      "text": "Anticonvulsant Test Services",
+      "href": "/anticonvulsant-test-services"
+    },
+     {
+      "id": 27,
+      "text": "Vitamin D Test Services",
+      "href": "/vitamin-d-test-services"
+    },
+     {
+      "id": 28,
+      "text": "Total PSA Test Services",
+      "href": "/total-psa-test-services"
+    },
+     {
+      "id": 29,
+      "text": "Urgent Care Centers",
+      "href": "/industries/urgent-care"
+    },
+  ]
+  const [searchText, setSearchText] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchText(value);
+
+    // Filter the list based on the search input
+    const filtered = dataForSearch.filter((item) =>
+      item.text.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredResults(filtered);
+  };
+
+  const handleItemClick = (href) => {
+    // Redirect the user to the item's link
+    window.location.href = href;
+  };
   return (
     <div className="flex items-center gap-3">
+
+      <div className="relative">
+
+        <div className=" flex items-center justify-between gap-3 w-[16rem] rounded-sm border-2 bg-[#e6e5e1] px-4 py-2 shadow-sm">
+          {/* Search Icon */}
+          <img className="w-4 h-4" src={serachIcon} alt="search_icon" />
+
+          {/* Search Input */}
+          <input
+            type="text"
+            placeholder="Search"
+            value={searchText}
+          onChange={handleSearchChange}
+            className="flex-grow bg-transparent text-gray-800 text-left placeholder-gray-500 focus:outline-none"
+          />
+        </div>
+        {/* Search Results Dropdown */}
+        {searchText && (
+          <div className="absolute w-full bg-[#e6e5e1] shadow-md text-left mt-1 rounded-sm z-10">
+            <ul>
+              {filteredResults.length > 0 ? (
+                filteredResults.map((item) => (
+                  <li
+                    key={item.id}
+                    onClick={() => handleItemClick(item.href)}
+                    className="p-2 cursor-pointer hover:bg-gray-300 text-black"
+                  >
+                    {item.text}
+                  </li>
+                ))
+              ) : (
+                <li className="p-2 text-black">No results found</li>
+              )}
+            </ul>
+          </div>
+        )}
+      </div>
+
+
       <button
         className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 font-semibold transition-colors ${isHome
           ? scrolled
@@ -260,7 +463,7 @@ const AboutUsContent = ({ handleClick }) => {
       </div>
       <div className="col-span-12 grid grid-cols-1 gap-3 bg-white p-3 lg:col-span-8 xl:col-span-8 xl:grid-cols-3">
         {cardData.slice(0, 6).map((card, index) => (
-          
+
           <div
             key={card.id}
             className="rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-md transition-transform transform hover:scale-105 flex flex-col justify-between"
@@ -310,17 +513,17 @@ const PricingContent = () => {
   };
 
   return (
-    <div className="w-full bg-slate-50 p-6 shadow-none lg:w-[250px] lg:shadow-xl rounded-xl">
-      <div className="grid grid-cols-2 lg:grid-cols-1">
+    <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg">
+      <div className="grid grid-cols-2 lg:grid-cols-1 mt-2">
         <div className="mb-3 space-y-3 relative">
           {/* Main Links */}
           <Link
             to="/about"
-            className="block text-lg text-black no-underline hover:underline "
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
           >
-            About Us
+            About My Care Labs
           </Link>
           {/* {isHovered === 1 && (
             <div
@@ -345,7 +548,7 @@ const PricingContent = () => {
 
           <Link
             to="/management-team"
-            className="block text-lg text-black no-underline hover:underline"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 "
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
           >
@@ -354,7 +557,7 @@ const PricingContent = () => {
           </Link>
           <Link
             to="/blog"
-            className="block text-lg text-black no-underline hover:underline"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 "
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}
           >
@@ -464,6 +667,96 @@ const PricingContent1 = () => {
   );
 };
 
+const LandingPages = () => {
+  const [isHovered, setIsHovered] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setIsHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(null);
+  };
+
+  return (
+    <div className="w-full bg-white border-2 border-slate-300 shadow-none lg:w-[340px] p-2 rounded-lg">
+      <div className="grid grid-cols-2 mt-2 lg:grid-cols-1">
+        <div className="mb-3 space-y-3 relative">
+          {/* Main Links */}
+          <Link
+            to="/industries/overview"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Overview
+          </Link>
+
+          <Link
+            to="/industries/assisted-living"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Assisted Living
+          </Link>
+
+          <Link
+            to="/industries/urgent-care"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(3)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Urgent Care Centers
+          </Link>
+
+          <Link
+            to="/industries/skilled-nursing"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(4)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Skilled Nursing Lab Services
+          </Link>
+          <Link
+            to="/industries/physician-offices-hospitals"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(5)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Physician Offices & Hospitals
+          </Link>
+          <Link
+            to="/industries/reference-labs"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(6)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Reference Lab Services
+          </Link>
+          <Link
+            to="/industries/home-health-hospices"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(7)}
+            onMouseLeave={handleMouseLeave}
+          >
+            Home Health & Hospice Lab Services
+          </Link>
+          
+          <Link
+            to="/industries/more"
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
+            onMouseEnter={() => handleMouseEnter(8)}
+            onMouseLeave={handleMouseLeave}
+          >
+            More Industries
+          </Link>
+
+        </div>
+      </div>
+    </div>
+  );
+};
 
 
 const CareersContent = ({ handleClick }) => {
@@ -645,12 +938,13 @@ const LINKS = [
     component: PricingContent1,
   },
   {
-    text: "Company",
+    text: "About Us",
     href: "/about",
     component: PricingContent,
   },
   {
-    text: "B2B",
-    href: "/b2b",
+    text: "Who We Serve",
+    href: "/industries/overview",
+    component: LandingPages
   },
 ];

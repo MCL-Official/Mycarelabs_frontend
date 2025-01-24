@@ -73,15 +73,15 @@ const WeServe = () => {
           Our flexible and scalable solutions cater to healthcare providers,
           educational institutions, and treatment centers, ensuring:
         </p>
-        <p className="mt-2 text-lg text-center text-blue-600">
-          My Care Labs proudly partners with:
-        </p>
+        <h2 className="mt-2 text-2xl font-bold  text-center text-black">
+          <span className="text-[#7597e6]">My Care Labs</span> proudly partners with:
+        </h2>
 
         <div className="mt-8 relative">
           <Slider {...settings}>
    
             <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <a href="/industries/assisted-living" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
                   src={ws1}
                   alt="Assisted Living Facilities"
@@ -93,28 +93,27 @@ const WeServe = () => {
                   </h3>
                   <div className="mt-2 h-2 w-full bg-blue-600"></div>
                 </div>
-              </div>
+              </a>
             </div>
-         
+
             <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <a href="/industries/urgent-care" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src={ws2}
-                  alt="Home Health & Hospices"
+                  src={ws1}
+                  alt="Assisted Living Facilities"
                   className="w-full h-60 object-cover"
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-bold text-gray-900">
-                    Home Health & Hospices
+                    Urgent Care Centers
                   </h3>
                   <div className="mt-2 h-2 w-full bg-blue-600"></div>
                 </div>
-              </div>
+              </a>
             </div>
-
           
             <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <a href="/industries/skilled-nursing" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
                   src={ws3}
                   alt="Skilled Nursing Facilities"
@@ -126,11 +125,11 @@ const WeServe = () => {
                   </h3>
                   <div className="mt-2 h-2 w-full bg-blue-600"></div>
                 </div>
-              </div>
+              </a>
             </div>
           
             <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <a href="/industries/physician-offices-hospitals" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
                   src={ws4}
                   alt="Skilled Nursing Facilities"
@@ -142,12 +141,12 @@ const WeServe = () => {
                   </h3>
                   <div className="mt-2 h-2 w-full bg-blue-600"></div>
                 </div>
-              </div>
+              </a>
             </div>
 
          
             <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <a href="/industries/reference-labs" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
                   src={ws5}
                   alt="Skilled Nursing Facilities"
@@ -159,11 +158,27 @@ const WeServe = () => {
                   </h3>
                   <div className="mt-2 h-2 w-full bg-blue-600"></div>
                 </div>
-              </div>
+              </a>
+            </div>
+
+            <div className="p-4">
+              <a href="/industries/home-health-hospices" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
+                <img
+                  src={ws2}
+                  alt="Home Health & Hospices"
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900">
+                    Home Health & Hospices
+                  </h3>
+                  <div className="mt-2 h-2 w-full bg-blue-600"></div>
+                </div>
+              </a>
             </div>
            
             <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <a href="/industries/more" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
                   src={ws6}
                   alt="Skilled Nursing Facilities"
@@ -171,27 +186,11 @@ const WeServe = () => {
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-bold text-gray-900">
-                  Schools & Universities
+                  More Industries
                   </h3>
                   <div className="mt-2 h-2 w-full bg-blue-600"></div>
                 </div>
-              </div>
-            </div>
-         
-            <div className="p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
-                  src={ws7}
-                  alt="Skilled Nursing Facilities"
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-900">
-                  Drug & Substance Treatment Centers
-                  </h3>
-                  <div className="mt-2 h-2 w-full bg-blue-600"></div>
-                </div>
-              </div>
+              </a>
             </div>
             
           </Slider>

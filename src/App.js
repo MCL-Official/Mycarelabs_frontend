@@ -66,6 +66,13 @@ import AboutCompany from "./Pages/Company/AboutCompany.js";
 import Banner from "./Components/Navbar/Banner.js";
 import Bannerreact from "./Components/Navbar/Bannerreact.js";
 import B2b from "./Pages/LandingPagesB2b/B2b.jsx";
+import AssitedLiving from "./Pages/LandingPagesB2b/AssitedLiving.jsx";
+import HealthAndHospice from "./Pages/LandingPagesB2b/HealthAndHospice.jsx";
+import SkilledNursing from "./Pages/LandingPagesB2b/SkilledNursing.jsx";
+import PhysicianAndHospital from "./Pages/LandingPagesB2b/PhysicianAndHospital.jsx";
+import RefrenceLabService from "./Pages/LandingPagesB2b/RefrenceLabService.jsx";
+import MoreIndustries from "./Pages/LandingPagesB2b/MoreIndustries.jsx";
+import UrgentCare from "./Pages/LandingPagesB2b/UrgentCare.jsx";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -91,7 +98,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/empty" element={<EmptyPage />} />
           <Route path="/uti" element={<Uta />} />
-          <Route path="/b2b" element={<B2b />} />
+          <Route path="/industries/overview" element={<B2b />} />
+          <Route path="/industries/assisted-living" element={<AssitedLiving/>}/>
+          <Route path="/industries/home-health-hospices" element={<HealthAndHospice/>}/>
+          <Route path="/industries/skilled-nursing" element={<SkilledNursing/>}/>
+          <Route path="/industries/physician-offices-hospitals" element={<PhysicianAndHospital/>}/>
+          <Route path="/industries/reference-labs" element={<RefrenceLabService/>}/>
+          <Route path="/industries/urgent-care" element={<UrgentCare/>}/>
+          <Route path="/industries/more" element={<MoreIndustries/>}/>
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
           <Route path="/success" element={<SuccessPage />} />

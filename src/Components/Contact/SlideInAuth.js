@@ -39,6 +39,8 @@ const Form = () => {
       setNotification({ type: 'success', message: 'Contact form details sent successfully!' });
       setFormData({ name: '', email: '', phone: '', company: '', message: '', agreeToTerms: false });
     } catch (error) {
+      console.log(error,'err msj');
+      
       setNotification({ type: 'error', message: 'Failed to send contact form details. Please try again.' });
     }
   };

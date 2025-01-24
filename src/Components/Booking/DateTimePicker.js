@@ -148,6 +148,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     zipCode: '',
     instructions: '',
     passportDetails: '',
+    Dob: '',
+    Gender: '',
     foundVia: '',
     Employee: cardData?.cardData?.category,
     Location: cardData?.cardData?.location,
@@ -395,6 +397,21 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
         [name]: value
       }));
     }
+
+    // Handle date input specifically
+    if (name === 'Dob') {
+      // Ensure the date is formatted as yyyy-mm-dd
+      const formattedDate = new Date(value).toISOString().split('T')[0];
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: formattedDate,
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    }
   }
 
 
@@ -411,6 +428,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     if (!formData.email) newInvalidFields.email = true;
     if (!formData.phone) newInvalidFields.phone = true;
     if (!formData?.refId) newInvalidFields.refId = true;
+    if(!formData?.Gender) newInvalidFields.Gender = true;
+    if(!formData?.Dob) newInvalidFields.Dob = true;
     // if (!formData?.Lab) newInvalidFields.Lab = true;
     // if (!formData.reason) newInvalidFields.reason = true;
     // if (!formData.zipCode) newInvalidFields.zipCode = true;
@@ -419,12 +438,15 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     CrelioData.fullName = formData.firstName;
     CrelioData.mobile = formData.phone
     CrelioData.email = formData.email
+    CrelioData.gender = formData.Gender
+    CrelioData.dob = formData.Dob
     // CrelioData.billDetails.testList[0].testID = testIdBooking?.testID
     CrelioData.startDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
     CrelioData.endDate = moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").add(30, 'minutes').utc().format("YYYY-MM-DDTHH:mm:ss[Z]");
 
 
     console.log(CrelioData, "sdkjvsbkjbsdvsdvn");
+    console.log(formData, "Form Data");
 
     if (Object.keys(newInvalidFields).length > 0) {
       setInvalidFields(newInvalidFields);
@@ -644,6 +666,42 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                   {invalidFields.phone && <p className="text-red-500 text-xs mt-1">Phone number is required</p>}
                 </div>
+                <div className="flex flex-col col-span-2 md:col-span-1">
+                  <label htmlFor="gender">Gender*</label>
+                  <select
+                    name="Gender"
+                    value={formData.Gender}
+                    onChange={handleInputChange}
+                    className={`border p-2 rounded ${invalidFields.Gender ? 'border-red-500' : ''}`}
+                    required
+                  >
+                    <option value="" disabled>
+                      Select Gender
+                    </option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  {invalidFields.Gender && <p className="text-red-500 text-xs mt-1">Gender is required</p>}
+                </div>
+
+                <div className="flex flex-col col-span-2 md:col-span-1">
+                  <label>Date of Birth*</label>
+                  <input
+                    type="date"
+                    name="Dob"
+                    value={formData.Dob || ''} // Ensure it uses yyyy-mm-dd format or remains empty
+                    onChange={handleInputChange}
+                    className={`border p-2 rounded ${invalidFields.Dob ? 'border-red-500' : ''}`}
+                    required
+                  />
+                  {invalidFields.Dob && (
+                    <p className="text-red-500 text-xs mt-1">D.O.B is required</p>
+                  )}
+                </div>
+
+
+
                 {/* <div className="flex flex-col col-span-2 md:col-span-1">
                   <label>Reason for testing?</label>
                   <select
