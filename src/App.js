@@ -73,6 +73,7 @@ import PhysicianAndHospital from "./Pages/LandingPagesB2b/PhysicianAndHospital.j
 import RefrenceLabService from "./Pages/LandingPagesB2b/RefrenceLabService.jsx";
 import MoreIndustries from "./Pages/LandingPagesB2b/MoreIndustries.jsx";
 import UrgentCare from "./Pages/LandingPagesB2b/UrgentCare.jsx";
+import ContactPage from "./Pages/ContactPage/ContactPage.jsx";
 
 const PageViewTracker = () => {
   const location = useLocation();
@@ -152,7 +153,8 @@ function App() {
           <Route path="/total-psa-test-services" element={<Index6 />} />
           <Route path="/about" element={<Team />} />
           <Route path="/management-team" element={<AboutCompany />} />
-          <Route path="/contact" element={<SlideInAuth />} />
+          {/* <Route path="/contact" element={<SlideInAuth />} /> */}
+          <Route path="/contact" element={<ContactPage/>}/>
           <Route path="/testing-solutions" element={<FeatureComponent />} />
           <Route path="/testingLoc" element={<HoverCards />} />
           <Route path="loc" element={<DateTimePicker />} />

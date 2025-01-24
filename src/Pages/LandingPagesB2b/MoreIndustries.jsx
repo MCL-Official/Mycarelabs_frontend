@@ -13,9 +13,10 @@ import heroImg from "../../Assets/B2B IMAGES/Lab Services for Schools, Treatment
 const MoreIndustries = () => {
 
     const points = [
-        "Industry-Specific Testing Panels",
-        "Mobile and On-Site Services",
-        "Trusted by Diverse Organizations",
+      "Efficient COVID/Flu Testing for Students",
+       "On-Campus Mobile Testing Services",
+       "Timely Results for Large Groups",
+       "Customized Testing Packages for Educational Institutions",
         ]
         const features = [
               {
@@ -38,7 +39,7 @@ const MoreIndustries = () => {
             ]
       return (
         <div>
-          <Hero heroImg={heroImg} title={"Lab Services for Schools, Treatment Centers & More"} subTitle={"Diagnostics Tailored to Your Industry Needs"} points={points}/>
+          <Hero heroImg={heroImg} title={"Lab Services for Schools, Treatment Centers & More"} subTitle={"Do you need help with these challenges?"} points={points}/>
           <ServiceSection />
           <HealthSolutions2 features={features} title={"Your Industry"}/>
           <WeServe/>

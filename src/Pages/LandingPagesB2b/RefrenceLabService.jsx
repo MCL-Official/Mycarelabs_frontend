@@ -12,9 +12,10 @@ import heroImg from "../../Assets/B2B IMAGES/Reference Lab Services/Reference La
 const RefrenceLabService = () => {
   
     const points = [
-        "Seamless Integration with Your Workflow",
-        "Support for High-Volume Testing",
-        "Advanced Analytical Equipment",
+        "Cost-Effective and Scalable Lab Solutions",
+    "Extensive Test Menu Availability",
+     "Accurate Reporting with Rapid Turnaround",
+        "Reliable Support for High Testing Volumes",
         ]
         const features = [
               {
@@ -33,7 +34,7 @@ const RefrenceLabService = () => {
             ]
       return (
         <div>
-          <Hero heroImg={heroImg} title={"Reference Lab Services"} subTitle={"Partnering for Advanced Diagnostic Capabilities"} points={points}/>
+          <Hero heroImg={heroImg} title={"Reference Lab Services"} subTitle={"Are you addressing these needs effectively?"} points={points}/>
           <ServiceSection />
           <HealthSolutions2 features={features} title={"Refrence lab"}/>
           <WeServe/>

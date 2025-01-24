@@ -13,6 +13,7 @@ import logoCh from "../../Assets/mycare_logo_ch.png"
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import serachIcon from "../../Assets/search-svgrepo-com.svg"
+import ContactPage from "../../Pages/ContactPage/ContactPage";
 
 const Example = () => {
   return (
@@ -947,4 +948,8 @@ const LINKS = [
     href: "/industries/overview",
     component: LandingPages
   },
+  {
+    text:"Contact",
+    href:"/contact",
+  }
 ];

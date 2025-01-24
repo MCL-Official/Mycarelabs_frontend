@@ -11,9 +11,10 @@ import heroImg from "../../Assets/B2B IMAGES/Nursing/Nursing Page.webp";
 
 const SkilledNursing = () => {
   const points = [
-    "Customized Testing Panels for Complex Cases",
-    "On-site Mobile Phlebotomy Services",
-    "Quick Turnaround Times for Critical Results",
+    "On-Site Mobile Lab Support",
+ "Quick Results for Critical Patient Care",
+ "Streamlined Communication with Providers",
+ "Customized Testing Solutions for Skilled Nursing Facilities",
   ];
   const features = [
     {
@@ -35,12 +36,12 @@ const SkilledNursing = () => {
       heroImg={heroImg}
         title={"Skilled Nursing Lab Services"}
         subTitle={
-          "Reliable and Efficient Diagnostics for Skilled Nursing Facilities"
+          "Do you need solutions for these challenges?"
         }
         points={points}
       />
       <ServiceSection />
-      <HealthSolutions2 features={features} title={"Skilled Nursing"}/>
+      <HealthSolutions2 features={features} title={"Skilled Nursing Lab Services"}/>
       <WeServe />
       <ContactForm />
     </div>

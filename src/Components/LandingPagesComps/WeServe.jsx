@@ -6,8 +6,8 @@ import ws2 from "../../Assets/ws2.webp";
 import ws3 from "../../Assets/ws3.webp";
 import ws4 from "../../Assets/ws4.webp";
 import ws5 from "../../Assets/ws5.webp";
-import ws6 from "../../Assets/ws6.webp";
-import ws7 from "../../Assets/ws7.webp";
+import ws6 from "../../Assets/MORE INDUSTRY.webp";
+import ws7 from "../../Assets/URGENT CARE.webp";
 
 
 // Custom Previous Arrow
@@ -99,7 +99,7 @@ const WeServe = () => {
             <div className="p-4">
               <a href="/industries/urgent-care" className="no-underline bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src={ws1}
+                  src={ws7}
                   alt="Assisted Living Facilities"
                   className="w-full h-60 object-cover"
                 />
