@@ -519,11 +519,11 @@ const PricingContent = () => {
           {/* Main Links */}
           <Link
             to="/about"
-            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2 lock text-lg text-black no-underline hover:underline "
+            className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
           >
-            About Us
+            About My Care Labs
           </Link>
           {/* {isHovered === 1 && (
             <div
@@ -702,12 +702,12 @@ const LandingPages = () => {
           </Link>
 
           <Link
-            to="/industries/home-health-hospices"
+            to="/industries/urgent-care"
             className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}
           >
-            Home Health & Hospice Lab Services
+            Urgent Care Centers
           </Link>
 
           <Link
@@ -735,13 +735,14 @@ const LandingPages = () => {
             Reference Lab Services
           </Link>
           <Link
-            to="/industries/urgent-care"
+            to="/industries/home-health-hospices"
             className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
             onMouseEnter={() => handleMouseEnter(7)}
             onMouseLeave={handleMouseLeave}
           >
-            Urgent Care Centers
+            Home Health & Hospice Lab Services
           </Link>
+          
           <Link
             to="/industries/more"
             className="block text-base text-black no-underline text-left p-3 rounded-lg  hover:bg-slate-200 py-2"
@@ -937,7 +938,7 @@ const LINKS = [
     component: PricingContent1,
   },
   {
-    text: "Company",
+    text: "About Us",
     href: "/about",
     component: PricingContent,
   },
