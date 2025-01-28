@@ -17,7 +17,7 @@ const UtaComp = () => {
 
   useEffect(() => {
     // Adjust target date for the desired timezone (e.g., IST)
-    const targetDate = new Date("2025-01-25T00:00:00Z"); // UTC date
+    const targetDate = new Date("2025-02-02T00:00:00Z"); // UTC date
     const timezoneOffset = targetDate.getTimezoneOffset() * 60000; // Offset in milliseconds
     const localTargetDate = new Date(targetDate.getTime() - timezoneOffset); // Adjust for local timezone
 
