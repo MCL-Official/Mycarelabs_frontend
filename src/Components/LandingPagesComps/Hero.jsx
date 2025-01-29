@@ -155,6 +155,7 @@ const ContactFormHero = () => {
           onChange={handleInputChange}
         ></textarea>
         <button
+          id="formSubmitBtn"
           type="submit"
           className="col-span-1 sm:col-span-2 w-full py-2 bg-blue-600 text-2xl text-white font-semibold rounded-lg hover:bg-blue-700"
         >
@@ -164,6 +165,7 @@ const ContactFormHero = () => {
 
       {notification && (
         <p
+          id="submitPopUp"
           className={`mt-4 text-center text-xl ${
             notification.type === "success" ? "text-green-500" : "text-red-500"
           }`}

@@ -197,6 +197,7 @@ const Form = () => {
           </motion.div>
 
           <motion.button
+            id="formSubmitBtn"
             variants={primaryVariants}
             whileTap={{
               scale: 0.985,
@@ -208,7 +209,7 @@ const Form = () => {
           </motion.button>
         </form>
         {notification && (
-          <div className={`mt-4 p-2 text-white rounded ${notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'}`}>
+          <div id="submitPopUp" className={`mt-4 p-2 text-white rounded ${notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'}`}>
             {notification.message}
           </div>
         )}
