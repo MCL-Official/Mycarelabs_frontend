@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const Hero = ({ title, subTitle, points , heroImg }) => {
@@ -73,7 +74,7 @@ const ContactFormHero = () => {
       [name]: value,
     });
   };
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData," formdata")
@@ -82,11 +83,11 @@ const ContactFormHero = () => {
         "https://bookingbackend.mycaretrading.com/portal/admin/api/contact/mycarelabs",
         formData
       );
-      console.log(response, "API Response");
       setNotification({
         type: "success",
         message: "Contact form details sent successfully!",
       });
+      navigate("/form-submission-thank-you")
       setFormData({
         name: "",
         email: "",
