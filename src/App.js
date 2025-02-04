@@ -108,7 +108,7 @@ function App() {
           <Route path="/industries/reference-labs" element={<RefrenceLabService/>}/>
           <Route path="/industries/urgent-care" element={<UrgentCare/>}/>
           <Route path="/industries/more" element={<MoreIndustries/>}/>
-          <Route path="/form-submission-thank-you" element={<ThankyouFormSubmit/>}/>
+          {/* <Route path="/form-submission-thank-you" element={<ThankyouFormSubmit/>}/> */}
           <Route path="/stories" element={<GoogleStories />} />
           <Route path="/hipaa-information" element={<PrivacyNotice />} />
           <Route path="/success" element={<SuccessPage />} />

@@ -74,7 +74,7 @@ const ContactFormHero = () => {
       [name]: value,
     });
   };
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData," formdata")
@@ -87,7 +87,7 @@ const ContactFormHero = () => {
         type: "success",
         message: "Contact form details sent successfully!",
       });
-      navigate("/form-submission-thank-you")
+      // navigate("/form-submission-thank-you")
       setFormData({
         name: "",
         email: "",
