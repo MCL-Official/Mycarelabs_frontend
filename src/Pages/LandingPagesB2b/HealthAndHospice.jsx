@@ -12,9 +12,10 @@ import heroImg from "../../Assets/B2B IMAGES/Home Health & Hospices Page/Home He
 const HealthAndHospice = () => {
 
     const points = [
-        "Mobile Testing for Homebound Patients",
-        "24/7 Support for Hospice Providers",
-        "Comprehensive Wellness Panels",
+        "MFlexible Scheduling for Blood Draws",
+ "Timely and Reliable Lab Results",
+ "Patient-Centric Testing Services",
+ "Convenient Mobile Testing Options",
         ]
         const features = [
               {
@@ -33,7 +34,7 @@ const HealthAndHospice = () => {
             ]
       return (
         <div>
-          <Hero heroImg={heroImg} title={"Home Health & Hospice Lab Services"} subTitle={"Compassionate Diagnostics for Home Health and Hospice Care"} points={points}/>
+          <Hero heroImg={heroImg} title={"Home Health & Hospice Lab Services"} subTitle={"Are you seeking solutions to these common issues?"} points={points}/>
           <ServiceSection />
           <HealthSolutions2 features={features} title={"Home Health & Hospices"}/>
           <WeServe/>

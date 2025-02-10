@@ -12,9 +12,10 @@ import heroImg from "../../Assets/B2B IMAGES/Physician & Hospital Lab Services/P
 const PhysicianAndHospital = () => {
 
     const points = [
-        "Tailored Testing Solutions for Physicians",
-        "Scalable Services for Hospitals",
-        "State-of-the-Art Diagnostic Equipment",
+        "Same-Day Mobile Phlebotomy Services",
+ "Rapid and Accurate Test Results",
+ "Comprehensive Support for Specialty Tests",
+ "Seamless Integration with Medical Practices",
         ]
         const features = [
               {
@@ -33,7 +34,7 @@ const PhysicianAndHospital = () => {
             ]
       return (
         <div>
-          <Hero heroImg={heroImg} title={"Physician & Hospital Lab Services"} subTitle={"Advanced Diagnostics for Medical Professionals"} points={points}/>
+          <Hero heroImg={heroImg} title={"Physician & Hospital Lab Services"} subTitle={"Looking for better solutions to these problems?"} points={points}/>
           <ServiceSection />
           <HealthSolutions2 features={features} title={"Physicians & Hospitals"}/>
           <WeServe/>

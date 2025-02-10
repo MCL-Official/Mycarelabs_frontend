@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const Hero = ({ title, subTitle, points , heroImg }) => {
@@ -73,7 +74,7 @@ const ContactFormHero = () => {
       [name]: value,
     });
   };
-
+  // const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData," formdata")
@@ -82,11 +83,11 @@ const ContactFormHero = () => {
         "https://bookingbackend.mycaretrading.com/portal/admin/api/contact/mycarelabs",
         formData
       );
-      console.log(response, "API Response");
       setNotification({
         type: "success",
         message: "Contact form details sent successfully!",
       });
+      // navigate("/form-submission-thank-you")
       setFormData({
         name: "",
         email: "",
@@ -155,6 +156,7 @@ const ContactFormHero = () => {
           onChange={handleInputChange}
         ></textarea>
         <button
+          id="formSubmitBtn"
           type="submit"
           className="col-span-1 sm:col-span-2 w-full py-2 bg-blue-600 text-2xl text-white font-semibold rounded-lg hover:bg-blue-700"
         >
@@ -164,6 +166,7 @@ const ContactFormHero = () => {
 
       {notification && (
         <p
+          id="submitPopUp"
           className={`mt-4 text-center text-xl ${
             notification.type === "success" ? "text-green-500" : "text-red-500"
           }`}

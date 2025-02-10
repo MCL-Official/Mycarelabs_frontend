@@ -481,21 +481,28 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
 
       if (formattedCategory === 'northern-california-fremont-lab') {
         navigate(`/fremont-laboratory-thank-you`, { state: { appointmentDetails } });
+        // Force a reload after navigation
+        window.location.reload();
       } else if (formattedCategory === 'riverside-city-mobile-testing') {
         navigate(`/riverside-mobile-testing-thank-you`, { state: { appointmentDetails } });
+        // Force a reload after navigation
+        window.location.reload();
       }
       else if (formattedCategory === 'northern-california-mobile-testing') {
         navigate(`/california-mobile-testing-thank-you`, { state: { appointmentDetails } });
+        window.location.reload();
       }
       else if (formattedCategory === 'bay-area-mobile-testing') {
         navigate(`/bay-area-testing-thank-you`, { state: { appointmentDetails } });
+        window.location.reload();
       }
       else if (formattedCategory === 'riverside-gurdwara-pop-up') {
         navigate(`/riverside-gurdwara-thank-you`, { state: { appointmentDetails } });
+        window.location.reload();
       }
       else if (formattedCategory === 'at-home-test-kit') {
         navigate(`/athome-testing-thank-you`, { state: { appointmentDetails } });
-
+        window.location.reload();
         // navigate(`/bookingcompletion/${formattedCategory}`, { state: { cardData } });
       }
       else {

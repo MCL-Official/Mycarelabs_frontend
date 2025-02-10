@@ -11,9 +11,10 @@ import heroImg from "../../Assets/B2B IMAGES/B2B Urgent Care Centers Page/UCCHer
 
 const UrgentCare = () => {
   const points = [
-    "Rapid Turnaround Time for Immediate Care",
-    "Comprehensive Panels for Acute Diagnoses",
-    "Seamless Integration with Urgent Care Systems",
+    "Rapid Diagnostic Testing Solutions",
+ "Fast and Reliable UTI and Flu Testing",
+ "Efficient Support for High Patient Volumes",
+ "Tailored Solutions for Urgent Care Centers",
   ];
   const features = [
     {
@@ -35,7 +36,7 @@ const UrgentCare = () => {
         heroImg={heroImg}
         title={"Lab Services for Urgent Care Centers"}
         subTitle={
-          "Fast and Reliable Diagnostics to Support Urgent Care Providers"
+          "Are these concerns impacting your practice?"
         }
         points={points}
       />

@@ -133,6 +133,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
             ></textarea>
             <button
+              id="formSubmitBtn"
               type="submit"
               className="col-span-1 sm:col-span-2 w-full text-2xl py-2 bg-[#ea580c] text-white font-semibold rounded-lg hover:bg-[#e6550a]"
             >
@@ -142,6 +143,7 @@ const ContactForm = () => {
 
           {notification && (
             <p
+              id="submitPopUp"
               className={`mt-4 text-center text-xl ${
                 notification.type === "success"
                   ? "text-green-500"

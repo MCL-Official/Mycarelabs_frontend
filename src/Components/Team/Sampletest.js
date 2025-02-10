@@ -68,7 +68,7 @@ export function Sampletest() {
         },
         {
             avatar: "https://i.ibb.co/hVxKLxZ/9.png",
-            name: "Rajtanu Banerjee",
+            name: "Dr. Rajtanu Banerjee",
             title: "Vice President, Business Development",
             desc: "",
             linkedin: "javascript:void(0)",

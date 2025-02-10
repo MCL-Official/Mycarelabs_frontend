@@ -32,7 +32,7 @@ function AboutCompany() {
         //         'https://i.ibb.co/pRCR5C0/6.png',
         // },
         {
-            name: 'Rajtanu Banerjee',
+            name: 'Dr. Rajtanu Banerjee',
             role: 'Vice President, Business Development',
             imageUrl:
                 'https://i.ibb.co/hVxKLxZ/9.png',
@@ -175,7 +175,7 @@ function AboutCompany() {
                     <p className="pb-8 text-base text-gray-800">Dr. Raj Banerjee, Vice President of Business Development at My Care Labs, combines his medical background with extensive expertise in sales to drive client acquisition and strategic partnerships.  </p>
                     <p className="text-base text-gray-800">Dr. Banerjee excels in understanding the unique needs of healthcare providers, ensuring tailored solutions that enhance patient care and operational efficiency. His ability to forge lasting partnerships and optimize contracting processes positions My Care Labs as a trusted leader in the healthcare industry.</p>
                     <div className="mt-8">
-                        <p className="text-base text-gray-800 font-bold pb-1">- Rajtanu Banerjee</p>
+                        <p className="text-base text-gray-800 font-bold pb-1">- Dr. Rajtanu Banerjee</p>
                         <p className="text-sm text-gray-600 pl-2">Vice President, Business Development</p>
                     </div>
                 </div>

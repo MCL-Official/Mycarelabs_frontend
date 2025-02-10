@@ -12,10 +12,10 @@ import heroImg from "../../Assets/B2B IMAGES/ASSISTED LIVING/Assisted living.web
 const AssitedLiving = () => {
 
     const points = [
-	"Mobile Phlebotomy for Residents",
-	"Customized Testing Panels for Senior Care",
-	"Reliable 24-48 Hour Turnaround on UTI Tests",
-	"Accurate and Reliable Results"
+	"Dependable Mobile Phlebotomy Services",
+ "Fast and Accurate Blood Test Results",
+ "Specialized UTI, Wound, and Nail Testing",
+ "Comprehensive Support for Assisted Living Facilities"
     ]
     const features = [
       {
@@ -34,7 +34,7 @@ const AssitedLiving = () => {
     ]
   return (
     <div>
-      <Hero heroImg={heroImg} title={"Assisted Living Lab Services"} subTitle={"Tailored Diagnostics for Assisted Living Communities:"} points={points}/>
+      <Hero heroImg={heroImg} title={"Assisted Living Lab Services"} subTitle={"Are you looking for solutions to these challenges"} points={points}/>
       <ServiceSection />
       <HealthSolutions2 features={features} title={"Assisted Living"}/>
       <WeServe/>
