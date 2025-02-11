@@ -7,38 +7,40 @@ import Example from './BarLoader';  // Ensure correct path
 import StackedNotifications from './StackedNotifications';  // Ensure correct path
 import moment from 'moment-timezone';
 import { FiArrowLeft } from 'react-icons/fi';
+import { TiTick } from "react-icons/ti";
 import CryptoJS from 'crypto-js';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import logo2 from "../../Assets/my carelabs white.webp"
 
-const LeftContainer = ({ cardData }) => {
+
+const LeftContainer = ({ cardData, isChecked1, setIsChecked1, isChecked2, setIsChecked2, setShowForm }) => {
+
+  const showForm = () => {
+    setShowForm(false)
+  }
+
   return (
-    <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 mb-4 md:mb-0">
-      <div className="flex flex-col items-center">
-        <img src={logo1} alt="My Care Labs Logo" className="w-42 mb-4" />
-        <h2 className="text-xl font-bold mb-2">Booking For</h2>
-        <p className="text-gray-600 mb-4">{cardData?.cardData?.title}</p>
-        <div className="w-full h-64 mb-4">
-          {cardData?.cardData?.title == "Riverside Mobile Testing" ? <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.7855926972115!2d-121.9839515!3d37.5171131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc7ea104a402f%3A0xc7146e61f8e25f8e!2sMy%20Care%20Labs!5e0!3m2!1sen!2sus!4v1694974079193!5m2!1sen!2sus"
-          ></iframe> : <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.7855926972115!2d-121.9839515!3d37.5171131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc7ea104a402f%3A0xc7146e61f8e25f8e!2sMy%20Care%20Labs!5e0!3m2!1sen!2sus!4v1694974079193!5m2!1sen!2sus"
-          ></iframe>}
+    <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 md:mb-0 bg-blue-500 p-4 rounded-lg">
+      <div className="flex flex-col items-left">
+        <img src={logo2} alt="My Care Labs Logo" className="w-42 mb-4" />
+        <div onClick={() => { showForm() }} className="bg-blue-400 p-2 rounded-lg mb-2 flex flex-col justify-between items-center cursor-pointer">
+          <div className='flex justify-between w-full items-center p-2'>
+            <p className="text-white font-bold">Date & Time</p>
+            <div type="checkbox" className={`flex justify-center items-center appearance-none w-6 h-6 border-2 rounded-full ${isChecked1 ? "bg-green-500 border-green-800 " : "bg-white border-gray-400 "}  transition duration-200 cursor-pointer`} checked={isChecked1}
+              onChange={() => setIsChecked1(!isChecked1)}>
+                {isChecked1 && <TiTick />}
+              </div>
+          </div>
+          {isChecked1 && <div className='flex justify-between w-full items-center  text-white px-2'>
+            <p className='text-sm'>{`${cardData.date} - ${cardData.time}`}</p>
+          </div>}
         </div>
-        <div className="text-center">
-          <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
-          <p className="text-blue-500 text-xl">support@mycarelabs.com</p>
-          <p className="text-blue-500 text-xl">+1-800-790-4550</p>
+
+        <div className="bg-blue-400 p-3 rounded-lg mb-2 flex justify-between items-center cursor-pointer">
+          <p className="text-white font-bold">Your Information</p>
+          <input disabled="true" type="checkbox" className={`appearance-none w-6 h-6 border-2  rounded-full ${isChecked2 ? "bg-green-500 border-green-800  " : "bg-white border-gray-400 "}  transition duration-200 cursor-pointer`} checked={isChecked2}
+            onChange={() => setIsChecked2(!isChecked2)} />
         </div>
       </div>
     </div>
@@ -74,7 +76,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     const secretKey = 'your-secret-key'; // Use a strong key and keep it secret
     return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
   };
-
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
   const testId = [
     {
       testCode: "Wellness",
@@ -397,26 +400,19 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
         [name]: value
       }));
     }
-
-    // Handle date input specifically
-    if (name === 'Dob') {
-      // Ensure the date is formatted as yyyy-mm-dd
-      const formattedDate = new Date(value).toISOString().split('T')[0];
-      setFormData((prevState) => ({
-        ...prevState,
-        [name]: formattedDate,
-      }));
-    } else {
-      setFormData((prevState) => ({
-        ...prevState,
-        [name]: value,
-      }));
-    }
   }
+
+  const handleDateChange = (date) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      Dob: date,
+    }));
+  };
 
 
   const handleContinue = () => {
     setShowForm(true);
+    setIsChecked1(true)
   };
 
   const handleSubmit = async () => {
@@ -428,8 +424,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     if (!formData.email) newInvalidFields.email = true;
     if (!formData.phone) newInvalidFields.phone = true;
     if (!formData?.refId) newInvalidFields.refId = true;
-    if(!formData?.Gender) newInvalidFields.Gender = true;
-    if(!formData?.Dob) newInvalidFields.Dob = true;
+    if (!formData?.Gender) newInvalidFields.Gender = true;
+    if (!formData?.Dob) newInvalidFields.Dob = true;
     // if (!formData?.Lab) newInvalidFields.Lab = true;
     // if (!formData.reason) newInvalidFields.reason = true;
     // if (!formData.zipCode) newInvalidFields.zipCode = true;
@@ -462,6 +458,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
       date: moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").format(),
       time: selectedTime,
     };
+    console.log(dateAndTime, 'appdetails')
     setIsLoading(true);
     const encryptedData = encryptData(appointmentDetails);
     try {
@@ -472,6 +469,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
       ])
 
       setIsLoading(false);
+      setIsChecked2(true)
       setNotification({
         id: Math.random(),
         text: 'Appointment booked successfully!'
@@ -521,6 +519,10 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     }
   };
 
+  const dateAndTime = {
+    date: selectedDate,
+    time: selectedTime
+  }
   return (
     <div className="relative flex justify-center items-center min-h-screen p-4">
       <div className={`bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex flex-col md:flex-row overflow-hidden ${isLoading ? 'blur-0' : ''}`}>
@@ -529,7 +531,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
             <Example />
           </div>
         )}
-        <LeftContainer cardData={cardData} />
+        <LeftContainer cardData={dateAndTime} isChecked1={isChecked1} setIsChecked1={setIsChecked1} isChecked2={isChecked2} setIsChecked2={setIsChecked2} setShowForm={setShowForm} />
         <div className="w-full md:w-3/4 pl-0 md:pl-4 transition-all duration-500">
           {!showForm ? (
             <>
@@ -610,12 +612,12 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                 <button
                   type="button"
                   className="text-blue-500 hover:text-blue-700 transition-colors duration-300 flex items-center"
-                  onClick={() => setShowForm(false)}
+                  onClick={() => {setShowForm(false);setIsChecked1(false)}}
                 >
                   <FiArrowLeft className="mr-2" />
                   Back
                 </button>
-                <h2 className="text-xl font-semibold mb-6 flex-1 text-center">Enter Details</h2>
+                <h2 className="text-xl font-bold mb-6 flex-1 text-center">Enter Details</h2>
                 {/* <div className="opacity-0">  
                   <FiArrowLeft className="mr-2" />
                   Back
@@ -624,8 +626,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                <div className="flex flex-col   col-span-2 md:col-span-1">
-                  <label>First Name*</label>
+                <div className="flex flex-col col-span-2 md:col-span-1">
+                  <label className='font-bold'>First Name<span className='text-red-600'>*</span></label>
                   <input
                     type="text"
                     name="firstName"
@@ -637,7 +639,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div>
                 <div className="flex flex-col   col-span-2 md:col-span-1">
-                  <label>Last Name*</label>
+                  <label className='font-bold'>Last Name<span className='text-red-600'>*</span></label>
                   <input
                     type="text"
                     placeholder='Doe'
@@ -649,7 +651,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div>
                 <div className="flex flex-col  col-span-2 md:col-span-1">
-                  <label>Email*</label>
+                  <label className='font-bold'>Email<span className='text-red-600'>*</span></label>
                   <input
                     type="email"  // Specifies the type as email for built-in validation
                     placeholder='abc@gmail.com'
@@ -661,7 +663,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div>
                 <div className="flex flex-col   col-span-2 md:col-span-1">
-                  <label>Phone*</label>
+                  <label className='font-bold'>Phone<span className='text-red-600'>*</span></label>
                   <input
                     type="tel"
                     name="phone"
@@ -674,7 +676,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   {invalidFields.phone && <p className="text-red-500 text-xs mt-1">Phone number is required</p>}
                 </div>
                 <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label htmlFor="gender">Gender*</label>
+                  <label className='font-bold' htmlFor="gender">Gender<span className='text-red-600'>*</span></label>
                   <select
                     name="Gender"
                     value={formData.Gender}
@@ -693,15 +695,23 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                 </div>
 
                 <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label>Date of Birth*</label>
-                  <input
+                  <label className='font-bold'>Date of Birth<span className='text-red-600'>*</span></label>
+                  <DatePicker
+                    selected={formData.Dob}
+                    onChange={handleDateChange}
+                    dateFormat="yyyy-MM-dd"
+                    className={`border w-full p-2 rounded ${invalidFields.Dob ? 'border-red-500' : ''}`}
+                    placeholderText="Select your date of birth"
+                    isClearable
+                  />
+                  {/* <input
                     type="date"
                     name="Dob"
                     value={formData.Dob || ''} // Ensure it uses yyyy-mm-dd format or remains empty
                     onChange={handleInputChange}
                     className={`border p-2 rounded ${invalidFields.Dob ? 'border-red-500' : ''}`}
                     required
-                  />
+                  /> */}
                   {invalidFields.Dob && (
                     <p className="text-red-500 text-xs mt-1">D.O.B is required</p>
                   )}
@@ -757,7 +767,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div> */}
                 <div className="flex flex-col col-span-2">
-                  <label>How did you find My Care Labs?</label>
+                  <label className='font-bold'>How did you find My Care Labs?</label>
                   <select
                     name="foundVia"
                     value={formData.foundVia}
