@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
-import Hero from "../Components/Hero";
+import Hero from "../Components/New Hero Sections/Hero";
 import Info from "../Components/Info";
 import About from "../Components/About";
 import InsuranceAccepted from "../Components/InsuranceAccepted";
@@ -97,6 +97,7 @@ function Home() {
       {/* <Hero /> */}
       {/* <FeatureToggles/> */}
       {/* <Banner/> */}
+      <Hero/>
       <HoverCards1 />
       <UtaComp />
 

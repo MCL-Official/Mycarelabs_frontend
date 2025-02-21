@@ -53,7 +53,7 @@ const BookTestDetails = () => {
       </Helmet>
 
 
-      <div
+      {cardData?.title && <div
         className="relative bg-cover bg-center h-[30rem]"
         style={{ backgroundImage: `url(${cardData?.imageUrl})` }}
       >
@@ -64,8 +64,8 @@ const BookTestDetails = () => {
             <p className="text-lg font-bold">{cardData?.shortDescription}</p>}
           <p className="text-lg mt-2">{cardData?.longDescription}</p>
         </div>
-      </div>
-      <div className="relative container mx-auto z-15" style={{ marginTop: '-5rem' }}>
+      </div>}
+      <div className="relative container mx-auto z-15" style={{ marginTop: '.5rem' }}>
         {/* <div className="bg-white p-8 shadow-lg rounded-lg" style={{ background: 'none' }}> */}
         <DateTimePicker cardData={cardData} CrelioData={CrelioData} />
 

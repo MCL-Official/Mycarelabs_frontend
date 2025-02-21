@@ -7,38 +7,57 @@ import Example from './BarLoader';  // Ensure correct path
 import StackedNotifications from './StackedNotifications';  // Ensure correct path
 import moment from 'moment-timezone';
 import { FiArrowLeft } from 'react-icons/fi';
+import { TiTick } from "react-icons/ti";
 import CryptoJS from 'crypto-js';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import logo2 from "../../Assets/wwww (1).webp"
 
-const LeftContainer = ({ cardData }) => {
+
+const LeftContainer = ({ data, isChecked1, setIsChecked1, isChecked2, setIsChecked2, isChecked3, setIsChecked3 }) => {
+
   return (
-    <div className="w-full md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 mb-4 md:mb-0">
-      <div className="flex flex-col items-center">
-        <img src={logo1} alt="My Care Labs Logo" className="w-42 mb-4" />
-        <h2 className="text-xl font-bold mb-2">Booking For</h2>
-        <p className="text-gray-600 mb-4">{cardData?.cardData?.title}</p>
-        <div className="w-full h-64 mb-4">
-          {cardData?.cardData?.title == "Riverside Mobile Testing" ? <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.7855926972115!2d-121.9839515!3d37.5171131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc7ea104a402f%3A0xc7146e61f8e25f8e!2sMy%20Care%20Labs!5e0!3m2!1sen!2sus!4v1694974079193!5m2!1sen!2sus"
-          ></iframe> : <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.7855926972115!2d-121.9839515!3d37.5171131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc7ea104a402f%3A0xc7146e61f8e25f8e!2sMy%20Care%20Labs!5e0!3m2!1sen!2sus!4v1694974079193!5m2!1sen!2sus"
-          ></iframe>}
+    <div style={{ background: "linear-gradient(to right, #7597e6 , #5050dd);" }} className="w-full bg-[#7597e6] md:w-1/4 pr-0 md:pr-6 border-b md:border-b-0 md:border-r border-gray-200 md:mb-0 p-4 rounded-lg">
+      <div className="flex flex-col items-left">
+        <img src={logo2} alt="My Care Labs Logo" className="w-42 mb-4" />
+        <div className="bg-[#f6f8ff] p-3 rounded-lg mb-2 flex flex-col justify-between items-center cursor-pointer">
+          <div className='flex justify-between w-full items-start'>
+            {/* Left section for labels & values */}
+            <div className="flex flex-col w-[80%]">
+              <p className="text-black font-bold text-left">Service</p>
+              {isChecked3 && <h2 className='text-sm text-black text-left break-words'>{data.service}</h2>}
+
+              <p className="text-black font-bold text-left mt-2">Location</p>
+              {isChecked3 && <h2 className='text-sm text-black text-left break-words'>{data.location}</h2>}
+            </div>
+
+            {/* Right side tick icon */}
+            <div className={`flex justify-center items-center w-6 h-6 rounded-full flex-shrink-0 
+        ${isChecked3 ? "bg-green-500 border-green-800" : "bg-gray-300"} 
+        transition duration-200 cursor-pointer`}
+              onClick={() => setIsChecked3(!isChecked3)}>
+              <TiTick className='text-white' />
+            </div>
+          </div>
+
         </div>
-        <div className="text-center">
-          <h3 className="text-xl font-semibold mb-2">Get in Touch</h3>
-          <p className="text-blue-500 text-xl">support@mycarelabs.com</p>
-          <p className="text-blue-500 text-xl">+1-800-790-4550</p>
+        <div className="bg-[#f6f8ff] p-2 rounded-lg mb-2 flex flex-col justify-between items-center cursor-pointer">
+          <div className='flex justify-between w-full items-center p-2'>
+            <p className="text-black font-bold text-left">Date & Time</p>
+            <div className={`flex justify-center items-center appearance-none w-6 h-6 rounded-full ${isChecked1 ? "bg-green-500 border-green-800 " : "bg-gray-300 "}  transition duration-200 cursor-pointer`} checked={isChecked1}
+              onChange={() => setIsChecked1(!isChecked1)}>
+              <TiTick className='text-white' />
+            </div>
+          </div>
+          {isChecked1 && <div className='flex justify-between w-full items-center  text-black px-2'>
+            <h2 className='text-sm'>{`${data.date} - ${data.time}`}</h2>
+          </div>}
+        </div>
+
+        <div className="bg-[#f6f8ff] p-3 rounded-lg mb-2 flex justify-between items-center cursor-pointer">
+          <p className="text-black font-bold text-left">Your Information</p>
+          <div className={`appearance-none w-6 h-6 border-2  rounded-full ${isChecked2 ? "bg-green-500 border-green-800  " : "bg-white border-gray-400 "}  transition duration-200 cursor-pointer`} checked={isChecked2}
+            onChange={() => setIsChecked2(!isChecked2)} />
         </div>
       </div>
     </div>
@@ -68,13 +87,15 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     }
   };
   const formattedCategory = formatCategoryName(cardData?.category);
-  console.log(formattedCategory, 'skhjcbvsachjkbsacv');
+  console.log(formattedCategory, 'formatted category');
 
   const encryptData = (data) => {
     const secretKey = 'your-secret-key'; // Use a strong key and keep it secret
     return CryptoJS.AES.encrypt(JSON.stringify(data), secretKey).toString();
   };
-
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+  const [isChecked3, setIsChecked3] = useState(false);
   const testId = [
     {
       testCode: "Wellness",
@@ -139,6 +160,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
   const [bookedTimes, setBookedTimes] = useState([]);
   const [disabledTimes, setDisabledTimes] = useState([]);
   const [testIdBooking, setTestIdBooking] = useState([])
+  const [showServiceSelection, setShowServiceSelection] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -152,18 +174,20 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     Gender: '',
     foundVia: '',
     Employee: cardData?.cardData?.category,
-    Location: cardData?.cardData?.location,
-    Service: '',
+    location: '',
+    service: '',
     Lab: "",
     refId: testIdforBooking?.testID,
   });
 
   console.log(disabledTimes, "sdkvjsnvkdsjdsjnsdjknvsjkvn");
 
+  const [selectedService, setSelectedService] = useState("");
+  const [selectedEmployee, setSelectedEmployee] = useState("");
 
 
-
-
+  const services = ["COVID/RSV/FLU A&B", "Wellness Testing", "UTI Testing", "Toxicology Testing"]
+  const employees = ["Fremont Lab", "Riverside City Mobile Testing", "Bay Area Mobile Testing", "At-Home Test Kits"];
 
   useEffect(() => {
 
@@ -376,11 +400,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     const { name, value } = event.target;
 
     if (name === 'foundVia') {
-      if (value === 'Other') {
-        setShowOtherInput(true);
-      } else {
-        setShowOtherInput(false);
-      }
+      setShowOtherInput(value === 'Other');
     }
 
     if (name === 'phone') {
@@ -391,32 +411,40 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
         [name]: formattedPhoneNumber
       }));
     } else {
-      // Handle other inputs normally
+      // Update formData for all other fields
       setFormData(prevState => ({
         ...prevState,
         [name]: value
       }));
-    }
 
-    // Handle date input specifically
-    if (name === 'Dob') {
-      // Ensure the date is formatted as yyyy-mm-dd
-      const formattedDate = new Date(value).toISOString().split('T')[0];
-      setFormData((prevState) => ({
-        ...prevState,
-        [name]: formattedDate,
-      }));
-    } else {
-      setFormData((prevState) => ({
-        ...prevState,
-        [name]: value,
-      }));
+      // Also update selectedService & selectedEmployee if the input is from dropdowns
+      if (name === 'service') {
+        setSelectedService(value);
+      } else if (name === 'location') {
+        setSelectedEmployee(value);
+      }
     }
   }
 
 
+
+  const handleDateChange = (date) => {
+    if (date) {
+      const formattedDate = date.toISOString().split("T")[0]; // Convert to yyyy-mm-dd
+      setFormData((prevState) => ({
+        ...prevState,
+        Dob: formattedDate, // Store as a string
+      }));
+    }
+  };
+
+
+
+
   const handleContinue = () => {
-    setShowForm(true);
+    setShowForm(false);
+    setShowServiceSelection(true);
+    setIsChecked1(true)
   };
 
   const handleSubmit = async () => {
@@ -428,8 +456,10 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     if (!formData.email) newInvalidFields.email = true;
     if (!formData.phone) newInvalidFields.phone = true;
     if (!formData?.refId) newInvalidFields.refId = true;
-    if(!formData?.Gender) newInvalidFields.Gender = true;
-    if(!formData?.Dob) newInvalidFields.Dob = true;
+    if (!formData?.Gender) newInvalidFields.Gender = true;
+    if (!formData?.Dob) newInvalidFields.Dob = true;
+    if (!formData?.location) newInvalidFields.location = true;
+    if (!formData?.service) newInvalidFields.service = true;
     // if (!formData?.Lab) newInvalidFields.Lab = true;
     // if (!formData.reason) newInvalidFields.reason = true;
     // if (!formData.zipCode) newInvalidFields.zipCode = true;
@@ -462,6 +492,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
       date: moment.tz(`${selectedDate} ${selectedTime}`, "America/Los_Angeles").format(),
       time: selectedTime,
     };
+    console.log(dateAndTime, 'appdetails')
     setIsLoading(true);
     const encryptedData = encryptData(appointmentDetails);
     try {
@@ -472,6 +503,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
       ])
 
       setIsLoading(false);
+      setIsChecked2(true)
       setNotification({
         id: Math.random(),
         text: 'Appointment booked successfully!'
@@ -521,6 +553,12 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
     }
   };
 
+  const dateAndTime = {
+    date: selectedDate,
+    time: selectedTime,
+    service: formData.service,
+    location: formData.location
+  }
   return (
     <div className="relative flex justify-center items-center min-h-screen p-4">
       <div className={`bg-white shadow-lg rounded-lg p-8 w-full max-w-screen-lg flex flex-col md:flex-row overflow-hidden ${isLoading ? 'blur-0' : ''}`}>
@@ -529,11 +567,19 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
             <Example />
           </div>
         )}
-        <LeftContainer cardData={cardData} />
+        <LeftContainer data={dateAndTime} isChecked1={isChecked1} setIsChecked1={setIsChecked1} isChecked2={isChecked2} setIsChecked2={setIsChecked2} isChecked3={isChecked3} setIsChecked3={setIsChecked3} />
         <div className="w-full md:w-3/4 pl-0 md:pl-4 transition-all duration-500">
-          {!showForm ? (
+          {showForm ? (
             <>
-              <h2 className="text-xl font-semibold mb-6">Select a Date & Time</h2>
+              <h2 className="text-xl text-[#7597e6] font-semibold mb-6">Select a Date & Time</h2>
+              <button
+                type="button"
+                className="text-[#7597e6] transition-colors duration-300 flex items-center"
+                onClick={() => { setShowForm(false); setShowServiceSelection(false); setIsChecked3(false) }}
+              >
+                <FiArrowLeft className="mr-2" />
+                Back
+              </button>
               <div className="flex justify-between items-center mb-4">
                 <button className="border border-gray-300 rounded px-2 py-1" onClick={handlePreviousMonth}>&lt;</button>
                 <span className="text-lg font-semibold">{months[monthIndex]} {year}</span>
@@ -604,18 +650,75 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                 Continue
               </button>
             </>
+          ) : !showServiceSelection ? (
+            <div className="w-full md:w-3/4 pl-0 md:pl-4 transition-all duration-500">
+              <h2 className="text-xl text-[#7597e6] font-semibold mb-6">Select Service & Location</h2>
+
+              {/* Service Dropdown */}
+              <label className="block font-semibold text-left">
+                <span className="text-red-500">*</span> Service:
+              </label>
+              <select
+                className={`w-full border px-4 py-2 rounded-md ${invalidFields.service ? 'border-red-500' : ''}`}
+                name="service"
+                value={formData.service}
+                onChange={handleInputChange}
+              >
+                <option value="">Select Service</option>
+                {services.map((ser) => (
+                  <option key={ser} value={ser}>
+                    {ser}
+                  </option>
+                ))}
+              </select>
+
+              {/* Location Dropdown */}
+              <label className="block mt-4 font-semibold text-left">
+                <span className="text-red-500">*</span> Location:
+              </label>
+              <select
+                className={`w-full border px-4 py-2 rounded-md ${invalidFields.location ? 'border-red-500' : ''}`}
+                name="location"
+                value={formData.location}
+                onChange={handleInputChange}
+              >
+                <option value="">Select Location</option>
+                {employees.map((employee) => (
+                  <option key={employee} value={employee}>
+                    {employee}
+                  </option>
+                ))}
+              </select>
+
+              <button className="w-full enabled:bg-blue-500 disabled:bg-gray-500 text-white py-2 rounded mt-4 transition-transform transform hover:scale-105" onClick={() => {
+                if (selectedService !== "" && selectedEmployee !== "") {
+                  console.log("s&l selected")
+                  setFormData((prev) => ({
+                    ...prev,
+                    service: selectedService, // Store selected service in formData
+                    location: selectedEmployee, // Store selected location in formData
+                  }));
+
+                  setShowForm(true);
+                  setShowServiceSelection(true);
+                  setIsChecked3(true);
+                }
+              }}>
+                Continue
+              </button>
+            </div>
           ) : (
             <form className="w-full" onSubmit={(e) => e.preventDefault()}>
               <div className="flex justify-between items-center w-full">
                 <button
                   type="button"
-                  className="text-blue-500 hover:text-blue-700 transition-colors duration-300 flex items-center"
-                  onClick={() => setShowForm(false)}
+                  className="text-[#7597e6] transition-colors duration-300 flex items-center"
+                  onClick={() => { setShowForm(true); setIsChecked1(false) }}
                 >
                   <FiArrowLeft className="mr-2" />
                   Back
                 </button>
-                <h2 className="text-xl font-semibold mb-6 flex-1 text-center">Enter Details</h2>
+                <h2 className="text-xl text-[#7597e6] font-bold mb-6 flex-1 text-center">Enter Details</h2>
                 {/* <div className="opacity-0">  
                   <FiArrowLeft className="mr-2" />
                   Back
@@ -624,8 +727,8 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                <div className="flex flex-col   col-span-2 md:col-span-1">
-                  <label>First Name*</label>
+                <div className="flex flex-col col-span-2 md:col-span-1">
+                  <label className='font-bold text-left'>First Name<span className='text-red-600'>*</span></label>
                   <input
                     type="text"
                     name="firstName"
@@ -637,7 +740,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div>
                 <div className="flex flex-col   col-span-2 md:col-span-1">
-                  <label>Last Name*</label>
+                  <label className='font-bold text-left'>Last Name<span className='text-red-600'>*</span></label>
                   <input
                     type="text"
                     placeholder='Doe'
@@ -649,7 +752,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div>
                 <div className="flex flex-col  col-span-2 md:col-span-1">
-                  <label>Email*</label>
+                  <label className='font-bold text-left'>Email<span className='text-red-600'>*</span></label>
                   <input
                     type="email"  // Specifies the type as email for built-in validation
                     placeholder='abc@gmail.com'
@@ -661,7 +764,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div>
                 <div className="flex flex-col   col-span-2 md:col-span-1">
-                  <label>Phone*</label>
+                  <label className='font-bold text-left'>Phone<span className='text-red-600'>*</span></label>
                   <input
                     type="tel"
                     name="phone"
@@ -674,7 +777,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   {invalidFields.phone && <p className="text-red-500 text-xs mt-1">Phone number is required</p>}
                 </div>
                 <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label htmlFor="gender">Gender*</label>
+                  <label className='font-bold text-left' htmlFor="gender">Gender<span className='text-red-600'>*</span></label>
                   <select
                     name="Gender"
                     value={formData.Gender}
@@ -693,15 +796,24 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                 </div>
 
                 <div className="flex flex-col col-span-2 md:col-span-1">
-                  <label>Date of Birth*</label>
-                  <input
+                  <label className='font-bold text-left'>Date of Birth<span className='text-red-600'>*</span></label>
+                  <DatePicker
+                    selected={formData.Dob ? new Date(formData.Dob) : null} // Convert back to Date object
+                    onChange={handleDateChange}
+                    dateFormat="yyyy-MM-dd"
+                    className="border p-2 rounded w-full"
+                    placeholderText="Select your date of birth"
+                  />
+
+
+                  {/*<input
                     type="date"
                     name="Dob"
                     value={formData.Dob || ''} // Ensure it uses yyyy-mm-dd format or remains empty
                     onChange={handleInputChange}
                     className={`border p-2 rounded ${invalidFields.Dob ? 'border-red-500' : ''}`}
                     required
-                  />
+                  />*/ }
                   {invalidFields.Dob && (
                     <p className="text-red-500 text-xs mt-1">D.O.B is required</p>
                   )}
@@ -757,7 +869,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   />
                 </div> */}
                 <div className="flex flex-col col-span-2">
-                  <label>How did you find My Care Labs?</label>
+                  <label className='font-bold'>How did you find My Care Labs?</label>
                   <select
                     name="foundVia"
                     value={formData.foundVia}
@@ -787,7 +899,7 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
                   </div>
                 )}
               </div>
-              <button type="button" onClick={handleSubmit} id='#BookAppnt' className="w-full bg-blue-500 text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
+              <button type="button" onClick={handleSubmit} id='#BookAppnt' className="w-full bg-[#f15a24] text-white text-lg py-2 rounded mt-24 transition-transform transform hover:scale-105">
                 Book Appointment
               </button>
             </form>

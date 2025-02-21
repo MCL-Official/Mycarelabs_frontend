@@ -127,6 +127,7 @@ function App() {
           <Route path="/covid-test-locations" element={<BookTest />} />
           <Route path="/bookingcompletion/:id" element={<ConfirmBooking />} />
           <Route path="/covid-test-locations/:id" element={<BookTestDetails />} />
+          {/* <Route path="/bookings" element={<BookTestDetails />} /> */}
           <Route path="/covid-test-locations" element={<DrawerButton />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/blog/:id" element={<ReadBlog />} />
