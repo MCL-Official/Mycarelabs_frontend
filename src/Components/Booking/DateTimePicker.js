@@ -797,12 +797,16 @@ const DateTimePicker = ({ cardData, CrelioData }) => {
 
                 <div className="flex flex-col col-span-2 md:col-span-1">
                   <label className='font-bold text-left'>Date of Birth<span className='text-red-600'>*</span></label>
-                  <DatePicker
-                    selected={formData.Dob ? new Date(formData.Dob) : null} // Convert back to Date object
+                   <DatePicker
+                  className="border border-gray-300 p-2 rounded-md w-full text-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                    selected={formData.Dob ? new Date(formData.Dob) : null} 
                     onChange={handleDateChange}
-                    dateFormat="yyyy-MM-dd"
-                    className="border p-2 rounded w-full"
+                    dateFormat="MM/dd/yyyy"
+                     calendarClassName="bg-white shadow-lg rounded-lg p-2"
                     placeholderText="Select your date of birth"
+                    showMonthDropdown
+                    showYearDropdown
+                    dropdownMode="select" // Allows dropdown instead of scrolling
                   />
 
 
